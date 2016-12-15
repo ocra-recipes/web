@@ -1,0 +1,23 @@
+[
+	{
+		"name": "ocra-recipes source",
+		"image": "logo200.png",
+		"url-documentation": "/doxy-ocra-recipes/html/index.html",
+		"url-source-code": "https://github.com/ocra-recipes/ocra-recipes",
+		"date": "Oct 2016"
+	},
+	{
+		"name": "ocra-wbi-plugins source",
+		"image": "icub-gazebo.png",
+		"url-documentation": "/doxy-ocra-wbi-plugins/html/index.html",
+		"url-source-code": "https://github.com/ocra-recipes/ocra-wbi-plugins",
+		"date": "Oct 2016"
+	},
+	{
+		"name": "eigen-lgsm source",
+		"image": "lgsm.png",
+		"url-documentation": "/doxy-eigen-lgsm/html/index.html",
+		"url-source-code": "https://github.com/ocra-recipes/eigen_lgsm",
+		"date": "Nov 2016"
+	}
+]

@@ -9,9 +9,14 @@ branches:
 # Environment variables
 env:
   global:
-    - GH_REPO_NAME: ocra-recipes/web
-    - DOXYFILE: $TRAVIS_BUILD_DIR/<path_to_your_doxygen_configuration_file>
+    - GH_REPO_WEB: web
+    - GH_REPO_OCRA_RECIPES: ocra-recipes/ocra-recipes
+    - GH_REPO_OCRA_WBI: ocra-recipes/ocra-wbi-plugins
+    - DOXYFILE_OCRA_RECIPES: $TRAVIS_BUILD_DIR/code_docs/ocra-recipes/Doxyfile_Travis
+    - DOXYFILE_OCRA_WBI: $TRAVIS_BUILD_DIR/code_docs/ocra-wbi-plugins/Doxyfile_Travis
     - GH_REPO_REF: github.com/ocra-recipes/web.git
+    - GH_REPO_OCRA_RECIPES_REF: github.com/ocra-recipes/ocra-recipes.git
+    - GH_REPO_OCRA_WBI_REF: github.com/ocra-recipes/ocra-wbi-plugins.git
 
 # Install dependencies
 addons:

@@ -16,7 +16,7 @@ __AUTHOR__="Jeroen de Bruijn"
 # - TRAVIS_BUILD_NUMBER : The number of the current build.
 # - TRAVIS_COMMIT       : The commit that the current build is testing.
 # - DOXYFILE            : The Doxygen configuration file.
-# - GH_REPO_NAME        : The name of the repository.
+# - GH_REPO_WEB        : The name of the repository.
 # - GH_REPO_REF         : The GitHub reference to the repository.
 # - GH_REPO_TOKEN       : Secure token to the github repository.
 #
@@ -45,7 +45,9 @@ cd code_docs
 
 # Get the current gh-pages branch
 git clone -b gh-pages https://git@$GH_REPO_REF
-cd $GH_REPO_NAME
+git clone -b web https://git@${GH_REPO_OCRA_RECIPES_REF}
+git clone -b web https://git@${GH_REPO_OCRA_WBI_REF}
+cd $GH_REPO_WEB
 
 ##### Configure git.
 # Set the push default to simple i.e. push only the current branch.
@@ -69,9 +71,10 @@ echo "" > .nojekyll
 
 ################################################################################
 ##### Generate the Doxygen code documentation and log the output.          #####
-echo 'Generating Doxygen code documentation...'
+echo 'Generating Doxygen code documentation only for ocra-wbi-plugins'
 # Redirect both stderr and stdout to the log file AND the console.
-doxygen $DOXYFILE 2>&1 | tee doxygen.log
+# doxygen $DOXYFILE_OCRA_RECIPES 2>&1 | tee doxygen_ocra_recipes.log
+doxygen $DOXYFILE_OCRA_WBI 2>&1 | tee doxygen_ocra_wbi.log
 
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####

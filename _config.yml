@@ -1,0 +1,72 @@
+title: OCRA
+description: Optimization Based Control for Robotics Applications
+logo: http://ocra-recipes.github.io/web/static/img/logoV3.1.svg
+github: https://github.com/ocra-recipes/web
+# about: SYROCO - SYstèmes RObotiques COmplexes
+disqus_shortname: ocra
+google_analytics: UA-72862926-1
+urls:
+    - text: Home
+      url: /
+      icon: fa-home
+      layout: post
+    - text: Source
+      url: /doxygen/
+      layout: doxygen
+      icon: fa-github
+    - text: Clients
+      url: /clients/
+      icon: fa-users
+    - text: Projects
+      url: /projects/
+      icon: fa-desktop
+    - text: Authors
+      url: '/authors/'
+      icon: fa-graduation-cap
+    - text: About
+      url: /about/
+      icon: fa-comments
+    # - text: XML Feed
+    #   url: /feed.xml
+    #   icon: fa-feed
+
+social:
+    - icon: fa-skype
+      link: '#'
+    - icon: fa-twitter
+      link: '#'
+    - icon: fa-linkedin
+      link: '#'
+
+share:
+  twitter_username: \#
+  fb_appid: 000000000000
+
+
+enableTags: true
+tagarray: []
+
+url: "http://ocra-recipes.github.io/web"
+baseurl: "/web"
+paginate: 10
+per_page: 10
+paginate_path: "/page:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+authors:
+  ryan:
+    display_name: Ryan Lober
+    # gravatar: 60fd5218fff6927c0ed376cce01c5460
+    email: info@ryanlober.com
+    web: http://www.ryanlober.com/
+    github: rlober
+  jorh:
+    display_name: Jorhabib Eljaik
+    # gravatar: 76dbcc74021b8039f14c7b583978b56d
+    email: jorhabib.eljaik@iit.it
+    web: https://github.com/jeljaik
+   # twitter:
+    github: jeljaik
