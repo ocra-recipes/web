@@ -1,0 +1,39 @@
+# This will run on Travis' 'new' container-based infrastructure
+sudo: false
+
+# Blacklist
+branches:
+  except:
+    - gh-pages
+
+# Environment variables
+env:
+  global:
+    - GH_REPO_WEB: web
+    - GH_REPO_OCRA_RECIPES: ocra-recipes/ocra-recipes
+    - GH_REPO_OCRA_WBI: ocra-recipes/ocra-wbi-plugins
+    - DOXYFILE_OCRA_RECIPES: $TRAVIS_BUILD_DIR/code_docs/ocra-recipes/Doxyfile_Travis
+    - DOXYFILE_OCRA_WBI: $TRAVIS_BUILD_DIR/code_docs/ocra-wbi-plugins/Doxyfile_Travis
+    - GH_REPO_REF: github.com/ocra-recipes/web.git
+    - GH_REPO_OCRA_RECIPES_REF: github.com/ocra-recipes/ocra-recipes.git
+    - GH_REPO_OCRA_WBI_REF: github.com/ocra-recipes/ocra-wbi-plugins.git
+
+# Install dependencies
+addons:
+  apt:
+    packages:
+      - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
+
+# Build your code e.g. by calling make
+script:
+  - make
+
+# Generate and deploy documentation
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - chmod +x generateDocumentationAndDeploy.sh
+  - ./generateDocumentationAndDeploy.sh
