@@ -66,15 +66,14 @@ echo "" > .nojekyll
 echo 'Generating Doxygen code documentation only for ocra-wbi-plugins'
 # Redirect both stderr and stdout to the log file AND the console.
 # doxygen $DOXYFILE_OCRA_RECIPES 2>&1 | tee doxygen_ocra_recipes.log
-ls
 doxygen $DOXYFILE_OCRA_WBI 2>&1 | tee doxygen_ocra_wbi.log
-
+ls
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
 # Only upload if Doxygen successfully created the documentation.
 # Check this by verifying that the html directory and the file html/index.html
 # both exist. This is a good indication that Doxygen did it's work.
-if [ -d "${TRAVIS_BUILD_DIR}/doxy-ocra-recipes/html" ] && [ -f "${TRAVIS_BUILD_DIR}/doxy-ocra-recipes/html/index.html" ]; then
+if [ -d "doxy-ocra-wbi-plugins/html" ] && [ -f "doxy-ocra-wbi-plugins/html/index.html" ]; then
 
     echo 'Uploading documentation to the gh-pages branch...'
     # Add everything in this directory (the Doxygen code documentation) to the
