@@ -45,8 +45,8 @@ cd code_docs
 
 # Get the current gh-pages branch
 git clone -b gh-pages https://git@$GH_REPO_REF
-git clone -b web https://git@${GH_REPO_OCRA_RECIPES_REF}
-git clone -b web https://git@${GH_REPO_OCRA_WBI_REF}
+git clone -b improvements/web https://git@${GH_REPO_OCRA_RECIPES_REF}
+git clone -b improvements/web https://git@${GH_REPO_OCRA_WBI_REF}
 cd $GH_REPO_WEB
 
 ##### Configure git.
