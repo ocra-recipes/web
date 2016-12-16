@@ -42,11 +42,9 @@ set -e
 # At this point I should be in $TRAVIS_BUILD_DIR
 # Get the current gh-pages branch
 # git clone -b gh-pages https://git@$GH_REPO_REF
-echo 'Currently Im in...'
-pwd
 git clone -b improvements/web https://git@${GH_REPO_OCRA_RECIPES_REF} ocra-recipes
 git clone -b improvements/web https://git@${GH_REPO_OCRA_WBI_REF} ocra-wbi-plugins
-pwd
+
 
 ##### Configure git.
 # Set the push default to simple i.e. push only the current branch.
@@ -61,7 +59,7 @@ echo 'Generating Doxygen code documentation only for ocra-wbi-plugins'
 # Redirect both stderr and stdout to the log file AND the console.
 # doxygen $DOXYFILE_OCRA_RECIPES 2>&1 | tee doxygen_ocra_recipes.log
 doxygen $DOXYFILE_OCRA_WBI 2>&1 | tee doxygen_ocra_wbi.log
-ls
+
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
 # Only upload if Doxygen successfully created the documentation.
