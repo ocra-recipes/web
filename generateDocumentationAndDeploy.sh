@@ -44,10 +44,9 @@ set -e
 # git clone -b gh-pages https://git@$GH_REPO_REF
 echo 'Currently Im in...'
 pwd
-cd ../
 git clone -b improvements/web https://git@${GH_REPO_OCRA_RECIPES_REF} ocra-recipes
 git clone -b improvements/web https://git@${GH_REPO_OCRA_WBI_REF} ocra-wbi-plugins
-cd $GH_REPO_WEB
+pwd
 
 ##### Configure git.
 # Set the push default to simple i.e. push only the current branch.

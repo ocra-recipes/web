@@ -12,8 +12,8 @@ env:
     - GH_REPO_WEB: web
     - GH_REPO_OCRA_RECIPES: ocra-recipes/ocra-recipes
     - GH_REPO_OCRA_WBI: ocra-recipes/ocra-wbi-plugins
-    - DOXYFILE_OCRA_RECIPES: $TRAVIS_BUILD_DIR/../../ocra-recipes/docs/Doxyfile_Travis
-    - DOXYFILE_OCRA_WBI: $TRAVIS_BUILD_DIR/../../ocra-wbi-plugins/docs/Doxyfile_Travis
+    - DOXYFILE_OCRA_RECIPES: $TRAVIS_BUILD_DIR/ocra-recipes/docs/Doxyfile_Travis
+    - DOXYFILE_OCRA_WBI: $TRAVIS_BUILD_DIR/ocra-wbi-plugins/docs/Doxyfile_Travis
     - GH_REPO_REF: github.com/ocra-recipes/web.git
     - GH_REPO_OCRA_RECIPES_REF: github.com/ocra-recipes/ocra-recipes.git
     - GH_REPO_OCRA_WBI_REF: github.com/ocra-recipes/ocra-wbi-plugins.git
