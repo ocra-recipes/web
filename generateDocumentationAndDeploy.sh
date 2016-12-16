@@ -39,12 +39,11 @@ echo 'Setting up the script... .'
 # Exit with nonzero exit code if anything fails
 set -e
 
-# Create a clean working directory for this script.
-mkdir code_docs
-cd code_docs
-
+# At this point I should be in $TRAVIS_BUILD_DIR
 # Get the current gh-pages branch
-git clone -b gh-pages https://git@$GH_REPO_REF
+# git clone -b gh-pages https://git@$GH_REPO_REF
+echo 'Currently Im in...'
+pwd
 git clone -b improvements/web https://git@${GH_REPO_OCRA_RECIPES_REF}
 git clone -b improvements/web https://git@${GH_REPO_OCRA_WBI_REF}
 cd $GH_REPO_WEB

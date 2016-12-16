@@ -29,8 +29,8 @@ addons:
       - graphviz
 
 before_script:
-    - cd $TRAVIS_BUILD_DIR
     - chmod +x generateDocumentationAndDeploy.sh
+    - cd $TRAVIS_BUILD_DIR
 
 # Generate and deploy documentation
 script:
