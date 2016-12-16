@@ -1,0 +1,82 @@
+\hypertarget{classThread_1_1ControllerRpcServerCallback}{\section{\-Thread\-:\-:\-Controller\-Rpc\-Server\-Callback \-Class \-Reference}
+\label{classThread_1_1ControllerRpcServerCallback}\index{\-Thread\-::\-Controller\-Rpc\-Server\-Callback@{\-Thread\-::\-Controller\-Rpc\-Server\-Callback}}
+}
+
+
+\-A callback function which binds the rpc server port opened in the contoller server module to the controller thread's parsing function.  
+
+
+
+
+{\ttfamily \#include $<$\-Thread.\-h$>$}
+
+
+
+\-Collaboration diagram for \-Thread\-:\-:\-Controller\-Rpc\-Server\-Callback\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classThread_1_1ControllerRpcServerCallback__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classThread_1_1ControllerRpcServerCallback_ad836e4cdaafc42ad309b5248ef38c280}{\-Controller\-Rpc\-Server\-Callback} (\hyperlink{classThread}{\-Thread} \&thread\-Ref)
+\item 
+virtual bool \hyperlink{classThread_1_1ControllerRpcServerCallback_a61f5510543f1bb96793dceca13eb6865}{read} (yarp\-::os\-::\-Connection\-Reader \&connection)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classThread}{\-Thread} \& \hyperlink{classThread_1_1ControllerRpcServerCallback_a466f100742fdac49e0016ec2f0c43536}{thread}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A callback function which binds the rpc server port opened in the contoller server module to the controller thread's parsing function. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classThread_1_1ControllerRpcServerCallback_ad836e4cdaafc42ad309b5248ef38c280}{\index{\-Thread\-::\-Controller\-Rpc\-Server\-Callback@{\-Thread\-::\-Controller\-Rpc\-Server\-Callback}!\-Controller\-Rpc\-Server\-Callback@{\-Controller\-Rpc\-Server\-Callback}}
+\index{\-Controller\-Rpc\-Server\-Callback@{\-Controller\-Rpc\-Server\-Callback}!Thread::ControllerRpcServerCallback@{\-Thread\-::\-Controller\-Rpc\-Server\-Callback}}
+\subsubsection[{\-Controller\-Rpc\-Server\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Thread\-::\-Controller\-Rpc\-Server\-Callback\-::\-Controller\-Rpc\-Server\-Callback} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Thread} \&}]{thread\-Ref}
+\end{DoxyParamCaption}
+)}}\label{classThread_1_1ControllerRpcServerCallback_ad836e4cdaafc42ad309b5248ef38c280}
+\-Constructor 
+\begin{DoxyParams}{\-Parameters}
+{\em ct\-Thread\-Ptr} & \-A shared pointer to the control thread. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classThread_1_1ControllerRpcServerCallback_a61f5510543f1bb96793dceca13eb6865}{\index{\-Thread\-::\-Controller\-Rpc\-Server\-Callback@{\-Thread\-::\-Controller\-Rpc\-Server\-Callback}!read@{read}}
+\index{read@{read}!Thread::ControllerRpcServerCallback@{\-Thread\-::\-Controller\-Rpc\-Server\-Callback}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Thread\-::\-Controller\-Rpc\-Server\-Callback\-::read} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Connection\-Reader \&}]{connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classThread_1_1ControllerRpcServerCallback_a61f5510543f1bb96793dceca13eb6865}
+read 
+\begin{DoxyParams}{\-Parameters}
+{\em connection} & \-Reads a port connection.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean which tells whether or not a message was read. 
+\end{DoxyReturn}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classThread_1_1ControllerRpcServerCallback_a466f100742fdac49e0016ec2f0c43536}{\index{\-Thread\-::\-Controller\-Rpc\-Server\-Callback@{\-Thread\-::\-Controller\-Rpc\-Server\-Callback}!thread@{thread}}
+\index{thread@{thread}!Thread::ControllerRpcServerCallback@{\-Thread\-::\-Controller\-Rpc\-Server\-Callback}}
+\subsubsection[{thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Thread}\& {\bf \-Thread\-::\-Controller\-Rpc\-Server\-Callback\-::thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_1_1ControllerRpcServerCallback_a466f100742fdac49e0016ec2f0c43536}
+\-A shared pointer to the control thread. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/server/include/ocra-\/icub-\/server/\hyperlink{Thread_8h}{\-Thread.\-h}\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/server/src/\hyperlink{Thread_8cpp}{\-Thread.\-cpp}\end{DoxyCompactItemize}

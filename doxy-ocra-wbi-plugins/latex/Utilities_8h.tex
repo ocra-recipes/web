@@ -1,0 +1,128 @@
+\hypertarget{Utilities_8h}{\section{ocra-\/wbi-\/plugins/ocra-\/icub/include/ocra-\/icub/\-Utilities.h \-File \-Reference}
+\label{Utilities_8h}\index{ocra-\/wbi-\/plugins/ocra-\/icub/include/ocra-\/icub/\-Utilities.\-h@{ocra-\/wbi-\/plugins/ocra-\/icub/include/ocra-\/icub/\-Utilities.\-h}}
+}
+
+
+\-Some useful tools for the ocra-\/icub lib.  
+
+
+{\ttfamily \#include $<$memory$>$}\*
+{\ttfamily \#include $<$cmath$>$}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Buffered\-Port.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Bottle.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Rate\-Thread.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Resource\-Finder.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Port\-Reader.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Rpc\-Client.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Rpc\-Server.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Connection\-Reader.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Time.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Log.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Log\-Stream.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Property.\-h$>$}\*
+{\ttfamily \#include $<$yarp/sig/\-Vector.\-h$>$}\*
+{\ttfamily \#include $<$yarp/sig/\-Matrix.\-h$>$}\*
+{\ttfamily \#include $<$wbi/wbi.\-h$>$}\*
+{\ttfamily \#include \char`\"{}ocra/control/\-Model.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ocra/util/\-String\-Utilities.\-h\char`\"{}}\*
+{\ttfamily \#include $<$\-Eigen/\-Dense$>$}\*
+{\ttfamily \#include $<$\-Eigen/\-Lgsm$>$}\*
+\-Include dependency graph for \-Utilities.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Utilities_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Utilities_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceocra__icub}{ocra\-\_\-icub}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Utilities_8h_a986e6d54948ebf3007dc52bd0fc737be}{\-C\-L\-A\-S\-S\-\_\-\-P\-O\-I\-N\-T\-E\-R\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-S}(\-Class)
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83f}{ocra\-\_\-icub\-::\-O\-C\-R\-A\-\_\-\-I\-C\-U\-B\-\_\-\-M\-E\-S\-S\-A\-G\-E} \{ \*
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fafa982af27b4e13f109d8769472d75217}{ocra\-\_\-icub\-::\-S\-T\-R\-I\-N\-G\-\_\-\-M\-E\-S\-S\-A\-G\-E} =  -\/1, 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83faa0c1832978fad84ef108d48265af68d2}{ocra\-\_\-icub\-::\-F\-A\-I\-L\-U\-R\-E} =  0, 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fa67c96e3afcb39533f69c97dc5e9734e5}{ocra\-\_\-icub\-::\-S\-U\-C\-C\-E\-S\-S}, 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fae8fe02f5f3b1b11d4749e720b9ec3636}{ocra\-\_\-icub\-::\-G\-E\-T\-\_\-\-M\-O\-D\-E\-L\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-I\-N\-F\-O}, 
+\*
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fa772ab917d1ff28db029af9271208a69a}{ocra\-\_\-icub\-::\-G\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L\-L\-E\-R\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-S\-T\-A\-T\-U\-S}, 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fa5dee3cfa0ab6c29f5546bc9e30c0aef5}{ocra\-\_\-icub\-::\-C\-O\-N\-T\-R\-O\-L\-L\-E\-R\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-R\-U\-N\-N\-I\-N\-G}, 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fafd31e40d18e553fc09105d360455bc49}{ocra\-\_\-icub\-::\-C\-O\-N\-T\-R\-O\-L\-L\-E\-R\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-S\-T\-O\-P\-P\-E\-D}, 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fa48ad7962d035a58257a0381872ce27b1}{ocra\-\_\-icub\-::\-C\-O\-N\-T\-R\-O\-L\-L\-E\-R\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-P\-A\-U\-S\-E\-D}, 
+\*
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fafd78d107914396f475c3b12d2b31ea2a}{ocra\-\_\-icub\-::\-G\-E\-T\-\_\-\-L\-\_\-\-F\-O\-O\-T\-\_\-\-P\-O\-S\-E}, 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83fae7c9fa2563b6c0b14e5b05d1794dac36}{ocra\-\_\-icub\-::\-H\-E\-L\-P}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceocra__icub_a07ffe33877389b6b111944e8a666e221}{ocra\-\_\-icub\-::get\-Nominal\-Posture} (const ocra\-::\-Model \&model, \-Eigen\-::\-Vector\-Xd \&q)
+\item 
+void \hyperlink{namespaceocra__icub_a91c3caf94014ea9988e56dd2572768ce}{ocra\-\_\-icub\-::get\-Home\-Posture} (const ocra\-::\-Model \&model, \-Eigen\-::\-Vector\-Xd \&q)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \hyperlink{namespaceocra__icub_ab06477ded34ed5514b911a3511b22e3d}{ocra\-\_\-icub\-::\-D\-E\-G\-\_\-\-T\-O\-\_\-\-R\-A\-D} = \-M\-\_\-\-P\-I/180.\-0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Some useful tools for the ocra-\/icub lib. \-This file is for all the various macros and helper classes that are generic to ocra-\/icub. \-It is also a place for all the repeated includes like standard stl includes etc. \begin{DoxyAuthor}{\-Author}
+\mbox{[}\-Ryan \-Lober\mbox{]}(\href{http://www.ryanlober.com}{\tt http\-://www.\-ryanlober.\-com}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{\-Date}
+\-Feb 2016 
+\end{DoxyDate}
+\begin{DoxyCopyright}{\-Copyright}
+\-G\-N\-U \-General \-Public \-License. 
+\end{DoxyCopyright}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{Utilities_8h_a986e6d54948ebf3007dc52bd0fc737be}{\index{\-Utilities.\-h@{\-Utilities.\-h}!\-C\-L\-A\-S\-S\-\_\-\-P\-O\-I\-N\-T\-E\-R\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-S@{\-C\-L\-A\-S\-S\-\_\-\-P\-O\-I\-N\-T\-E\-R\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-S}}
+\index{\-C\-L\-A\-S\-S\-\_\-\-P\-O\-I\-N\-T\-E\-R\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-S@{\-C\-L\-A\-S\-S\-\_\-\-P\-O\-I\-N\-T\-E\-R\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-S}!Utilities.h@{\-Utilities.\-h}}
+\subsubsection[{\-C\-L\-A\-S\-S\-\_\-\-P\-O\-I\-N\-T\-E\-R\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-L\-A\-S\-S\-\_\-\-P\-O\-I\-N\-T\-E\-R\-\_\-\-T\-Y\-P\-E\-D\-E\-F\-S}(
+\begin{DoxyParamCaption}
+\item[{}]{\-Class}
+\end{DoxyParamCaption}
+)}}\label{Utilities_8h_a986e6d54948ebf3007dc52bd0fc737be}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+public:\
+using ptr           = std::shared_ptr   <Class>;  \
+using shared_ptr    = std::shared_ptr   <Class>;  \
+using unique_ptr    = std::unique_ptr   <Class>;  \
+using weak_ptr      = std::weak_ptr     <Class>;  \
+using const_ptr           = const std::shared_ptr   <Class>;  \
+using const_shared_ptr    = const std::shared_ptr   <Class>;  \
+using const_unique_ptr    = const std::unique_ptr   <Class>;  \
+using const_weak_ptr      = const std::weak_ptr     <Class>;
+\end{DoxyCode}
+\-Macro function which basically just defines pointer typdefs for classes. \-Note that normally macros are evil monsters but \-I think this is a perfect usage case to cut down on repeated code. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Class} & \-Just pop this bad boy below the class definition and it will do the rest. \\
+\hline
+\end{DoxyParams}

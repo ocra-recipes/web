@@ -1,0 +1,90 @@
+\hypertarget{OcraWbiModel_8cpp}{\section{ocra-\/wbi-\/plugins/ocra-\/icub/src/\-Ocra\-Wbi\-Model.cpp \-File \-Reference}
+\label{OcraWbiModel_8cpp}\index{ocra-\/wbi-\/plugins/ocra-\/icub/src/\-Ocra\-Wbi\-Model.\-cpp@{ocra-\/wbi-\/plugins/ocra-\/icub/src/\-Ocra\-Wbi\-Model.\-cpp}}
+}
+
+
+\-Implementation of ocra\-::\-Model using whole\-Body\-Interface.  
+
+
+{\ttfamily \#include $<$ocra-\/icub/\-Ocra\-Wbi\-Model.\-h$>$}\*
+\-Include dependency graph for \-Ocra\-Wbi\-Model.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{OcraWbiModel_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structOcraWbiModel_1_1OcraWbiModel__pimpl}{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model\-::\-Ocra\-Wbi\-Model\-\_\-pimpl}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{OcraWbiModel_8cpp_a7f4e728fa0fd89911a2c60c42c0d4560}{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S}~-\/1
+\item 
+\#define \hyperlink{OcraWbiModel_8cpp_a29de1200631802e23f75bbd14adcc082}{\-F\-R\-E\-E\-\_\-\-R\-O\-O\-T\-\_\-\-D\-O\-F}~6
+\item 
+\#define \hyperlink{OcraWbiModel_8cpp_a72cb22de2538ae949cc73fa3d7c33bdc}{\-C\-O\-M\-\_\-\-P\-O\-S\-\_\-\-D\-I\-M}~3
+\item 
+\#define \hyperlink{OcraWbiModel_8cpp_ab4a87cb824ceff256c6b8bce7701af58}{\-T\-R\-A\-N\-S\-\_\-\-R\-O\-T\-\_\-\-D\-I\-M}~6
+\item 
+\#define \hyperlink{OcraWbiModel_8cpp_afbb98f526272c46369f405eee4e9d9aa}{\-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T}~-\/9.\-81
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \*
+\hyperlink{OcraWbiModel_8cpp_a2ee3f7feea423a8bc6b8fbcea1d4e217}{\-Eigen\-::\-Displacementd\-::\-Adjoint\-Matrix} \hyperlink{OcraWbiModel_8cpp_a2ee3f7feea423a8bc6b8fbcea1d4e217}{\-Adjoint\-Matrix}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{OcraWbiModel_8cpp_a3cdc4ec85b339c11e5b34ce069bf7077}{g\-\_\-vector} \mbox{[}3\mbox{]} = \{0, 0, \hyperlink{OcraWbiModel_8cpp_afbb98f526272c46369f405eee4e9d9aa}{\-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Implementation of ocra\-::\-Model using whole\-Body\-Interface. \begin{DoxyAuthor}{\-Author}
+\mbox{[}\-Ryan \-Lober\mbox{]}(\href{http://www.ryanlober.com}{\tt http\-://www.\-ryanlober.\-com}) 
+
+\mbox{[}\-Antoine \-Hoarau\mbox{]}(\href{http://ahoarau.github.io}{\tt http\-://ahoarau.\-github.\-io}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{\-Date}
+\-Feb 2016 
+\end{DoxyDate}
+\begin{DoxyCopyright}{\-Copyright}
+\-G\-N\-U \-General \-Public \-License. 
+\end{DoxyCopyright}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{OcraWbiModel_8cpp_a7f4e728fa0fd89911a2c60c42c0d4560}{\index{\-Ocra\-Wbi\-Model.\-cpp@{\-Ocra\-Wbi\-Model.\-cpp}!\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S@{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S}}
+\index{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S@{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S}!OcraWbiModel.cpp@{\-Ocra\-Wbi\-Model.\-cpp}}
+\subsubsection[{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S}~-\/1}}\label{OcraWbiModel_8cpp_a7f4e728fa0fd89911a2c60c42c0d4560}
+\hypertarget{OcraWbiModel_8cpp_a72cb22de2538ae949cc73fa3d7c33bdc}{\index{\-Ocra\-Wbi\-Model.\-cpp@{\-Ocra\-Wbi\-Model.\-cpp}!\-C\-O\-M\-\_\-\-P\-O\-S\-\_\-\-D\-I\-M@{\-C\-O\-M\-\_\-\-P\-O\-S\-\_\-\-D\-I\-M}}
+\index{\-C\-O\-M\-\_\-\-P\-O\-S\-\_\-\-D\-I\-M@{\-C\-O\-M\-\_\-\-P\-O\-S\-\_\-\-D\-I\-M}!OcraWbiModel.cpp@{\-Ocra\-Wbi\-Model.\-cpp}}
+\subsubsection[{\-C\-O\-M\-\_\-\-P\-O\-S\-\_\-\-D\-I\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-M\-\_\-\-P\-O\-S\-\_\-\-D\-I\-M}~3}}\label{OcraWbiModel_8cpp_a72cb22de2538ae949cc73fa3d7c33bdc}
+\hypertarget{OcraWbiModel_8cpp_a29de1200631802e23f75bbd14adcc082}{\index{\-Ocra\-Wbi\-Model.\-cpp@{\-Ocra\-Wbi\-Model.\-cpp}!\-F\-R\-E\-E\-\_\-\-R\-O\-O\-T\-\_\-\-D\-O\-F@{\-F\-R\-E\-E\-\_\-\-R\-O\-O\-T\-\_\-\-D\-O\-F}}
+\index{\-F\-R\-E\-E\-\_\-\-R\-O\-O\-T\-\_\-\-D\-O\-F@{\-F\-R\-E\-E\-\_\-\-R\-O\-O\-T\-\_\-\-D\-O\-F}!OcraWbiModel.cpp@{\-Ocra\-Wbi\-Model.\-cpp}}
+\subsubsection[{\-F\-R\-E\-E\-\_\-\-R\-O\-O\-T\-\_\-\-D\-O\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-R\-E\-E\-\_\-\-R\-O\-O\-T\-\_\-\-D\-O\-F}~6}}\label{OcraWbiModel_8cpp_a29de1200631802e23f75bbd14adcc082}
+\hypertarget{OcraWbiModel_8cpp_afbb98f526272c46369f405eee4e9d9aa}{\index{\-Ocra\-Wbi\-Model.\-cpp@{\-Ocra\-Wbi\-Model.\-cpp}!\-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T@{\-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T}}
+\index{\-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T@{\-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T}!OcraWbiModel.cpp@{\-Ocra\-Wbi\-Model.\-cpp}}
+\subsubsection[{\-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T}~-\/9.\-81}}\label{OcraWbiModel_8cpp_afbb98f526272c46369f405eee4e9d9aa}
+\hypertarget{OcraWbiModel_8cpp_ab4a87cb824ceff256c6b8bce7701af58}{\index{\-Ocra\-Wbi\-Model.\-cpp@{\-Ocra\-Wbi\-Model.\-cpp}!\-T\-R\-A\-N\-S\-\_\-\-R\-O\-T\-\_\-\-D\-I\-M@{\-T\-R\-A\-N\-S\-\_\-\-R\-O\-T\-\_\-\-D\-I\-M}}
+\index{\-T\-R\-A\-N\-S\-\_\-\-R\-O\-T\-\_\-\-D\-I\-M@{\-T\-R\-A\-N\-S\-\_\-\-R\-O\-T\-\_\-\-D\-I\-M}!OcraWbiModel.cpp@{\-Ocra\-Wbi\-Model.\-cpp}}
+\subsubsection[{\-T\-R\-A\-N\-S\-\_\-\-R\-O\-T\-\_\-\-D\-I\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-R\-A\-N\-S\-\_\-\-R\-O\-T\-\_\-\-D\-I\-M}~6}}\label{OcraWbiModel_8cpp_ab4a87cb824ceff256c6b8bce7701af58}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{OcraWbiModel_8cpp_a2ee3f7feea423a8bc6b8fbcea1d4e217}{\index{\-Ocra\-Wbi\-Model.\-cpp@{\-Ocra\-Wbi\-Model.\-cpp}!\-Adjoint\-Matrix@{\-Adjoint\-Matrix}}
+\index{\-Adjoint\-Matrix@{\-Adjoint\-Matrix}!OcraWbiModel.cpp@{\-Ocra\-Wbi\-Model.\-cpp}}
+\subsubsection[{\-Adjoint\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-Eigen\-::\-Displacementd\-::\-Adjoint\-Matrix} {\bf \-Adjoint\-Matrix}}}\label{OcraWbiModel_8cpp_a2ee3f7feea423a8bc6b8fbcea1d4e217}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{OcraWbiModel_8cpp_a3cdc4ec85b339c11e5b34ce069bf7077}{\index{\-Ocra\-Wbi\-Model.\-cpp@{\-Ocra\-Wbi\-Model.\-cpp}!g\-\_\-vector@{g\-\_\-vector}}
+\index{g\-\_\-vector@{g\-\_\-vector}!OcraWbiModel.cpp@{\-Ocra\-Wbi\-Model.\-cpp}}
+\subsubsection[{g\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf g\-\_\-vector}\mbox{[}3\mbox{]} = \{0, 0, {\bf \-G\-R\-A\-V\-I\-T\-Y\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T}\}}}\label{OcraWbiModel_8cpp_a3cdc4ec85b339c11e5b34ce069bf7077}

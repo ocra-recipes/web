@@ -1,0 +1,58 @@
+\hypertarget{WalkingClient_8h}{\section{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Walking\-Client.h \-File \-Reference}
+\label{WalkingClient_8h}\index{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Walking\-Client.\-h@{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Walking\-Client.\-h}}
+}
+{\ttfamily \#include $<$ocra-\/icub/\-Icub\-Client.\-h$>$}\*
+{\ttfamily \#include $<$ocra-\/recipes/\-Trajectory\-Thread.\-h$>$}\*
+{\ttfamily \#include $<$ocra-\/recipes/\-Controller\-Client.\-h$>$}\*
+{\ttfamily \#include $<$ocra/util/\-Eigen\-Utilities.\-h$>$}\*
+{\ttfamily \#include \char`\"{}walking-\/client/\-Zmp\-Preview\-Controller.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}walking-\/client/\-Zmp\-Controller.\-h\char`\"{}}\*
+{\ttfamily \#include $<$ocra/util/\-File\-Operations.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Time.\-h$>$}\*
+\-Include dependency graph for \-Walking\-Client.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{WalkingClient_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{WalkingClient_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classWalkingClient}{\-Walking\-Client}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffa}{\-Zmp\-Test\-Type} \{ \hyperlink{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaa648ff770c850b8352c3306c1659e8157}{\-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E} = 0, 
+\hyperlink{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaa97cb99b5fec95c1f2945d3b33455b139}{\-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}, 
+\hyperlink{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaad20e2ca429f4e3ba50e1de174c92af60}{\-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffa}{\index{\-Walking\-Client.\-h@{\-Walking\-Client.\-h}!\-Zmp\-Test\-Type@{\-Zmp\-Test\-Type}}
+\index{\-Zmp\-Test\-Type@{\-Zmp\-Test\-Type}!WalkingClient.h@{\-Walking\-Client.\-h}}
+\subsubsection[{\-Zmp\-Test\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Zmp\-Test\-Type}}}\label{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffa}
+\-Performs tests helpful to tune the gains used by the zmp and zmp preview controllers as well as the \-C\-O\-M task. \-See configure() for additional information. \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E@{\-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}!\-Walking\-Client.\-h@{\-Walking\-Client.\-h}}\index{\-Walking\-Client.\-h@{\-Walking\-Client.\-h}!\-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E@{\-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}}\item[{\em 
+\hypertarget{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaa648ff770c850b8352c3306c1659e8157}{\-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}\label{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaa648ff770c850b8352c3306c1659e8157}
+}]\index{\-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E@{\-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}!\-Walking\-Client.\-h@{\-Walking\-Client.\-h}}\index{\-Walking\-Client.\-h@{\-Walking\-Client.\-h}!\-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E@{\-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}}\item[{\em 
+\hypertarget{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaa97cb99b5fec95c1f2945d3b33455b139}{\-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}\label{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaa97cb99b5fec95c1f2945d3b33455b139}
+}]\index{\-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E@{\-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}!\-Walking\-Client.\-h@{\-Walking\-Client.\-h}}\index{\-Walking\-Client.\-h@{\-Walking\-Client.\-h}!\-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E@{\-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}}\item[{\em 
+\hypertarget{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaad20e2ca429f4e3ba50e1de174c92af60}{\-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}\label{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffaad20e2ca429f4e3ba50e1de174c92af60}
+}]\end{description}
+\end{Desc}
+

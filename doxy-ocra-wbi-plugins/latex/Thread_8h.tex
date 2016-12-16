@@ -1,0 +1,61 @@
+\hypertarget{Thread_8h}{\section{ocra-\/wbi-\/plugins/ocra-\/icub-\/server/include/ocra-\/icub-\/server/\-Thread.h \-File \-Reference}
+\label{Thread_8h}\index{ocra-\/wbi-\/plugins/ocra-\/icub-\/server/include/ocra-\/icub-\/server/\-Thread.\-h@{ocra-\/wbi-\/plugins/ocra-\/icub-\/server/include/ocra-\/icub-\/server/\-Thread.\-h}}
+}
+
+
+\-The thread class for the controller server.  
+
+
+{\ttfamily \#include $<$yarp\-Whole\-Body\-Interface/yarp\-Whole\-Body\-Interface.\-h$>$}\*
+{\ttfamily \#include $<$wbi/wbi.\-h$>$}\*
+{\ttfamily \#include $<$ocra-\/icub-\/server/\-Icub\-Controller\-Server.\-h$>$}\*
+{\ttfamily \#include $<$ocra-\/icub/\-Utilities.\-h$>$}\*
+{\ttfamily \#include $<$ocra/util/\-Errors\-Helper.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Bottle.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Rpc\-Server.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Connection\-Reader.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Time.\-h$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$i\-Dyn\-Tree/\-Estimation/\-Simple\-Legged\-Odometry.\-h$>$}\*
+\-Include dependency graph for \-Thread.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Thread_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Thread_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classOcraControllerOptions}{\-Ocra\-Controller\-Options}
+\item 
+class \hyperlink{classThread}{\-Thread}
+\begin{DoxyCompactList}\small\item\em \-The meat and potatoes of the controller server. \end{DoxyCompactList}\item 
+class \hyperlink{classThread_1_1ControllerRpcServerCallback}{\-Thread\-::\-Controller\-Rpc\-Server\-Callback}
+\begin{DoxyCompactList}\small\item\em \-A callback function which binds the rpc server port opened in the contoller server module to the controller thread's parsing function. \end{DoxyCompactList}\item 
+class \hyperlink{classThread_1_1DebugRpcServerCallback}{\-Thread\-::\-Debug\-Rpc\-Server\-Callback}
+\begin{DoxyCompactList}\small\item\em \-A callback function which binds the rpc server port opened in the contoller server module to the controller thread's parsing function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The thread class for the controller server. \begin{DoxyAuthor}{\-Author}
+\mbox{[}\-Ryan \-Lober\mbox{]}(\href{http://www.ryanlober.com}{\tt http\-://www.\-ryanlober.\-com}) 
+
+\mbox{[}\-Antoine \-Hoarau\mbox{]}(\href{http://ahoarau.github.io}{\tt http\-://ahoarau.\-github.\-io}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{\-Date}
+\-Feb 2016 
+\end{DoxyDate}
+\begin{DoxyCopyright}{\-Copyright}
+\-G\-N\-U \-General \-Public \-License. 
+\end{DoxyCopyright}

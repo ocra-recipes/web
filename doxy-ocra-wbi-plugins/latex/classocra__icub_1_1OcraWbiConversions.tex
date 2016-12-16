@@ -1,0 +1,137 @@
+\hypertarget{classocra__icub_1_1OcraWbiConversions}{\section{ocra\-\_\-icub\-:\-:\-Ocra\-Wbi\-Conversions \-Class \-Reference}
+\label{classocra__icub_1_1OcraWbiConversions}\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+}
+
+
+{\ttfamily \#include $<$\-Ocra\-Wbi\-Conversions.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_af71562a5f3d4f6e649f1cec0a3d9996b}{eigen\-Dispd\-To\-Wbi\-Frame} (const \-Eigen\-::\-Displacementd \&disp, wbi\-::\-Frame \&frame)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_a403627efa183c8ddbbccabf0dcd5bcaf}{wbi\-Frame\-To\-Eigen\-Dispd} (const wbi\-::\-Frame \&frame, \-Eigen\-::\-Displacementd \&disp)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_a37c2aea3bf156928cb90a16655c24cc9}{wbi\-To\-Ocra\-Twist\-Vector} (\-Eigen\-::\-Twistd \&t\-\_\-wbi, \-Eigen\-::\-Twistd \&t\-\_\-ocra)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_a7725aea95eb71c805def4a064a2693fa}{ocra\-To\-Wbi\-Twist\-Vector} (\-Eigen\-::\-Twistd \&t\-\_\-ocra, \-Eigen\-::\-Twistd \&t\-\_\-wbi)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_a25a64172ebb14db9ddf301880a433964}{wbi\-To\-Ocra\-Seg\-Jacobian} (const \-Eigen\-::\-Matrix\-Xd \&jac, \-Eigen\-::\-Matrix\-Xd \&\-J)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_a86458de950caa3bde3aa1d1aff448be1}{wbi\-To\-Ocra\-Co\-M\-Jacobian} (const \-Eigen\-::\-Matrix\-Xd \&jac, \-Eigen\-::\-Matrix$<$ double, 3, \-Eigen\-::\-Dynamic $>$ \&\-J)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_ac03ed9581c49479b3ade94d58a3295b4}{eigen\-Row\-Major\-To\-Col\-Major} (const \hyperlink{namespaceocra__icub_aa5e36a19ed031c28ca83c207bd7dd83f}{\-Matrix\-Xd\-Rm} \&\-M\-\_\-rm, \-Eigen\-::\-Matrix\-Xd \&\-M)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_abaa2b7a9069b60cfb36cb21e89b98177}{wbi\-To\-Ocra\-Mass\-Matrix} (int qdof, const \-Eigen\-::\-Matrix\-Xd \&\-M\-\_\-wbi, \-Eigen\-::\-Matrix\-Xd \&\-M\-\_\-ocra)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_ae8839dfdc97e2239f4ed8a257d32fb21}{wbi\-To\-Ocra\-Body\-Vector} (int qdof, const \-Eigen\-::\-Vector\-Xd \&v\-\_\-wbi, \-Eigen\-::\-Vector\-Xd \&v\-\_\-ocra)
+\item 
+static bool \hyperlink{classocra__icub_1_1OcraWbiConversions_a1197be5b35329fbec85de8ee3c4abbd5}{eigen\-To\-Yarp\-Vector} (const \-Eigen\-::\-Vector\-Xd \&eigen\-Vector, yarp\-::sig\-::\-Vector \&yarp\-Vector)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classocra__icub_1_1OcraWbiConversions_a7c628bd1208c5e70be458d4dffda4d06}{\-D\-I\-M\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-I\-O\-N} = 3
+\item 
+static const int \hyperlink{classocra__icub_1_1OcraWbiConversions_a05e66392df58e9dda2d4db590bdd65a0}{\-D\-I\-M\-\_\-\-R\-O\-T\-A\-T\-I\-O\-N} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_af71562a5f3d4f6e649f1cec0a3d9996b}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!eigen\-Dispd\-To\-Wbi\-Frame@{eigen\-Dispd\-To\-Wbi\-Frame}}
+\index{eigen\-Dispd\-To\-Wbi\-Frame@{eigen\-Dispd\-To\-Wbi\-Frame}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{eigen\-Dispd\-To\-Wbi\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::eigen\-Dispd\-To\-Wbi\-Frame} (
+\begin{DoxyParamCaption}
+\item[{const \-Eigen\-::\-Displacementd \&}]{disp, }
+\item[{wbi\-::\-Frame \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_af71562a5f3d4f6e649f1cec0a3d9996b}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_ac03ed9581c49479b3ade94d58a3295b4}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!eigen\-Row\-Major\-To\-Col\-Major@{eigen\-Row\-Major\-To\-Col\-Major}}
+\index{eigen\-Row\-Major\-To\-Col\-Major@{eigen\-Row\-Major\-To\-Col\-Major}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{eigen\-Row\-Major\-To\-Col\-Major}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::eigen\-Row\-Major\-To\-Col\-Major} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Matrix\-Xd\-Rm} \&}]{\-M\-\_\-rm, }
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{\-M}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_ac03ed9581c49479b3ade94d58a3295b4}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_a1197be5b35329fbec85de8ee3c4abbd5}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!eigen\-To\-Yarp\-Vector@{eigen\-To\-Yarp\-Vector}}
+\index{eigen\-To\-Yarp\-Vector@{eigen\-To\-Yarp\-Vector}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{eigen\-To\-Yarp\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::eigen\-To\-Yarp\-Vector} (
+\begin{DoxyParamCaption}
+\item[{const \-Eigen\-::\-Vector\-Xd \&}]{eigen\-Vector, }
+\item[{yarp\-::sig\-::\-Vector \&}]{yarp\-Vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_a1197be5b35329fbec85de8ee3c4abbd5}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_a7725aea95eb71c805def4a064a2693fa}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!ocra\-To\-Wbi\-Twist\-Vector@{ocra\-To\-Wbi\-Twist\-Vector}}
+\index{ocra\-To\-Wbi\-Twist\-Vector@{ocra\-To\-Wbi\-Twist\-Vector}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{ocra\-To\-Wbi\-Twist\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::ocra\-To\-Wbi\-Twist\-Vector} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Twistd \&}]{t\-\_\-ocra, }
+\item[{\-Eigen\-::\-Twistd \&}]{t\-\_\-wbi}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_a7725aea95eb71c805def4a064a2693fa}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_a403627efa183c8ddbbccabf0dcd5bcaf}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!wbi\-Frame\-To\-Eigen\-Dispd@{wbi\-Frame\-To\-Eigen\-Dispd}}
+\index{wbi\-Frame\-To\-Eigen\-Dispd@{wbi\-Frame\-To\-Eigen\-Dispd}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{wbi\-Frame\-To\-Eigen\-Dispd}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::wbi\-Frame\-To\-Eigen\-Dispd} (
+\begin{DoxyParamCaption}
+\item[{const wbi\-::\-Frame \&}]{frame, }
+\item[{\-Eigen\-::\-Displacementd \&}]{disp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_a403627efa183c8ddbbccabf0dcd5bcaf}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_ae8839dfdc97e2239f4ed8a257d32fb21}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!wbi\-To\-Ocra\-Body\-Vector@{wbi\-To\-Ocra\-Body\-Vector}}
+\index{wbi\-To\-Ocra\-Body\-Vector@{wbi\-To\-Ocra\-Body\-Vector}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{wbi\-To\-Ocra\-Body\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::wbi\-To\-Ocra\-Body\-Vector} (
+\begin{DoxyParamCaption}
+\item[{int}]{qdof, }
+\item[{const \-Eigen\-::\-Vector\-Xd \&}]{v\-\_\-wbi, }
+\item[{\-Eigen\-::\-Vector\-Xd \&}]{v\-\_\-ocra}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_ae8839dfdc97e2239f4ed8a257d32fb21}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_a86458de950caa3bde3aa1d1aff448be1}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!wbi\-To\-Ocra\-Co\-M\-Jacobian@{wbi\-To\-Ocra\-Co\-M\-Jacobian}}
+\index{wbi\-To\-Ocra\-Co\-M\-Jacobian@{wbi\-To\-Ocra\-Co\-M\-Jacobian}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{wbi\-To\-Ocra\-Co\-M\-Jacobian}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::wbi\-To\-Ocra\-Co\-M\-Jacobian} (
+\begin{DoxyParamCaption}
+\item[{const \-Eigen\-::\-Matrix\-Xd \&}]{jac, }
+\item[{\-Eigen\-::\-Matrix$<$ double, 3, \-Eigen\-::\-Dynamic $>$ \&}]{\-J}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_a86458de950caa3bde3aa1d1aff448be1}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_abaa2b7a9069b60cfb36cb21e89b98177}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!wbi\-To\-Ocra\-Mass\-Matrix@{wbi\-To\-Ocra\-Mass\-Matrix}}
+\index{wbi\-To\-Ocra\-Mass\-Matrix@{wbi\-To\-Ocra\-Mass\-Matrix}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{wbi\-To\-Ocra\-Mass\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::wbi\-To\-Ocra\-Mass\-Matrix} (
+\begin{DoxyParamCaption}
+\item[{int}]{qdof, }
+\item[{const \-Eigen\-::\-Matrix\-Xd \&}]{\-M\-\_\-wbi, }
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{\-M\-\_\-ocra}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_abaa2b7a9069b60cfb36cb21e89b98177}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_a25a64172ebb14db9ddf301880a433964}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!wbi\-To\-Ocra\-Seg\-Jacobian@{wbi\-To\-Ocra\-Seg\-Jacobian}}
+\index{wbi\-To\-Ocra\-Seg\-Jacobian@{wbi\-To\-Ocra\-Seg\-Jacobian}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{wbi\-To\-Ocra\-Seg\-Jacobian}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::wbi\-To\-Ocra\-Seg\-Jacobian} (
+\begin{DoxyParamCaption}
+\item[{const \-Eigen\-::\-Matrix\-Xd \&}]{jac, }
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{\-J}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_a25a64172ebb14db9ddf301880a433964}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_a37c2aea3bf156928cb90a16655c24cc9}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!wbi\-To\-Ocra\-Twist\-Vector@{wbi\-To\-Ocra\-Twist\-Vector}}
+\index{wbi\-To\-Ocra\-Twist\-Vector@{wbi\-To\-Ocra\-Twist\-Vector}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{wbi\-To\-Ocra\-Twist\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Ocra\-Wbi\-Conversions\-::wbi\-To\-Ocra\-Twist\-Vector} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Twistd \&}]{t\-\_\-wbi, }
+\item[{\-Eigen\-::\-Twistd \&}]{t\-\_\-ocra}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_a37c2aea3bf156928cb90a16655c24cc9}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_a05e66392df58e9dda2d4db590bdd65a0}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!\-D\-I\-M\-\_\-\-R\-O\-T\-A\-T\-I\-O\-N@{\-D\-I\-M\-\_\-\-R\-O\-T\-A\-T\-I\-O\-N}}
+\index{\-D\-I\-M\-\_\-\-R\-O\-T\-A\-T\-I\-O\-N@{\-D\-I\-M\-\_\-\-R\-O\-T\-A\-T\-I\-O\-N}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{\-D\-I\-M\-\_\-\-R\-O\-T\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions\-::\-D\-I\-M\-\_\-\-R\-O\-T\-A\-T\-I\-O\-N} = 3\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_a05e66392df58e9dda2d4db590bdd65a0}
+\hypertarget{classocra__icub_1_1OcraWbiConversions_a7c628bd1208c5e70be458d4dffda4d06}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}!\-D\-I\-M\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-I\-O\-N@{\-D\-I\-M\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-I\-O\-N}}
+\index{\-D\-I\-M\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-I\-O\-N@{\-D\-I\-M\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-I\-O\-N}!ocra_icub::OcraWbiConversions@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions}}
+\subsubsection[{\-D\-I\-M\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf ocra\-\_\-icub\-::\-Ocra\-Wbi\-Conversions\-::\-D\-I\-M\-\_\-\-T\-R\-A\-N\-S\-L\-A\-T\-I\-O\-N} = 3\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classocra__icub_1_1OcraWbiConversions_a7c628bd1208c5e70be458d4dffda4d06}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+ocra-\/wbi-\/plugins/ocra-\/icub/include/ocra-\/icub/\hyperlink{OcraWbiConversions_8h}{\-Ocra\-Wbi\-Conversions.\-h}\item 
+ocra-\/wbi-\/plugins/ocra-\/icub/src/\hyperlink{OcraWbiConversions_8cpp}{\-Ocra\-Wbi\-Conversions.\-cpp}\end{DoxyCompactItemize}

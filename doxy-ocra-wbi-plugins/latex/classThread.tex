@@ -1,0 +1,280 @@
+\hypertarget{classThread}{\section{\-Thread \-Class \-Reference}
+\label{classThread}\index{\-Thread@{\-Thread}}
+}
+
+
+\-The meat and potatoes of the controller server.  
+
+
+
+
+{\ttfamily \#include $<$\-Thread.\-h$>$}
+
+
+
+\-Collaboration diagram for \-Thread\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classThread__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classThread_1_1ControllerRpcServerCallback}{\-Controller\-Rpc\-Server\-Callback}
+\begin{DoxyCompactList}\small\item\em \-A callback function which binds the rpc server port opened in the contoller server module to the controller thread's parsing function. \end{DoxyCompactList}\item 
+class \hyperlink{classThread_1_1DebugRpcServerCallback}{\-Debug\-Rpc\-Server\-Callback}
+\begin{DoxyCompactList}\small\item\em \-A callback function which binds the rpc server port opened in the contoller server module to the controller thread's parsing function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classThread_a7494a3cf676527432ee724d59ed9ee8f}{\-Thread} (\hyperlink{classOcraControllerOptions}{\-Ocra\-Controller\-Options} \&controller\-\_\-options, std\-::shared\-\_\-ptr$<$ wbi\-::whole\-Body\-Interface $>$ wbi)
+\item 
+virtual \hyperlink{classThread_a37d9edd3a1a776cbc27dedff949c9726}{$\sim$\-Thread} ()
+\item 
+bool \hyperlink{classThread_a1e840470cd71d7bfb2430d24169e3dce}{thread\-Init} ()
+\item 
+void \hyperlink{classThread_ad9373d8d725c46717dfce3130018fe3a}{run} ()
+\item 
+void \hyperlink{classThread_aa2856c7d45670f45d66bcb319255defe}{thread\-Release} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83f}{ocra\-\_\-icub\-::\-O\-C\-R\-A\-\_\-\-I\-C\-U\-B\-\_\-\-M\-E\-S\-S\-A\-G\-E} \hyperlink{classThread_a2c64d83df66f7168d34993b76a179dde}{convert\-String\-To\-Ocra\-Icub\-Message} (const std\-::string \&s)
+\item 
+void \hyperlink{classThread_ae21029d250ac7c720f2411eab71a9414}{parse\-Incoming\-Message} (yarp\-::os\-::\-Bottle \&input, yarp\-::os\-::\-Bottle \&reply)
+\item 
+void \hyperlink{classThread_a6ce5ef9684cb2793be85e7402ad672f0}{parse\-Debug\-Message} (yarp\-::os\-::\-Bottle \&input, yarp\-::os\-::\-Bottle \&reply)
+\item 
+void \hyperlink{classThread_a9af0e98aa9b1de2f5c7bfa2f6e5001a2}{write\-Debug\-Data} ()
+\item 
+void \hyperlink{classThread_a49b65da88eb521ff53ef94d6ec8da7ab}{put\-Ankles\-Into\-Idle} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ocra\-::\-Model\-::\-Ptr \hyperlink{classThread_a1dcef9aedc1a707e6f04d5fb6e4a0b13}{model}
+\item 
+std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classIcubControllerServer}{\-Icub\-Controller\-Server} $>$ \hyperlink{classThread_ace1179249de64e545f43dc48529fbbb6}{ctrl\-Server}
+\item 
+\-Eigen\-::\-Array\-Xd \hyperlink{classThread_a414015415c64371877d6028417c4f9e2}{min\-Torques}
+\item 
+\-Eigen\-::\-Array\-Xd \hyperlink{classThread_af28a4fcbbcbf77c42237c0be75a25a54}{max\-Torques}
+\item 
+\hyperlink{classOcraControllerOptions}{\-Ocra\-Controller\-Options} \hyperlink{classThread_af96a166364f0c6a680115600b3bd232e}{ctrl\-Options}
+\item 
+std\-::shared\-\_\-ptr\*
+$<$ wbi\-::whole\-Body\-Interface $>$ \hyperlink{classThread_aa3f4bbc2dca15c247a13de1bdbc4f7a3}{yarp\-Wbi}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classThread_a3238993799b36af06f3858a3f65dcf1e}{torques}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classThread_aa59863bb50c8aa88fe5872e75be44cb7}{initial\-Posture}
+\item 
+\hyperlink{namespaceocra__icub_afbd2db66b68005fb7cfac19210caf83f}{ocra\-\_\-icub\-::\-O\-C\-R\-A\-\_\-\-I\-C\-U\-B\-\_\-\-M\-E\-S\-S\-A\-G\-E} \hyperlink{classThread_a913cf23e86cdaefd036b782f7417254d}{controller\-Status}
+\item 
+\-Controller\-Rpc\-Server\-Callback\-::shared\-\_\-ptr \hyperlink{classThread_a602de8d12886c9c57b5420c83804a38b}{rpc\-Server\-Callback}
+\item 
+yarp\-::os\-::\-Rpc\-Server \hyperlink{classThread_adbec1b4f2c8fc40641df6f118e93fd25}{rpc\-Server\-Port}
+\item 
+int \hyperlink{classThread_aedf960b8e991868561f35193702245b0}{debug\-Joint\-Index}
+\item 
+yarp\-::os\-::\-Rpc\-Server \hyperlink{classThread_aa6b8f3712e7776d560b0a535eff73c34}{debug\-Rpc\-Port}
+\item 
+yarp\-::os\-::\-Port \hyperlink{classThread_a3780b51f82c50fd2738afbd0ae9b9526}{debug\-Ref\-Out\-Port}
+\item 
+yarp\-::os\-::\-Port \hyperlink{classThread_a9bd7f6aebc0be4709f32f95aa32f1add}{debug\-Real\-Out\-Port}
+\item 
+\-Debug\-Rpc\-Server\-Callback\-::shared\-\_\-ptr \hyperlink{classThread_a42833af67d5280e6946a31a03737e017}{debug\-Rpc\-Callback}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classThread_aa9cbe8744e51571a17fa726d8d16a0c6}{measured\-Torques}
+\item 
+bool \hyperlink{classThread_aba345996b91a57d9e1f2dd15c7c75e08}{debugging\-All\-Joints}
+\item 
+\-Eigen\-::\-Displacementd \hyperlink{classThread_a304e7ee40ec0ceec2fc7ca80353ab478}{l\-\_\-foot\-\_\-disp\-\_\-inverse}
+\item 
+i\-Dyn\-Tree\-::\-Simple\-Legged\-Odometry \hyperlink{classThread_a23a41c6ccd1df898084112cfd46120f3}{odometry}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classThread_a875b3311a39e3b87dbc981f2db7b1b9d}{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S} = -\/1
+\item 
+static const int \hyperlink{classThread_ad44e5fbda8070c252ea71823a4b9a6db}{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-I\-N} = -\/24
+\item 
+static const int \hyperlink{classThread_a5e864394c4bd0fbdf3cba7f6f825e17d}{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-A\-X} = 24
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The meat and potatoes of the controller server. 
+
+\begin{DoxyRefDesc}{\-Todo}
+\item[\hyperlink{todo__todo000001}{\-Todo}]\-Remove task sequences. \-This class sets up an ocra\-::\-Model which is constructed from an \-Ocra\-Wbi\-Model and an ocra\-::\-Controller which can be specified as either a \-Wocra\-Controller, a \-Gocra\-Controller, or a \-Hocra\-Controller. \-The thread is looped at the period specified by the user (defaults to 10ms) and on each loop the \-Model is updated and the control torques are recalculated. $\ast$\-At the writing of this comment, task sequences are still in use and they too are initialized and updated here. \-They will be removed eventually.$\ast$ \end{DoxyRefDesc}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classThread_a7494a3cf676527432ee724d59ed9ee8f}{\index{\-Thread@{\-Thread}!\-Thread@{\-Thread}}
+\index{\-Thread@{\-Thread}!Thread@{\-Thread}}
+\subsubsection[{\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Thread\-::\-Thread} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Ocra\-Controller\-Options} \&}]{controller\-\_\-options, }
+\item[{std\-::shared\-\_\-ptr$<$ wbi\-::whole\-Body\-Interface $>$}]{wbi}
+\end{DoxyParamCaption}
+)}}\label{classThread_a7494a3cf676527432ee724d59ed9ee8f}
+\-Constructor 
+\begin{DoxyParams}{\-Parameters}
+{\em controller\-\_\-options} & \-The various arguments and options used to define what type of controller and tasks to use. \-See \hyperlink{classOcraControllerOptions}{\-Ocra\-Controller\-Options}. \\
+\hline
+{\em wbi} & \-A shared pointer to a whole\-Body\-Interface object. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classThread_a37d9edd3a1a776cbc27dedff949c9726}{\index{\-Thread@{\-Thread}!$\sim$\-Thread@{$\sim$\-Thread}}
+\index{$\sim$\-Thread@{$\sim$\-Thread}!Thread@{\-Thread}}
+\subsubsection[{$\sim$\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Thread\-::$\sim$\-Thread} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classThread_a37d9edd3a1a776cbc27dedff949c9726}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classThread_a2c64d83df66f7168d34993b76a179dde}{\index{\-Thread@{\-Thread}!convert\-String\-To\-Ocra\-Icub\-Message@{convert\-String\-To\-Ocra\-Icub\-Message}}
+\index{convert\-String\-To\-Ocra\-Icub\-Message@{convert\-String\-To\-Ocra\-Icub\-Message}!Thread@{\-Thread}}
+\subsubsection[{convert\-String\-To\-Ocra\-Icub\-Message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ocra\-\_\-icub\-::\-O\-C\-R\-A\-\_\-\-I\-C\-U\-B\-\_\-\-M\-E\-S\-S\-A\-G\-E} {\bf \-Thread\-::convert\-String\-To\-Ocra\-Icub\-Message} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a2c64d83df66f7168d34993b76a179dde}
+\hypertarget{classThread_a6ce5ef9684cb2793be85e7402ad672f0}{\index{\-Thread@{\-Thread}!parse\-Debug\-Message@{parse\-Debug\-Message}}
+\index{parse\-Debug\-Message@{parse\-Debug\-Message}!Thread@{\-Thread}}
+\subsubsection[{parse\-Debug\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::parse\-Debug\-Message} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Bottle \&}]{input, }
+\item[{yarp\-::os\-::\-Bottle \&}]{reply}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a6ce5ef9684cb2793be85e7402ad672f0}
+\hypertarget{classThread_ae21029d250ac7c720f2411eab71a9414}{\index{\-Thread@{\-Thread}!parse\-Incoming\-Message@{parse\-Incoming\-Message}}
+\index{parse\-Incoming\-Message@{parse\-Incoming\-Message}!Thread@{\-Thread}}
+\subsubsection[{parse\-Incoming\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::parse\-Incoming\-Message} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Bottle \&}]{input, }
+\item[{yarp\-::os\-::\-Bottle \&}]{reply}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_ae21029d250ac7c720f2411eab71a9414}
+\hypertarget{classThread_a49b65da88eb521ff53ef94d6ec8da7ab}{\index{\-Thread@{\-Thread}!put\-Ankles\-Into\-Idle@{put\-Ankles\-Into\-Idle}}
+\index{put\-Ankles\-Into\-Idle@{put\-Ankles\-Into\-Idle}!Thread@{\-Thread}}
+\subsubsection[{put\-Ankles\-Into\-Idle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::put\-Ankles\-Into\-Idle} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a49b65da88eb521ff53ef94d6ec8da7ab}
+\hypertarget{classThread_ad9373d8d725c46717dfce3130018fe3a}{\index{\-Thread@{\-Thread}!run@{run}}
+\index{run@{run}!Thread@{\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::run} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classThread_ad9373d8d725c46717dfce3130018fe3a}
+\hypertarget{classThread_a1e840470cd71d7bfb2430d24169e3dce}{\index{\-Thread@{\-Thread}!thread\-Init@{thread\-Init}}
+\index{thread\-Init@{thread\-Init}!Thread@{\-Thread}}
+\subsubsection[{thread\-Init}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Thread\-::thread\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classThread_a1e840470cd71d7bfb2430d24169e3dce}
+\hypertarget{classThread_aa2856c7d45670f45d66bcb319255defe}{\index{\-Thread@{\-Thread}!thread\-Release@{thread\-Release}}
+\index{thread\-Release@{thread\-Release}!Thread@{\-Thread}}
+\subsubsection[{thread\-Release}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::thread\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classThread_aa2856c7d45670f45d66bcb319255defe}
+\hypertarget{classThread_a9af0e98aa9b1de2f5c7bfa2f6e5001a2}{\index{\-Thread@{\-Thread}!write\-Debug\-Data@{write\-Debug\-Data}}
+\index{write\-Debug\-Data@{write\-Debug\-Data}!Thread@{\-Thread}}
+\subsubsection[{write\-Debug\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::write\-Debug\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a9af0e98aa9b1de2f5c7bfa2f6e5001a2}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classThread_a875b3311a39e3b87dbc981f2db7b1b9d}{\index{\-Thread@{\-Thread}!\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S@{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S}}
+\index{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S@{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S}!Thread@{\-Thread}}
+\subsubsection[{\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-Thread\-::\-A\-L\-L\-\_\-\-J\-O\-I\-N\-T\-S} = -\/1\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{classThread_a875b3311a39e3b87dbc981f2db7b1b9d}
+\-Maximum possible actuator torques \hypertarget{classThread_a913cf23e86cdaefd036b782f7417254d}{\index{\-Thread@{\-Thread}!controller\-Status@{controller\-Status}}
+\index{controller\-Status@{controller\-Status}!Thread@{\-Thread}}
+\subsubsection[{controller\-Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ocra\-\_\-icub\-::\-O\-C\-R\-A\-\_\-\-I\-C\-U\-B\-\_\-\-M\-E\-S\-S\-A\-G\-E} {\bf \-Thread\-::controller\-Status}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a913cf23e86cdaefd036b782f7417254d}
+\hypertarget{classThread_af96a166364f0c6a680115600b3bd232e}{\index{\-Thread@{\-Thread}!ctrl\-Options@{ctrl\-Options}}
+\index{ctrl\-Options@{ctrl\-Options}!Thread@{\-Thread}}
+\subsubsection[{ctrl\-Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Ocra\-Controller\-Options} {\bf \-Thread\-::ctrl\-Options}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_af96a166364f0c6a680115600b3bd232e}
+\-The controller options. \hypertarget{classThread_ace1179249de64e545f43dc48529fbbb6}{\index{\-Thread@{\-Thread}!ctrl\-Server@{ctrl\-Server}}
+\index{ctrl\-Server@{ctrl\-Server}!Thread@{\-Thread}}
+\subsubsection[{ctrl\-Server}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-Icub\-Controller\-Server}$>$ {\bf \-Thread\-::ctrl\-Server}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_ace1179249de64e545f43dc48529fbbb6}
+\hypertarget{classThread_aba345996b91a57d9e1f2dd15c7c75e08}{\index{\-Thread@{\-Thread}!debugging\-All\-Joints@{debugging\-All\-Joints}}
+\index{debugging\-All\-Joints@{debugging\-All\-Joints}!Thread@{\-Thread}}
+\subsubsection[{debugging\-All\-Joints}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Thread\-::debugging\-All\-Joints}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_aba345996b91a57d9e1f2dd15c7c75e08}
+\hypertarget{classThread_aedf960b8e991868561f35193702245b0}{\index{\-Thread@{\-Thread}!debug\-Joint\-Index@{debug\-Joint\-Index}}
+\index{debug\-Joint\-Index@{debug\-Joint\-Index}!Thread@{\-Thread}}
+\subsubsection[{debug\-Joint\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Thread\-::debug\-Joint\-Index}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_aedf960b8e991868561f35193702245b0}
+\hypertarget{classThread_a9bd7f6aebc0be4709f32f95aa32f1add}{\index{\-Thread@{\-Thread}!debug\-Real\-Out\-Port@{debug\-Real\-Out\-Port}}
+\index{debug\-Real\-Out\-Port@{debug\-Real\-Out\-Port}!Thread@{\-Thread}}
+\subsubsection[{debug\-Real\-Out\-Port}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Port {\bf \-Thread\-::debug\-Real\-Out\-Port}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a9bd7f6aebc0be4709f32f95aa32f1add}
+\hypertarget{classThread_a3780b51f82c50fd2738afbd0ae9b9526}{\index{\-Thread@{\-Thread}!debug\-Ref\-Out\-Port@{debug\-Ref\-Out\-Port}}
+\index{debug\-Ref\-Out\-Port@{debug\-Ref\-Out\-Port}!Thread@{\-Thread}}
+\subsubsection[{debug\-Ref\-Out\-Port}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Port {\bf \-Thread\-::debug\-Ref\-Out\-Port}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a3780b51f82c50fd2738afbd0ae9b9526}
+\hypertarget{classThread_a42833af67d5280e6946a31a03737e017}{\index{\-Thread@{\-Thread}!debug\-Rpc\-Callback@{debug\-Rpc\-Callback}}
+\index{debug\-Rpc\-Callback@{debug\-Rpc\-Callback}!Thread@{\-Thread}}
+\subsubsection[{debug\-Rpc\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}\-Debug\-Rpc\-Server\-Callback\-::shared\-\_\-ptr {\bf \-Thread\-::debug\-Rpc\-Callback}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a42833af67d5280e6946a31a03737e017}
+\-Rpc server port callback function. \hypertarget{classThread_aa6b8f3712e7776d560b0a535eff73c34}{\index{\-Thread@{\-Thread}!debug\-Rpc\-Port@{debug\-Rpc\-Port}}
+\index{debug\-Rpc\-Port@{debug\-Rpc\-Port}!Thread@{\-Thread}}
+\subsubsection[{debug\-Rpc\-Port}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Rpc\-Server {\bf \-Thread\-::debug\-Rpc\-Port}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_aa6b8f3712e7776d560b0a535eff73c34}
+\hypertarget{classThread_aa59863bb50c8aa88fe5872e75be44cb7}{\index{\-Thread@{\-Thread}!initial\-Posture@{initial\-Posture}}
+\index{initial\-Posture@{initial\-Posture}!Thread@{\-Thread}}
+\subsubsection[{initial\-Posture}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Thread\-::initial\-Posture}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_aa59863bb50c8aa88fe5872e75be44cb7}
+\-The torques calculated at each \hyperlink{classThread_ad9373d8d725c46717dfce3130018fe3a}{run()} loop. \hypertarget{classThread_a304e7ee40ec0ceec2fc7ca80353ab478}{\index{\-Thread@{\-Thread}!l\-\_\-foot\-\_\-disp\-\_\-inverse@{l\-\_\-foot\-\_\-disp\-\_\-inverse}}
+\index{l\-\_\-foot\-\_\-disp\-\_\-inverse@{l\-\_\-foot\-\_\-disp\-\_\-inverse}!Thread@{\-Thread}}
+\subsubsection[{l\-\_\-foot\-\_\-disp\-\_\-inverse}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Displacementd {\bf \-Thread\-::l\-\_\-foot\-\_\-disp\-\_\-inverse}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a304e7ee40ec0ceec2fc7ca80353ab478}
+\-For gazebo visualization. \-You can't get the l\-\_\-sole pose directly in gazebo, but you can get the l\-\_\-foot, so since all poses from ocra\-::\-Model are calculated in the l\-\_\-sole then we need to go from l\-\_\-sole to l\-\_\-foot. \hypertarget{classThread_af28a4fcbbcbf77c42237c0be75a25a54}{\index{\-Thread@{\-Thread}!max\-Torques@{max\-Torques}}
+\index{max\-Torques@{max\-Torques}!Thread@{\-Thread}}
+\subsubsection[{max\-Torques}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Array\-Xd {\bf \-Thread\-::max\-Torques}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_af28a4fcbbcbf77c42237c0be75a25a54}
+\-An eigen array filled with the max torques. \hypertarget{classThread_aa9cbe8744e51571a17fa726d8d16a0c6}{\index{\-Thread@{\-Thread}!measured\-Torques@{measured\-Torques}}
+\index{measured\-Torques@{measured\-Torques}!Thread@{\-Thread}}
+\subsubsection[{measured\-Torques}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Thread\-::measured\-Torques}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_aa9cbe8744e51571a17fa726d8d16a0c6}
+\hypertarget{classThread_a414015415c64371877d6028417c4f9e2}{\index{\-Thread@{\-Thread}!min\-Torques@{min\-Torques}}
+\index{min\-Torques@{min\-Torques}!Thread@{\-Thread}}
+\subsubsection[{min\-Torques}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Array\-Xd {\bf \-Thread\-::min\-Torques}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a414015415c64371877d6028417c4f9e2}
+\-An eigen array filled with the min torques. \hypertarget{classThread_a1dcef9aedc1a707e6f04d5fb6e4a0b13}{\index{\-Thread@{\-Thread}!model@{model}}
+\index{model@{model}!Thread@{\-Thread}}
+\subsubsection[{model}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-::\-Model\-::\-Ptr {\bf \-Thread\-::model}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a1dcef9aedc1a707e6f04d5fb6e4a0b13}
+\hypertarget{classThread_a23a41c6ccd1df898084112cfd46120f3}{\index{\-Thread@{\-Thread}!odometry@{odometry}}
+\index{odometry@{odometry}!Thread@{\-Thread}}
+\subsubsection[{odometry}]{\setlength{\rightskip}{0pt plus 5cm}i\-Dyn\-Tree\-::\-Simple\-Legged\-Odometry {\bf \-Thread\-::odometry}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a23a41c6ccd1df898084112cfd46120f3}
+\-Odometry object \hypertarget{classThread_a602de8d12886c9c57b5420c83804a38b}{\index{\-Thread@{\-Thread}!rpc\-Server\-Callback@{rpc\-Server\-Callback}}
+\index{rpc\-Server\-Callback@{rpc\-Server\-Callback}!Thread@{\-Thread}}
+\subsubsection[{rpc\-Server\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}\-Controller\-Rpc\-Server\-Callback\-::shared\-\_\-ptr {\bf \-Thread\-::rpc\-Server\-Callback}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a602de8d12886c9c57b5420c83804a38b}
+\-Rpc server port callback function. \hypertarget{classThread_adbec1b4f2c8fc40641df6f118e93fd25}{\index{\-Thread@{\-Thread}!rpc\-Server\-Port@{rpc\-Server\-Port}}
+\index{rpc\-Server\-Port@{rpc\-Server\-Port}!Thread@{\-Thread}}
+\subsubsection[{rpc\-Server\-Port}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Rpc\-Server {\bf \-Thread\-::rpc\-Server\-Port}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_adbec1b4f2c8fc40641df6f118e93fd25}
+\-Rpc server port. \hypertarget{classThread_a5e864394c4bd0fbdf3cba7f6f825e17d}{\index{\-Thread@{\-Thread}!\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-A\-X@{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-A\-X}}
+\index{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-A\-X@{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-A\-X}!Thread@{\-Thread}}
+\subsubsection[{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-Thread\-::\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-A\-X} = 24\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{classThread_a5e864394c4bd0fbdf3cba7f6f825e17d}
+\-Maximum possible actuator torques \hypertarget{classThread_ad44e5fbda8070c252ea71823a4b9a6db}{\index{\-Thread@{\-Thread}!\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-I\-N@{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-I\-N}}
+\index{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-I\-N@{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-I\-N}!Thread@{\-Thread}}
+\subsubsection[{\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-Thread\-::\-T\-O\-R\-Q\-U\-E\-\_\-\-M\-I\-N} = -\/24\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}\label{classThread_ad44e5fbda8070c252ea71823a4b9a6db}
+\-Minimum possible actuator torques \hypertarget{classThread_a3238993799b36af06f3858a3f65dcf1e}{\index{\-Thread@{\-Thread}!torques@{torques}}
+\index{torques@{torques}!Thread@{\-Thread}}
+\subsubsection[{torques}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Thread\-::torques}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a3238993799b36af06f3858a3f65dcf1e}
+\-The torques calculated at each \hyperlink{classThread_ad9373d8d725c46717dfce3130018fe3a}{run()} loop. \hypertarget{classThread_aa3f4bbc2dca15c247a13de1bdbc4f7a3}{\index{\-Thread@{\-Thread}!yarp\-Wbi@{yarp\-Wbi}}
+\index{yarp\-Wbi@{yarp\-Wbi}!Thread@{\-Thread}}
+\subsubsection[{yarp\-Wbi}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$wbi\-::whole\-Body\-Interface$>$ {\bf \-Thread\-::yarp\-Wbi}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_aa3f4bbc2dca15c247a13de1bdbc4f7a3}
+\-The \-W\-B\-I used to talk to the robot. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/server/include/ocra-\/icub-\/server/\hyperlink{Thread_8h}{\-Thread.\-h}\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/server/src/\hyperlink{Thread_8cpp}{\-Thread.\-cpp}\end{DoxyCompactItemize}

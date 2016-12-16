@@ -1,0 +1,496 @@
+\hypertarget{classSteppingDemoClient}{\section{\-Stepping\-Demo\-Client \-Class \-Reference}
+\label{classSteppingDemoClient}\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}}
+}
+
+
+{\ttfamily \#include $<$\-Stepping\-Demo\-Client.\-h$>$}
+
+
+
+\-Collaboration diagram for \-Stepping\-Demo\-Client\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classSteppingDemoClient__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSteppingDemoClient_a28e41547ba5641741ceb3b378a5983db}{\-Stepping\-Demo\-Client} (std\-::shared\-\_\-ptr$<$ ocra\-::\-Model $>$ model\-Ptr, const int loop\-Period)
+\item 
+virtual \hyperlink{classSteppingDemoClient_a573eed904c7262c5cdbaf6e254d72559}{$\sim$\-Stepping\-Demo\-Client} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SteppingDemoClient_8h_abd6d177d63e98aa1b4ed4b8329e2a379}{\-M\-O\-T\-I\-O\-N\-\_\-\-T\-Y\-P\-E} \hyperlink{classSteppingDemoClient_aa880debbcbed0298ae1769dd8a3f721b}{motion\-Type}
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classSteppingDemoClient_a08dce195eece162eed175ac9487667c2}{initialize} ()
+\item 
+virtual void \hyperlink{classSteppingDemoClient_aafcb227c0d7ce24823957e2331caa88b}{release} ()
+\item 
+virtual void \hyperlink{classSteppingDemoClient_a37dba4764b5849cf33c395cd0d4b0eb5}{loop} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSteppingDemoClient_a0f6b689c5f032351484b03e71a3530e1}{static\-Walking\-Loop} ()
+\item 
+void \hyperlink{classSteppingDemoClient_a94b990ae53b1b40ef8f9469b427d171c}{left\-To\-Right\-Loop} ()
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_af6a814243828f5136476aa5e99ea0079}{get\-Left\-Foot\-Position} ()
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_ae9c0d72756c109f49c269a7e1b06454a}{get\-Right\-Foot\-Position} ()
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_a857aa530a4ab94443d0b0869121baf76}{get\-Co\-M\-Position} ()
+\item 
+void \hyperlink{classSteppingDemoClient_a18609e5634a283423c228106bb0e3a45}{position\-Co\-M\-Over} (\hyperlink{SteppingDemoClient_8h_ac0c3848a609566394821d9826e0fdd5b}{\-C\-O\-M\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N} new\-Support\-Pos)
+\item 
+bool \hyperlink{classSteppingDemoClient_ad8fbc186267a47a73bb77e78199f2b8c}{is\-Balanced} ()
+\item 
+void \hyperlink{classSteppingDemoClient_a62b5028bdc99de117cfffc576478a0f1}{deactivate\-Foot\-Contacts} (\hyperlink{SteppingDemoClient_8h_ab0673d7f17cdd57b8fa124abb330287f}{\-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S} foot)
+\item 
+void \hyperlink{classSteppingDemoClient_abf583698c8c03620516acf3ec6eb9e41}{activate\-Foot\-Contacts} (\hyperlink{SteppingDemoClient_8h_ab0673d7f17cdd57b8fa124abb330287f}{\-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S} foot)
+\item 
+bool \hyperlink{classSteppingDemoClient_aeeaa9fac47e3e5a141647b07fa2feaa3}{is\-Foot\-In\-Contact} (\hyperlink{SteppingDemoClient_8h_ab0673d7f17cdd57b8fa124abb330287f}{\-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S} foot)
+\item 
+void \hyperlink{classSteppingDemoClient_a6b5d8bf0ce08c8b9f66ac2c1bbd5bcd7}{pause\-For} (double \-\_\-pause\-Duration)
+\item 
+bool \hyperlink{classSteppingDemoClient_afe78b799d8b8c63cff7d1e8765b7e1fa}{pause\-Finished} ()
+\item 
+bool \hyperlink{classSteppingDemoClient_ae406e5c8f755f234272b63de4d6a774f}{lift\-Foot} (\hyperlink{SteppingDemoClient_8h_ab0673d7f17cdd57b8fa124abb330287f}{\-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S} foot, bool is\-Left\-Foot\-In\-Contact, bool is\-Right\-Foot\-In\-Contact)
+\item 
+bool \hyperlink{classSteppingDemoClient_a930123dad5658ea8a3bb5f23cb4cb369}{set\-Down\-Foot} (\hyperlink{SteppingDemoClient_8h_ab0673d7f17cdd57b8fa124abb330287f}{\-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S} foot)
+\item 
+void \hyperlink{classSteppingDemoClient_a346a8fd10641897532a26f598db7799d}{state\-Machine\-With\-Pause\-In\-Double\-Support} ()
+\item 
+void \hyperlink{classSteppingDemoClient_a256284578a6b9818a8f726451d2fb2c4}{state\-Machine\-Without\-Pause\-In\-Double\-Support} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSteppingDemoClient_a5dd71720cd8f7a17d21f74d20b3c23ff}{\-Left\-Foot\-Contact\-\_\-\-Back\-Left}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSteppingDemoClient_a32e69816ec216b3d6502385e2346d22d}{\-Left\-Foot\-Contact\-\_\-\-Front\-Left}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSteppingDemoClient_a946ab9de6d55274e5cb9b9a8743a30b8}{\-Left\-Foot\-Contact\-\_\-\-Back\-Right}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSteppingDemoClient_ae2c0ca1ba0ef69b5f09fd3cd982fb772}{\-Left\-Foot\-Contact\-\_\-\-Front\-Right}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSteppingDemoClient_aaaf5dee15bf151def4b4070751d1ca84}{\-Right\-Foot\-Contact\-\_\-\-Back\-Left}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSteppingDemoClient_ad10f639e025b003fd383f4cc933da15f}{\-Right\-Foot\-Contact\-\_\-\-Front\-Left}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSteppingDemoClient_a93e209732588c3ef2b04e39e3df40d3e}{\-Right\-Foot\-Contact\-\_\-\-Back\-Right}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSteppingDemoClient_a781be1c0ffd7e7147eb2b2de66ba3231}{\-Right\-Foot\-Contact\-\_\-\-Front\-Right}
+\item 
+double \hyperlink{classSteppingDemoClient_a13a5deff16d52936f788bb9b0af6e9c9}{pause\-Trigger\-Time}
+\item 
+double \hyperlink{classSteppingDemoClient_a92b810b2d2c50e359da18e5d91163340}{pause\-Duration}
+\item 
+double \hyperlink{classSteppingDemoClient_a1bb7d42cf09778349ae1ecd31d2ac116}{current\-Time}
+\item 
+bool \hyperlink{classSteppingDemoClient_a29e7765300c7d2e2d5108025fbdcbc2c}{is\-Pausing}
+\item 
+bool \hyperlink{classSteppingDemoClient_a88b84ed8fc7808ea3fb68f2ec3d29ebe}{is\-In\-Left\-Support\-Mode}
+\item 
+bool \hyperlink{classSteppingDemoClient_a7697070e5db6c635aa2eff70bce29176}{is\-In\-Right\-Support\-Mode}
+\item 
+bool \hyperlink{classSteppingDemoClient_a6036e2d0b604648ca39e4d64b41a9d6e}{foot\-Trajectory\-Started}
+\item 
+std\-::shared\-\_\-ptr\*
+$<$ ocra\-\_\-recipes\-::\-Trajectory\-Thread $>$ \hyperlink{classSteppingDemoClient_afd18627088c2c12f172ff9e976da5330}{left\-Foot\-\_\-\-Traj\-Thread}
+\item 
+std\-::shared\-\_\-ptr\*
+$<$ ocra\-\_\-recipes\-::\-Trajectory\-Thread $>$ \hyperlink{classSteppingDemoClient_a8b4b931d41b47d9923417506fac107f3}{right\-Foot\-\_\-\-Traj\-Thread}
+\item 
+std\-::shared\-\_\-ptr\*
+$<$ ocra\-\_\-recipes\-::\-Trajectory\-Thread $>$ \hyperlink{classSteppingDemoClient_a9f3d1cdc49cc26a10f9b8fb0d0c68cab}{com\-\_\-\-Traj\-Thread}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_acd4cb9dbe053979701574f5d1d4ef349}{left\-Foot\-Home}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_ae2a3bdaafc7784b5afece8ae9ebaff7d}{right\-Foot\-Home}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_aa018c1f2734d63f962be512461c9e010}{com\-Home}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_a2360933e2902d1b1a374787bd67e14e7}{left\-Foot\-Target}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_abfe6635a0ad50fa4baa6fa10b8c56d9e}{right\-Foot\-Target}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_af9e0358390f12ed0135275b20bf1f6f5}{next\-Step}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSteppingDemoClient_ab4a77111abbf3630280a64d17ac59eef}{new\-Co\-M\-Goal\-Position}
+\item 
+double \hyperlink{classSteppingDemoClient_af7b6e48319ef9d35fb975edc3bb2a137}{start\-Time}
+\item 
+bool \hyperlink{classSteppingDemoClient_aedd8bb5bca60afbdd2b8de3b5d1829d7}{get\-Initial\-Values}
+\item 
+\hyperlink{SteppingDemoClient_8h_af2a8507bf21c3ce9b0e67a23381251c6}{\-C\-O\-N\-T\-R\-O\-L\-\_\-\-P\-H\-A\-S\-E} \hyperlink{classSteppingDemoClient_afe0aa2a02ea8117d644bf5444a03ac62}{current\-Phase}
+\item 
+\hyperlink{SteppingDemoClient_8h_af2a8507bf21c3ce9b0e67a23381251c6}{\-C\-O\-N\-T\-R\-O\-L\-\_\-\-P\-H\-A\-S\-E} \hyperlink{classSteppingDemoClient_ab5a3b82049a9786162a60d0ae94f96d9}{next\-Phase}
+\item 
+bool \hyperlink{classSteppingDemoClient_ad7e3950d053af7c1aca33b3e7c3b20c5}{is\-Moving\-Co\-M}
+\item 
+\hyperlink{structWalkingParams}{\-Walking\-Params} \hyperlink{classSteppingDemoClient_a113c2d838e3db1d18f4843a8828e30d4}{walking\-Params}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classSteppingDemoClient_a28e41547ba5641741ceb3b378a5983db}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}}
+\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Stepping\-Demo\-Client}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stepping\-Demo\-Client\-::\-Stepping\-Demo\-Client} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ ocra\-::\-Model $>$}]{model\-Ptr, }
+\item[{const int}]{loop\-Period}
+\end{DoxyParamCaption}
+)}}\label{classSteppingDemoClient_a28e41547ba5641741ceb3b378a5983db}
+\hypertarget{classSteppingDemoClient_a573eed904c7262c5cdbaf6e254d72559}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!$\sim$\-Stepping\-Demo\-Client@{$\sim$\-Stepping\-Demo\-Client}}
+\index{$\sim$\-Stepping\-Demo\-Client@{$\sim$\-Stepping\-Demo\-Client}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{$\sim$\-Stepping\-Demo\-Client}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stepping\-Demo\-Client\-::$\sim$\-Stepping\-Demo\-Client} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSteppingDemoClient_a573eed904c7262c5cdbaf6e254d72559}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSteppingDemoClient_abf583698c8c03620516acf3ec6eb9e41}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!activate\-Foot\-Contacts@{activate\-Foot\-Contacts}}
+\index{activate\-Foot\-Contacts@{activate\-Foot\-Contacts}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{activate\-Foot\-Contacts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::activate\-Foot\-Contacts} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S}}]{foot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_abf583698c8c03620516acf3ec6eb9e41}
+\-This method asks the ocra-\/icub-\/server to activate one by one the feet \char`\"{}corner\char`\"{} contact tasks for the specified foot.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSteppingDemoClient_a62b5028bdc99de117cfffc576478a0f1}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!deactivate\-Foot\-Contacts@{deactivate\-Foot\-Contacts}}
+\index{deactivate\-Foot\-Contacts@{deactivate\-Foot\-Contacts}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{deactivate\-Foot\-Contacts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::deactivate\-Foot\-Contacts} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S}}]{foot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a62b5028bdc99de117cfffc576478a0f1}
+\-Remember the right and left feet contact tasks? created in \hyperlink{classSteppingDemoClient_a08dce195eece162eed175ac9487667c2}{initialize()}. \-This method acts the ocra-\/icub-\/server to deactivate one by one the feet \char`\"{}corner\char`\"{} contact tasks for the specified foot.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSteppingDemoClient_a857aa530a4ab94443d0b0869121baf76}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!get\-Co\-M\-Position@{get\-Co\-M\-Position}}
+\index{get\-Co\-M\-Position@{get\-Co\-M\-Position}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{get\-Co\-M\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::get\-Co\-M\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a857aa530a4ab94443d0b0869121baf76}
+\-Retrieves the 3\-D position of the \char`\"{}\-Co\-M\char`\"{} as done by the yarp\-Whole\-Body\-Interface.
+
+\begin{DoxyReturn}{\-Returns}
+3\-D position of the \-C\-O\-M. 
+\end{DoxyReturn}
+\hypertarget{classSteppingDemoClient_af6a814243828f5136476aa5e99ea0079}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!get\-Left\-Foot\-Position@{get\-Left\-Foot\-Position}}
+\index{get\-Left\-Foot\-Position@{get\-Left\-Foot\-Position}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{get\-Left\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::get\-Left\-Foot\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_af6a814243828f5136476aa5e99ea0079}
+\-Retrieves the 3\-D position of the \char`\"{}l\-\_\-sole\char`\"{} frame from the i\-Cub model.
+
+\begin{DoxyReturn}{\-Returns}
+3\-D position of the left foot. 
+\end{DoxyReturn}
+\hypertarget{classSteppingDemoClient_ae9c0d72756c109f49c269a7e1b06454a}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!get\-Right\-Foot\-Position@{get\-Right\-Foot\-Position}}
+\index{get\-Right\-Foot\-Position@{get\-Right\-Foot\-Position}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{get\-Right\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::get\-Right\-Foot\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ae9c0d72756c109f49c269a7e1b06454a}
+\-Retrieves the 3\-D position of the \char`\"{}r\-\_\-sole\char`\"{} frame from the i\-Cub model.
+
+\begin{DoxyReturn}{\-Returns}
+3\-D position of the right foot. 
+\end{DoxyReturn}
+\hypertarget{classSteppingDemoClient_a08dce195eece162eed175ac9487667c2}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!initialize@{initialize}}
+\index{initialize@{initialize}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::initialize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classSteppingDemoClient_a08dce195eece162eed175ac9487667c2}
+\-The initialization consists of the following\-: 1. \-Defines trajectory types (e.\-g. \-Min. \-Jerk) 2. \-Defines the termination strategy 3. \-Instantiates trajectory threads for the left and right foot as well as for the \-Co\-M, sets them up (max velocity, error threshold) and finally starts them. 4. \-Instantiates ocra\-::\-Task\-Connection objects for the left and right feet contacts (4 per foot on each corner).
+
+
+\begin{DoxyItemize}
+\item returns\-: \-True if everything has been initialized properly, false otherwise. 
+\end{DoxyItemize}\hypertarget{classSteppingDemoClient_ad8fbc186267a47a73bb77e78199f2b8c}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!is\-Balanced@{is\-Balanced}}
+\index{is\-Balanced@{is\-Balanced}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{is\-Balanced}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::is\-Balanced} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ad8fbc186267a47a73bb77e78199f2b8c}
+\-Uses the norm of the \-C\-O\-M and joint velocities to understand if the robot is balanced.
+
+\begin{DoxyReturn}{\-Returns}
+\-True when both the norm of the \-C\-O\-M and joint velocities are below com\-Vel\-Threshold and joint\-Threshold. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{\-Todo}
+\item[\hyperlink{todo__todo000002}{\-Todo}]\-A more balance-\/centered criterion should be used for this, \-Z\-M\-P-\/based for example. \end{DoxyRefDesc}
+\hypertarget{classSteppingDemoClient_aeeaa9fac47e3e5a141647b07fa2feaa3}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!is\-Foot\-In\-Contact@{is\-Foot\-In\-Contact}}
+\index{is\-Foot\-In\-Contact@{is\-Foot\-In\-Contact}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{is\-Foot\-In\-Contact}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::is\-Foot\-In\-Contact} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S}}]{foot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_aeeaa9fac47e3e5a141647b07fa2feaa3}
+\-If the foot height is less than or equal to foot\-Contact\-Release\-Threshold, the feet contacts tasks are activated.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the activation of the contact happens successfully. \-False if the foot's elevation is not under the foot\-Contact\-Release\-Threshold. 
+\end{DoxyReturn}
+\hypertarget{classSteppingDemoClient_a94b990ae53b1b40ef8f9469b427d171c}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!left\-To\-Right\-Loop@{left\-To\-Right\-Loop}}
+\index{left\-To\-Right\-Loop@{left\-To\-Right\-Loop}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{left\-To\-Right\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::left\-To\-Right\-Loop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a94b990ae53b1b40ef8f9469b427d171c}
+\hypertarget{classSteppingDemoClient_ae406e5c8f755f234272b63de4d6a774f}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!lift\-Foot@{lift\-Foot}}
+\index{lift\-Foot@{lift\-Foot}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{lift\-Foot}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::lift\-Foot} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S}}]{foot, }
+\item[{bool}]{is\-Left\-Foot\-In\-Contact, }
+\item[{bool}]{is\-Right\-Foot\-In\-Contact}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ae406e5c8f755f234272b63de4d6a774f}
+\-Sets the right or left foot waypoint to right\-Foot\-Target or left\-Foot\-Target accordingly (where the foot will be lifted). \-These values are harcoded in the \hyperlink{classSteppingDemoClient_a37dba4764b5849cf33c395cd0d4b0eb5}{loop()} method and updated only during the very first iteration when the variable get\-Initial\-Values is set to true.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T \\
+\hline
+{\em is\-Left\-Foot\-In\-Contact} & \-Updates the current state of the left foot contact. \\
+\hline
+{\em is\-Right\-Foot\-In\-Contact} & \-Updates the current state of the right foot contact.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True after the foot contact is deactivated. 
+\end{DoxyReturn}
+\hypertarget{classSteppingDemoClient_a37dba4764b5849cf33c395cd0d4b0eb5}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!loop@{loop}}
+\index{loop@{loop}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::loop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classSteppingDemoClient_a37dba4764b5849cf33c395cd0d4b0eb5}
+\-Initially waits for two seconds, to make sure that all model states have been correctly updated during the initialization. \-During the first loop it retrieves left and right feet positions along with the com's. \hypertarget{classSteppingDemoClient_afe78b799d8b8c63cff7d1e8765b7e1fa}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!pause\-Finished@{pause\-Finished}}
+\index{pause\-Finished@{pause\-Finished}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{pause\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::pause\-Finished} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_afe78b799d8b8c63cff7d1e8765b7e1fa}
+\-Sets is\-Pausing to false when pause\-Duration has passed.
+
+\begin{DoxyReturn}{\-Returns}
+\-True when the pause duration is over. \-False otherwise. 
+\end{DoxyReturn}
+\hypertarget{classSteppingDemoClient_a6b5d8bf0ce08c8b9f66ac2c1bbd5bcd7}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!pause\-For@{pause\-For}}
+\index{pause\-For@{pause\-For}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{pause\-For}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::pause\-For} (
+\begin{DoxyParamCaption}
+\item[{double}]{\-\_\-pause\-Duration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a6b5d8bf0ce08c8b9f66ac2c1bbd5bcd7}
+\-Mainly sets is\-Pausing to true and stores the time at which the pause was called.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-pause\-Duration} & \-Pause duration. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSteppingDemoClient_a18609e5634a283423c228106bb0e3a45}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!position\-Co\-M\-Over@{position\-Co\-M\-Over}}
+\index{position\-Co\-M\-Over@{position\-Co\-M\-Over}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{position\-Co\-M\-Over}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::position\-Co\-M\-Over} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-C\-O\-M\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}}]{new\-Support\-Pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a18609e5634a283423c228106bb0e3a45}
+\-Sets \-C\-O\-M trajectory waypoints according to the desired support position\-: \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T\-\_\-\-X\-Y\-: \-The \-C\-O\-M goal position is set to be on top of the left foot. \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T\-\_\-\-X\-Y\-: \-The \-C\-O\-M goal position is set to be on top of the right foot. \-C\-E\-N\-T\-E\-R\-E\-D\-\_\-\-B\-E\-T\-W\-E\-E\-N\-\_\-\-F\-E\-E\-T\-\_\-\-X\-Y\-: \-The \-C\-O\-M goal position is set between both feet. \-The height of the com is always the current \-C\-O\-M's height. \-Since the thread must have started before calling this method, it will update the current waypoint trajectory it has or start it.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em new\-Support\-Pos} & \-New support position. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSteppingDemoClient_aafcb227c0d7ce24823957e2331caa88b}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!release@{release}}
+\index{release@{release}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classSteppingDemoClient_aafcb227c0d7ce24823957e2331caa88b}
+\-Stops the trajectory threads of the \-Co\-M, left and right feet. \hypertarget{classSteppingDemoClient_a930123dad5658ea8a3bb5f23cb4cb369}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!set\-Down\-Foot@{set\-Down\-Foot}}
+\index{set\-Down\-Foot@{set\-Down\-Foot}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{set\-Down\-Foot}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::set\-Down\-Foot} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T\-\_\-\-C\-O\-N\-T\-A\-C\-T\-S}}]{foot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a930123dad5658ea8a3bb5f23cb4cb369}
+\-Sets the right or left foot waypoint to right\-Foot\-Home or left\-Foot\-Home accordingly (where the foot will land). \-These values are harcoded in the \hyperlink{classSteppingDemoClient_a37dba4764b5849cf33c395cd0d4b0eb5}{loop()} method and updated only during the very first iteration when the variable get\-Initial\-Values is set to true.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True only after the foot has established contact again and the trajectory is over. \-False while the foot is still moving back down looking for contact or simply, the goal hasn't been attained. 
+\end{DoxyReturn}
+\hypertarget{classSteppingDemoClient_a256284578a6b9818a8f726451d2fb2c4}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!state\-Machine\-Without\-Pause\-In\-Double\-Support@{state\-Machine\-Without\-Pause\-In\-Double\-Support}}
+\index{state\-Machine\-Without\-Pause\-In\-Double\-Support@{state\-Machine\-Without\-Pause\-In\-Double\-Support}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{state\-Machine\-Without\-Pause\-In\-Double\-Support}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::state\-Machine\-Without\-Pause\-In\-Double\-Support} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a256284578a6b9818a8f726451d2fb2c4}
+\hypertarget{classSteppingDemoClient_a346a8fd10641897532a26f598db7799d}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!state\-Machine\-With\-Pause\-In\-Double\-Support@{state\-Machine\-With\-Pause\-In\-Double\-Support}}
+\index{state\-Machine\-With\-Pause\-In\-Double\-Support@{state\-Machine\-With\-Pause\-In\-Double\-Support}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{state\-Machine\-With\-Pause\-In\-Double\-Support}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::state\-Machine\-With\-Pause\-In\-Double\-Support} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a346a8fd10641897532a26f598db7799d}
+\hypertarget{classSteppingDemoClient_a0f6b689c5f032351484b03e71a3530e1}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!static\-Walking\-Loop@{static\-Walking\-Loop}}
+\index{static\-Walking\-Loop@{static\-Walking\-Loop}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{static\-Walking\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stepping\-Demo\-Client\-::static\-Walking\-Loop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a0f6b689c5f032351484b03e71a3530e1}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classSteppingDemoClient_a9f3d1cdc49cc26a10f9b8fb0d0c68cab}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!com\-\_\-\-Traj\-Thread@{com\-\_\-\-Traj\-Thread}}
+\index{com\-\_\-\-Traj\-Thread@{com\-\_\-\-Traj\-Thread}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{com\-\_\-\-Traj\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ocra\-\_\-recipes\-::\-Trajectory\-Thread$>$ {\bf \-Stepping\-Demo\-Client\-::com\-\_\-\-Traj\-Thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a9f3d1cdc49cc26a10f9b8fb0d0c68cab}
+\hypertarget{classSteppingDemoClient_aa018c1f2734d63f962be512461c9e010}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!com\-Home@{com\-Home}}
+\index{com\-Home@{com\-Home}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{com\-Home}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::com\-Home}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_aa018c1f2734d63f962be512461c9e010}
+\hypertarget{classSteppingDemoClient_afe0aa2a02ea8117d644bf5444a03ac62}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!current\-Phase@{current\-Phase}}
+\index{current\-Phase@{current\-Phase}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{current\-Phase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-O\-N\-T\-R\-O\-L\-\_\-\-P\-H\-A\-S\-E} {\bf \-Stepping\-Demo\-Client\-::current\-Phase}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_afe0aa2a02ea8117d644bf5444a03ac62}
+\hypertarget{classSteppingDemoClient_a1bb7d42cf09778349ae1ecd31d2ac116}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!current\-Time@{current\-Time}}
+\index{current\-Time@{current\-Time}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{current\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Stepping\-Demo\-Client\-::current\-Time}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a1bb7d42cf09778349ae1ecd31d2ac116}
+\hypertarget{classSteppingDemoClient_a6036e2d0b604648ca39e4d64b41a9d6e}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!foot\-Trajectory\-Started@{foot\-Trajectory\-Started}}
+\index{foot\-Trajectory\-Started@{foot\-Trajectory\-Started}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{foot\-Trajectory\-Started}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::foot\-Trajectory\-Started}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a6036e2d0b604648ca39e4d64b41a9d6e}
+\hypertarget{classSteppingDemoClient_aedd8bb5bca60afbdd2b8de3b5d1829d7}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!get\-Initial\-Values@{get\-Initial\-Values}}
+\index{get\-Initial\-Values@{get\-Initial\-Values}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{get\-Initial\-Values}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::get\-Initial\-Values}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_aedd8bb5bca60afbdd2b8de3b5d1829d7}
+\hypertarget{classSteppingDemoClient_a88b84ed8fc7808ea3fb68f2ec3d29ebe}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!is\-In\-Left\-Support\-Mode@{is\-In\-Left\-Support\-Mode}}
+\index{is\-In\-Left\-Support\-Mode@{is\-In\-Left\-Support\-Mode}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{is\-In\-Left\-Support\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::is\-In\-Left\-Support\-Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a88b84ed8fc7808ea3fb68f2ec3d29ebe}
+\hypertarget{classSteppingDemoClient_a7697070e5db6c635aa2eff70bce29176}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!is\-In\-Right\-Support\-Mode@{is\-In\-Right\-Support\-Mode}}
+\index{is\-In\-Right\-Support\-Mode@{is\-In\-Right\-Support\-Mode}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{is\-In\-Right\-Support\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::is\-In\-Right\-Support\-Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a7697070e5db6c635aa2eff70bce29176}
+\hypertarget{classSteppingDemoClient_ad7e3950d053af7c1aca33b3e7c3b20c5}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!is\-Moving\-Co\-M@{is\-Moving\-Co\-M}}
+\index{is\-Moving\-Co\-M@{is\-Moving\-Co\-M}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{is\-Moving\-Co\-M}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::is\-Moving\-Co\-M}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ad7e3950d053af7c1aca33b3e7c3b20c5}
+\hypertarget{classSteppingDemoClient_a29e7765300c7d2e2d5108025fbdcbc2c}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!is\-Pausing@{is\-Pausing}}
+\index{is\-Pausing@{is\-Pausing}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{is\-Pausing}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepping\-Demo\-Client\-::is\-Pausing}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a29e7765300c7d2e2d5108025fbdcbc2c}
+\hypertarget{classSteppingDemoClient_afd18627088c2c12f172ff9e976da5330}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!left\-Foot\-\_\-\-Traj\-Thread@{left\-Foot\-\_\-\-Traj\-Thread}}
+\index{left\-Foot\-\_\-\-Traj\-Thread@{left\-Foot\-\_\-\-Traj\-Thread}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{left\-Foot\-\_\-\-Traj\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ocra\-\_\-recipes\-::\-Trajectory\-Thread$>$ {\bf \-Stepping\-Demo\-Client\-::left\-Foot\-\_\-\-Traj\-Thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_afd18627088c2c12f172ff9e976da5330}
+\hypertarget{classSteppingDemoClient_a5dd71720cd8f7a17d21f74d20b3c23ff}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Left\-Foot\-Contact\-\_\-\-Back\-Left@{\-Left\-Foot\-Contact\-\_\-\-Back\-Left}}
+\index{\-Left\-Foot\-Contact\-\_\-\-Back\-Left@{\-Left\-Foot\-Contact\-\_\-\-Back\-Left}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Left\-Foot\-Contact\-\_\-\-Back\-Left}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Stepping\-Demo\-Client\-::\-Left\-Foot\-Contact\-\_\-\-Back\-Left}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a5dd71720cd8f7a17d21f74d20b3c23ff}
+\hypertarget{classSteppingDemoClient_a946ab9de6d55274e5cb9b9a8743a30b8}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Left\-Foot\-Contact\-\_\-\-Back\-Right@{\-Left\-Foot\-Contact\-\_\-\-Back\-Right}}
+\index{\-Left\-Foot\-Contact\-\_\-\-Back\-Right@{\-Left\-Foot\-Contact\-\_\-\-Back\-Right}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Left\-Foot\-Contact\-\_\-\-Back\-Right}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Stepping\-Demo\-Client\-::\-Left\-Foot\-Contact\-\_\-\-Back\-Right}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a946ab9de6d55274e5cb9b9a8743a30b8}
+\hypertarget{classSteppingDemoClient_a32e69816ec216b3d6502385e2346d22d}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Left\-Foot\-Contact\-\_\-\-Front\-Left@{\-Left\-Foot\-Contact\-\_\-\-Front\-Left}}
+\index{\-Left\-Foot\-Contact\-\_\-\-Front\-Left@{\-Left\-Foot\-Contact\-\_\-\-Front\-Left}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Left\-Foot\-Contact\-\_\-\-Front\-Left}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Stepping\-Demo\-Client\-::\-Left\-Foot\-Contact\-\_\-\-Front\-Left}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a32e69816ec216b3d6502385e2346d22d}
+\hypertarget{classSteppingDemoClient_ae2c0ca1ba0ef69b5f09fd3cd982fb772}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Left\-Foot\-Contact\-\_\-\-Front\-Right@{\-Left\-Foot\-Contact\-\_\-\-Front\-Right}}
+\index{\-Left\-Foot\-Contact\-\_\-\-Front\-Right@{\-Left\-Foot\-Contact\-\_\-\-Front\-Right}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Left\-Foot\-Contact\-\_\-\-Front\-Right}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Stepping\-Demo\-Client\-::\-Left\-Foot\-Contact\-\_\-\-Front\-Right}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ae2c0ca1ba0ef69b5f09fd3cd982fb772}
+\hypertarget{classSteppingDemoClient_acd4cb9dbe053979701574f5d1d4ef349}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!left\-Foot\-Home@{left\-Foot\-Home}}
+\index{left\-Foot\-Home@{left\-Foot\-Home}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{left\-Foot\-Home}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::left\-Foot\-Home}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_acd4cb9dbe053979701574f5d1d4ef349}
+\hypertarget{classSteppingDemoClient_a2360933e2902d1b1a374787bd67e14e7}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!left\-Foot\-Target@{left\-Foot\-Target}}
+\index{left\-Foot\-Target@{left\-Foot\-Target}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{left\-Foot\-Target}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::left\-Foot\-Target}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a2360933e2902d1b1a374787bd67e14e7}
+\hypertarget{classSteppingDemoClient_aa880debbcbed0298ae1769dd8a3f721b}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!motion\-Type@{motion\-Type}}
+\index{motion\-Type@{motion\-Type}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{motion\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-O\-T\-I\-O\-N\-\_\-\-T\-Y\-P\-E} {\bf \-Stepping\-Demo\-Client\-::motion\-Type}}}\label{classSteppingDemoClient_aa880debbcbed0298ae1769dd8a3f721b}
+\hypertarget{classSteppingDemoClient_ab4a77111abbf3630280a64d17ac59eef}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!new\-Co\-M\-Goal\-Position@{new\-Co\-M\-Goal\-Position}}
+\index{new\-Co\-M\-Goal\-Position@{new\-Co\-M\-Goal\-Position}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{new\-Co\-M\-Goal\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::new\-Co\-M\-Goal\-Position}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ab4a77111abbf3630280a64d17ac59eef}
+\hypertarget{classSteppingDemoClient_ab5a3b82049a9786162a60d0ae94f96d9}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!next\-Phase@{next\-Phase}}
+\index{next\-Phase@{next\-Phase}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{next\-Phase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-O\-N\-T\-R\-O\-L\-\_\-\-P\-H\-A\-S\-E} {\bf \-Stepping\-Demo\-Client\-::next\-Phase}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ab5a3b82049a9786162a60d0ae94f96d9}
+\hypertarget{classSteppingDemoClient_af9e0358390f12ed0135275b20bf1f6f5}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!next\-Step@{next\-Step}}
+\index{next\-Step@{next\-Step}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{next\-Step}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::next\-Step}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_af9e0358390f12ed0135275b20bf1f6f5}
+\hypertarget{classSteppingDemoClient_a92b810b2d2c50e359da18e5d91163340}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!pause\-Duration@{pause\-Duration}}
+\index{pause\-Duration@{pause\-Duration}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{pause\-Duration}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Stepping\-Demo\-Client\-::pause\-Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a92b810b2d2c50e359da18e5d91163340}
+\hypertarget{classSteppingDemoClient_a13a5deff16d52936f788bb9b0af6e9c9}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!pause\-Trigger\-Time@{pause\-Trigger\-Time}}
+\index{pause\-Trigger\-Time@{pause\-Trigger\-Time}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{pause\-Trigger\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Stepping\-Demo\-Client\-::pause\-Trigger\-Time}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a13a5deff16d52936f788bb9b0af6e9c9}
+\hypertarget{classSteppingDemoClient_a8b4b931d41b47d9923417506fac107f3}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!right\-Foot\-\_\-\-Traj\-Thread@{right\-Foot\-\_\-\-Traj\-Thread}}
+\index{right\-Foot\-\_\-\-Traj\-Thread@{right\-Foot\-\_\-\-Traj\-Thread}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{right\-Foot\-\_\-\-Traj\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ocra\-\_\-recipes\-::\-Trajectory\-Thread$>$ {\bf \-Stepping\-Demo\-Client\-::right\-Foot\-\_\-\-Traj\-Thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a8b4b931d41b47d9923417506fac107f3}
+\hypertarget{classSteppingDemoClient_aaaf5dee15bf151def4b4070751d1ca84}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Right\-Foot\-Contact\-\_\-\-Back\-Left@{\-Right\-Foot\-Contact\-\_\-\-Back\-Left}}
+\index{\-Right\-Foot\-Contact\-\_\-\-Back\-Left@{\-Right\-Foot\-Contact\-\_\-\-Back\-Left}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Right\-Foot\-Contact\-\_\-\-Back\-Left}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Stepping\-Demo\-Client\-::\-Right\-Foot\-Contact\-\_\-\-Back\-Left}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_aaaf5dee15bf151def4b4070751d1ca84}
+\hypertarget{classSteppingDemoClient_a93e209732588c3ef2b04e39e3df40d3e}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Right\-Foot\-Contact\-\_\-\-Back\-Right@{\-Right\-Foot\-Contact\-\_\-\-Back\-Right}}
+\index{\-Right\-Foot\-Contact\-\_\-\-Back\-Right@{\-Right\-Foot\-Contact\-\_\-\-Back\-Right}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Right\-Foot\-Contact\-\_\-\-Back\-Right}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Stepping\-Demo\-Client\-::\-Right\-Foot\-Contact\-\_\-\-Back\-Right}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a93e209732588c3ef2b04e39e3df40d3e}
+\hypertarget{classSteppingDemoClient_ad10f639e025b003fd383f4cc933da15f}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Right\-Foot\-Contact\-\_\-\-Front\-Left@{\-Right\-Foot\-Contact\-\_\-\-Front\-Left}}
+\index{\-Right\-Foot\-Contact\-\_\-\-Front\-Left@{\-Right\-Foot\-Contact\-\_\-\-Front\-Left}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Right\-Foot\-Contact\-\_\-\-Front\-Left}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Stepping\-Demo\-Client\-::\-Right\-Foot\-Contact\-\_\-\-Front\-Left}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ad10f639e025b003fd383f4cc933da15f}
+\hypertarget{classSteppingDemoClient_a781be1c0ffd7e7147eb2b2de66ba3231}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!\-Right\-Foot\-Contact\-\_\-\-Front\-Right@{\-Right\-Foot\-Contact\-\_\-\-Front\-Right}}
+\index{\-Right\-Foot\-Contact\-\_\-\-Front\-Right@{\-Right\-Foot\-Contact\-\_\-\-Front\-Right}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{\-Right\-Foot\-Contact\-\_\-\-Front\-Right}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Stepping\-Demo\-Client\-::\-Right\-Foot\-Contact\-\_\-\-Front\-Right}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a781be1c0ffd7e7147eb2b2de66ba3231}
+\hypertarget{classSteppingDemoClient_ae2a3bdaafc7784b5afece8ae9ebaff7d}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!right\-Foot\-Home@{right\-Foot\-Home}}
+\index{right\-Foot\-Home@{right\-Foot\-Home}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{right\-Foot\-Home}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::right\-Foot\-Home}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_ae2a3bdaafc7784b5afece8ae9ebaff7d}
+\hypertarget{classSteppingDemoClient_abfe6635a0ad50fa4baa6fa10b8c56d9e}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!right\-Foot\-Target@{right\-Foot\-Target}}
+\index{right\-Foot\-Target@{right\-Foot\-Target}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{right\-Foot\-Target}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Stepping\-Demo\-Client\-::right\-Foot\-Target}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_abfe6635a0ad50fa4baa6fa10b8c56d9e}
+\hypertarget{classSteppingDemoClient_af7b6e48319ef9d35fb975edc3bb2a137}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!start\-Time@{start\-Time}}
+\index{start\-Time@{start\-Time}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{start\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Stepping\-Demo\-Client\-::start\-Time}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_af7b6e48319ef9d35fb975edc3bb2a137}
+\hypertarget{classSteppingDemoClient_a113c2d838e3db1d18f4843a8828e30d4}{\index{\-Stepping\-Demo\-Client@{\-Stepping\-Demo\-Client}!walking\-Params@{walking\-Params}}
+\index{walking\-Params@{walking\-Params}!SteppingDemoClient@{\-Stepping\-Demo\-Client}}
+\subsubsection[{walking\-Params}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Walking\-Params} {\bf \-Stepping\-Demo\-Client\-::walking\-Params}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSteppingDemoClient_a113c2d838e3db1d18f4843a8828e30d4}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/stepping-\/demo/include/stepping-\/demo/\hyperlink{SteppingDemoClient_8h}{\-Stepping\-Demo\-Client.\-h}\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/stepping-\/demo/src/\hyperlink{SteppingDemoClient_8cpp}{\-Stepping\-Demo\-Client.\-cpp}\end{DoxyCompactItemize}
