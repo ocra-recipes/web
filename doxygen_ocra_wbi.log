@@ -251,7 +251,7 @@ citelist:4: warning: unexpected end of comment while looking for a html descript
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:87: warning: The following parameters of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value) are not documented:
   parameter 'port'
   parameter 'value'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpController.h:166: warning: The following parameters of ZmpController::getFTSensorAdjointMatrix(FOOT whichFoot, Eigen::MatrixXd &T, Eigen::Vector3d &sensorPosition) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpController.h:169: warning: The following parameters of ZmpController::getFTSensorAdjointMatrix(FOOT whichFoot, Eigen::MatrixXd &T, Eigen::Vector3d &sensorPosition) are not documented:
   parameter 'sensorPosition'
 r file ocra-wbi-plugins/ocra-icub-clients/task-operations-demo/src/TaskOpsClient.cpp...
 Generating docs for file ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h...
@@ -323,7 +323,33 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-Patching output file 1/1
-symbol cache used 508/65536 hits=24414 misses=508
-lookup cache used 635/65536 hits=2078 misses=640
+Generating dot graphs using 26 parallel threads...
+Running dot for graph 1/10
+Running dot for graph 2/10
+Running dot for graph 3/10
+Running dot for graph 4/10
+Running dot for graph 5/10
+Running dot for graph 6/10
+Running dot for graph 7/10
+Running dot for graph 8/10
+Running dot for graph 9/10
+Running dot for graph 10/10
+Patching output file 1/16
+Patching output file 2/16
+Patching output file 3/16
+Patching output file 4/16
+Patching output file 5/16
+Patching output file 6/16
+Patching output file 7/16
+Patching output file 8/16
+Patching output file 9/16
+Patching output file 10/16
+Patching output file 11/16
+Patching output file 12/16
+Patching output file 13/16
+Patching output file 14/16
+Patching output file 15/16
+Patching output file 16/16
+symbol cache used 512/65536 hits=24639 misses=512
+lookup cache used 643/65536 hits=2103 misses=648
 finished...

@@ -13,6 +13,7 @@ var classWalkingClient =
     [ "publish3dQuantity", "classWalkingClient.html#ae6d6c046a9a3e51771afe8b4c105b412", null ],
     [ "readFootWrench", "classWalkingClient.html#a03ea2313c954a97aeb4d5b614f3e6caa", null ],
     [ "release", "classWalkingClient.html#a3b36da9d7649865a13c9318dd73ebc7e", null ],
+    [ "transformStdVectorToEigenVector", "classWalkingClient.html#ab4148804702e065310a903112bc10162", null ],
     [ "_amplitudeFraction", "classWalkingClient.html#ac548ce03ea9ceffb4b42981942f66dd0", null ],
     [ "_clientName", "classWalkingClient.html#aff02b341d5e1f500dc9a849337319a8d", null ],
     [ "_comCurrent", "classWalkingClient.html#a199a104e0d4d52deae07d88d8229b60d", null ],

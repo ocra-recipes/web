@@ -2,6 +2,7 @@ var classZmpController =
 [
     [ "ZmpController", "classZmpController.html#a4c47608f6d62b6b490808816879c01b7", null ],
     [ "~ZmpController", "classZmpController.html#af308a70e70cfe9a1e9569606da8b1739", null ],
+    [ "computeControl", "classZmpController.html#a7cd490ac7bc0e360c0884cd40a346732", null ],
     [ "computeFootZMP", "classZmpController.html#a6fd41771d83a31bd190f4031f82649e0", null ],
     [ "computeGlobalZMPFromSensors", "classZmpController.html#aae5cc381a922206dad10ba2d425992ce", null ],
     [ "computeh", "classZmpController.html#a3e275de73186b889c755e6dc618d29bf", null ],

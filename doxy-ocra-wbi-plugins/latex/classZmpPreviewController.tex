@@ -19,7 +19,11 @@ virtual \hyperlink{classZmpPreviewController_af702c45f318c7a78310d19cc061886dd}{
 \item 
 bool \hyperlink{classZmpPreviewController_ac28287e01187bff2cea5a68292d936bd}{initialize} ()
 \item 
-bool \hyperlink{classZmpPreviewController_a6e60eaa9ec24031a4acd10c9433a7bd0}{compute\-Optimal\-Input} (\-Eigen\-::\-Vector\-Xd zmp\-Ref, \-Eigen\-::\-Vector\-Xd com\-Vel\-Ref, \-Eigen\-::\-Vector2d hk, \-Eigen\-::\-Vector\-Xd \&optimal\-U)
+bool \hyperlink{classZmpPreviewController_aea8b2b91b8c0ed86cbaa323d48ce4cb9}{compute\-Optimal\-Input} (\-Eigen\-::\-Vector\-Xd zmp\-Ref, \-Eigen\-::\-Vector\-Xd com\-Vel\-Ref, \-Eigen\-::\-Vector\-Xd hk, \-Eigen\-::\-Vector\-Xd \&optimal\-U)
+\item 
+void \hyperlink{classZmpPreviewController_ab943816b5ed700272c6a61bb9b4412de}{integrate\-Com\-Jerk} (\-Eigen\-::\-Vector\-Xd com\-Jerk, \-Eigen\-::\-Vector\-Xd hk, \-Eigen\-::\-Vector\-Xd \&hkk)
+\item 
+void \hyperlink{classZmpPreviewController_a7d559ce7ece62627b58f20cd01c9ce30}{table\-Cart\-Model} (\-Eigen\-::\-Vector2d hk, \-Eigen\-::\-Vector\-Xd ddhk, \-Eigen\-::\-Vector2d \&p)
 \item 
 \-Eigen\-::\-Matrix\-Xd \hyperlink{classZmpPreviewController_a39ffdba07960f90a6cce247065f12504}{build\-Ah} (const double \hyperlink{classZmpPreviewController_abf1a3ec8d1698afab1c20bba32b5a724}{dt})
 \item 
@@ -371,16 +375,16 @@ $N_u$
 \begin{DoxyReturn}{\-Returns}
 $N_w$ 
 \end{DoxyReturn}
-\hypertarget{classZmpPreviewController_a6e60eaa9ec24031a4acd10c9433a7bd0}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!compute\-Optimal\-Input@{compute\-Optimal\-Input}}
+\hypertarget{classZmpPreviewController_aea8b2b91b8c0ed86cbaa323d48ce4cb9}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!compute\-Optimal\-Input@{compute\-Optimal\-Input}}
 \index{compute\-Optimal\-Input@{compute\-Optimal\-Input}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{compute\-Optimal\-Input}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Zmp\-Preview\-Controller\-::compute\-Optimal\-Input} (
 \begin{DoxyParamCaption}
 \item[{\-Eigen\-::\-Vector\-Xd}]{zmp\-Ref, }
 \item[{\-Eigen\-::\-Vector\-Xd}]{com\-Vel\-Ref, }
-\item[{\-Eigen\-::\-Vector2d}]{hk, }
+\item[{\-Eigen\-::\-Vector\-Xd}]{hk, }
 \item[{\-Eigen\-::\-Vector\-Xd \&}]{optimal\-U}
 \end{DoxyParamCaption}
-)}}\label{classZmpPreviewController_a6e60eaa9ec24031a4acd10c9433a7bd0}
+)}}\label{classZmpPreviewController_aea8b2b91b8c0ed86cbaa323d48ce4cb9}
 \-Computes the optimal input, i.\-e.\-: \[ \mathbf{U}_{k+N_c|k} = (\mathbf{H}_p^T \mathbf{N}_b \mathbf{H}_p + \mathbf{N}_u + \mathbf{H}_h^T \mathbf{N}_w \mathbf{H}_h)^{-1} \left(\mathbf{H}^T_p \mathbf{N}_b (\mathbf{P}_r - \mathbf{G}_p \hat{\mathbf{h}}_k) + \mathbf{H}^T_h\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{G}_h \hat{\mathbf{h}}_k)\right) \] 
 \begin{DoxyParams}{\-Parameters}
 {\em zmp\-Ref} & $\mathbf{P}_r$ \\
@@ -402,6 +406,35 @@ $N_w$
 {}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_ac28287e01187bff2cea5a68292d936bd}
+\hypertarget{classZmpPreviewController_ab943816b5ed700272c6a61bb9b4412de}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!integrate\-Com\-Jerk@{integrate\-Com\-Jerk}}
+\index{integrate\-Com\-Jerk@{integrate\-Com\-Jerk}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
+\subsubsection[{integrate\-Com\-Jerk}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zmp\-Preview\-Controller\-::integrate\-Com\-Jerk} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd}]{com\-Jerk, }
+\item[{\-Eigen\-::\-Vector\-Xd}]{hk, }
+\item[{\-Eigen\-::\-Vector\-Xd \&}]{hkk}
+\end{DoxyParamCaption}
+)}}\label{classZmpPreviewController_ab943816b5ed700272c6a61bb9b4412de}
+\-Integrates the \-C\-O\-M state vector given a \-C\-O\-M jerk input
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em com\-Jerk} & \-Input com jerk $\mathbf{u}$ \\
+\hline
+{\em hk} & \-Current \-C\-O\-M state $\mathbf{h}_k$ \\
+\hline
+{\em hkk} & \-Integrated \-C\-O\-M state $\mathbf{h}_{k+1}$ \\
+\hline
+\end{DoxyParams}
+\hypertarget{classZmpPreviewController_a7d559ce7ece62627b58f20cd01c9ce30}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!table\-Cart\-Model@{table\-Cart\-Model}}
+\index{table\-Cart\-Model@{table\-Cart\-Model}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
+\subsubsection[{table\-Cart\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zmp\-Preview\-Controller\-::table\-Cart\-Model} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector2d}]{hk, }
+\item[{\-Eigen\-::\-Vector\-Xd}]{ddhk, }
+\item[{\-Eigen\-::\-Vector2d \&}]{p}
+\end{DoxyParamCaption}
+)}}\label{classZmpPreviewController_a7d559ce7ece62627b58f20cd01c9ce30}
 
 
 \subsection{\-Member \-Data \-Documentation}

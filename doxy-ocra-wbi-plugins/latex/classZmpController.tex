@@ -32,6 +32,8 @@ bool \hyperlink{classZmpController_a5eab881a51fb2ace1a1d494171353bc7}{computehd}
 void \hyperlink{classZmpController_aa450c67048a44fe0dfadf07cd30165e7}{computehdd} (\-Eigen\-::\-Vector3d com\-Position, \-Eigen\-::\-Vector2d global\-Z\-M\-P, \-Eigen\-::\-Vector2d \&ddh)
 \item 
 void \hyperlink{classZmpController_a3e275de73186b889c755e6dc618d29bf}{computeh} (\-Eigen\-::\-Vector2d prev\-Com\-Position, \-Eigen\-::\-Vector2d prev\-Com\-Vel, \-Eigen\-::\-Vector2d \&int\-Com\-Position)
+\item 
+ocra\-::\-Task\-State \hyperlink{classZmpController_a7cd490ac7bc0e360c0884cd40a346732}{compute\-Control} (\-Eigen\-::\-Vector2d com\-Ref\-Position, \-Eigen\-::\-Vector2d com\-Ref\-Velocity)
 \end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
@@ -85,6 +87,14 @@ std\-::shared\-\_\-ptr$<$ ocra\-::\-Model $>$ \hyperlink{classZmpController_ac86
 
 
 \subsection{\-Member \-Function \-Documentation}
+\hypertarget{classZmpController_a7cd490ac7bc0e360c0884cd40a346732}{\index{\-Zmp\-Controller@{\-Zmp\-Controller}!compute\-Control@{compute\-Control}}
+\index{compute\-Control@{compute\-Control}!ZmpController@{\-Zmp\-Controller}}
+\subsubsection[{compute\-Control}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-::\-Task\-State {\bf \-Zmp\-Controller\-::compute\-Control} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector2d}]{com\-Ref\-Position, }
+\item[{\-Eigen\-::\-Vector2d}]{com\-Ref\-Velocity}
+\end{DoxyParamCaption}
+)}}\label{classZmpController_a7cd490ac7bc0e360c0884cd40a346732}
 \hypertarget{classZmpController_a6fd41771d83a31bd190f4031f82649e0}{\index{\-Zmp\-Controller@{\-Zmp\-Controller}!compute\-Foot\-Z\-M\-P@{compute\-Foot\-Z\-M\-P}}
 \index{compute\-Foot\-Z\-M\-P@{compute\-Foot\-Z\-M\-P}!ZmpController@{\-Zmp\-Controller}}
 \subsubsection[{compute\-Foot\-Z\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Zmp\-Controller\-::compute\-Foot\-Z\-M\-P} (

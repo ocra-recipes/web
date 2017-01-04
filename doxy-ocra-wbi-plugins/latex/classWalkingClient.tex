@@ -27,6 +27,8 @@ void \hyperlink{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{perform\-Z
 void \hyperlink{classWalkingClient_a3b1217b7fa17f76f162be0e12e419d96}{perform\-Z\-M\-P\-Preview\-Test} (\hyperlink{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffa}{\-Zmp\-Test\-Type} type)
 \item 
 std\-::string \hyperlink{classWalkingClient_ae8f7dc629313df7d362e3edd6f45ae10}{compose\-Port\-Name} (std\-::string port\-Name)
+\item 
+void \hyperlink{classWalkingClient_ab4148804702e065310a903112bc10162}{transform\-Std\-Vector\-To\-Eigen\-Vector} (std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \&full\-Traj, int from, int \-Nc, \-Vector\-Xd \&output)
 \end{DoxyCompactItemize}
 \subsection*{\-Public \-Attributes}
 \begin{DoxyCompactItemize}
@@ -241,7 +243,13 @@ $<$ yarp\-::os\-::\-Bottle $>$ \hyperlink{classWalkingClient_a41b7320607812418af
 \item[{{\bf \-Zmp\-Test\-Type}}]{type}
 \end{DoxyParamCaption}
 )}}\label{classWalkingClient_a3b1217b7fa17f76f162be0e12e419d96}
-\hypertarget{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}}
+\-Only using the first input computed by the preview controller; \-This input must now be integrated (since it's just the optimal com jerk) \-Should hk be the previously estimated/integrated hkk????
+
+\-Using the zmp cart model, the instantaneous zmp trajectory can now be computed. \-For this we'll pass the current com state hk and the integrated optimal com acceleration.
+
+\-The zmp controller will now use this instantaneous value as reference. \-However, for this reference, a corresponding desired com position and velocity are computed to reduced the zmp tracking error.
+
+\-Apply control \-The \-Z\-M\-P \-Controller is in charge of computing the control\hypertarget{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}}
 \index{perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{perform\-Z\-M\-P\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::perform\-Z\-M\-P\-Test} (
 \begin{DoxyParamCaption}
@@ -288,6 +296,16 @@ $<$ yarp\-::os\-::\-Bottle $>$ \hyperlink{classWalkingClient_a41b7320607812418af
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classWalkingClient_a3b36da9d7649865a13c9318dd73ebc7e}
+\hypertarget{classWalkingClient_ab4148804702e065310a903112bc10162}{\index{\-Walking\-Client@{\-Walking\-Client}!transform\-Std\-Vector\-To\-Eigen\-Vector@{transform\-Std\-Vector\-To\-Eigen\-Vector}}
+\index{transform\-Std\-Vector\-To\-Eigen\-Vector@{transform\-Std\-Vector\-To\-Eigen\-Vector}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{transform\-Std\-Vector\-To\-Eigen\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::transform\-Std\-Vector\-To\-Eigen\-Vector} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \&}]{full\-Traj, }
+\item[{int}]{from, }
+\item[{int}]{\-Nc, }
+\item[{\-Vector\-Xd \&}]{output}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_ab4148804702e065310a903112bc10162}
 
 
 \subsection{\-Member \-Data \-Documentation}

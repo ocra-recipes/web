@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node13" href="$IcubClient_8h.html" title="ocra&#45;icub/IcubClient.h" alt="" coords="1264,160,1413,189"/>
-<area shape="rect" id="node96" href="$WalkingClient_8h.html" title="walking&#45;client/WalkingClient.h" alt="" coords="1835,83,2032,112"/>
-<area shape="rect" id="node15" href="$ModelInitializer_8h.html" title="ocra&#45;icub/ModelInitializer.h" alt="" coords="503,237,679,267"/>
-<area shape="rect" id="node17" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="1273,315,1449,344"/>
-<area shape="rect" id="node26" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="1137,392,1351,421"/>
-<area shape="rect" id="node40" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1657,469,1791,499"/>
-<area shape="rect" id="node104" href="$ZmpPreviewController_8h.html" title="walking&#45;client/ZmpPreviewController.h" alt="" coords="1981,392,2227,421"/>
-<area shape="rect" id="node111" href="$ZmpController_8h.html" title="walking&#45;client/ZmpController.h" alt="" coords="1760,392,1957,421"/>
+<area shape="rect" id="node13" href="$IcubClient_8h.html" title="ocra&#45;icub/IcubClient.h" alt="" coords="1816,160,1965,189"/>
+<area shape="rect" id="node96" href="$WalkingClient_8h.html" title="walking&#45;client/WalkingClient.h" alt="" coords="2553,83,2751,112"/>
+<area shape="rect" id="node15" href="$ModelInitializer_8h.html" title="ocra&#45;icub/ModelInitializer.h" alt="" coords="539,237,715,267"/>
+<area shape="rect" id="node17" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="703,315,879,344"/>
+<area shape="rect" id="node26" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="853,392,1067,421"/>
+<area shape="rect" id="node40" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1644,469,1777,499"/>
+<area shape="rect" id="node104" href="$ZmpPreviewController_8h.html" title="walking&#45;client/ZmpPreviewController.h" alt="" coords="2879,392,3124,421"/>
+<area shape="rect" id="node111" href="$ZmpController_8h.html" title="walking&#45;client/ZmpController.h" alt="" coords="2603,392,2800,421"/>
 </map>
