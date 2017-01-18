@@ -27,6 +27,7 @@ addons:
       - doxygen-latex
       - doxygen-gui
       - graphviz
+      - bibtex
 
 before_script:
     - chmod +x generateDocumentationAndDeploy.sh
