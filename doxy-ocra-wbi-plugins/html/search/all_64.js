@@ -1,6 +1,7 @@
 var searchData=
 [
   ['dangerperiodlooptime',['dangerPeriodLoopTime',['../classModule.html#a33fee1e7f977b4f27a2e1488480996fb',1,'Module']]],
+  ['ddq',['ddq',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a08e61e2559239017a2dcbf99f5777d50',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['deactivatefootcontacts',['deactivateFootContacts',['../classSteppingDemoClient.html#a62b5028bdc99de117cfffc576478a0f1',1,'SteppingDemoClient']]],
   ['deactivatelegcontacts',['deactivateLegContacts',['../classStandingDemoClient.html#a6a16f7c8b66d49c6fc63f75ce8eaaf0b',1,'StandingDemoClient']]],
   ['debuggingalljoints',['debuggingAllJoints',['../classThread.html#aba345996b91a57d9e1f2dd15c7c75e08',1,'Thread']]],

@@ -29,6 +29,8 @@ virtual const \-Eigen\-::\-Vector\-Xd \& \hyperlink{classocra__icub_1_1OcraWbiMo
 \item 
 virtual const \-Eigen\-::\-Vector\-Xd \& \hyperlink{classocra__icub_1_1OcraWbiModel_a403d66cbc41b7cc5e1323c49d578e447}{get\-Joint\-Velocities} () const 
 \item 
+virtual const \-Eigen\-::\-Vector\-Xd \& \hyperlink{classocra__icub_1_1OcraWbiModel_ab590303004576e870219e88e92e088f8}{get\-Joint\-Accelerations} () const 
+\item 
 virtual const \-Eigen\-::\-Vector\-Xd \& \hyperlink{classocra__icub_1_1OcraWbiModel_a639baccfdc1ca6409e14a4839e0394fe}{get\-Joint\-Torques} () const 
 \item 
 virtual const \*
@@ -57,6 +59,8 @@ virtual double \hyperlink{classocra__icub_1_1OcraWbiModel_a7f52d830940df32916f46
 virtual const \-Eigen\-::\-Vector3d \& \hyperlink{classocra__icub_1_1OcraWbiModel_a3af6973d940c01a80085d65841bb27a8}{get\-Co\-M\-Position} () const 
 \item 
 virtual const \-Eigen\-::\-Vector3d \& \hyperlink{classocra__icub_1_1OcraWbiModel_af7f16945aafd4881f1cfd94498a78ebf}{get\-Co\-M\-Velocity} () const 
+\item 
+virtual const \-Eigen\-::\-Vector3d \& \hyperlink{classocra__icub_1_1OcraWbiModel_a7e5f552f463bf58b1c9828575c78ee90}{get\-Co\-M\-Acceleration} () const 
 \item 
 virtual const \-Eigen\-::\-Vector3d \& \hyperlink{classocra__icub_1_1OcraWbiModel_a0985fe02b87fa9bcf90439163c622a71}{get\-Co\-M\-Jdot\-Qdot} () const 
 \item 
@@ -259,6 +263,13 @@ yarp\-::os\-::\-Log \hyperlink{classocra__icub_1_1OcraWbiModel_a047fe9f9a96794af
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classocra__icub_1_1OcraWbiModel_aecb11984be8a80c66b45d37f5fb992ce}
+\hypertarget{classocra__icub_1_1OcraWbiModel_a7e5f552f463bf58b1c9828575c78ee90}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model}!get\-Co\-M\-Acceleration@{get\-Co\-M\-Acceleration}}
+\index{get\-Co\-M\-Acceleration@{get\-Co\-M\-Acceleration}!ocra_icub::OcraWbiModel@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model}}
+\subsubsection[{get\-Co\-M\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Vector3d \& {\bf \-Ocra\-Wbi\-Model\-::get\-Co\-M\-Acceleration} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classocra__icub_1_1OcraWbiModel_a7e5f552f463bf58b1c9828575c78ee90}
 \hypertarget{classocra__icub_1_1OcraWbiModel_aede9be679109798e7342351d13ffdfcd}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model}!get\-Co\-M\-Angular\-Jacobian@{get\-Co\-M\-Angular\-Jacobian}}
 \index{get\-Co\-M\-Angular\-Jacobian@{get\-Co\-M\-Angular\-Jacobian}!ocra_icub::OcraWbiModel@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model}}
 \subsubsection[{get\-Co\-M\-Angular\-Jacobian}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Matrix$<$ double, {\bf \-C\-O\-M\-\_\-\-P\-O\-S\-\_\-\-D\-I\-M}, \-Eigen\-::\-Dynamic $>$ \& {\bf \-Ocra\-Wbi\-Model\-::get\-Co\-M\-Angular\-Jacobian} (
@@ -350,6 +361,13 @@ yarp\-::os\-::\-Log \hyperlink{classocra__icub_1_1OcraWbiModel_a047fe9f9a96794af
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classocra__icub_1_1OcraWbiModel_a2dfc6cc2f527cc3aec668607b36e5fe9}
+\hypertarget{classocra__icub_1_1OcraWbiModel_ab590303004576e870219e88e92e088f8}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model}!get\-Joint\-Accelerations@{get\-Joint\-Accelerations}}
+\index{get\-Joint\-Accelerations@{get\-Joint\-Accelerations}!ocra_icub::OcraWbiModel@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model}}
+\subsubsection[{get\-Joint\-Accelerations}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Vector\-Xd \& {\bf \-Ocra\-Wbi\-Model\-::get\-Joint\-Accelerations} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classocra__icub_1_1OcraWbiModel_ab590303004576e870219e88e92e088f8}
 \hypertarget{classocra__icub_1_1OcraWbiModel_a4dd0a4cd9f8d710c64e67c0336169321}{\index{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model}!get\-Joint\-Jacobian@{get\-Joint\-Jacobian}}
 \index{get\-Joint\-Jacobian@{get\-Joint\-Jacobian}!ocra_icub::OcraWbiModel@{ocra\-\_\-icub\-::\-Ocra\-Wbi\-Model}}
 \subsubsection[{get\-Joint\-Jacobian}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Matrix$<$ double, 6, \-Eigen\-::\-Dynamic $>$ \& {\bf \-Ocra\-Wbi\-Model\-::get\-Joint\-Jacobian} (

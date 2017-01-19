@@ -114,6 +114,7 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a632b9a37d054a1dc6fcf6403e52e62e7">upperLimits</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a1f83373b2d975e1882ee7812215df997">q</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6584a086fe050dab90cd4f0a0e7e970d">dq</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a08e61e2559239017a2dcbf99f5777d50">ddq</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a3dc9c0b3d43f7406a6b89bd2a2af5642">tau</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Displacementd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a123381dc5b78bd79aed493801e3e6b35">Hroot</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">wbi::Frame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a633b61e128305d5437d8e8c61ae63849">Hroot_wbi</a></td></tr>
@@ -132,6 +133,7 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a992e0b522d3e3b9206f90dbcdd4727cf">total_mass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#acc028d57a70c3b36838f28ea518f65c4">pos_com</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a96c3cdb51b2a2b69c0738605c30e1b2e">vel_com</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#ac7d61b2e1fff0ce7f15a472c6785f640">acc_com</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a696d73e62837978589a2730c8feb325c">vel_com_angular</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; double, <br class="typebreak"/>
 <a class="el" href="OcraWbiModel_8cpp.html#a72cb22de2538ae949cc73fa3d7c33bdc">COM_POS_DIM</a>, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#ab724e92a7f74f03c3842f22129b2ad94">J_com</a></td></tr>
@@ -210,6 +212,19 @@ Eigen::Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a c
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ac7d61b2e1fff0ce7f15a472c6785f640"></a><!-- doxytag: member="OcraWbiModel::OcraWbiModel_pimpl::acc_com" ref="ac7d61b2e1fff0ce7f15a472c6785f640" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d <a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#ac7d61b2e1fff0ce7f15a472c6785f640">ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::acc_com</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aca1e7991e3aa3941dfb08b58b4f8e82c"></a><!-- doxytag: member="OcraWbiModel::OcraWbiModel_pimpl::actuatedDofs" ref="aca1e7991e3aa3941dfb08b58b4f8e82c" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -229,6 +244,19 @@ Eigen::Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a c
       <table class="memname">
         <tr>
           <td class="memname">Eigen::MatrixXd <a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a71a78aa74a5b1422df339991ea6c6974">ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::B</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a08e61e2559239017a2dcbf99f5777d50"></a><!-- doxytag: member="OcraWbiModel::OcraWbiModel_pimpl::ddq" ref="a08e61e2559239017a2dcbf99f5777d50" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a08e61e2559239017a2dcbf99f5777d50">ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::ddq</a></td>
         </tr>
       </table>
 </div>
@@ -963,7 +991,7 @@ Eigen::Dynamic &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a c
       <li class="navelem"><a class="el" href="classocra__icub_1_1OcraWbiModel.html">OcraWbiModel</a>      </li>
       <li class="navelem"><a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html">OcraWbiModel_pimpl</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 11:53:15 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 12:02:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -109,6 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a6c9002a44a54814c4b482739824e39aa">WalkingClient</a> (std::shared_ptr&lt; ocra::Model &gt; modelPtr, const int loopPeriod)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a1dbc0308f844aea6542750104fddf8e2">~WalkingClient</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#adb8f972f34cb39c69c02a7c3cb493b81">configure</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aff3fabef11d9c8b747a422f879c26067">printHelp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a03ea2313c954a97aeb4d5b614f3e6caa">readFootWrench</a> (<a class="el" href="ZmpController_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> whichFoot, Eigen::VectorXd &amp;rawWrench)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a3185a8ede8bf8b1227f7dd540ba87e3c">generateZMPTrajectoryTEST</a> (const double tTrans, const double feetSeparation, const double timeStep, const int amplitudeFraction, const int N)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a87e70046251149b4b7aff1dc57b3dcc4">getFeetSeparation</a> (Eigen::Vector3d &amp;sep)</td></tr>
@@ -117,6 +118,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a3b1217b7fa17f76f162be0e12e419d96">performZMPPreviewTest</a> (<a class="el" href="WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae8f7dc629313df7d362e3edd6f45ae10">composePortName</a> (std::string portName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab4148804702e065310a903112bc10162">transformStdVectorToEigenVector</a> (std::vector&lt; Eigen::Vector2d &gt; &amp;fullTraj, int from, int Nc, VectorXd &amp;output)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a70b2375134ae55a041fbf30180ea3a8f">generateZMPStepTrajectoryTEST</a> (double feetSeparation, double period, double duration, double riseTime, double constantReferenceY)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">yarp::os::BufferedPort<br class="typebreak"/>
@@ -144,9 +146,11 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a9df32e0c73632c5f869e5933e20def71">_rawRightFootWrench</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aa784eac1247f0d858e2364e0c2bc25b2">_globalZMP</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a549751e511e023d5fc73eccd1c185317">_previousCOM</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aa0c7669193a8a42ed289c79523580033">_previousCOMVel</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aff02b341d5e1f500dc9a849337319a8d">_clientName</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a67461634d7e8cb0234400b34fd2865e7">_robot</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a4f9c8688537ddd8a487a212fbb279a9b">_isTestRun</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">_testType</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a14576258d7fed1b36919145f1b56d74c">_zmpTestType</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ade3bf018661152fc0404d3973ea30783">_homeDataDir</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a4e448bc147b41d97e0f17af6ebb0020f">_comYConstVel</a></td></tr>
@@ -177,6 +181,9 @@ Private Attributes</h2></td></tr>
 &lt; yarp::os::Bottle &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a41b7320607812418af496b8b2c30204f">_ddcomFromZMP</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#abc3c504305c00a27e9fd38a8bf08ecda">_hkkPrevious</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab645ecb2d55e28b57a64ca48ee638b1e">_firstLoop</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#af28b3cd3b1202f83e193b098572fbdd3">zmpRefInPreviewWindow</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5">comVelRefInPreviewWindow</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a0e5aee88e377029d79f57e778c583f18">optimalU</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6c9002a44a54814c4b482739824e39aa"></a><!-- doxytag: member="WalkingClient::WalkingClient" ref="a6c9002a44a54814c4b482739824e39aa" args="(std::shared_ptr&lt; ocra::Model &gt; modelPtr, const int loopPeriod)" -->
@@ -263,7 +270,52 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Takes all the parameters used by this client from configuration file and parses them through yarp's Resource Finder.</p>
-<p>Details on group [ZMP_CONTROLLER_PARAMS] in walking-client.ini Options are: 0 - ZMP_CONSTANT_REFERENCE 1 - ZMP_VARYING_REFERENCE 2 - COM_LIN_VEL_CONSTANT_REFERENCE Each of these tests are used to evaluate the correct gains to be used at each level of the control loops. Make sure the flag 'runForTests' is active. When using this client for the first time on a robot, the gains of the comTask in its corresponding taskSet file must be tuned first as well and later those for the <a class="el" href="classZmpController.html" title="Implementes a ZMP controller as a force set point regulator.">ZmpController</a> class. Therefore we recommend executing this client first as a way of testing the "low" level ComTask control in order to find good kp and kd. Do this by setting 'type' to 2. Data will be saved at the location you specify through the option 'homeDataDir'. After having a good COM velocity tracking at the task level, you want to test the tracking of the zmp controller by setting 'type' to 0. A constant zmp reference is given and the controller gains kfx, kfy, kdx and kdy must be tuned accordingly. Finally, the tracking of varying zmp reference can be tested which takes the zmp from left to right, while the robot stands on both feet. </p>
+<p>Details on group [ZMP_CONTROLLER_PARAMS] in walking-client.ini Options are: 0 - ZMP_CONSTANT_REFERENCE 1 - ZMP_VARYING_REFERENCE 2 - COM_LIN_VEL_CONSTANT_REFERENCE Each of these tests are used to evaluate the correct gains to be used at each level of the control loops. These trajectorie will be used during the tests specified through the option 'test' which takes the values "zmpPreview" or "zmpController". When using this client for the first time on a robot, the gains of the comTask in its corresponding taskSet file must be tuned first as well and later those for the <a class="el" href="classZmpController.html" title="Implementes a ZMP controller as a force set point regulator.">ZmpController</a> class. Therefore we recommend executing this client first as a way of testing the "low" level ComTask control in order to find good kp and kd. Do this by setting 'type' to 2. Data will be saved at the location you specify through the option 'homeDataDir'. After having a good COM velocity tracking at the task level, you want to test the tracking of the zmp controller by setting 'type' to 0. A constant zmp reference is given and the controller gains kfx, kfy, kdx and kdy must be tuned accordingly. Finally, the tracking of varying zmp reference can be tested which takes the zmp from left to right, while the robot stands on both feet. </p>
+
+</div>
+</div>
+<a class="anchor" id="a70b2375134ae55a041fbf30180ea3a8f"></a><!-- doxytag: member="WalkingClient::generateZMPStepTrajectoryTEST" ref="a70b2375134ae55a041fbf30180ea3a8f" args="(double feetSeparation, double period, double duration, double riseTime, double constantReferenceY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Eigen::Vector2d &gt; <a class="el" href="classWalkingClient.html#a70b2375134ae55a041fbf30180ea3a8f">WalkingClient::generateZMPStepTrajectoryTEST</a> </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>feetSeparation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>duration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>riseTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>constantReferenceY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -395,10 +447,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Only using the first input computed by the preview controller; This input must now be integrated (since it's just the optimal com jerk) [CHECKED]</p>
+<p>Only using the first input computed by the preview controller; This input must now be integrated (since it's just the optimal com jerk)</p>
 <p>Using the zmp cart model, the instantaneous zmp trajectory can now be computed. For this we'll pass the current com state hk and the integrated optimal com acceleration.</p>
-<p>The zmp controller will now use this instantaneous value as reference. However, for this reference, a corresponding desired com position and velocity are computed to reduced the zmp tracking error.</p>
-<p>Apply control The ZMP Controller is in charge of computing the control</p>
+<p>Apply control The ZMP Controller is in charge of preparing the desired state</p>
 
 </div>
 </div>
@@ -423,6 +474,22 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="aff3fabef11d9c8b747a422f879c26067"></a><!-- doxytag: member="WalkingClient::printHelp" ref="aff3fabef11d9c8b747a422f879c26067" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#aff3fabef11d9c8b747a422f879c26067">WalkingClient::printHelp</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -778,6 +845,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa0c7669193a8a42ed289c79523580033"></a><!-- doxytag: member="WalkingClient::_previousCOMVel" ref="aa0c7669193a8a42ed289c79523580033" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector2d <a class="el" href="classWalkingClient.html#aa0c7669193a8a42ed289c79523580033">WalkingClient::_previousCOMVel</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a1c3fb4d182e33d6d9386e9bb05aa4ae8"></a><!-- doxytag: member="WalkingClient::_rawLeftFootWrench" ref="a1c3fb4d182e33d6d9386e9bb05aa4ae8" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -849,6 +929,19 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double <a class="el" href="classWalkingClient.html#a2ed3837afa0c366f1cdef16b2a99b761">WalkingClient::_stopTimeVaryingZmp</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a35c00feb4e7dfa532e43241e855fec89"></a><!-- doxytag: member="WalkingClient::_testType" ref="a35c00feb4e7dfa532e43241e855fec89" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">WalkingClient::_testType</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -999,6 +1092,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab3b1defedb6d79b5b6eaadd52bbad9f5"></a><!-- doxytag: member="WalkingClient::comVelRefInPreviewWindow" ref="ab3b1defedb6d79b5b6eaadd52bbad9f5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5">WalkingClient::comVelRefInPreviewWindow</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0e5aee88e377029d79f57e778c583f18"></a><!-- doxytag: member="WalkingClient::optimalU" ref="a0e5aee88e377029d79f57e778c583f18" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classWalkingClient.html#a0e5aee88e377029d79f57e778c583f18">WalkingClient::optimalU</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a88ee63ff6a341eccd458d24700383457"></a><!-- doxytag: member="WalkingClient::portWrenchLeftFoot" ref="a88ee63ff6a341eccd458d24700383457" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1018,6 +1137,19 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">yarp::os::BufferedPort&lt;yarp::sig::Vector&gt; <a class="el" href="classWalkingClient.html#a96321dc60e84c193f2dea6e85983ca67">WalkingClient::portWrenchRightFoot</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af28b3cd3b1202f83e193b098572fbdd3"></a><!-- doxytag: member="WalkingClient::zmpRefInPreviewWindow" ref="af28b3cd3b1202f83e193b098572fbdd3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classWalkingClient.html#af28b3cd3b1202f83e193b098572fbdd3">WalkingClient::zmpRefInPreviewWindow</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -1049,7 +1181,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classWalkingClient.html">WalkingClient</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 11:53:15 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 12:02:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

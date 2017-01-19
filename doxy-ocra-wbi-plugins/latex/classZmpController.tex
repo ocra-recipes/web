@@ -33,7 +33,7 @@ void \hyperlink{classZmpController_aa450c67048a44fe0dfadf07cd30165e7}{computehdd
 \item 
 void \hyperlink{classZmpController_a3e275de73186b889c755e6dc618d29bf}{computeh} (\-Eigen\-::\-Vector2d prev\-Com\-Position, \-Eigen\-::\-Vector2d prev\-Com\-Vel, \-Eigen\-::\-Vector2d \&int\-Com\-Position)
 \item 
-ocra\-::\-Task\-State \hyperlink{classZmpController_a7cd490ac7bc0e360c0884cd40a346732}{compute\-Control} (\-Eigen\-::\-Vector2d com\-Ref\-Position, \-Eigen\-::\-Vector2d com\-Ref\-Velocity)
+ocra\-::\-Task\-State \hyperlink{classZmpController_a23e84c312c71daaf010c9600663db0b7}{create\-Desired\-State} (\-Eigen\-::\-Vector2d com\-Ref\-Position, \-Eigen\-::\-Vector2d com\-Ref\-Velocity, \-Eigen\-::\-Vector2d com\-Ref\-Acceleration)
 \end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
@@ -87,14 +87,6 @@ std\-::shared\-\_\-ptr$<$ ocra\-::\-Model $>$ \hyperlink{classZmpController_ac86
 
 
 \subsection{\-Member \-Function \-Documentation}
-\hypertarget{classZmpController_a7cd490ac7bc0e360c0884cd40a346732}{\index{\-Zmp\-Controller@{\-Zmp\-Controller}!compute\-Control@{compute\-Control}}
-\index{compute\-Control@{compute\-Control}!ZmpController@{\-Zmp\-Controller}}
-\subsubsection[{compute\-Control}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-::\-Task\-State {\bf \-Zmp\-Controller\-::compute\-Control} (
-\begin{DoxyParamCaption}
-\item[{\-Eigen\-::\-Vector2d}]{com\-Ref\-Position, }
-\item[{\-Eigen\-::\-Vector2d}]{com\-Ref\-Velocity}
-\end{DoxyParamCaption}
-)}}\label{classZmpController_a7cd490ac7bc0e360c0884cd40a346732}
 \hypertarget{classZmpController_a6fd41771d83a31bd190f4031f82649e0}{\index{\-Zmp\-Controller@{\-Zmp\-Controller}!compute\-Foot\-Z\-M\-P@{compute\-Foot\-Z\-M\-P}}
 \index{compute\-Foot\-Z\-M\-P@{compute\-Foot\-Z\-M\-P}!ZmpController@{\-Zmp\-Controller}}
 \subsubsection[{compute\-Foot\-Z\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Zmp\-Controller\-::compute\-Foot\-Z\-M\-P} (
@@ -189,6 +181,15 @@ std\-::shared\-\_\-ptr$<$ ocra\-::\-Model $>$ \hyperlink{classZmpController_ac86
 \item[{\-Eigen\-::\-Vector2d \&}]{ddh}
 \end{DoxyParamCaption}
 )}}\label{classZmpController_aa450c67048a44fe0dfadf07cd30165e7}
+\hypertarget{classZmpController_a23e84c312c71daaf010c9600663db0b7}{\index{\-Zmp\-Controller@{\-Zmp\-Controller}!create\-Desired\-State@{create\-Desired\-State}}
+\index{create\-Desired\-State@{create\-Desired\-State}!ZmpController@{\-Zmp\-Controller}}
+\subsubsection[{create\-Desired\-State}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-::\-Task\-State {\bf \-Zmp\-Controller\-::create\-Desired\-State} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector2d}]{com\-Ref\-Position, }
+\item[{\-Eigen\-::\-Vector2d}]{com\-Ref\-Velocity, }
+\item[{\-Eigen\-::\-Vector2d}]{com\-Ref\-Acceleration}
+\end{DoxyParamCaption}
+)}}\label{classZmpController_a23e84c312c71daaf010c9600663db0b7}
 \hypertarget{classZmpController_aad272bd33de6fad489ea99618a7e9afa}{\index{\-Zmp\-Controller@{\-Zmp\-Controller}!get\-F\-T\-Sensor\-Adjoint\-Matrix@{get\-F\-T\-Sensor\-Adjoint\-Matrix}}
 \index{get\-F\-T\-Sensor\-Adjoint\-Matrix@{get\-F\-T\-Sensor\-Adjoint\-Matrix}!ZmpController@{\-Zmp\-Controller}}
 \subsubsection[{get\-F\-T\-Sensor\-Adjoint\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zmp\-Controller\-::get\-F\-T\-Sensor\-Adjoint\-Matrix} (

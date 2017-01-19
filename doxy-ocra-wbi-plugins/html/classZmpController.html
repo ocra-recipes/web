@@ -117,7 +117,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpController.html#a5eab881a51fb2ace1a1d494171353bc7">computehd</a> (Eigen::Vector2d p, Eigen::Vector2d pd, Eigen::Vector2d &amp;dhd)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpController.html#aa450c67048a44fe0dfadf07cd30165e7">computehdd</a> (Eigen::Vector3d comPosition, Eigen::Vector2d globalZMP, Eigen::Vector2d &amp;ddh)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpController.html#a3e275de73186b889c755e6dc618d29bf">computeh</a> (Eigen::Vector2d prevComPosition, Eigen::Vector2d prevComVel, Eigen::Vector2d &amp;intComPosition)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">ocra::TaskState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpController.html#a7cd490ac7bc0e360c0884cd40a346732">computeControl</a> (Eigen::Vector2d comRefPosition, Eigen::Vector2d comRefVelocity)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ocra::TaskState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpController.html#a23e84c312c71daaf010c9600663db0b7">createDesiredState</a> (Eigen::Vector2d comRefPosition, Eigen::Vector2d comRefVelocity, Eigen::Vector2d comRefAcceleration)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
@@ -197,33 +197,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7cd490ac7bc0e360c0884cd40a346732"></a><!-- doxytag: member="ZmpController::computeControl" ref="a7cd490ac7bc0e360c0884cd40a346732" args="(Eigen::Vector2d comRefPosition, Eigen::Vector2d comRefVelocity)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ocra::TaskState <a class="el" href="classZmpController.html#a7cd490ac7bc0e360c0884cd40a346732">ZmpController::computeControl</a> </td>
-          <td>(</td>
-          <td class="paramtype">Eigen::Vector2d&#160;</td>
-          <td class="paramname"><em>comRefPosition</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Eigen::Vector2d&#160;</td>
-          <td class="paramname"><em>comRefVelocity</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a6fd41771d83a31bd190f4031f82649e0"></a><!-- doxytag: member="ZmpController::computeFootZMP" ref="a6fd41771d83a31bd190f4031f82649e0" args="(FOOT whichFoot, Eigen::VectorXd wrench, Eigen::Vector2d &amp;footZMP, Eigen::VectorXd &amp;wrenchInWorldRef, const double tolerance=1e&#45;3)" -->
 <div class="memitem">
 <div class="memproto">
@@ -440,6 +413,39 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a23e84c312c71daaf010c9600663db0b7"></a><!-- doxytag: member="ZmpController::createDesiredState" ref="a23e84c312c71daaf010c9600663db0b7" args="(Eigen::Vector2d comRefPosition, Eigen::Vector2d comRefVelocity, Eigen::Vector2d comRefAcceleration)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ocra::TaskState <a class="el" href="classZmpController.html#a23e84c312c71daaf010c9600663db0b7">ZmpController::createDesiredState</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Vector2d&#160;</td>
+          <td class="paramname"><em>comRefPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector2d&#160;</td>
+          <td class="paramname"><em>comRefVelocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector2d&#160;</td>
+          <td class="paramname"><em>comRefAcceleration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aad272bd33de6fad489ea99618a7e9afa"></a><!-- doxytag: member="ZmpController::getFTSensorAdjointMatrix" ref="aad272bd33de6fad489ea99618a7e9afa" args="(FOOT whichFoot, Eigen::MatrixXd &amp;T, Eigen::Vector3d &amp;sensorPosition)" -->
 <div class="memitem">
 <div class="memproto">
@@ -566,7 +572,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classZmpController.html">ZmpController</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 11:53:15 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 12:02:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

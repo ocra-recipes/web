@@ -117,6 +117,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#aa9303621ea64de2378780e2f5e6618b6">getJointUpperLimits</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#adeacb1988bd5a4edfde5ec30caae2df3">getJointPositions</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a403d66cbc41b7cc5e1323c49d578e447">getJointVelocities</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#ab590303004576e870219e88e92e088f8">getJointAccelerations</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a639baccfdc1ca6409e14a4839e0394fe">getJointTorques</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 Eigen::Displacementd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a3e9c4db6d1ee56984fea44cdd592a1ac">getFreeFlyerPosition</a> () const </td></tr>
@@ -132,6 +133,7 @@ Eigen::Displacementd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a7f52d830940df32916f46b905d985505">getMass</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a3af6973d940c01a80085d65841bb27a8">getCoMPosition</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#af7f16945aafd4881f1cfd94498a78ebf">getCoMVelocity</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a7e5f552f463bf58b1c9828575c78ee90">getCoMAcceleration</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a0985fe02b87fa9bcf90439163c622a71">getCoMJdotQdot</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Matrix<br class="typebreak"/>
 &lt; double, 3, Eigen::Dynamic &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#abc79b9dec9e96e4e8125d26c6be479d6">getCoMJacobian</a> () const </td></tr>
@@ -490,6 +492,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7e5f552f463bf58b1c9828575c78ee90"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::getCoMAcceleration" ref="a7e5f552f463bf58b1c9828575c78ee90" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::Vector3d &amp; <a class="el" href="classocra__icub_1_1OcraWbiModel.html#a7e5f552f463bf58b1c9828575c78ee90">OcraWbiModel::getCoMAcceleration</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aede9be679109798e7342351d13ffdfcd"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::getCoMAngularJacobian" ref="aede9be679109798e7342351d13ffdfcd" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -688,6 +706,22 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const Eigen::MatrixXd &amp; <a class="el" href="classocra__icub_1_1OcraWbiModel.html#a2dfc6cc2f527cc3aec668607b36e5fe9">OcraWbiModel::getInertiaMatrixInverse</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab590303004576e870219e88e92e088f8"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::getJointAccelerations" ref="ab590303004576e870219e88e92e088f8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; <a class="el" href="classocra__icub_1_1OcraWbiModel.html#ab590303004576e870219e88e92e088f8">OcraWbiModel::getJointAccelerations</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -1172,7 +1206,7 @@ Private Attributes</h2></td></tr>
       <li class="navelem"><a class="el" href="namespaceocra__icub.html">ocra_icub</a>      </li>
       <li class="navelem"><a class="el" href="classocra__icub_1_1OcraWbiModel.html">OcraWbiModel</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 11:53:15 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 12:02:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

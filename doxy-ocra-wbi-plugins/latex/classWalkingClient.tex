@@ -14,6 +14,8 @@ virtual \hyperlink{classWalkingClient_a1dbc0308f844aea6542750104fddf8e2}{$\sim$\
 \item 
 bool \hyperlink{classWalkingClient_adb8f972f34cb39c69c02a7c3cb493b81}{configure} (yarp\-::os\-::\-Resource\-Finder \&rf)
 \item 
+void \hyperlink{classWalkingClient_aff3fabef11d9c8b747a422f879c26067}{print\-Help} ()
+\item 
 bool \hyperlink{classWalkingClient_a03ea2313c954a97aeb4d5b614f3e6caa}{read\-Foot\-Wrench} (\hyperlink{ZmpController_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} which\-Foot, \-Eigen\-::\-Vector\-Xd \&raw\-Wrench)
 \item 
 std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \hyperlink{classWalkingClient_a3185a8ede8bf8b1227f7dd540ba87e3c}{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T} (const double t\-Trans, const double feet\-Separation, const double time\-Step, const int amplitude\-Fraction, const int \-N)
@@ -29,6 +31,8 @@ void \hyperlink{classWalkingClient_a3b1217b7fa17f76f162be0e12e419d96}{perform\-Z
 std\-::string \hyperlink{classWalkingClient_ae8f7dc629313df7d362e3edd6f45ae10}{compose\-Port\-Name} (std\-::string port\-Name)
 \item 
 void \hyperlink{classWalkingClient_ab4148804702e065310a903112bc10162}{transform\-Std\-Vector\-To\-Eigen\-Vector} (std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \&full\-Traj, int from, int \-Nc, \-Vector\-Xd \&output)
+\item 
+std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \hyperlink{classWalkingClient_a70b2375134ae55a041fbf30180ea3a8f}{generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T} (double feet\-Separation, double period, double duration, double rise\-Time, double constant\-Reference\-Y)
 \end{DoxyCompactItemize}
 \subsection*{\-Public \-Attributes}
 \begin{DoxyCompactItemize}
@@ -76,11 +80,15 @@ ocra\-::\-Task\-State \hyperlink{classWalkingClient_a2625bf687aa3141f5a2404c8d9b
 \item 
 \-Eigen\-::\-Vector2d \hyperlink{classWalkingClient_a549751e511e023d5fc73eccd1c185317}{\-\_\-previous\-C\-O\-M}
 \item 
+\-Eigen\-::\-Vector2d \hyperlink{classWalkingClient_aa0c7669193a8a42ed289c79523580033}{\-\_\-previous\-C\-O\-M\-Vel}
+\item 
 std\-::string \hyperlink{classWalkingClient_aff02b341d5e1f500dc9a849337319a8d}{\-\_\-client\-Name}
 \item 
 std\-::string \hyperlink{classWalkingClient_a67461634d7e8cb0234400b34fd2865e7}{\-\_\-robot}
 \item 
 bool \hyperlink{classWalkingClient_a4f9c8688537ddd8a487a212fbb279a9b}{\-\_\-is\-Test\-Run}
+\item 
+std\-::string \hyperlink{classWalkingClient_a35c00feb4e7dfa532e43241e855fec89}{\-\_\-test\-Type}
 \item 
 \hyperlink{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffa}{\-Zmp\-Test\-Type} \hyperlink{classWalkingClient_a14576258d7fed1b36919145f1b56d74c}{\-\_\-zmp\-Test\-Type}
 \item 
@@ -132,6 +140,12 @@ $<$ yarp\-::os\-::\-Bottle $>$ \hyperlink{classWalkingClient_a41b7320607812418af
 \-Vector\-Xd \hyperlink{classWalkingClient_abc3c504305c00a27e9fd38a8bf08ecda}{\-\_\-hkk\-Previous}
 \item 
 bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-first\-Loop}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classWalkingClient_af28b3cd3b1202f83e193b098572fbdd3}{zmp\-Ref\-In\-Preview\-Window}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classWalkingClient_ab3b1defedb6d79b5b6eaadd52bbad9f5}{com\-Vel\-Ref\-In\-Preview\-Window}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classWalkingClient_a0e5aee88e377029d79f57e778c583f18}{optimal\-U}
 \end{DoxyCompactItemize}
 
 
@@ -180,7 +194,18 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 )}}\label{classWalkingClient_adb8f972f34cb39c69c02a7c3cb493b81}
 \-Takes all the parameters used by this client from configuration file and parses them through yarp's \-Resource \-Finder.
 
-\-Details on group \mbox{[}\-Z\-M\-P\-\_\-\-C\-O\-N\-T\-R\-O\-L\-L\-E\-R\-\_\-\-P\-A\-R\-A\-M\-S\mbox{]} in walking-\/client.\-ini \-Options are\-: 0 -\/ \-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E 1 -\/ \-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E 2 -\/ \-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E \-Each of these tests are used to evaluate the correct gains to be used at each level of the control loops. \-Make sure the flag 'run\-For\-Tests' is active. \-When using this client for the first time on a robot, the gains of the com\-Task in its corresponding task\-Set file must be tuned first as well and later those for the \hyperlink{classZmpController}{\-Zmp\-Controller} class. \-Therefore we recommend executing this client first as a way of testing the \char`\"{}low\char`\"{} level \-Com\-Task control in order to find good kp and kd. \-Do this by setting 'type' to 2. \-Data will be saved at the location you specify through the option 'home\-Data\-Dir'. \-After having a good \-C\-O\-M velocity tracking at the task level, you want to test the tracking of the zmp controller by setting 'type' to 0. \-A constant zmp reference is given and the controller gains kfx, kfy, kdx and kdy must be tuned accordingly. \-Finally, the tracking of varying zmp reference can be tested which takes the zmp from left to right, while the robot stands on both feet. \hypertarget{classWalkingClient_a3185a8ede8bf8b1227f7dd540ba87e3c}{\index{\-Walking\-Client@{\-Walking\-Client}!generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T@{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T}}
+\-Details on group \mbox{[}\-Z\-M\-P\-\_\-\-C\-O\-N\-T\-R\-O\-L\-L\-E\-R\-\_\-\-P\-A\-R\-A\-M\-S\mbox{]} in walking-\/client.\-ini \-Options are\-: 0 -\/ \-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E 1 -\/ \-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E 2 -\/ \-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E \-Each of these tests are used to evaluate the correct gains to be used at each level of the control loops. \-These trajectorie will be used during the tests specified through the option 'test' which takes the values \char`\"{}zmp\-Preview\char`\"{} or \char`\"{}zmp\-Controller\char`\"{}. \-When using this client for the first time on a robot, the gains of the com\-Task in its corresponding task\-Set file must be tuned first as well and later those for the \hyperlink{classZmpController}{\-Zmp\-Controller} class. \-Therefore we recommend executing this client first as a way of testing the \char`\"{}low\char`\"{} level \-Com\-Task control in order to find good kp and kd. \-Do this by setting 'type' to 2. \-Data will be saved at the location you specify through the option 'home\-Data\-Dir'. \-After having a good \-C\-O\-M velocity tracking at the task level, you want to test the tracking of the zmp controller by setting 'type' to 0. \-A constant zmp reference is given and the controller gains kfx, kfy, kdx and kdy must be tuned accordingly. \-Finally, the tracking of varying zmp reference can be tested which takes the zmp from left to right, while the robot stands on both feet. \hypertarget{classWalkingClient_a70b2375134ae55a041fbf30180ea3a8f}{\index{\-Walking\-Client@{\-Walking\-Client}!generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T@{generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T}}
+\index{generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T@{generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ {\bf \-Walking\-Client\-::generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T} (
+\begin{DoxyParamCaption}
+\item[{double}]{feet\-Separation, }
+\item[{double}]{period, }
+\item[{double}]{duration, }
+\item[{double}]{rise\-Time, }
+\item[{double}]{constant\-Reference\-Y}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_a70b2375134ae55a041fbf30180ea3a8f}
+\hypertarget{classWalkingClient_a3185a8ede8bf8b1227f7dd540ba87e3c}{\index{\-Walking\-Client@{\-Walking\-Client}!generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T@{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T}}
 \index{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T@{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ {\bf \-Walking\-Client\-::generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T} (
 \begin{DoxyParamCaption}
@@ -247,13 +272,11 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \item[{{\bf \-Zmp\-Test\-Type}}]{type}
 \end{DoxyParamCaption}
 )}}\label{classWalkingClient_a3b1217b7fa17f76f162be0e12e419d96}
-\-Only using the first input computed by the preview controller; \-This input must now be integrated (since it's just the optimal com jerk) \mbox{[}\-C\-H\-E\-C\-K\-E\-D\mbox{]}
+\-Only using the first input computed by the preview controller; \-This input must now be integrated (since it's just the optimal com jerk)
 
 \-Using the zmp cart model, the instantaneous zmp trajectory can now be computed. \-For this we'll pass the current com state hk and the integrated optimal com acceleration.
 
-\-The zmp controller will now use this instantaneous value as reference. \-However, for this reference, a corresponding desired com position and velocity are computed to reduced the zmp tracking error.
-
-\-Apply control \-The \-Z\-M\-P \-Controller is in charge of computing the control\hypertarget{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}}
+\-Apply control \-The \-Z\-M\-P \-Controller is in charge of preparing the desired state\hypertarget{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}}
 \index{perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{perform\-Z\-M\-P\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::perform\-Z\-M\-P\-Test} (
 \begin{DoxyParamCaption}
@@ -267,6 +290,13 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 {\em type} & \-See \-Zmp\-Test\-Type for possible options. \\
 \hline
 \end{DoxyParams}
+\hypertarget{classWalkingClient_aff3fabef11d9c8b747a422f879c26067}{\index{\-Walking\-Client@{\-Walking\-Client}!print\-Help@{print\-Help}}
+\index{print\-Help@{print\-Help}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{print\-Help}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::print\-Help} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_aff3fabef11d9c8b747a422f879c26067}
 \hypertarget{classWalkingClient_ae6d6c046a9a3e51771afe8b4c105b412}{\index{\-Walking\-Client@{\-Walking\-Client}!publish3d\-Quantity@{publish3d\-Quantity}}
 \index{publish3d\-Quantity@{publish3d\-Quantity}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{publish3d\-Quantity}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Walking\-Client\-::publish3d\-Quantity} (
@@ -367,6 +397,9 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \hypertarget{classWalkingClient_a549751e511e023d5fc73eccd1c185317}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-previous\-C\-O\-M@{\-\_\-previous\-C\-O\-M}}
 \index{\-\_\-previous\-C\-O\-M@{\-\_\-previous\-C\-O\-M}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{\-\_\-previous\-C\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector2d {\bf \-Walking\-Client\-::\-\_\-previous\-C\-O\-M}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_a549751e511e023d5fc73eccd1c185317}
+\hypertarget{classWalkingClient_aa0c7669193a8a42ed289c79523580033}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-previous\-C\-O\-M\-Vel@{\-\_\-previous\-C\-O\-M\-Vel}}
+\index{\-\_\-previous\-C\-O\-M\-Vel@{\-\_\-previous\-C\-O\-M\-Vel}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{\-\_\-previous\-C\-O\-M\-Vel}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector2d {\bf \-Walking\-Client\-::\-\_\-previous\-C\-O\-M\-Vel}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_aa0c7669193a8a42ed289c79523580033}
 \hypertarget{classWalkingClient_a1c3fb4d182e33d6d9386e9bb05aa4ae8}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-raw\-Left\-Foot\-Wrench@{\-\_\-raw\-Left\-Foot\-Wrench}}
 \index{\-\_\-raw\-Left\-Foot\-Wrench@{\-\_\-raw\-Left\-Foot\-Wrench}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{\-\_\-raw\-Left\-Foot\-Wrench}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Walking\-Client\-::\-\_\-raw\-Left\-Foot\-Wrench}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_a1c3fb4d182e33d6d9386e9bb05aa4ae8}
@@ -385,6 +418,9 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \hypertarget{classWalkingClient_a2ed3837afa0c366f1cdef16b2a99b761}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-stop\-Time\-Varying\-Zmp@{\-\_\-stop\-Time\-Varying\-Zmp}}
 \index{\-\_\-stop\-Time\-Varying\-Zmp@{\-\_\-stop\-Time\-Varying\-Zmp}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{\-\_\-stop\-Time\-Varying\-Zmp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Walking\-Client\-::\-\_\-stop\-Time\-Varying\-Zmp}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_a2ed3837afa0c366f1cdef16b2a99b761}
+\hypertarget{classWalkingClient_a35c00feb4e7dfa532e43241e855fec89}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-test\-Type@{\-\_\-test\-Type}}
+\index{\-\_\-test\-Type@{\-\_\-test\-Type}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{\-\_\-test\-Type}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-Walking\-Client\-::\-\_\-test\-Type}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_a35c00feb4e7dfa532e43241e855fec89}
 \hypertarget{classWalkingClient_a144518766ec4eb9eeab230fcb291e20c}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-t\-Trans@{\-\_\-t\-Trans}}
 \index{\-\_\-t\-Trans@{\-\_\-t\-Trans}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{\-\_\-t\-Trans}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Walking\-Client\-::\-\_\-t\-Trans}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_a144518766ec4eb9eeab230fcb291e20c}
@@ -418,12 +454,21 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \hypertarget{classWalkingClient_a6cba3194816a0be78a8b17d539806115}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-zmp\-Y\-Const\-Ref@{\-\_\-zmp\-Y\-Const\-Ref}}
 \index{\-\_\-zmp\-Y\-Const\-Ref@{\-\_\-zmp\-Y\-Const\-Ref}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{\-\_\-zmp\-Y\-Const\-Ref}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Walking\-Client\-::\-\_\-zmp\-Y\-Const\-Ref}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_a6cba3194816a0be78a8b17d539806115}
+\hypertarget{classWalkingClient_ab3b1defedb6d79b5b6eaadd52bbad9f5}{\index{\-Walking\-Client@{\-Walking\-Client}!com\-Vel\-Ref\-In\-Preview\-Window@{com\-Vel\-Ref\-In\-Preview\-Window}}
+\index{com\-Vel\-Ref\-In\-Preview\-Window@{com\-Vel\-Ref\-In\-Preview\-Window}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{com\-Vel\-Ref\-In\-Preview\-Window}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Walking\-Client\-::com\-Vel\-Ref\-In\-Preview\-Window}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_ab3b1defedb6d79b5b6eaadd52bbad9f5}
+\hypertarget{classWalkingClient_a0e5aee88e377029d79f57e778c583f18}{\index{\-Walking\-Client@{\-Walking\-Client}!optimal\-U@{optimal\-U}}
+\index{optimal\-U@{optimal\-U}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{optimal\-U}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Walking\-Client\-::optimal\-U}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_a0e5aee88e377029d79f57e778c583f18}
 \hypertarget{classWalkingClient_a88ee63ff6a341eccd458d24700383457}{\index{\-Walking\-Client@{\-Walking\-Client}!port\-Wrench\-Left\-Foot@{port\-Wrench\-Left\-Foot}}
 \index{port\-Wrench\-Left\-Foot@{port\-Wrench\-Left\-Foot}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{port\-Wrench\-Left\-Foot}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Buffered\-Port$<$yarp\-::sig\-::\-Vector$>$ {\bf \-Walking\-Client\-::port\-Wrench\-Left\-Foot}}}\label{classWalkingClient_a88ee63ff6a341eccd458d24700383457}
 \hypertarget{classWalkingClient_a96321dc60e84c193f2dea6e85983ca67}{\index{\-Walking\-Client@{\-Walking\-Client}!port\-Wrench\-Right\-Foot@{port\-Wrench\-Right\-Foot}}
 \index{port\-Wrench\-Right\-Foot@{port\-Wrench\-Right\-Foot}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{port\-Wrench\-Right\-Foot}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Buffered\-Port$<$yarp\-::sig\-::\-Vector$>$ {\bf \-Walking\-Client\-::port\-Wrench\-Right\-Foot}}}\label{classWalkingClient_a96321dc60e84c193f2dea6e85983ca67}
+\hypertarget{classWalkingClient_af28b3cd3b1202f83e193b098572fbdd3}{\index{\-Walking\-Client@{\-Walking\-Client}!zmp\-Ref\-In\-Preview\-Window@{zmp\-Ref\-In\-Preview\-Window}}
+\index{zmp\-Ref\-In\-Preview\-Window@{zmp\-Ref\-In\-Preview\-Window}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{zmp\-Ref\-In\-Preview\-Window}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Walking\-Client\-::zmp\-Ref\-In\-Preview\-Window}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_af28b3cd3b1202f83e193b098572fbdd3}
 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

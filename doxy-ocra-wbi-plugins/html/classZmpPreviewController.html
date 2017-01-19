@@ -110,7 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a26b5bd0bdd476f70c2009d77d5495b24">ZmpPreviewController</a> (const double period, std::shared_ptr&lt; <a class="el" href="structZmpPreviewParams.html">ZmpPreviewParams</a> &gt; parameters)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#af702c45f318c7a78310d19cc061886dd">~ZmpPreviewController</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#ac28287e01187bff2cea5a68292d936bd">initialize</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#aea8b2b91b8c0ed86cbaa323d48ce4cb9">computeOptimalInput</a> (Eigen::VectorXd zmpRef, Eigen::VectorXd comVelRef, Eigen::VectorXd hk, Eigen::VectorXd &amp;optimalU)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a">computeOptimalInput</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;zmpRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;comVelRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;hk, Eigen::MatrixBase&lt; Derived &gt; &amp;optimalU)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#ab943816b5ed700272c6a61bb9b4412de">integrateComJerk</a> (Eigen::VectorXd comJerk, Eigen::VectorXd hk, Eigen::VectorXd &amp;hkk)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a7d559ce7ece62627b58f20cd01c9ce30">tableCartModel</a> (Eigen::Vector2d hk, Eigen::VectorXd ddhk, Eigen::Vector2d &amp;p)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a39ffdba07960f90a6cce247065f12504">buildAh</a> (const double <a class="el" href="classZmpPreviewController.html#abf1a3ec8d1698afab1c20bba32b5a724">dt</a>)</td></tr>
@@ -144,6 +145,8 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a2093754713ffb2a7adcd1310c73bf775">Ch</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a9429cb06fdd2c3ca5036a2fd48303632">Gh</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a8caaf8bf8f06e5b0b53d2cd5c131eefd">Hh</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a2afe60ed4923414ce4e51a8a7a584fde">AOptimal</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a049829dccbeb5a7a1bf47f7e6679174a">bOptimal</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementes an extended ZMP preview controller as an unconstrained QP problem. </p>
@@ -206,7 +209,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd>struct <a class="el" href="structZmpPreviewParams.html">ZmpPreviewParams</a> for details. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd>struct <a class="el" href="structZmpPreviewParams.html">ZmpPreviewParams</a> for details on the parameters. </dd></dl>
 
 </div>
 </div>
@@ -625,56 +628,58 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aea8b2b91b8c0ed86cbaa323d48ce4cb9"></a><!-- doxytag: member="ZmpPreviewController::computeOptimalInput" ref="aea8b2b91b8c0ed86cbaa323d48ce4cb9" args="(Eigen::VectorXd zmpRef, Eigen::VectorXd comVelRef, Eigen::VectorXd hk, Eigen::VectorXd &amp;optimalU)" -->
+<a class="anchor" id="aabdafde9ecc41a6d98134e0a01083d8a"></a><!-- doxytag: member="ZmpPreviewController::computeOptimalInput" ref="aabdafde9ecc41a6d98134e0a01083d8a" args="(const Eigen::MatrixBase&lt; Derived &gt; &amp;zmpRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;comVelRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;hk, Eigen::MatrixBase&lt; Derived &gt; &amp;optimalU)" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classZmpPreviewController.html#aea8b2b91b8c0ed86cbaa323d48ce4cb9">ZmpPreviewController::computeOptimalInput</a> </td>
+          <td class="memname">void <a class="el" href="classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a">ZmpPreviewController::computeOptimalInput</a> </td>
           <td>(</td>
-          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>zmpRef</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>comVelRef</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>hk</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramtype">Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>optimalU</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Computes the optimal input, i.e.: </p>
+<p>Computes a horizon of optimal inputs (CoM jerks) to be applied to the system, i.e.: </p>
 <p class="formulaDsp">
-\[ \mathbf{U}_{k+N_c|k} = (\mathbf{H}_p^T \mathbf{N}_b \mathbf{H}_p + \mathbf{N}_u + \mathbf{H}_h^T \mathbf{N}_w \mathbf{H}_h)^{-1} \left(\mathbf{H}^T_p \mathbf{N}_b (\mathbf{P}_r - \mathbf{G}_p \hat{\mathbf{h}}_k) + \mathbf{H}^T_h\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{G}_h \hat{\mathbf{h}}_k)\right) \]
+\begin{align*} \mathcal{U}_{k+N|k} &amp;= (\mathbf{H}_p^T \mathbf{N}_b \mathbf{H}_p + \mathbf{N}_u + \mathbf{H}_h^T \mathbf{N}_w \mathbf{H}_h)^{-1} \left(\mathbf{H}^T_p \mathbf{N}_b (\mathbf{P}_r - \mathbf{G}_p \hat{\mathbf{h}}_k) + \mathbf{H}^T_h\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{G}_h \hat{\mathbf{h}}_k)\right) \mathcal{U}_{k+N|k} &amp;= \mathbf{A}_{\text{opt}}^-1 \mathbf{b}_{\text{opt}} \end{align*}
 </p>
- <dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>This solution is computed through standard Cholesky decomposition. See Eigen::LLT for more details.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">zmpRef</td><td>\(\mathbf{P}_r\) </td></tr>
-    <tr><td class="paramname">comVelRef</td><td>\(\tilde{\mathbf{H}}_r\) </td></tr>
-    <tr><td class="paramname">hk</td><td>CoMstate at time \(k\), i.e. \(\hat{\mathbf{h}}_k\) </td></tr>
-    <tr><td class="paramname">optimalU</td><td>Closed-form solution to the unconstrained QP problem, \(\mathbf{U}_{k+N_c|k}\)</td></tr>
+    <tr><td class="paramname">zmpRef</td><td>\(\mathbf{P}_r\) Horizon of \(N_c\) references. </td></tr>
+    <tr><td class="paramname">comVelRef</td><td>\(\tilde{\mathbf{H}}_r\) Horizon of CoM velocities. </td></tr>
+    <tr><td class="paramname">hk</td><td>Current measured CoM state at time \(k\), i.e. \(\hat{\mathbf{h}}_k\) </td></tr>
+    <tr><td class="paramname">optimalU</td><td>Closed-form solution to the unconstrained QP problem, \(\mathbf{U}_{k+N_c|k}\) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>True if computation is successful, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -691,6 +696,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Initializes the matrices and parameters used by the controller.</p>
+<p>Currently we are not initializing through this class, but through the constructor. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if successful, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -787,6 +795,19 @@ Private Attributes</h2></td></tr>
  
 </div>
 </div>
+<a class="anchor" id="a2afe60ed4923414ce4e51a8a7a584fde"></a><!-- doxytag: member="ZmpPreviewController::AOptimal" ref="a2afe60ed4923414ce4e51a8a7a584fde" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classZmpPreviewController.html#a2afe60ed4923414ce4e51a8a7a584fde">ZmpPreviewController::AOptimal</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a98bd07d03d0a6004b345ef4310cf17b6"></a><!-- doxytag: member="ZmpPreviewController::Bh" ref="a98bd07d03d0a6004b345ef4310cf17b6" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -802,6 +823,19 @@ Private Attributes</h2></td></tr>
 \[ \mathbf{B_h} = \left[ \begin{array}{c} \frac{\delta^3}{6}\mathbf{I}_2 \\ \frac{\delta t^2}{2} \mathbf{I}_2 \\ \delta t \mathbf{I}_2 \end{array} \right] \]
 </p>
  
+</div>
+</div>
+<a class="anchor" id="a049829dccbeb5a7a1bf47f7e6679174a"></a><!-- doxytag: member="ZmpPreviewController::bOptimal" ref="a049829dccbeb5a7a1bf47f7e6679174a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classZmpPreviewController.html#a049829dccbeb5a7a1bf47f7e6679174a">ZmpPreviewController::bOptimal</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
 </div>
 </div>
 <a class="anchor" id="a2093754713ffb2a7adcd1310c73bf775"></a><!-- doxytag: member="ZmpPreviewController::Ch" ref="a2093754713ffb2a7adcd1310c73bf775" args="" -->
@@ -926,7 +960,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Input matrix \(\mathbf{H}_h\) from the preview horizon of CoMvelocities \(\tilde{\mathbf{H}}\), of size \(2N_c \times 2N_c\) and equal to: </p>
 <p class="formulaDsp">
-\[ \mathbf{H}_p = \left[\begin{array}{cccc} \mathbf{C}_h\mathbf{B}_h &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_h\mathbf{A}_h\mathbf{B}_h &amp; \mathbf{C}_h\mathbf{B}_h &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_h\mathbf{A}^{N_c-1}_h\mathbf{B}_h &amp; \mathbf{C}_h\mathbf{A}^{N_c-2}_h\mathbf{B}_h &amp; \cdots &amp; \mathbf{C}_h\mathbf{B}_h \end{array}\right] \]
+\[ \mathbf{H}_h = \left[\begin{array}{cccc} \mathbf{C}_h\mathbf{B}_h &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_h\mathbf{A}_h\mathbf{B}_h &amp; \mathbf{C}_h\mathbf{B}_h &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_h\mathbf{A}^{N_c-1}_h\mathbf{B}_h &amp; \mathbf{C}_h\mathbf{A}^{N_c-2}_h\mathbf{B}_h &amp; \cdots &amp; \mathbf{C}_h\mathbf{B}_h \end{array}\right] \]
 </p>
  
 </div>
@@ -1070,7 +1104,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classZmpPreviewController.html">ZmpPreviewController</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 11:53:15 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 12:02:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

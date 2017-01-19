@@ -173,7 +173,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00193"></a>00193     
 <a name="l00194"></a>00194     <span class="keywordtype">void</span> <a class="code" href="classZmpController.html#a3e275de73186b889c755e6dc618d29bf">computeh</a>(Eigen::Vector2d prevComPosition, Eigen::Vector2d prevComVel, Eigen::Vector2d &amp;intComPosition);
 <a name="l00195"></a>00195     
-<a name="l00196"></a>00196     ocra::TaskState <a class="code" href="classZmpController.html#a7cd490ac7bc0e360c0884cd40a346732">computeControl</a>(Eigen::Vector2d comRefPosition, Eigen::Vector2d comRefVelocity);
+<a name="l00196"></a>00196     ocra::TaskState <a class="code" href="classZmpController.html#a23e84c312c71daaf010c9600663db0b7">createDesiredState</a>(Eigen::Vector2d comRefPosition, Eigen::Vector2d comRefVelocity, Eigen::Vector2d comRefAcceleration);
 <a name="l00197"></a>00197 <span class="keyword">private</span>:
 <a name="l00198"></a><a class="code" href="classZmpController.html#a59a45aafc8a49a0d49966f7ed061a022">00198</a>     std::shared_ptr&lt;ZmpControllerParams&gt; <a class="code" href="classZmpController.html#a59a45aafc8a49a0d49966f7ed061a022">_params</a>;
 <a name="l00199"></a><a class="code" href="classZmpController.html#ac86a58d1f870ce27c78b0f6d2294e05f">00199</a>     std::shared_ptr&lt;ocra::Model&gt; <a class="code" href="classZmpController.html#ac86a58d1f870ce27c78b0f6d2294e05f">_model</a>;
@@ -202,7 +202,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="ZmpController_8h.html">ZmpController.h</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 11:53:15 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 12:02:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

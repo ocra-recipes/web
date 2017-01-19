@@ -1,9 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$IcubClient_8h.html" title="ocra&#45;icub/IcubClient.h" alt="" coords="751,83,900,112"/>
-<area shape="rect" id="node93" href="$ZmpPreviewController_8h.html" title="walking&#45;client/ZmpPreviewController.h" alt="" coords="2687,315,2932,344"/>
-<area shape="rect" id="node100" href="$ZmpController_8h.html" title="walking&#45;client/ZmpController.h" alt="" coords="3051,315,3248,344"/>
-<area shape="rect" id="node5" href="$ModelInitializer_8h.html" title="ocra&#45;icub/ModelInitializer.h" alt="" coords="479,160,655,189"/>
-<area shape="rect" id="node7" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="128,237,304,267"/>
-<area shape="rect" id="node17" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="719,315,932,344"/>
-<area shape="rect" id="node31" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1499,392,1632,421"/>
+<area shape="rect" id="node3" href="$IcubClient_8h.html" title="ocra&#45;icub/IcubClient.h" alt="" coords="1017,83,1167,112"/>
+<area shape="rect" id="node93" href="$ZmpPreviewController_8h.html" title="walking&#45;client/ZmpPreviewController.h" alt="" coords="2520,315,2765,344"/>
+<area shape="rect" id="node102" href="$ZmpController_8h.html" title="walking&#45;client/ZmpController.h" alt="" coords="3016,315,3213,344"/>
+<area shape="rect" id="node5" href="$ModelInitializer_8h.html" title="ocra&#45;icub/ModelInitializer.h" alt="" coords="319,160,495,189"/>
+<area shape="rect" id="node7" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="483,237,659,267"/>
+<area shape="rect" id="node17" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="985,315,1199,344"/>
+<area shape="rect" id="node31" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1561,392,1695,421"/>
 </map>

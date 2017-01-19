@@ -10,5 +10,6 @@ var searchData=
   ['zmppreviewcontroller_2ecpp',['ZmpPreviewController.cpp',['../ZmpPreviewController_8cpp.html',1,'']]],
   ['zmppreviewcontroller_2eh',['ZmpPreviewController.h',['../ZmpPreviewController_8h.html',1,'']]],
   ['zmppreviewparams',['ZmpPreviewParams',['../structZmpPreviewParams.html',1,'ZmpPreviewParams'],['../structZmpPreviewParams.html#a67df1929d83bddb9fb44c9c7846762c6',1,'ZmpPreviewParams::ZmpPreviewParams()']]],
+  ['zmprefinpreviewwindow',['zmpRefInPreviewWindow',['../classWalkingClient.html#af28b3cd3b1202f83e193b098572fbdd3',1,'WalkingClient']]],
   ['zmptesttype',['ZmpTestType',['../WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffa',1,'WalkingClient.h']]]
 ];

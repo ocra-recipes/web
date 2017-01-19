@@ -2,6 +2,7 @@ var searchData=
 [
   ['b',['B',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a71a78aa74a5b1422df339991ea6c6974',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['bh',['Bh',['../classZmpPreviewController.html#a98bd07d03d0a6004b345ef4310cf17b6',1,'ZmpPreviewController']]],
+  ['boptimal',['bOptimal',['../classZmpPreviewController.html#a049829dccbeb5a7a1bf47f7e6679174a',1,'ZmpPreviewController']]],
   ['buildah',['buildAh',['../classZmpPreviewController.html#a39ffdba07960f90a6cce247065f12504',1,'ZmpPreviewController']]],
   ['buildbh',['buildBh',['../classZmpPreviewController.html#a0114a8bdba920b9a7fb6b35e7b90ddd1',1,'ZmpPreviewController']]],
   ['buildch',['buildCh',['../classZmpPreviewController.html#a58723464a66fc3a1122c613500bb2052',1,'ZmpPreviewController']]],

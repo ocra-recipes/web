@@ -1,8 +1,10 @@
 var structOcraWbiModel_1_1OcraWbiModel__pimpl =
 [
     [ "OcraWbiModel_pimpl", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a160077c75e80a7d0fcc8b2491de7f86c", null ],
+    [ "acc_com", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#ac7d61b2e1fff0ce7f15a472c6785f640", null ],
     [ "actuatedDofs", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#aca1e7991e3aa3941dfb08b58b4f8e82c", null ],
     [ "B", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a71a78aa74a5b1422df339991ea6c6974", null ],
+    [ "ddq", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a08e61e2559239017a2dcbf99f5777d50", null ],
     [ "DJ_com", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a38a8628ca93524e08beada55f455249b", null ],
     [ "DJ_com_rm", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a864b4ce170b3526fba0f7e832bfbb2d8", null ],
     [ "DJDq", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#accd197872291c3e90272b8ebd87cefc8", null ],

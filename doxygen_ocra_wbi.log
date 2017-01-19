@@ -247,8 +247,8 @@ citelist:4: warning: unexpected end of comment while looking for a html descript
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:141: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::DebugRpcServerCallback::DebugRpcServerCallback(Thread &threadRef)
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:141: warning: The following parameters of Thread::DebugRpcServerCallback::DebugRpcServerCallback(Thread &threadRef) are not documented:
   parameter 'threadRef'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:87: warning: argument 'zmpError' of command @param is not found in the argument list of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value)
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:87: warning: The following parameters of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:90: warning: argument 'zmpError' of command @param is not found in the argument list of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:90: warning: The following parameters of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value) are not documented:
   parameter 'port'
   parameter 'value'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpController.h:169: warning: The following parameters of ZmpController::getFTSensorAdjointMatrix(FOOT whichFoot, Eigen::MatrixXd &T, Eigen::Vector3d &sensorPosition) are not documented:
@@ -323,7 +323,33 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-Patching output file 1/1
-symbol cache used 514/65536 hits=24753 misses=514
-lookup cache used 645/65536 hits=2107 misses=650
+Generating dot graphs using 26 parallel threads...
+Running dot for graph 1/10
+Running dot for graph 2/10
+Running dot for graph 3/10
+Running dot for graph 4/10
+Running dot for graph 5/10
+Running dot for graph 6/10
+Running dot for graph 7/10
+Running dot for graph 8/10
+Running dot for graph 9/10
+Running dot for graph 10/10
+Patching output file 1/16
+Patching output file 2/16
+Patching output file 3/16
+Patching output file 4/16
+Patching output file 5/16
+Patching output file 6/16
+Patching output file 7/16
+Patching output file 8/16
+Patching output file 9/16
+Patching output file 10/16
+Patching output file 11/16
+Patching output file 12/16
+Patching output file 13/16
+Patching output file 14/16
+Patching output file 15/16
+Patching output file 16/16
+symbol cache used 527/65536 hits=25545 misses=527
+lookup cache used 673/65536 hits=2187 misses=678
 finished...

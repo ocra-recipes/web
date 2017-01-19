@@ -108,6 +108,7 @@ This is the complete list of members for <a class="el" href="classocra__icub_1_1
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a8639b19a514624953e5e58dbde1c8227">doSetState</a>(const Eigen::VectorXd &amp;q, const Eigen::VectorXd &amp;q_dot)</td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a411c844cbde565ed54a224e39a2e65c1">doSetState</a>(const Eigen::Displacementd &amp;H_root, const Eigen::VectorXd &amp;q, const Eigen::Twistd &amp;T_root, const Eigen::VectorXd &amp;q_dot)</td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#aecb11984be8a80c66b45d37f5fb992ce">getActuatedDofs</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a7e5f552f463bf58b1c9828575c78ee90">getCoMAcceleration</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#aede9be679109798e7342351d13ffdfcd">getCoMAngularJacobian</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a98c163c5f051c36b78ff24810421664c">getCoMAngularVelocity</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#abc79b9dec9e96e4e8125d26c6be479d6">getCoMJacobian</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
@@ -121,6 +122,7 @@ This is the complete list of members for <a class="el" href="classocra__icub_1_1
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a57742157dce7e3526a388be7d11321d3">getGravityTerms</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a49df5e4d811b660c72b35b6d822bb529">getInertiaMatrix</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a2dfc6cc2f527cc3aec668607b36e5fe9">getInertiaMatrixInverse</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#ab590303004576e870219e88e92e088f8">getJointAccelerations</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a4dd0a4cd9f8d710c64e67c0336169321">getJointJacobian</a>(int index) const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a7eeb8088b632036c56841cee96aef7ff">getJointLowerLimits</a>() const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a83d6bc29496259e0f23cc085e29aa431">getJointName</a>(int index) const </td><td><a class="el" href="classocra__icub_1_1OcraWbiModel.html">ocra_icub::OcraWbiModel</a></td><td><code> [virtual]</code></td></tr>
@@ -169,7 +171,7 @@ This is the complete list of members for <a class="el" href="classocra__icub_1_1
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Thu Jan 19 2017 11:53:15 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 12:02:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

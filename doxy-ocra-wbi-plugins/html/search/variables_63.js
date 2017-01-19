@@ -4,6 +4,7 @@ var searchData=
   ['com_5ftrajthread',['com_TrajThread',['../classSteppingDemoClient.html#a9f3d1cdc49cc26a10f9b8fb0d0c68cab',1,'SteppingDemoClient']]],
   ['comhome',['comHome',['../classSteppingDemoClient.html#aa018c1f2734d63f962be512461c9e010',1,'SteppingDemoClient']]],
   ['comtrajthread',['comTrajThread',['../classStandingDemoClient.html#a223aa634ceba696716779461ec1d3f63',1,'StandingDemoClient']]],
+  ['comvelrefinpreviewwindow',['comVelRefInPreviewWindow',['../classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5',1,'WalkingClient']]],
   ['contactreleasedelay',['contactReleaseDelay',['../classStandingDemoClient.html#a4a13f8bdbc84e3645c7a1ab69012c652',1,'StandingDemoClient']]],
   ['contactsreleased',['contactsReleased',['../classStandingDemoClient.html#ac6744005797ac8071776a68b35a7da6d',1,'StandingDemoClient']]],
   ['controller_5foptions',['controller_options',['../classModule.html#a04156183c6e15f118595e3637ab5372f',1,'Module']]],

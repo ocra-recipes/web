@@ -89,6 +89,7 @@ var NAVTREEINDEX =
 "functions_vars_0x76.html":[2,2,2,21],
 "functions_vars_0x77.html":[2,2,2,22],
 "functions_vars_0x79.html":[2,2,2,23],
+"functions_vars_0x7a.html":[2,2,2,24],
 "files.html":[3,0],
 "README_8md.html":[3,0,0],
 "ExampleClient_8h.html":[3,0,1],

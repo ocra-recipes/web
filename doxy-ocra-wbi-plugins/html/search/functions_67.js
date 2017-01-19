@@ -1,8 +1,10 @@
 var searchData=
 [
+  ['generatezmpsteptrajectorytest',['generateZMPStepTrajectoryTEST',['../classWalkingClient.html#a70b2375134ae55a041fbf30180ea3a8f',1,'WalkingClient']]],
   ['generatezmptrajectorytest',['generateZMPTrajectoryTEST',['../classWalkingClient.html#a3185a8ede8bf8b1227f7dd540ba87e3c',1,'WalkingClient']]],
   ['getactuateddofs',['getActuatedDofs',['../classocra__icub_1_1OcraWbiModel.html#aecb11984be8a80c66b45d37f5fb992ce',1,'ocra_icub::OcraWbiModel']]],
   ['getcanonical_5ficubjoints',['getCanonical_iCubJoints',['../classIcubControllerServer.html#a892bb43e568d3f112465dff1e0c6b348',1,'IcubControllerServer']]],
+  ['getcomacceleration',['getCoMAcceleration',['../classocra__icub_1_1OcraWbiModel.html#a7e5f552f463bf58b1c9828575c78ee90',1,'ocra_icub::OcraWbiModel']]],
   ['getcomangularjacobian',['getCoMAngularJacobian',['../classocra__icub_1_1OcraWbiModel.html#aede9be679109798e7342351d13ffdfcd',1,'ocra_icub::OcraWbiModel']]],
   ['getcomangularvelocity',['getCoMAngularVelocity',['../classocra__icub_1_1OcraWbiModel.html#a98c163c5f051c36b78ff24810421664c',1,'ocra_icub::OcraWbiModel']]],
   ['getcomjacobian',['getCoMJacobian',['../classocra__icub_1_1OcraWbiModel.html#abc79b9dec9e96e4e8125d26c6be479d6',1,'ocra_icub::OcraWbiModel']]],
@@ -20,6 +22,7 @@ var searchData=
   ['gethomeposture',['getHomePosture',['../namespaceocra__icub.html#a91c3caf94014ea9988e56dd2572768ce',1,'ocra_icub::getHomePosture()'],['../Utilities_8cpp.html#aeeff320b9cc14a9a7cf72fcfbdada2f6',1,'getHomePosture():&#160;Utilities.cpp']]],
   ['getinertiamatrix',['getInertiaMatrix',['../classocra__icub_1_1OcraWbiModel.html#a49df5e4d811b660c72b35b6d822bb529',1,'ocra_icub::OcraWbiModel']]],
   ['getinertiamatrixinverse',['getInertiaMatrixInverse',['../classocra__icub_1_1OcraWbiModel.html#a2dfc6cc2f527cc3aec668607b36e5fe9',1,'ocra_icub::OcraWbiModel']]],
+  ['getjointaccelerations',['getJointAccelerations',['../classocra__icub_1_1OcraWbiModel.html#ab590303004576e870219e88e92e088f8',1,'ocra_icub::OcraWbiModel']]],
   ['getjointjacobian',['getJointJacobian',['../classocra__icub_1_1OcraWbiModel.html#a4dd0a4cd9f8d710c64e67c0336169321',1,'ocra_icub::OcraWbiModel']]],
   ['getjointlowerlimits',['getJointLowerLimits',['../classocra__icub_1_1OcraWbiModel.html#a7eeb8088b632036c56841cee96aef7ff',1,'ocra_icub::OcraWbiModel']]],
   ['getjointname',['getJointName',['../classocra__icub_1_1OcraWbiModel.html#a83d6bc29496259e0f23cc085e29aa431',1,'ocra_icub::OcraWbiModel']]],
