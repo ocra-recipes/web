@@ -21,7 +21,7 @@ bool \hyperlink{classZmpPreviewController_ac28287e01187bff2cea5a68292d936bd}{ini
 \item 
 {\footnotesize template$<$typename Derived $>$ }\\void \hyperlink{classZmpPreviewController_aabdafde9ecc41a6d98134e0a01083d8a}{compute\-Optimal\-Input} (const \-Eigen\-::\-Matrix\-Base$<$ \-Derived $>$ \&zmp\-Ref, const \-Eigen\-::\-Matrix\-Base$<$ \-Derived $>$ \&com\-Vel\-Ref, const \-Eigen\-::\-Matrix\-Base$<$ \-Derived $>$ \&hk, \-Eigen\-::\-Matrix\-Base$<$ \-Derived $>$ \&optimal\-U)
 \item 
-void \hyperlink{classZmpPreviewController_ab943816b5ed700272c6a61bb9b4412de}{integrate\-Com\-Jerk} (\-Eigen\-::\-Vector\-Xd com\-Jerk, \-Eigen\-::\-Vector\-Xd hk, \-Eigen\-::\-Vector\-Xd \&hkk)
+void \hyperlink{classZmpPreviewController_abbf80c91182c5e41ce60d3b7430a583e}{integrate\-Com} (\-Eigen\-::\-Vector\-Xd com\-Jerk, \-Eigen\-::\-Vector\-Xd hk, \-Eigen\-::\-Vector\-Xd \&hkk)
 \item 
 void \hyperlink{classZmpPreviewController_a7d559ce7ece62627b58f20cd01c9ce30}{table\-Cart\-Model} (\-Eigen\-::\-Vector2d hk, \-Eigen\-::\-Vector\-Xd ddhk, \-Eigen\-::\-Vector2d \&p)
 \item 
@@ -172,6 +172,9 @@ struct \hyperlink{structZmpPreviewParams}{\-Zmp\-Preview\-Params} for details on
 \begin{DoxyReturn}{\-Returns}
 \-The constant matrix \-Ah. 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a8ee8ec415e25374f4fa687f5a5a6b9df}{\-Zmp\-Preview\-Controller\-::\-Ah} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_a0114a8bdba920b9a7fb6b35e7b90ddd1}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Bh@{build\-Bh}}
 \index{build\-Bh@{build\-Bh}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Bh}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Bh} (
@@ -189,6 +192,9 @@ struct \hyperlink{structZmpPreviewParams}{\-Zmp\-Preview\-Params} for details on
 \begin{DoxyReturn}{\-Returns}
 \-The constant matrix \-Bh. 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a98bd07d03d0a6004b345ef4310cf17b6}{\-Zmp\-Preview\-Controller\-::\-Bh} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_a58723464a66fc3a1122c613500bb2052}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Ch@{build\-Ch}}
 \index{build\-Ch@{build\-Ch}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Ch}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Ch} (
@@ -196,11 +202,14 @@ struct \hyperlink{structZmpPreviewParams}{\-Zmp\-Preview\-Params} for details on
 {}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_a58723464a66fc3a1122c613500bb2052}
-\-Builds $C_h$
+\-Builds $C_h$. \-Called during the member list initialization of the constructor of this class
 
 \begin{DoxyReturn}{\-Returns}
 $C_h$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a2093754713ffb2a7adcd1310c73bf775}{\-Zmp\-Preview\-Controller\-::\-Ch} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_a716fdc040e5eaf9f6fe00c652f205d73}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Cp@{build\-Cp}}
 \index{build\-Cp@{build\-Cp}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Cp}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Cp} (
@@ -209,7 +218,7 @@ $C_h$
 \item[{const double}]{g}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_a716fdc040e5eaf9f6fe00c652f205d73}
-\-Builds $C_p$
+\-Builds $C_p$. \-Called during the member list initialization of the constructor of this class
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -221,6 +230,9 @@ $C_h$
 \begin{DoxyReturn}{\-Returns}
 $C_p$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a1a63870dcc3d51a26c4adc9c97e650ff}{\-Zmp\-Preview\-Controller\-::\-Cp} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_ac0e73fabb20f31dbbb85ce61414dbb87}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Gh@{build\-Gh}}
 \index{build\-Gh@{build\-Gh}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Gh}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Gh} (
@@ -230,7 +242,7 @@ $C_p$
 \item[{const int}]{\-Nc}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_ac0e73fabb20f31dbbb85ce61414dbb87}
-\-Builds $G_h$
+\-Builds $G_h$. \-Called during the member list initialization of the constructor of this class
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -244,6 +256,9 @@ $C_p$
 \begin{DoxyReturn}{\-Returns}
 $G_h$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a9429cb06fdd2c3ca5036a2fd48303632}{\-Zmp\-Preview\-Controller\-::\-Gh} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_af9df60a716648bf74467f7a678c8420b}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Gp@{build\-Gp}}
 \index{build\-Gp@{build\-Gp}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Gp}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Gp} (
@@ -253,7 +268,7 @@ $G_h$
 \item[{const int}]{\-Nc}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_af9df60a716648bf74467f7a678c8420b}
-\-Builds $G_p$
+\-Builds $G_p$. \-Called during the member list initialization of the constructor of this class
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -267,6 +282,9 @@ $G_h$
 \begin{DoxyReturn}{\-Returns}
 $G_p$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a53a7d8af5be4a5d5cea99fad2ea48979}{\-Zmp\-Preview\-Controller\-::\-Gp} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_ad6e2263a5d1990e0734537ec6c6c0136}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Hh@{build\-Hh}}
 \index{build\-Hh@{build\-Hh}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Hh}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Hh} (
@@ -277,7 +295,7 @@ $G_p$
 \item[{const int}]{\-Nc}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_ad6e2263a5d1990e0734537ec6c6c0136}
-\-Builds $H_h$
+\-Builds $H_h$. \-Called during the member list initialization of the constructor of this class
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -293,6 +311,9 @@ $G_p$
 \begin{DoxyReturn}{\-Returns}
 $H_h$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a8caaf8bf8f06e5b0b53d2cd5c131eefd}{\-Zmp\-Preview\-Controller\-::\-Hh} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_a4c46593f53f695cb1df53a2af180f4a0}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Hp@{build\-Hp}}
 \index{build\-Hp@{build\-Hp}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Hp}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Hp} (
@@ -303,7 +324,7 @@ $H_h$
 \item[{const int}]{\-Nc}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_a4c46593f53f695cb1df53a2af180f4a0}
-\-Builds $H_p$
+\-Builds $H_p$. \-Called during the member list initialization of the constructor of this class
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -319,6 +340,9 @@ $H_h$
 \begin{DoxyReturn}{\-Returns}
 $H_p$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a32ab17a3be30490e4a1e874bf3581843}{\-Zmp\-Preview\-Controller\-::\-Hp} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_ab4ab5756eb9faf991a12b405d116292f}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Nb@{build\-Nb}}
 \index{build\-Nb@{build\-Nb}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Nb}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Nb} (
@@ -327,7 +351,7 @@ $H_p$
 \item[{const int}]{\-Nc}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_ab4ab5756eb9faf991a12b405d116292f}
-\-Builds $N_b$
+\-Builds $N_b$. \-Called during the member list initialization of the constructor of this class
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -339,6 +363,9 @@ $H_p$
 \begin{DoxyReturn}{\-Returns}
 $N_b$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_abd345d397e99ae01ad4ea80cd9894802}{\-Zmp\-Preview\-Controller\-::\-Nb} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_ad1322ec975c7d022feb24a40fff62f2e}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Nu@{build\-Nu}}
 \index{build\-Nu@{build\-Nu}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Nu}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Nu} (
@@ -347,7 +374,7 @@ $N_b$
 \item[{const int}]{\-Nc}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_ad1322ec975c7d022feb24a40fff62f2e}
-\-Builds $N_u$
+\-Builds $N_u$. \-Called during the member list initialization of the constructor of this class
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -359,6 +386,9 @@ $N_b$
 \begin{DoxyReturn}{\-Returns}
 $N_u$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_ac3e92145988993ede7ce2060b997c8db}{\-Zmp\-Preview\-Controller\-::\-Nu} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_a96bed83f8441cfbd6d6fbff54c5b530d}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!build\-Nw@{build\-Nw}}
 \index{build\-Nw@{build\-Nw}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{build\-Nw}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::build\-Nw} (
@@ -367,7 +397,7 @@ $N_u$
 \item[{const int}]{\-Nc}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_a96bed83f8441cfbd6d6fbff54c5b530d}
-\-Builds $N_w$
+\-Builds $N_w$. \-Called during the member list initialization of the constructor of this class
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -379,6 +409,9 @@ $N_u$
 \begin{DoxyReturn}{\-Returns}
 $N_w$ 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a5e85354a1a7c3f2a8e265dbe7367051c}{\-Zmp\-Preview\-Controller\-::\-Nw} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_aabdafde9ecc41a6d98134e0a01083d8a}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!compute\-Optimal\-Input@{compute\-Optimal\-Input}}
 \index{compute\-Optimal\-Input@{compute\-Optimal\-Input}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{compute\-Optimal\-Input}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Derived $>$ void {\bf \-Zmp\-Preview\-Controller\-::compute\-Optimal\-Input} (
@@ -389,21 +422,24 @@ $N_w$
 \item[{\-Eigen\-::\-Matrix\-Base$<$ \-Derived $>$ \&}]{optimal\-U}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classZmpPreviewController_aabdafde9ecc41a6d98134e0a01083d8a}
-\-Computes a horizon of optimal inputs (\-Co\-M jerks) to be applied to the system, i.\-e.\-: \begin{align*} \mathcal{U}_{k+N|k} &= (\mathbf{H}_p^T \mathbf{N}_b \mathbf{H}_p + \mathbf{N}_u + \mathbf{H}_h^T \mathbf{N}_w \mathbf{H}_h)^{-1} \left(\mathbf{H}^T_p \mathbf{N}_b (\mathbf{P}_r - \mathbf{G}_p \hat{\mathbf{h}}_k) + \mathbf{H}^T_h\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{G}_h \hat{\mathbf{h}}_k)\right) \mathcal{U}_{k+N|k} &= \mathbf{A}_{\text{opt}}^-1 \mathbf{b}_{\text{opt}} \end{align*}
+\-Computes a horizon of optimal inputs (\-Co\-M jerks) to be applied to the system, i.\-e.\-: \begin{align*} \mathcal{U}_{k+N|k} &= (\mathbf{H}_p^T \mathbf{N}_b \mathbf{H}_p + \mathbf{N}_u + \mathbf{H}_h^T \mathbf{N}_w \mathbf{H}_h)^{-1} \left(\mathbf{H}^T_p \mathbf{N}_b (\mathbf{P}_r - \mathbf{G}_p \hat{\mathbf{h}}_k) + \mathbf{H}^T_h\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{G}_h \hat{\mathbf{h}}_k)\right)\\ \mathcal{U}_{k+N|k} &= \mathbf{A}_{\text{opt}}^{-1} \mathbf{b}_{\text{opt}} \end{align*}
 
-\-This solution is computed through standard \-Cholesky decomposition. \-See \-Eigen\-::\-L\-L\-T for more details.
+\-This solution is computed through standard \-Cholesky decomposition. \-See \-Eigen\-::\-L\-L\-T for more details. \-Matrix \hyperlink{classZmpPreviewController_a2afe60ed4923414ce4e51a8a7a584fde}{\-Zmp\-Preview\-Controller\-::\-A\-Optimal} is precomputed by the constructor for efficiency reasons.
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em zmp\-Ref} & $\mathbf{P}_r$ \-Horizon of $N_c$ references. \\
+{\em zmp\-Ref} & $\mathbf{P}_r$ \-Horizon of $N_c$ \-Z\-M\-P references. \\
 \hline
-{\em com\-Vel\-Ref} & $\tilde{\mathbf{H}}_r$ \-Horizon of \-Co\-M velocities. \\
+{\em com\-Vel\-Ref} & $\tilde{\mathbf{H}}_r$ \-Horizon of $N_c$ \-Co\-M velocities. \\
 \hline
 {\em hk} & \-Current measured \-Co\-M state at time $k$, i.\-e. $\hat{\mathbf{h}}_k$ \\
 \hline
-{\em optimal\-U} & \-Closed-\/form solution to the unconstrained \-Q\-P problem, $\mathbf{U}_{k+N_c|k}$ \\
+{\em optimal\-U} & \-Closed-\/form solution to the unconstrained \-Q\-P problem, $\mathcal{U}_{k+N_c|k}$ \\
 \hline
 \end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a2afe60ed4923414ce4e51a8a7a584fde}{\-Zmp\-Preview\-Controller\-::\-A\-Optimal}, \hyperlink{classZmpPreviewController_a049829dccbeb5a7a1bf47f7e6679174a}{\-Zmp\-Preview\-Controller\-::b\-Optimal} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_ac28287e01187bff2cea5a68292d936bd}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!initialize@{initialize}}
 \index{initialize@{initialize}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Zmp\-Preview\-Controller\-::initialize} (
@@ -413,27 +449,29 @@ $N_w$
 )}}\label{classZmpPreviewController_ac28287e01187bff2cea5a68292d936bd}
 \-Initializes the matrices and parameters used by the controller.
 
-\-Currently we are not initializing through this class, but through the constructor. \begin{DoxyReturn}{\-Returns}
+\-Currently we are not initializing through this method, but through the constructor. \begin{DoxyReturn}{\-Returns}
 \-True if successful, false otherwise. 
 \end{DoxyReturn}
-\hypertarget{classZmpPreviewController_ab943816b5ed700272c6a61bb9b4412de}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!integrate\-Com\-Jerk@{integrate\-Com\-Jerk}}
-\index{integrate\-Com\-Jerk@{integrate\-Com\-Jerk}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
-\subsubsection[{integrate\-Com\-Jerk}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zmp\-Preview\-Controller\-::integrate\-Com\-Jerk} (
+\hypertarget{classZmpPreviewController_abbf80c91182c5e41ce60d3b7430a583e}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!integrate\-Com@{integrate\-Com}}
+\index{integrate\-Com@{integrate\-Com}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
+\subsubsection[{integrate\-Com}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zmp\-Preview\-Controller\-::integrate\-Com} (
 \begin{DoxyParamCaption}
 \item[{\-Eigen\-::\-Vector\-Xd}]{com\-Jerk, }
 \item[{\-Eigen\-::\-Vector\-Xd}]{hk, }
 \item[{\-Eigen\-::\-Vector\-Xd \&}]{hkk}
 \end{DoxyParamCaption}
-)}}\label{classZmpPreviewController_ab943816b5ed700272c6a61bb9b4412de}
-\-Integrates the \-C\-O\-M state vector given a \-C\-O\-M jerk input
+)}}\label{classZmpPreviewController_abbf80c91182c5e41ce60d3b7430a583e}
+\-Integrates the \-Co\-M for a given \-Co\-M jerk input.
+
+\[ \mathbf{h}_{k+1} = \mathbf{A}_h \mathbf{h}_k + \mathbf{B}_h \mathbf{u}_k \]
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em com\-Jerk} & \-Input com jerk $\mathbf{u}$ \\
+\begin{DoxyParams}[1]{\-Parameters}
+ & {\em com\-Jerk} & \-Input com jerk $\mathbf{u}_k$ \\
 \hline
-{\em hk} & \-Current \-C\-O\-M state $\mathbf{h}_k$ \\
+ & {\em hk} & \-Current \-C\-O\-M state $\mathbf{h}_k$ \\
 \hline
-{\em hkk} & \-Integrated \-C\-O\-M state $\mathbf{h}_{k+1}$ \\
+\mbox{\tt out}  & {\em hkk} & \-Integrated \-C\-O\-M state $\mathbf{h}_{k+1}$ \\
 \hline
 \end{DoxyParams}
 \hypertarget{classZmpPreviewController_a7d559ce7ece62627b58f20cd01c9ce30}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!table\-Cart\-Model@{table\-Cart\-Model}}
@@ -445,6 +483,22 @@ $N_w$
 \item[{\-Eigen\-::\-Vector2d \&}]{p}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_a7d559ce7ece62627b58f20cd01c9ce30}
+\-Computes a simplified model-\/based \-Z\-M\-P.
+
+\-Computes the zero-\/moment point given the robot's horizontal \-Co\-M acceleration and position, besides a constant \-Co\-M height and gravity acceleration.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+ & {\em hk} & \-Horizontal \-Co\-M position. \\
+\hline
+ & {\em ddhk} & \-Horizontal \-Co\-M acceleration. \\
+\hline
+\mbox{\tt out}  & {\em p} & \-Computed \-Z\-M\-P. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-The \-M\-P\-C formulation presented in the description of this controller finds the optimal inputs (jerks) for the system, not the optimal \-Z\-M\-P trajectory! \-This is why, if we want to see what the previewed \-Z\-M\-P reference is, we need to use this table-\/cart model whose inputs are to be integrated from the optimal jerks through \hyperlink{classZmpPreviewController_abbf80c91182c5e41ce60d3b7430a583e}{integrate\-Com()}. 
+\end{DoxyNote}
 
 
 \subsection{\-Member \-Data \-Documentation}
@@ -454,19 +508,19 @@ $N_w$
 \-State matrix $\mathbf{A}_h$ from the linear state process of the \-Co\-Mstate $\hat{\mathbf{h}}$. \-It is a constant matrix of size $6\times6$ equal to\-: \[ \mathbf{A_h} = \left[ \begin{array}{ccc} \mathbf{I}_2 & \delta t \mathbf{I}_2 & \frac{\delta t^2}{2} \mathbf{I}_2 \\ 0 & \mathbf{I}_2 & \delta t \\ 0 & 0 & \mathbf{I}_2 \end{array} \right] \] \hypertarget{classZmpPreviewController_a2afe60ed4923414ce4e51a8a7a584fde}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-A\-Optimal@{\-A\-Optimal}}
 \index{\-A\-Optimal@{\-A\-Optimal}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{\-A\-Optimal}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::\-A\-Optimal}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classZmpPreviewController_a2afe60ed4923414ce4e51a8a7a584fde}
-\hypertarget{classZmpPreviewController_a98bd07d03d0a6004b345ef4310cf17b6}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Bh@{\-Bh}}
+\-Matrix $\mathbf{A}_{\text{opt}}$ in \hyperlink{classZmpPreviewController_aabdafde9ecc41a6d98134e0a01083d8a}{compute\-Optimal\-Input()}. \hypertarget{classZmpPreviewController_a98bd07d03d0a6004b345ef4310cf17b6}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Bh@{\-Bh}}
 \index{\-Bh@{\-Bh}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{\-Bh}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::\-Bh}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classZmpPreviewController_a98bd07d03d0a6004b345ef4310cf17b6}
 \-Input matrix $\mathbf{B}_h$ from the linear state process of the \-Co\-Mstate $\hat{\mathbf{h}}$. \-It is constant of size $6\times2$ and equal to\-: \[ \mathbf{B_h} = \left[ \begin{array}{c} \frac{\delta^3}{6}\mathbf{I}_2 \\ \frac{\delta t^2}{2} \mathbf{I}_2 \\ \delta t \mathbf{I}_2 \end{array} \right] \] \hypertarget{classZmpPreviewController_a049829dccbeb5a7a1bf47f7e6679174a}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!b\-Optimal@{b\-Optimal}}
 \index{b\-Optimal@{b\-Optimal}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{b\-Optimal}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::b\-Optimal}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classZmpPreviewController_a049829dccbeb5a7a1bf47f7e6679174a}
-\hypertarget{classZmpPreviewController_a2093754713ffb2a7adcd1310c73bf775}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Ch@{\-Ch}}
+\-Vector $\mathbf{b}_{\text{opt}}$ in \hyperlink{classZmpPreviewController_aabdafde9ecc41a6d98134e0a01083d8a}{compute\-Optimal\-Input()}. \hypertarget{classZmpPreviewController_a2093754713ffb2a7adcd1310c73bf775}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Ch@{\-Ch}}
 \index{\-Ch@{\-Ch}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{\-Ch}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::\-Ch}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classZmpPreviewController_a2093754713ffb2a7adcd1310c73bf775}
 \-Output matrix of the \-Co\-Mlinear process state transition where the \-Co\-Mhorizontal velocity is the output. \-It is of size $2\times6$ and equal to\-: \[ \mathbf{C}_h = \left[\begin{array}{ccc} \mathbf{0}_2 & \mathbf{I}_2 & \mathbf{0}_2 \\ \end{array}\right] \] \hypertarget{classZmpPreviewController_a1a63870dcc3d51a26c4adc9c97e650ff}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Cp@{\-Cp}}
 \index{\-Cp@{\-Cp}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{\-Cp}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::\-Cp}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classZmpPreviewController_a1a63870dcc3d51a26c4adc9c97e650ff}
-\-Output matrix $C_p$ from the linear state process relating \-Z\-M\-P to the \-Co\-Mdynamics $\hat{\mathbf{h}}$. \-It is time-\/invariant of size $2\times6$ and equal to\-: \[ \mathbf{C}_h = \left[\begin{array}{ccc} \mathbf{I}_2 & \mathbf{0}_2 & -\frac{c_z}{g}\mathbf{I}_2 \\ \end{array}\right] \] \hypertarget{classZmpPreviewController_a3a317d26cc1bbaf8811491724fdd1def}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!cz@{cz}}
+\-Output matrix $C_p$ from the linear state process relating \-Z\-M\-P to the \-Co\-Mdynamics $\hat{\mathbf{h}}$. \-It is time-\/invariant of size $2\times6$ and equal to\-: \[ \mathbf{C}_p = \left[\begin{array}{ccc} \mathbf{I}_2 & \mathbf{0}_2 & -\frac{c_z}{g}\mathbf{I}_2 \\ \end{array}\right] \] \hypertarget{classZmpPreviewController_a3a317d26cc1bbaf8811491724fdd1def}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!cz@{cz}}
 \index{cz@{cz}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{cz}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf \-Zmp\-Preview\-Controller\-::cz}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classZmpPreviewController_a3a317d26cc1bbaf8811491724fdd1def}
 \-Co\-Mconstant height. \-It is not hardcoded but corresponds to the vertical coordinate (height) of the \-Co\-Mat the beginning of execution, i.\-e. $ c_z $. \hypertarget{classZmpPreviewController_abf1a3ec8d1698afab1c20bba32b5a724}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!dt@{dt}}
@@ -478,7 +532,7 @@ $N_w$
 \-Gravity constant value in m/s$^\wedge$2, $ g $. \hypertarget{classZmpPreviewController_a9429cb06fdd2c3ca5036a2fd48303632}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Gh@{\-Gh}}
 \index{\-Gh@{\-Gh}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{\-Gh}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::\-Gh}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classZmpPreviewController_a9429cb06fdd2c3ca5036a2fd48303632}
-\-State matrix $\mathbf{G}_h$ of size $2N_c \times 6$ from the preview horizon of \-Co\-Mvelocities. \-It is constant and equal to\-: \[ \mathbf{G}_p = \left[\begin{array}{c} \mathbf{C}_h\mathbf{A}_h \\ \vdots \\ \mathbf{C}_h\mathbf{A}^{N_c}_h \end{array}\right] \] \hypertarget{classZmpPreviewController_a53a7d8af5be4a5d5cea99fad2ea48979}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Gp@{\-Gp}}
+\-State matrix $\mathbf{G}_h$ of size $2N_c \times 6$ from the preview horizon of \-Co\-Mvelocities. \-It is constant and equal to\-: \[ \mathbf{G}_h = \left[\begin{array}{c} \mathbf{C}_h\mathbf{A}_h \\ \vdots \\ \mathbf{C}_h\mathbf{A}^{N_c}_h \end{array}\right] \] \hypertarget{classZmpPreviewController_a53a7d8af5be4a5d5cea99fad2ea48979}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Gp@{\-Gp}}
 \index{\-Gp@{\-Gp}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{\-Gp}]{\setlength{\rightskip}{0pt plus 5cm}const \-Eigen\-::\-Matrix\-Xd {\bf \-Zmp\-Preview\-Controller\-::\-Gp}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classZmpPreviewController_a53a7d8af5be4a5d5cea99fad2ea48979}
 \-State matrix $\mathbf{G}_p$ from the preview horizon of \-Z\-M\-P outputs $\mathbf{P}$. \-It is of size $2Nc \times 6$ and equal to\-: \[ \mathbf{G}_p = \left[\begin{array}{c} \mathbf{C}_p\mathbf{A}_h \\ \vdots \\ \mathbf{C}_p\mathbf{A}^{N_c}_h \end{array}\right] \] \hypertarget{classZmpPreviewController_a8caaf8bf8f06e5b0b53d2cd5c131eefd}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!\-Hh@{\-Hh}}

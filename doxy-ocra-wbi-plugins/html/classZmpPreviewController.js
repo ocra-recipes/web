@@ -15,7 +15,7 @@ var classZmpPreviewController =
     [ "buildNw", "classZmpPreviewController.html#a96bed83f8441cfbd6d6fbff54c5b530d", null ],
     [ "computeOptimalInput", "classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a", null ],
     [ "initialize", "classZmpPreviewController.html#ac28287e01187bff2cea5a68292d936bd", null ],
-    [ "integrateComJerk", "classZmpPreviewController.html#ab943816b5ed700272c6a61bb9b4412de", null ],
+    [ "integrateCom", "classZmpPreviewController.html#abbf80c91182c5e41ce60d3b7430a583e", null ],
     [ "tableCartModel", "classZmpPreviewController.html#a7d559ce7ece62627b58f20cd01c9ce30", null ],
     [ "Ah", "classZmpPreviewController.html#a8ee8ec415e25374f4fa687f5a5a6b9df", null ],
     [ "AOptimal", "classZmpPreviewController.html#a2afe60ed4923414ce4e51a8a7a584fde", null ],

@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#ac28287e01187bff2cea5a68292d936bd">initialize</a> ()</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a">computeOptimalInput</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;zmpRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;comVelRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;hk, Eigen::MatrixBase&lt; Derived &gt; &amp;optimalU)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#ab943816b5ed700272c6a61bb9b4412de">integrateComJerk</a> (Eigen::VectorXd comJerk, Eigen::VectorXd hk, Eigen::VectorXd &amp;hkk)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#abbf80c91182c5e41ce60d3b7430a583e">integrateCom</a> (Eigen::VectorXd comJerk, Eigen::VectorXd hk, Eigen::VectorXd &amp;hkk)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a7d559ce7ece62627b58f20cd01c9ce30">tableCartModel</a> (Eigen::Vector2d hk, Eigen::VectorXd ddhk, Eigen::Vector2d &amp;p)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a39ffdba07960f90a6cce247065f12504">buildAh</a> (const double <a class="el" href="classZmpPreviewController.html#abf1a3ec8d1698afab1c20bba32b5a724">dt</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a0114a8bdba920b9a7fb6b35e7b90ddd1">buildBh</a> (const double <a class="el" href="classZmpPreviewController.html#abf1a3ec8d1698afab1c20bba32b5a724">dt</a>)</td></tr>
@@ -252,6 +252,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The constant matrix Ah. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a8ee8ec415e25374f4fa687f5a5a6b9df">ZmpPreviewController::Ah</a> </dd></dl>
 
 </div>
 </div>
@@ -277,6 +278,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The constant matrix Bh. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a98bd07d03d0a6004b345ef4310cf17b6">ZmpPreviewController::Bh</a> </dd></dl>
 
 </div>
 </div>
@@ -293,8 +295,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(C_h\)</p>
+<p>Builds \(C_h\). Called during the member list initialization of the constructor of this class</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(C_h\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a2093754713ffb2a7adcd1310c73bf775">ZmpPreviewController::Ch</a> </dd></dl>
 
 </div>
 </div>
@@ -322,7 +325,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(C_p\)</p>
+<p>Builds \(C_p\). Called during the member list initialization of the constructor of this class</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">cz</td><td>Constant CoMheight. </td></tr>
@@ -331,6 +334,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(C_p\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a1a63870dcc3d51a26c4adc9c97e650ff">ZmpPreviewController::Cp</a> </dd></dl>
 
 </div>
 </div>
@@ -364,7 +368,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(G_h\)</p>
+<p>Builds \(G_h\). Called during the member list initialization of the constructor of this class</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">Ch</td><td>\(C_h\) </td></tr>
@@ -374,6 +378,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(G_h\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a9429cb06fdd2c3ca5036a2fd48303632">ZmpPreviewController::Gh</a> </dd></dl>
 
 </div>
 </div>
@@ -407,7 +412,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(G_p\)</p>
+<p>Builds \(G_p\). Called during the member list initialization of the constructor of this class</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">Cp</td><td>\(C_p\) </td></tr>
@@ -417,6 +422,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(G_p\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a53a7d8af5be4a5d5cea99fad2ea48979">ZmpPreviewController::Gp</a> </dd></dl>
 
 </div>
 </div>
@@ -456,7 +462,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(H_h\)</p>
+<p>Builds \(H_h\). Called during the member list initialization of the constructor of this class</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">Ch</td><td>\(C_h\) </td></tr>
@@ -467,6 +473,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(H_h\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a8caaf8bf8f06e5b0b53d2cd5c131eefd">ZmpPreviewController::Hh</a> </dd></dl>
 
 </div>
 </div>
@@ -506,7 +513,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(H_p\)</p>
+<p>Builds \(H_p\). Called during the member list initialization of the constructor of this class</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">Cp</td><td>\(C_p\) </td></tr>
@@ -517,6 +524,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(H_p\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a32ab17a3be30490e4a1e874bf3581843">ZmpPreviewController::Hp</a> </dd></dl>
 
 </div>
 </div>
@@ -544,7 +552,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(N_b\)</p>
+<p>Builds \(N_b\). Called during the member list initialization of the constructor of this class</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">nb</td><td>\(\eta_b\) </td></tr>
@@ -553,6 +561,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(N_b\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#abd345d397e99ae01ad4ea80cd9894802">ZmpPreviewController::Nb</a> </dd></dl>
 
 </div>
 </div>
@@ -580,7 +589,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(N_u\)</p>
+<p>Builds \(N_u\). Called during the member list initialization of the constructor of this class</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">nu</td><td>\(\eta_u\) </td></tr>
@@ -589,6 +598,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(N_u\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#ac3e92145988993ede7ce2060b997c8db">ZmpPreviewController::Nu</a> </dd></dl>
 
 </div>
 </div>
@@ -616,7 +626,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(N_w\)</p>
+<p>Builds \(N_w\). Called during the member list initialization of the constructor of this class</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">nw</td><td>\(\eta_w\) </td></tr>
@@ -625,6 +635,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>\(N_w\) </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a5e85354a1a7c3f2a8e265dbe7367051c">ZmpPreviewController::Nw</a> </dd></dl>
 
 </div>
 </div>
@@ -668,18 +679,19 @@ template&lt;typename Derived &gt; </div>
 <div class="memdoc">
 <p>Computes a horizon of optimal inputs (CoM jerks) to be applied to the system, i.e.: </p>
 <p class="formulaDsp">
-\begin{align*} \mathcal{U}_{k+N|k} &amp;= (\mathbf{H}_p^T \mathbf{N}_b \mathbf{H}_p + \mathbf{N}_u + \mathbf{H}_h^T \mathbf{N}_w \mathbf{H}_h)^{-1} \left(\mathbf{H}^T_p \mathbf{N}_b (\mathbf{P}_r - \mathbf{G}_p \hat{\mathbf{h}}_k) + \mathbf{H}^T_h\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{G}_h \hat{\mathbf{h}}_k)\right) \mathcal{U}_{k+N|k} &amp;= \mathbf{A}_{\text{opt}}^-1 \mathbf{b}_{\text{opt}} \end{align*}
+\begin{align*} \mathcal{U}_{k+N|k} &amp;= (\mathbf{H}_p^T \mathbf{N}_b \mathbf{H}_p + \mathbf{N}_u + \mathbf{H}_h^T \mathbf{N}_w \mathbf{H}_h)^{-1} \left(\mathbf{H}^T_p \mathbf{N}_b (\mathbf{P}_r - \mathbf{G}_p \hat{\mathbf{h}}_k) + \mathbf{H}^T_h\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{G}_h \hat{\mathbf{h}}_k)\right)\\ \mathcal{U}_{k+N|k} &amp;= \mathbf{A}_{\text{opt}}^{-1} \mathbf{b}_{\text{opt}} \end{align*}
 </p>
-<p>This solution is computed through standard Cholesky decomposition. See Eigen::LLT for more details.</p>
+<p>This solution is computed through standard Cholesky decomposition. See Eigen::LLT for more details. Matrix <a class="el" href="classZmpPreviewController.html#a2afe60ed4923414ce4e51a8a7a584fde">ZmpPreviewController::AOptimal</a> is precomputed by the constructor for efficiency reasons.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">zmpRef</td><td>\(\mathbf{P}_r\) Horizon of \(N_c\) references. </td></tr>
-    <tr><td class="paramname">comVelRef</td><td>\(\tilde{\mathbf{H}}_r\) Horizon of CoM velocities. </td></tr>
+    <tr><td class="paramname">zmpRef</td><td>\(\mathbf{P}_r\) Horizon of \(N_c\) ZMP references. </td></tr>
+    <tr><td class="paramname">comVelRef</td><td>\(\tilde{\mathbf{H}}_r\) Horizon of \(N_c\) CoM velocities. </td></tr>
     <tr><td class="paramname">hk</td><td>Current measured CoM state at time \(k\), i.e. \(\hat{\mathbf{h}}_k\) </td></tr>
-    <tr><td class="paramname">optimalU</td><td>Closed-form solution to the unconstrained QP problem, \(\mathbf{U}_{k+N_c|k}\) </td></tr>
+    <tr><td class="paramname">optimalU</td><td>Closed-form solution to the unconstrained QP problem, \(\mathcal{U}_{k+N_c|k}\) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a2afe60ed4923414ce4e51a8a7a584fde">ZmpPreviewController::AOptimal</a>, <a class="el" href="classZmpPreviewController.html#a049829dccbeb5a7a1bf47f7e6679174a">ZmpPreviewController::bOptimal</a> </dd></dl>
 
 </div>
 </div>
@@ -697,17 +709,17 @@ template&lt;typename Derived &gt; </div>
 </div>
 <div class="memdoc">
 <p>Initializes the matrices and parameters used by the controller.</p>
-<p>Currently we are not initializing through this class, but through the constructor. </p>
+<p>Currently we are not initializing through this method, but through the constructor. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>True if successful, false otherwise. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ab943816b5ed700272c6a61bb9b4412de"></a><!-- doxytag: member="ZmpPreviewController::integrateComJerk" ref="ab943816b5ed700272c6a61bb9b4412de" args="(Eigen::VectorXd comJerk, Eigen::VectorXd hk, Eigen::VectorXd &amp;hkk)" -->
+<a class="anchor" id="abbf80c91182c5e41ce60d3b7430a583e"></a><!-- doxytag: member="ZmpPreviewController::integrateCom" ref="abbf80c91182c5e41ce60d3b7430a583e" args="(Eigen::VectorXd comJerk, Eigen::VectorXd hk, Eigen::VectorXd &amp;hkk)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classZmpPreviewController.html#ab943816b5ed700272c6a61bb9b4412de">ZmpPreviewController::integrateComJerk</a> </td>
+          <td class="memname">void <a class="el" href="classZmpPreviewController.html#abbf80c91182c5e41ce60d3b7430a583e">ZmpPreviewController::integrateCom</a> </td>
           <td>(</td>
           <td class="paramtype">Eigen::VectorXd&#160;</td>
           <td class="paramname"><em>comJerk</em>, </td>
@@ -732,12 +744,15 @@ template&lt;typename Derived &gt; </div>
       </table>
 </div>
 <div class="memdoc">
-<p>Integrates the COM state vector given a COM jerk input</p>
+<p>Integrates the CoM for a given CoM jerk input.</p>
+<p class="formulaDsp">
+\[ \mathbf{h}_{k+1} = \mathbf{A}_h \mathbf{h}_k + \mathbf{B}_h \mathbf{u}_k \]
+</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">comJerk</td><td>Input com jerk \(\mathbf{u}\) </td></tr>
-    <tr><td class="paramname">hk</td><td>Current COM state \(\mathbf{h}_k\) </td></tr>
-    <tr><td class="paramname">hkk</td><td>Integrated COM state \(\mathbf{h}_{k+1}\) </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">comJerk</td><td>Input com jerk \(\mathbf{u}_k\) </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">hk</td><td>Current COM state \(\mathbf{h}_k\) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">hkk</td><td>Integrated COM state \(\mathbf{h}_{k+1}\) </td></tr>
   </table>
   </dd>
 </dl>
@@ -774,6 +789,17 @@ template&lt;typename Derived &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+<p>Computes a simplified model-based ZMP.</p>
+<p>Computes the zero-moment point given the robot's horizontal CoM acceleration and position, besides a constant CoM height and gravity acceleration.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">hk</td><td>Horizontal CoM position. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">ddhk</td><td>Horizontal CoM acceleration. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p</td><td>Computed ZMP. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>The MPC formulation presented in the description of this controller finds the optimal inputs (jerks) for the system, not the optimal ZMP trajectory! This is why, if we want to see what the previewed ZMP reference is, we need to use this table-cart model whose inputs are to be integrated from the optimal jerks through <a class="el" href="classZmpPreviewController.html#abbf80c91182c5e41ce60d3b7430a583e">integrateCom()</a>. </dd></dl>
 
 </div>
 </div>
@@ -805,6 +831,7 @@ template&lt;typename Derived &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+<p>Matrix \(\mathbf{A}_{\text{opt}}\) in <a class="el" href="classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a">computeOptimalInput()</a>. </p>
 
 </div>
 </div>
@@ -835,6 +862,7 @@ template&lt;typename Derived &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+<p>Vector \(\mathbf{b}_{\text{opt}}\) in <a class="el" href="classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a">computeOptimalInput()</a>. </p>
 
 </div>
 </div>
@@ -867,7 +895,7 @@ template&lt;typename Derived &gt; </div>
 <div class="memdoc">
 <p>Output matrix \(C_p\) from the linear state process relating ZMP to the CoMdynamics \(\hat{\mathbf{h}}\). It is time-invariant of size \(2\times6\) and equal to: </p>
 <p class="formulaDsp">
-\[ \mathbf{C}_h = \left[\begin{array}{ccc} \mathbf{I}_2 &amp; \mathbf{0}_2 &amp; -\frac{c_z}{g}\mathbf{I}_2 \\ \end{array}\right] \]
+\[ \mathbf{C}_p = \left[\begin{array}{ccc} \mathbf{I}_2 &amp; \mathbf{0}_2 &amp; -\frac{c_z}{g}\mathbf{I}_2 \\ \end{array}\right] \]
 </p>
  
 </div>
@@ -926,7 +954,7 @@ template&lt;typename Derived &gt; </div>
 <div class="memdoc">
 <p>State matrix \(\mathbf{G}_h\) of size \(2N_c \times 6\) from the preview horizon of CoMvelocities. It is constant and equal to: </p>
 <p class="formulaDsp">
-\[ \mathbf{G}_p = \left[\begin{array}{c} \mathbf{C}_h\mathbf{A}_h \\ \vdots \\ \mathbf{C}_h\mathbf{A}^{N_c}_h \end{array}\right] \]
+\[ \mathbf{G}_h = \left[\begin{array}{c} \mathbf{C}_h\mathbf{A}_h \\ \vdots \\ \mathbf{C}_h\mathbf{A}^{N_c}_h \end{array}\right] \]
 </p>
  
 </div>
@@ -1104,7 +1132,7 @@ template&lt;typename Derived &gt; </div>
     <ul>
       <li class="navelem"><a class="el" href="classZmpPreviewController.html">ZmpPreviewController</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 12:07:02 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 12:10:55 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
