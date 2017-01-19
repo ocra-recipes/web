@@ -323,33 +323,7 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-Generating dot graphs using 26 parallel threads...
-Running dot for graph 1/10
-Running dot for graph 2/10
-Running dot for graph 3/10
-Running dot for graph 4/10
-Running dot for graph 5/10
-Running dot for graph 6/10
-Running dot for graph 7/10
-Running dot for graph 8/10
-Running dot for graph 9/10
-Running dot for graph 10/10
-Patching output file 1/16
-Patching output file 2/16
-Patching output file 3/16
-Patching output file 4/16
-Patching output file 5/16
-Patching output file 6/16
-Patching output file 7/16
-Patching output file 8/16
-Patching output file 9/16
-Patching output file 10/16
-Patching output file 11/16
-Patching output file 12/16
-Patching output file 13/16
-Patching output file 14/16
-Patching output file 15/16
-Patching output file 16/16
+Patching output file 1/1
 symbol cache used 527/65536 hits=25545 misses=527
 lookup cache used 673/65536 hits=2187 misses=678
 finished...
