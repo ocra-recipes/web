@@ -25,6 +25,8 @@ void \hyperlink{classZmpPreviewController_abbf80c91182c5e41ce60d3b7430a583e}{int
 \item 
 void \hyperlink{classZmpPreviewController_a7d559ce7ece62627b58f20cd01c9ce30}{table\-Cart\-Model} (\-Eigen\-::\-Vector2d hk, \-Eigen\-::\-Vector\-Xd ddhk, \-Eigen\-::\-Vector2d \&p)
 \item 
+void \hyperlink{classZmpPreviewController_a7fa5d122b80650cdd9869b666e1ad597}{table\-Cart\-Model} (\-Eigen\-::\-Vector\-Xd hkk, \-Eigen\-::\-Vector2d \&p)
+\item 
 \-Eigen\-::\-Matrix\-Xd \hyperlink{classZmpPreviewController_a39ffdba07960f90a6cce247065f12504}{build\-Ah} (const double \hyperlink{classZmpPreviewController_abf1a3ec8d1698afab1c20bba32b5a724}{dt})
 \item 
 \-Eigen\-::\-Matrix\-Xd \hyperlink{classZmpPreviewController_a0114a8bdba920b9a7fb6b35e7b90ddd1}{build\-Bh} (const double \hyperlink{classZmpPreviewController_abf1a3ec8d1698afab1c20bba32b5a724}{dt})
@@ -106,17 +108,13 @@ const \-Eigen\-::\-Matrix\-Xd \hyperlink{classZmpPreviewController_a8caaf8bf8f06
 \begin{DoxyWarning}{\-Warning}
 \-Work in progress! \-This is still a barebone class in the process of being tested.
 \end{DoxyWarning}
-\-Given a rough \-Z\-M\-P trajectory and a corresponding consistent \-Co\-Mvelocity, this class computes at a fast rate optimal \-Co\-Mjerks over a refined preview horizon. \-The \-Z\-M\-P preview control formulation in (reference goes here) is extended to account for a \-Co\-Mtracking objective in order to minimize the error over a preview horizon to reference \-Co\-Mvelocities. \-This preview controller solves with
+\-Given a rough \-Z\-M\-P trajectory and a corresponding consistent \-Co\-M horizontal velocity, this class computes at a fast rate optimal \-Co\-M jerks over a refined preview horizon. \-The \-Z\-M\-P preview control formulation in (reference goes here) is extended to account for a \-Co\-M velocity tracking objective in order to minimize the error over a preview horizon to reference \-Co\-M velocities. \-This preview controller solves the following problem in a time window of size $N_c$
 
-\[ \mathcal{U}_{k+N|k} = (\mathbf{u}_{k|k}, ... , \mathbf{u}) \]
+\begin{align*} \mathcal{U}_{k+N_c|k}^* = \underset{\mathcal{U}_{k+N_c|k}}{\text{arg min}} \; \sum_{j=1}^{N} & \eta_b || \mathbf{p}_{k+j|k} - \mathbf{r}_{k+j|k}^r ||^2 + \eta_w ||\mathbf{\dot{h}}_{k+j|k} - \dot{\mathbf{h}}^r_{k+j|k} ||^2 + \eta_u || \mathbf{u} ||^2 \\ \text{such that}&\\ \mathbf{p} &= \mathbf{h} - \mathbf{c}\mathbf{e}_2 \mathbf{\ddot{h}} \\ \mathbf{\hat{h}}_{k+j+1|k} &= \mathbf{A}_h \hat{\mathbf{h}}_{k+j|k} + \mathbf{B}_h \mathbf{u}_{k+j+1|k} \\ \mathbf{h}_{k+j|k} &= \mathbf{h}_k\\ \mathbf{h} &= \mathbf{c} - (\mathbf{c}\cdot\mathbf{e}_2)\mathbf{e}_2 \end{align*}
 
-\-Denoting a horizon of input \-Co\-Mjerks $\mathbf{u}$, the following problem\-:
+\-Where ${U}_{k+N_c|k}^*$ is the optimal horizon of inputs, $\mathbf{p}$ is the horizontal \-Z\-M\-P coordinate, $ \mathbf{r}^r $ \-Z\-M\-P references (in `walking-\/client` it's the interpolated \-Z\-M\-P reference from the walking \-M\-I\-Q\-P problem) $ \mathbf{\dot{h}} $ the horizontal \-Co\-M velocity, $ \mathbf{\dot{h}}^r $ \-Co\-M horizontal velocity reference (in walking-\/client it's the interpolated \-Co\-M velocity reference from the walking \-M\-I\-Q\-P problem). $\mathbf{u}$ is the input \-Co\-M jerk, $\mathbf{c}$ the three-\/dimensional \-Co\-M position. \-The horizontal \-Co\-M state is denoted $\hat{\mathbf{h}} = (\mathbf{h}, \mathbf{\dot{h}}, \mathbf{\ddot{h}}) $ (\-Co\-M horizontal position, velocity and acceleration respectively) while $\mathbf{e}_2$ is the vertical unit vector $ [0\;0\;1]^T$. $\mathbf{A}_h$ and $\mathbf{B}_h$ are integration matrices.
 
-\begin{align*} \underset{\mathcal{U}_{k+N|k}}{\text{min}} \; \sum_{j=1}^{N} & \eta_b || \mathbf{p}_{k+j|k} - \mathbf{r}_{k+j|k}^r ||^2 + \eta_w ||\mathbf{\dot{h}}_{k+j|k} - \dot{\mathbf{h}}^r_{k+j|k} ||^2 + \eta_u || \mathbf{u} ||^2 \\ \text{such that}&\\ \mathbf{p} &= \mathbf{h} - \mathbf{c}\mathbf{e}_2 \mathbf{\ddot{h}} \\ \mathbf{\hat{h}}_{k+j+1|k} &= \mathbf{A}_h \hat{\mathbf{h}}_{k+j|k} + \mathbf{B}_h \mathbf{u}_{k+j+1|k} \\ \mathbf{h}_{k+j|k} &= \mathbf{h}_k\\ \mathbf{h} &= \mathbf{c} - (\mathbf{c}\cdot\mathbf{e}_2)\mathbf{e}_2 \end{align*}
-
-\-Where $\mathbf{p}$ are horizontal \-Z\-M\-P coordinates, $ \mathbf{r}^r $ \-Z\-M\-P references (in walking-\/client is the interpolated \-Z\-M\-P reference from the walking \-M\-I\-Q\-P problem) $ \mathbf{\dot{h}} $ the horizontal \-Co\-Mvelocity, $ \mathbf{\dot{h}}^r $ \-Co\-Mhorizontal velocity reference (in walking-\/client it's the interpolated \-Co\-Mvelocity reference from the walking \-M\-I\-Q\-P problem). $\mathbf{u}$ are the input \-Co\-Mjerks, $\mathbf{c}$ the three-\/dimensional \-Co\-Mposition. $h$ the horizonal \-Co\-Mposition, $\hat{\mathbf{h}}$ the horizontal \-Co\-Mstate $ (\mathbf{h}, \mathbf{\dot{h}}, \mathbf{\ddot{h}}) $ and $\mathbf{e}_2$ the vertical unit vectory $ [0\;0\;1]^T$. $\mathbf{A}_h$ and $\mathbf{B}_h$ are integration matrices.
-
-\-The previously described problem is an unconstrained \-Q\-P problem which has a closed-\/form solution. \-In order to help us find one, the same minimization problem will be expressed in matrix form as\-:
+\-The previously described problem is an unconstrained \-Q\-P problem which has a closed-\/form solution. \-The same can be expressed in matrix form as\-:
 
 \[ \underset{\mathbf{U}}{\text{min}} \; (\mathbf{P}_r - \mathbf{P})^T \mathbf{N}_b (\mathbf{P}_r - \mathbf{P}) + (\tilde{\mathbf{H}}_r - \mathbf{H})^T\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{H}) + \mathbf{U}^T\mathbf{N}_u \mathbf{U} \]
 
@@ -461,7 +459,7 @@ $N_w$
 \item[{\-Eigen\-::\-Vector\-Xd \&}]{hkk}
 \end{DoxyParamCaption}
 )}}\label{classZmpPreviewController_abbf80c91182c5e41ce60d3b7430a583e}
-\-Integrates the \-Co\-M for a given \-Co\-M jerk input.
+\-Integrates the \-Co\-M for a given \-Co\-M jerk input. \-Integration matrices $\mathbf{A}_h$ and $\mathbf{b}_h$ are precomputed by the constructor of this class.
 
 \[ \mathbf{h}_{k+1} = \mathbf{A}_h \mathbf{h}_k + \mathbf{B}_h \mathbf{u}_k \]
 
@@ -474,6 +472,9 @@ $N_w$
 \mbox{\tt out}  & {\em hkk} & \-Integrated \-C\-O\-M state $\mathbf{h}_{k+1}$ \\
 \hline
 \end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classZmpPreviewController_a39ffdba07960f90a6cce247065f12504}{build\-Ah()}, \hyperlink{classZmpPreviewController_a0114a8bdba920b9a7fb6b35e7b90ddd1}{build\-Bh()} 
+\end{DoxySeeAlso}
 \hypertarget{classZmpPreviewController_a7d559ce7ece62627b58f20cd01c9ce30}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!table\-Cart\-Model@{table\-Cart\-Model}}
 \index{table\-Cart\-Model@{table\-Cart\-Model}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{table\-Cart\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zmp\-Preview\-Controller\-::table\-Cart\-Model} (
@@ -499,6 +500,14 @@ $N_w$
 \begin{DoxyNote}{\-Note}
 \-The \-M\-P\-C formulation presented in the description of this controller finds the optimal inputs (jerks) for the system, not the optimal \-Z\-M\-P trajectory! \-This is why, if we want to see what the previewed \-Z\-M\-P reference is, we need to use this table-\/cart model whose inputs are to be integrated from the optimal jerks through \hyperlink{classZmpPreviewController_abbf80c91182c5e41ce60d3b7430a583e}{integrate\-Com()}. 
 \end{DoxyNote}
+\hypertarget{classZmpPreviewController_a7fa5d122b80650cdd9869b666e1ad597}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!table\-Cart\-Model@{table\-Cart\-Model}}
+\index{table\-Cart\-Model@{table\-Cart\-Model}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
+\subsubsection[{table\-Cart\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zmp\-Preview\-Controller\-::table\-Cart\-Model} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd}]{hkk, }
+\item[{\-Eigen\-::\-Vector2d \&}]{p}
+\end{DoxyParamCaption}
+)}}\label{classZmpPreviewController_a7fa5d122b80650cdd9869b666e1ad597}
 
 
 \subsection{\-Member \-Data \-Documentation}

@@ -114,6 +114,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a">computeOptimalInput</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;zmpRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;comVelRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;hk, Eigen::MatrixBase&lt; Derived &gt; &amp;optimalU)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#abbf80c91182c5e41ce60d3b7430a583e">integrateCom</a> (Eigen::VectorXd comJerk, Eigen::VectorXd hk, Eigen::VectorXd &amp;hkk)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a7d559ce7ece62627b58f20cd01c9ce30">tableCartModel</a> (Eigen::Vector2d hk, Eigen::VectorXd ddhk, Eigen::Vector2d &amp;p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a7fa5d122b80650cdd9869b666e1ad597">tableCartModel</a> (Eigen::VectorXd hkk, Eigen::Vector2d &amp;p)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a39ffdba07960f90a6cce247065f12504">buildAh</a> (const double <a class="el" href="classZmpPreviewController.html#abf1a3ec8d1698afab1c20bba32b5a724">dt</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a0114a8bdba920b9a7fb6b35e7b90ddd1">buildBh</a> (const double <a class="el" href="classZmpPreviewController.html#abf1a3ec8d1698afab1c20bba32b5a724">dt</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a716fdc040e5eaf9f6fe00c652f205d73">buildCp</a> (const double <a class="el" href="classZmpPreviewController.html#a3a317d26cc1bbaf8811491724fdd1def">cz</a>, const double <a class="el" href="classZmpPreviewController.html#a344571f012aa58250d7625905681bf1b">g</a>)</td></tr>
@@ -154,16 +155,12 @@ Private Attributes</h2></td></tr>
 <dl class="author"><dt><b>Author:</b></dt><dd>Jorhabib Eljaik</dd></dl>
 <p><a class="el" href="citelist.html#CITEREF_ibanezThesis2015">ibanezThesis2015</a></p>
 <dl class="warning"><dt><b>Warning:</b></dt><dd>Work in progress! This is still a barebone class in the process of being tested.</dd></dl>
-<p>Given a rough ZMP trajectory and a corresponding consistent CoMvelocity, this class computes at a fast rate optimal CoMjerks over a refined preview horizon. The ZMP preview control formulation in (reference goes here) is extended to account for a CoMtracking objective in order to minimize the error over a preview horizon to reference CoMvelocities. This preview controller solves with</p>
+<p>Given a rough ZMP trajectory and a corresponding consistent CoM horizontal velocity, this class computes at a fast rate optimal CoM jerks over a refined preview horizon. The ZMP preview control formulation in (reference goes here) is extended to account for a CoM velocity tracking objective in order to minimize the error over a preview horizon to reference CoM velocities. This preview controller solves the following problem in a time window of size \(N_c\)</p>
 <p class="formulaDsp">
-\[ \mathcal{U}_{k+N|k} = (\mathbf{u}_{k|k}, ... , \mathbf{u}) \]
+\begin{align*} \mathcal{U}_{k+N_c|k}^* = \underset{\mathcal{U}_{k+N_c|k}}{\text{arg min}} \; \sum_{j=1}^{N} &amp; \eta_b || \mathbf{p}_{k+j|k} - \mathbf{r}_{k+j|k}^r ||^2 + \eta_w ||\mathbf{\dot{h}}_{k+j|k} - \dot{\mathbf{h}}^r_{k+j|k} ||^2 + \eta_u || \mathbf{u} ||^2 \\ \text{such that}&amp;\\ \mathbf{p} &amp;= \mathbf{h} - \mathbf{c}\mathbf{e}_2 \mathbf{\ddot{h}} \\ \mathbf{\hat{h}}_{k+j+1|k} &amp;= \mathbf{A}_h \hat{\mathbf{h}}_{k+j|k} + \mathbf{B}_h \mathbf{u}_{k+j+1|k} \\ \mathbf{h}_{k+j|k} &amp;= \mathbf{h}_k\\ \mathbf{h} &amp;= \mathbf{c} - (\mathbf{c}\cdot\mathbf{e}_2)\mathbf{e}_2 \end{align*}
 </p>
-<p>Denoting a horizon of input CoMjerks \(\mathbf{u}\), the following problem:</p>
-<p class="formulaDsp">
-\begin{align*} \underset{\mathcal{U}_{k+N|k}}{\text{min}} \; \sum_{j=1}^{N} &amp; \eta_b || \mathbf{p}_{k+j|k} - \mathbf{r}_{k+j|k}^r ||^2 + \eta_w ||\mathbf{\dot{h}}_{k+j|k} - \dot{\mathbf{h}}^r_{k+j|k} ||^2 + \eta_u || \mathbf{u} ||^2 \\ \text{such that}&amp;\\ \mathbf{p} &amp;= \mathbf{h} - \mathbf{c}\mathbf{e}_2 \mathbf{\ddot{h}} \\ \mathbf{\hat{h}}_{k+j+1|k} &amp;= \mathbf{A}_h \hat{\mathbf{h}}_{k+j|k} + \mathbf{B}_h \mathbf{u}_{k+j+1|k} \\ \mathbf{h}_{k+j|k} &amp;= \mathbf{h}_k\\ \mathbf{h} &amp;= \mathbf{c} - (\mathbf{c}\cdot\mathbf{e}_2)\mathbf{e}_2 \end{align*}
-</p>
-<p>Where \(\mathbf{p}\) are horizontal ZMP coordinates, \( \mathbf{r}^r \) ZMP references (in walking-client is the interpolated ZMP reference from the walking MIQP problem) \( \mathbf{\dot{h}} \) the horizontal CoMvelocity, \( \mathbf{\dot{h}}^r \) CoMhorizontal velocity reference (in walking-client it's the interpolated CoMvelocity reference from the walking MIQP problem). \(\mathbf{u}\) are the input CoMjerks, \(\mathbf{c}\) the three-dimensional CoMposition. \(h\) the horizonal CoMposition, \(\hat{\mathbf{h}}\) the horizontal CoMstate \( (\mathbf{h}, \mathbf{\dot{h}}, \mathbf{\ddot{h}}) \) and \(\mathbf{e}_2\) the vertical unit vectory \( [0\;0\;1]^T\). \(\mathbf{A}_h\) and \(\mathbf{B}_h\) are integration matrices.</p>
-<p>The previously described problem is an unconstrained QP problem which has a closed-form solution. In order to help us find one, the same minimization problem will be expressed in matrix form as:</p>
+<p>Where \({U}_{k+N_c|k}^*\) is the optimal horizon of inputs, \(\mathbf{p}\) is the horizontal ZMP coordinate, \( \mathbf{r}^r \) ZMP references (in `walking-client` it's the interpolated ZMP reference from the walking MIQP problem) \( \mathbf{\dot{h}} \) the horizontal CoM velocity, \( \mathbf{\dot{h}}^r \) CoM horizontal velocity reference (in walking-client it's the interpolated CoM velocity reference from the walking MIQP problem). \(\mathbf{u}\) is the input CoM jerk, \(\mathbf{c}\) the three-dimensional CoM position. The horizontal CoM state is denoted \(\hat{\mathbf{h}} = (\mathbf{h}, \mathbf{\dot{h}}, \mathbf{\ddot{h}}) \) (CoM horizontal position, velocity and acceleration respectively) while \(\mathbf{e}_2\) is the vertical unit vector \( [0\;0\;1]^T\). \(\mathbf{A}_h\) and \(\mathbf{B}_h\) are integration matrices.</p>
+<p>The previously described problem is an unconstrained QP problem which has a closed-form solution. The same can be expressed in matrix form as:</p>
 <p class="formulaDsp">
 \[ \underset{\mathbf{U}}{\text{min}} \; (\mathbf{P}_r - \mathbf{P})^T \mathbf{N}_b (\mathbf{P}_r - \mathbf{P}) + (\tilde{\mathbf{H}}_r - \mathbf{H})^T\mathbf{N}_w(\tilde{\mathbf{H}}_r - \mathbf{H}) + \mathbf{U}^T\mathbf{N}_u \mathbf{U} \]
 </p>
@@ -744,7 +741,7 @@ template&lt;typename Derived &gt; </div>
       </table>
 </div>
 <div class="memdoc">
-<p>Integrates the CoM for a given CoM jerk input.</p>
+<p>Integrates the CoM for a given CoM jerk input. Integration matrices \(\mathbf{A}_h\) and \(\mathbf{b}_h\) are precomputed by the constructor of this class.</p>
 <p class="formulaDsp">
 \[ \mathbf{h}_{k+1} = \mathbf{A}_h \mathbf{h}_k + \mathbf{B}_h \mathbf{u}_k \]
 </p>
@@ -756,6 +753,7 @@ template&lt;typename Derived &gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a39ffdba07960f90a6cce247065f12504">buildAh()</a>, <a class="el" href="classZmpPreviewController.html#a0114a8bdba920b9a7fb6b35e7b90ddd1">buildBh()</a> </dd></dl>
 
 </div>
 </div>
@@ -800,6 +798,33 @@ template&lt;typename Derived &gt; </div>
   </dd>
 </dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>The MPC formulation presented in the description of this controller finds the optimal inputs (jerks) for the system, not the optimal ZMP trajectory! This is why, if we want to see what the previewed ZMP reference is, we need to use this table-cart model whose inputs are to be integrated from the optimal jerks through <a class="el" href="classZmpPreviewController.html#abbf80c91182c5e41ce60d3b7430a583e">integrateCom()</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7fa5d122b80650cdd9869b666e1ad597"></a><!-- doxytag: member="ZmpPreviewController::tableCartModel" ref="a7fa5d122b80650cdd9869b666e1ad597" args="(Eigen::VectorXd hkk, Eigen::Vector2d &amp;p)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classZmpPreviewController.html#a7d559ce7ece62627b58f20cd01c9ce30">ZmpPreviewController::tableCartModel</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramname"><em>hkk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -1132,7 +1157,7 @@ template&lt;typename Derived &gt; </div>
     <ul>
       <li class="navelem"><a class="el" href="classZmpPreviewController.html">ZmpPreviewController</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 12:14:31 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 23:18:03 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

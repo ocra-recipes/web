@@ -8,6 +8,7 @@ var searchData=
   ['performzmptest',['performZMPTest',['../classWalkingClient.html#ae3c259f7615c85ce53a413f6e7ab4b76',1,'WalkingClient']]],
   ['pinv',['pinv',['../classIcubControllerServer.html#a0132b1ddc3dafd29506e4684ea42cf58',1,'IcubControllerServer']]],
   ['positioncomover',['positionCoMOver',['../classSteppingDemoClient.html#a18609e5634a283423c228106bb0e3a45',1,'SteppingDemoClient']]],
+  ['prepareandsetdesiredcomtaskstate',['prepareAndsetDesiredCoMTaskState',['../classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47',1,'WalkingClient']]],
   ['printalldata',['printAllData',['../classocra__icub_1_1OcraWbiModel.html#a309b3554c4eefda46c05b766476f40fb',1,'ocra_icub::OcraWbiModel']]],
   ['printhelp',['printHelp',['../classModule.html#a861f70d79b8f36dccf5daae182763bd8',1,'Module::printHelp()'],['../classStandingDemoClient.html#ae1f321428f6b67b2f8bf7e1e7a1cd3d4',1,'StandingDemoClient::printHelp()'],['../classWalkingClient.html#aff3fabef11d9c8b747a422f879c26067',1,'WalkingClient::printHelp()']]],
   ['publish3dquantity',['publish3dQuantity',['../classWalkingClient.html#ae6d6c046a9a3e51771afe8b4c105b412',1,'WalkingClient']]],

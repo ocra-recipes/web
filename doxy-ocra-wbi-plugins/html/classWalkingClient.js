@@ -11,6 +11,7 @@ var classWalkingClient =
     [ "loop", "classWalkingClient.html#afd997bb00534c57fe1b0d5f37f207386", null ],
     [ "performZMPPreviewTest", "classWalkingClient.html#a3b1217b7fa17f76f162be0e12e419d96", null ],
     [ "performZMPTest", "classWalkingClient.html#ae3c259f7615c85ce53a413f6e7ab4b76", null ],
+    [ "prepareAndsetDesiredCoMTaskState", "classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47", null ],
     [ "printHelp", "classWalkingClient.html#aff3fabef11d9c8b747a422f879c26067", null ],
     [ "publish3dQuantity", "classWalkingClient.html#ae6d6c046a9a3e51771afe8b4c105b412", null ],
     [ "readFootWrench", "classWalkingClient.html#a03ea2313c954a97aeb4d5b614f3e6caa", null ],

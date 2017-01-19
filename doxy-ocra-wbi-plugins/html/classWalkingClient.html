@@ -119,6 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae8f7dc629313df7d362e3edd6f45ae10">composePortName</a> (std::string portName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab4148804702e065310a903112bc10162">transformStdVectorToEigenVector</a> (std::vector&lt; Eigen::Vector2d &gt; &amp;fullTraj, int from, int Nc, VectorXd &amp;output)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a70b2375134ae55a041fbf30180ea3a8f">generateZMPStepTrajectoryTEST</a> (double feetSeparation, double period, double duration, double riseTime, double constantReferenceY)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">prepareAndsetDesiredCoMTaskState</a> (Eigen::VectorXd comState, bool doSet)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">yarp::os::BufferedPort<br class="typebreak"/>
@@ -247,7 +248,7 @@ Private Attributes</h2></td></tr>
 <p>Composes a port name with the client name as the suffix. This client name is assumed to be passed through command line options or configuration file as per the policies of yarp's Resource Finder.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">portName</td><td>Name of the port without backslashes. e.g. "zmpError:o"</td></tr>
+    <tr><td class="paramname">portName</td><td>Name of the port without backslashes. e.g. "zmpError:o" </td></tr>
   </table>
   </dd>
 </dl>
@@ -316,6 +317,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Generates a step-like zmp trajectory for testing/assessment purposes. This assumes a world reference frame with positive x axis pointing forward and positive z axis pointing up.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">feetSeparation</td><td>Separation between the feet. </td></tr>
+    <tr><td class="paramname">period</td><td><a class="el" href="classThread.html" title="The meat and potatoes of the controller server.">Thread</a> period in ms. </td></tr>
+    <tr><td class="paramname">duration</td><td>Duration of the trajectory in seconds. </td></tr>
+    <tr><td class="paramname">riseTime</td><td>Time in seconds at which the step should happen. </td></tr>
+    <tr><td class="paramname">constantReferenceY</td><td>Value of the </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Vector of horizontal ZMP positions. </dd></dl>
 
 </div>
 </div>
@@ -447,9 +460,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Only using the first input computed by the preview controller; This input must now be integrated (since it's just the optimal com jerk)</p>
-<p>Using the zmp cart model, the instantaneous zmp trajectory can now be computed. For this we'll pass the current com state hk and the integrated optimal com acceleration.</p>
-<p>Apply control The ZMP Controller is in charge of preparing the desired state</p>
+<p>Performs a zmpPreviewTest for assessing and tuning of its parameters. This test has been succesfully performed with the iCub platform on Gazebo using the following configuration set in walking-client.ini:</p>
+<p>| Parameter | Value | | ----------: | :-----| | Nc | 200 | | nw | 0.0 | | nb | 1.0 | | nu | 1e-6 |</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Trajectory type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a>. </dd></dl>
 
 </div>
 </div>
@@ -467,10 +486,46 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Performs one of three possible ZMP tests:</p>
+<p>Performs a zmp test for the specified type of trajectory.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>See ZmpTestType for possible options. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>To be deprecated as the zmp controller became unnecessary. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aad39a3836319f9b7258d8eb129776b47"></a><!-- doxytag: member="WalkingClient::prepareAndsetDesiredCoMTaskState" ref="aad39a3836319f9b7258d8eb129776b47" args="(Eigen::VectorXd comState, bool doSet)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">WalkingClient::prepareAndsetDesiredCoMTaskState</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramname"><em>comState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>doSet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Prepares an object of type ocra::TaskState with the com state passed to this method and when doSet is true, applies the control to the robot.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comState</td><td>6-dim CoM state vector (horizontal dynamics). </td></tr>
+    <tr><td class="paramname">doSet</td><td>True if the desired state is to be set. False otherwise. </td></tr>
   </table>
   </dd>
 </dl>
@@ -490,6 +545,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Prints a list of options accepted by the client. </p>
 
 </div>
 </div>
@@ -552,6 +608,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Reads the raw wrench published for the corresponding analog force/torque sensors in iCub's feet.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">whichFoot</td><td>For which foot is the measurement read. </td></tr>
+    <tr><td class="paramname">rawWrench</td><td>Result of the reading. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if reading is successful, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -607,6 +672,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Takes an std::Vector of ZMP trajectories at time \(k\) and outputs the ZMP samples from time \(k\) until \(k + N_c\)s, i.e. the ZMP preview window.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fullTraj</td><td>Vector of horizontal ZMP positions. </td></tr>
+    <tr><td class="paramname">from</td><td>Index in the vector corresponding to the current time instant. </td></tr>
+    <tr><td class="paramname">Nc</td><td>Length of the preview window. </td></tr>
+    <tr><td class="paramname">output</td><td>ZMP samples in the preview window. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1181,7 +1256,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classWalkingClient.html">WalkingClient</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 19 2017 12:14:31 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Jan 19 2017 23:18:03 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

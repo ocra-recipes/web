@@ -16,6 +16,7 @@ var searchData=
   ['portwrenchrightfoot',['portWrenchRightFoot',['../classWalkingClient.html#a96321dc60e84c193f2dea6e85983ca67',1,'WalkingClient']]],
   ['pos_5fcom',['pos_com',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#acc028d57a70c3b36838f28ea518f65c4',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['positioncomover',['positionCoMOver',['../classSteppingDemoClient.html#a18609e5634a283423c228106bb0e3a45',1,'SteppingDemoClient']]],
+  ['prepareandsetdesiredcomtaskstate',['prepareAndsetDesiredCoMTaskState',['../classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47',1,'WalkingClient']]],
   ['printalldata',['printAllData',['../classocra__icub_1_1OcraWbiModel.html#a309b3554c4eefda46c05b766476f40fb',1,'ocra_icub::OcraWbiModel']]],
   ['printhelp',['printHelp',['../classModule.html#a861f70d79b8f36dccf5daae182763bd8',1,'Module::printHelp()'],['../classStandingDemoClient.html#ae1f321428f6b67b2f8bf7e1e7a1cd3d4',1,'StandingDemoClient::printHelp()'],['../classWalkingClient.html#aff3fabef11d9c8b747a422f879c26067',1,'WalkingClient::printHelp()']]],
   ['publish3dquantity',['publish3dQuantity',['../classWalkingClient.html#ae6d6c046a9a3e51771afe8b4c105b412',1,'WalkingClient']]],

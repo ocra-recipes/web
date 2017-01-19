@@ -33,6 +33,8 @@ std\-::string \hyperlink{classWalkingClient_ae8f7dc629313df7d362e3edd6f45ae10}{c
 void \hyperlink{classWalkingClient_ab4148804702e065310a903112bc10162}{transform\-Std\-Vector\-To\-Eigen\-Vector} (std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \&full\-Traj, int from, int \-Nc, \-Vector\-Xd \&output)
 \item 
 std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \hyperlink{classWalkingClient_a70b2375134ae55a041fbf30180ea3a8f}{generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T} (double feet\-Separation, double period, double duration, double rise\-Time, double constant\-Reference\-Y)
+\item 
+void \hyperlink{classWalkingClient_aad39a3836319f9b7258d8eb129776b47}{prepare\-Andset\-Desired\-Co\-M\-Task\-State} (\-Eigen\-::\-Vector\-Xd com\-State, bool do\-Set)
 \end{DoxyCompactItemize}
 \subsection*{\-Public \-Attributes}
 \begin{DoxyCompactItemize}
@@ -179,7 +181,7 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em port\-Name} & \-Name of the port without backslashes. e.\-g. \char`\"{}zmp\-Error\-:o\char`\"{}\\
+{\em port\-Name} & \-Name of the port without backslashes. e.\-g. \char`\"{}zmp\-Error\-:o\char`\"{} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{\-Returns}
@@ -205,6 +207,24 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \item[{double}]{constant\-Reference\-Y}
 \end{DoxyParamCaption}
 )}}\label{classWalkingClient_a70b2375134ae55a041fbf30180ea3a8f}
+\-Generates a step-\/like zmp trajectory for testing/assessment purposes. \-This assumes a world reference frame with positive x axis pointing forward and positive z axis pointing up.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em feet\-Separation} & \-Separation between the feet. \\
+\hline
+{\em period} & \hyperlink{classThread}{\-Thread} period in ms. \\
+\hline
+{\em duration} & \-Duration of the trajectory in seconds. \\
+\hline
+{\em rise\-Time} & \-Time in seconds at which the step should happen. \\
+\hline
+{\em constant\-Reference\-Y} & \-Value of the \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Vector of horizontal \-Z\-M\-P positions. 
+\end{DoxyReturn}
 \hypertarget{classWalkingClient_a3185a8ede8bf8b1227f7dd540ba87e3c}{\index{\-Walking\-Client@{\-Walking\-Client}!generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T@{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T}}
 \index{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T@{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ {\bf \-Walking\-Client\-::generate\-Z\-M\-P\-Trajectory\-T\-E\-S\-T} (
@@ -272,22 +292,50 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \item[{{\bf \-Zmp\-Test\-Type}}]{type}
 \end{DoxyParamCaption}
 )}}\label{classWalkingClient_a3b1217b7fa17f76f162be0e12e419d96}
-\-Only using the first input computed by the preview controller; \-This input must now be integrated (since it's just the optimal com jerk)
+\-Performs a zmp\-Preview\-Test for assessing and tuning of its parameters. \-This test has been succesfully performed with the i\-Cub platform on \-Gazebo using the following configuration set in walking-\/client.\-ini\-:
 
-\-Using the zmp cart model, the instantaneous zmp trajectory can now be computed. \-For this we'll pass the current com state hk and the integrated optimal com acceleration.
+$|$ \-Parameter $|$ \-Value $|$ $|$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\-: $|$ \-:-\/-\/-\/-\/-\/$|$ $|$ \-Nc $|$ 200 $|$ $|$ nw $|$ 0.\-0 $|$ $|$ nb $|$ 1.\-0 $|$ $|$ nu $|$ 1e-\/6 $|$
 
-\-Apply control \-The \-Z\-M\-P \-Controller is in charge of preparing the desired state\hypertarget{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}}
+
+\begin{DoxyParams}{\-Parameters}
+{\em type} & \-Trajectory type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{WalkingClient_8h_afc01479a47f5a87462a54b6a9e11fffa}{\-Zmp\-Test\-Type}. 
+\end{DoxySeeAlso}
+\hypertarget{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}}
 \index{perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{perform\-Z\-M\-P\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::perform\-Z\-M\-P\-Test} (
 \begin{DoxyParamCaption}
 \item[{{\bf \-Zmp\-Test\-Type}}]{type}
 \end{DoxyParamCaption}
 )}}\label{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}
-\-Performs one of three possible \-Z\-M\-P tests\-:
+\-Performs a zmp test for the specified type of trajectory.
 
 
 \begin{DoxyParams}{\-Parameters}
 {\em type} & \-See \-Zmp\-Test\-Type for possible options. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-To be deprecated as the zmp controller became unnecessary. 
+\end{DoxyNote}
+\hypertarget{classWalkingClient_aad39a3836319f9b7258d8eb129776b47}{\index{\-Walking\-Client@{\-Walking\-Client}!prepare\-Andset\-Desired\-Co\-M\-Task\-State@{prepare\-Andset\-Desired\-Co\-M\-Task\-State}}
+\index{prepare\-Andset\-Desired\-Co\-M\-Task\-State@{prepare\-Andset\-Desired\-Co\-M\-Task\-State}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{prepare\-Andset\-Desired\-Co\-M\-Task\-State}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::prepare\-Andset\-Desired\-Co\-M\-Task\-State} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd}]{com\-State, }
+\item[{bool}]{do\-Set}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_aad39a3836319f9b7258d8eb129776b47}
+\-Prepares an object of type ocra\-::\-Task\-State with the com state passed to this method and when do\-Set is true, applies the control to the robot.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em com\-State} & 6-\/dim \-Co\-M state vector (horizontal dynamics). \\
+\hline
+{\em do\-Set} & \-True if the desired state is to be set. \-False otherwise. \\
 \hline
 \end{DoxyParams}
 \hypertarget{classWalkingClient_aff3fabef11d9c8b747a422f879c26067}{\index{\-Walking\-Client@{\-Walking\-Client}!print\-Help@{print\-Help}}
@@ -297,7 +345,7 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 {}
 \end{DoxyParamCaption}
 )}}\label{classWalkingClient_aff3fabef11d9c8b747a422f879c26067}
-\hypertarget{classWalkingClient_ae6d6c046a9a3e51771afe8b4c105b412}{\index{\-Walking\-Client@{\-Walking\-Client}!publish3d\-Quantity@{publish3d\-Quantity}}
+\-Prints a list of options accepted by the client. \hypertarget{classWalkingClient_ae6d6c046a9a3e51771afe8b4c105b412}{\index{\-Walking\-Client@{\-Walking\-Client}!publish3d\-Quantity@{publish3d\-Quantity}}
 \index{publish3d\-Quantity@{publish3d\-Quantity}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{publish3d\-Quantity}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Walking\-Client\-::publish3d\-Quantity} (
 \begin{DoxyParamCaption}
@@ -323,6 +371,18 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \item[{\-Eigen\-::\-Vector\-Xd \&}]{raw\-Wrench}
 \end{DoxyParamCaption}
 )}}\label{classWalkingClient_a03ea2313c954a97aeb4d5b614f3e6caa}
+\-Reads the raw wrench published for the corresponding analog force/torque sensors in i\-Cub's feet.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em which\-Foot} & \-For which foot is the measurement read. \\
+\hline
+{\em raw\-Wrench} & \-Result of the reading. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if reading is successful, false otherwise. 
+\end{DoxyReturn}
 \hypertarget{classWalkingClient_a3b36da9d7649865a13c9318dd73ebc7e}{\index{\-Walking\-Client@{\-Walking\-Client}!release@{release}}
 \index{release@{release}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::release} (
@@ -340,6 +400,19 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \item[{\-Vector\-Xd \&}]{output}
 \end{DoxyParamCaption}
 )}}\label{classWalkingClient_ab4148804702e065310a903112bc10162}
+\-Takes an std\-::\-Vector of \-Z\-M\-P trajectories at time $k$ and outputs the \-Z\-M\-P samples from time $k$ until $k + N_c$s, i.\-e. the \-Z\-M\-P preview window.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em full\-Traj} & \-Vector of horizontal \-Z\-M\-P positions. \\
+\hline
+{\em from} & \-Index in the vector corresponding to the current time instant. \\
+\hline
+{\em \-Nc} & \-Length of the preview window. \\
+\hline
+{\em output} & \-Z\-M\-P samples in the preview window. \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{\-Member \-Data \-Documentation}
