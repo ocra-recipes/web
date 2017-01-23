@@ -126,6 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#ad1322ec975c7d022feb24a40fff62f2e">buildNu</a> (const double <a class="el" href="classZmpPreviewController.html#ac611f084023404faba1ccfab573cd81d">nu</a>, const int <a class="el" href="classZmpPreviewController.html#af0c8b4aa92a6e3e95f80d81a8c91f693">Nc</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a96bed83f8441cfbd6d6fbff54c5b530d">buildNw</a> (const double <a class="el" href="classZmpPreviewController.html#a783427b817d77469e1f80426bede5310">nw</a>, const int <a class="el" href="classZmpPreviewController.html#af0c8b4aa92a6e3e95f80d81a8c91f693">Nc</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#ab4ab5756eb9faf991a12b405d116292f">buildNb</a> (const double <a class="el" href="classZmpPreviewController.html#a6716ee4c94e6f91e608ee1e29fbc7051">nb</a>, const int <a class="el" href="classZmpPreviewController.html#af0c8b4aa92a6e3e95f80d81a8c91f693">Nc</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a1f5bf084ce93391fbebd63e467d9adbc">computeFootZMP</a> (<a class="el" href="ZmpController_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> whichFoot, Eigen::VectorXd wrench, Eigen::Vector2d &amp;footZMP, Eigen::VectorXd &amp;wrenchInWorldRef, ocra::Model::Ptr model, const double tolerance=1e-3)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a46dfe0448f3f14927960a072dc42346d">computeGlobalZMPFromSensors</a> (Eigen::VectorXd rawLeftFootWrench, Eigen::VectorXd rawRightFootWrench, ocra::Model::Ptr model, Eigen::Vector2d &amp;globalZMP)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#aa4bbd8b205ae1d539620ec7d5f258d4a">getFTSensorAdjointMatrix</a> (<a class="el" href="ZmpController_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> whichFoot, Eigen::MatrixXd &amp;T, Eigen::Vector3d &amp;sensorPosition, ocra::Model::Ptr model)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZmpPreviewController.html#a3a317d26cc1bbaf8811491724fdd1def">cz</a></td></tr>
@@ -636,6 +639,126 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1f5bf084ce93391fbebd63e467d9adbc"></a><!-- doxytag: member="ZmpPreviewController::computeFootZMP" ref="a1f5bf084ce93391fbebd63e467d9adbc" args="(FOOT whichFoot, Eigen::VectorXd wrench, Eigen::Vector2d &amp;footZMP, Eigen::VectorXd &amp;wrenchInWorldRef, ocra::Model::Ptr model, const double tolerance=1e&#45;3)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classZmpPreviewController.html#a1f5bf084ce93391fbebd63e467d9adbc">ZmpPreviewController::computeFootZMP</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ZmpController_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a>&#160;</td>
+          <td class="paramname"><em>whichFoot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramname"><em>wrench</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>footZMP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>wrenchInWorldRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ocra::Model::Ptr&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>tolerance</em> = <code>1e-3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Computes the ZMP for a single foot in world reference frame.</p>
+<p>Assuming that \(\mathbf{p}\) is the position of the ZMP for a single foot, \(\mathbf{p}_s\) the position of a force torque (F/T) sensor at the foot, the ZMP position can be computed as: </p>
+<p class="formulaDsp">
+\[ \left[\begin{array}{c}p_x \\ p_y \end{array}\right] = \frac{1}{f_z} \left[\begin{array}{cccccc} -p_{s_z} &amp; 0 &amp; p_{s_x} &amp; 0 &amp; -1 &amp; 0 \\ 0 &amp; -p_{s_z} &amp; p_{s_y} &amp; 1 &amp; 0 &amp; 0 \end{array}\right] \left[\begin{array}{c} \mathbf{f}\\ \mathbf{\tau} \end{array}\right] \]
+</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">whichFoot</td><td>LEFT_FOOT or RIGHT_FOOT. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">wrench</td><td>External wrench on the foot as read by the F/T sensors. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">footZMP</td><td>Foot ZMP in world reference frame. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">wrenchInWorldRef</td><td>Transformed wrench in world reference frame. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">tolerance</td><td>Tolerance value below which the ZMP is considered null. <a class="el" href="citelist.html#CITEREF_Kajita2014Intro">Kajita2014Intro</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if all operations proceed successfully. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a46dfe0448f3f14927960a072dc42346d"></a><!-- doxytag: member="ZmpPreviewController::computeGlobalZMPFromSensors" ref="a46dfe0448f3f14927960a072dc42346d" args="(Eigen::VectorXd rawLeftFootWrench, Eigen::VectorXd rawRightFootWrench, ocra::Model::Ptr model, Eigen::Vector2d &amp;globalZMP)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classZmpPreviewController.html#a46dfe0448f3f14927960a072dc42346d">ZmpPreviewController::computeGlobalZMPFromSensors</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramname"><em>rawLeftFootWrench</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramname"><em>rawRightFootWrench</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ocra::Model::Ptr&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>globalZMP</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Computes the global ZMP for two feet in contact.</p>
+<p>After obtaining the ZMP position for both feet \(\mathbf{p}_R\) and \(\mathbf{p}_L\) independently and expressed in the world reference frame, in the case where both feet are in contact with the ground (or just one), the global expression of the ZMP \(\mathbf{p}\) expressed in the world reference frame is: </p>
+<p class="formulaDsp">
+\[ \left[\begin{array}{c} p_x\\ p_y \end{array}\right] = \frac{1}{f_{R_z} + f_{L_z}} \left[\begin{array}{cc} \mathbf{p}_R &amp; \mathbf{p}_L \end{array}\right] \left[\begin{array}{c} f_{R_z}\\ f_{L_z} \end{array}\right] \]
+</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rawLeftFootWrench</td><td>Raw left foot wrench as read from the sensors [force | torque] </td></tr>
+    <tr><td class="paramname">rawRightFootWrench</td><td>Raw right foot wrench as read from the sensors. </td></tr>
+    <tr><td class="paramname">globalZMP</td><td>Global zmp in world reference frame considering both feet. @ <a class="el" href="citelist.html#CITEREF_Kajita2014Intro">Kajita2014Intro</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if all operations succeed, false otherwise. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aabdafde9ecc41a6d98134e0a01083d8a"></a><!-- doxytag: member="ZmpPreviewController::computeOptimalInput" ref="aabdafde9ecc41a6d98134e0a01083d8a" args="(const Eigen::MatrixBase&lt; Derived &gt; &amp;zmpRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;comVelRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;hk, Eigen::MatrixBase&lt; Derived &gt; &amp;optimalU)" -->
 <div class="memitem">
 <div class="memproto">
@@ -689,6 +812,53 @@ template&lt;typename Derived &gt; </div>
   </dd>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a2afe60ed4923414ce4e51a8a7a584fde">ZmpPreviewController::AOptimal</a>, <a class="el" href="classZmpPreviewController.html#a049829dccbeb5a7a1bf47f7e6679174a">ZmpPreviewController::bOptimal</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa4bbd8b205ae1d539620ec7d5f258d4a"></a><!-- doxytag: member="ZmpPreviewController::getFTSensorAdjointMatrix" ref="aa4bbd8b205ae1d539620ec7d5f258d4a" args="(FOOT whichFoot, Eigen::MatrixXd &amp;T, Eigen::Vector3d &amp;sensorPosition, ocra::Model::Ptr model)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classZmpPreviewController.html#aa4bbd8b205ae1d539620ec7d5f258d4a">ZmpPreviewController::getFTSensorAdjointMatrix</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ZmpController_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a>&#160;</td>
+          <td class="paramname"><em>whichFoot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>T</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>sensorPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ocra::Model::Ptr&#160;</td>
+          <td class="paramname"><em>model</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Retrieves the FT sensor adjoint matrix expressed in the world reference frame which multiplied by the local measurement of the sensor gives you the measurement in the world reference.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">whichFoot</td><td>LEFT_FOOT or RIGHT_FOOT </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">T</td><td>Adjoint matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1157,7 +1327,7 @@ template&lt;typename Derived &gt; </div>
     <ul>
       <li class="navelem"><a class="el" href="classZmpPreviewController.html">ZmpPreviewController</a>      </li>
 
-    <li class="footer">Generated on Sun Jan 22 2017 23:20:04 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Jan 23 2017 23:19:58 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

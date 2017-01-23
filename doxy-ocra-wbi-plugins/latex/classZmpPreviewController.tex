@@ -48,6 +48,12 @@ void \hyperlink{classZmpPreviewController_a7fa5d122b80650cdd9869b666e1ad597}{tab
 \-Eigen\-::\-Matrix\-Xd \hyperlink{classZmpPreviewController_a96bed83f8441cfbd6d6fbff54c5b530d}{build\-Nw} (const double \hyperlink{classZmpPreviewController_a783427b817d77469e1f80426bede5310}{nw}, const int \hyperlink{classZmpPreviewController_af0c8b4aa92a6e3e95f80d81a8c91f693}{\-Nc})
 \item 
 \-Eigen\-::\-Matrix\-Xd \hyperlink{classZmpPreviewController_ab4ab5756eb9faf991a12b405d116292f}{build\-Nb} (const double \hyperlink{classZmpPreviewController_a6716ee4c94e6f91e608ee1e29fbc7051}{nb}, const int \hyperlink{classZmpPreviewController_af0c8b4aa92a6e3e95f80d81a8c91f693}{\-Nc})
+\item 
+bool \hyperlink{classZmpPreviewController_a1f5bf084ce93391fbebd63e467d9adbc}{compute\-Foot\-Z\-M\-P} (\hyperlink{ZmpController_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} which\-Foot, \-Eigen\-::\-Vector\-Xd wrench, \-Eigen\-::\-Vector2d \&foot\-Z\-M\-P, \-Eigen\-::\-Vector\-Xd \&wrench\-In\-World\-Ref, ocra\-::\-Model\-::\-Ptr model, const double tolerance=1e-\/3)
+\item 
+bool \hyperlink{classZmpPreviewController_a46dfe0448f3f14927960a072dc42346d}{compute\-Global\-Z\-M\-P\-From\-Sensors} (\-Eigen\-::\-Vector\-Xd raw\-Left\-Foot\-Wrench, \-Eigen\-::\-Vector\-Xd raw\-Right\-Foot\-Wrench, ocra\-::\-Model\-::\-Ptr model, \-Eigen\-::\-Vector2d \&global\-Z\-M\-P)
+\item 
+void \hyperlink{classZmpPreviewController_aa4bbd8b205ae1d539620ec7d5f258d4a}{get\-F\-T\-Sensor\-Adjoint\-Matrix} (\hyperlink{ZmpController_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} which\-Foot, \-Eigen\-::\-Matrix\-Xd \&\-T, \-Eigen\-::\-Vector3d \&sensor\-Position, ocra\-::\-Model\-::\-Ptr model)
 \end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
@@ -410,6 +416,64 @@ $N_w$
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{classZmpPreviewController_a5e85354a1a7c3f2a8e265dbe7367051c}{\-Zmp\-Preview\-Controller\-::\-Nw} 
 \end{DoxySeeAlso}
+\hypertarget{classZmpPreviewController_a1f5bf084ce93391fbebd63e467d9adbc}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!compute\-Foot\-Z\-M\-P@{compute\-Foot\-Z\-M\-P}}
+\index{compute\-Foot\-Z\-M\-P@{compute\-Foot\-Z\-M\-P}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
+\subsubsection[{compute\-Foot\-Z\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Zmp\-Preview\-Controller\-::compute\-Foot\-Z\-M\-P} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{which\-Foot, }
+\item[{\-Eigen\-::\-Vector\-Xd}]{wrench, }
+\item[{\-Eigen\-::\-Vector2d \&}]{foot\-Z\-M\-P, }
+\item[{\-Eigen\-::\-Vector\-Xd \&}]{wrench\-In\-World\-Ref, }
+\item[{ocra\-::\-Model\-::\-Ptr}]{model, }
+\item[{const double}]{tolerance = {\ttfamily 1e-\/3}}
+\end{DoxyParamCaption}
+)}}\label{classZmpPreviewController_a1f5bf084ce93391fbebd63e467d9adbc}
+\-Computes the \-Z\-M\-P for a single foot in world reference frame.
+
+\-Assuming that $\mathbf{p}$ is the position of the \-Z\-M\-P for a single foot, $\mathbf{p}_s$ the position of a force torque (\-F/\-T) sensor at the foot, the \-Z\-M\-P position can be computed as\-: \[ \left[\begin{array}{c}p_x \\ p_y \end{array}\right] = \frac{1}{f_z} \left[\begin{array}{cccccc} -p_{s_z} & 0 & p_{s_x} & 0 & -1 & 0 \\ 0 & -p_{s_z} & p_{s_y} & 1 & 0 & 0 \end{array}\right] \left[\begin{array}{c} \mathbf{f}\\ \mathbf{\tau} \end{array}\right] \]
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+ & {\em which\-Foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T. \\
+\hline
+ & {\em wrench} & \-External wrench on the foot as read by the \-F/\-T sensors. \\
+\hline
+\mbox{\tt out}  & {\em foot\-Z\-M\-P} & \-Foot \-Z\-M\-P in world reference frame. \\
+\hline
+\mbox{\tt out}  & {\em wrench\-In\-World\-Ref} & \-Transformed wrench in world reference frame. \\
+\hline
+ & {\em tolerance} & \-Tolerance value below which the \-Z\-M\-P is considered null. \cite{Kajita2014Intro}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if all operations proceed successfully. 
+\end{DoxyReturn}
+\hypertarget{classZmpPreviewController_a46dfe0448f3f14927960a072dc42346d}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!compute\-Global\-Z\-M\-P\-From\-Sensors@{compute\-Global\-Z\-M\-P\-From\-Sensors}}
+\index{compute\-Global\-Z\-M\-P\-From\-Sensors@{compute\-Global\-Z\-M\-P\-From\-Sensors}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
+\subsubsection[{compute\-Global\-Z\-M\-P\-From\-Sensors}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Zmp\-Preview\-Controller\-::compute\-Global\-Z\-M\-P\-From\-Sensors} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd}]{raw\-Left\-Foot\-Wrench, }
+\item[{\-Eigen\-::\-Vector\-Xd}]{raw\-Right\-Foot\-Wrench, }
+\item[{ocra\-::\-Model\-::\-Ptr}]{model, }
+\item[{\-Eigen\-::\-Vector2d \&}]{global\-Z\-M\-P}
+\end{DoxyParamCaption}
+)}}\label{classZmpPreviewController_a46dfe0448f3f14927960a072dc42346d}
+\-Computes the global \-Z\-M\-P for two feet in contact.
+
+\-After obtaining the \-Z\-M\-P position for both feet $\mathbf{p}_R$ and $\mathbf{p}_L$ independently and expressed in the world reference frame, in the case where both feet are in contact with the ground (or just one), the global expression of the \-Z\-M\-P $\mathbf{p}$ expressed in the world reference frame is\-: \[ \left[\begin{array}{c} p_x\\ p_y \end{array}\right] = \frac{1}{f_{R_z} + f_{L_z}} \left[\begin{array}{cc} \mathbf{p}_R & \mathbf{p}_L \end{array}\right] \left[\begin{array}{c} f_{R_z}\\ f_{L_z} \end{array}\right] \]
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em raw\-Left\-Foot\-Wrench} & \-Raw left foot wrench as read from the sensors \mbox{[}force $|$ torque\mbox{]} \\
+\hline
+{\em raw\-Right\-Foot\-Wrench} & \-Raw right foot wrench as read from the sensors. \\
+\hline
+{\em global\-Z\-M\-P} & \-Global zmp in world reference frame considering both feet. @ \cite{Kajita2014Intro}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if all operations succeed, false otherwise. 
+\end{DoxyReturn}
 \hypertarget{classZmpPreviewController_aabdafde9ecc41a6d98134e0a01083d8a}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!compute\-Optimal\-Input@{compute\-Optimal\-Input}}
 \index{compute\-Optimal\-Input@{compute\-Optimal\-Input}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{compute\-Optimal\-Input}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Derived $>$ void {\bf \-Zmp\-Preview\-Controller\-::compute\-Optimal\-Input} (
@@ -438,6 +502,25 @@ $N_w$
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{classZmpPreviewController_a2afe60ed4923414ce4e51a8a7a584fde}{\-Zmp\-Preview\-Controller\-::\-A\-Optimal}, \hyperlink{classZmpPreviewController_a049829dccbeb5a7a1bf47f7e6679174a}{\-Zmp\-Preview\-Controller\-::b\-Optimal} 
 \end{DoxySeeAlso}
+\hypertarget{classZmpPreviewController_aa4bbd8b205ae1d539620ec7d5f258d4a}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!get\-F\-T\-Sensor\-Adjoint\-Matrix@{get\-F\-T\-Sensor\-Adjoint\-Matrix}}
+\index{get\-F\-T\-Sensor\-Adjoint\-Matrix@{get\-F\-T\-Sensor\-Adjoint\-Matrix}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
+\subsubsection[{get\-F\-T\-Sensor\-Adjoint\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Zmp\-Preview\-Controller\-::get\-F\-T\-Sensor\-Adjoint\-Matrix} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{which\-Foot, }
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{\-T, }
+\item[{\-Eigen\-::\-Vector3d \&}]{sensor\-Position, }
+\item[{ocra\-::\-Model\-::\-Ptr}]{model}
+\end{DoxyParamCaption}
+)}}\label{classZmpPreviewController_aa4bbd8b205ae1d539620ec7d5f258d4a}
+\-Retrieves the \-F\-T sensor adjoint matrix expressed in the world reference frame which multiplied by the local measurement of the sensor gives you the measurement in the world reference.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+ & {\em which\-Foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T \\
+\hline
+\mbox{\tt out}  & {\em \-T} & \-Adjoint matrix. \\
+\hline
+\end{DoxyParams}
 \hypertarget{classZmpPreviewController_ac28287e01187bff2cea5a68292d936bd}{\index{\-Zmp\-Preview\-Controller@{\-Zmp\-Preview\-Controller}!initialize@{initialize}}
 \index{initialize@{initialize}!ZmpPreviewController@{\-Zmp\-Preview\-Controller}}
 \subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Zmp\-Preview\-Controller\-::initialize} (

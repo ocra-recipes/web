@@ -18,7 +18,7 @@ var files =
     [ "ocra-wbi-plugins/ocra-icub-clients/task-operations-demo/src/TaskOpsClient.cpp", "TaskOpsClient_8cpp.html", null ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h", "WalkingClient_8h.html", "WalkingClient_8h" ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpController.h", "ZmpController_8h.html", "ZmpController_8h" ],
-    [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h", "ZmpPreviewController_8h.html", null ],
+    [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h", "ZmpPreviewController_8h.html", "ZmpPreviewController_8h" ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/src/main.cpp", "ocra-icub-clients_2walking-client_2src_2main_8cpp.html", "ocra-icub-clients_2walking-client_2src_2main_8cpp" ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/src/WalkingClient.cpp", "WalkingClient_8cpp.html", null ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/src/ZmpController.cpp", "ZmpController_8cpp.html", null ],

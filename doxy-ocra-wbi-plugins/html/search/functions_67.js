@@ -17,7 +17,7 @@ var searchData=
   ['getfeetseparation',['getFeetSeparation',['../classWalkingClient.html#a87e70046251149b4b7aff1dc57b3dcc4',1,'WalkingClient']]],
   ['getfreeflyerposition',['getFreeFlyerPosition',['../classocra__icub_1_1OcraWbiModel.html#a3e9c4db6d1ee56984fea44cdd592a1ac',1,'ocra_icub::OcraWbiModel']]],
   ['getfreeflyervelocity',['getFreeFlyerVelocity',['../classocra__icub_1_1OcraWbiModel.html#a9fbfa4c9da43f0b1957f25d8ecb792d9',1,'ocra_icub::OcraWbiModel']]],
-  ['getftsensoradjointmatrix',['getFTSensorAdjointMatrix',['../classZmpController.html#aad272bd33de6fad489ea99618a7e9afa',1,'ZmpController']]],
+  ['getftsensoradjointmatrix',['getFTSensorAdjointMatrix',['../classZmpController.html#aad272bd33de6fad489ea99618a7e9afa',1,'ZmpController::getFTSensorAdjointMatrix()'],['../classZmpPreviewController.html#aa4bbd8b205ae1d539620ec7d5f258d4a',1,'ZmpPreviewController::getFTSensorAdjointMatrix()']]],
   ['getgravityterms',['getGravityTerms',['../classocra__icub_1_1OcraWbiModel.html#a57742157dce7e3526a388be7d11321d3',1,'ocra_icub::OcraWbiModel']]],
   ['gethomeposture',['getHomePosture',['../namespaceocra__icub.html#a91c3caf94014ea9988e56dd2572768ce',1,'ocra_icub::getHomePosture()'],['../Utilities_8cpp.html#aeeff320b9cc14a9a7cf72fcfbdada2f6',1,'getHomePosture():&#160;Utilities.cpp']]],
   ['getinertiamatrix',['getInertiaMatrix',['../classocra__icub_1_1OcraWbiModel.html#a49df5e4d811b660c72b35b6d822bb529',1,'ocra_icub::OcraWbiModel']]],
