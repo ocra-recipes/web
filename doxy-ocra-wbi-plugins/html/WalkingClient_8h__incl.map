@@ -1,8 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$IcubClient_8h.html" title="ocra&#45;icub/IcubClient.h" alt="" coords="992,83,1141,112"/>
-<area shape="rect" id="node93" href="$ZmpPreviewController_8h.html" title="walking&#45;client/ZmpPreviewController.h" alt="" coords="1429,315,1675,344"/>
-<area shape="rect" id="node5" href="$ModelInitializer_8h.html" title="ocra&#45;icub/ModelInitializer.h" alt="" coords="285,160,461,189"/>
-<area shape="rect" id="node7" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="784,237,960,267"/>
-<area shape="rect" id="node17" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="960,315,1173,344"/>
-<area shape="rect" id="node31" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1381,392,1515,421"/>
+<area shape="rect" id="node3" href="$IcubClient_8h.html" title="ocra&#45;icub/IcubClient.h" alt="" coords="1496,83,1645,112"/>
+<area shape="rect" id="node93" href="$ZmpPreviewController_8h.html" title="walking&#45;client/ZmpPreviewController.h" alt="" coords="2761,83,3007,112"/>
+<area shape="rect" id="node100" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="2980,160,3119,189"/>
+<area shape="rect" id="node102" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="3095,83,3292,112"/>
+<area shape="rect" id="node5" href="$ModelInitializer_8h.html" title="ocra&#45;icub/ModelInitializer.h" alt="" coords="389,160,565,189"/>
+<area shape="rect" id="node7" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="692,237,868,267"/>
+<area shape="rect" id="node17" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="1608,315,1821,344"/>
+<area shape="rect" id="node31" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1648,392,1781,421"/>
 </map>

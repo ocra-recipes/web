@@ -6,5 +6,6 @@ var searchData=
   ['useminjerk',['useMinJerk',['../classStandingDemoClient.html#a47132d5336d2e3b02085d2f153db6385',1,'StandingDemoClient']]],
   ['useodometry',['useOdometry',['../classIcubControllerServer.html#adc410f503b14ed288c01e877ac405114',1,'IcubControllerServer::useOdometry()'],['../classOcraControllerOptions.html#a335f09b446b6d10e2a8e6eb453391d9e',1,'OcraControllerOptions::useOdometry()']]],
   ['utilities_2ecpp',['Utilities.cpp',['../Utilities_8cpp.html',1,'']]],
-  ['utilities_2eh',['Utilities.h',['../Utilities_8h.html',1,'']]]
+  ['utilities_2eh',['Utilities.h',['../Utilities_8h.html',1,'']]],
+  ['utils_2eh',['utils.h',['../utils_8h.html',1,'']]]
 ];

@@ -2,6 +2,7 @@ var searchData=
 [
   ['dangerperiodlooptime',['dangerPeriodLoopTime',['../classModule.html#a33fee1e7f977b4f27a2e1488480996fb',1,'Module']]],
   ['ddq',['ddq',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a08e61e2559239017a2dcbf99f5777d50',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['deactivatefeetcontacts',['deactivateFeetContacts',['../classStepController.html#ada72856c76030cc22ebb18f368f829f1',1,'StepController']]],
   ['deactivatefootcontacts',['deactivateFootContacts',['../classSteppingDemoClient.html#a62b5028bdc99de117cfffc576478a0f1',1,'SteppingDemoClient']]],
   ['deactivatelegcontacts',['deactivateLegContacts',['../classStandingDemoClient.html#a6a16f7c8b66d49c6fc63f75ce8eaaf0b',1,'StandingDemoClient']]],
   ['debuggingalljoints',['debuggingAllJoints',['../classThread.html#aba345996b91a57d9e1f2dd15c7c75e08',1,'Thread']]],
@@ -21,6 +22,7 @@ var searchData=
   ['dj_5fcom_5frm',['DJ_com_rm',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a864b4ce170b3526fba0f7e832bfbb2d8',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['djdq',['DJDq',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#accd197872291c3e90272b8ebd87cefc8',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['djroot',['dJroot',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#afaba1181f7d08272208e372e2e23106c',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['docomputemidpoint',['doComputeMidPoint',['../classStepController.html#a16b1f62737f1287b7f33b216871d1ba8',1,'StepController']]],
   ['dodofname',['doDofName',['../classocra__icub_1_1OcraWbiModel.html#a3c6be0fe7bb4f205f9fd6a44bb275fc2',1,'ocra_icub::OcraWbiModel']]],
   ['dogetdofindex',['doGetDofIndex',['../classocra__icub_1_1OcraWbiModel.html#a88842af1291a413848fc500554b12a36',1,'ocra_icub::OcraWbiModel']]],
   ['dogetdofname',['doGetDofName',['../classocra__icub_1_1OcraWbiModel.html#ac4ba9f8c3964d3f043543c8196fee185',1,'ocra_icub::OcraWbiModel']]],
@@ -33,6 +35,7 @@ var searchData=
   ['dosetjointpositions',['doSetJointPositions',['../classocra__icub_1_1OcraWbiModel.html#a64d40044dff11a6302992d52f1dbde0d',1,'ocra_icub::OcraWbiModel']]],
   ['dosetjointvelocities',['doSetJointVelocities',['../classocra__icub_1_1OcraWbiModel.html#a26a758c5ecb02601c066bdfffe5db194',1,'ocra_icub::OcraWbiModel']]],
   ['dosetstate',['doSetState',['../classocra__icub_1_1OcraWbiModel.html#a8639b19a514624953e5e58dbde1c8227',1,'ocra_icub::OcraWbiModel::doSetState(const Eigen::VectorXd &amp;q, const Eigen::VectorXd &amp;q_dot)'],['../classocra__icub_1_1OcraWbiModel.html#a411c844cbde565ed54a224e39a2e65c1',1,'ocra_icub::OcraWbiModel::doSetState(const Eigen::Displacementd &amp;H_root, const Eigen::VectorXd &amp;q, const Eigen::Twistd &amp;T_root, const Eigen::VectorXd &amp;q_dot)']]],
+  ['dostepwithmaxvelocity',['doStepWithMaxVelocity',['../classStepController.html#a1bfcb66d504440f0cc7383ad688dad5c',1,'StepController']]],
   ['dq',['dq',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6584a086fe050dab90cd4f0a0e7e970d',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['dt',['dt',['../classZmpPreviewController.html#abf1a3ec8d1698afab1c20bba32b5a724',1,'ZmpPreviewController']]]
 ];

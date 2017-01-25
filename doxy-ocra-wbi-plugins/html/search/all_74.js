@@ -1,6 +1,7 @@
 var searchData=
 [
   ['tablecartmodel',['tableCartModel',['../classZmpPreviewController.html#a7d559ce7ece62627b58f20cd01c9ce30',1,'ZmpPreviewController::tableCartModel(Eigen::Vector2d hk, Eigen::VectorXd ddhk, Eigen::Vector2d &amp;p)'],['../classZmpPreviewController.html#a7fa5d122b80650cdd9869b666e1ad597',1,'ZmpPreviewController::tableCartModel(Eigen::VectorXd hkk, Eigen::Vector2d &amp;p)']]],
+  ['target',['target',['../classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d',1,'StepController']]],
   ['task_2doperations_2ddemo_2ecpp',['task-operations-demo.cpp',['../task-operations-demo_8cpp.html',1,'']]],
   ['taskopsclient',['TaskOpsClient',['../classTaskOpsClient.html',1,'TaskOpsClient'],['../classTaskOpsClient.html#a6d3842de3255a78526ced7953428452c',1,'TaskOpsClient::TaskOpsClient()']]],
   ['taskopsclient_2ecpp',['TaskOpsClient.cpp',['../TaskOpsClient_8cpp.html',1,'']]],
@@ -18,6 +19,7 @@ var searchData=
   ['torque_5fmin',['TORQUE_MIN',['../classThread.html#ad44e5fbda8070c252ea71823a4b9a6db',1,'Thread']]],
   ['torques',['torques',['../classThread.html#a3238993799b36af06f3858a3f65dcf1e',1,'Thread']]],
   ['total_5fmass',['total_mass',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a992e0b522d3e3b9206f90dbcdd4727cf',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['totalduration',['totalDuration',['../structsingleStepTestParams.html#a64dfd6827254af3491d5ef777a365106',1,'singleStepTestParams']]],
   ['trans_5frot_5fdim',['TRANS_ROT_DIM',['../OcraWbiModel_8cpp.html#ab4a87cb824ceff256c6b8bce7701af58',1,'OcraWbiModel.cpp']]],
   ['transformstdvectortoeigenvector',['transformStdVectorToEigenVector',['../classWalkingClient.html#ab4148804702e065310a903112bc10162',1,'WalkingClient']]],
   ['trigger',['trigger',['../classExampleClient.html#a90ce0c4d970c903b3e6afb6f5ca2a228',1,'ExampleClient']]],

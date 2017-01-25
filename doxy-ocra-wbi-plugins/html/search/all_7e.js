@@ -8,6 +8,7 @@ var searchData=
   ['_7eocrawbimodel',['~OcraWbiModel',['../classocra__icub_1_1OcraWbiModel.html#ade110b2e003ccd49d2baa4f56a954e4b',1,'ocra_icub::OcraWbiModel']]],
   ['_7esittingdemoclient',['~SittingDemoClient',['../classSittingDemoClient.html#a0fb7ded5e44b2b60d7f89c22386154b7',1,'SittingDemoClient']]],
   ['_7estandingdemoclient',['~StandingDemoClient',['../classStandingDemoClient.html#a36afdcb86f9e304c53f9903d6b286dd7',1,'StandingDemoClient']]],
+  ['_7estepcontroller',['~StepController',['../classStepController.html#ae2033c937309c104539b6758346529d5',1,'StepController']]],
   ['_7esteppingdemoclient',['~SteppingDemoClient',['../classSteppingDemoClient.html#a573eed904c7262c5cdbaf6e254d72559',1,'SteppingDemoClient']]],
   ['_7etaskopsclient',['~TaskOpsClient',['../classTaskOpsClient.html#a80a5c71dd04ab7a07d4ffb8116244cdd',1,'TaskOpsClient']]],
   ['_7ethread',['~Thread',['../classThread.html#a37d9edd3a1a776cbc27dedff949c9726',1,'Thread']]],

@@ -7,6 +7,7 @@ var searchData=
   ['computeh',['computeh',['../classZmpController.html#a3e275de73186b889c755e6dc618d29bf',1,'ZmpController']]],
   ['computehd',['computehd',['../classZmpController.html#a5eab881a51fb2ace1a1d494171353bc7',1,'ZmpController']]],
   ['computehdd',['computehdd',['../classZmpController.html#aa450c67048a44fe0dfadf07cd30165e7',1,'ZmpController']]],
+  ['computemidpoint',['computeMidPoint',['../classStepController.html#a0dcf2ec0d0fdf1fd9d86878fffd4e5ad',1,'StepController']]],
   ['computeoptimalinput',['computeOptimalInput',['../classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a',1,'ZmpPreviewController']]],
   ['computetorque',['computeTorque',['../README_8md.html#ae8b57eb96384b7265d50bd361b6e1a3e',1,'README.md']]],
   ['configure',['configure',['../classModule.html#a1f18c762538086e1304ea18e00e51abb',1,'Module::configure()'],['../classStandingDemoClient.html#a9cca697399c183d9e2e5fe5b45dbc815',1,'StandingDemoClient::configure()'],['../classWalkingClient.html#adb8f972f34cb39c69c02a7c3cb493b81',1,'WalkingClient::configure()']]],

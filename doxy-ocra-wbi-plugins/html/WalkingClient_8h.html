@@ -91,8 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h File Reference</div>  </div>
 </div><!--header-->
@@ -102,12 +101,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;ocra-recipes/ControllerClient.h&gt;</code><br/>
 <code>#include &lt;ocra/util/EigenUtilities.h&gt;</code><br/>
 <code>#include &quot;<a class="el" href="ZmpPreviewController_8h_source.html">walking-client/ZmpPreviewController.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="StepController_8h_source.html">walking-client/StepController.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="utils_8h_source.html">walking-client/utils.h</a>&quot;</code><br/>
 <code>#include &lt;ocra/util/FileOperations.h&gt;</code><br/>
 <code>#include &lt;yarp/os/Time.h&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for WalkingClient.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="WalkingClient_8h__incl.svg" width="3542" height="504"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="WalkingClient_8h__incl.svg" width="3996" height="504"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -120,38 +122,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html">WalkingClient</a></td></tr>
-<tr><td colspan="2"><h2><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> { <a class="el" href="WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffaa648ff770c850b8352c3306c1659e8157">ZMP_CONSTANT_REFERENCE</a> = 0, 
-<a class="el" href="WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffaa97cb99b5fec95c1f2945d3b33455b139">ZMP_VARYING_REFERENCE</a>, 
-<a class="el" href="WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffaad20e2ca429f4e3ba50e1de174c92af60">COM_LIN_VEL_CONSTANT_REFERENCE</a>
- }</td></tr>
 </table>
-<hr/><h2>Enumeration Type Documentation</h2>
-<a class="anchor" id="afc01479a47f5a87462a54b6a9e11fffa"></a><!-- doxytag: member="WalkingClient.h::ZmpTestType" ref="afc01479a47f5a87462a54b6a9e11fffa" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="WalkingClient_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Performs tests helpful to tune the gains used by the zmp and zmp preview controllers as well as the COM task. See configure() for additional information. </p>
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="afc01479a47f5a87462a54b6a9e11fffaa648ff770c850b8352c3306c1659e8157"></a><!-- doxytag: member="ZMP_CONSTANT_REFERENCE" ref="afc01479a47f5a87462a54b6a9e11fffaa648ff770c850b8352c3306c1659e8157" args="" -->ZMP_CONSTANT_REFERENCE</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="afc01479a47f5a87462a54b6a9e11fffaa97cb99b5fec95c1f2945d3b33455b139"></a><!-- doxytag: member="ZMP_VARYING_REFERENCE" ref="afc01479a47f5a87462a54b6a9e11fffaa97cb99b5fec95c1f2945d3b33455b139" args="" -->ZMP_VARYING_REFERENCE</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="afc01479a47f5a87462a54b6a9e11fffaad20e2ca429f4e3ba50e1de174c92af60"></a><!-- doxytag: member="COM_LIN_VEL_CONSTANT_REFERENCE" ref="afc01479a47f5a87462a54b6a9e11fffaad20e2ca429f4e3ba50e1de174c92af60" args="" -->COM_LIN_VEL_CONSTANT_REFERENCE</em>&nbsp;</td><td>
-</td></tr>
-</table>
-</dd>
-</dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -172,7 +143,7 @@ Enumerations</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="WalkingClient_8h.html">WalkingClient.h</a>      </li>
 
-    <li class="footer">Generated on Tue Jan 24 2017 23:20:59 for ocra-wbi-plugins by
+    <li class="footer">Generated on Wed Jan 25 2017 23:21:28 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

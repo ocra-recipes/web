@@ -1,6 +1,7 @@
 var searchData=
 [
   ['acc_5fcom',['acc_com',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#ac7d61b2e1fff0ce7f15a472c6785f640',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['activatefeetcontacts',['activateFeetContacts',['../classStepController.html#a6184693a199603c945250a58ceb8d9a2',1,'StepController']]],
   ['activatefootcontacts',['activateFootContacts',['../classSteppingDemoClient.html#abf583698c8c03620516acf3ec6eb9e41',1,'SteppingDemoClient']]],
   ['actuateddofs',['actuatedDofs',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#aca1e7991e3aa3941dfb08b58b4f8e82c',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['add_5fexisting_5ftask',['ADD_EXISTING_TASK',['../TaskOpsClient_8h.html#a0140057ae3fbe1db5f5c418dfc67d9dba8ffc9eba853106ab798ee2a0c5763d1b',1,'TaskOpsClient.h']]],

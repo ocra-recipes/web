@@ -1,0 +1,258 @@
+\hypertarget{classStepController}{\section{\-Step\-Controller \-Class \-Reference}
+\label{classStepController}\index{\-Step\-Controller@{\-Step\-Controller}}
+}
+
+
+{\ttfamily \#include $<$\-Step\-Controller.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStepController_a80b7436dcb5c1d4a3e04f805b8f8f32a}{\-Step\-Controller} (int periodms, ocra\-::\-Model\-::\-Ptr model)
+\item 
+virtual \hyperlink{classStepController_ae2033c937309c104539b6758346529d5}{$\sim$\-Step\-Controller} ()
+\item 
+bool \hyperlink{classStepController_a8f061f201c651d920ca02f7daa07adfe}{initialize} ()
+\item 
+void \hyperlink{classStepController_ada72856c76030cc22ebb18f368f829f1}{deactivate\-Feet\-Contacts} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot)
+\item 
+void \hyperlink{classStepController_a6184693a199603c945250a58ceb8d9a2}{activate\-Feet\-Contacts} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot)
+\item 
+bool \hyperlink{classStepController_a1bfcb66d504440f0cc7383ad688dad5c}{do\-Step\-With\-Max\-Velocity} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot, \-Eigen\-::\-Vector3d \hyperlink{classStepController_a588d5b149eb4a6877e89ecff37d0f91d}{target}, double step\-Height)
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classStepController_aa168e028dc086859400e1c93c0becdd2}{get\-Left\-Foot\-Position} ()
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classStepController_aaa7e389226a30582be8c8a724661a921}{get\-Right\-Foot\-Position} ()
+\item 
+void \hyperlink{classStepController_a0dcf2ec0d0fdf1fd9d86878fffd4e5ad}{compute\-Mid\-Point} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot, \-Eigen\-::\-Vector3d \hyperlink{classStepController_a588d5b149eb4a6877e89ecff37d0f91d}{target}, double step\-Height, \-Eigen\-::\-Vector3d \&mid\-Point)
+\item 
+void \hyperlink{classStepController_a16b1f62737f1287b7f33b216871d1ba8}{do\-Compute\-Mid\-Point} (\-Eigen\-::\-Vector3d current\-Foot\-Position, \-Eigen\-::\-Vector3d \hyperlink{classStepController_a588d5b149eb4a6877e89ecff37d0f91d}{target}, double step\-Height, \-Eigen\-::\-Vector3d \&mid\-Point)
+\item 
+bool \hyperlink{classStepController_a9e2415755548f47301277feb7a376270}{is\-Trajectory\-Finished} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot)
+\item 
+void \hyperlink{classStepController_a48224628b92c088a34d9db4a14f75f1a}{stop} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_ad778378c6e6ac12d972cc8c5a986dcf9}{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Left}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_a74e19501ce4f336bb4c26beebe3d39e2}{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Left}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_a9c733b7ab0ce610c84158f7d1de60267}{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Right}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_a1a4e831d573ab9e0f25680da7d065a77}{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Right}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_a57947ee8824b3cb3ee34e936431588df}{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Left}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_a0e1c5ce837e4811214a97c42edc66721}{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Left}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_ac999bb1e7b4b005da35093345c0cb4de}{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Right}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_a9f06562625b657c280dc688bcad421be}{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Right}
+\item 
+std\-::shared\-\_\-ptr\*
+$<$ ocra\-\_\-recipes\-::\-Trajectory\-Thread $>$ \hyperlink{classStepController_adc2b0bf2d3c302c54d659d44cb34ba3e}{\-\_\-left\-Foot\-\_\-\-Traj\-Thread}
+\item 
+std\-::shared\-\_\-ptr\*
+$<$ ocra\-\_\-recipes\-::\-Trajectory\-Thread $>$ \hyperlink{classStepController_a37b943ed8733490d028687997944e478}{\-\_\-right\-Foot\-\_\-\-Traj\-Thread}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classStepController_a588d5b149eb4a6877e89ecff37d0f91d}{target}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classStepController_a6bc27bbd20adf3bc0a1b010a14dece95}{\-\_\-left\-Foot\-Position}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classStepController_a064d9f5406f9221e4351617a177c1cef}{\-\_\-right\-Foot\-Position}
+\item 
+ocra\-::\-Model\-::\-Ptr \hyperlink{classStepController_aa07914c0186c24fd4fc02612d0ee6332}{\-\_\-model}
+\item 
+int \hyperlink{classStepController_a8b98494b6b9d13b41c6838d127078085}{\-\_\-period}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyNote}{\-Note}
+
+\end{DoxyNote}
+\begin{DoxyAuthor}{\-Author}
+\-Jorhabib \-Eljaik
+\end{DoxyAuthor}
+\begin{DoxyWarning}{\-Warning}
+\-Work in progress! \-This is still a barebone class in the process of being tested. 
+\end{DoxyWarning}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classStepController_a80b7436dcb5c1d4a3e04f805b8f8f32a}{\index{\-Step\-Controller@{\-Step\-Controller}!\-Step\-Controller@{\-Step\-Controller}}
+\index{\-Step\-Controller@{\-Step\-Controller}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-Step\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Step\-Controller\-::\-Step\-Controller} (
+\begin{DoxyParamCaption}
+\item[{int}]{periodms, }
+\item[{ocra\-::\-Model\-::\-Ptr}]{model}
+\end{DoxyParamCaption}
+)}}\label{classStepController_a80b7436dcb5c1d4a3e04f805b8f8f32a}
+\hypertarget{classStepController_ae2033c937309c104539b6758346529d5}{\index{\-Step\-Controller@{\-Step\-Controller}!$\sim$\-Step\-Controller@{$\sim$\-Step\-Controller}}
+\index{$\sim$\-Step\-Controller@{$\sim$\-Step\-Controller}!StepController@{\-Step\-Controller}}
+\subsubsection[{$\sim$\-Step\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Step\-Controller\-::$\sim$\-Step\-Controller} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classStepController_ae2033c937309c104539b6758346529d5}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classStepController_a6184693a199603c945250a58ceb8d9a2}{\index{\-Step\-Controller@{\-Step\-Controller}!activate\-Feet\-Contacts@{activate\-Feet\-Contacts}}
+\index{activate\-Feet\-Contacts@{activate\-Feet\-Contacts}!StepController@{\-Step\-Controller}}
+\subsubsection[{activate\-Feet\-Contacts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Step\-Controller\-::activate\-Feet\-Contacts} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{foot}
+\end{DoxyParamCaption}
+)}}\label{classStepController_a6184693a199603c945250a58ceb8d9a2}
+\-This method asks the ocra-\/icub-\/server to activate one by one the feet \char`\"{}corner\char`\"{} contact tasks for the specified foot.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classStepController_a0dcf2ec0d0fdf1fd9d86878fffd4e5ad}{\index{\-Step\-Controller@{\-Step\-Controller}!compute\-Mid\-Point@{compute\-Mid\-Point}}
+\index{compute\-Mid\-Point@{compute\-Mid\-Point}!StepController@{\-Step\-Controller}}
+\subsubsection[{compute\-Mid\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Step\-Controller\-::compute\-Mid\-Point} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{foot, }
+\item[{\-Eigen\-::\-Vector3d}]{target, }
+\item[{double}]{step\-Height, }
+\item[{\-Eigen\-::\-Vector3d \&}]{mid\-Point}
+\end{DoxyParamCaption}
+)}}\label{classStepController_a0dcf2ec0d0fdf1fd9d86878fffd4e5ad}
+\hypertarget{classStepController_ada72856c76030cc22ebb18f368f829f1}{\index{\-Step\-Controller@{\-Step\-Controller}!deactivate\-Feet\-Contacts@{deactivate\-Feet\-Contacts}}
+\index{deactivate\-Feet\-Contacts@{deactivate\-Feet\-Contacts}!StepController@{\-Step\-Controller}}
+\subsubsection[{deactivate\-Feet\-Contacts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Step\-Controller\-::deactivate\-Feet\-Contacts} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{foot}
+\end{DoxyParamCaption}
+)}}\label{classStepController_ada72856c76030cc22ebb18f368f829f1}
+\-Remember the right and left feet contact tasks? created in \hyperlink{classStepController_a8f061f201c651d920ca02f7daa07adfe}{initialize()}. \-This method asks the ocra-\/icub-\/server to deactivate one by one the feet \char`\"{}corner\char`\"{} contact tasks for the specified foot.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classStepController_a16b1f62737f1287b7f33b216871d1ba8}{\index{\-Step\-Controller@{\-Step\-Controller}!do\-Compute\-Mid\-Point@{do\-Compute\-Mid\-Point}}
+\index{do\-Compute\-Mid\-Point@{do\-Compute\-Mid\-Point}!StepController@{\-Step\-Controller}}
+\subsubsection[{do\-Compute\-Mid\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Step\-Controller\-::do\-Compute\-Mid\-Point} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector3d}]{current\-Foot\-Position, }
+\item[{\-Eigen\-::\-Vector3d}]{target, }
+\item[{double}]{step\-Height, }
+\item[{\-Eigen\-::\-Vector3d \&}]{mid\-Point}
+\end{DoxyParamCaption}
+)}}\label{classStepController_a16b1f62737f1287b7f33b216871d1ba8}
+\hypertarget{classStepController_a1bfcb66d504440f0cc7383ad688dad5c}{\index{\-Step\-Controller@{\-Step\-Controller}!do\-Step\-With\-Max\-Velocity@{do\-Step\-With\-Max\-Velocity}}
+\index{do\-Step\-With\-Max\-Velocity@{do\-Step\-With\-Max\-Velocity}!StepController@{\-Step\-Controller}}
+\subsubsection[{do\-Step\-With\-Max\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Step\-Controller\-::do\-Step\-With\-Max\-Velocity} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{foot, }
+\item[{\-Eigen\-::\-Vector3d}]{target, }
+\item[{double}]{step\-Height}
+\end{DoxyParamCaption}
+)}}\label{classStepController_a1bfcb66d504440f0cc7383ad688dad5c}
+\hypertarget{classStepController_aa168e028dc086859400e1c93c0becdd2}{\index{\-Step\-Controller@{\-Step\-Controller}!get\-Left\-Foot\-Position@{get\-Left\-Foot\-Position}}
+\index{get\-Left\-Foot\-Position@{get\-Left\-Foot\-Position}!StepController@{\-Step\-Controller}}
+\subsubsection[{get\-Left\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Step\-Controller\-::get\-Left\-Foot\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStepController_aa168e028dc086859400e1c93c0becdd2}
+\-Retrieves the 3\-D position of the \char`\"{}l\-\_\-sole\char`\"{} frame from the i\-Cub model.
+
+\begin{DoxyReturn}{\-Returns}
+3\-D position of the left foot. 
+\end{DoxyReturn}
+\hypertarget{classStepController_aaa7e389226a30582be8c8a724661a921}{\index{\-Step\-Controller@{\-Step\-Controller}!get\-Right\-Foot\-Position@{get\-Right\-Foot\-Position}}
+\index{get\-Right\-Foot\-Position@{get\-Right\-Foot\-Position}!StepController@{\-Step\-Controller}}
+\subsubsection[{get\-Right\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Step\-Controller\-::get\-Right\-Foot\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStepController_aaa7e389226a30582be8c8a724661a921}
+\-Retrieves the 3\-D position of the \char`\"{}r\-\_\-sole\char`\"{} frame from the i\-Cub model.
+
+\begin{DoxyReturn}{\-Returns}
+3\-D position of the right foot. 
+\end{DoxyReturn}
+\hypertarget{classStepController_a8f061f201c651d920ca02f7daa07adfe}{\index{\-Step\-Controller@{\-Step\-Controller}!initialize@{initialize}}
+\index{initialize@{initialize}!StepController@{\-Step\-Controller}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Step\-Controller\-::initialize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStepController_a8f061f201c651d920ca02f7daa07adfe}
+\hypertarget{classStepController_a9e2415755548f47301277feb7a376270}{\index{\-Step\-Controller@{\-Step\-Controller}!is\-Trajectory\-Finished@{is\-Trajectory\-Finished}}
+\index{is\-Trajectory\-Finished@{is\-Trajectory\-Finished}!StepController@{\-Step\-Controller}}
+\subsubsection[{is\-Trajectory\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Step\-Controller\-::is\-Trajectory\-Finished} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{foot}
+\end{DoxyParamCaption}
+)}}\label{classStepController_a9e2415755548f47301277feb7a376270}
+\hypertarget{classStepController_a48224628b92c088a34d9db4a14f75f1a}{\index{\-Step\-Controller@{\-Step\-Controller}!stop@{stop}}
+\index{stop@{stop}!StepController@{\-Step\-Controller}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Step\-Controller\-::stop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStepController_a48224628b92c088a34d9db4a14f75f1a}
+\-Stops the feet trajectory threads. \-To be called during the release of the owner thread. 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classStepController_adc2b0bf2d3c302c54d659d44cb34ba3e}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-left\-Foot\-\_\-\-Traj\-Thread@{\-\_\-left\-Foot\-\_\-\-Traj\-Thread}}
+\index{\-\_\-left\-Foot\-\_\-\-Traj\-Thread@{\-\_\-left\-Foot\-\_\-\-Traj\-Thread}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-left\-Foot\-\_\-\-Traj\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ocra\-\_\-recipes\-::\-Trajectory\-Thread$>$ {\bf \-Step\-Controller\-::\-\_\-left\-Foot\-\_\-\-Traj\-Thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_adc2b0bf2d3c302c54d659d44cb34ba3e}
+\hypertarget{classStepController_ad778378c6e6ac12d972cc8c5a986dcf9}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Left@{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Left}}
+\index{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Left@{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Left}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Left}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Left}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_ad778378c6e6ac12d972cc8c5a986dcf9}
+\hypertarget{classStepController_a9c733b7ab0ce610c84158f7d1de60267}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Right@{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Right}}
+\index{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Right@{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Right}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Right}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Right}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a9c733b7ab0ce610c84158f7d1de60267}
+\hypertarget{classStepController_a74e19501ce4f336bb4c26beebe3d39e2}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Left@{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Left}}
+\index{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Left@{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Left}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Left}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Left}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a74e19501ce4f336bb4c26beebe3d39e2}
+\hypertarget{classStepController_a1a4e831d573ab9e0f25680da7d065a77}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Right@{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Right}}
+\index{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Right@{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Right}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Right}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-\-Left\-Foot\-Contact\-\_\-\-Front\-Right}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a1a4e831d573ab9e0f25680da7d065a77}
+\hypertarget{classStepController_a6bc27bbd20adf3bc0a1b010a14dece95}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-left\-Foot\-Position@{\-\_\-left\-Foot\-Position}}
+\index{\-\_\-left\-Foot\-Position@{\-\_\-left\-Foot\-Position}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-left\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Step\-Controller\-::\-\_\-left\-Foot\-Position}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a6bc27bbd20adf3bc0a1b010a14dece95}
+\hypertarget{classStepController_aa07914c0186c24fd4fc02612d0ee6332}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-model@{\-\_\-model}}
+\index{\-\_\-model@{\-\_\-model}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-model}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-::\-Model\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-model}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_aa07914c0186c24fd4fc02612d0ee6332}
+\hypertarget{classStepController_a8b98494b6b9d13b41c6838d127078085}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-period@{\-\_\-period}}
+\index{\-\_\-period@{\-\_\-period}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-period}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Step\-Controller\-::\-\_\-period}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a8b98494b6b9d13b41c6838d127078085}
+\hypertarget{classStepController_a37b943ed8733490d028687997944e478}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-right\-Foot\-\_\-\-Traj\-Thread@{\-\_\-right\-Foot\-\_\-\-Traj\-Thread}}
+\index{\-\_\-right\-Foot\-\_\-\-Traj\-Thread@{\-\_\-right\-Foot\-\_\-\-Traj\-Thread}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-right\-Foot\-\_\-\-Traj\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ocra\-\_\-recipes\-::\-Trajectory\-Thread$>$ {\bf \-Step\-Controller\-::\-\_\-right\-Foot\-\_\-\-Traj\-Thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a37b943ed8733490d028687997944e478}
+\hypertarget{classStepController_a57947ee8824b3cb3ee34e936431588df}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Left@{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Left}}
+\index{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Left@{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Left}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Left}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Left}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a57947ee8824b3cb3ee34e936431588df}
+\hypertarget{classStepController_ac999bb1e7b4b005da35093345c0cb4de}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Right@{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Right}}
+\index{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Right@{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Right}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Right}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-\-Right\-Foot\-Contact\-\_\-\-Back\-Right}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_ac999bb1e7b4b005da35093345c0cb4de}
+\hypertarget{classStepController_a0e1c5ce837e4811214a97c42edc66721}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Left@{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Left}}
+\index{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Left@{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Left}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Left}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Left}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a0e1c5ce837e4811214a97c42edc66721}
+\hypertarget{classStepController_a9f06562625b657c280dc688bcad421be}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Right@{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Right}}
+\index{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Right@{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Right}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Right}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Step\-Controller\-::\-\_\-\-Right\-Foot\-Contact\-\_\-\-Front\-Right}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a9f06562625b657c280dc688bcad421be}
+\hypertarget{classStepController_a064d9f5406f9221e4351617a177c1cef}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-right\-Foot\-Position@{\-\_\-right\-Foot\-Position}}
+\index{\-\_\-right\-Foot\-Position@{\-\_\-right\-Foot\-Position}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-right\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Step\-Controller\-::\-\_\-right\-Foot\-Position}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a064d9f5406f9221e4351617a177c1cef}
+\hypertarget{classStepController_a588d5b149eb4a6877e89ecff37d0f91d}{\index{\-Step\-Controller@{\-Step\-Controller}!target@{target}}
+\index{target@{target}!StepController@{\-Step\-Controller}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Step\-Controller\-::target}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_a588d5b149eb4a6877e89ecff37d0f91d}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\hyperlink{StepController_8h}{\-Step\-Controller.\-h}\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/src/\hyperlink{StepController_8cpp}{\-Step\-Controller.\-cpp}\end{DoxyCompactItemize}

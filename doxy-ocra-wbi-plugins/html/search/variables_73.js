@@ -18,11 +18,12 @@ var searchData=
   ['segvelocity',['segVelocity',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6e95ae9d994aa67c9a2fc4021f80bb54',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['servername',['serverName',['../classOcraControllerOptions.html#a22380b083fbf0b202993d0415d1d4c83',1,'OcraControllerOptions']]],
   ['solver',['solver',['../classOcraControllerOptions.html#af79b8705c3f3097b642262bc877eaa8e',1,'OcraControllerOptions']]],
+  ['ssduration',['SSduration',['../structsingleStepTestParams.html#a4e63c961cc10a9191f634ea6f7d9d34c',1,'singleStepTestParams']]],
   ['starttime',['startTime',['../classExampleClient.html#aaa5ec782e9aaa1e94d7182872f743c02',1,'ExampleClient::startTime()'],['../classStandingDemoClient.html#af05ac205216c20f9780f7e48a9ee4648',1,'StandingDemoClient::startTime()'],['../classSteppingDemoClient.html#af7b6e48319ef9d35fb975edc3bb2a137',1,'SteppingDemoClient::startTime()']]],
   ['startupsequence',['startupSequence',['../classOcraControllerOptions.html#ab01efbd786ad8bc5beb6de02dbcd0936',1,'OcraControllerOptions']]],
   ['startuptasksetpath',['startupTaskSetPath',['../classOcraControllerOptions.html#af91566ecff3f7ed02571369c7af061ce',1,'OcraControllerOptions']]],
   ['stddev',['stdDev',['../classModule.html#af66a2dab82208cb2ea25da22fcaaa4a3',1,'Module']]],
   ['stddevused',['stdDevUsed',['../classModule.html#a57060f2788b6dc9906e66432e775e5ac',1,'Module']]],
-  ['stepheight',['stepHeight',['../structWalkingParams.html#abfc5b4af75225435731b30bcd882a0ae',1,'WalkingParams']]],
-  ['steplength',['stepLength',['../structWalkingParams.html#ad719bbe7ba3ed5ad027d0c42522693d7',1,'WalkingParams']]]
+  ['stepheight',['stepHeight',['../structWalkingParams.html#abfc5b4af75225435731b30bcd882a0ae',1,'WalkingParams::stepHeight()'],['../structsingleStepTestParams.html#a1b6267edaee10af0a7162065d0ba7a20',1,'singleStepTestParams::stepHeight()']]],
+  ['steplength',['stepLength',['../structWalkingParams.html#ad719bbe7ba3ed5ad027d0c42522693d7',1,'WalkingParams::stepLength()'],['../structsingleStepTestParams.html#a17bf92e96d709f6cead23bcdcda88d17',1,'singleStepTestParams::stepLength()']]]
 ];
