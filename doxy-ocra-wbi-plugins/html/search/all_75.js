@@ -1,6 +1,8 @@
 var searchData=
 [
   ['updatemodule',['updateModule',['../classModule.html#a1b1c4963512941537cef766217329a8a',1,'Module']]],
+  ['updaterhs',['updateRHS',['../classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a',1,'MIQPLinearConstraints']]],
+  ['updatestatevector',['updateStateVector',['../classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5',1,'MIQPController']]],
   ['upperlimits',['upperLimits',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a632b9a37d054a1dc6fcf6403e52e62e7',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['urdfmodelpath',['urdfModelPath',['../classOcraControllerOptions.html#a697196e6267b2a519dd0bcc2bc03ab73',1,'OcraControllerOptions']]],
   ['useminjerk',['useMinJerk',['../classStandingDemoClient.html#a47132d5336d2e3b02085d2f153db6385',1,'StandingDemoClient']]],

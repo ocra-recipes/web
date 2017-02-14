@@ -1,9 +1,24 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$StepController_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/StepController.h" alt="" coords="163,83,685,112"/>
-<area shape="rect" id="node5" href="$WalkingClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h" alt="" coords="461,160,984,189"/>
-<area shape="rect" id="node14" href="$ZmpPreviewController_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpPreviewController.h" alt="" coords="760,83,1331,112"/>
-<area shape="rect" id="node11" href="$StepController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/StepController.cpp" alt="" coords="5,160,437,189"/>
-<area shape="rect" id="node7" href="$ocra-icub-clients_2walking-client_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp" alt="" coords="321,237,697,267"/>
-<area shape="rect" id="node9" href="$WalkingClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp" alt="" coords="721,237,1151,267"/>
-<area shape="rect" id="node17" href="$ZmpPreviewController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpPreviewController.cpp" alt="" coords="1008,160,1485,189"/>
+<area shape="rect" id="node3" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="1229,83,1797,112"/>
+<area shape="rect" id="node9" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="1891,392,2421,421"/>
+<area shape="rect" id="node36" href="$StepController_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/StepController.h" alt="" coords="2623,83,3145,112"/>
+<area shape="rect" id="node38" href="$WalkingClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h" alt="" coords="3079,160,3601,189"/>
+<area shape="rect" id="node47" href="$ZmpPreviewController_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpPreviewController.h" alt="" coords="3220,83,3791,112"/>
+<area shape="rect" id="node5" href="$AdmissibilityConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="665,160,1316,189"/>
+<area shape="rect" id="node17" href="$Bounding_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Bounding.h" alt="" coords="1391,160,1953,189"/>
+<area shape="rect" id="node19" href="$ShapeConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="1060,237,1673,267"/>
+<area shape="rect" id="node26" href="$Constancy_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Constancy.h" alt="" coords="1977,160,2548,189"/>
+<area shape="rect" id="node30" href="$Sequentiality_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Sequentiality.h" alt="" coords="5,160,589,189"/>
+<area shape="rect" id="node7" href="$MIQPLinearConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="872,315,1517,344"/>
+<area shape="rect" id="node15" href="$AdmissibilityConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/AdmissibilityConstraints.cpp" alt="" coords="495,237,985,267"/>
+<area shape="rect" id="node13" href="$MIQPLinearConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPLinearConstraints.cpp" alt="" coords="952,392,1437,421"/>
+<area shape="rect" id="node11" href="$MIQPController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp" alt="" coords="1937,469,2375,499"/>
+<area shape="rect" id="node24" href="$Bounding_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Bounding.cpp" alt="" coords="1697,237,2100,267"/>
+<area shape="rect" id="node22" href="$ShapeConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ShapeConstraints.cpp" alt="" coords="1541,315,1995,344"/>
+<area shape="rect" id="node28" href="$Constancy_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Constancy.cpp" alt="" coords="2124,237,2535,267"/>
+<area shape="rect" id="node32" href="$Sequentiality_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Sequentiality.cpp" alt="" coords="47,237,471,267"/>
+<area shape="rect" id="node44" href="$StepController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/StepController.cpp" alt="" coords="2623,160,3055,189"/>
+<area shape="rect" id="node40" href="$ocra-icub-clients_2walking-client_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp" alt="" coords="3365,237,3741,267"/>
+<area shape="rect" id="node42" href="$WalkingClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp" alt="" coords="2912,237,3341,267"/>
+<area shape="rect" id="node50" href="$ZmpPreviewController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpPreviewController.cpp" alt="" coords="3625,160,4103,189"/>
 </map>

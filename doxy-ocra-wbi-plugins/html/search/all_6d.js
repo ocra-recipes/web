@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m',['m',['../structZmpControllerParams.html#a09a7a86043a6b356478105f00ad84049',1,'ZmpControllerParams::m()'],['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a56b6cb4adf9dead06b4d09fe38daa26e',1,'ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::M()']]],
+  ['m',['M',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a56b6cb4adf9dead06b4d09fe38daa26e',1,'ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::M()'],['../structZmpControllerParams.html#a09a7a86043a6b356478105f00ad84049',1,'ZmpControllerParams::m()']]],
   ['m_5ffull',['M_full',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#af57ebe4c5c15477a9592dd91a5c96f12',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['m_5ffull_5frm',['M_full_rm',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6ed8d69d83b0321920c0f79cf8e58bde',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['main',['main',['../ocra-icub-server_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../example-client_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;example-client.cpp'],['../ocra-icub-clients_2sitting-demo_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../ocra-icub-clients_2standing-demo_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../stepping-demo_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;stepping-demo.cpp'],['../task-operations-demo_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;task-operations-demo.cpp'],['../ocra-icub-clients_2walking-client_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
@@ -16,6 +16,13 @@ var searchData=
   ['measuredtorques',['measuredTorques',['../classThread.html#aa9cbe8744e51571a17fa726d8d16a0c6',1,'Thread']]],
   ['mintorques',['minTorques',['../classThread.html#a414015415c64371877d6028417c4f9e2',1,'Thread']]],
   ['minv',['Minv',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a4d95e99d368b2e61c2945c1eeabff823',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['miqpcontroller',['MIQPController',['../classMIQPController.html',1,'MIQPController'],['../classMIQPController.html#a73b26ce1edd4ab839826abedcc72a475',1,'MIQPController::MIQPController()']]],
+  ['miqpcontroller_2ecpp',['MIQPController.cpp',['../MIQPController_8cpp.html',1,'']]],
+  ['miqpcontroller_2eh',['MIQPController.h',['../MIQPController_8h.html',1,'']]],
+  ['miqplinearconstraints',['MIQPLinearConstraints',['../classMIQPLinearConstraints.html',1,'MIQPLinearConstraints'],['../classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f',1,'MIQPLinearConstraints::MIQPLinearConstraints()']]],
+  ['miqplinearconstraints_2ecpp',['MIQPLinearConstraints.cpp',['../MIQPLinearConstraints_8cpp.html',1,'']]],
+  ['miqplinearconstraints_2eh',['MIQPLinearConstraints.h',['../MIQPLinearConstraints_8h.html',1,'']]],
+  ['miqpparameters',['MIQPParameters',['../structMIQPParameters.html',1,'']]],
   ['model',['model',['../classThread.html#a1dcef9aedc1a707e6f04d5fb6e4a0b13',1,'Thread::model()'],['../classocra__icub_1_1ModelInitializer.html#ab7fb1fe2773837be8b3b41b75ef8f9d6',1,'ocra_icub::ModelInitializer::model()']]],
   ['model_5finitializer_5fcount',['MODEL_INITIALIZER_COUNT',['../classocra__icub_1_1ModelInitializer.html#a8ec0a5af61b4a972ea22b71a5d3511eb',1,'ocra_icub::ModelInitializer']]],
   ['modelinitializer',['ModelInitializer',['../classocra__icub_1_1ModelInitializer.html',1,'ocra_icub']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['s',['S',['../structShapeConstraintsStruct_1_1constancyStruct.html#a5101af8a66eb956ac4734155f229f330',1,'ShapeConstraintsStruct::constancyStruct::S()'],['../structAdmissibilityConstraintsStruct_1_1SingleSupport.html#aff9e7430c1d0bb3b5442bda53bb9c842',1,'AdmissibilityConstraintsStruct::SingleSupport::S()']]],
   ['segcom',['segCoM',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#af244a33c7309714ca793d29247ead8b8',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['segindexfromname',['segIndexFromName',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#ad172a7f70ea862fa849e859dc3c8e4f1',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['seginertiaaxes',['segInertiaAxes',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#aba2d3ed2e0c2a1a1b8b4d40c3df6a4a5',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
@@ -16,8 +17,11 @@ var searchData=
   ['segnamefromindex',['segNameFromIndex',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#ad1592df54a2ce8043dc2bc050fd61905',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['segposition',['segPosition',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a47b0a577b990fa7db3bc04a7a8107c31',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['segvelocity',['segVelocity',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6e95ae9d994aa67c9a2fc4021f80bb54',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['sequentiality',['sequentiality',['../structShapeConstraintsStruct.html#ab21948647937089aa8f72ddb8d1536b2',1,'ShapeConstraintsStruct']]],
   ['servername',['serverName',['../classOcraControllerOptions.html#a22380b083fbf0b202993d0415d1d4c83',1,'OcraControllerOptions']]],
+  ['singlesupport',['singleSupport',['../structAdmissibilityConstraintsStruct.html#a40fb404909b4fcee9e31e1dbf566a554',1,'AdmissibilityConstraintsStruct']]],
   ['solver',['solver',['../classOcraControllerOptions.html#af79b8705c3f3097b642262bc877eaa8e',1,'OcraControllerOptions']]],
+  ['ssanddoublesupportalternation',['ssAndDoubleSupportAlternation',['../structAdmissibilityConstraintsStruct.html#a387b2106272e3148e1fd4dbde6dedb3e',1,'AdmissibilityConstraintsStruct']]],
   ['ssduration',['SSduration',['../structsingleStepTestParams.html#a4e63c961cc10a9191f634ea6f7d9d34c',1,'singleStepTestParams']]],
   ['starttime',['startTime',['../classExampleClient.html#aaa5ec782e9aaa1e94d7182872f743c02',1,'ExampleClient::startTime()'],['../classStandingDemoClient.html#af05ac205216c20f9780f7e48a9ee4648',1,'StandingDemoClient::startTime()'],['../classSteppingDemoClient.html#af7b6e48319ef9d35fb975edc3bb2a137',1,'SteppingDemoClient::startTime()']]],
   ['startupsequence',['startupSequence',['../classOcraControllerOptions.html#ab01efbd786ad8bc5beb6de02dbcd0936',1,'OcraControllerOptions']]],

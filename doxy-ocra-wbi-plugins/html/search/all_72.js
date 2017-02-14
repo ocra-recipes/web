@@ -24,6 +24,6 @@ var searchData=
   ['roottrajthread',['rootTrajThread',['../classSittingDemoClient.html#a1d5616269e9a673022542bb86f380bfd',1,'SittingDemoClient::rootTrajThread()'],['../classStandingDemoClient.html#a4f84e52d8be94fb7fae7a6c0ad8e8adb',1,'StandingDemoClient::rootTrajThread()']]],
   ['rpcservercallback',['rpcServerCallback',['../classThread.html#a602de8d12886c9c57b5420c83804a38b',1,'Thread']]],
   ['rpcserverport',['rpcServerPort',['../classThread.html#adbec1b4f2c8fc40641df6f118e93fd25',1,'Thread']]],
-  ['run',['run',['../classThread.html#ad9373d8d725c46717dfce3130018fe3a',1,'Thread']]],
+  ['run',['run',['../classThread.html#ad9373d8d725c46717dfce3130018fe3a',1,'Thread::run()'],['../classMIQPController.html#aa8fd8452a14d8e7731bf45044e1c7a59',1,'MIQPController::run()']]],
   ['runindebugmode',['runInDebugMode',['../classOcraControllerOptions.html#a26dce90c0e6cf7ba608020d01cd08f3c',1,'OcraControllerOptions']]]
 ];

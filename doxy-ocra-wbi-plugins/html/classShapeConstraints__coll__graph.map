@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classConstraint.html" title="Constraint" alt="" coords="67,5,150,35"/>
+<area shape="rect" id="node4" href="$classBounding.html" title="Bounding" alt="" coords="21,85,95,115"/>
+<area shape="rect" id="node7" href="$classConstancy.html" title="Constancy" alt="" coords="119,85,205,115"/>
+<area shape="rect" id="node10" href="$classSequentiality.html" title="Sequentiality" alt="" coords="229,85,325,115"/>
+</map>

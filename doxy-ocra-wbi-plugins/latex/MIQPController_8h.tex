@@ -1,0 +1,66 @@
+\hypertarget{MIQPController_8h}{\section{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-M\-I\-Q\-P\-Controller.h \-File \-Reference}
+\label{MIQPController_8h}\index{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-M\-I\-Q\-P\-Controller.\-h@{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-M\-I\-Q\-P\-Controller.\-h}}
+}
+
+
+\-A thread for launching trajectory generators.  
+
+
+{\ttfamily \#include \char`\"{}gurobi\-\_\-c++.\-h\char`\"{}}\*
+{\ttfamily \#include $<$walking-\/client/utils.\-h$>$}\*
+{\ttfamily \#include $<$ocra-\/icub/\-Ocra\-Wbi\-Model.\-h$>$}\*
+{\ttfamily \#include $<$yarp/os/\-Rate\-Thread.\-h$>$}\*
+{\ttfamily \#include $<$\-Eigen/\-Dense$>$}\*
+{\ttfamily \#include $<$\-Eigen/\-Lgsm$>$}\*
+{\ttfamily \#include \char`\"{}unsupported/\-Eigen/\-Matrix\-Functions\char`\"{}}\*
+{\ttfamily \#include $<$walking-\/client/constraints/\-M\-I\-Q\-P\-Linear\-Constraints.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Gurobi.\-h\char`\"{}}\*
+\-Include dependency graph for \-M\-I\-Q\-P\-Controller.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MIQPController_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MIQPController_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classMIQPController}{\-M\-I\-Q\-P\-Controller}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MIQPController_8h_aa2f26540ce870ca91503bb6746a52e69}{\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}~12
+\item 
+\#define \hyperlink{MIQPController_8h_ab0e06eaa253307db2bac3c9b0a9e6b10}{\-S\-T\-A\-T\-E\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}~16
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A thread for launching trajectory generators. \begin{DoxyAuthor}{\-Author}
+\mbox{[}\-Jorhabib \-Eljaik\mbox{]}(\href{https://github.com/jeljaik}{\tt https\-://github.\-com/jeljaik}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{\-Date}
+\-Feb 2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{\-Copyright}
+\-G\-N\-U \-General \-Public \-License. 
+\end{DoxyCopyright}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{MIQPController_8h_aa2f26540ce870ca91503bb6746a52e69}{\index{\-M\-I\-Q\-P\-Controller.\-h@{\-M\-I\-Q\-P\-Controller.\-h}!\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}}
+\index{\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}!MIQPController.h@{\-M\-I\-Q\-P\-Controller.\-h}}
+\subsubsection[{\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}~12}}\label{MIQPController_8h_aa2f26540ce870ca91503bb6746a52e69}
+\hypertarget{MIQPController_8h_ab0e06eaa253307db2bac3c9b0a9e6b10}{\index{\-M\-I\-Q\-P\-Controller.\-h@{\-M\-I\-Q\-P\-Controller.\-h}!\-S\-T\-A\-T\-E\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{\-S\-T\-A\-T\-E\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}}
+\index{\-S\-T\-A\-T\-E\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{\-S\-T\-A\-T\-E\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}!MIQPController.h@{\-M\-I\-Q\-P\-Controller.\-h}}
+\subsubsection[{\-S\-T\-A\-T\-E\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-T\-A\-T\-E\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}~16}}\label{MIQPController_8h_ab0e06eaa253307db2bac3c9b0a9e6b10}
