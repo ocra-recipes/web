@@ -107,6 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f">MIQPLinearConstraints</a> (unsigned int dt, unsigned int N)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2">~MIQPLinearConstraints</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aea229cfd938c50c5d50ed68d18d119ab">initialize</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a> (Eigen::VectorXd xi_k)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a> (Eigen::MatrixXd &amp;A)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints</a> ()</td></tr>
@@ -122,6 +123,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a127e7ddd641f11d1b6137c59d80ef8b5">buildMatrixQ</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#addee397c47be26fd9eebbe8374c3cc30">buildMatrixT</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ae6ecdf8d77474a8b099f2526d6cc0d75">buildBh</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27">buildAh</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classShapeConstraints.html">ShapeConstraints</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a5c8788e52f7b0664606662cfa758ae88">_shapeCnstr</a></td></tr>
@@ -137,6 +139,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">_Q</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">_T</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">_Ah</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">_dt</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">_N</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a></td></tr>
@@ -186,6 +189,22 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a70bcc70db0ab171390d20af674e80c27"></a><!-- doxytag: member="MIQPLinearConstraints::buildAh" ref="a70bcc70db0ab171390d20af674e80c27" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27">MIQPLinearConstraints::buildAh</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ae9b8c02ee58863d05d2aab41e780413e"></a><!-- doxytag: member="MIQPLinearConstraints::buildAShapeAdmiss" ref="ae9b8c02ee58863d05d2aab41e780413e" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -199,8 +218,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Actually builds the matrix A referred to in <a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow()</a></p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow</a> </dd></dl>
 
 </div>
 </div>
@@ -217,8 +234,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(B_h\) (<a class="el" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">MIQPLinearConstraints::_Bh</a>) called by the constructor of this class.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">MIQPLinearConstraints::_Bh</a> </dd></dl>
 
 </div>
 </div>
@@ -235,8 +250,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Actually builds the matrix B referred to in <a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow()</a></p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow</a> </dd></dl>
 
 </div>
 </div>
@@ -253,7 +266,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Actually builds the vector \(\bar{\mathbf{f}}_c\) referred to in <a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow()</a> </p>
 
 </div>
 </div>
@@ -270,11 +282,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds matrix Q (<a class="el" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">MIQPLinearConstraints::_Q</a>) from the preview model:</p>
-<p class="formulaDsp">
-\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
-</p>
- 
+
 </div>
 </div>
 <a class="anchor" id="addee397c47be26fd9eebbe8374c3cc30"></a><!-- doxytag: member="MIQPLinearConstraints::buildMatrixT" ref="addee397c47be26fd9eebbe8374c3cc30" args="()" -->
@@ -290,7 +298,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds matrix T (<a class="el" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">MIQPLinearConstraints::_T</a>) from the preview model: </p>
 
 </div>
 </div>
@@ -307,14 +314,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Basically builds matrix \(\mathbf{A}\) (<a class="el" href="classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180">MIQPLinearConstraints::_AShapeAdmiss</a>) in the partial expression for the MIQP linear constraints, containing only shape and admissibility constraints, such that: </p>
-<p class="formulaDsp">
-\[ \mathbf{A} \mathcal{X}_{k,N} \leq \bar{\mathbf{f}}_c - \mathbf{B} \xi_k \]
-</p>
-<p class="formulaDsp">
-\[ \begin{array}{cccccc} A_{\text{cr}} Q^0 T &amp; 0 &amp; 0 &amp; 0 &amp; \hdots &amp; 0\\ (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}}Q^0 T &amp; 0 &amp; 0 &amp; \hdots &amp; 0 \\ (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T &amp; (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}} Q^0 T &amp; 0 &amp; \hdots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; &amp; &amp; \vdots \\ (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T &amp; (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T &amp; \hdots &amp; \hdots &amp; \hdots &amp; A_{\text{cr}}Q^0T \\ \end{array} \]
-</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e">buildAShapeAdmiss()</a> </dd></dl>
 
 </div>
 </div>
@@ -332,13 +331,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Retrieves the constraints matrix \(\mathbf{A}\). Before passing a matrix to copy <a class="el" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">MIQPLinearConstraints::_A</a> allocate the space for A by calling <a class="el" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints()</a> to know the number of rows, while SIZE_INPUT_VECTOR * SIZE_PREVIEW_WINDOW will be the number of columns.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">A</td><td>Reference to matrix where the global constraints matrix _A will be copied. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -372,8 +364,22 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Returns the total number of constraints.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>_nConstraints </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aea229cfd938c50c5d50ed68d18d119ab"></a><!-- doxytag: member="MIQPLinearConstraints::initialize" ref="aea229cfd938c50c5d50ed68d18d119ab" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPLinearConstraints.html#aea229cfd938c50c5d50ed68d18d119ab">MIQPLinearConstraints::initialize</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -390,7 +396,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Stacks matrices \(C_{i}\) (Ci) from the shape and admissiblity constraints to set variable <a class="el" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">MIQPLinearConstraints::_Acl</a> </p>
 
 </div>
 </div>
@@ -407,7 +412,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Stacks matrices \(C_{i+1}\) (Cii) from the shape and admissibility constraints to set variable <a class="el" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">MIQPLinearConstraints::_Acr</a> </p>
 
 </div>
 </div>
@@ -481,6 +485,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aacba15c9dfc1c8f88e253a4f75e422fd"></a><!-- doxytag: member="MIQPLinearConstraints::_Ah" ref="aacba15c9dfc1c8f88e253a4f75e422fd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">MIQPLinearConstraints::_Ah</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a7ff7b3584cf9ff3e2124d80bd0684180"></a><!-- doxytag: member="MIQPLinearConstraints::_AShapeAdmiss" ref="a7ff7b3584cf9ff3e2124d80bd0684180" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -504,11 +521,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Input matrix \(\mathbf{B}_h\) from the linear state process of the CoMstate \(\hat{\mathbf{h}}\). It is constant of size \(6\times2\) and equal to: </p>
-<p class="formulaDsp">
-\[ \mathbf{B_h} = \left[ \begin{array}{c} \frac{\delta^3}{6}\mathbf{I}_2 \\ \frac{\delta t^2}{2} \mathbf{I}_2 \\ \delta t \mathbf{I}_2 \end{array} \right] \]
-</p>
- 
+
 </div>
 </div>
 <a class="anchor" id="ab3ea8be40c22fa7d8035c7b5c5c1010c"></a><!-- doxytag: member="MIQPLinearConstraints::_BShapeAdmiss" ref="ab3ea8be40c22fa7d8035c7b5c5c1010c" args="" -->
@@ -652,7 +665,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a>      </li>
 
-    <li class="footer">Generated on Tue Feb 14 2017 23:32:09 for ocra-wbi-plugins by
+    <li class="footer">Generated on Wed Feb 15 2017 23:33:06 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

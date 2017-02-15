@@ -12,6 +12,8 @@
 \item 
 virtual \hyperlink{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints} ()
 \item 
+void \hyperlink{classMIQPLinearConstraints_aea229cfd938c50c5d50ed68d18d119ab}{initialize} ()
+\item 
 void \hyperlink{classMIQPLinearConstraints_aad3232078ef93e2105a1c619c510f16a}{update\-R\-H\-S} (\-Eigen\-::\-Vector\-Xd xi\-\_\-k)
 \item 
 void \hyperlink{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}{get\-Constraints\-Matrix\-A} (\-Eigen\-::\-Matrix\-Xd \&\-A)
@@ -40,6 +42,8 @@ void \hyperlink{classMIQPLinearConstraints_a127e7ddd641f11d1b6137c59d80ef8b5}{bu
 void \hyperlink{classMIQPLinearConstraints_addee397c47be26fd9eebbe8374c3cc30}{build\-Matrix\-T} ()
 \item 
 void \hyperlink{classMIQPLinearConstraints_ae6ecdf8d77474a8b099f2526d6cc0d75}{build\-Bh} ()
+\item 
+void \hyperlink{classMIQPLinearConstraints_a70bcc70db0ab171390d20af674e80c27}{build\-Ah} ()
 \end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
@@ -69,6 +73,8 @@ $<$ \hyperlink{classAdmissibilityConstraints}{\-Admissibility\-Constraints} $>$ 
 \item 
 \-Eigen\-::\-Matrix\-Xd \hyperlink{classMIQPLinearConstraints_a0c0fbbb1b86c5d51a133ee661977c1f5}{\-\_\-\-Bh}
 \item 
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classMIQPLinearConstraints_aacba15c9dfc1c8f88e253a4f75e422fd}{\-\_\-\-Ah}
+\item 
 unsigned int \hyperlink{classMIQPLinearConstraints_a403b0a1f684bda20236a759bd72950f2}{\-\_\-dt}
 \item 
 unsigned int \hyperlink{classMIQPLinearConstraints_a1edaf84d613dde3f86fd9e78aa14a077}{\-\_\-\-N}
@@ -96,6 +102,13 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 
 
 \subsection{\-Member \-Function \-Documentation}
+\hypertarget{classMIQPLinearConstraints_a70bcc70db0ab171390d20af674e80c27}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Ah@{build\-Ah}}
+\index{build\-Ah@{build\-Ah}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\subsubsection[{build\-Ah}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-Ah} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_a70bcc70db0ab171390d20af674e80c27}
 \hypertarget{classMIQPLinearConstraints_ae9b8c02ee58863d05d2aab41e780413e}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-A\-Shape\-Admiss@{build\-A\-Shape\-Admiss}}
 \index{build\-A\-Shape\-Admiss@{build\-A\-Shape\-Admiss}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-A\-Shape\-Admiss}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-A\-Shape\-Admiss} (
@@ -103,11 +116,6 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_ae9b8c02ee58863d05d2aab41e780413e}
-\-Actually builds the matrix \-A referred to in \hyperlink{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{build\-Shape\-And\-Admissibility\-In\-Preview\-Window()}
-
-\begin{DoxySeeAlso}{\-See also}
-\hyperlink{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{build\-Shape\-And\-Admissibility\-In\-Preview\-Window} 
-\end{DoxySeeAlso}
 \hypertarget{classMIQPLinearConstraints_ae6ecdf8d77474a8b099f2526d6cc0d75}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Bh@{build\-Bh}}
 \index{build\-Bh@{build\-Bh}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-Bh}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-Bh} (
@@ -115,11 +123,6 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_ae6ecdf8d77474a8b099f2526d6cc0d75}
-\-Builds $B_h$ (\hyperlink{classMIQPLinearConstraints_a0c0fbbb1b86c5d51a133ee661977c1f5}{\-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Bh}) called by the constructor of this class.
-
-\begin{DoxySeeAlso}{\-See also}
-\hyperlink{classMIQPLinearConstraints_a0c0fbbb1b86c5d51a133ee661977c1f5}{\-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Bh} 
-\end{DoxySeeAlso}
 \hypertarget{classMIQPLinearConstraints_aa3752e85f1167129814b1a41d6b0198e}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-B\-Shape\-Admiss@{build\-B\-Shape\-Admiss}}
 \index{build\-B\-Shape\-Admiss@{build\-B\-Shape\-Admiss}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-B\-Shape\-Admiss}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-B\-Shape\-Admiss} (
@@ -127,11 +130,6 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_aa3752e85f1167129814b1a41d6b0198e}
-\-Actually builds the matrix \-B referred to in \hyperlink{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{build\-Shape\-And\-Admissibility\-In\-Preview\-Window()}
-
-\begin{DoxySeeAlso}{\-See also}
-\hyperlink{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{build\-Shape\-And\-Admissibility\-In\-Preview\-Window} 
-\end{DoxySeeAlso}
 \hypertarget{classMIQPLinearConstraints_a5231950d561e42e0d6590a398bec771c}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Fc\-Bar\-Shape\-Admiss@{build\-Fc\-Bar\-Shape\-Admiss}}
 \index{build\-Fc\-Bar\-Shape\-Admiss@{build\-Fc\-Bar\-Shape\-Admiss}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-Fc\-Bar\-Shape\-Admiss}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-Fc\-Bar\-Shape\-Admiss} (
@@ -139,36 +137,27 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_a5231950d561e42e0d6590a398bec771c}
-\-Actually builds the vector $\bar{\mathbf{f}}_c$ referred to in \hyperlink{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{build\-Shape\-And\-Admissibility\-In\-Preview\-Window()} \hypertarget{classMIQPLinearConstraints_a127e7ddd641f11d1b6137c59d80ef8b5}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Matrix\-Q@{build\-Matrix\-Q}}
+\hypertarget{classMIQPLinearConstraints_a127e7ddd641f11d1b6137c59d80ef8b5}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Matrix\-Q@{build\-Matrix\-Q}}
 \index{build\-Matrix\-Q@{build\-Matrix\-Q}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-Matrix\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-Matrix\-Q} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_a127e7ddd641f11d1b6137c59d80ef8b5}
-\-Builds matrix \-Q (\hyperlink{classMIQPLinearConstraints_afecaf6e02135bfba45045fab6cce3511}{\-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Q}) from the preview model\-:
-
-\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \] \hypertarget{classMIQPLinearConstraints_addee397c47be26fd9eebbe8374c3cc30}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Matrix\-T@{build\-Matrix\-T}}
+\hypertarget{classMIQPLinearConstraints_addee397c47be26fd9eebbe8374c3cc30}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Matrix\-T@{build\-Matrix\-T}}
 \index{build\-Matrix\-T@{build\-Matrix\-T}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-Matrix\-T}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-Matrix\-T} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_addee397c47be26fd9eebbe8374c3cc30}
-\-Builds matrix \-T (\hyperlink{classMIQPLinearConstraints_a5e6d37521f3da248b19ff424526d700a}{\-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-T}) from the preview model\-: \hypertarget{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Shape\-And\-Admissibility\-In\-Preview\-Window@{build\-Shape\-And\-Admissibility\-In\-Preview\-Window}}
+\hypertarget{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Shape\-And\-Admissibility\-In\-Preview\-Window@{build\-Shape\-And\-Admissibility\-In\-Preview\-Window}}
 \index{build\-Shape\-And\-Admissibility\-In\-Preview\-Window@{build\-Shape\-And\-Admissibility\-In\-Preview\-Window}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-Shape\-And\-Admissibility\-In\-Preview\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-Shape\-And\-Admissibility\-In\-Preview\-Window} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}
-\-Basically builds matrix $\mathbf{A}$ (\hyperlink{classMIQPLinearConstraints_a7ff7b3584cf9ff3e2124d80bd0684180}{\-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-A\-Shape\-Admiss}) in the partial expression for the \-M\-I\-Q\-P linear constraints, containing only shape and admissibility constraints, such that\-: \[ \mathbf{A} \mathcal{X}_{k,N} \leq \bar{\mathbf{f}}_c - \mathbf{B} \xi_k \]
-
-\[ \begin{array}{cccccc} A_{\text{cr}} Q^0 T & 0 & 0 & 0 & \hdots & 0\\ (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T & A_{\text{cr}}Q^0 T & 0 & 0 & \hdots & 0 \\ (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T & (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T & A_{\text{cr}} Q^0 T & 0 & \hdots & 0 \\ \vdots & \vdots & & & & \vdots \\ (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T & (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T & \hdots & \hdots & \hdots & A_{\text{cr}}Q^0T \\ \end{array} \]
-
-\begin{DoxySeeAlso}{\-See also}
-\hyperlink{classMIQPLinearConstraints_ae9b8c02ee58863d05d2aab41e780413e}{build\-A\-Shape\-Admiss()} 
-\end{DoxySeeAlso}
 \hypertarget{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!get\-Constraints\-Matrix\-A@{get\-Constraints\-Matrix\-A}}
 \index{get\-Constraints\-Matrix\-A@{get\-Constraints\-Matrix\-A}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{get\-Constraints\-Matrix\-A}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::get\-Constraints\-Matrix\-A} (
@@ -176,13 +165,6 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 \item[{\-Eigen\-::\-Matrix\-Xd \&}]{\-A}
 \end{DoxyParamCaption}
 )}}\label{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}
-\-Retrieves the constraints matrix $\mathbf{A}$. \-Before passing a matrix to copy \hyperlink{classMIQPLinearConstraints_a5dfdc7553c4cbbe75ac54b34c4f29732}{\-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-A} allocate the space for \-A by calling \hyperlink{classMIQPLinearConstraints_a656681ab464709b025e4522df3458fa1}{get\-Total\-Number\-Of\-Constraints()} to know the number of rows, while \-S\-I\-Z\-E\-\_\-\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R $\ast$ \-S\-I\-Z\-E\-\_\-\-P\-R\-E\-V\-I\-E\-W\-\_\-\-W\-I\-N\-D\-O\-W will be the number of columns.
-
-
-\begin{DoxyParams}{\-Parameters}
-{\em \-A} & \-Reference to matrix where the global constraints matrix \-\_\-\-A will be copied. \\
-\hline
-\end{DoxyParams}
 \hypertarget{classMIQPLinearConstraints_abf2bd3e8f0dfa5b919efa1b90b56232a}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!get\-R\-H\-S@{get\-R\-H\-S}}
 \index{get\-R\-H\-S@{get\-R\-H\-S}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{get\-R\-H\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::get\-R\-H\-S} (
@@ -197,11 +179,13 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 {}
 \end{DoxyParamCaption}
 )}}\label{classMIQPLinearConstraints_a656681ab464709b025e4522df3458fa1}
-\-Returns the total number of constraints.
-
-\begin{DoxyReturn}{\-Returns}
-\-\_\-n\-Constraints 
-\end{DoxyReturn}
+\hypertarget{classMIQPLinearConstraints_aea229cfd938c50c5d50ed68d18d119ab}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!initialize@{initialize}}
+\index{initialize@{initialize}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::initialize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMIQPLinearConstraints_aea229cfd938c50c5d50ed68d18d119ab}
 \hypertarget{classMIQPLinearConstraints_a2985d200d8e6baba2df17abfeaca8882}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!set\-Matrix\-Acl@{set\-Matrix\-Acl}}
 \index{set\-Matrix\-Acl@{set\-Matrix\-Acl}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{set\-Matrix\-Acl}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::set\-Matrix\-Acl} (
@@ -209,14 +193,14 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_a2985d200d8e6baba2df17abfeaca8882}
-\-Stacks matrices $C_{i}$ (\-Ci) from the shape and admissiblity constraints to set variable \hyperlink{classMIQPLinearConstraints_a100ca667cae697cda19ae4aef3543120}{\-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Acl} \hypertarget{classMIQPLinearConstraints_ad36868550b3d1f977a67e76a44160192}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!set\-Matrix\-Acr@{set\-Matrix\-Acr}}
+\hypertarget{classMIQPLinearConstraints_ad36868550b3d1f977a67e76a44160192}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!set\-Matrix\-Acr@{set\-Matrix\-Acr}}
 \index{set\-Matrix\-Acr@{set\-Matrix\-Acr}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{set\-Matrix\-Acr}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::set\-Matrix\-Acr} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_ad36868550b3d1f977a67e76a44160192}
-\-Stacks matrices $C_{i+1}$ (\-Cii) from the shape and admissibility constraints to set variable \hyperlink{classMIQPLinearConstraints_a26250a3f878cdacc0fa0c5ccf04d0bed}{\-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Acr} \hypertarget{classMIQPLinearConstraints_aad3232078ef93e2105a1c619c510f16a}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!update\-R\-H\-S@{update\-R\-H\-S}}
+\hypertarget{classMIQPLinearConstraints_aad3232078ef93e2105a1c619c510f16a}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!update\-R\-H\-S@{update\-R\-H\-S}}
 \index{update\-R\-H\-S@{update\-R\-H\-S}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{update\-R\-H\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::update\-R\-H\-S} (
 \begin{DoxyParamCaption}
@@ -238,13 +222,16 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 \hypertarget{classMIQPLinearConstraints_a1ac00fe6aca254b4dd8568e199bd20a4}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-admissibility\-Cnstr@{\-\_\-admissibility\-Cnstr}}
 \index{\-\_\-admissibility\-Cnstr@{\-\_\-admissibility\-Cnstr}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-admissibility\-Cnstr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-Admissibility\-Constraints}$>$ {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-admissibility\-Cnstr}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a1ac00fe6aca254b4dd8568e199bd20a4}
+\hypertarget{classMIQPLinearConstraints_aacba15c9dfc1c8f88e253a4f75e422fd}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-Ah@{\-\_\-\-Ah}}
+\index{\-\_\-\-Ah@{\-\_\-\-Ah}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\subsubsection[{\-\_\-\-Ah}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Ah}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_aacba15c9dfc1c8f88e253a4f75e422fd}
 \hypertarget{classMIQPLinearConstraints_a7ff7b3584cf9ff3e2124d80bd0684180}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-A\-Shape\-Admiss@{\-\_\-\-A\-Shape\-Admiss}}
 \index{\-\_\-\-A\-Shape\-Admiss@{\-\_\-\-A\-Shape\-Admiss}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-A\-Shape\-Admiss}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-A\-Shape\-Admiss}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a7ff7b3584cf9ff3e2124d80bd0684180}
 \hypertarget{classMIQPLinearConstraints_a0c0fbbb1b86c5d51a133ee661977c1f5}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-Bh@{\-\_\-\-Bh}}
 \index{\-\_\-\-Bh@{\-\_\-\-Bh}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-Bh}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Bh}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a0c0fbbb1b86c5d51a133ee661977c1f5}
-\-Input matrix $\mathbf{B}_h$ from the linear state process of the \-Co\-Mstate $\hat{\mathbf{h}}$. \-It is constant of size $6\times2$ and equal to\-: \[ \mathbf{B_h} = \left[ \begin{array}{c} \frac{\delta^3}{6}\mathbf{I}_2 \\ \frac{\delta t^2}{2} \mathbf{I}_2 \\ \delta t \mathbf{I}_2 \end{array} \right] \] \hypertarget{classMIQPLinearConstraints_ab3ea8be40c22fa7d8035c7b5c5c1010c}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-B\-Shape\-Admiss@{\-\_\-\-B\-Shape\-Admiss}}
+\hypertarget{classMIQPLinearConstraints_ab3ea8be40c22fa7d8035c7b5c5c1010c}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-B\-Shape\-Admiss@{\-\_\-\-B\-Shape\-Admiss}}
 \index{\-\_\-\-B\-Shape\-Admiss@{\-\_\-\-B\-Shape\-Admiss}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-B\-Shape\-Admiss}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-B\-Shape\-Admiss}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_ab3ea8be40c22fa7d8035c7b5c5c1010c}
 \hypertarget{classMIQPLinearConstraints_a403b0a1f684bda20236a759bd72950f2}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-dt@{\-\_\-dt}}

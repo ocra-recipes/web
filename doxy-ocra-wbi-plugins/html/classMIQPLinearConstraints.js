@@ -2,6 +2,7 @@ var classMIQPLinearConstraints =
 [
     [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f", null ],
     [ "~MIQPLinearConstraints", "classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2", null ],
+    [ "buildAh", "classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27", null ],
     [ "buildAShapeAdmiss", "classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e", null ],
     [ "buildBh", "classMIQPLinearConstraints.html#ae6ecdf8d77474a8b099f2526d6cc0d75", null ],
     [ "buildBShapeAdmiss", "classMIQPLinearConstraints.html#aa3752e85f1167129814b1a41d6b0198e", null ],
@@ -12,6 +13,7 @@ var classMIQPLinearConstraints =
     [ "getConstraintsMatrixA", "classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6", null ],
     [ "getRHS", "classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a", null ],
     [ "getTotalNumberOfConstraints", "classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1", null ],
+    [ "initialize", "classMIQPLinearConstraints.html#aea229cfd938c50c5d50ed68d18d119ab", null ],
     [ "setMatrixAcl", "classMIQPLinearConstraints.html#a2985d200d8e6baba2df17abfeaca8882", null ],
     [ "setMatrixAcr", "classMIQPLinearConstraints.html#ad36868550b3d1f977a67e76a44160192", null ],
     [ "updateRHS", "classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a", null ],
@@ -19,6 +21,7 @@ var classMIQPLinearConstraints =
     [ "_Acl", "classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120", null ],
     [ "_Acr", "classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed", null ],
     [ "_admissibilityCnstr", "classMIQPLinearConstraints.html#a1ac00fe6aca254b4dd8568e199bd20a4", null ],
+    [ "_Ah", "classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd", null ],
     [ "_AShapeAdmiss", "classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180", null ],
     [ "_Bh", "classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5", null ],
     [ "_BShapeAdmiss", "classMIQPLinearConstraints.html#ab3ea8be40c22fa7d8035c7b5c5c1010c", null ],

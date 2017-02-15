@@ -1,9 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ShapeConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="516,83,1129,112"/>
-<area shape="rect" id="node15" href="$Bounding_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Bounding.cpp" alt="" coords="1153,83,1556,112"/>
-<area shape="rect" id="node5" href="$MIQPLinearConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="213,160,859,189"/>
-<area shape="rect" id="node13" href="$ShapeConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ShapeConstraints.cpp" alt="" coords="883,160,1336,189"/>
-<area shape="rect" id="node7" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="5,237,536,267"/>
-<area shape="rect" id="node11" href="$MIQPLinearConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPLinearConstraints.cpp" alt="" coords="560,237,1045,267"/>
-<area shape="rect" id="node9" href="$MIQPController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp" alt="" coords="52,315,489,344"/>
+<area shape="rect" id="node3" href="$ShapeConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="904,83,1517,112"/>
+<area shape="rect" id="node21" href="$Bounding_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Bounding.cpp" alt="" coords="1541,83,1944,112"/>
+<area shape="rect" id="node5" href="$MIQPLinearConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="601,160,1247,189"/>
+<area shape="rect" id="node19" href="$ShapeConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ShapeConstraints.cpp" alt="" coords="1271,160,1724,189"/>
+<area shape="rect" id="node7" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="393,237,924,267"/>
+<area shape="rect" id="node17" href="$MIQPLinearConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPLinearConstraints.cpp" alt="" coords="948,237,1433,267"/>
+<area shape="rect" id="node9" href="$WalkingClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h" alt="" coords="145,315,668,344"/>
+<area shape="rect" id="node15" href="$MIQPController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp" alt="" coords="692,315,1129,344"/>
+<area shape="rect" id="node11" href="$ocra-icub-clients_2walking-client_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp" alt="" coords="5,392,381,421"/>
+<area shape="rect" id="node13" href="$WalkingClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp" alt="" coords="405,392,835,421"/>
 </map>

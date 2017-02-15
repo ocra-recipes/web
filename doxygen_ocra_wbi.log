@@ -123,8 +123,7 @@ Preprocessing /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-cli
 Parsing file /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/task-operations-demo/src/task-operations-demo.cpp...
 Preprocessing /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/task-operations-demo/src/TaskOpsClient.cpp...
 Parsing file /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/task-operations-demo/src/TaskOpsClient.cpp...
-Preprocessing /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/constraints/AdmissibilityConstraints.h/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/constraints/MIQPLinearConstraints.h:161: warning: End of comment block while inside formula.
-...
+Preprocessing /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/constraints/AdmissibilityConstraints.h...
 Parsing file /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/constraints/AdmissibilityConstraints.h...
 Preprocessing /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/constraints/Bounding.h...
 Parsing file /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/constraints/Bounding.h...
@@ -387,6 +386,10 @@ Generating docs for compound ExampleClient...
 Generat/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:48: warning: Found unknown command `\params'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:44: warning: The following parameters of MIQPController::MIQPController(int period, MIQPParameters params, ocra::Model::Ptr robotModel, const Eigen::MatrixXd &comStateRef) are not documented:
   parameter 'robotModel'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:143: warning: The following parameters of MIQPController::buildAh(int dt, Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:152: warning: The following parameters of MIQPController::buildBh(int dt, Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:84: warning: The following parameters of MIQPController::setCOMStateRefInPreviewWindow(unsigned int k, Eigen::VectorXd &comStateRef) are not documented:
   parameter 'k'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef)
@@ -395,8 +398,8 @@ Generat/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/wa
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:141: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::DebugRpcServerCallback::DebugRpcServerCallback(Thread &threadRef)
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:141: warning: The following parameters of Thread::DebugRpcServerCallback::DebugRpcServerCallback(Thread &threadRef) are not documented:
   parameter 'threadRef'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:94: warning: argument 'zmpError' of command @param is not found in the argument list of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value)
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:94: warning: The following parameters of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:95: warning: argument 'zmpError' of command @param is not found in the argument list of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:95: warning: The following parameters of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value) are not documented:
   parameter 'port'
   parameter 'value'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpController.h:169: warning: The following parameters of ZmpController::getFTSensorAdjointMatrix(FOOT whichFoot, Eigen::MatrixXd &T, Eigen::Vector3d &sensorPosition) are not documented:
@@ -462,348 +465,92 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Generating dot graphs using 33 parallel threads...
-Running dot for graph 1/160
-Running dot for graph 2/160
-Running dot for graph 3/160
-Running dot for graph 4/160
-Running dot for graph 5/160
-Running dot for graph 6/160
-Running dot for graph 7/160
-Running dot for graph 8/160
-Running dot for graph 9/160
-Running dot for graph 10/160
-Running dot for graph 11/160
-Running dot for graph 12/160
-Running dot for graph 13/160
-Running dot for graph 14/160
-Running dot for graph 15/160
-Running dot for graph 16/160
-Running dot for graph 17/160
-Running dot for graph 18/160
-Running dot for graph 19/160
-Running dot for graph 20/160
-Running dot for graph 21/160
-Running dot for graph 22/160
-Running dot for graph 23/160
-Running dot for graph 24/160
-Running dot for graph 25/160
-Running dot for graph 26/160
-Running dot for graph 27/160
-Running dot for graph 28/160
-Running dot for graph 29/160
-Running dot for graph 30/160
-Running dot for graph 31/160
-Running dot for graph 32/160
-Running dot for graph 33/160
-Running dot for graph 34/160
-Running dot for graph 35/160
-Running dot for graph 36/160
-Running dot for graph 37/160
-Running dot for graph 38/160
-Running dot for graph 39/160
-Running dot for graph 40/160
-Running dot for graph 41/160
-Running dot for graph 42/160
-Running dot for graph 43/160
-Running dot for graph 44/160
-Running dot for graph 45/160
-Running dot for graph 46/160
-Running dot for graph 47/160
-Running dot for graph 48/160
-Running dot for graph 49/160
-Running dot for graph 50/160
-Running dot for graph 51/160
-Running dot for graph 52/160
-Running dot for graph 53/160
-Running dot for graph 54/160
-Running dot for graph 55/160
-Running dot for graph 56/160
-Running dot for graph 57/160
-Running dot for graph 58/160
-Running dot for graph 59/160
-Running dot for graph 60/160
-Running dot for graph 61/160
-Running dot for graph 62/160
-Running dot for graph 63/160
-Running dot for graph 64/160
-Running dot for graph 65/160
-Running dot for graph 66/160
-Running dot for graph 67/160
-Running dot for graph 68/160
-Running dot for graph 69/160
-Running dot for graph 70/160
-Running dot for graph 71/160
-Running dot for graph 72/160
-Running dot for graph 73/160
-Running dot for graph 74/160
-Running dot for graph 75/160
-Running dot for graph 76/160
-Running dot for graph 77/160
-Running dot for graph 78/160
-Running dot for graph 79/160
-Running dot for graph 80/160
-Running dot for graph 81/160
-Running dot for graph 82/160
-Running dot for graph 83/160
-Running dot for graph 84/160
-Running dot for graph 85/160
-Running dot for graph 86/160
-Running dot for graph 87/160
-Running dot for graph 88/160
-Running dot for graph 89/160
-Running dot for graph 90/160
-Running dot for graph 91/160
-Running dot for graph 92/160
-Running dot for graph 93/160
-Running dot for graph 94/160
-Running dot for graph 95/160
-Running dot for graph 96/160
-Running dot for graph 97/160
-Running dot for graph 98/160
-Running dot for graph 99/160
-Running dot for graph 100/160
-Running dot for graph 101/160
-Running dot for graph 102/160
-Running dot for graph 103/160
-Running dot for graph 104/160
-Running dot for graph 105/160
-Running dot for graph 106/160
-Running dot for graph 107/160
-Running dot for graph 108/160
-Running dot for graph 109/160
-Running dot for graph 110/160
-Running dot for graph 111/160
-Running dot for graph 112/160
-Running dot for graph 113/160
-Running dot for graph 114/160
-Running dot for graph 115/160
-Running dot for graph 116/160
-Running dot for graph 117/160
-Running dot for graph 118/160
-Running dot for graph 119/160
-Running dot for graph 120/160
-Running dot for graph 121/160
-Running dot for graph 122/160
-Running dot for graph 123/160
-Running dot for graph 124/160
-Running dot for graph 125/160
-Running dot for graph 126/160
-Running dot for graph 127/160
-Running dot for graph 128/160
-Running dot for graph 129/160
-Running dot for graph 130/160
-Running dot for graph 131/160
-Running dot for graph 132/160
-Running dot for graph 133/160
-Running dot for graph 134/160
-Running dot for graph 135/160
-Running dot for graph 136/160
-Running dot for graph 137/160
-Running dot for graph 138/160
-Running dot for graph 139/160
-Running dot for graph 140/160
-Running dot for graph 141/160
-Running dot for graph 142/160
-Running dot for graph 143/160
-Running dot for graph 144/160
-Running dot for graph 145/160
-Running dot for graph 146/160
-Running dot for graph 147/160
-Running dot for graph 148/160
-Running dot for graph 149/160
-Running dot for graph 150/160
-Running dot for graph 151/160
-Running dot for graph 152/160
-Running dot for graph 153/160
-Running dot for graph 154/160
-Running dot for graph 155/160
-Running dot for graph 156/160
-Running dot for graph 157/160
-Running dot for graph 158/160
-Running dot for graph 159/160
-Running dot for graph 160/160
-Patching output file 1/182
-Patching output file 2/182
-Patching output file 3/182
-Patching output file 4/182
-Patching output file 5/182
-Patching output file 6/182
-Patching output file 7/182
-Patching output file 8/182
-Patching output file 9/182
-Patching output file 10/182
-Patching output file 11/182
-Patching output file 12/182
-Patching output file 13/182
-Patching output file 14/182
-Patching output file 15/182
-Patching output file 16/182
-Patching output file 17/182
-Patching output file 18/182
-Patching output file 19/182
-Patching output file 20/182
-Patching output file 21/182
-Patching output file 22/182
-Patching output file 23/182
-Patching output file 24/182
-Patching output file 25/182
-Patching output file 26/182
-Patching output file 27/182
-Patching output file 28/182
-Patching output file 29/182
-Patching output file 30/182
-Patching output file 31/182
-Patching output file 32/182
-Patching output file 33/182
-Patching output file 34/182
-Patching output file 35/182
-Patching output file 36/182
-Patching output file 37/182
-Patching output file 38/182
-Patching output file 39/182
-Patching output file 40/182
-Patching output file 41/182
-Patching output file 42/182
-Patching output file 43/182
-Patching output file 44/182
-Patching output file 45/182
-Patching output file 46/182
-Patching output file 47/182
-Patching output file 48/182
-Patching output file 49/182
-Patching output file 50/182
-Patching output file 51/182
-Patching output file 52/182
-Patching output file 53/182
-Patching output file 54/182
-Patching output file 55/182
-Patching output file 56/182
-Patching output file 57/182
-Patching output file 58/182
-Patching output file 59/182
-Patching output file 60/182
-Patching output file 61/182
-Patching output file 62/182
-Patching output file 63/182
-Patching output file 64/182
-Patching output file 65/182
-Patching output file 66/182
-Patching output file 67/182
-Patching output file 68/182
-Patching output file 69/182
-Patching output file 70/182
-Patching output file 71/182
-Patching output file 72/182
-Patching output file 73/182
-Patching output file 74/182
-Patching output file 75/182
-Patching output file 76/182
-Patching output file 77/182
-Patching output file 78/182
-Patching output file 79/182
-Patching output file 80/182
-Patching output file 81/182
-Patching output file 82/182
-Patching output file 83/182
-Patching output file 84/182
-Patching output file 85/182
-Patching output file 86/182
-Patching output file 87/182
-Patching output file 88/182
-Patching output file 89/182
-Patching output file 90/182
-Patching output file 91/182
-Patching output file 92/182
-Patching output file 93/182
-Patching output file 94/182
-Patching output file 95/182
-Patching output file 96/182
-Patching output file 97/182
-Patching output file 98/182
-Patching output file 99/182
-Patching output file 100/182
-Patching output file 101/182
-Patching output file 102/182
-Patching output file 103/182
-Patching output file 104/182
-Patching output file 105/182
-Patching output file 106/182
-Patching output file 107/182
-Patching output file 108/182
-Patching output file 109/182
-Patching output file 110/182
-Patching output file 111/182
-Patching output file 112/182
-Patching output file 113/182
-Patching output file 114/182
-Patching output file 115/182
-Patching output file 116/182
-Patching output file 117/182
-Patching output file 118/182
-Patching output file 119/182
-Patching output file 120/182
-Patching output file 121/182
-Patching output file 122/182
-Patching output file 123/182
-Patching output file 124/182
-Patching output file 125/182
-Patching output file 126/182
-Patching output file 127/182
-Patching output file 128/182
-Patching output file 129/182
-Patching output file 130/182
-Patching output file 131/182
-Patching output file 132/182
-Patching output file 133/182
-Patching output file 134/182
-Patching output file 135/182
-Patching output file 136/182
-Patching output file 137/182
-Patching output file 138/182
-Patching output file 139/182
-Patching output file 140/182
-Patching output file 141/182
-Patching output file 142/182
-Patching output file 143/182
-Patching output file 144/182
-Patching output file 145/182
-Patching output file 146/182
-Patching output file 147/182
-Patching output file 148/182
-Patching output file 149/182
-Patching output file 150/182
-Patching output file 151/182
-Patching output file 152/182
-Patching output file 153/182
-Patching output file 154/182
-Patching output file 155/182
-Patching output file 156/182
-Patching output file 157/182
-Patching output file 158/182
-Patching output file 159/182
-Patching output file 160/182
-Patching output file 161/182
-Patching output file 162/182
-Patching output file 163/182
-Patching output file 164/182
-Patching output file 165/182
-Patching output file 166/182
-Patching output file 167/182
-Patching output file 168/182
-Patching output file 169/182
-Patching output file 170/182
-Patching output file 171/182
-Patching output file 172/182
-Patching output file 173/182
-Patching output file 174/182
-Patching output file 175/182
-Patching output file 176/182
-Patching output file 177/182
-Patching output file 178/182
-Patching output file 179/182
-Patching output file 180/182
-Patching output file 181/182
-Patching output file 182/182
-symbol cache used 802/65536 hits=43799 misses=802
-lookup cache used 1052/65536 hits=3454 misses=1074
+Running dot for graph 1/34
+Running dot for graph 2/34
+Running dot for graph 3/34
+Running dot for graph 4/34
+Running dot for graph 5/34
+Running dot for graph 6/34
+Running dot for graph 7/34
+Running dot for graph 8/34
+Running dot for graph 9/34
+Running dot for graph 10/34
+Running dot for graph 11/34
+Running dot for graph 12/34
+Running dot for graph 13/34
+Running dot for graph 14/34
+Running dot for graph 15/34
+Running dot for graph 16/34
+Running dot for graph 17/34
+Running dot for graph 18/34
+Running dot for graph 19/34
+Running dot for graph 20/34
+Running dot for graph 21/34
+Running dot for graph 22/34
+Running dot for graph 23/34
+Running dot for graph 24/34
+Running dot for graph 25/34
+Running dot for graph 26/34
+Running dot for graph 27/34
+Running dot for graph 28/34
+Running dot for graph 29/34
+Running dot for graph 30/34
+Running dot for graph 31/34
+Running dot for graph 32/34
+Running dot for graph 33/34
+Running dot for graph 34/34
+Patching output file 1/52
+Patching output file 2/52
+Patching output file 3/52
+Patching output file 4/52
+Patching output file 5/52
+Patching output file 6/52
+Patching output file 7/52
+Patching output file 8/52
+Patching output file 9/52
+Patching output file 10/52
+Patching output file 11/52
+Patching output file 12/52
+Patching output file 13/52
+Patching output file 14/52
+Patching output file 15/52
+Patching output file 16/52
+Patching output file 17/52
+Patching output file 18/52
+Patching output file 19/52
+Patching output file 20/52
+Patching output file 21/52
+Patching output file 22/52
+Patching output file 23/52
+Patching output file 24/52
+Patching output file 25/52
+Patching output file 26/52
+Patching output file 27/52
+Patching output file 28/52
+Patching output file 29/52
+Patching output file 30/52
+Patching output file 31/52
+Patching output file 32/52
+Patching output file 33/52
+Patching output file 34/52
+Patching output file 35/52
+Patching output file 36/52
+Patching output file 37/52
+Patching output file 38/52
+Patching output file 39/52
+Patching output file 40/52
+Patching output file 41/52
+Patching output file 42/52
+Patching output file 43/52
+Patching output file 44/52
+Patching output file 45/52
+Patching output file 46/52
+Patching output file 47/52
+Patching output file 48/52
+Patching output file 49/52
+Patching output file 50/52
+Patching output file 51/52
+Patching output file 52/52
+symbol cache used 807/65536 hits=43979 misses=807
+lookup cache used 1058/65536 hits=3465 misses=1080
 finished...

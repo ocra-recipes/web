@@ -1,35 +1,35 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$IcubClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/IcubClient.h" alt="" coords="2811,237,3160,267"/>
-<area shape="rect" id="node47" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="2397,83,2773,112"/>
-<area shape="rect" id="node75" href="$OcraWbiConversions_8cpp.html" title="A utility class full of static conversion functions." alt="" coords="3048,83,3395,112"/>
-<area shape="rect" id="node5" href="$ExampleClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/include/example&#45;client/ExampleClient.h" alt="" coords="5253,315,5789,344"/>
-<area shape="rect" id="node7" href="$example-client_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/example&#45;client.cpp" alt="" coords="5303,392,5740,421"/>
-<area shape="rect" id="node12" href="$SittingDemoClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/include/sitting&#45;demo/SittingDemoClient.h" alt="" coords="1041,315,1572,344"/>
-<area shape="rect" id="node14" href="$ocra-icub-clients_2sitting-demo_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/main.cpp" alt="" coords="671,392,1039,421"/>
-<area shape="rect" id="node19" href="$StandingDemoClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/include/standing&#45;demo/StandingDemoClient.h" alt="" coords="1888,315,2461,344"/>
-<area shape="rect" id="node21" href="$ocra-icub-clients_2standing-demo_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/main.cpp" alt="" coords="1532,392,1913,421"/>
-<area shape="rect" id="node26" href="$SteppingDemoClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/include/stepping&#45;demo/SteppingDemoClient.h" alt="" coords="2699,315,3272,344"/>
-<area shape="rect" id="node28" href="$stepping-demo_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/stepping&#45;demo.cpp" alt="" coords="2436,392,2876,421"/>
-<area shape="rect" id="node33" href="$TaskOpsClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/include/task&#45;operations&#45;demo/TaskOpsClient.h" alt="" coords="3349,315,3968,344"/>
-<area shape="rect" id="node35" href="$task-operations-demo_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/task&#45;operations&#45;demo.cpp" alt="" coords="3399,392,3919,421"/>
-<area shape="rect" id="node40" href="$WalkingClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h" alt="" coords="4376,315,4899,344"/>
-<area shape="rect" id="node42" href="$ocra-icub-clients_2walking-client_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp" alt="" coords="4449,392,4825,421"/>
-<area shape="rect" id="node9" href="$ExampleClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/ExampleClient.cpp" alt="" coords="5764,392,6201,421"/>
-<area shape="rect" id="node16" href="$SittingDemoClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/SittingDemoClient.cpp" alt="" coords="1063,392,1508,421"/>
-<area shape="rect" id="node23" href="$StandingDemoClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/StandingDemoClient.cpp" alt="" coords="1937,392,2412,421"/>
-<area shape="rect" id="node30" href="$SteppingDemoClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/SteppingDemoClient.cpp" alt="" coords="2900,392,3375,421"/>
-<area shape="rect" id="node37" href="$TaskOpsClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/TaskOpsClient.cpp" alt="" coords="3943,392,4425,421"/>
-<area shape="rect" id="node44" href="$WalkingClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp" alt="" coords="4849,392,5279,421"/>
-<area shape="rect" id="node49" href="$IcubControllerServer_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/IcubControllerServer.h" alt="" coords="1027,160,1515,189"/>
-<area shape="rect" id="node63" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="1659,160,2189,189"/>
-<area shape="rect" id="node68" href="$ModelInitializer_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/ModelInitializer.h" alt="" coords="2213,160,2589,189"/>
-<area shape="rect" id="node73" href="$OcraWbiModel_8cpp.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="2613,160,2923,189"/>
-<area shape="rect" id="node51" href="$Thread_8h.html" title="The thread class for the controller server." alt="" coords="609,237,1020,267"/>
-<area shape="rect" id="node61" href="$IcubControllerServer_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/IcubControllerServer.cpp" alt="" coords="1080,237,1461,267"/>
-<area shape="rect" id="node53" href="$Module_8h.html" title="Module class for the controller server." alt="" coords="228,315,639,344"/>
-<area shape="rect" id="node59" href="$Thread_8cpp.html" title="The thread class for the controller server." alt="" coords="663,315,967,344"/>
-<area shape="rect" id="node55" href="$ocra-icub-server_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/main.cpp" alt="" coords="5,392,296,421"/>
-<area shape="rect" id="node57" href="$Module_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/Module.cpp" alt="" coords="320,392,627,421"/>
-<area shape="rect" id="node65" href="$MIQPController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp" alt="" coords="1705,237,2143,267"/>
-<area shape="rect" id="node71" href="$ModelInitializer_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/ModelInitializer.cpp" alt="" coords="2247,237,2556,267"/>
+<area shape="rect" id="node3" href="$IcubClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/IcubClient.h" alt="" coords="3068,237,3417,267"/>
+<area shape="rect" id="node47" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="3785,83,4161,112"/>
+<area shape="rect" id="node76" href="$OcraWbiConversions_8cpp.html" title="A utility class full of static conversion functions." alt="" coords="4185,83,4532,112"/>
+<area shape="rect" id="node5" href="$ExampleClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/include/example&#45;client/ExampleClient.h" alt="" coords="417,315,953,344"/>
+<area shape="rect" id="node7" href="$example-client_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/example&#45;client.cpp" alt="" coords="5,392,443,421"/>
+<area shape="rect" id="node12" href="$SittingDemoClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/include/sitting&#45;demo/SittingDemoClient.h" alt="" coords="1277,315,1808,344"/>
+<area shape="rect" id="node14" href="$ocra-icub-clients_2sitting-demo_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/main.cpp" alt="" coords="928,392,1296,421"/>
+<area shape="rect" id="node19" href="$StandingDemoClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/include/standing&#45;demo/StandingDemoClient.h" alt="" coords="2145,315,2719,344"/>
+<area shape="rect" id="node21" href="$ocra-icub-clients_2standing-demo_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/main.cpp" alt="" coords="1789,392,2171,421"/>
+<area shape="rect" id="node26" href="$SteppingDemoClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/include/stepping&#45;demo/SteppingDemoClient.h" alt="" coords="2956,315,3529,344"/>
+<area shape="rect" id="node28" href="$stepping-demo_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/stepping&#45;demo.cpp" alt="" coords="2693,392,3133,421"/>
+<area shape="rect" id="node33" href="$TaskOpsClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/include/task&#45;operations&#45;demo/TaskOpsClient.h" alt="" coords="3607,315,4225,344"/>
+<area shape="rect" id="node35" href="$task-operations-demo_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/task&#45;operations&#45;demo.cpp" alt="" coords="3656,392,4176,421"/>
+<area shape="rect" id="node40" href="$WalkingClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h" alt="" coords="4549,315,5072,344"/>
+<area shape="rect" id="node42" href="$ocra-icub-clients_2walking-client_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp" alt="" coords="4707,392,5083,421"/>
+<area shape="rect" id="node9" href="$ExampleClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/ExampleClient.cpp" alt="" coords="467,392,904,421"/>
+<area shape="rect" id="node16" href="$SittingDemoClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/SittingDemoClient.cpp" alt="" coords="1320,392,1765,421"/>
+<area shape="rect" id="node23" href="$StandingDemoClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/StandingDemoClient.cpp" alt="" coords="2195,392,2669,421"/>
+<area shape="rect" id="node30" href="$SteppingDemoClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/SteppingDemoClient.cpp" alt="" coords="3157,392,3632,421"/>
+<area shape="rect" id="node37" href="$TaskOpsClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/TaskOpsClient.cpp" alt="" coords="4200,392,4683,421"/>
+<area shape="rect" id="node44" href="$WalkingClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp" alt="" coords="5107,392,5536,421"/>
+<area shape="rect" id="node49" href="$IcubControllerServer_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/IcubControllerServer.h" alt="" coords="4675,160,5163,189"/>
+<area shape="rect" id="node63" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="4017,160,4548,189"/>
+<area shape="rect" id="node69" href="$ModelInitializer_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/ModelInitializer.h" alt="" coords="3477,160,3853,189"/>
+<area shape="rect" id="node74" href="$OcraWbiModel_8cpp.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="5187,160,5496,189"/>
+<area shape="rect" id="node51" href="$Thread_8h.html" title="The thread class for the controller server." alt="" coords="4816,237,5227,267"/>
+<area shape="rect" id="node61" href="$IcubControllerServer_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/IcubControllerServer.cpp" alt="" coords="5251,237,5632,267"/>
+<area shape="rect" id="node53" href="$Module_8h.html" title="Module class for the controller server." alt="" coords="5297,315,5708,344"/>
+<area shape="rect" id="node59" href="$Thread_8cpp.html" title="The thread class for the controller server." alt="" coords="5732,315,6036,344"/>
+<area shape="rect" id="node55" href="$ocra-icub-server_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/main.cpp" alt="" coords="5560,392,5851,421"/>
+<area shape="rect" id="node57" href="$Module_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/Module.cpp" alt="" coords="5875,392,6181,421"/>
+<area shape="rect" id="node66" href="$MIQPController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp" alt="" coords="4320,237,4757,267"/>
+<area shape="rect" id="node72" href="$ModelInitializer_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/ModelInitializer.cpp" alt="" coords="3511,237,3820,267"/>
 </map>

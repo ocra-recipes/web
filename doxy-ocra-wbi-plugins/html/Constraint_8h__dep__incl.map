@@ -1,16 +1,19 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$AdmissibilityConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="351,83,1001,112"/>
-<area shape="rect" id="node15" href="$Bounding_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Bounding.h" alt="" coords="1289,83,1852,112"/>
-<area shape="rect" id="node17" href="$ShapeConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="945,160,1559,189"/>
-<area shape="rect" id="node24" href="$Constancy_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Constancy.h" alt="" coords="1876,83,2447,112"/>
-<area shape="rect" id="node28" href="$Sequentiality_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Sequentiality.h" alt="" coords="2471,83,3055,112"/>
-<area shape="rect" id="node5" href="$MIQPLinearConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="213,237,859,267"/>
-<area shape="rect" id="node13" href="$AdmissibilityConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/AdmissibilityConstraints.cpp" alt="" coords="431,160,921,189"/>
-<area shape="rect" id="node7" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="5,315,536,344"/>
-<area shape="rect" id="node11" href="$MIQPLinearConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPLinearConstraints.cpp" alt="" coords="560,315,1045,344"/>
-<area shape="rect" id="node9" href="$MIQPController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp" alt="" coords="52,392,489,421"/>
-<area shape="rect" id="node22" href="$Bounding_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Bounding.cpp" alt="" coords="1583,160,1985,189"/>
-<area shape="rect" id="node20" href="$ShapeConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ShapeConstraints.cpp" alt="" coords="1025,237,1479,267"/>
-<area shape="rect" id="node26" href="$Constancy_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Constancy.cpp" alt="" coords="2009,160,2420,189"/>
-<area shape="rect" id="node30" href="$Sequentiality_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Sequentiality.cpp" alt="" coords="2551,160,2975,189"/>
+<area shape="rect" id="node3" href="$AdmissibilityConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="739,83,1389,112"/>
+<area shape="rect" id="node21" href="$Bounding_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Bounding.h" alt="" coords="1677,83,2240,112"/>
+<area shape="rect" id="node23" href="$ShapeConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="1333,160,1947,189"/>
+<area shape="rect" id="node30" href="$Constancy_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Constancy.h" alt="" coords="2264,83,2835,112"/>
+<area shape="rect" id="node34" href="$Sequentiality_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/Sequentiality.h" alt="" coords="2859,83,3443,112"/>
+<area shape="rect" id="node5" href="$MIQPLinearConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="601,237,1247,267"/>
+<area shape="rect" id="node19" href="$AdmissibilityConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/AdmissibilityConstraints.cpp" alt="" coords="819,160,1309,189"/>
+<area shape="rect" id="node7" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="393,315,924,344"/>
+<area shape="rect" id="node17" href="$MIQPLinearConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPLinearConstraints.cpp" alt="" coords="948,315,1433,344"/>
+<area shape="rect" id="node9" href="$WalkingClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h" alt="" coords="145,392,668,421"/>
+<area shape="rect" id="node15" href="$MIQPController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp" alt="" coords="692,392,1129,421"/>
+<area shape="rect" id="node11" href="$ocra-icub-clients_2walking-client_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp" alt="" coords="5,469,381,499"/>
+<area shape="rect" id="node13" href="$WalkingClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp" alt="" coords="405,469,835,499"/>
+<area shape="rect" id="node28" href="$Bounding_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Bounding.cpp" alt="" coords="1971,160,2373,189"/>
+<area shape="rect" id="node26" href="$ShapeConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ShapeConstraints.cpp" alt="" coords="1413,237,1867,267"/>
+<area shape="rect" id="node32" href="$Constancy_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Constancy.cpp" alt="" coords="2397,160,2808,189"/>
+<area shape="rect" id="node36" href="$Sequentiality_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/Sequentiality.cpp" alt="" coords="2939,160,3363,189"/>
 </map>

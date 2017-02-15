@@ -131,39 +131,168 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00058"></a><a class="code" href="classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530">00058</a>     Eigen::VectorXd <a class="code" href="classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530">_rhs</a>;
 <a name="l00059"></a><a class="code" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">00059</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">_Acr</a>;
 <a name="l00060"></a><a class="code" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">00060</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">_Acl</a>;
-<a name="l00061"></a><a class="code" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">00061</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">_Q</a>;
-<a name="l00062"></a><a class="code" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">00062</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">_T</a>;
-<a name="l00063"></a>00063 
-<a name="l00074"></a><a class="code" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">00074</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a>;
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076     <span class="comment">/* Period in milliseconds */</span>
-<a name="l00077"></a><a class="code" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">00077</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">_dt</a>;
-<a name="l00078"></a>00078     <span class="comment">/* Length of preview window */</span>
-<a name="l00079"></a><a class="code" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">00079</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">_N</a>;
-<a name="l00080"></a>00080     <span class="comment">/* Total number of constraints*/</span>
-<a name="l00081"></a><a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">00081</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a>;
-<a name="l00082"></a>00082 <span class="keyword">public</span>:
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084     <a class="code" href="classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f">MIQPLinearConstraints</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dt, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N);
-<a name="l00085"></a>00085     <span class="keyword">virtual</span> <a class="code" href="classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2">~MIQPLinearConstraints</a> ();
-<a name="l00086"></a>00086     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a>(Eigen::VectorXd xi_k);
-<a name="l00092"></a>00092     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a>(Eigen::MatrixXd &amp;A);
-<a name="l00098"></a>00098     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints</a>();
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a">getRHS</a>(Eigen::VectorXd &amp;rhs);
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="keyword">protected</span>:
-<a name="l00122"></a>00122     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow</a>();
-<a name="l00128"></a>00128     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e">buildAShapeAdmiss</a>();
-<a name="l00134"></a>00134     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aa3752e85f1167129814b1a41d6b0198e">buildBShapeAdmiss</a>();
-<a name="l00138"></a>00138     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a5231950d561e42e0d6590a398bec771c">buildFcBarShapeAdmiss</a>();
-<a name="l00142"></a>00142     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ad36868550b3d1f977a67e76a44160192">setMatrixAcr</a>();
-<a name="l00146"></a>00146     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a2985d200d8e6baba2df17abfeaca8882">setMatrixAcl</a>();
-<a name="l00154"></a>00154     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a127e7ddd641f11d1b6137c59d80ef8b5">buildMatrixQ</a>();
-<a name="l00162"></a>00162     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#addee397c47be26fd9eebbe8374c3cc30">buildMatrixT</a>();
-<a name="l00168"></a>00168     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ae6ecdf8d77474a8b099f2526d6cc0d75">buildBh</a>();
-<a name="l00169"></a>00169 };
-<a name="l00170"></a>00170 <span class="preprocessor">#endif</span>
+<a name="l00061"></a>00061     
+<a name="l00062"></a>00062     <span class="comment">/*</span>
+<a name="l00063"></a>00063 <span class="comment">     *</span>
+<a name="l00064"></a>00064 <span class="comment">     * \f[</span>
+<a name="l00065"></a>00065 <span class="comment">     \mathbf{Q} = \left[\begin{array}{cc}</span>
+<a name="l00066"></a>00066 <span class="comment">     \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times6}\\</span>
+<a name="l00067"></a>00067 <span class="comment">     \mathbf{0}_{6\times10} &amp; \mathbf{A_h}_{6\times6}</span>
+<a name="l00068"></a>00068 <span class="comment">     \end{array}\right]</span>
+<a name="l00069"></a>00069 <span class="comment">     * \f]</span>
+<a name="l00070"></a>00070 <span class="comment">     */</span>
+<a name="l00071"></a><a class="code" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">00071</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">_Q</a>;
+<a name="l00072"></a>00072     
+<a name="l00073"></a>00073     <span class="comment">/* Matrix T in \f$ \underset{x}{\text{min}}\; x^TQx^T + c^Tx \f$</span>
+<a name="l00074"></a>00074 <span class="comment">     *</span>
+<a name="l00075"></a>00075 <span class="comment">     \f[</span>
+<a name="l00076"></a>00076 <span class="comment">     \mathbf{T} = \left[\begin{array}{cc}</span>
+<a name="l00077"></a>00077 <span class="comment">     \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times2}\\</span>
+<a name="l00078"></a>00078 <span class="comment">     \mathbf{0}_{6\times10} &amp; \mathbf{B_h}_{6\times2}</span>
+<a name="l00079"></a>00079 <span class="comment">     \end{array}\right]</span>
+<a name="l00080"></a>00080 <span class="comment">     \f]</span>
+<a name="l00081"></a>00081 <span class="comment">     *</span>
+<a name="l00082"></a>00082 <span class="comment">     * @see MIQPController::_Bh</span>
+<a name="l00083"></a>00083 <span class="comment">     */</span>
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">00085</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">_T</a>;
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087     <span class="comment">/*</span>
+<a name="l00088"></a>00088 <span class="comment">     *  Input matrix \f$\mathbf{B}_h\f$ from the linear state process of the CoMstate \f$\hat{\mathbf{h}}\f$. It is constant of size \f$6\times2\f$ and equal to:</span>
+<a name="l00089"></a>00089 <span class="comment">     \f[</span>
+<a name="l00090"></a>00090 <span class="comment">     \mathbf{B_h} = \left[ \begin{array}{c}</span>
+<a name="l00091"></a>00091 <span class="comment">     \frac{\delta^3}{6}\mathbf{I}_2 \\</span>
+<a name="l00092"></a>00092 <span class="comment">     \frac{\delta t^2}{2} \mathbf{I}_2     \\</span>
+<a name="l00093"></a>00093 <span class="comment">     \delta t \mathbf{I}_2</span>
+<a name="l00094"></a>00094 <span class="comment">     \end{array} \right]</span>
+<a name="l00095"></a>00095 <span class="comment">     \f]</span>
+<a name="l00096"></a>00096 <span class="comment">     */</span>
+<a name="l00097"></a><a class="code" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">00097</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a>;
+<a name="l00098"></a>00098     
+<a name="l00099"></a>00099     <span class="comment">/*</span>
+<a name="l00100"></a>00100 <span class="comment">     *  State matrix \f$A_h\f$ from the CoM jerk integration scheme.</span>
+<a name="l00101"></a>00101 <span class="comment">     *</span>
+<a name="l00102"></a>00102 <span class="comment">     *  \f[</span>
+<a name="l00103"></a>00103 <span class="comment">     *  \mathbf{h}_{k+1} = \mathbf{A}_h \mathbf{h}_k + \mathbf{B}_h \mathbf{u}_k</span>
+<a name="l00104"></a>00104 <span class="comment">     *  \f]</span>
+<a name="l00105"></a>00105 <span class="comment">     *</span>
+<a name="l00106"></a>00106 <span class="comment">     *  It is a constant matrix of size \f$6\times6\f$ equal to:</span>
+<a name="l00107"></a>00107 <span class="comment">     *  \f[</span>
+<a name="l00108"></a>00108 <span class="comment">     *  \mathbf{A_h} = \left[ \begin{array}{ccc}</span>
+<a name="l00109"></a>00109 <span class="comment">     *  \mathbf{I}_2  &amp; \delta t \mathbf{I}_2  &amp;  \frac{\delta t^2}{2} \mathbf{I}_2 \\</span>
+<a name="l00110"></a>00110 <span class="comment">     *   0  &amp;     \mathbf{I}_2     &amp;  \delta t \mathbf{I}_2    \\</span>
+<a name="l00111"></a>00111 <span class="comment">     *   0  &amp;     0     &amp;      \mathbf{I}_2</span>
+<a name="l00112"></a>00112 <span class="comment">     *  \end{array} \right]</span>
+<a name="l00113"></a>00113 <span class="comment">     *  \f]</span>
+<a name="l00114"></a>00114 <span class="comment">     */</span>
+<a name="l00115"></a><a class="code" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">00115</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">_Ah</a>;
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117     <span class="comment">/* Period in milliseconds */</span>
+<a name="l00118"></a><a class="code" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">00118</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">_dt</a>;
+<a name="l00119"></a>00119     
+<a name="l00120"></a>00120     <span class="comment">/* Length of preview window */</span>
+<a name="l00121"></a><a class="code" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">00121</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">_N</a>;
+<a name="l00122"></a>00122     
+<a name="l00123"></a>00123     <span class="comment">/* Total number of constraints*/</span>
+<a name="l00124"></a><a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">00124</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a>;
+<a name="l00125"></a>00125 <span class="keyword">public</span>:
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127     <a class="code" href="classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f">MIQPLinearConstraints</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dt, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N);
+<a name="l00128"></a>00128     <span class="keyword">virtual</span> <a class="code" href="classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2">~MIQPLinearConstraints</a> ();
+<a name="l00129"></a>00129     
+<a name="l00130"></a>00130     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aea229cfd938c50c5d50ed68d18d119ab">initialize</a>();
+<a name="l00131"></a>00131     
+<a name="l00132"></a>00132     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a>(Eigen::VectorXd xi_k);
+<a name="l00133"></a>00133     <span class="comment">/*</span>
+<a name="l00134"></a>00134 <span class="comment">     Retrieves the constraints matrix \f$\mathbf{A}\f$. Before passing a matrix to copy MIQPLinearConstraints::_A allocate the space for A by calling getTotalNumberOfConstraints() to know the number of rows, while SIZE_INPUT_VECTOR * SIZE_PREVIEW_WINDOW will be the number of columns.</span>
+<a name="l00135"></a>00135 <span class="comment"></span>
+<a name="l00136"></a>00136 <span class="comment">     @param A Reference to matrix where the global constraints matrix _A will be copied.</span>
+<a name="l00137"></a>00137 <span class="comment">     */</span>
+<a name="l00138"></a>00138     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a>(Eigen::MatrixXd &amp;A);
+<a name="l00139"></a>00139     <span class="comment">/*</span>
+<a name="l00140"></a>00140 <span class="comment">     Returns the total number of constraints.</span>
+<a name="l00141"></a>00141 <span class="comment"></span>
+<a name="l00142"></a>00142 <span class="comment">     @return _nConstraints</span>
+<a name="l00143"></a>00143 <span class="comment">     */</span>
+<a name="l00144"></a>00144     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints</a>();
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a">getRHS</a>(Eigen::VectorXd &amp;rhs);
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148 <span class="keyword">protected</span>:
+<a name="l00149"></a>00149     <span class="comment">/*</span>
+<a name="l00150"></a>00150 <span class="comment">     Basically builds matrix \f$\mathbf{A}\f$ (MIQPLinearConstraints::_AShapeAdmiss) in the partial expression for the MIQP linear constraints, containing only shape and admissibility constraints, such that:</span>
+<a name="l00151"></a>00151 <span class="comment">     \f[</span>
+<a name="l00152"></a>00152 <span class="comment">     \mathbf{A} \mathcal{X}_{k,N} \leq \bar{\mathbf{f}}_c - \mathbf{B} \xi_k</span>
+<a name="l00153"></a>00153 <span class="comment">     \f]</span>
+<a name="l00154"></a>00154 <span class="comment"></span>
+<a name="l00155"></a>00155 <span class="comment"></span>
+<a name="l00156"></a>00156 <span class="comment">     \f[</span>
+<a name="l00157"></a>00157 <span class="comment">     \begin{array}{cccccc}</span>
+<a name="l00158"></a>00158 <span class="comment">     A_{\text{cr}} Q^0 T  &amp;  0  &amp;  0  &amp;  0  &amp;  \hdots  &amp; 0\\</span>
+<a name="l00159"></a>00159 <span class="comment">     (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T  &amp;  A_{\text{cr}}Q^0 T  &amp;  0  &amp;  0  &amp;  \hdots &amp; 0  \\</span>
+<a name="l00160"></a>00160 <span class="comment">     (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T &amp;  (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T  &amp;  A_{\text{cr}} Q^0 T  &amp;  0  &amp;  \hdots &amp; 0  \\</span>
+<a name="l00161"></a>00161 <span class="comment">     \vdots &amp; \vdots  &amp;    &amp;    &amp;   &amp; \vdots \\</span>
+<a name="l00162"></a>00162 <span class="comment">     (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T &amp; (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T &amp; \hdots &amp; \hdots &amp; \hdots &amp; A_{\text{cr}}Q^0T \\</span>
+<a name="l00163"></a>00163 <span class="comment">     \end{array}</span>
+<a name="l00164"></a>00164 <span class="comment">     \f]</span>
+<a name="l00165"></a>00165 <span class="comment"></span>
+<a name="l00166"></a>00166 <span class="comment">     \see buildAShapeAdmiss()</span>
+<a name="l00167"></a>00167 <span class="comment">     */</span>
+<a name="l00168"></a>00168     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow</a>();
+<a name="l00169"></a>00169     <span class="comment">/*</span>
+<a name="l00170"></a>00170 <span class="comment">     Actually builds the matrix A referred to in buildShapeAndAdmissibilityInPreviewWindow()</span>
+<a name="l00171"></a>00171 <span class="comment"></span>
+<a name="l00172"></a>00172 <span class="comment">     \see buildShapeAndAdmissibilityInPreviewWindow</span>
+<a name="l00173"></a>00173 <span class="comment">     */</span>
+<a name="l00174"></a>00174     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e">buildAShapeAdmiss</a>();
+<a name="l00175"></a>00175     <span class="comment">/*</span>
+<a name="l00176"></a>00176 <span class="comment">     Actually builds the matrix B referred to in buildShapeAndAdmissibilityInPreviewWindow()</span>
+<a name="l00177"></a>00177 <span class="comment"></span>
+<a name="l00178"></a>00178 <span class="comment">     \see buildShapeAndAdmissibilityInPreviewWindow</span>
+<a name="l00179"></a>00179 <span class="comment">     */</span>
+<a name="l00180"></a>00180     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aa3752e85f1167129814b1a41d6b0198e">buildBShapeAdmiss</a>();
+<a name="l00181"></a>00181     <span class="comment">/*</span>
+<a name="l00182"></a>00182 <span class="comment">     Actually builds the vector \f$\bar{\mathbf{f}}_c\f$ referred to in buildShapeAndAdmissibilityInPreviewWindow()</span>
+<a name="l00183"></a>00183 <span class="comment">     */</span>
+<a name="l00184"></a>00184     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a5231950d561e42e0d6590a398bec771c">buildFcBarShapeAdmiss</a>();
+<a name="l00185"></a>00185     <span class="comment">/*</span>
+<a name="l00186"></a>00186 <span class="comment">     Stacks matrices \f$C_{i+1}\f$ (Cii) from the shape and admissibility constraints to set variable MIQPLinearConstraints::_Acr</span>
+<a name="l00187"></a>00187 <span class="comment">     */</span>
+<a name="l00188"></a>00188     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ad36868550b3d1f977a67e76a44160192">setMatrixAcr</a>();
+<a name="l00189"></a>00189     <span class="comment">/*</span>
+<a name="l00190"></a>00190 <span class="comment">     Stacks matrices \f$C_{i}\f$ (Ci) from the shape and admissiblity constraints to set variable MIQPLinearConstraints::_Acl</span>
+<a name="l00191"></a>00191 <span class="comment">     */</span>
+<a name="l00192"></a>00192     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a2985d200d8e6baba2df17abfeaca8882">setMatrixAcl</a>();
+<a name="l00193"></a>00193     <span class="comment">/*</span>
+<a name="l00194"></a>00194 <span class="comment">     Builds matrix Q (MIQPLinearConstraints::_Q) from the preview model:</span>
+<a name="l00195"></a>00195 <span class="comment"></span>
+<a name="l00196"></a>00196 <span class="comment">     \f[</span>
+<a name="l00197"></a>00197 <span class="comment">     \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}</span>
+<a name="l00198"></a>00198 <span class="comment">     \f]</span>
+<a name="l00199"></a>00199 <span class="comment">     */</span>
+<a name="l00200"></a>00200     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a127e7ddd641f11d1b6137c59d80ef8b5">buildMatrixQ</a>();
+<a name="l00201"></a>00201     <span class="comment">/*</span>
+<a name="l00202"></a>00202 <span class="comment">     Builds matrix T (MIQPLinearConstraints::_T) from the preview model:</span>
+<a name="l00203"></a>00203 <span class="comment"></span>
+<a name="l00204"></a>00204 <span class="comment">     \f[</span>
+<a name="l00205"></a>00205 <span class="comment">     \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}</span>
+<a name="l00206"></a>00206 <span class="comment">     \f$]</span>
+<a name="l00207"></a>00207 <span class="comment">     */</span>
+<a name="l00208"></a>00208     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#addee397c47be26fd9eebbe8374c3cc30">buildMatrixT</a>();
+<a name="l00209"></a>00209     <span class="comment">/*</span>
+<a name="l00210"></a>00210 <span class="comment">     *  Builds \f$B_h\f$ (MIQPLinearConstraints::_Bh) called by the constructor of this class.</span>
+<a name="l00211"></a>00211 <span class="comment">     *</span>
+<a name="l00212"></a>00212 <span class="comment">     *  @see MIQPLinearConstraints::_Bh</span>
+<a name="l00213"></a>00213 <span class="comment">     */</span>
+<a name="l00214"></a>00214     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ae6ecdf8d77474a8b099f2526d6cc0d75">buildBh</a>();
+<a name="l00215"></a>00215     <span class="comment">/*</span>
+<a name="l00216"></a>00216 <span class="comment">     *  Builds \f$A_h\f$.</span>
+<a name="l00217"></a>00217 <span class="comment">     *</span>
+<a name="l00218"></a>00218 <span class="comment">     *  @see MIQPLinearConstraints::_Ah</span>
+<a name="l00219"></a>00219 <span class="comment">     */</span>
+<a name="l00220"></a>00220     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27">buildAh</a>();
+<a name="l00221"></a>00221 };
+<a name="l00222"></a>00222 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -184,7 +313,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="MIQPLinearConstraints_8h.html">MIQPLinearConstraints.h</a>      </li>
 
-    <li class="footer">Generated on Tue Feb 14 2017 23:32:09 for ocra-wbi-plugins by
+    <li class="footer">Generated on Wed Feb 15 2017 23:33:06 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
