@@ -216,15 +216,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Constructor.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">period</td><td><a class="el" href="classThread.html" title="The meat and potatoes of the controller server.">Thread</a> period in ms </td></tr>
-    <tr><td class="paramname">params</td><td>MIQP parameters  robotModel Pointer to the robot model instantiated by the containing client (walking-client) </td></tr>
-    <tr><td class="paramname">comStateRef</td><td>Reference to a matrix of CoM state references </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -241,7 +232,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Destructor </p>
 
 </div>
 </div>
@@ -259,9 +249,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Adds variables to the model. Sets also the variable types and calls the lower and upper bounds method</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to object of Gurobi variables. </dd></dl>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>To be deprecated if eigen-gurobi works fine </dd></dl>
 
 </div>
 </div>
@@ -289,15 +276,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(A_h\). Called during the member list initialization of the constructor of this class.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dt</td><td><a class="el" href="classThread.html" title="The meat and potatoes of the controller server.">Thread</a> period in which this classed in instantiated. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The constant matrix Ah. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a8ee8ec415e25374f4fa687f5a5a6b9df">ZmpPreviewController::Ah</a> </dd></dl>
 
 </div>
 </div>
@@ -325,15 +303,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds \(B_h\). Called during the member list initialization of the constructor of this class.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dt</td><td><a class="el" href="classThread.html" title="The meat and potatoes of the controller server.">Thread</a> period in which this classed in instantiated. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The constant matrix Bh. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classZmpPreviewController.html#a98bd07d03d0a6004b345ef4310cf17b6">ZmpPreviewController::Bh</a> </dd></dl>
 
 </div>
 </div>
@@ -490,9 +459,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds the matrix \(\mathbf{Q}\). </p>
-<dl class="see"><dt><b>See also:</b></dt><dd>MIQPController::Q</dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Matrix Q </dd></dl>
 
 </div>
 </div>
@@ -527,9 +493,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds the matrix \(\mathbf{T}\). </p>
-<dl class="see"><dt><b>See also:</b></dt><dd>MIQPController::T</dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Matrix T </dd></dl>
 
 </div>
 </div>
@@ -546,14 +509,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Main loop of this thread. Performs the following operations:</p>
-<ul>
-<li>Updates the state vector.</li>
-<li>Updates the state-dependent RHS of the constraints.</li>
-<li>Sets the "moving" CoM reference in the current preview window.</li>
-<li>Solves the optimization problem.</li>
-<li>Retrieves the solution. </li>
-</ul>
 
 </div>
 </div>
@@ -581,13 +536,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Takes N elements from an original trajectory of desired CoM states from state k</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">comStateRef</td><td>Sets _H_N_r for a preview window of size N from time k </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -604,7 +552,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Technically should set the constraints matrix _Aineq. /warning To be deprecated if eigen-gurobi works fine </p>
 
 </div>
 </div>
@@ -637,8 +584,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Sets <a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">MIQPController::_lb</a> and <a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">MIQPController::_ub</a> </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">MIQPController::_lb</a> <a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">MIQPController::_ub</a> </dd></dl>
 
 </div>
 </div>
@@ -655,8 +600,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Sets the objective function with only the quadratic term. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>To be deprecated if eigen-gurobi works fine </dd></dl>
 
 </div>
 </div>
@@ -673,7 +616,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Sets the objective function object for Gurobi. /warning To be deprecated if eigen-gurobi works fine </p>
 
 </div>
 </div>
@@ -691,13 +633,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>/warning To be deprecated if eigen-gurobi works fine</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">variablesTypes</td><td>Vector of variables' types </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -714,14 +649,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Performs all the initialization of the MIQP controller such as:</p>
-<ul>
-<li>Initializing the Gurobi model.</li>
-<li>Set lower and upper bounds.</li>
-<li>Create the LTI matrices of the constraints (inequality and equality constraints).</li>
-<li>Set variable types.</li>
-<li>Setup the eigen-gurobi object. </li>
-</ul>
 
 </div>
 </div>
@@ -738,7 +665,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Deallocates in memory. In particular, that of the Gurobi environment. </p>
 
 </div>
 </div>
@@ -755,8 +681,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Updates the state vector \(xi_k\). </p>
-<dl class="see"><dt><b>See also:</b></dt><dd>MIQPController::xi_k </dd></dl>
 
 </div>
 </div>
@@ -796,7 +720,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ A_{\text{ineq}} x \leq b_{\text{ineq}} \]
 </p>
- 
+<p>Set by <a class="el" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">MIQPLinearConstraints::getConstraintsMatrixA()</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a9a989875871a898f0ad19b441a2c67ba"></a><!-- doxytag: member="MIQPController::_Bh" ref="a9a989875871a898f0ad19b441a2c67ba" args="" -->
@@ -830,11 +755,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>RHS inequality matrix \(b_{\text{ineq}}\) of the MIQP problem, i.e. </p>
+<p>RHS inequality vector \(b_{\text{ineq}}\) of the MIQP problem, i.e. </p>
 <p class="formulaDsp">
 \[ A_{\text{ineq}} x \leq b_{\text{ineq}} \]
 </p>
- 
+<p>Set by <a class="el" href="classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a">MIQPLinearConstraints::getRHS()</a> </p>
+
 </div>
 </div>
 <a class="anchor" id="a5c6882cb248e9d16513868fea7835d6e"></a><!-- doxytag: member="MIQPController::_C_B" ref="a5c6882cb248e9d16513868fea7835d6e" args="" -->
@@ -847,7 +773,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Output matrix \(\mathbf{C_B}\) of the BoS state space representation</p>
+<p class="formulaDsp">
+\begin{align*} \mathbf{\xi}_{k+1|k} &amp;= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \mathbf{r}_{k|k} &amp; =\mathbf{C}_B \xi_{k|k} \end{align*}
+</p>
+<p>Where</p>
+<p class="formulaDsp">
+\[ \mathbf{C}_B &amp;= \frac{1}{2} \left[ \begin{array}{ccccc} \mathbf{I}_{2\times2} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times12} \end{array}\right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a323718c0eaf8c8a7e159ea7f1ef5b72c"></a><!-- doxytag: member="MIQPController::_C_H" ref="a323718c0eaf8c8a7e159ea7f1ef5b72c" args="" -->
@@ -860,7 +794,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Output matrix \(\mathbf{C}_H\) of the CoM state space representation</p>
+<p class="formulaDsp">
+\begin{align*} \mathbf{\xi}_{k+1|k} &amp;= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \hat{\mathbf{h}}_k &amp; =\mathbf{C}_H \xi_{k|k} \end{align*}
+</p>
+<p>Where</p>
+<p class="formulaDsp">
+\[ \mathbf{C}_H = \left[ \begin{array}{cc} \mathbf{0}_{6\times10} &amp; \mathbf{I}_{6\times6} \end{array} \right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a17cf6f8279cf6b2ce333feb9c8fc5a5d"></a><!-- doxytag: member="MIQPController::_C_P" ref="a17cf6f8279cf6b2ce333feb9c8fc5a5d" args="" -->
@@ -873,7 +815,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Output matrix \(\mathbf{C_P}\) of the CoP state space representation</p>
+<p class="formulaDsp">
+\begin{align*} \mathbf{\xi}_{k+1|k} &amp;= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \mathbf{p}_{k|k} &amp; =\mathbf{C}_P \xi_{k|k} \end{align*}
+</p>
+<p>Where</p>
+<p class="formulaDsp">
+\[ \mathbf{C}_P = \left[ \begin{array}{ccccc} \mathbf{0}_{2\times10} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times2} &amp; -\frac{c_z}{g}\mathbf{I}_{2\times2} \end{array}\right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="ab74859a8dd208f3fc7608391d318d469"></a><!-- doxytag: member="MIQPController::_comStateRef" ref="ab74859a8dd208f3fc7608391d318d469" args="" -->
@@ -940,6 +890,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Positive definite matrix \(H_N\) with the coefficients of the quadratic objective of the MIQP for the walking MPC problem.</p>
+<p>For the time being this is:</p>
+<p class="formulaDsp">
+\[ \mathbf{R}_H^T \mathbf{S}_w \mathbf{R}_H + (\mathbf{R}_P - \mathbf{R}_B)^T \mathbf{N}_b (\mathbf{R}_P - \mathbf{R}_B) \]
+</p>
+<p> But this expression is missing the regularizing terms of the cost function. Current size is \(12N\times12N\) </p>
 
 </div>
 </div>
@@ -1034,6 +990,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>\(N_b\) is a diagonal weighting matrix whose scalar weights help define the compromise between balance robustness and tracking performance. </p>
 
 </div>
 </div>
@@ -1061,7 +1018,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Matrix \(\mathbf{P}_B\) in the equation for the preview center of BoS output matrix \(\mathbf{R}_{k,N} = \left\{ \mathbf{r}_{k+1|k}, \mathbf{r}_{k+2|k}, \dots, \mathbf{r}_{k+N|k} \right\}\)</p>
+<p>For a preview window of size \(N\):</p>
+<p class="formulaDsp">
+\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \]
+</p>
+<p> Where: </p>
+<p class="formulaDsp">
+\[ \mathbf{P}_B = \left[\begin{array}{c} \mathbf{C}_B \mathbf{Q} \\ \vdots\\ \mathbf{C}_B \mathbf{Q}^N \end{array}\right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="afb83c4fddc4adba989506ccc9b62ff1e"></a><!-- doxytag: member="MIQPController::_P_H" ref="afb83c4fddc4adba989506ccc9b62ff1e" args="" -->
@@ -1074,7 +1040,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Matrix \(\mathbf{P}_H\) in the equation for the preview CoM output matrix \(\mathbf{H}_{k,N} = \left\{ \mathbf{h}_{k+1|k}, \mathbf{h}_{k+2|k}, \dots, \mathbf{h}_{k+N|k} \right\}\).</p>
+<p>For a preview window of size \(N\): </p>
+<p class="formulaDsp">
+\[ \mathbf{H}_{k,N} = \mathbf{P}_H \mathbf{\xi}_k + \mathbf{R}_H \mathcal{X}_{k,N} \]
+</p>
+<p> Where: </p>
+<p class="formulaDsp">
+\begin{align*} \mathbf{P}_H = \left[\begin{array}{c} \mathbf{C}_H \mathbf{Q} \\ \vdots\\ \mathbf{C}_H \mathbf{Q}^N \end{array}\right] \end{align*}
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a8243f4111abb4ad6c331ac147a844118"></a><!-- doxytag: member="MIQPController::_P_P" ref="a8243f4111abb4ad6c331ac147a844118" args="" -->
@@ -1087,7 +1062,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Matrix \(\mathbf{P}_p\) in the equation for the preview CoP output matrix \(\mathbf{P}_{k,N} = \left\{ \mathbf{p}_{k+1|k}, \mathbf{p}_{k+2|k}, \dots, \mathbf{p}_{k+N|k} \right\}\).</p>
+<p>For a preview window of size \(N\): </p>
+<p class="formulaDsp">
+\[ \mathbf{P}_{k,N} = \mathbf{P}_p \mathbf{\xi}_k + \mathbf{R}_p \mathcal{X}_{k,N} \]
+</p>
+<p> Where: </p>
+<p class="formulaDsp">
+\begin{align*} \mathbf{P}_P = \left[\begin{array}{c} \mathbf{C}_P \mathbf{Q} \\ \vdots\\ \mathbf{C}_P \mathbf{Q}^N \end{array}\right] \end{align*}
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="aed2ce53008e32e64e107398d85e75170"></a><!-- doxytag: member="MIQPController::_period" ref="aed2ce53008e32e64e107398d85e75170" args="" -->
@@ -1114,10 +1098,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p class="formulaDsp">
-\[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} &amp; \mathbf{A_h}_{6\times6} \end{array}\right] \]
-</p>
- 
+
 </div>
 </div>
 <a class="anchor" id="a532459bb659a1cc39d449fdf3f81c63f"></a><!-- doxytag: member="MIQPController::_quadraticTermObjFunc" ref="a532459bb659a1cc39d449fdf3f81c63f" args="" -->
@@ -1143,7 +1124,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Matrix \(\mathbf{R}_B\) in the equation for the preview center of BoS output matrix \(\mathbf{R}_{k,N} = \left\{ \mathbf{r}_{k+1|k}, \mathbf{r}_{k+2|k}, \dots, \mathbf{r}_{k+N|k} \right\}\)</p>
+<p>For a preview window of size \(N\):</p>
+<p class="formulaDsp">
+\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} Where: \f[ \mathbf{R}_B = \left[\begin{array}{cccc} \mathbf{C}_B\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_B\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_B\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_B\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_B\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_B\mathbf{T} \end{array}\right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a2207c17eb221166b1bc12fbca976035d"></a><!-- doxytag: member="MIQPController::_R_H" ref="a2207c17eb221166b1bc12fbca976035d" args="" -->
@@ -1156,7 +1142,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Input matrix \(\mathbf{R}_H\) in the equation for the preview CoM output matrix \(\mathbf{H}_{k,N} = \left\{ \mathbf{h}_{k+1|k}, \mathbf{h}_{k+2|k}, \dots, \mathbf{h}_{k+N|k} \right\}\).</p>
+<p>For a preview window of size \(N\): </p>
+<p class="formulaDsp">
+\[ \mathbf{H}_{k,N} = \mathbf{P}_H \mathbf{\xi}_k + \mathbf{R}_H \mathcal{X}_{k,N} \]
+</p>
+<p> Where: </p>
+<p class="formulaDsp">
+\[ \mathbf{R}_h = \left[\begin{array}{cccc} \mathbf{C}_H\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_H\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_H\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_H\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_H\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_H\mathbf{T} \end{array}\right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a7cede44e7827c9b4b12f2549714f3adf"></a><!-- doxytag: member="MIQPController::_R_P" ref="a7cede44e7827c9b4b12f2549714f3adf" args="" -->
@@ -1169,7 +1164,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Matrix \(\mathbf{R}_p\) in the equation for the preview CoP output matrix \(\mathbf{P}_{k,N} = \left\{ \mathbf{p}_{k+1|k}, \mathbf{p}_{k+2|k}, \dots, \mathbf{p}_{k+N|k} \right\}\).</p>
+<p>For a preview window of size \(N\): </p>
+<p class="formulaDsp">
+\[ \mathbf{P}_{k,N} = \mathbf{P}_p \mathbf{\xi}_k + \mathbf{R}_p \mathcal{X}_{k,N} \]
+</p>
+<p>Size: [2N * 12N] Where: </p>
+<p class="formulaDsp">
+\[ \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a03735ecec3242cdfc9bf8a443c561724"></a><!-- doxytag: member="MIQPController::_robotModel" ref="a03735ecec3242cdfc9bf8a443c561724" args="" -->
@@ -1195,6 +1199,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>\(S_w\) is a \(6\times6\) diagonal weighting selection matrix, defining whether position, velocity and/or acceleration of the CoM are tracked in each of the two horizontal directions.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>For the moment this has been hardcoded! Put it in configuration file. </dd></dl>
 
 </div>
 </div>
@@ -1301,7 +1307,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Thu Feb 16 2017 23:33:17 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Feb 17 2017 23:34:14 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

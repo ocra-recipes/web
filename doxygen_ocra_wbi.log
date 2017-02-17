@@ -383,16 +383,7 @@ Generating docs for compound Constraint...
 Generating docs for compound ContactConfigEnforcement...
 Generating docs for compound ContactConfigHistory...
 Generating docs for compound ExampleClient...
-Generat/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:48: warning: Found unknown command `\params'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:44: warning: The following parameters of MIQPController::MIQPController(int period, MIQPParameters params, ocra::Model::Ptr robotModel, const Eigen::MatrixXd &comStateRef) are not documented:
-  parameter 'robotModel'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:143: warning: The following parameters of MIQPController::buildAh(int dt, Eigen::MatrixXd &output) are not documented:
-  parameter 'output'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:152: warning: The following parameters of MIQPController::buildBh(int dt, Eigen::MatrixXd &output) are not documented:
-  parameter 'output'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:84: warning: The following parameters of MIQPController::setCOMStateRefInPreviewWindow(unsigned int k, Eigen::VectorXd &comStateRef) are not documented:
-  parameter 'k'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef)
+Generat/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef)
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: The following parameters of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef) are not documented:
   parameter 'threadRef'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:141: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::DebugRpcServerCallback::DebugRpcServerCallback(Thread &threadRef)
@@ -402,17 +393,17 @@ Generat/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/wa
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/WalkingClient.h:95: warning: The following parameters of WalkingClient::publish3dQuantity(yarp::os::BufferedPort< yarp::os::Bottle > &port, Eigen::Vector3d &value) are not documented:
   parameter 'port'
   parameter 'value'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpController.h:169: warning: The following parameters of ZmpController::getFTSensorAdjointMatrix(FOOT whichFoot, Eigen::MatrixXd &T, Eigen::Vector3d &sensorPosition) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpController.h:172: warning: The following parameters of ZmpController::getFTSensorAdjointMatrix(FOOT whichFoot, Eigen::MatrixXd &T, Eigen::Vector3d &sensorPosition) are not documented:
   parameter 'sensorPosition'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:248: warning: argument 'Nc' of command @param is not found in the argument list of ZmpPreviewController::buildGp(Eigen::MatrixXd Cp, Eigen::MatrixXd Ah, const int Np)
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:248: warning: The following parameters of ZmpPreviewController::buildGp(Eigen::MatrixXd Cp, Eigen::MatrixXd Ah, const int Np) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:250: warning: argument 'Nc' of command @param is not found in the argument list of ZmpPreviewController::buildGp(Eigen::MatrixXd Cp, Eigen::MatrixXd Ah, const int Np)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:250: warning: The following parameters of ZmpPreviewController::buildGp(Eigen::MatrixXd Cp, Eigen::MatrixXd Ah, const int Np) are not documented:
   parameter 'Np'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:294: warning: argument 'Hh' of command @param is not found in the argument list of ZmpPreviewController::buildHh(Eigen::MatrixXd Ch, Eigen::MatrixXd Bh, Eigen::MatrixXd Ah, const int Nc, const int Np)
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:294: warning: The following parameters of ZmpPreviewController::buildHh(Eigen::MatrixXd Ch, Eigen::MatrixXd Bh, Eigen::MatrixXd Ah, const int Nc, const int Np) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:296: warning: argument 'Hh' of command @param is not found in the argument list of ZmpPreviewController::buildHh(Eigen::MatrixXd Ch, Eigen::MatrixXd Bh, Eigen::MatrixXd Ah, const int Nc, const int Np)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:296: warning: The following parameters of ZmpPreviewController::buildHh(Eigen::MatrixXd Ch, Eigen::MatrixXd Bh, Eigen::MatrixXd Ah, const int Nc, const int Np) are not documented:
   parameter 'Np'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:341: warning: The following parameters of ZmpPreviewController::computeFootZMP(FOOT whichFoot, Eigen::VectorXd wrench, Eigen::Vector2d &footZMP, Eigen::VectorXd &wrenchInWorldRef, ocra::Model::Ptr model, const double tolerance=1e-3) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:344: warning: The following parameters of ZmpPreviewController::computeFootZMP(FOOT whichFoot, Eigen::VectorXd wrench, Eigen::Vector2d &footZMP, Eigen::VectorXd &wrenchInWorldRef, ocra::Model::Ptr model, const double tolerance=1e-3) are not documented:
   parameter 'model'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:376: warning: The following parameters of ZmpPreviewController::computeGlobalZMPFromSensors(Eigen::VectorXd rawLeftFootWrench, Eigen::VectorXd rawRightFootWrench, ocra::Model::Ptr model, Eigen::Vector2d &globalZMP) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/ZmpPreviewController.h:379: warning: The following parameters of ZmpPreviewController::computeGlobalZMPFromSensors(Eigen::VectorXd rawLeftFootWrench, Eigen::VectorXd rawRightFootWrench, ocra::Model::Ptr model, Eigen::Vector2d &globalZMP) are not documented:
   parameter 'model'
 ing docs for compound IcubControllerServer...
 Generating docs for compound MIQPController...
@@ -465,6 +456,6 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Patching output file 1/1
-symbol cache used 807/65536 hits=43979 misses=807
-lookup cache used 1058/65536 hits=3465 misses=1080
+symbol cache used 807/65536 hits=43973 misses=807
+lookup cache used 1058/65536 hits=3461 misses=1080
 finished...

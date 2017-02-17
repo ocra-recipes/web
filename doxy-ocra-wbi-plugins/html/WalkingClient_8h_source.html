@@ -155,67 +155,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00162"></a>00162     
 <a name="l00163"></a>00163     std::vector&lt;Eigen::Vector2d&gt; <a class="code" href="classWalkingClient.html#ab5bd1eceec03d8b88ffe2b6b07d981c0">generateZMPSingleStepTrajectory</a>(<span class="keywordtype">double</span> period, <span class="keywordtype">double</span> feetSeparation);
 <a name="l00164"></a>00164     
-<a name="l00171"></a>00171     <span class="keywordtype">void</span> <a class="code" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">prepareAndsetDesiredCoMTaskState</a>(Eigen::VectorXd comState, <span class="keywordtype">bool</span> doSet);
-<a name="l00172"></a>00172     
+<a name="l00172"></a>00172     <span class="keywordtype">void</span> <a class="code" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">prepareAndsetDesiredCoMTaskState</a>(Eigen::VectorXd comState, <span class="keywordtype">bool</span> doSet);
 <a name="l00173"></a>00173     
 <a name="l00174"></a>00174     
-<a name="l00175"></a>00175 <span class="keyword">protected</span>:
-<a name="l00176"></a>00176     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classWalkingClient.html#aba6a03fe29a4e947bc6bc0c09a713b2a">initialize</a>();
-<a name="l00177"></a>00177     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classWalkingClient.html#a3b36da9d7649865a13c9318dd73ebc7e">release</a>();
-<a name="l00178"></a>00178     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classWalkingClient.html#afd997bb00534c57fe1b0d5f37f207386">loop</a>();
-<a name="l00179"></a>00179 
-<a name="l00180"></a>00180 <span class="keyword">private</span>:
-<a name="l00181"></a><a class="code" href="classWalkingClient.html#a9a2cf2d6107ab91fc5bd1d82a3b85a84">00181</a>     std::shared_ptr&lt;ZmpPreviewParams&gt; <a class="code" href="classWalkingClient.html#a9a2cf2d6107ab91fc5bd1d82a3b85a84">_zmpPreviewParams</a>;
-<a name="l00182"></a><a class="code" href="classWalkingClient.html#ae570aa07bed9e336eda93f331f3485fb">00182</a>     std::shared_ptr&lt;ZmpPreviewController&gt; <a class="code" href="classWalkingClient.html#ae570aa07bed9e336eda93f331f3485fb">_zmpPreviewController</a>;
-<a name="l00183"></a><a class="code" href="classWalkingClient.html#aa798d6193535e80816f8107ee5fb2172">00183</a>     std::shared_ptr&lt;ocra_recipes::TaskConnection&gt; <a class="code" href="classWalkingClient.html#aa798d6193535e80816f8107ee5fb2172">_comTask</a>;
-<a name="l00184"></a><a class="code" href="classWalkingClient.html#a5dd1abe90bf7182766548c93673af2df">00184</a>     std::shared_ptr&lt;MIQPController&gt; <a class="code" href="classWalkingClient.html#a5dd1abe90bf7182766548c93673af2df">_miqpController</a>;
-<a name="l00185"></a><a class="code" href="classWalkingClient.html#aff3d76fc360548d6c0c0ea540a0b7509">00185</a>     std::shared_ptr&lt;StepController&gt; <a class="code" href="classWalkingClient.html#aff3d76fc360548d6c0c0ea540a0b7509">_stepController</a>;
-<a name="l00186"></a><a class="code" href="classWalkingClient.html#a8b8a3d7fe6e12d49a0e72d05f9938564">00186</a>     std::vector&lt;Eigen::Vector2d&gt; <a class="code" href="classWalkingClient.html#a8b8a3d7fe6e12d49a0e72d05f9938564">_zmpTrajectory</a>;
-<a name="l00187"></a><a class="code" href="classWalkingClient.html#a5d74b737b225cec818922a2b774eed9e">00187</a>     std::vector&lt;Eigen::Vector2d&gt; <a class="code" href="classWalkingClient.html#a5d74b737b225cec818922a2b774eed9e">_singleStepTrajectory</a>;
-<a name="l00188"></a><a class="code" href="classWalkingClient.html#a2625bf687aa3141f5a2404c8d9b3c392">00188</a>     ocra::TaskState <a class="code" href="classWalkingClient.html#a2625bf687aa3141f5a2404c8d9b3c392">_desiredComState</a>;
-<a name="l00189"></a><a class="code" href="classWalkingClient.html#a1c3fb4d182e33d6d9386e9bb05aa4ae8">00189</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#a1c3fb4d182e33d6d9386e9bb05aa4ae8">_rawLeftFootWrench</a>;
-<a name="l00190"></a><a class="code" href="classWalkingClient.html#a9df32e0c73632c5f869e5933e20def71">00190</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#a9df32e0c73632c5f869e5933e20def71">_rawRightFootWrench</a>;
-<a name="l00191"></a><a class="code" href="classWalkingClient.html#aa784eac1247f0d858e2364e0c2bc25b2">00191</a>     Eigen::Vector2d <a class="code" href="classWalkingClient.html#aa784eac1247f0d858e2364e0c2bc25b2">_globalZMP</a>;
-<a name="l00192"></a><a class="code" href="classWalkingClient.html#a549751e511e023d5fc73eccd1c185317">00192</a>     Eigen::Vector2d <a class="code" href="classWalkingClient.html#a549751e511e023d5fc73eccd1c185317">_previousCOM</a>;
-<a name="l00193"></a><a class="code" href="classWalkingClient.html#aa0c7669193a8a42ed289c79523580033">00193</a>     Eigen::Vector2d <a class="code" href="classWalkingClient.html#aa0c7669193a8a42ed289c79523580033">_previousCOMVel</a>;
-<a name="l00194"></a><a class="code" href="classWalkingClient.html#aff02b341d5e1f500dc9a849337319a8d">00194</a>     std::string <a class="code" href="classWalkingClient.html#aff02b341d5e1f500dc9a849337319a8d">_clientName</a>;
-<a name="l00195"></a><a class="code" href="classWalkingClient.html#a67461634d7e8cb0234400b34fd2865e7">00195</a>     std::string <a class="code" href="classWalkingClient.html#a67461634d7e8cb0234400b34fd2865e7">_robot</a>;
-<a name="l00196"></a><a class="code" href="classWalkingClient.html#a4f9c8688537ddd8a487a212fbb279a9b">00196</a>     <span class="keywordtype">bool</span> <a class="code" href="classWalkingClient.html#a4f9c8688537ddd8a487a212fbb279a9b">_isTestRun</a>;
-<a name="l00197"></a><a class="code" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">00197</a>     std::string <a class="code" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">_testType</a>;
-<a name="l00198"></a><a class="code" href="classWalkingClient.html#a14576258d7fed1b36919145f1b56d74c">00198</a>     <a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> <a class="code" href="classWalkingClient.html#a14576258d7fed1b36919145f1b56d74c">_zmpTestType</a>;
-<a name="l00199"></a><a class="code" href="classWalkingClient.html#ade3bf018661152fc0404d3973ea30783">00199</a>     std::string <a class="code" href="classWalkingClient.html#ade3bf018661152fc0404d3973ea30783">_homeDataDir</a>;
-<a name="l00200"></a><a class="code" href="classWalkingClient.html#a4e448bc147b41d97e0f17af6ebb0020f">00200</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a4e448bc147b41d97e0f17af6ebb0020f">_comYConstVel</a>;
-<a name="l00201"></a><a class="code" href="classWalkingClient.html#a9f19b1a1184cbdbf883cc374c6b6b88f">00201</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a9f19b1a1184cbdbf883cc374c6b6b88f">_stopTimeConstComVel</a>;
-<a name="l00202"></a><a class="code" href="classWalkingClient.html#a6cba3194816a0be78a8b17d539806115">00202</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a6cba3194816a0be78a8b17d539806115">_zmpYConstRef</a>;
-<a name="l00203"></a><a class="code" href="classWalkingClient.html#a58b08317f6d8b825a21e1db8c7f0ff32">00203</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a58b08317f6d8b825a21e1db8c7f0ff32">_stopTimeConstZmp</a>;
-<a name="l00204"></a><a class="code" href="classWalkingClient.html#aab1bac82d66908def9a36bede6bb24e2">00204</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#aab1bac82d66908def9a36bede6bb24e2">_riseTimeConstZmp</a>;
-<a name="l00205"></a><a class="code" href="classWalkingClient.html#aa6b3bf5c2ed923a7a33a9ed461713d98">00205</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#aa6b3bf5c2ed923a7a33a9ed461713d98">_trajectoryDurationConstZmp</a>;
-<a name="l00206"></a><a class="code" href="classWalkingClient.html#a7d15e2b9c9ada337280c46d6aadb54f8">00206</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a7d15e2b9c9ada337280c46d6aadb54f8">_constantReferenceY</a>;
-<a name="l00207"></a><a class="code" href="classWalkingClient.html#a92adc07ae5221e5dde31483fe5d2deae">00207</a>     <a class="code" href="structsingleStepTestParams.html">singleStepTestParams</a> <a class="code" href="classWalkingClient.html#a92adc07ae5221e5dde31483fe5d2deae">_singleStepTestParams</a>;
-<a name="l00208"></a><a class="code" href="classWalkingClient.html#a144518766ec4eb9eeab230fcb291e20c">00208</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a144518766ec4eb9eeab230fcb291e20c">_tTrans</a>;
-<a name="l00209"></a><a class="code" href="classWalkingClient.html#aefb4ed994a32879a526f2bc8c962927f">00209</a>     <span class="keywordtype">int</span> <a class="code" href="classWalkingClient.html#aefb4ed994a32879a526f2bc8c962927f">_numberOfTransitions</a>;
-<a name="l00210"></a><a class="code" href="classWalkingClient.html#ac548ce03ea9ceffb4b42981942f66dd0">00210</a>     <span class="keywordtype">int</span> <a class="code" href="classWalkingClient.html#ac548ce03ea9ceffb4b42981942f66dd0">_amplitudeFraction</a>;
-<a name="l00211"></a><a class="code" href="classWalkingClient.html#a2ed3837afa0c366f1cdef16b2a99b761">00211</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a2ed3837afa0c366f1cdef16b2a99b761">_stopTimeVaryingZmp</a>;
-<a name="l00212"></a>00212 
-<a name="l00213"></a><a class="code" href="classWalkingClient.html#af2e0817fa94ca802775addd22b09bf7a">00213</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#af2e0817fa94ca802775addd22b09bf7a">_zmpPort</a>;
-<a name="l00214"></a><a class="code" href="classWalkingClient.html#a1b01264c9d9d403a68a149d86d1bc53f">00214</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a1b01264c9d9d403a68a149d86d1bc53f">_dcomErrorPort</a>;
-<a name="l00215"></a><a class="code" href="classWalkingClient.html#a17369473b4fe2ff0eaecc7d41a8430c7">00215</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a17369473b4fe2ff0eaecc7d41a8430c7">_dComDesPort</a>;
-<a name="l00216"></a><a class="code" href="classWalkingClient.html#a1fbc9d7f1e967f24acda745028f865df">00216</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a1fbc9d7f1e967f24acda745028f865df">_dComCurPort</a>;
-<a name="l00217"></a><a class="code" href="classWalkingClient.html#acbac3e142471448b50dd605e4217b0d0">00217</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#acbac3e142471448b50dd605e4217b0d0">_zmpDesPort</a>;
-<a name="l00218"></a><a class="code" href="classWalkingClient.html#a546e6830e43d19ba7d8a8e808e28ef53">00218</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a546e6830e43d19ba7d8a8e808e28ef53">_zmpCurPort</a>;
-<a name="l00219"></a><a class="code" href="classWalkingClient.html#a199a104e0d4d52deae07d88d8229b60d">00219</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a199a104e0d4d52deae07d88d8229b60d">_comCurrent</a>;
-<a name="l00220"></a><a class="code" href="classWalkingClient.html#a692d95b3e76a396d107b0c29a3d591f1">00220</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a692d95b3e76a396d107b0c29a3d591f1">_ddcomCurrent</a>;
-<a name="l00221"></a><a class="code" href="classWalkingClient.html#a41b7320607812418af496b8b2c30204f">00221</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a41b7320607812418af496b8b2c30204f">_ddcomFromZMP</a>;
-<a name="l00222"></a><a class="code" href="classWalkingClient.html#abc3c504305c00a27e9fd38a8bf08ecda">00222</a>     VectorXd <a class="code" href="classWalkingClient.html#abc3c504305c00a27e9fd38a8bf08ecda">_hkkPrevious</a>;
-<a name="l00223"></a><a class="code" href="classWalkingClient.html#ab645ecb2d55e28b57a64ca48ee638b1e">00223</a>     <span class="keywordtype">bool</span> <a class="code" href="classWalkingClient.html#ab645ecb2d55e28b57a64ca48ee638b1e">_firstLoop</a>;
-<a name="l00224"></a><a class="code" href="classWalkingClient.html#af28b3cd3b1202f83e193b098572fbdd3">00224</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#af28b3cd3b1202f83e193b098572fbdd3">zmpRefInPreviewWindow</a>;
-<a name="l00225"></a><a class="code" href="classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5">00225</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5">comVelRefInPreviewWindow</a>;
-<a name="l00226"></a><a class="code" href="classWalkingClient.html#a0e5aee88e377029d79f57e778c583f18">00226</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#a0e5aee88e377029d79f57e778c583f18">optimalU</a>;
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228 };
-<a name="l00229"></a>00229 
-<a name="l00230"></a>00230 
-<a name="l00231"></a>00231 <span class="preprocessor">#endif // TEST_CLIENT_H</span>
+<a name="l00175"></a>00175     
+<a name="l00176"></a>00176 <span class="keyword">protected</span>:
+<a name="l00180"></a>00180     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classWalkingClient.html#aba6a03fe29a4e947bc6bc0c09a713b2a">initialize</a>();
+<a name="l00181"></a>00181     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classWalkingClient.html#a3b36da9d7649865a13c9318dd73ebc7e">release</a>();
+<a name="l00182"></a>00182     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classWalkingClient.html#afd997bb00534c57fe1b0d5f37f207386">loop</a>();
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184 <span class="keyword">private</span>:
+<a name="l00185"></a><a class="code" href="classWalkingClient.html#a9a2cf2d6107ab91fc5bd1d82a3b85a84">00185</a>     std::shared_ptr&lt;ZmpPreviewParams&gt; <a class="code" href="classWalkingClient.html#a9a2cf2d6107ab91fc5bd1d82a3b85a84">_zmpPreviewParams</a>;
+<a name="l00186"></a><a class="code" href="classWalkingClient.html#ae570aa07bed9e336eda93f331f3485fb">00186</a>     std::shared_ptr&lt;ZmpPreviewController&gt; <a class="code" href="classWalkingClient.html#ae570aa07bed9e336eda93f331f3485fb">_zmpPreviewController</a>;
+<a name="l00187"></a><a class="code" href="classWalkingClient.html#aa798d6193535e80816f8107ee5fb2172">00187</a>     std::shared_ptr&lt;ocra_recipes::TaskConnection&gt; <a class="code" href="classWalkingClient.html#aa798d6193535e80816f8107ee5fb2172">_comTask</a>;
+<a name="l00188"></a><a class="code" href="classWalkingClient.html#a5dd1abe90bf7182766548c93673af2df">00188</a>     std::shared_ptr&lt;MIQPController&gt; <a class="code" href="classWalkingClient.html#a5dd1abe90bf7182766548c93673af2df">_miqpController</a>;
+<a name="l00189"></a><a class="code" href="classWalkingClient.html#aff3d76fc360548d6c0c0ea540a0b7509">00189</a>     std::shared_ptr&lt;StepController&gt; <a class="code" href="classWalkingClient.html#aff3d76fc360548d6c0c0ea540a0b7509">_stepController</a>;
+<a name="l00190"></a><a class="code" href="classWalkingClient.html#a8b8a3d7fe6e12d49a0e72d05f9938564">00190</a>     std::vector&lt;Eigen::Vector2d&gt; <a class="code" href="classWalkingClient.html#a8b8a3d7fe6e12d49a0e72d05f9938564">_zmpTrajectory</a>;
+<a name="l00191"></a><a class="code" href="classWalkingClient.html#a5d74b737b225cec818922a2b774eed9e">00191</a>     std::vector&lt;Eigen::Vector2d&gt; <a class="code" href="classWalkingClient.html#a5d74b737b225cec818922a2b774eed9e">_singleStepTrajectory</a>;
+<a name="l00192"></a><a class="code" href="classWalkingClient.html#a2625bf687aa3141f5a2404c8d9b3c392">00192</a>     ocra::TaskState <a class="code" href="classWalkingClient.html#a2625bf687aa3141f5a2404c8d9b3c392">_desiredComState</a>;
+<a name="l00193"></a><a class="code" href="classWalkingClient.html#a1c3fb4d182e33d6d9386e9bb05aa4ae8">00193</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#a1c3fb4d182e33d6d9386e9bb05aa4ae8">_rawLeftFootWrench</a>;
+<a name="l00194"></a><a class="code" href="classWalkingClient.html#a9df32e0c73632c5f869e5933e20def71">00194</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#a9df32e0c73632c5f869e5933e20def71">_rawRightFootWrench</a>;
+<a name="l00195"></a><a class="code" href="classWalkingClient.html#aa784eac1247f0d858e2364e0c2bc25b2">00195</a>     Eigen::Vector2d <a class="code" href="classWalkingClient.html#aa784eac1247f0d858e2364e0c2bc25b2">_globalZMP</a>;
+<a name="l00196"></a><a class="code" href="classWalkingClient.html#a549751e511e023d5fc73eccd1c185317">00196</a>     Eigen::Vector2d <a class="code" href="classWalkingClient.html#a549751e511e023d5fc73eccd1c185317">_previousCOM</a>;
+<a name="l00197"></a><a class="code" href="classWalkingClient.html#aa0c7669193a8a42ed289c79523580033">00197</a>     Eigen::Vector2d <a class="code" href="classWalkingClient.html#aa0c7669193a8a42ed289c79523580033">_previousCOMVel</a>;
+<a name="l00198"></a><a class="code" href="classWalkingClient.html#aff02b341d5e1f500dc9a849337319a8d">00198</a>     std::string <a class="code" href="classWalkingClient.html#aff02b341d5e1f500dc9a849337319a8d">_clientName</a>;
+<a name="l00199"></a><a class="code" href="classWalkingClient.html#a67461634d7e8cb0234400b34fd2865e7">00199</a>     std::string <a class="code" href="classWalkingClient.html#a67461634d7e8cb0234400b34fd2865e7">_robot</a>;
+<a name="l00200"></a><a class="code" href="classWalkingClient.html#a4f9c8688537ddd8a487a212fbb279a9b">00200</a>     <span class="keywordtype">bool</span> <a class="code" href="classWalkingClient.html#a4f9c8688537ddd8a487a212fbb279a9b">_isTestRun</a>;
+<a name="l00201"></a><a class="code" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">00201</a>     std::string <a class="code" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">_testType</a>;
+<a name="l00202"></a><a class="code" href="classWalkingClient.html#a14576258d7fed1b36919145f1b56d74c">00202</a>     <a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> <a class="code" href="classWalkingClient.html#a14576258d7fed1b36919145f1b56d74c">_zmpTestType</a>;
+<a name="l00203"></a><a class="code" href="classWalkingClient.html#ade3bf018661152fc0404d3973ea30783">00203</a>     std::string <a class="code" href="classWalkingClient.html#ade3bf018661152fc0404d3973ea30783">_homeDataDir</a>;
+<a name="l00204"></a><a class="code" href="classWalkingClient.html#a4e448bc147b41d97e0f17af6ebb0020f">00204</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a4e448bc147b41d97e0f17af6ebb0020f">_comYConstVel</a>;
+<a name="l00205"></a><a class="code" href="classWalkingClient.html#a9f19b1a1184cbdbf883cc374c6b6b88f">00205</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a9f19b1a1184cbdbf883cc374c6b6b88f">_stopTimeConstComVel</a>;
+<a name="l00206"></a><a class="code" href="classWalkingClient.html#a6cba3194816a0be78a8b17d539806115">00206</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a6cba3194816a0be78a8b17d539806115">_zmpYConstRef</a>;
+<a name="l00207"></a><a class="code" href="classWalkingClient.html#a58b08317f6d8b825a21e1db8c7f0ff32">00207</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a58b08317f6d8b825a21e1db8c7f0ff32">_stopTimeConstZmp</a>;
+<a name="l00208"></a><a class="code" href="classWalkingClient.html#aab1bac82d66908def9a36bede6bb24e2">00208</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#aab1bac82d66908def9a36bede6bb24e2">_riseTimeConstZmp</a>;
+<a name="l00209"></a><a class="code" href="classWalkingClient.html#aa6b3bf5c2ed923a7a33a9ed461713d98">00209</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#aa6b3bf5c2ed923a7a33a9ed461713d98">_trajectoryDurationConstZmp</a>;
+<a name="l00210"></a><a class="code" href="classWalkingClient.html#a7d15e2b9c9ada337280c46d6aadb54f8">00210</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a7d15e2b9c9ada337280c46d6aadb54f8">_constantReferenceY</a>;
+<a name="l00211"></a><a class="code" href="classWalkingClient.html#a92adc07ae5221e5dde31483fe5d2deae">00211</a>     <a class="code" href="structsingleStepTestParams.html">singleStepTestParams</a> <a class="code" href="classWalkingClient.html#a92adc07ae5221e5dde31483fe5d2deae">_singleStepTestParams</a>;
+<a name="l00212"></a><a class="code" href="classWalkingClient.html#a144518766ec4eb9eeab230fcb291e20c">00212</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a144518766ec4eb9eeab230fcb291e20c">_tTrans</a>;
+<a name="l00213"></a><a class="code" href="classWalkingClient.html#aefb4ed994a32879a526f2bc8c962927f">00213</a>     <span class="keywordtype">int</span> <a class="code" href="classWalkingClient.html#aefb4ed994a32879a526f2bc8c962927f">_numberOfTransitions</a>;
+<a name="l00214"></a><a class="code" href="classWalkingClient.html#ac548ce03ea9ceffb4b42981942f66dd0">00214</a>     <span class="keywordtype">int</span> <a class="code" href="classWalkingClient.html#ac548ce03ea9ceffb4b42981942f66dd0">_amplitudeFraction</a>;
+<a name="l00215"></a><a class="code" href="classWalkingClient.html#a2ed3837afa0c366f1cdef16b2a99b761">00215</a>     <span class="keywordtype">double</span> <a class="code" href="classWalkingClient.html#a2ed3837afa0c366f1cdef16b2a99b761">_stopTimeVaryingZmp</a>;
+<a name="l00216"></a>00216 
+<a name="l00217"></a><a class="code" href="classWalkingClient.html#af2e0817fa94ca802775addd22b09bf7a">00217</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#af2e0817fa94ca802775addd22b09bf7a">_zmpPort</a>;
+<a name="l00218"></a><a class="code" href="classWalkingClient.html#a1b01264c9d9d403a68a149d86d1bc53f">00218</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a1b01264c9d9d403a68a149d86d1bc53f">_dcomErrorPort</a>;
+<a name="l00219"></a><a class="code" href="classWalkingClient.html#a17369473b4fe2ff0eaecc7d41a8430c7">00219</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a17369473b4fe2ff0eaecc7d41a8430c7">_dComDesPort</a>;
+<a name="l00220"></a><a class="code" href="classWalkingClient.html#a1fbc9d7f1e967f24acda745028f865df">00220</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a1fbc9d7f1e967f24acda745028f865df">_dComCurPort</a>;
+<a name="l00221"></a><a class="code" href="classWalkingClient.html#acbac3e142471448b50dd605e4217b0d0">00221</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#acbac3e142471448b50dd605e4217b0d0">_zmpDesPort</a>;
+<a name="l00222"></a><a class="code" href="classWalkingClient.html#a546e6830e43d19ba7d8a8e808e28ef53">00222</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a546e6830e43d19ba7d8a8e808e28ef53">_zmpCurPort</a>;
+<a name="l00223"></a><a class="code" href="classWalkingClient.html#a199a104e0d4d52deae07d88d8229b60d">00223</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a199a104e0d4d52deae07d88d8229b60d">_comCurrent</a>;
+<a name="l00224"></a><a class="code" href="classWalkingClient.html#a692d95b3e76a396d107b0c29a3d591f1">00224</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a692d95b3e76a396d107b0c29a3d591f1">_ddcomCurrent</a>;
+<a name="l00225"></a><a class="code" href="classWalkingClient.html#a41b7320607812418af496b8b2c30204f">00225</a>     yarp::os::BufferedPort&lt;yarp::os::Bottle&gt; <a class="code" href="classWalkingClient.html#a41b7320607812418af496b8b2c30204f">_ddcomFromZMP</a>;
+<a name="l00226"></a><a class="code" href="classWalkingClient.html#abc3c504305c00a27e9fd38a8bf08ecda">00226</a>     VectorXd <a class="code" href="classWalkingClient.html#abc3c504305c00a27e9fd38a8bf08ecda">_hkkPrevious</a>;
+<a name="l00227"></a><a class="code" href="classWalkingClient.html#ab645ecb2d55e28b57a64ca48ee638b1e">00227</a>     <span class="keywordtype">bool</span> <a class="code" href="classWalkingClient.html#ab645ecb2d55e28b57a64ca48ee638b1e">_firstLoop</a>;
+<a name="l00228"></a><a class="code" href="classWalkingClient.html#af28b3cd3b1202f83e193b098572fbdd3">00228</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#af28b3cd3b1202f83e193b098572fbdd3">zmpRefInPreviewWindow</a>;
+<a name="l00229"></a><a class="code" href="classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5">00229</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5">comVelRefInPreviewWindow</a>;
+<a name="l00230"></a><a class="code" href="classWalkingClient.html#a0e5aee88e377029d79f57e778c583f18">00230</a>     Eigen::VectorXd <a class="code" href="classWalkingClient.html#a0e5aee88e377029d79f57e778c583f18">optimalU</a>;
+<a name="l00231"></a>00231 
+<a name="l00232"></a>00232 };
+<a name="l00233"></a>00233 
+<a name="l00234"></a>00234 
+<a name="l00235"></a>00235 <span class="preprocessor">#endif // TEST_CLIENT_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -236,7 +236,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="WalkingClient_8h.html">WalkingClient.h</a>      </li>
 
-    <li class="footer">Generated on Thu Feb 16 2017 23:33:17 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Feb 17 2017 23:34:14 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
