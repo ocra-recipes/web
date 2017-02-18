@@ -216,6 +216,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Constructor.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">period</td><td><a class="el" href="classThread.html" title="The meat and potatoes of the controller server.">Thread</a> period in ms </td></tr>
+    <tr><td class="paramname">params</td><td>MIQP parameters  robotModel Pointer to the robot model instantiated by the containing client (walking-client) </td></tr>
+    <tr><td class="paramname">comStateRef</td><td>Reference to a matrix of CoM state references. The k-th row contains the desired CoM state at time k </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -232,6 +241,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Destructor </p>
 
 </div>
 </div>
@@ -249,6 +259,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Adds variables to the model. Sets also the variable types and calls the lower and upper bounds method</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to object of Gurobi variables. </dd></dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>To be deprecated if eigen-gurobi works fine </dd></dl>
 
 </div>
 </div>
@@ -276,6 +289,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds \(A_h\).</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">dt</td><td><a class="el" href="classThread.html" title="The meat and potatoes of the controller server.">Thread</a> period in which this class is instantiated. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a388ed1c232c212e171276993b5cb3fec">_Ah</a> </dd></dl>
 
 </div>
 </div>
@@ -303,6 +325,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds \(B_h\).</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">dt</td><td><a class="el" href="classThread.html" title="The meat and potatoes of the controller server.">Thread</a> period in which this classed in instantiated. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a9a989875871a898f0ad19b441a2c67ba">_Bh</a> </dd></dl>
 
 </div>
 </div>
@@ -320,6 +351,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds \(\mathbf{C}_B\).</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">_C_B</a> </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -337,6 +376,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds \(\mathbf{C}_H\).</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a323718c0eaf8c8a7e159ea7f1ef5b72c">_C_H</a> </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -354,6 +401,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds \(\mathbf{C}_P\).</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a17cf6f8279cf6b2ce333feb9c8fc5a5d">_C_P</a> </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -371,6 +426,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds matrix \(\mathbf{H}_N\).</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ab4b99d844add54fa7ad6ca6b80cab089">_H_N</a> </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -388,6 +451,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds matrix \(\mathbf{N}_b\).</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#aaed002a2578a0f83c4ee59516a793f98">_Nb</a> </dd></dl>
 
 </div>
 </div>
@@ -415,6 +486,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds a Preview Input Matrix for a preview window of size \(N\) with the following form {R} = [{array}{cccc} {C}{T} &amp; 0 &amp;  &amp; 0 \ {C}{Q}{T} &amp; {C}{T} &amp;  &amp; 0 \  &amp;  &amp;  &amp;  \ {C}{Q}^{N-1}{T} &amp; {C}{Q}^{N-2}{T} &amp;  &amp; {C}{T} {array}]</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">C</td><td>Output matrix from a state space representation. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">R</td><td>Output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a>, <a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a> </dd></dl>
 
 </div>
 </div>
@@ -442,6 +522,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds a Preview State Matrix for a preview window of size \(N\) with the following form: {P} = [{array}{c} {C} {Q} \ \ {C} {Q}^N {array}]</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">C</td><td>Output matrix from a state space representation. </td></tr>
+    <tr><td class="paramname">P</td><td>Output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a>, <a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a> </dd></dl>
 
 </div>
 </div>
@@ -459,6 +548,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds the matrix \(\mathbf{Q}\).</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a> </dd></dl>
 
 </div>
 </div>
@@ -476,6 +573,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds matrix \(\mathbf{S}_w\)</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">_Sw</a> </dd></dl>
 
 </div>
 </div>
@@ -493,6 +598,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds the matrix \(\mathbf{T}\).</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Output</td><td>passed to matrix reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a> </dd></dl>
 
 </div>
 </div>
@@ -509,6 +622,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Main loop of this thread. Performs the following operations:</p>
+<ul>
+<li>Updates the state vector.</li>
+<li>Updates the state-dependent RHS of the constraints.</li>
+<li>Sets the "moving" CoM reference in the current preview window.</li>
+<li>Solves the optimization problem.</li>
+<li>Retrieves the solution.</li>
+</ul>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a>, <a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">MIQPLinearConstraints::updateRHS()</a>, <a class="el" href="classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f">setCOMStateRefInPreviewWindow()</a>, <a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction()</a>, Eigen::GurobiDense::solve() </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd><p class="startdd"><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a> needs to be implemented. </p>
+<p>Still gotta set the equality constraints such as Simultaneity </p>
+<p>Watch out! _eigGurobi will add a 1/2. Therefore the 2. Check that this is correct. </p>
+<p class="enddd">: The expression for _H_N is missing regularization terms </p>
+</dd></dl>
 
 </div>
 </div>
@@ -536,6 +663,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Takes N elements from an original trajectory of desired CoM states from state k</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comStateRef</td><td>Sets _H_N_r for a preview window of size N from time k </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -552,6 +686,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Technically should set the constraints matrix _Aineq. /warning To be deprecated if eigen-gurobi works fine </p>
 
 </div>
 </div>
@@ -568,6 +703,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Sets <a class="el" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a>, which corresponds to the linear part of the objective function of the MIQP </p>
 
 </div>
 </div>
@@ -584,6 +720,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Sets <a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a> and <a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a> <a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a> </dd></dl>
 
 </div>
 </div>
@@ -600,6 +738,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Sets the objective function with only the quadratic term. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>To be deprecated if eigen-gurobi works fine </dd></dl>
 
 </div>
 </div>
@@ -616,6 +756,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Sets the objective function object for Gurobi. /warning To be deprecated if eigen-gurobi works fine </p>
 
 </div>
 </div>
@@ -633,6 +774,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>/warning To be deprecated if eigen-gurobi works fine</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">variablesTypes</td><td>Vector of variables' types </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -649,6 +797,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Performs all the initialization of the MIQP controller such as:</p>
+<ul>
+<li>Initializing the Gurobi model.</li>
+<li>Set lower and upper bounds of the optimization variables.</li>
+<li>Create the LTI matrices of the constraints (inequality and equality constraints).</li>
+<li>Set variable types.</li>
+<li>Setup the eigen-gurobi object. </li>
+</ul>
 
 </div>
 </div>
@@ -665,6 +821,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Deallocates in memory. In particular, that of the Gurobi environment. </p>
 
 </div>
 </div>
@@ -681,6 +838,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Updates the state vector <a class="el" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">_xi_k</a>, i.e. \(xi_k\)</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd><p class="startdd">Update state vector using _robotModel </p>
+<p>Update upper bounds (a, b) </p>
+<p>Update rising/falling edges (alpha, beta) </p>
+<p>Update SS/DS (delta) </p>
+<p class="enddd">Update potential change from DS to SS (gamma) </p>
+</dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">_xi_k</a> </dd></dl>
 
 </div>
 </div>
@@ -850,6 +1015,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Linear constraints object </p>
 
 </div>
 </div>
@@ -863,6 +1029,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>eigen-gurobi object </p>
 
 </div>
 </div>
@@ -890,7 +1057,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Positive definite matrix \(H_N\) with the coefficients of the quadratic objective of the MIQP for the walking MPC problem.</p>
+<p>Positive definite matrix \(H_N\) with the coefficients of the quadratic objective of the MIQP for the walking MPC problem: </p>
+<p class="formulaDsp">
+\[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
+</p>
 <p>For the time being this is:</p>
 <p class="formulaDsp">
 \[ \mathbf{R}_H^T \mathbf{S}_w \mathbf{R}_H + (\mathbf{R}_P - \mathbf{R}_B)^T \mathbf{N}_b (\mathbf{R}_P - \mathbf{R}_B) \]
@@ -909,6 +1079,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Reference CoM state in preview window. Size: [6N] </p>
 
 </div>
 </div>
@@ -922,6 +1093,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Current iteration </p>
 
 </div>
 </div>
@@ -949,7 +1121,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Containts the state-dependent linear term of the objective function. This vector is to be passed to the eigen-gurobi problem. </p>
+<p>Containts the state-dependent coefficients of the linear term of the objective function of the MIQP for the walking MPC problem.</p>
+<p class="formulaDsp">
+\[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
+</p>
+<p>For the time being, it does not contain any resulting term from regularizing terms.</p>
+<p class="formulaDsp">
+\[ \mathbf{d}^T = -2(\mathbf{H}_N^r - \mathbf{P}_H \xi_k)^T \mathbf{S}_w \mathbf{R}_H + 2[(\mathbf{P}_P - \mathbf{P}_B) \xi_k]^T \mathbf{N}_b(\mathbf{R}_P - \mathbf{R}_B) \]
+</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction()</a> </dd></dl>
 
 </div>
 </div>
@@ -963,6 +1143,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Object containing basic MIQP parameters. </p>
 
 </div>
 </div>
@@ -1098,7 +1279,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Matrix \(\mathbf{Q}\) in preview state model: </p>
+<p class="formulaDsp">
+\[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \]
+</p>
+ <p class="formulaDsp">
+\[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} &amp; \mathbf{A_h}_{6\times6} \end{array}\right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a532459bb659a1cc39d449fdf3f81c63f"></a><!-- doxytag: member="MIQPController::_quadraticTermObjFunc" ref="a532459bb659a1cc39d449fdf3f81c63f" args="" -->
@@ -1200,7 +1388,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>\(S_w\) is a \(6\times6\) diagonal weighting selection matrix, defining whether position, velocity and/or acceleration of the CoM are tracked in each of the two horizontal directions.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>For the moment this has been hardcoded! Put it in configuration file. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>For the moment this has been hardcoded! Put it in configuration file. </dd></dl>
 
 </div>
 </div>
@@ -1214,6 +1402,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Matrix \(\mathbf{T}\) in preview state model:</p>
+<p class="formulaDsp">
+\[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \]
+</p>
+<p class="formulaDsp">
+\[ \mathbf{T} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times2}\\ \mathbf{0}_{6\times10} &amp; \mathbf{B_h}_{6\times2} \end{array}\right] \]
+</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a9a989875871a898f0ad19b441a2c67ba">_Bh</a> </dd></dl>
 
 </div>
 </div>
@@ -1267,6 +1463,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Solution \(\mathcal{X_{k,N}}\) of the MIQP problem </p>
 
 </div>
 </div>
@@ -1307,7 +1504,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Fri Feb 17 2017 23:34:14 for ocra-wbi-plugins by
+    <li class="footer">Generated on Sat Feb 18 2017 23:34:46 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

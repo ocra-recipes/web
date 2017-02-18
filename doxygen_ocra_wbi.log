@@ -383,7 +383,79 @@ Generating docs for compound Constraint...
 Generating docs for compound ContactConfigEnforcement...
 Generating docs for compound ContactConfigHistory...
 Generating docs for compound ExampleClient...
-Generat/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef)
+Generat/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:48: warning: Found unknown command `\params'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:44: warning: The following parameters of MIQPController::MIQPController(int period, MIQPParameters params, ocra::Model::Ptr robotModel, const Eigen::MatrixXd &comStateRef) are not documented:
+  parameter 'robotModel'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:161: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildAh(int dt, Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:161: warning: The following parameters of MIQPController::buildAh(int dt, Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:170: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildBh(int dt, Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:170: warning: The following parameters of MIQPController::buildBh(int dt, Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:211: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildC_B(Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:211: warning: The following parameters of MIQPController::buildC_B(Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:195: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildC_H(Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:195: warning: The following parameters of MIQPController::buildC_H(Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:203: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildC_P(Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:203: warning: The following parameters of MIQPController::buildC_P(Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:219: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildH_N(Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:219: warning: The following parameters of MIQPController::buildH_N(Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:228: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildNb(Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:228: warning: The following parameters of MIQPController::buildNb(Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:262: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:262: warning: Found unknown command `\left'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:262: warning: Found unknown command `\begin'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:263: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:263: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:263: warning: Found unknown command `\cdots'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:264: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:264: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:264: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:264: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:264: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:264: warning: Found unknown command `\cdots'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:265: warning: Found unknown command `\vdots'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:265: warning: Found unknown command `\vdots'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:265: warning: Found unknown command `\ddots'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:265: warning: Found unknown command `\vdots'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\cdots'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:266: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:267: warning: Found unknown command `\end'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:267: warning: Found unknown command `\right'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:247: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:247: warning: Found unknown command `\left'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:247: warning: Found unknown command `\begin'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:248: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:248: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:249: warning: Found unknown command `\vdots'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:250: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:250: warning: Found unknown command `\mathbf'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:251: warning: Found unknown command `\end'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:251: warning: Found unknown command `\right'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:179: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildQ(Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:179: warning: The following parameters of MIQPController::buildQ(Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:237: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildSw(Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:237: warning: The following parameters of MIQPController::buildSw(Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:187: warning: argument 'Output' of command @param is not found in the argument list of MIQPController::buildT(Eigen::MatrixXd &output)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:187: warning: The following parameters of MIQPController::buildT(Eigen::MatrixXd &output) are not documented:
+  parameter 'output'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:92: warning: The following parameters of MIQPController::setCOMStateRefInPreviewWindow(unsigned int k, Eigen::VectorXd &comStateRef) are not documented:
+  parameter 'k'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef)
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: The following parameters of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef) are not documented:
   parameter 'threadRef'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:141: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::DebugRpcServerCallback::DebugRpcServerCallback(Thread &threadRef)
@@ -456,6 +528,6 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Patching output file 1/1
-symbol cache used 807/65536 hits=43973 misses=807
-lookup cache used 1058/65536 hits=3461 misses=1080
+symbol cache used 807/65536 hits=44028 misses=807
+lookup cache used 1058/65536 hits=3490 misses=1080
 finished...
