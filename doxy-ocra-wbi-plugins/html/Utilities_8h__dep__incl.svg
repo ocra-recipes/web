@@ -11,104 +11,116 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-374 4637,-374 4637,5 -4,5"/>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<polygon fill="#bfbfbf" stroke="black" points="2435.5,-348.5 2435.5,-369.5 2686.5,-369.5 2686.5,-348.5 2435.5,-348.5"/>
-<text text-anchor="middle" x="2561" y="-356.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/Utilities.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="2202.5,-348.5 2202.5,-369.5 2453.5,-369.5 2453.5,-348.5 2202.5,-348.5"/>
+<text text-anchor="middle" x="2328" y="-356.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/Utilities.h</text>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node"><title>Node2</title>
 <a xlink:href="Module_8h.html" target="_top" xlink:title="Module class for the controller server.">
-<polygon fill="white" stroke="black" points="230.5,-58.5 230.5,-79.5 539.5,-79.5 539.5,-58.5 230.5,-58.5"/>
-<text text-anchor="middle" x="385" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/Module.h</text>
+<polygon fill="white" stroke="black" points="239.5,-58.5 239.5,-79.5 548.5,-79.5 548.5,-58.5 239.5,-58.5"/>
+<text text-anchor="middle" x="394" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/Module.h</text>
 </a>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge2" class="edge"><title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M2425.18,-358.407C1968.51,-355.53 517,-338.847 517,-243 517,-243 517,-243 517,-185 517,-130.695 453.183,-95.8269 414.295,-79.6202"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2425.43,-361.909 2435.45,-358.47 2425.47,-354.909 2425.43,-361.909"/>
+<path fill="none" stroke="midnightblue" d="M2192.12,-356.72C1791.34,-349.108 642,-320.519 642,-243 642,-243 642,-243 642,-185 642,-140.141 507.183,-98.3718 436.351,-79.5223"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2192.25,-360.223 2202.31,-356.912 2192.38,-353.224 2192.25,-360.223"/>
 </g>
 <!-- Node5 -->
 <g id="node9" class="node"><title>Node5</title>
 <a xlink:href="Thread_8h.html" target="_top" xlink:title="The thread class for the controller server.">
-<polygon fill="white" stroke="black" points="790,-116.5 790,-137.5 1098,-137.5 1098,-116.5 790,-116.5"/>
-<text text-anchor="middle" x="944" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/Thread.h</text>
+<polygon fill="white" stroke="black" points="722,-116.5 722,-137.5 1030,-137.5 1030,-116.5 722,-116.5"/>
+<text text-anchor="middle" x="876" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/Thread.h</text>
 </a>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge8" class="edge"><title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M2425.3,-350.783C2177.55,-334.035 1636.27,-289.368 1189,-196 1111.57,-179.837 1022.64,-152.542 976.146,-137.585"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2425.22,-354.285 2435.43,-351.463 2425.69,-347.301 2425.22,-354.285"/>
+<path fill="none" stroke="midnightblue" d="M2192.13,-355.121C2061.14,-349.964 1857.63,-338.222 1683,-312 1381.65,-266.75 1025.98,-169.574 912.618,-137.506"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2192.09,-358.622 2202.22,-355.511 2192.36,-351.627 2192.09,-358.622"/>
 </g>
 <!-- Node7 -->
 <g id="node14" class="node"><title>Node7</title>
-<a xlink:href="ZmpController_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpController.h">
-<polygon fill="white" stroke="black" points="3184,-290.5 3184,-311.5 3576,-311.5 3576,-290.5 3184,-290.5"/>
-<text text-anchor="middle" x="3380" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpController.h</text>
+<a xlink:href="MIQPState_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/MIQPState.h">
+<polygon fill="white" stroke="black" points="3142,-174.5 3142,-195.5 3522,-195.5 3522,-174.5 3142,-174.5"/>
+<text text-anchor="middle" x="3332" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/MIQPState.h</text>
 </a>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge14" class="edge"><title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M2696.76,-349.386C2844.31,-338.936 3079.35,-322.292 3231.66,-311.505"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2696.45,-345.899 2686.73,-350.096 2696.95,-352.881 2696.45,-345.899"/>
-</g>
-<!-- Node9 -->
-<g id="node18" class="node"><title>Node9</title>
-<a xlink:href="ZmpPreviewController_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpPreviewController.h">
-<polygon fill="white" stroke="black" points="2738,-290.5 2738,-311.5 3166,-311.5 3166,-290.5 2738,-290.5"/>
-<text text-anchor="middle" x="2952" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpPreviewController.h</text>
-</a>
-</g>
-<!-- Node1&#45;&gt;Node9 -->
-<g id="edge18" class="edge"><title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M2641.98,-346.988C2712.49,-336.529 2813.68,-321.517 2881.06,-311.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2641.19,-343.567 2631.81,-348.497 2642.21,-350.491 2641.19,-343.567"/>
+<path fill="none" stroke="midnightblue" d="M2463.9,-351.199C2607.26,-342.386 2823.48,-327.271 2905,-312 3058.94,-283.163 3236.52,-220.482 3304.02,-195.543"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2463.47,-347.719 2453.7,-351.823 2463.9,-354.706 2463.47,-347.719"/>
 </g>
 <!-- Node14 -->
 <g id="node28" class="node"><title>Node14</title>
-<a xlink:href="IcubClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/IcubClient.h">
-<polygon fill="white" stroke="black" points="2087,-116.5 2087,-137.5 2349,-137.5 2349,-116.5 2087,-116.5"/>
-<text text-anchor="middle" x="2218" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/IcubClient.h</text>
+<a xlink:href="ZmpController_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpController.h">
+<polygon fill="white" stroke="black" points="1704,-290.5 1704,-311.5 2096,-311.5 2096,-290.5 1704,-290.5"/>
+<text text-anchor="middle" x="1900" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpController.h</text>
 </a>
 </g>
 <!-- Node1&#45;&gt;Node14 -->
 <g id="edge28" class="edge"><title>Node1&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M2572.22,-339.297C2591.77,-302.053 2626.25,-220.868 2585,-174 2576.43,-164.266 2432.61,-148.108 2327.6,-137.506"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2569.09,-337.714 2567.4,-348.172 2575.25,-341.054 2569.09,-337.714"/>
+<path fill="none" stroke="midnightblue" d="M2240.3,-347.116C2163.09,-336.652 2051.71,-321.558 1977.65,-311.523"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2240.11,-350.622 2250.49,-348.497 2241.05,-343.685 2240.11,-350.622"/>
 </g>
-<!-- Node30 -->
-<g id="node67" class="node"><title>Node30</title>
+<!-- Node16 -->
+<g id="node32" class="node"><title>Node16</title>
+<a xlink:href="ZmpPreviewController_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpPreviewController.h">
+<polygon fill="white" stroke="black" points="2114,-290.5 2114,-311.5 2542,-311.5 2542,-290.5 2114,-290.5"/>
+<text text-anchor="middle" x="2328" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/ZmpPreviewController.h</text>
+</a>
+</g>
+<!-- Node1&#45;&gt;Node16 -->
+<g id="edge32" class="edge"><title>Node1&#45;&gt;Node16</title>
+<path fill="none" stroke="midnightblue" d="M2328,-338.191C2328,-329.168 2328,-318.994 2328,-311.571"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2324.5,-338.362 2328,-348.362 2331.5,-338.362 2324.5,-338.362"/>
+</g>
+<!-- Node18 -->
+<g id="node37" class="node"><title>Node18</title>
+<a xlink:href="IcubClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/IcubClient.h">
+<polygon fill="white" stroke="black" points="2198,-116.5 2198,-137.5 2460,-137.5 2460,-116.5 2198,-116.5"/>
+<text text-anchor="middle" x="2329" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/IcubClient.h</text>
+</a>
+</g>
+<!-- Node1&#45;&gt;Node18 -->
+<g id="edge38" class="edge"><title>Node1&#45;&gt;Node18</title>
+<path fill="none" stroke="midnightblue" d="M2192.19,-353.575C2011.23,-345.674 1711.68,-329.969 1695,-312 1677.87,-293.547 1692.6,-249.867 1713,-232 1783.44,-170.302 2038.98,-144.068 2197.96,-133.525"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2192.18,-357.077 2202.33,-354.014 2192.49,-350.084 2192.18,-357.077"/>
+</g>
+<!-- Node34 -->
+<g id="node76" class="node"><title>Node34</title>
 <a xlink:href="OcraWbiConversions_8h.html" target="_top" xlink:title="A utility class full of static conversion functions.">
-<polygon fill="white" stroke="black" points="2038.5,-290.5 2038.5,-311.5 2349.5,-311.5 2349.5,-290.5 2038.5,-290.5"/>
-<text text-anchor="middle" x="2194" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/OcraWbiConversions.h</text>
+<polygon fill="white" stroke="black" points="2559.5,-290.5 2559.5,-311.5 2870.5,-311.5 2870.5,-290.5 2559.5,-290.5"/>
+<text text-anchor="middle" x="2715" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/OcraWbiConversions.h</text>
 </a>
 </g>
-<!-- Node1&#45;&gt;Node30 -->
-<g id="edge74" class="edge"><title>Node1&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M2484.58,-346.923C2418.42,-336.468 2323.7,-321.497 2260.59,-311.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2484.12,-350.393 2494.54,-348.497 2485.21,-343.478 2484.12,-350.393"/>
+<!-- Node1&#45;&gt;Node34 -->
+<g id="edge84" class="edge"><title>Node1&#45;&gt;Node34</title>
+<path fill="none" stroke="midnightblue" d="M2408.15,-346.988C2477.94,-336.529 2578.1,-321.517 2644.79,-311.523"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2407.45,-343.553 2398.08,-348.497 2408.49,-350.476 2407.45,-343.553"/>
 </g>
-<!-- Node31 -->
-<g id="node70" class="node"><title>Node31</title>
+<!-- Node35 -->
+<g id="node79" class="node"><title>Node35</title>
 <a xlink:href="OcraWbiModel_8h.html" target="_top" xlink:title="Implementation of ocra::Model using wholeBodyInterface.">
-<polygon fill="white" stroke="black" points="2289,-232.5 2289,-253.5 2571,-253.5 2571,-232.5 2289,-232.5"/>
-<text text-anchor="middle" x="2430" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/OcraWbiModel.h</text>
+<polygon fill="white" stroke="black" points="2792,-232.5 2792,-253.5 3074,-253.5 3074,-232.5 2792,-232.5"/>
+<text text-anchor="middle" x="2933" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/OcraWbiModel.h</text>
 </a>
 </g>
-<!-- Node1&#45;&gt;Node31 -->
-<g id="edge104" class="edge"><title>Node1&#45;&gt;Node31</title>
-<path fill="none" stroke="midnightblue" d="M2541.1,-341.379C2513.56,-316.988 2464.65,-273.686 2442.06,-253.679"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2539.1,-344.286 2548.91,-348.295 2543.74,-339.045 2539.1,-344.286"/>
+<!-- Node1&#45;&gt;Node35 -->
+<g id="edge112" class="edge"><title>Node1&#45;&gt;Node35</title>
+<path fill="none" stroke="midnightblue" d="M2463.97,-353.059C2615.3,-345.559 2843.38,-331.273 2879,-312 2903.35,-298.826 2920.37,-269.509 2928.18,-253.661"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2463.48,-349.579 2453.67,-353.565 2463.83,-356.57 2463.48,-349.579"/>
 </g>
-<!-- Node40 -->
-<g id="node93" class="node"><title>Node40</title>
+<!-- Node42 -->
+<g id="node99" class="node"><title>Node42</title>
 <a xlink:href="Utilities_8cpp.html" target="_top" xlink:title="Some useful tools for the ocra&#45;icub lib.">
-<polygon fill="white" stroke="black" points="3593.5,-290.5 3593.5,-311.5 3794.5,-311.5 3794.5,-290.5 3593.5,-290.5"/>
-<text text-anchor="middle" x="3694" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/Utilities.cpp</text>
+<polygon fill="white" stroke="black" points="3129.5,-290.5 3129.5,-311.5 3330.5,-311.5 3330.5,-290.5 3129.5,-290.5"/>
+<text text-anchor="middle" x="3230" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/Utilities.cpp</text>
 </a>
 </g>
-<!-- Node1&#45;&gt;Node40 -->
-<g id="edge106" class="edge"><title>Node1&#45;&gt;Node40</title>
-<path fill="none" stroke="midnightblue" d="M2696.92,-355.128C2893.19,-349 3267.27,-335.306 3585,-312 3587.75,-311.798 3590.54,-311.584 3593.35,-311.359"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2696.74,-351.632 2686.85,-355.441 2696.95,-358.629 2696.74,-351.632"/>
+<!-- Node1&#45;&gt;Node42 -->
+<g id="edge114" class="edge"><title>Node1&#45;&gt;Node42</title>
+<path fill="none" stroke="midnightblue" d="M2463.85,-352.411C2620.97,-344.44 2887.38,-329.842 3116,-312 3120.36,-311.66 3124.81,-311.297 3129.31,-310.917"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2463.47,-348.926 2453.66,-352.927 2463.82,-355.917 2463.47,-348.926"/>
 </g>
 <!-- Node3 -->
 <g id="node5" class="node"><title>Node3</title>
@@ -119,8 +131,8 @@
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge4" class="edge"><title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M325.063,-56.4045C275.442,-45.977 205.757,-31.333 159.075,-21.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="324.512,-59.8652 335.018,-58.4966 325.952,-53.0148 324.512,-59.8652"/>
+<path fill="none" stroke="midnightblue" d="M332.429,-56.4697C281.17,-46.0382 209.013,-31.3535 160.708,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="331.892,-59.932 342.389,-58.4966 333.288,-53.0726 331.892,-59.932"/>
 </g>
 <!-- Node4 -->
 <g id="node7" class="node"><title>Node4</title>
@@ -131,426 +143,448 @@
 </g>
 <!-- Node2&#45;&gt;Node4 -->
 <g id="edge6" class="edge"><title>Node2&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M373.667,-49.6667C368.173,-40.2948 361.787,-29.4019 357.197,-21.5707"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="370.687,-51.5049 378.764,-58.3619 376.726,-47.9649 370.687,-51.5049"/>
+<path fill="none" stroke="midnightblue" d="M380.099,-50.2504C373.056,-40.75 364.764,-29.5651 358.837,-21.5707"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="377.346,-52.4132 386.113,-58.3619 382.969,-48.2443 377.346,-52.4132"/>
 </g>
 <!-- Node5&#45;&gt;Node2 -->
 <g id="edge10" class="edge"><title>Node5&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M832.537,-115.435C731.587,-104.961 584.127,-89.6607 486.421,-79.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="832.461,-118.946 842.769,-116.497 833.184,-111.983 832.461,-118.946"/>
+<path fill="none" stroke="midnightblue" d="M778.569,-115.276C691.563,-104.806 565.272,-89.6095 481.45,-79.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="778.367,-118.777 788.713,-116.497 779.203,-111.827 778.367,-118.777"/>
 </g>
 <!-- Node6 -->
 <g id="node12" class="node"><title>Node6</title>
 <a xlink:href="Thread_8cpp.html" target="_top" xlink:title="The thread class for the controller server.">
-<polygon fill="white" stroke="black" points="577,-58.5 577,-79.5 805,-79.5 805,-58.5 577,-58.5"/>
-<text text-anchor="middle" x="691" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/Thread.cpp</text>
+<polygon fill="white" stroke="black" points="604,-58.5 604,-79.5 832,-79.5 832,-58.5 604,-58.5"/>
+<text text-anchor="middle" x="718" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/Thread.cpp</text>
 </a>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge12" class="edge"><title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M888.201,-114.208C842.773,-103.794 779.426,-89.2716 736.902,-79.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="887.654,-117.674 898.184,-116.497 889.219,-110.851 887.654,-117.674"/>
+<path fill="none" stroke="midnightblue" d="M837.888,-113.009C809.81,-102.702 772.218,-88.903 746.666,-79.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="836.794,-116.336 847.387,-116.497 839.206,-109.765 836.794,-116.336"/>
 </g>
 <!-- Node8 -->
 <g id="node16" class="node"><title>Node8</title>
-<a xlink:href="ZmpController_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpController.cpp">
-<polygon fill="white" stroke="black" points="3461.5,-232.5 3461.5,-253.5 3784.5,-253.5 3784.5,-232.5 3461.5,-232.5"/>
-<text text-anchor="middle" x="3623" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpController.cpp</text>
+<a xlink:href="MIQPController_8h.html" target="_top" xlink:title="A thread for launching trajectory generators.">
+<polygon fill="white" stroke="black" points="3133,-116.5 3133,-137.5 3531,-137.5 3531,-116.5 3133,-116.5"/>
+<text text-anchor="middle" x="3332" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/MIQPController.h</text>
 </a>
 </g>
 <!-- Node7&#45;&gt;Node8 -->
 <g id="edge16" class="edge"><title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M3433.87,-288.142C3477.48,-277.733 3538.15,-263.251 3578.91,-253.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="3432.92,-284.771 3424.01,-290.497 3434.54,-291.579 3432.92,-284.771"/>
-</g>
-<!-- Node10 -->
-<g id="node20" class="node"><title>Node10</title>
-<a xlink:href="WalkingClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h">
-<polygon fill="white" stroke="black" points="3672,-58.5 3672,-79.5 4064,-79.5 4064,-58.5 3672,-58.5"/>
-<text text-anchor="middle" x="3868" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h</text>
-</a>
-</g>
-<!-- Node9&#45;&gt;Node10 -->
-<g id="edge20" class="edge"><title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M2976.03,-284.85C3000.46,-269.144 3039.89,-245.708 3077,-232 3317.7,-143.101 3618.47,-98.0067 3770.44,-79.5174"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2973.91,-282.059 2967.44,-290.454 2977.73,-287.922 2973.91,-282.059"/>
+<path fill="none" stroke="midnightblue" d="M3332,-164.191C3332,-155.168 3332,-144.994 3332,-137.571"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3328.5,-164.362 3332,-174.362 3335.5,-164.362 3328.5,-164.362"/>
 </g>
 <!-- Node13 -->
 <g id="node26" class="node"><title>Node13</title>
-<a xlink:href="ZmpPreviewController_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpPreviewController.cpp">
-<polygon fill="white" stroke="black" points="3085.5,-232.5 3085.5,-253.5 3444.5,-253.5 3444.5,-232.5 3085.5,-232.5"/>
-<text text-anchor="middle" x="3265" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpPreviewController.cpp</text>
+<a xlink:href="MIQPState_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPState.cpp">
+<polygon fill="white" stroke="black" points="3548.5,-116.5 3548.5,-137.5 3859.5,-137.5 3859.5,-116.5 3548.5,-116.5"/>
+<text text-anchor="middle" x="3704" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPState.cpp</text>
 </a>
 </g>
-<!-- Node9&#45;&gt;Node13 -->
-<g id="edge26" class="edge"><title>Node9&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M3018.57,-288.665C3074.92,-278.222 3154.83,-263.415 3208.21,-253.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="3017.88,-285.233 3008.68,-290.497 3019.15,-292.116 3017.88,-285.233"/>
+<!-- Node7&#45;&gt;Node13 -->
+<g id="edge26" class="edge"><title>Node7&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M3409.46,-172.923C3476.52,-162.468 3572.54,-147.497 3636.51,-137.523"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3408.71,-169.498 3399.37,-174.497 3409.79,-176.414 3408.71,-169.498"/>
 </g>
-<!-- Node11 -->
-<g id="node22" class="node"><title>Node11</title>
+<!-- Node9 -->
+<g id="node18" class="node"><title>Node9</title>
+<a xlink:href="WalkingClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h">
+<polygon fill="white" stroke="black" points="3485,-58.5 3485,-79.5 3877,-79.5 3877,-58.5 3485,-58.5"/>
+<text text-anchor="middle" x="3681" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h</text>
+</a>
+</g>
+<!-- Node8&#45;&gt;Node9 -->
+<g id="edge18" class="edge"><title>Node8&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M3405.44,-114.794C3468.32,-104.345 3557.91,-89.4559 3617.68,-79.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3404.49,-111.405 3395.2,-116.497 3405.64,-118.31 3404.49,-111.405"/>
+</g>
+<!-- Node12 -->
+<g id="node24" class="node"><title>Node12</title>
+<a xlink:href="MIQPController_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp">
+<polygon fill="white" stroke="black" points="3894.5,-58.5 3894.5,-79.5 4223.5,-79.5 4223.5,-58.5 3894.5,-58.5"/>
+<text text-anchor="middle" x="4059" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp</text>
+</a>
+</g>
+<!-- Node8&#45;&gt;Node12 -->
+<g id="edge24" class="edge"><title>Node8&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M3473.79,-115.688C3605.15,-105.208 3799,-89.7426 3927.1,-79.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3473.34,-112.212 3463.65,-116.497 3473.9,-119.19 3473.34,-112.212"/>
+</g>
+<!-- Node10 -->
+<g id="node20" class="node"><title>Node10</title>
 <a xlink:href="ocra-icub-clients_2walking-client_2src_2main_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp">
 <polygon fill="white" stroke="black" points="4009.5,-0.5 4009.5,-21.5 4292.5,-21.5 4292.5,-0.5 4009.5,-0.5"/>
 <text text-anchor="middle" x="4151" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp</text>
 </a>
 </g>
-<!-- Node10&#45;&gt;Node11 -->
-<g id="edge22" class="edge"><title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M3929.14,-56.4697C3980.04,-46.0382 4051.69,-31.3535 4099.65,-21.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="3928.34,-53.0601 3919.25,-58.4966 3929.75,-59.9176 3928.34,-53.0601"/>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge20" class="edge"><title>Node9&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M3776.26,-57.244C3861.1,-46.7755 3984.07,-31.5993 4065.73,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3775.61,-53.7981 3766.11,-58.4966 3776.47,-60.7455 3775.61,-53.7981"/>
 </g>
-<!-- Node12 -->
-<g id="node24" class="node"><title>Node12</title>
+<!-- Node11 -->
+<g id="node22" class="node"><title>Node11</title>
 <a xlink:href="WalkingClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp">
 <polygon fill="white" stroke="black" points="4309.5,-0.5 4309.5,-21.5 4632.5,-21.5 4632.5,-0.5 4309.5,-0.5"/>
 <text text-anchor="middle" x="4471" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp</text>
 </a>
 </g>
-<!-- Node10&#45;&gt;Node12 -->
-<g id="edge24" class="edge"><title>Node10&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M3987.25,-57.53C4096.17,-47.0535 4255.88,-31.6914 4361.6,-21.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="3986.82,-54.0552 3977.2,-58.4966 3987.49,-61.023 3986.82,-54.0552"/>
-</g>
-<!-- Node14&#45;&gt;Node10 -->
-<g id="edge70" class="edge"><title>Node14&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M2359.4,-115.951C2936.9,-85.5596 3083.85,-102.984 3658,-80 3662.56,-79.8175 3667.18,-79.6265 3671.83,-79.4285"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2358.94,-112.47 2349.14,-116.493 2359.31,-119.46 2358.94,-112.47"/>
-</g>
-<!-- Node14&#45;&gt;Node11 -->
-<g id="edge72" class="edge"><title>Node14&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M2359.39,-116.025C2538.92,-108.871 3492.3,-117.671 3625,-80 3643.77,-74.6707 3644.42,-63.9608 3663,-58 3695.39,-47.609 3877.65,-31.8659 4009.96,-21.5083"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2358.97,-112.54 2349.14,-116.496 2359.29,-119.533 2358.97,-112.54"/>
+<!-- Node9&#45;&gt;Node11 -->
+<g id="edge22" class="edge"><title>Node9&#45;&gt;Node11</title>
+<path fill="none" stroke="midnightblue" d="M3834.22,-57.7509C3976.97,-47.2704 4188.19,-31.7631 4327.67,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3833.78,-54.2737 3824.06,-58.4966 3834.29,-61.2549 3833.78,-54.2737"/>
 </g>
 <!-- Node15 -->
 <g id="node30" class="node"><title>Node15</title>
-<a xlink:href="ExampleClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/include/example&#45;client/ExampleClient.h">
-<polygon fill="white" stroke="black" points="3214,-58.5 3214,-79.5 3616,-79.5 3616,-58.5 3214,-58.5"/>
-<text text-anchor="middle" x="3415" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/include/example&#45;client/ExampleClient.h</text>
+<a xlink:href="ZmpController_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpController.cpp">
+<polygon fill="white" stroke="black" points="1721.5,-232.5 1721.5,-253.5 2044.5,-253.5 2044.5,-232.5 1721.5,-232.5"/>
+<text text-anchor="middle" x="1883" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpController.cpp</text>
 </a>
 </g>
 <!-- Node14&#45;&gt;Node15 -->
 <g id="edge30" class="edge"><title>Node14&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M2359.38,-115.939C2535.62,-105.405 2959.76,-87.5338 3213.8,-77.1297"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2358.92,-112.461 2349.15,-116.56 2359.34,-119.448 2358.92,-112.461"/>
+<path fill="none" stroke="midnightblue" d="M1893.99,-280.488C1891.32,-271.392 1888.3,-261.076 1886.1,-253.571"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1890.71,-281.75 1896.88,-290.362 1897.43,-279.781 1890.71,-281.75"/>
 </g>
-<!-- Node16 -->
-<g id="node32" class="node"><title>Node16</title>
-<a xlink:href="example-client_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/example&#45;client.cpp">
-<polygon fill="white" stroke="black" points="3317.5,-0.5 3317.5,-21.5 3646.5,-21.5 3646.5,-0.5 3317.5,-0.5"/>
-<text text-anchor="middle" x="3482" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/example&#45;client.cpp</text>
+<!-- Node16&#45;&gt;Node9 -->
+<g id="edge34" class="edge"><title>Node16&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M2366.77,-286.603C2386.28,-278.469 2409.81,-267.27 2429,-254 2501.12,-204.121 2489.49,-150.735 2570,-116 2662,-76.3121 3370.92,-84.6205 3471,-80 3475.56,-79.7895 3480.17,-79.5734 3484.83,-79.3527"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2365.21,-283.458 2357.26,-290.459 2367.84,-289.945 2365.21,-283.458"/>
+</g>
+<!-- Node17 -->
+<g id="node35" class="node"><title>Node17</title>
+<a xlink:href="ZmpPreviewController_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpPreviewController.cpp">
+<polygon fill="white" stroke="black" points="2061.5,-232.5 2061.5,-253.5 2420.5,-253.5 2420.5,-232.5 2061.5,-232.5"/>
+<text text-anchor="middle" x="2241" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/ZmpPreviewController.cpp</text>
 </a>
 </g>
-<!-- Node14&#45;&gt;Node16 -->
-<g id="edge36" class="edge"><title>Node14&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M2359.27,-115.927C2629.76,-97.6012 2699.84,-105.64 2966,-80 3127.94,-64.4002 3317.25,-36.6251 3415.39,-21.5085"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2358.89,-112.444 2349.15,-116.618 2359.37,-119.428 2358.89,-112.444"/>
+<!-- Node16&#45;&gt;Node17 -->
+<g id="edge36" class="edge"><title>Node16&#45;&gt;Node17</title>
+<path fill="none" stroke="midnightblue" d="M2303.31,-284.541C2288.4,-274.597 2269.83,-262.218 2256.86,-253.571"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2301.78,-287.727 2312.04,-290.362 2305.66,-281.903 2301.78,-287.727"/>
 </g>
-<!-- Node18 -->
-<g id="node37" class="node"><title>Node18</title>
-<a xlink:href="SittingDemoClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/include/sitting&#45;demo/SittingDemoClient.h">
-<polygon fill="white" stroke="black" points="861,-58.5 861,-79.5 1259,-79.5 1259,-58.5 861,-58.5"/>
-<text text-anchor="middle" x="1060" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/include/sitting&#45;demo/SittingDemoClient.h</text>
-</a>
+<!-- Node18&#45;&gt;Node9 -->
+<g id="edge80" class="edge"><title>Node18&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M2470.58,-116.194C2471.73,-116.128 2472.87,-116.063 2474,-116 2916.71,-91.2247 3028.03,-99.5976 3471,-80 3475.56,-79.7983 3480.17,-79.5901 3484.83,-79.3764"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2469.96,-112.725 2460.19,-116.814 2470.38,-119.712 2469.96,-112.725"/>
 </g>
-<!-- Node14&#45;&gt;Node18 -->
-<g id="edge38" class="edge"><title>Node14&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M2076.64,-119.92C1871.91,-109.666 1491.98,-90.6365 1259.02,-78.9683"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2076.69,-123.427 2086.85,-120.431 2077.04,-116.435 2076.69,-123.427"/>
+<!-- Node18&#45;&gt;Node10 -->
+<g id="edge82" class="edge"><title>Node18&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M2470.58,-116.196C2471.73,-116.129 2472.87,-116.064 2474,-116 2688.03,-103.89 3232.04,-139.461 3438,-80 3456.75,-74.587 3457.34,-63.7042 3476,-58 3587.83,-23.8184 3884.35,-30.2764 4001,-22 4003.73,-21.806 4006.5,-21.6093 4009.28,-21.4106"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2469.96,-112.727 2460.19,-116.821 2470.38,-119.714 2469.96,-112.727"/>
 </g>
 <!-- Node19 -->
 <g id="node39" class="node"><title>Node19</title>
-<a xlink:href="ocra-icub-clients_2sitting-demo_2src_2main_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/main.cpp">
-<polygon fill="white" stroke="black" points="483.5,-0.5 483.5,-21.5 760.5,-21.5 760.5,-0.5 483.5,-0.5"/>
-<text text-anchor="middle" x="622" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/main.cpp</text>
+<a xlink:href="ExampleClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/include/example&#45;client/ExampleClient.h">
+<polygon fill="white" stroke="black" points="888,-58.5 888,-79.5 1290,-79.5 1290,-58.5 888,-58.5"/>
+<text text-anchor="middle" x="1089" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/include/example&#45;client/ExampleClient.h</text>
 </a>
-</g>
-<!-- Node14&#45;&gt;Node19 -->
-<g id="edge44" class="edge"><title>Node14&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M2076.62,-123.984C1739.11,-116.535 910.022,-96.6591 852,-80 833.243,-74.6145 832.105,-65.2826 814,-58 771.973,-41.0953 722.24,-29.1277 683.921,-21.5003"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2076.87,-127.491 2086.95,-124.212 2077.03,-120.492 2076.87,-127.491"/>
-</g>
-<!-- Node21 -->
-<g id="node44" class="node"><title>Node21</title>
-<a xlink:href="StandingDemoClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/include/standing&#45;demo/StandingDemoClient.h">
-<polygon fill="white" stroke="black" points="1397,-58.5 1397,-79.5 1827,-79.5 1827,-58.5 1397,-58.5"/>
-<text text-anchor="middle" x="1612" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/include/standing&#45;demo/StandingDemoClient.h</text>
-</a>
-</g>
-<!-- Node14&#45;&gt;Node21 -->
-<g id="edge46" class="edge"><title>Node14&#45;&gt;Node21</title>
-<path fill="none" stroke="midnightblue" d="M2098.16,-115.53C1988.7,-105.054 1828.19,-89.6914 1721.95,-79.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2097.97,-119.028 2108.26,-116.497 2098.64,-112.06 2097.97,-119.028"/>
-</g>
-<!-- Node22 -->
-<g id="node46" class="node"><title>Node22</title>
-<a xlink:href="ocra-icub-clients_2standing-demo_2src_2main_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/main.cpp">
-<polygon fill="white" stroke="black" points="1129.5,-0.5 1129.5,-21.5 1416.5,-21.5 1416.5,-0.5 1129.5,-0.5"/>
-<text text-anchor="middle" x="1273" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/main.cpp</text>
-</a>
-</g>
-<!-- Node14&#45;&gt;Node22 -->
-<g id="edge52" class="edge"><title>Node14&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M2076.72,-122.693C1856.98,-115.439 1451.81,-99.6337 1388,-80 1347.28,-67.4697 1306.01,-37.5947 1285.79,-21.5755"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2076.61,-126.191 2086.72,-123.022 2076.84,-119.195 2076.61,-126.191"/>
-</g>
-<!-- Node24 -->
-<g id="node51" class="node"><title>Node24</title>
-<a xlink:href="SteppingDemoClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/include/stepping&#45;demo/SteppingDemoClient.h">
-<polygon fill="white" stroke="black" points="2003,-58.5 2003,-79.5 2433,-79.5 2433,-58.5 2003,-58.5"/>
-<text text-anchor="middle" x="2218" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/include/stepping&#45;demo/SteppingDemoClient.h</text>
-</a>
-</g>
-<!-- Node14&#45;&gt;Node24 -->
-<g id="edge54" class="edge"><title>Node14&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M2218,-106.191C2218,-97.1684 2218,-86.9941 2218,-79.5707"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2214.5,-106.362 2218,-116.362 2221.5,-106.362 2214.5,-106.362"/>
-</g>
-<!-- Node25 -->
-<g id="node53" class="node"><title>Node25</title>
-<a xlink:href="stepping-demo_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/stepping&#45;demo.cpp">
-<polygon fill="white" stroke="black" points="1808,-0.5 1808,-21.5 2138,-21.5 2138,-0.5 1808,-0.5"/>
-<text text-anchor="middle" x="1973" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/stepping&#45;demo.cpp</text>
-</a>
-</g>
-<!-- Node14&#45;&gt;Node25 -->
-<g id="edge60" class="edge"><title>Node14&#45;&gt;Node25</title>
-<path fill="none" stroke="midnightblue" d="M2110.67,-114.968C2062.09,-107.469 2011.62,-96.1243 1994,-80 1977.37,-64.7841 1973.75,-36.853 1973.06,-21.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2110.26,-118.446 2120.67,-116.463 2111.3,-111.523 2110.26,-118.446"/>
-</g>
-<!-- Node27 -->
-<g id="node58" class="node"><title>Node27</title>
-<a xlink:href="TaskOpsClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/include/task&#45;operations&#45;demo/TaskOpsClient.h">
-<polygon fill="white" stroke="black" points="2492.5,-58.5 2492.5,-79.5 2957.5,-79.5 2957.5,-58.5 2492.5,-58.5"/>
-<text text-anchor="middle" x="2725" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/include/task&#45;operations&#45;demo/TaskOpsClient.h</text>
-</a>
-</g>
-<!-- Node14&#45;&gt;Node27 -->
-<g id="edge62" class="edge"><title>Node14&#45;&gt;Node27</title>
-<path fill="none" stroke="midnightblue" d="M2319.93,-115.34C2411.46,-104.868 2544.67,-89.63 2633.01,-79.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2319.35,-111.883 2309.81,-116.497 2320.15,-118.837 2319.35,-111.883"/>
-</g>
-<!-- Node28 -->
-<g id="node60" class="node"><title>Node28</title>
-<a xlink:href="task-operations-demo_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/task&#45;operations&#45;demo.cpp">
-<polygon fill="white" stroke="black" points="2530,-0.5 2530,-21.5 2920,-21.5 2920,-0.5 2530,-0.5"/>
-<text text-anchor="middle" x="2725" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/task&#45;operations&#45;demo.cpp</text>
-</a>
-</g>
-<!-- Node14&#45;&gt;Node28 -->
-<g id="edge68" class="edge"><title>Node14&#45;&gt;Node28</title>
-<path fill="none" stroke="midnightblue" d="M2303.6,-114.746C2346,-107.249 2397.51,-95.972 2442,-80 2461.83,-72.88 2464.12,-64.9789 2484,-58 2534.18,-40.3879 2592.68,-28.7799 2639.48,-21.5065"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2302.84,-111.324 2293.58,-116.476 2304.03,-118.222 2302.84,-111.324"/>
-</g>
-<!-- Node15&#45;&gt;Node16 -->
-<g id="edge32" class="edge"><title>Node15&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M3435,-51.6908C3446.31,-41.8996 3460.08,-29.973 3469.79,-21.5707"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="3432.56,-49.1706 3427.29,-58.3619 3437.14,-54.4631 3432.56,-49.1706"/>
-</g>
-<!-- Node17 -->
-<g id="node34" class="node"><title>Node17</title>
-<a xlink:href="ExampleClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/ExampleClient.cpp">
-<polygon fill="white" stroke="black" points="3663.5,-0.5 3663.5,-21.5 3992.5,-21.5 3992.5,-0.5 3663.5,-0.5"/>
-<text text-anchor="middle" x="3828" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/ExampleClient.cpp</text>
-</a>
-</g>
-<!-- Node15&#45;&gt;Node17 -->
-<g id="edge34" class="edge"><title>Node15&#45;&gt;Node17</title>
-<path fill="none" stroke="midnightblue" d="M3500.08,-57.052C3574.57,-46.5906 3681.76,-31.5378 3753.07,-21.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="3499.21,-53.6399 3489.79,-58.4966 3500.18,-60.5718 3499.21,-53.6399"/>
 </g>
 <!-- Node18&#45;&gt;Node19 -->
 <g id="edge40" class="edge"><title>Node18&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M970.739,-57.1801C891.701,-46.7138 777.405,-31.5788 701.467,-21.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="970.309,-60.6535 980.682,-58.4966 971.228,-53.7141 970.309,-60.6535"/>
+<path fill="none" stroke="midnightblue" d="M2187.77,-120.394C1967.71,-110.101 1542.17,-90.1967 1290.13,-78.4075"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2187.61,-123.89 2197.77,-120.862 2187.94,-116.898 2187.61,-123.89"/>
 </g>
 <!-- Node20 -->
 <g id="node41" class="node"><title>Node20</title>
-<a xlink:href="SittingDemoClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/SittingDemoClient.cpp">
-<polygon fill="white" stroke="black" points="777.5,-0.5 777.5,-21.5 1112.5,-21.5 1112.5,-0.5 777.5,-0.5"/>
-<text text-anchor="middle" x="945" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/SittingDemoClient.cpp</text>
+<a xlink:href="example-client_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/example&#45;client.cpp">
+<polygon fill="white" stroke="black" points="483.5,-0.5 483.5,-21.5 812.5,-21.5 812.5,-0.5 483.5,-0.5"/>
+<text text-anchor="middle" x="648" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/example&#45;client.cpp</text>
 </a>
 </g>
 <!-- Node18&#45;&gt;Node20 -->
-<g id="edge42" class="edge"><title>Node18&#45;&gt;Node20</title>
-<path fill="none" stroke="midnightblue" d="M1030.12,-53.9319C1010.02,-43.7932 984.01,-30.6748 966.059,-21.6212"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1028.67,-57.1185 1039.17,-58.4966 1031.82,-50.8684 1028.67,-57.1185"/>
+<g id="edge46" class="edge"><title>Node18&#45;&gt;Node20</title>
+<path fill="none" stroke="midnightblue" d="M2187.78,-124.283C1835.41,-117.252 941.118,-97.768 879,-80 860.237,-74.6332 859.11,-65.2718 841,-58 798.917,-41.1018 749.143,-29.1625 710.683,-21.5463"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2187.73,-127.782 2197.79,-124.482 2187.86,-120.783 2187.73,-127.782"/>
 </g>
-<!-- Node21&#45;&gt;Node22 -->
-<g id="edge48" class="edge"><title>Node21&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M1540.66,-56.7943C1479.58,-46.3447 1392.56,-31.4559 1334.51,-21.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1540.16,-60.26 1550.61,-58.4966 1541.34,-53.3603 1540.16,-60.26"/>
+<!-- Node22 -->
+<g id="node46" class="node"><title>Node22</title>
+<a xlink:href="SittingDemoClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/include/sitting&#45;demo/SittingDemoClient.h">
+<polygon fill="white" stroke="black" points="1438,-58.5 1438,-79.5 1836,-79.5 1836,-58.5 1438,-58.5"/>
+<text text-anchor="middle" x="1637" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/include/sitting&#45;demo/SittingDemoClient.h</text>
+</a>
+</g>
+<!-- Node18&#45;&gt;Node22 -->
+<g id="edge48" class="edge"><title>Node18&#45;&gt;Node22</title>
+<path fill="none" stroke="midnightblue" d="M2193.66,-115.656C2068.63,-105.177 1884.36,-89.7324 1762.55,-79.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2193.43,-119.149 2203.68,-116.497 2194.01,-112.174 2193.43,-119.149"/>
 </g>
 <!-- Node23 -->
 <g id="node48" class="node"><title>Node23</title>
-<a xlink:href="StandingDemoClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/StandingDemoClient.cpp">
-<polygon fill="white" stroke="black" points="1434,-0.5 1434,-21.5 1790,-21.5 1790,-0.5 1434,-0.5"/>
-<text text-anchor="middle" x="1612" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/StandingDemoClient.cpp</text>
+<a xlink:href="ocra-icub-clients_2sitting-demo_2src_2main_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/main.cpp">
+<polygon fill="white" stroke="black" points="1175.5,-0.5 1175.5,-21.5 1452.5,-21.5 1452.5,-0.5 1175.5,-0.5"/>
+<text text-anchor="middle" x="1314" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/main.cpp</text>
 </a>
 </g>
-<!-- Node21&#45;&gt;Node23 -->
-<g id="edge50" class="edge"><title>Node21&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M1612,-48.1906C1612,-39.1684 1612,-28.9941 1612,-21.5707"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1608.5,-48.3619 1612,-58.3619 1615.5,-48.3619 1608.5,-48.3619"/>
+<!-- Node18&#45;&gt;Node23 -->
+<g id="edge54" class="edge"><title>Node18&#45;&gt;Node23</title>
+<path fill="none" stroke="midnightblue" d="M2187.77,-123.376C1952.57,-116.782 1499.4,-101.491 1429,-80 1388.25,-67.5591 1346.99,-37.6457 1326.78,-21.5973"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2187.67,-126.875 2197.76,-123.655 2187.87,-119.878 2187.67,-126.875"/>
 </g>
-<!-- Node24&#45;&gt;Node25 -->
-<g id="edge56" class="edge"><title>Node24&#45;&gt;Node25</title>
-<path fill="none" stroke="midnightblue" d="M2163.69,-56.1424C2119.72,-45.7328 2058.54,-31.2511 2017.45,-21.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2163.09,-59.5988 2173.63,-58.4966 2164.71,-52.787 2163.09,-59.5988"/>
+<!-- Node25 -->
+<g id="node53" class="node"><title>Node25</title>
+<a xlink:href="StandingDemoClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/include/standing&#45;demo/StandingDemoClient.h">
+<polygon fill="white" stroke="black" points="1993,-58.5 1993,-79.5 2423,-79.5 2423,-58.5 1993,-58.5"/>
+<text text-anchor="middle" x="2208" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/include/standing&#45;demo/StandingDemoClient.h</text>
+</a>
+</g>
+<!-- Node18&#45;&gt;Node25 -->
+<g id="edge56" class="edge"><title>Node18&#45;&gt;Node25</title>
+<path fill="none" stroke="midnightblue" d="M2297.85,-112.069C2276.66,-101.912 2249.13,-88.7157 2230.16,-79.6212"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2296.56,-115.33 2307.09,-116.497 2299.58,-109.018 2296.56,-115.33"/>
 </g>
 <!-- Node26 -->
 <g id="node55" class="node"><title>Node26</title>
-<a xlink:href="SteppingDemoClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/SteppingDemoClient.cpp">
-<polygon fill="white" stroke="black" points="2156,-0.5 2156,-21.5 2512,-21.5 2512,-0.5 2156,-0.5"/>
-<text text-anchor="middle" x="2334" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/SteppingDemoClient.cpp</text>
+<a xlink:href="ocra-icub-clients_2standing-demo_2src_2main_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/main.cpp">
+<polygon fill="white" stroke="black" points="1821.5,-0.5 1821.5,-21.5 2108.5,-21.5 2108.5,-0.5 1821.5,-0.5"/>
+<text text-anchor="middle" x="1965" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/main.cpp</text>
 </a>
 </g>
-<!-- Node24&#45;&gt;Node26 -->
-<g id="edge58" class="edge"><title>Node24&#45;&gt;Node26</title>
-<path fill="none" stroke="midnightblue" d="M2248.14,-53.9319C2268.41,-43.7932 2294.65,-30.6748 2312.76,-21.6212"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2246.39,-50.8939 2239.01,-58.4966 2249.52,-57.1549 2246.39,-50.8939"/>
+<!-- Node18&#45;&gt;Node26 -->
+<g id="edge62" class="edge"><title>Node18&#45;&gt;Node26</title>
+<path fill="none" stroke="midnightblue" d="M2191.87,-115.511C2102.67,-106.813 2000.01,-94.0029 1984,-80 1967.17,-65.2739 1964.61,-37.1438 1964.58,-21.7395"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2191.56,-118.996 2201.84,-116.471 2192.23,-112.028 2191.56,-118.996"/>
 </g>
-<!-- Node27&#45;&gt;Node28 -->
-<g id="edge64" class="edge"><title>Node27&#45;&gt;Node28</title>
-<path fill="none" stroke="midnightblue" d="M2725,-48.1906C2725,-39.1684 2725,-28.9941 2725,-21.5707"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2721.5,-48.3619 2725,-58.3619 2728.5,-48.3619 2721.5,-48.3619"/>
+<!-- Node28 -->
+<g id="node60" class="node"><title>Node28</title>
+<a xlink:href="SteppingDemoClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/include/stepping&#45;demo/SteppingDemoClient.h">
+<polygon fill="white" stroke="black" points="2479,-58.5 2479,-79.5 2909,-79.5 2909,-58.5 2479,-58.5"/>
+<text text-anchor="middle" x="2694" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/include/stepping&#45;demo/SteppingDemoClient.h</text>
+</a>
+</g>
+<!-- Node18&#45;&gt;Node28 -->
+<g id="edge64" class="edge"><title>Node18&#45;&gt;Node28</title>
+<path fill="none" stroke="midnightblue" d="M2405,-114.923C2470.8,-104.468 2565.01,-89.4969 2627.78,-79.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2404.43,-111.471 2395.1,-116.497 2405.52,-118.384 2404.43,-111.471"/>
 </g>
 <!-- Node29 -->
 <g id="node62" class="node"><title>Node29</title>
-<a xlink:href="TaskOpsClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/TaskOpsClient.cpp">
-<polygon fill="white" stroke="black" points="2938,-0.5 2938,-21.5 3300,-21.5 3300,-0.5 2938,-0.5"/>
-<text text-anchor="middle" x="3119" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/TaskOpsClient.cpp</text>
+<a xlink:href="stepping-demo_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/stepping&#45;demo.cpp">
+<polygon fill="white" stroke="black" points="2500,-0.5 2500,-21.5 2830,-21.5 2830,-0.5 2500,-0.5"/>
+<text text-anchor="middle" x="2665" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/stepping&#45;demo.cpp</text>
 </a>
 </g>
-<!-- Node27&#45;&gt;Node29 -->
-<g id="edge66" class="edge"><title>Node27&#45;&gt;Node29</title>
-<path fill="none" stroke="midnightblue" d="M2806.6,-56.9877C2877.65,-46.529 2979.62,-31.5174 3047.52,-21.5231"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2805.73,-53.5775 2796.35,-58.4966 2806.75,-60.5029 2805.73,-53.5775"/>
+<!-- Node18&#45;&gt;Node29 -->
+<g id="edge70" class="edge"><title>Node18&#45;&gt;Node29</title>
+<path fill="none" stroke="midnightblue" d="M2363.3,-112.342C2383.53,-103.455 2409.48,-91.6202 2432,-80 2449.34,-71.05 2451.88,-65.2504 2470,-58 2512.35,-41.0512 2562.42,-29.1412 2601.22,-21.5513"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2361.64,-109.247 2353.88,-116.454 2364.44,-115.664 2361.64,-109.247"/>
 </g>
-<!-- Node30&#45;&gt;Node14 -->
-<g id="edge76" class="edge"><title>Node30&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M2098.2,-288.732C2056.62,-281.254 2014.55,-269.996 2002,-254 1995.96,-246.308 2000.31,-241.631 2002,-232 2006.74,-204.997 2002.57,-192.282 2023,-174 2040.91,-157.977 2096.17,-145.571 2143.32,-137.539"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2097.72,-292.202 2108.17,-290.459 2098.91,-285.304 2097.72,-292.202"/>
-</g>
-<!-- Node30&#45;&gt;Node31 -->
-<g id="edge78" class="edge"><title>Node30&#45;&gt;Node31</title>
-<path fill="none" stroke="midnightblue" d="M2246.58,-288.077C2288.92,-277.672 2347.68,-263.231 2387.18,-253.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2245.61,-284.711 2236.74,-290.497 2247.28,-291.509 2245.61,-284.711"/>
-</g>
-<!-- Node39 -->
-<g id="node90" class="node"><title>Node39</title>
-<a xlink:href="OcraWbiConversions_8cpp.html" target="_top" xlink:title="A utility class full of static conversion functions.">
-<polygon fill="white" stroke="black" points="2010.5,-232.5 2010.5,-253.5 2271.5,-253.5 2271.5,-232.5 2010.5,-232.5"/>
-<text text-anchor="middle" x="2141" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/OcraWbiConversions.cpp</text>
+<!-- Node31 -->
+<g id="node67" class="node"><title>Node31</title>
+<a xlink:href="TaskOpsClient_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/include/task&#45;operations&#45;demo/TaskOpsClient.h">
+<polygon fill="white" stroke="black" points="2964.5,-58.5 2964.5,-79.5 3429.5,-79.5 3429.5,-58.5 2964.5,-58.5"/>
+<text text-anchor="middle" x="3197" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/include/task&#45;operations&#45;demo/TaskOpsClient.h</text>
 </a>
 </g>
-<!-- Node30&#45;&gt;Node39 -->
-<g id="edge102" class="edge"><title>Node30&#45;&gt;Node39</title>
-<path fill="none" stroke="midnightblue" d="M2177.4,-282.83C2168.6,-273.208 2158.11,-261.728 2150.66,-253.571"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2174.95,-285.341 2184.28,-290.362 2180.12,-280.619 2174.95,-285.341"/>
-</g>
-<!-- Node31&#45;&gt;Node14 -->
-<g id="edge92" class="edge"><title>Node31&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M2298.89,-231.56C2187.39,-221.185 2043.9,-206.025 2035,-196 2006.54,-163.948 2050.65,-146.728 2102.69,-137.506"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2298.61,-235.049 2308.89,-232.486 2299.25,-228.079 2298.61,-235.049"/>
+<!-- Node18&#45;&gt;Node31 -->
+<g id="edge72" class="edge"><title>Node18&#45;&gt;Node31</title>
+<path fill="none" stroke="midnightblue" d="M2470.59,-116.241C2471.73,-116.16 2472.87,-116.08 2474,-116 2663.31,-102.666 2880.61,-88.7243 3027.14,-79.5222"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2469.92,-112.78 2460.2,-116.983 2470.42,-119.762 2469.92,-112.78"/>
 </g>
 <!-- Node32 -->
-<g id="node72" class="node"><title>Node32</title>
-<a xlink:href="IcubControllerServer_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/IcubControllerServer.h">
-<polygon fill="white" stroke="black" points="1197.5,-174.5 1197.5,-195.5 1564.5,-195.5 1564.5,-174.5 1197.5,-174.5"/>
-<text text-anchor="middle" x="1381" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/IcubControllerServer.h</text>
+<g id="node69" class="node"><title>Node32</title>
+<a xlink:href="task-operations-demo_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/task&#45;operations&#45;demo.cpp">
+<polygon fill="white" stroke="black" points="3222,-0.5 3222,-21.5 3612,-21.5 3612,-0.5 3222,-0.5"/>
+<text text-anchor="middle" x="3417" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/task&#45;operations&#45;demo.cpp</text>
 </a>
+</g>
+<!-- Node18&#45;&gt;Node32 -->
+<g id="edge78" class="edge"><title>Node18&#45;&gt;Node32</title>
+<path fill="none" stroke="midnightblue" d="M2470.21,-116.113C2642.76,-102.755 2912.68,-81.6593 2918,-80 2936.63,-74.1917 2937.43,-64.0127 2956,-58 3007.33,-41.3774 3131.41,-29.2714 3237.93,-21.5121"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2469.71,-112.641 2460.01,-116.902 2470.25,-119.62 2469.71,-112.641"/>
+</g>
+<!-- Node19&#45;&gt;Node20 -->
+<g id="edge42" class="edge"><title>Node19&#45;&gt;Node20</title>
+<path fill="none" stroke="midnightblue" d="M999.128,-57.1801C919.548,-46.7138 804.47,-31.5788 728.012,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="998.767,-60.6627 1009.14,-58.4966 999.68,-53.7225 998.767,-60.6627"/>
+</g>
+<!-- Node21 -->
+<g id="node43" class="node"><title>Node21</title>
+<a xlink:href="ExampleClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/ExampleClient.cpp">
+<polygon fill="white" stroke="black" points="829.5,-0.5 829.5,-21.5 1158.5,-21.5 1158.5,-0.5 829.5,-0.5"/>
+<text text-anchor="middle" x="994" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/example&#45;client/src/ExampleClient.cpp</text>
+</a>
+</g>
+<!-- Node19&#45;&gt;Node21 -->
+<g id="edge44" class="edge"><title>Node19&#45;&gt;Node21</title>
+<path fill="none" stroke="midnightblue" d="M1062.96,-53.1009C1046.52,-43.0658 1025.74,-30.3808 1011.31,-21.5707"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1061.22,-56.1383 1071.58,-58.3619 1064.86,-50.1637 1061.22,-56.1383"/>
+</g>
+<!-- Node22&#45;&gt;Node23 -->
+<g id="edge50" class="edge"><title>Node22&#45;&gt;Node23</title>
+<path fill="none" stroke="midnightblue" d="M1568.31,-56.6648C1510.15,-46.222 1427.69,-31.415 1372.6,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1568.05,-60.1741 1578.51,-58.4966 1569.28,-53.2843 1568.05,-60.1741"/>
+</g>
+<!-- Node24 -->
+<g id="node50" class="node"><title>Node24</title>
+<a xlink:href="SittingDemoClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/SittingDemoClient.cpp">
+<polygon fill="white" stroke="black" points="1469.5,-0.5 1469.5,-21.5 1804.5,-21.5 1804.5,-0.5 1469.5,-0.5"/>
+<text text-anchor="middle" x="1637" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/sitting&#45;demo/src/SittingDemoClient.cpp</text>
+</a>
+</g>
+<!-- Node22&#45;&gt;Node24 -->
+<g id="edge52" class="edge"><title>Node22&#45;&gt;Node24</title>
+<path fill="none" stroke="midnightblue" d="M1637,-48.1906C1637,-39.1684 1637,-28.9941 1637,-21.5707"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1633.5,-48.3619 1637,-58.3619 1640.5,-48.3619 1633.5,-48.3619"/>
+</g>
+<!-- Node25&#45;&gt;Node26 -->
+<g id="edge58" class="edge"><title>Node25&#45;&gt;Node26</title>
+<path fill="none" stroke="midnightblue" d="M2154.13,-56.1424C2110.52,-45.7328 2049.85,-31.2511 2009.09,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2153.46,-59.5793 2163.99,-58.4966 2155.08,-52.7706 2153.46,-59.5793"/>
+</g>
+<!-- Node27 -->
+<g id="node57" class="node"><title>Node27</title>
+<a xlink:href="StandingDemoClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/StandingDemoClient.cpp">
+<polygon fill="white" stroke="black" points="2126,-0.5 2126,-21.5 2482,-21.5 2482,-0.5 2126,-0.5"/>
+<text text-anchor="middle" x="2304" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/standing&#45;demo/src/StandingDemoClient.cpp</text>
+</a>
+</g>
+<!-- Node25&#45;&gt;Node27 -->
+<g id="edge60" class="edge"><title>Node25&#45;&gt;Node27</title>
+<path fill="none" stroke="midnightblue" d="M2234.32,-53.1009C2250.93,-43.0658 2271.92,-30.3808 2286.5,-21.5707"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2232.36,-50.195 2225.61,-58.3619 2235.98,-56.1864 2232.36,-50.195"/>
+</g>
+<!-- Node28&#45;&gt;Node29 -->
+<g id="edge66" class="edge"><title>Node28&#45;&gt;Node29</title>
+<path fill="none" stroke="midnightblue" d="M2684.19,-49.3733C2679.53,-40.0682 2674.16,-29.3204 2670.29,-21.5707"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2681.08,-50.9829 2688.68,-58.3619 2687.34,-47.8524 2681.08,-50.9829"/>
+</g>
+<!-- Node30 -->
+<g id="node64" class="node"><title>Node30</title>
+<a xlink:href="SteppingDemoClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/SteppingDemoClient.cpp">
+<polygon fill="white" stroke="black" points="2848,-0.5 2848,-21.5 3204,-21.5 3204,-0.5 2848,-0.5"/>
+<text text-anchor="middle" x="3026" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/stepping&#45;demo/src/SteppingDemoClient.cpp</text>
+</a>
+</g>
+<!-- Node28&#45;&gt;Node30 -->
+<g id="edge68" class="edge"><title>Node28&#45;&gt;Node30</title>
+<path fill="none" stroke="midnightblue" d="M2764.24,-56.7296C2824.03,-46.2833 2909.02,-31.4354 2965.76,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2763.37,-53.3278 2754.12,-58.4966 2764.58,-60.2234 2763.37,-53.3278"/>
 </g>
 <!-- Node31&#45;&gt;Node32 -->
-<g id="edge80" class="edge"><title>Node31&#45;&gt;Node32</title>
-<path fill="none" stroke="midnightblue" d="M2278.54,-231.918C2025.05,-216.085 1744.21,-202.02 1564.86,-193.483"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2278.48,-235.422 2288.68,-232.554 2278.92,-228.435 2278.48,-235.422"/>
-</g>
-<!-- Node34 -->
-<g id="node77" class="node"><title>Node34</title>
-<a xlink:href="MIQPController_8h.html" target="_top" xlink:title="A thread for launching trajectory generators.">
-<polygon fill="white" stroke="black" points="2632,-174.5 2632,-195.5 3030,-195.5 3030,-174.5 2632,-174.5"/>
-<text text-anchor="middle" x="2831" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/MIQPController.h</text>
-</a>
-</g>
-<!-- Node31&#45;&gt;Node34 -->
-<g id="edge86" class="edge"><title>Node31&#45;&gt;Node34</title>
-<path fill="none" stroke="midnightblue" d="M2512.61,-231.052C2584.93,-220.591 2689.01,-205.538 2758.25,-195.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2512.01,-227.601 2502.62,-232.497 2513.02,-234.529 2512.01,-227.601"/>
-</g>
-<!-- Node36 -->
-<g id="node83" class="node"><title>Node36</title>
-<a xlink:href="ModelInitializer_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/ModelInitializer.h">
-<polygon fill="white" stroke="black" points="2293.5,-174.5 2293.5,-195.5 2576.5,-195.5 2576.5,-174.5 2293.5,-174.5"/>
-<text text-anchor="middle" x="2435" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/ModelInitializer.h</text>
-</a>
-</g>
-<!-- Node31&#45;&gt;Node36 -->
-<g id="edge94" class="edge"><title>Node31&#45;&gt;Node36</title>
-<path fill="none" stroke="midnightblue" d="M2431.79,-222.191C2432.57,-213.168 2433.45,-202.994 2434.09,-195.571"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2428.29,-222.098 2430.92,-232.362 2435.26,-222.699 2428.29,-222.098"/>
-</g>
-<!-- Node38 -->
-<g id="node88" class="node"><title>Node38</title>
-<a xlink:href="OcraWbiModel_8cpp.html" target="_top" xlink:title="Implementation of ocra::Model using wholeBodyInterface.">
-<polygon fill="white" stroke="black" points="2043.5,-174.5 2043.5,-195.5 2276.5,-195.5 2276.5,-174.5 2043.5,-174.5"/>
-<text text-anchor="middle" x="2160" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/OcraWbiModel.cpp</text>
-</a>
-</g>
-<!-- Node31&#45;&gt;Node38 -->
-<g id="edge100" class="edge"><title>Node31&#45;&gt;Node38</title>
-<path fill="none" stroke="midnightblue" d="M2371.06,-230.339C2322.54,-219.916 2254.56,-205.313 2208.99,-195.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2370.59,-233.818 2381.11,-232.497 2372.06,-226.974 2370.59,-233.818"/>
-</g>
-<!-- Node32&#45;&gt;Node5 -->
-<g id="edge82" class="edge"><title>Node32&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M1291.94,-173.18C1213.09,-162.714 1099.05,-147.579 1023.29,-137.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1291.49,-176.65 1301.86,-174.497 1292.41,-169.711 1291.49,-176.65"/>
+<g id="edge74" class="edge"><title>Node31&#45;&gt;Node32</title>
+<path fill="none" stroke="midnightblue" d="M3246.52,-55.9447C3285.95,-45.5501 3340.42,-31.1897 3377.08,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3245.62,-52.5629 3236.84,-58.4966 3247.4,-59.3317 3245.62,-52.5629"/>
 </g>
 <!-- Node33 -->
-<g id="node75" class="node"><title>Node33</title>
-<a xlink:href="IcubControllerServer_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/IcubControllerServer.cpp">
-<polygon fill="white" stroke="black" points="1237.5,-116.5 1237.5,-137.5 1524.5,-137.5 1524.5,-116.5 1237.5,-116.5"/>
-<text text-anchor="middle" x="1381" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/IcubControllerServer.cpp</text>
+<g id="node71" class="node"><title>Node33</title>
+<a xlink:href="TaskOpsClient_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/TaskOpsClient.cpp">
+<polygon fill="white" stroke="black" points="3630,-0.5 3630,-21.5 3992,-21.5 3992,-0.5 3630,-0.5"/>
+<text text-anchor="middle" x="3811" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/task&#45;operations&#45;demo/src/TaskOpsClient.cpp</text>
 </a>
 </g>
-<!-- Node32&#45;&gt;Node33 -->
-<g id="edge84" class="edge"><title>Node32&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M1381,-164.191C1381,-155.168 1381,-144.994 1381,-137.571"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1377.5,-164.362 1381,-174.362 1384.5,-164.362 1377.5,-164.362"/>
+<!-- Node31&#45;&gt;Node33 -->
+<g id="edge76" class="edge"><title>Node31&#45;&gt;Node33</title>
+<path fill="none" stroke="midnightblue" d="M3318.42,-57.53C3429.33,-47.0535 3591.96,-31.6914 3699.6,-21.5231"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3317.82,-54.0716 3308.19,-58.4966 3318.48,-61.0406 3317.82,-54.0716"/>
 </g>
-<!-- Node34&#45;&gt;Node10 -->
-<g id="edge88" class="edge"><title>Node34&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M2889.13,-172.037C2922.42,-163.848 2964.67,-152.147 3001,-138 3021,-130.211 3023.28,-121.621 3044,-116 3051.57,-113.947 3434.11,-92.7233 3675.25,-79.5079"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2888,-168.71 2879.11,-174.464 2889.65,-175.513 2888,-168.71"/>
-</g>
-<!-- Node35 -->
-<g id="node80" class="node"><title>Node35</title>
-<a xlink:href="MIQPController_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp">
-<polygon fill="white" stroke="black" points="2663.5,-116.5 2663.5,-137.5 2992.5,-137.5 2992.5,-116.5 2663.5,-116.5"/>
-<text text-anchor="middle" x="2828" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp</text>
-</a>
+<!-- Node34&#45;&gt;Node18 -->
+<g id="edge86" class="edge"><title>Node34&#45;&gt;Node18</title>
+<path fill="none" stroke="midnightblue" d="M2622.58,-288.649C2585,-281.519 2541.83,-270.563 2505,-254 2435.93,-222.936 2366.82,-162.36 2340.32,-137.766"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2622.05,-292.109 2632.52,-290.47 2623.31,-285.224 2622.05,-292.109"/>
 </g>
 <!-- Node34&#45;&gt;Node35 -->
-<g id="edge90" class="edge"><title>Node34&#45;&gt;Node35</title>
-<path fill="none" stroke="midnightblue" d="M2829.92,-164.191C2829.46,-155.168 2828.93,-144.994 2828.55,-137.571"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2826.44,-164.556 2830.45,-174.362 2833.43,-164.194 2826.44,-164.556"/>
+<g id="edge88" class="edge"><title>Node34&#45;&gt;Node35</title>
+<path fill="none" stroke="midnightblue" d="M2764.57,-287.812C2803.6,-277.428 2857.27,-263.149 2893.45,-253.523"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2763.24,-284.543 2754.48,-290.497 2765.04,-291.308 2763.24,-284.543"/>
 </g>
-<!-- Node36&#45;&gt;Node14 -->
-<g id="edge96" class="edge"><title>Node36&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M2385.66,-171.812C2346.81,-161.428 2293.38,-147.149 2257.37,-137.523"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2385.14,-175.296 2395.7,-174.497 2386.95,-168.533 2385.14,-175.296"/>
+<!-- Node41 -->
+<g id="node96" class="node"><title>Node41</title>
+<a xlink:href="OcraWbiConversions_8cpp.html" target="_top" xlink:title="A utility class full of static conversion functions.">
+<polygon fill="white" stroke="black" points="2513.5,-232.5 2513.5,-253.5 2774.5,-253.5 2774.5,-232.5 2513.5,-232.5"/>
+<text text-anchor="middle" x="2644" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/OcraWbiConversions.cpp</text>
+</a>
+</g>
+<!-- Node34&#45;&gt;Node41 -->
+<g id="edge110" class="edge"><title>Node34&#45;&gt;Node41</title>
+<path fill="none" stroke="midnightblue" d="M2694.16,-283.975C2682.11,-274.132 2667.33,-262.055 2656.94,-253.571"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2692.02,-286.746 2701.98,-290.362 2696.45,-281.325 2692.02,-286.746"/>
+</g>
+<!-- Node35&#45;&gt;Node7 -->
+<g id="edge98" class="edge"><title>Node35&#45;&gt;Node7</title>
+<path fill="none" stroke="midnightblue" d="M3015.19,-231.052C3087.16,-220.591 3190.71,-205.538 3259.61,-195.523"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="3014.65,-227.594 3005.26,-232.497 3015.66,-234.522 3014.65,-227.594"/>
+</g>
+<!-- Node35&#45;&gt;Node8 -->
+<g id="edge96" class="edge"><title>Node35&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M2990.42,-229.962C3021.94,-221.914 3061.34,-210.373 3095,-196 3112.95,-188.336 3114.87,-181.209 3133,-174 3175.88,-156.953 3226.53,-145.099 3266,-137.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2989.33,-226.627 2980.48,-232.452 2991.03,-233.417 2989.33,-226.627"/>
+</g>
+<!-- Node35&#45;&gt;Node18 -->
+<g id="edge100" class="edge"><title>Node35&#45;&gt;Node18</title>
+<path fill="none" stroke="midnightblue" d="M2783.09,-231.493C2710.63,-224.245 2622.72,-212.962 2545,-196 2509.04,-188.152 2410.36,-154.952 2359.78,-137.625"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2782.92,-234.993 2793.21,-232.49 2783.6,-228.027 2782.92,-234.993"/>
+</g>
+<!-- Node36 -->
+<g id="node81" class="node"><title>Node36</title>
+<a xlink:href="IcubControllerServer_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/IcubControllerServer.h">
+<polygon fill="white" stroke="black" points="1203.5,-174.5 1203.5,-195.5 1570.5,-195.5 1570.5,-174.5 1203.5,-174.5"/>
+<text text-anchor="middle" x="1387" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/include/ocra&#45;icub&#45;server/IcubControllerServer.h</text>
+</a>
+</g>
+<!-- Node35&#45;&gt;Node36 -->
+<g id="edge90" class="edge"><title>Node35&#45;&gt;Node36</title>
+<path fill="none" stroke="midnightblue" d="M2781.62,-231.944C2340.92,-208.563 1835.58,-194.973 1570.59,-188.868"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2781.52,-235.444 2791.69,-232.481 2781.89,-228.453 2781.52,-235.444"/>
+</g>
+<!-- Node38 -->
+<g id="node89" class="node"><title>Node38</title>
+<a xlink:href="ModelInitializer_8h.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/ModelInitializer.h">
+<polygon fill="white" stroke="black" points="2553.5,-174.5 2553.5,-195.5 2836.5,-195.5 2836.5,-174.5 2553.5,-174.5"/>
+<text text-anchor="middle" x="2695" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/include/ocra&#45;icub/ModelInitializer.h</text>
+</a>
+</g>
+<!-- Node35&#45;&gt;Node38 -->
+<g id="edge102" class="edge"><title>Node35&#45;&gt;Node38</title>
+<path fill="none" stroke="midnightblue" d="M2879.97,-230.077C2837.27,-219.672 2778.02,-205.231 2738.18,-195.523"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2879.36,-233.529 2889.9,-232.497 2881.01,-226.728 2879.36,-233.529"/>
+</g>
+<!-- Node40 -->
+<g id="node94" class="node"><title>Node40</title>
+<a xlink:href="OcraWbiModel_8cpp.html" target="_top" xlink:title="Implementation of ocra::Model using wholeBodyInterface.">
+<polygon fill="white" stroke="black" points="2853.5,-174.5 2853.5,-195.5 3086.5,-195.5 3086.5,-174.5 2853.5,-174.5"/>
+<text text-anchor="middle" x="2970" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/OcraWbiModel.cpp</text>
+</a>
+</g>
+<!-- Node35&#45;&gt;Node40 -->
+<g id="edge108" class="edge"><title>Node35&#45;&gt;Node40</title>
+<path fill="none" stroke="midnightblue" d="M2945.33,-223.667C2951.31,-214.295 2958.26,-203.402 2963.26,-195.571"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2942.21,-222.049 2939.79,-232.362 2948.12,-225.814 2942.21,-222.049"/>
+</g>
+<!-- Node36&#45;&gt;Node5 -->
+<g id="edge92" class="edge"><title>Node36&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M1284.27,-173.34C1192.01,-162.868 1057.76,-147.63 968.712,-137.523"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1284.13,-176.846 1294.46,-174.497 1284.92,-169.891 1284.13,-176.846"/>
 </g>
 <!-- Node37 -->
-<g id="node86" class="node"><title>Node37</title>
-<a xlink:href="ModelInitializer_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/ModelInitializer.cpp">
-<polygon fill="white" stroke="black" points="2366.5,-116.5 2366.5,-137.5 2599.5,-137.5 2599.5,-116.5 2366.5,-116.5"/>
-<text text-anchor="middle" x="2483" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/ModelInitializer.cpp</text>
+<g id="node84" class="node"><title>Node37</title>
+<a xlink:href="IcubControllerServer_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/IcubControllerServer.cpp">
+<polygon fill="white" stroke="black" points="1243.5,-116.5 1243.5,-137.5 1530.5,-137.5 1530.5,-116.5 1243.5,-116.5"/>
+<text text-anchor="middle" x="1387" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;server/src/IcubControllerServer.cpp</text>
 </a>
 </g>
 <!-- Node36&#45;&gt;Node37 -->
-<g id="edge98" class="edge"><title>Node36&#45;&gt;Node37</title>
-<path fill="none" stroke="midnightblue" d="M2450.28,-166.541C2458.19,-156.979 2467.57,-145.647 2474.25,-137.571"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2447.48,-164.426 2443.8,-174.362 2452.88,-168.889 2447.48,-164.426"/>
+<g id="edge94" class="edge"><title>Node36&#45;&gt;Node37</title>
+<path fill="none" stroke="midnightblue" d="M1387,-164.191C1387,-155.168 1387,-144.994 1387,-137.571"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1383.5,-164.362 1387,-174.362 1390.5,-164.362 1383.5,-164.362"/>
+</g>
+<!-- Node38&#45;&gt;Node18 -->
+<g id="edge104" class="edge"><title>Node38&#45;&gt;Node18</title>
+<path fill="none" stroke="midnightblue" d="M2618.79,-172.923C2552.81,-162.468 2458.34,-147.497 2395.4,-137.523"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2618.3,-176.388 2628.72,-174.497 2619.39,-169.475 2618.3,-176.388"/>
+</g>
+<!-- Node39 -->
+<g id="node92" class="node"><title>Node39</title>
+<a xlink:href="ModelInitializer_8cpp.html" target="_top" xlink:title="ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/ModelInitializer.cpp">
+<polygon fill="white" stroke="black" points="2578.5,-116.5 2578.5,-137.5 2811.5,-137.5 2811.5,-116.5 2578.5,-116.5"/>
+<text text-anchor="middle" x="2695" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">ocra&#45;wbi&#45;plugins/ocra&#45;icub/src/ModelInitializer.cpp</text>
+</a>
+</g>
+<!-- Node38&#45;&gt;Node39 -->
+<g id="edge106" class="edge"><title>Node38&#45;&gt;Node39</title>
+<path fill="none" stroke="midnightblue" d="M2695,-164.191C2695,-155.168 2695,-144.994 2695,-137.571"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2691.5,-164.362 2695,-174.362 2698.5,-164.362 2691.5,-164.362"/>
 </g>
 </g>
 </svg>

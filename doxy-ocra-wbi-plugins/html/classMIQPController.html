@@ -176,6 +176,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::GurobiDense&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a6d15db521a6b9c4e0b641709fef77373">_eigGurobi</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#affac62ccd729155720b16de3137ef3f5">_constraints</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classMIQPState.html">MIQPState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">_state</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c">_H_N_r</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#af60e2d5a786f4af4fa445dea6ba1b625">_k</a></td></tr>
 </table>
@@ -944,7 +945,7 @@ Private Attributes</h2></td></tr>
 </p>
 <p>Where</p>
 <p class="formulaDsp">
-\[ \mathbf{C}_B &amp;= \frac{1}{2} \left[ \begin{array}{ccccc} \mathbf{I}_{2\times2} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times12} \end{array}\right] \]
+\[ \mathbf{C}_B &amp;= \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times12} \end{array}\right] \]
 </p>
  
 </div>
@@ -1315,7 +1316,11 @@ Private Attributes</h2></td></tr>
 <p>Matrix \(\mathbf{R}_B\) in the equation for the preview center of BoS output matrix \(\mathbf{R}_{k,N} = \left\{ \mathbf{r}_{k+1|k}, \mathbf{r}_{k+2|k}, \dots, \mathbf{r}_{k+N|k} \right\}\)</p>
 <p>For a preview window of size \(N\):</p>
 <p class="formulaDsp">
-\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} Where: \f[ \mathbf{R}_B = \left[\begin{array}{cccc} \mathbf{C}_B\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_B\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_B\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_B\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_B\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_B\mathbf{T} \end{array}\right] \]
+\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \]
+</p>
+<p> Where:</p>
+<p class="formulaDsp">
+\[ \mathbf{R}_B = \left[\begin{array}{cccc} \mathbf{C}_B\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_B\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_B\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_B\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_B\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_B\mathbf{T} \end{array}\right] \]
 </p>
  
 </div>
@@ -1374,6 +1379,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc70be859da53c202bc0e0c84cc71917"></a><!-- doxytag: member="MIQPController::_state" ref="adc70be859da53c202bc0e0c84cc71917" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classMIQPState.html">MIQPState</a>&gt; <a class="el" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">MIQPController::_state</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>MIQP State </p>
 
 </div>
 </div>
@@ -1491,7 +1510,7 @@ Private Attributes</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -1504,7 +1523,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Sun Feb 19 2017 23:35:59 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Feb 20 2017 23:35:45 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

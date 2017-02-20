@@ -56,6 +56,7 @@ var classMIQPController =
     [ "_R_H", "classMIQPController.html#a2207c17eb221166b1bc12fbca976035d", null ],
     [ "_R_P", "classMIQPController.html#a7cede44e7827c9b4b12f2549714f3adf", null ],
     [ "_robotModel", "classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724", null ],
+    [ "_state", "classMIQPController.html#adc70be859da53c202bc0e0c84cc71917", null ],
     [ "_Sw", "classMIQPController.html#ada92fc35065a11b889019f2948c1888d", null ],
     [ "_T", "classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d", null ],
     [ "_ub", "classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6", null ],

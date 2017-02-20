@@ -18,6 +18,7 @@ var annotated =
     [ "MIQPController", "classMIQPController.html", "classMIQPController" ],
     [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html", "classMIQPLinearConstraints" ],
     [ "MIQPParameters", "structMIQPParameters.html", "structMIQPParameters" ],
+    [ "MIQPState", "classMIQPState.html", "classMIQPState" ],
     [ "ocra_icub::ModelInitializer", "classocra__icub_1_1ModelInitializer.html", "classocra__icub_1_1ModelInitializer" ],
     [ "Module", "classModule.html", "classModule" ],
     [ "OcraControllerOptions", "classOcraControllerOptions.html", "classOcraControllerOptions" ],

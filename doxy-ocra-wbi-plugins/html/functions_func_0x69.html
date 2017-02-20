@@ -102,12 +102,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>initialize()
 : <a class="el" href="classSittingDemoClient.html#aff04405d690f2ae8abbd05ea4b55b64d">SittingDemoClient</a>
 , <a class="el" href="classMIQPLinearConstraints.html#aea229cfd938c50c5d50ed68d18d119ab">MIQPLinearConstraints</a>
-, <a class="el" href="classStepController.html#a8f061f201c651d920ca02f7daa07adfe">StepController</a>
+, <a class="el" href="classMIQPState.html#adbae9a43d4d510e0873995bf0016d75a">MIQPState</a>
 , <a class="el" href="classStandingDemoClient.html#a0219c4ae161543b6ea797f27f345593c">StandingDemoClient</a>
+, <a class="el" href="classStepController.html#a8f061f201c651d920ca02f7daa07adfe">StepController</a>
 , <a class="el" href="classWalkingClient.html#aba6a03fe29a4e947bc6bc0c09a713b2a">WalkingClient</a>
-, <a class="el" href="classZmpPreviewController.html#ac28287e01187bff2cea5a68292d936bd">ZmpPreviewController</a>
 , <a class="el" href="classExampleClient.html#ad504d1d87997fc95bfeca6aa925a4fa6">ExampleClient</a>
 , <a class="el" href="classSteppingDemoClient.html#a08dce195eece162eed175ac9487667c2">SteppingDemoClient</a>
+, <a class="el" href="classZmpPreviewController.html#ac28287e01187bff2cea5a68292d936bd">ZmpPreviewController</a>
 , <a class="el" href="classTaskOpsClient.html#a6f5e4c20c1d5f5df28dcc58e3cb4adb0">TaskOpsClient</a>
 </li>
 <li>initializeOdometry()
@@ -124,6 +125,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>isFootInContact()
 : <a class="el" href="classSteppingDemoClient.html#aeeaa9fac47e3e5a141647b07fa2feaa3">SteppingDemoClient</a>
+, <a class="el" href="classMIQPState.html#abc509a2d35f1d97a9ebcd1352943dadc">MIQPState</a>
+</li>
+<li>isRobotInSS()
+: <a class="el" href="classMIQPState.html#ac098f6c3e6b585c45a5dc24d455f15c2">MIQPState</a>
 </li>
 <li>isTrajectoryFinished()
 : <a class="el" href="classStepController.html#a9e2415755548f47301277feb7a376270">StepController</a>
@@ -135,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -148,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Sun Feb 19 2017 23:35:59 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Feb 20 2017 23:35:45 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -23,6 +23,7 @@ var hierarchy =
     [ "MIQPController", "classMIQPController.html", null ],
     [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html", null ],
     [ "MIQPParameters", "structMIQPParameters.html", null ],
+    [ "MIQPState", "classMIQPState.html", null ],
     [ "ocra_icub::ModelInitializer", "classocra__icub_1_1ModelInitializer.html", null ],
     [ "Module", "classModule.html", null ],
     [ "OcraControllerOptions", "classOcraControllerOptions.html", null ],

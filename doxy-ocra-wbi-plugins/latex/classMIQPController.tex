@@ -146,6 +146,8 @@ std\-::string \hyperlink{classMIQPController_a2c3ddd93fd843a3a4650314b47436be7}{
 std\-::shared\-\_\-ptr\*
 $<$ \hyperlink{classMIQPLinearConstraints}{\-M\-I\-Q\-P\-Linear\-Constraints} $>$ \hyperlink{classMIQPController_affac62ccd729155720b16de3137ef3f5}{\-\_\-constraints}
 \item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classMIQPState}{\-M\-I\-Q\-P\-State} $>$ \hyperlink{classMIQPController_adc70be859da53c202bc0e0c84cc71917}{\-\_\-state}
+\item 
 \-Eigen\-::\-Vector\-Xd \hyperlink{classMIQPController_a03c53b7f316d43dfe1aa60eba628819c}{\-\_\-\-H\-\_\-\-N\-\_\-r}
 \item 
 unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\-\_\-k}
@@ -593,7 +595,7 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 
 \-Where
 
-\[ \mathbf{C}_B &= \frac{1}{2} \left[ \begin{array}{ccccc} \mathbf{I}_{2\times2} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times12} \end{array}\right] \] \hypertarget{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-C\-\_\-\-H@{\-\_\-\-C\-\_\-\-H}}
+\[ \mathbf{C}_B &= \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times12} \end{array}\right] \] \hypertarget{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-C\-\_\-\-H@{\-\_\-\-C\-\_\-\-H}}
 \index{\-\_\-\-C\-\_\-\-H@{\-\_\-\-C\-\_\-\-H}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-C\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-C\-\_\-\-H}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}
 \-Output matrix $\mathbf{C}_H$ of the \-Co\-M state space representation
@@ -698,7 +700,9 @@ $N_b$ is a diagonal weighting matrix whose scalar weights help define the compro
 
 \-For a preview window of size $N$\-:
 
-\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} Where: \f[ \mathbf{R}_B = \left[\begin{array}{cccc} \mathbf{C}_B\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_B\mathbf{Q}\mathbf{T} & \mathbf{C}_B\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_B\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_B\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_B\mathbf{T} \end{array}\right] \] \hypertarget{classMIQPController_a2207c17eb221166b1bc12fbca976035d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-R\-\_\-\-H@{\-\_\-\-R\-\_\-\-H}}
+\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \] \-Where\-:
+
+\[ \mathbf{R}_B = \left[\begin{array}{cccc} \mathbf{C}_B\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_B\mathbf{Q}\mathbf{T} & \mathbf{C}_B\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_B\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_B\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_B\mathbf{T} \end{array}\right] \] \hypertarget{classMIQPController_a2207c17eb221166b1bc12fbca976035d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-R\-\_\-\-H@{\-\_\-\-R\-\_\-\-H}}
 \index{\-\_\-\-R\-\_\-\-H@{\-\_\-\-R\-\_\-\-H}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-R\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-R\-\_\-\-H}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a2207c17eb221166b1bc12fbca976035d}
 \-Input matrix $\mathbf{R}_H$ in the equation for the preview \-Co\-M output matrix $\mathbf{H}_{k,N} = \left\{ \mathbf{h}_{k+1|k}, \mathbf{h}_{k+2|k}, \dots, \mathbf{h}_{k+N|k} \right\}$.
@@ -713,7 +717,10 @@ $N_b$ is a diagonal weighting matrix whose scalar weights help define the compro
 \-Size\-: \mbox{[}2\-N $\ast$ 12\-N\mbox{]} \-Where\-: \[ \] \hypertarget{classMIQPController_a03735ecec3242cdfc9bf8a443c561724}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-robot\-Model@{\-\_\-robot\-Model}}
 \index{\-\_\-robot\-Model@{\-\_\-robot\-Model}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-robot\-Model}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-::\-Model\-::\-Ptr {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-robot\-Model}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a03735ecec3242cdfc9bf8a443c561724}
-\hypertarget{classMIQPController_ada92fc35065a11b889019f2948c1888d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Sw@{\-\_\-\-Sw}}
+\hypertarget{classMIQPController_adc70be859da53c202bc0e0c84cc71917}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-state@{\-\_\-state}}
+\index{\-\_\-state@{\-\_\-state}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
+\subsubsection[{\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-M\-I\-Q\-P\-State}$>$ {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-state}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_adc70be859da53c202bc0e0c84cc71917}
+\-M\-I\-Q\-P \-State \hypertarget{classMIQPController_ada92fc35065a11b889019f2948c1888d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Sw@{\-\_\-\-Sw}}
 \index{\-\_\-\-Sw@{\-\_\-\-Sw}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Sw}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Sw}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ada92fc35065a11b889019f2948c1888d}
 $S_w$ is a $6\times6$ diagonal weighting selection matrix, defining whether position, velocity and/or acceleration of the \-Co\-M are tracked in each of the two horizontal directions.
