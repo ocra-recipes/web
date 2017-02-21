@@ -1,11 +1,13 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ShapeConstraints_8h.html" title="walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="420,83,708,112"/>
-<area shape="rect" id="node22" href="$AdmissibilityConstraints_8h.html" title="walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="1167,83,1492,112"/>
-<area shape="rect" id="node5" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="179,237,421,267"/>
-<area shape="rect" id="node15" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="181,160,419,189"/>
-<area shape="rect" id="node7" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="5,315,144,344"/>
-<area shape="rect" id="node25" href="$SSDSAlternation_8h.html" title="walking&#45;client/constraints/SSDSAlternation.h" alt="" coords="1040,160,1323,189"/>
-<area shape="rect" id="node29" href="$SingleSupport_8h.html" title="walking&#45;client/constraints/SingleSupport.h" alt="" coords="1347,160,1611,189"/>
-<area shape="rect" id="node32" href="$ContactConfigHistory_8h.html" title="walking&#45;client/constraints/ContactConfigHistory.h" alt="" coords="1635,160,1944,189"/>
-<area shape="rect" id="node35" href="$ContactConfigEnforcement_8h.html" title="walking&#45;client/constraints/ContactConfigEnforcement.h" alt="" coords="1968,160,2309,189"/>
+<area shape="rect" id="node3" href="$ShapeConstraints_8h.html" title="walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="264,83,552,112"/>
+<area shape="rect" id="node26" href="$AdmissibilityConstraints_8h.html" title="walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="1015,83,1340,112"/>
+<area shape="rect" id="node5" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="729,237,972,267"/>
+<area shape="rect" id="node17" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="24,160,261,189"/>
+<area shape="rect" id="node20" href="$Constancy_8h.html" title="walking&#45;client/constraints/Constancy.h" alt="" coords="285,160,531,189"/>
+<area shape="rect" id="node23" href="$Sequentiality_8h.html" title="walking&#45;client/constraints/Sequentiality.h" alt="" coords="555,160,813,189"/>
+<area shape="rect" id="node7" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="465,315,604,344"/>
+<area shape="rect" id="node29" href="$SSDSAlternation_8h.html" title="walking&#45;client/constraints/SSDSAlternation.h" alt="" coords="888,160,1171,189"/>
+<area shape="rect" id="node32" href="$SingleSupport_8h.html" title="walking&#45;client/constraints/SingleSupport.h" alt="" coords="1195,160,1459,189"/>
+<area shape="rect" id="node35" href="$ContactConfigHistory_8h.html" title="walking&#45;client/constraints/ContactConfigHistory.h" alt="" coords="1483,160,1792,189"/>
+<area shape="rect" id="node38" href="$ContactConfigEnforcement_8h.html" title="walking&#45;client/constraints/ContactConfigEnforcement.h" alt="" coords="1816,160,2157,189"/>
 </map>

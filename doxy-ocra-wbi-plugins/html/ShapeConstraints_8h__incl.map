@@ -1,5 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="179,160,421,189"/>
-<area shape="rect" id="node13" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="260,83,497,112"/>
+<area shape="rect" id="node3" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="269,160,512,189"/>
+<area shape="rect" id="node15" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="140,83,377,112"/>
+<area shape="rect" id="node18" href="$Constancy_8h.html" title="walking&#45;client/constraints/Constancy.h" alt="" coords="401,83,647,112"/>
+<area shape="rect" id="node21" href="$Sequentiality_8h.html" title="walking&#45;client/constraints/Sequentiality.h" alt="" coords="671,83,929,112"/>
 <area shape="rect" id="node5" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="5,237,144,267"/>
 </map>

@@ -121,28 +121,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00031"></a>00031 <span class="preprocessor">#include &lt;Eigen/Core&gt;</span>
 <a name="l00032"></a>00032 <span class="preprocessor">#include &quot;unsupported/Eigen/MatrixFunctions&quot;</span>
 <a name="l00033"></a>00033 <span class="preprocessor">#include &lt;ocra/util/ErrorsHelper.h&gt;</span>
-<a name="l00034"></a>00034 
-<a name="l00035"></a><a class="code" href="Constraint_8h.html#adcb996b47cedb6d21e97c37da2ac82df">00035</a> <span class="preprocessor">#define SIZE_STATE_VECTOR 16</span>
-<a name="l00036"></a><a class="code" href="Constraint_8h.html#a28a35a96940fb499ae48a55a9d47d3da">00036</a> <span class="preprocessor"></span><span class="preprocessor">#define SIZE_INPUT_VECTOR 12</span>
-<a name="l00037"></a>00037 <span class="preprocessor"></span>
-<a name="l00038"></a><a class="code" href="classConstraint.html">00038</a> <span class="keyword">class </span><a class="code" href="classConstraint.html">Constraint</a> {
-<a name="l00039"></a>00039 <span class="keyword">public</span>:
-<a name="l00040"></a><a class="code" href="classConstraint.html#ac066210c674e540f0d2570f53d6eff7b">00040</a>     <a class="code" href="classConstraint.html#ac066210c674e540f0d2570f53d6eff7b">Constraint</a>() { }
-<a name="l00041"></a><a class="code" href="classConstraint.html#a0a4e0b4478205ba856dafe514d03eba4">00041</a>     <span class="keywordtype">void</span> <a class="code" href="classConstraint.html#a0a4e0b4478205ba856dafe514d03eba4">init</a>() { OCRA_WARNING(<span class="stringliteral">&quot;Trying to initialize&quot;</span>); <a class="code" href="classConstraint.html#acc08adc7b34825792cb0127a0d699269">buildMatrixCi</a>(); <a class="code" href="classConstraint.html#aef7c4d1071c06f34fbc5c0f06105418f">buildMatrixCii</a>(); <a class="code" href="classConstraint.html#a07453509c3f0f95034db965c9e699810">buildVectord</a>(); };
-<a name="l00042"></a><a class="code" href="classConstraint.html#a9617822e8e1145177f41775748810ef6">00042</a>     Eigen::MatrixXd <a class="code" href="classConstraint.html#a9617822e8e1145177f41775748810ef6">getCi</a>() { <span class="keywordflow">return</span> <a class="code" href="classConstraint.html#a71217c52597267a96e6bd2d9ed48740f">_Ci</a>; };
-<a name="l00043"></a><a class="code" href="classConstraint.html#abc5587e865eebb1ac924ce06e982117e">00043</a>     Eigen::MatrixXd <a class="code" href="classConstraint.html#abc5587e865eebb1ac924ce06e982117e">getCii</a>() { <span class="keywordflow">return</span> <a class="code" href="classConstraint.html#a6cc83eda35602acec07aab75e9f209dd">_Cii</a>; };
-<a name="l00044"></a><a class="code" href="classConstraint.html#a6498cc7d4a96baa9158c6e38384364d5">00044</a>     Eigen::VectorXd <a class="code" href="classConstraint.html#a6498cc7d4a96baa9158c6e38384364d5">getd</a>(){ <span class="keywordflow">return</span> <a class="code" href="classConstraint.html#a97db6afdcd2827da0dbe3a4e6cd13b7f">_d</a>; };
-<a name="l00045"></a>00045 <span class="keyword">protected</span>:
-<a name="l00046"></a>00046     Eigen::MatrixXd <a class="code" href="classConstraint.html#a71217c52597267a96e6bd2d9ed48740f">_Ci</a>;
-<a name="l00047"></a><a class="code" href="classConstraint.html#a6cc83eda35602acec07aab75e9f209dd">00047</a>     Eigen::MatrixXd <a class="code" href="classConstraint.html#a6cc83eda35602acec07aab75e9f209dd">_Cii</a>;
-<a name="l00048"></a><a class="code" href="classConstraint.html#a97db6afdcd2827da0dbe3a4e6cd13b7f">00048</a>     Eigen::VectorXd <a class="code" href="classConstraint.html#a97db6afdcd2827da0dbe3a4e6cd13b7f">_d</a>;
-<a name="l00049"></a>00049 <span class="keyword">protected</span>:
-<a name="l00050"></a><a class="code" href="classConstraint.html#acc08adc7b34825792cb0127a0d699269">00050</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConstraint.html#acc08adc7b34825792cb0127a0d699269">buildMatrixCi</a>(){ OCRA_WARNING(<span class="stringliteral">&quot;Method not implemented yet&quot;</span>) };
-<a name="l00051"></a><a class="code" href="classConstraint.html#aef7c4d1071c06f34fbc5c0f06105418f">00051</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConstraint.html#aef7c4d1071c06f34fbc5c0f06105418f">buildMatrixCii</a>(){ OCRA_WARNING(<span class="stringliteral">&quot;Method not implemented yet&quot;</span>) };
-<a name="l00052"></a><a class="code" href="classConstraint.html#a07453509c3f0f95034db965c9e699810">00052</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConstraint.html#a07453509c3f0f95034db965c9e699810">buildVectord</a>(){ OCRA_WARNING(<span class="stringliteral">&quot;Method not implemented yet&quot;</span>) };
-<a name="l00053"></a>00053 };
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="preprocessor">#endif</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;memory&gt;</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a><a class="code" href="Constraint_8h.html#adcb996b47cedb6d21e97c37da2ac82df">00036</a> <span class="preprocessor">#define SIZE_STATE_VECTOR 16</span>
+<a name="l00037"></a><a class="code" href="Constraint_8h.html#a28a35a96940fb499ae48a55a9d47d3da">00037</a> <span class="preprocessor"></span><span class="preprocessor">#define SIZE_INPUT_VECTOR 12</span>
+<a name="l00038"></a>00038 <span class="preprocessor"></span>
+<a name="l00039"></a><a class="code" href="classConstraint.html">00039</a> <span class="keyword">class </span><a class="code" href="classConstraint.html">Constraint</a> {
+<a name="l00040"></a>00040 <span class="keyword">public</span>:
+<a name="l00041"></a><a class="code" href="classConstraint.html#ac066210c674e540f0d2570f53d6eff7b">00041</a>     <a class="code" href="classConstraint.html#ac066210c674e540f0d2570f53d6eff7b">Constraint</a>() { }
+<a name="l00042"></a><a class="code" href="classConstraint.html#a0a4e0b4478205ba856dafe514d03eba4">00042</a>     <span class="keywordtype">void</span> <a class="code" href="classConstraint.html#a0a4e0b4478205ba856dafe514d03eba4">init</a>() { OCRA_WARNING(<span class="stringliteral">&quot;Trying to initialize&quot;</span>); <a class="code" href="classConstraint.html#acc08adc7b34825792cb0127a0d699269">buildMatrixCi</a>(); <a class="code" href="classConstraint.html#aef7c4d1071c06f34fbc5c0f06105418f">buildMatrixCii</a>(); <a class="code" href="classConstraint.html#a07453509c3f0f95034db965c9e699810">buildVectord</a>(); };
+<a name="l00043"></a><a class="code" href="classConstraint.html#a9617822e8e1145177f41775748810ef6">00043</a>     Eigen::MatrixXd <a class="code" href="classConstraint.html#a9617822e8e1145177f41775748810ef6">getCi</a>() { <span class="keywordflow">return</span> <a class="code" href="classConstraint.html#a71217c52597267a96e6bd2d9ed48740f">_Ci</a>; };
+<a name="l00044"></a><a class="code" href="classConstraint.html#abc5587e865eebb1ac924ce06e982117e">00044</a>     Eigen::MatrixXd <a class="code" href="classConstraint.html#abc5587e865eebb1ac924ce06e982117e">getCii</a>() { <span class="keywordflow">return</span> <a class="code" href="classConstraint.html#a6cc83eda35602acec07aab75e9f209dd">_Cii</a>; };
+<a name="l00045"></a><a class="code" href="classConstraint.html#a6498cc7d4a96baa9158c6e38384364d5">00045</a>     Eigen::VectorXd <a class="code" href="classConstraint.html#a6498cc7d4a96baa9158c6e38384364d5">getd</a>(){ <span class="keywordflow">return</span> <a class="code" href="classConstraint.html#a97db6afdcd2827da0dbe3a4e6cd13b7f">_d</a>; };
+<a name="l00046"></a>00046 <span class="keyword">protected</span>:
+<a name="l00047"></a>00047     Eigen::MatrixXd <a class="code" href="classConstraint.html#a71217c52597267a96e6bd2d9ed48740f">_Ci</a>;
+<a name="l00048"></a><a class="code" href="classConstraint.html#a6cc83eda35602acec07aab75e9f209dd">00048</a>     Eigen::MatrixXd <a class="code" href="classConstraint.html#a6cc83eda35602acec07aab75e9f209dd">_Cii</a>;
+<a name="l00049"></a><a class="code" href="classConstraint.html#a97db6afdcd2827da0dbe3a4e6cd13b7f">00049</a>     Eigen::VectorXd <a class="code" href="classConstraint.html#a97db6afdcd2827da0dbe3a4e6cd13b7f">_d</a>;
+<a name="l00050"></a>00050 <span class="keyword">protected</span>:
+<a name="l00051"></a><a class="code" href="classConstraint.html#acc08adc7b34825792cb0127a0d699269">00051</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConstraint.html#acc08adc7b34825792cb0127a0d699269">buildMatrixCi</a>(){ OCRA_WARNING(<span class="stringliteral">&quot;Method not implemented yet&quot;</span>) };
+<a name="l00052"></a><a class="code" href="classConstraint.html#aef7c4d1071c06f34fbc5c0f06105418f">00052</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConstraint.html#aef7c4d1071c06f34fbc5c0f06105418f">buildMatrixCii</a>(){ OCRA_WARNING(<span class="stringliteral">&quot;Method not implemented yet&quot;</span>) };
+<a name="l00053"></a><a class="code" href="classConstraint.html#a07453509c3f0f95034db965c9e699810">00053</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConstraint.html#a07453509c3f0f95034db965c9e699810">buildVectord</a>(){ OCRA_WARNING(<span class="stringliteral">&quot;Method not implemented yet&quot;</span>) };
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -163,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="Constraint_8h.html">Constraint.h</a>      </li>
 
-    <li class="footer">Generated on Mon Feb 20 2017 23:35:44 for ocra-wbi-plugins by
+    <li class="footer">Generated on Tue Feb 21 2017 23:36:00 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
