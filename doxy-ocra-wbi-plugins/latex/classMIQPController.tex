@@ -437,7 +437,7 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \hyperlink{classMIQPController_a8320465a1ec80d0cf7ba0d17652feba5}{update\-State\-Vector()}, \hyperlink{classMIQPLinearConstraints_aad3232078ef93e2105a1c619c510f16a}{\-M\-I\-Q\-P\-Linear\-Constraints\-::update\-R\-H\-S()}, \hyperlink{classMIQPController_a69b193f0aab0fa0d0ec439b4d1b2a65f}{set\-C\-O\-M\-State\-Ref\-In\-Preview\-Window()}, \hyperlink{classMIQPController_a2d882a4cd9e9832d8b9b2ad73111be0f}{set\-Linear\-Part\-Objective\-Function()}, \-Eigen\-::\-Gurobi\-Dense\-::solve() 
 \end{DoxySeeAlso}
 \begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000006}{\-Todo}]\hyperlink{classMIQPController_a8320465a1ec80d0cf7ba0d17652feba5}{update\-State\-Vector()} needs to be implemented. 
+\item[\hyperlink{todo__todo000007}{\-Todo}]\hyperlink{classMIQPController_a8320465a1ec80d0cf7ba0d17652feba5}{update\-State\-Vector()} needs to be implemented. 
 
 \-Still gotta set the equality constraints such as \-Simultaneity 
 
@@ -545,7 +545,7 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \-Updates the state vector \hyperlink{classMIQPController_ad1c63725dab2ce84382fcb0b071325ed}{\-\_\-xi\-\_\-k}, i.\-e. $xi_k$
 
 \begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000007}{\-Todo}]\-Update state vector using \-\_\-robot\-Model 
+\item[\hyperlink{todo__todo000008}{\-Todo}]\-Update state vector using \-\_\-robot\-Model 
 
 \-Update upper bounds (a, b) 
 
@@ -567,7 +567,9 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 
 \[ \mathbf{h}_{k+1} = \mathbf{A}_h \mathbf{h}_k + \mathbf{B}_h \mathbf{u}_k \]
 
-\-It is a constant matrix of size $6\times6$ equal to\-: \[ \mathbf{A_h} = \left[ \begin{array}{ccc} \mathbf{I}_2 & \delta t \mathbf{I}_2 & \frac{\delta t^2}{2} \mathbf{I}_2 \\ 0 & \mathbf{I}_2 & \delta t \mathbf{I}_2 \\ 0 & 0 & \mathbf{I}_2 \end{array} \right] \] \hypertarget{classMIQPController_a7678fd8e1c08986d7ae0dc1a884040e1}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Aineq@{\-\_\-\-Aineq}}
+\-It is a constant matrix of size $6\times6$ equal to\-: \[ \mathbf{A_h} = \left[ \begin{array}{ccc} \mathbf{I}_2 & \delta t \mathbf{I}_2 & \frac{\delta t^2}{2} \mathbf{I}_2 \\ 0 & \mathbf{I}_2 & \delta t \mathbf{I}_2 \\ 0 & 0 & \mathbf{I}_2 \end{array} \right] \]
+
+\-Size\-: $[6\times6]$ \hypertarget{classMIQPController_a7678fd8e1c08986d7ae0dc1a884040e1}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Aineq@{\-\_\-\-Aineq}}
 \index{\-\_\-\-Aineq@{\-\_\-\-Aineq}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Aineq}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Aineq}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a7678fd8e1c08986d7ae0dc1a884040e1}
 \-Inequality matrix of the \-M\-I\-Q\-P problem, i.\-e. \[ A_{\text{ineq}} x \leq b_{\text{ineq}} \]
@@ -581,7 +583,9 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 
 \-It is constant of size $6\times2$ and equal to\-:
 
-\[ \mathbf{B_h} = \left[ \begin{array}{c} \frac{\delta^3}{6}\mathbf{I}_2 \\ \frac{\delta t^2}{2} \mathbf{I}_2 \\ \delta t \mathbf{I}_2 \end{array} \right] \] \hypertarget{classMIQPController_a02d441467a51e81e969163f096d3798a}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Bineq@{\-\_\-\-Bineq}}
+\[ \mathbf{B_h} = \left[ \begin{array}{c} \frac{\delta^3}{6}\mathbf{I}_2 \\ \frac{\delta t^2}{2} \mathbf{I}_2 \\ \delta t \mathbf{I}_2 \end{array} \right] \]
+
+\-Size\-: $[6\times2]$ \hypertarget{classMIQPController_a02d441467a51e81e969163f096d3798a}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Bineq@{\-\_\-\-Bineq}}
 \index{\-\_\-\-Bineq@{\-\_\-\-Bineq}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Bineq}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Bineq}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a02d441467a51e81e969163f096d3798a}
 \-R\-H\-S inequality vector $b_{\text{ineq}}$ of the \-M\-I\-Q\-P problem, i.\-e. \[ A_{\text{ineq}} x \leq b_{\text{ineq}} \]
@@ -595,7 +599,9 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 
 \-Where
 
-\[ \mathbf{C}_B &= \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times12} \end{array}\right] \] \hypertarget{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-C\-\_\-\-H@{\-\_\-\-C\-\_\-\-H}}
+\[ \mathbf{C}_B &= \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times12} \end{array}\right] \]
+
+\-Size\-: $[2\times12]$ \hypertarget{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-C\-\_\-\-H@{\-\_\-\-C\-\_\-\-H}}
 \index{\-\_\-\-C\-\_\-\-H@{\-\_\-\-C\-\_\-\-H}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-C\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-C\-\_\-\-H}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}
 \-Output matrix $\mathbf{C}_H$ of the \-Co\-M state space representation
@@ -604,7 +610,9 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 
 \-Where
 
-\[ \mathbf{C}_H = \left[ \begin{array}{cc} \mathbf{0}_{6\times10} & \mathbf{I}_{6\times6} \end{array} \right] \] \hypertarget{classMIQPController_a17cf6f8279cf6b2ce333feb9c8fc5a5d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-C\-\_\-\-P@{\-\_\-\-C\-\_\-\-P}}
+\[ \mathbf{C}_H = \left[ \begin{array}{cc} \mathbf{0}_{6\times10} & \mathbf{I}_{6\times6} \end{array} \right] \]
+
+\-Size\-: $[6\times16]$ \hypertarget{classMIQPController_a17cf6f8279cf6b2ce333feb9c8fc5a5d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-C\-\_\-\-P@{\-\_\-\-C\-\_\-\-P}}
 \index{\-\_\-\-C\-\_\-\-P@{\-\_\-\-C\-\_\-\-P}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-C\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-C\-\_\-\-P}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a17cf6f8279cf6b2ce333feb9c8fc5a5d}
 \-Output matrix $\mathbf{C_P}$ of the \-Co\-P state space representation
@@ -613,10 +621,14 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 
 \-Where
 
-\[ \mathbf{C}_P = \left[ \begin{array}{ccccc} \mathbf{0}_{2\times10} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times2} & -\frac{c_z}{g}\mathbf{I}_{2\times2} \end{array}\right] \] \hypertarget{classMIQPController_ab74859a8dd208f3fc7608391d318d469}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-com\-State\-Ref@{\-\_\-com\-State\-Ref}}
+\[ \mathbf{C}_P = \left[ \begin{array}{ccccc} \mathbf{0}_{2\times10} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times2} & -\frac{c_z}{g}\mathbf{I}_{2\times2} \end{array}\right] \]
+
+\-Size\-: $[2\times16]$ \hypertarget{classMIQPController_ab74859a8dd208f3fc7608391d318d469}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-com\-State\-Ref@{\-\_\-com\-State\-Ref}}
 \index{\-\_\-com\-State\-Ref@{\-\_\-com\-State\-Ref}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-com\-State\-Ref}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-com\-State\-Ref}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ab74859a8dd208f3fc7608391d318d469}
-\-Matrix of \-Co\-M state references. \-Every row corresponds to the \-Co\-M state at a given time step. \hypertarget{classMIQPController_affac62ccd729155720b16de3137ef3f5}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-constraints@{\-\_\-constraints}}
+\-Matrix of \-Co\-M state references. \-Every row corresponds to the \-Co\-M state at a given time step.
+
+\-Size\-: $n\times6$ \-Where $n$ is the length of the trajectory. \hypertarget{classMIQPController_affac62ccd729155720b16de3137ef3f5}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-constraints@{\-\_\-constraints}}
 \index{\-\_\-constraints@{\-\_\-constraints}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-constraints}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-M\-I\-Q\-P\-Linear\-Constraints}$>$ {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-constraints}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_affac62ccd729155720b16de3137ef3f5}
 \-Linear constraints object \hypertarget{classMIQPController_a6d15db521a6b9c4e0b641709fef77373}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-eig\-Gurobi@{\-\_\-eig\-Gurobi}}
@@ -628,11 +640,16 @@ eigen-\/gurobi object \hypertarget{classMIQPController_aec530057d97a52549fdc3823
 \-Gurobi environment. \-Necessary before setting up the gurobi model \hypertarget{classMIQPController_ab4b99d844add54fa7ad6ca6b80cab089}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-H\-\_\-\-N@{\-\_\-\-H\-\_\-\-N}}
 \index{\-\_\-\-H\-\_\-\-N@{\-\_\-\-H\-\_\-\-N}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-H\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-H\-\_\-\-N}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ab4b99d844add54fa7ad6ca6b80cab089}
-\-Positive definite matrix $H_N$ with the coefficients of the quadratic objective of the \-M\-I\-Q\-P for the walking \-M\-P\-C problem\-: \[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
+\-Positive definite matrix $\mathbf{H}_N$ with the coefficients of the quadratic objective of the \-M\-I\-Q\-P for the walking \-M\-P\-C problem\-: \[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
 
 \-For the time being this is\-:
 
-\[ \mathbf{R}_H^T \mathbf{S}_w \mathbf{R}_H + (\mathbf{R}_P - \mathbf{R}_B)^T \mathbf{N}_b (\mathbf{R}_P - \mathbf{R}_B) \] \-But this expression is missing the regularizing terms of the cost function. \-Current size is $12N\times12N$ \hypertarget{classMIQPController_a03c53b7f316d43dfe1aa60eba628819c}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-H\-\_\-\-N\-\_\-r@{\-\_\-\-H\-\_\-\-N\-\_\-r}}
+\[ \mathbf{R}_H^T \mathbf{S}_w \mathbf{R}_H + (\mathbf{R}_P - \mathbf{R}_B)^T \mathbf{N}_b (\mathbf{R}_P - \mathbf{R}_B) \]
+
+\begin{DoxyNote}{\-Note}
+\-But this expression is missing the regularizing terms of the cost function. \-Current size is $12N\times12N$ 
+\end{DoxyNote}
+\hypertarget{classMIQPController_a03c53b7f316d43dfe1aa60eba628819c}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-H\-\_\-\-N\-\_\-r@{\-\_\-\-H\-\_\-\-N\-\_\-r}}
 \index{\-\_\-\-H\-\_\-\-N\-\_\-r@{\-\_\-\-H\-\_\-\-N\-\_\-r}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-H\-\_\-\-N\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-H\-\_\-\-N\-\_\-r}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a03c53b7f316d43dfe1aa60eba628819c}
 \-Reference \-Co\-M state in preview window. \-Size\-: \mbox{[}6\-N\mbox{]} \hypertarget{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-k@{\-\_\-k}}
@@ -641,10 +658,12 @@ eigen-\/gurobi object \hypertarget{classMIQPController_aec530057d97a52549fdc3823
 \-Current iteration \hypertarget{classMIQPController_ad3544c00f3515146c1818440905e36cc}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-lb@{\-\_\-lb}}
 \index{\-\_\-lb@{\-\_\-lb}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-lb}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-lb}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ad3544c00f3515146c1818440905e36cc}
-\-Vector of lower bounds of the input vector $\mathcal{X}$ \hypertarget{classMIQPController_ac2ec0c5287589fe28f7381ebeaa5f4ef}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-linear\-Term\-Trans\-Obj\-Func@{\-\_\-linear\-Term\-Trans\-Obj\-Func}}
+\-Vector of lower bounds of the input vector $\mathcal{X}$
+
+\-Size\-: $[6\times1]$ \hypertarget{classMIQPController_ac2ec0c5287589fe28f7381ebeaa5f4ef}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-linear\-Term\-Trans\-Obj\-Func@{\-\_\-linear\-Term\-Trans\-Obj\-Func}}
 \index{\-\_\-linear\-Term\-Trans\-Obj\-Func@{\-\_\-linear\-Term\-Trans\-Obj\-Func}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-linear\-Term\-Trans\-Obj\-Func}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-linear\-Term\-Trans\-Obj\-Func}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ac2ec0c5287589fe28f7381ebeaa5f4ef}
-\-Containts the state-\/dependent coefficients of the linear term of the objective function of the \-M\-I\-Q\-P for the walking \-M\-P\-C problem.
+\-Contains the state-\/dependent coefficients of the linear term of the objective function of the \-M\-I\-Q\-P for the walking \-M\-P\-C problem.
 
 \[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
 
@@ -664,7 +683,7 @@ eigen-\/gurobi object \hypertarget{classMIQPController_aec530057d97a52549fdc3823
 \-Gurobi model. \-It is built by adding variables and constraints to it and it can be asked to perform the optimization or integrate model changes. \hypertarget{classMIQPController_aaed002a2578a0f83c4ee59516a793f98}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Nb@{\-\_\-\-Nb}}
 \index{\-\_\-\-Nb@{\-\_\-\-Nb}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Nb}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Nb}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_aaed002a2578a0f83c4ee59516a793f98}
-$N_b$ is a diagonal weighting matrix whose scalar weights help define the compromise between balance robustness and tracking performance. \hypertarget{classMIQPController_a4bac1e68bd433553a7c00677bdc496dd}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-obj@{\-\_\-obj}}
+$\mathbf{N}_b$ is a diagonal weighting matrix whose scalar weights help define the compromise between balance robustness and tracking performance. \hypertarget{classMIQPController_a4bac1e68bd433553a7c00677bdc496dd}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-obj@{\-\_\-obj}}
 \index{\-\_\-obj@{\-\_\-obj}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-obj}]{\setlength{\rightskip}{0pt plus 5cm}\-G\-R\-B\-Quad\-Expr {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-obj}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a4bac1e68bd433553a7c00677bdc496dd}
 \-Objective function as a \-G\-R\-B\-Qad\-Expr object. \-Consists of a linear expression, plus a list of coefficient-\/variable-\/variable triples that capture the quadratic terms. \hypertarget{classMIQPController_a848852d659dff4a566a8dca57819587d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-P\-\_\-\-B@{\-\_\-\-P\-\_\-\-B}}
@@ -674,23 +693,46 @@ $N_b$ is a diagonal weighting matrix whose scalar weights help define the compro
 
 \-For a preview window of size $N$\-:
 
-\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \] \-Where\-: \[ \mathbf{P}_B = \left[\begin{array}{c} \mathbf{C}_B \mathbf{Q} \\ \vdots\\ \mathbf{C}_B \mathbf{Q}^N \end{array}\right] \] \hypertarget{classMIQPController_afb83c4fddc4adba989506ccc9b62ff1e}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-P\-\_\-\-H@{\-\_\-\-P\-\_\-\-H}}
+\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \] \-Where\-: \[ \mathbf{P}_B = \left[\begin{array}{c} \mathbf{C}_B \mathbf{Q} \\ \vdots\\ \mathbf{C}_B \mathbf{Q}^N \end{array}\right] \]
+
+\-Size\-: $[2N\times16]$
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPController_a5c6882cb248e9d16513868fea7835d6e}{\-\_\-\-C\-\_\-\-B}, \hyperlink{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}{\-\_\-\-Q} 
+\end{DoxySeeAlso}
+\hypertarget{classMIQPController_afb83c4fddc4adba989506ccc9b62ff1e}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-P\-\_\-\-H@{\-\_\-\-P\-\_\-\-H}}
 \index{\-\_\-\-P\-\_\-\-H@{\-\_\-\-P\-\_\-\-H}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-P\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-P\-\_\-\-H}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_afb83c4fddc4adba989506ccc9b62ff1e}
 \-Matrix $\mathbf{P}_H$ in the equation for the preview \-Co\-M output matrix $\mathbf{H}_{k,N} = \left\{ \mathbf{h}_{k+1|k}, \mathbf{h}_{k+2|k}, \dots, \mathbf{h}_{k+N|k} \right\}$.
 
-\-For a preview window of size $N$\-: \[ \mathbf{H}_{k,N} = \mathbf{P}_H \mathbf{\xi}_k + \mathbf{R}_H \mathcal{X}_{k,N} \] \-Where\-: \begin{align*} \mathbf{P}_H = \left[\begin{array}{c} \mathbf{C}_H \mathbf{Q} \\ \vdots\\ \mathbf{C}_H \mathbf{Q}^N \end{array}\right] \end{align*} \hypertarget{classMIQPController_a8243f4111abb4ad6c331ac147a844118}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-P\-\_\-\-P@{\-\_\-\-P\-\_\-\-P}}
+\-For a preview window of size $N$\-: \[ \mathbf{H}_{k,N} = \mathbf{P}_H \mathbf{\xi}_k + \mathbf{R}_H \mathcal{X}_{k,N} \] \-Where\-: \begin{align*} \mathbf{P}_H = \left[\begin{array}{c} \mathbf{C}_H \mathbf{Q} \\ \vdots\\ \mathbf{C}_H \mathbf{Q}^N \end{array}\right] \end{align*}
+
+\-Size\-: $[6N\times16]$
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}{\-\_\-\-C\-\_\-\-H}, \hyperlink{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}{\-\_\-\-Q} 
+\end{DoxySeeAlso}
+\hypertarget{classMIQPController_a8243f4111abb4ad6c331ac147a844118}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-P\-\_\-\-P@{\-\_\-\-P\-\_\-\-P}}
 \index{\-\_\-\-P\-\_\-\-P@{\-\_\-\-P\-\_\-\-P}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-P\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-P\-\_\-\-P}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a8243f4111abb4ad6c331ac147a844118}
 \-Matrix $\mathbf{P}_p$ in the equation for the preview \-Co\-P output matrix $\mathbf{P}_{k,N} = \left\{ \mathbf{p}_{k+1|k}, \mathbf{p}_{k+2|k}, \dots, \mathbf{p}_{k+N|k} \right\}$.
 
-\-For a preview window of size $N$\-: \[ \mathbf{P}_{k,N} = \mathbf{P}_p \mathbf{\xi}_k + \mathbf{R}_p \mathcal{X}_{k,N} \] \-Where\-: \begin{align*} \mathbf{P}_P = \left[\begin{array}{c} \mathbf{C}_P \mathbf{Q} \\ \vdots\\ \mathbf{C}_P \mathbf{Q}^N \end{array}\right] \end{align*} \hypertarget{classMIQPController_aed2ce53008e32e64e107398d85e75170}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-period@{\-\_\-period}}
+\-For a preview window of size $N$\-: \[ \mathbf{P}_{k,N} = \mathbf{P}_p \mathbf{\xi}_k + \mathbf{R}_p \mathcal{X}_{k,N} \] \-Where\-: \begin{align*} \mathbf{P}_P = \left[\begin{array}{c} \mathbf{C}_P \mathbf{Q} \\ \vdots\\ \mathbf{C}_P \mathbf{Q}^N \end{array}\right] \end{align*}
+
+\-Size\-: $[2N\times16]$ \hypertarget{classMIQPController_aed2ce53008e32e64e107398d85e75170}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-period@{\-\_\-period}}
 \index{\-\_\-period@{\-\_\-period}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-period}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-period}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_aed2ce53008e32e64e107398d85e75170}
 \hyperlink{classThread}{\-Thread} period in milliseconds \hypertarget{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Q@{\-\_\-\-Q}}
 \index{\-\_\-\-Q@{\-\_\-\-Q}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Q}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}
-\-Matrix $\mathbf{Q}$ in preview state model\-: \[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \] \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} & \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} & \mathbf{A_h}_{6\times6} \end{array}\right] \] \hypertarget{classMIQPController_a532459bb659a1cc39d449fdf3f81c63f}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-quadratic\-Term\-Obj\-Func@{\-\_\-quadratic\-Term\-Obj\-Func}}
+\-Matrix $\mathbf{Q}$ in preview state model\-: \[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \] \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} & \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} & \mathbf{A_h}_{6\times6} \end{array}\right] \]
+
+\-Size\-: $[16\times16]$
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPController_a388ed1c232c212e171276993b5cb3fec}{\-\_\-\-Ah} 
+\end{DoxySeeAlso}
+\hypertarget{classMIQPController_a532459bb659a1cc39d449fdf3f81c63f}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-quadratic\-Term\-Obj\-Func@{\-\_\-quadratic\-Term\-Obj\-Func}}
 \index{\-\_\-quadratic\-Term\-Obj\-Func@{\-\_\-quadratic\-Term\-Obj\-Func}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-quadratic\-Term\-Obj\-Func}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-quadratic\-Term\-Obj\-Func}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a532459bb659a1cc39d449fdf3f81c63f}
 \hypertarget{classMIQPController_a69fbc25a2e2f2392fe0f92c5811c12dd}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-R\-\_\-\-B@{\-\_\-\-R\-\_\-\-B}}
@@ -702,19 +744,33 @@ $N_b$ is a diagonal weighting matrix whose scalar weights help define the compro
 
 \[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \] \-Where\-:
 
-\[ \mathbf{R}_B = \left[\begin{array}{cccc} \mathbf{C}_B\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_B\mathbf{Q}\mathbf{T} & \mathbf{C}_B\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_B\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_B\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_B\mathbf{T} \end{array}\right] \] \hypertarget{classMIQPController_a2207c17eb221166b1bc12fbca976035d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-R\-\_\-\-H@{\-\_\-\-R\-\_\-\-H}}
+\[ \mathbf{R}_B = \left[\begin{array}{cccc} \mathbf{C}_B\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_B\mathbf{Q}\mathbf{T} & \mathbf{C}_B\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_B\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_B\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_B\mathbf{T} \end{array}\right] \]
+
+\-Size\-: $[2N\times12N]$
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPController_a5c6882cb248e9d16513868fea7835d6e}{\-\_\-\-C\-\_\-\-B}, \hyperlink{classMIQPController_a1143455ae85d0e221578dbe5d659af1d}{\-\_\-\-T}, \hyperlink{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}{\-\_\-\-Q} 
+\end{DoxySeeAlso}
+\hypertarget{classMIQPController_a2207c17eb221166b1bc12fbca976035d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-R\-\_\-\-H@{\-\_\-\-R\-\_\-\-H}}
 \index{\-\_\-\-R\-\_\-\-H@{\-\_\-\-R\-\_\-\-H}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-R\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-R\-\_\-\-H}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a2207c17eb221166b1bc12fbca976035d}
 \-Input matrix $\mathbf{R}_H$ in the equation for the preview \-Co\-M output matrix $\mathbf{H}_{k,N} = \left\{ \mathbf{h}_{k+1|k}, \mathbf{h}_{k+2|k}, \dots, \mathbf{h}_{k+N|k} \right\}$.
 
-\-For a preview window of size $N$\-: \[ \mathbf{H}_{k,N} = \mathbf{P}_H \mathbf{\xi}_k + \mathbf{R}_H \mathcal{X}_{k,N} \] \-Where\-: \[ \mathbf{R}_h = \left[\begin{array}{cccc} \mathbf{C}_H\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_H\mathbf{Q}\mathbf{T} & \mathbf{C}_H\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_H\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_H\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_H\mathbf{T} \end{array}\right] \] \hypertarget{classMIQPController_a7cede44e7827c9b4b12f2549714f3adf}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-R\-\_\-\-P@{\-\_\-\-R\-\_\-\-P}}
+\-For a preview window of size $N$\-: \[ \mathbf{H}_{k,N} = \mathbf{P}_H \mathbf{\xi}_k + \mathbf{R}_H \mathcal{X}_{k,N} \] \-Where\-: \[ \mathbf{R}_H = \left[\begin{array}{cccc} \mathbf{C}_H\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_H\mathbf{Q}\mathbf{T} & \mathbf{C}_H\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_H\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_H\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_H\mathbf{T} \end{array}\right] \]
+
+\-Size\-: $[6N\times12N]$ \begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}{\-\_\-\-C\-\_\-\-H}, \hyperlink{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}{\-\_\-\-Q}, \hyperlink{classMIQPController_a1143455ae85d0e221578dbe5d659af1d}{\-\_\-\-T} 
+\end{DoxySeeAlso}
+\hypertarget{classMIQPController_a7cede44e7827c9b4b12f2549714f3adf}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-R\-\_\-\-P@{\-\_\-\-R\-\_\-\-P}}
 \index{\-\_\-\-R\-\_\-\-P@{\-\_\-\-R\-\_\-\-P}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-R\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-R\-\_\-\-P}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a7cede44e7827c9b4b12f2549714f3adf}
 \-Matrix $\mathbf{R}_p$ in the equation for the preview \-Co\-P output matrix $\mathbf{P}_{k,N} = \left\{ \mathbf{p}_{k+1|k}, \mathbf{p}_{k+2|k}, \dots, \mathbf{p}_{k+N|k} \right\}$.
 
 \-For a preview window of size $N$\-: \[ \mathbf{P}_{k,N} = \mathbf{P}_p \mathbf{\xi}_k + \mathbf{R}_p \mathcal{X}_{k,N} \]
 
-\-Size\-: \mbox{[}2\-N $\ast$ 12\-N\mbox{]} \-Where\-: \[ \] \hypertarget{classMIQPController_a03735ecec3242cdfc9bf8a443c561724}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-robot\-Model@{\-\_\-robot\-Model}}
+\-Where\-: \[ \mathbf{R}_P = \left[\begin{array}{cccc} \mathbf{C}_P\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_P\mathbf{Q}\mathbf{T} & \mathbf{C}_P\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_P\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_P\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_P\mathbf{T} \end{array}\right] \]
+
+\-Size\-: $[2N\times12N]$ \hypertarget{classMIQPController_a03735ecec3242cdfc9bf8a443c561724}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-robot\-Model@{\-\_\-robot\-Model}}
 \index{\-\_\-robot\-Model@{\-\_\-robot\-Model}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-robot\-Model}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-::\-Model\-::\-Ptr {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-robot\-Model}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a03735ecec3242cdfc9bf8a443c561724}
 \hypertarget{classMIQPController_adc70be859da53c202bc0e0c84cc71917}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-state@{\-\_\-state}}
@@ -723,10 +779,10 @@ $N_b$ is a diagonal weighting matrix whose scalar weights help define the compro
 \-M\-I\-Q\-P \-State \hypertarget{classMIQPController_ada92fc35065a11b889019f2948c1888d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Sw@{\-\_\-\-Sw}}
 \index{\-\_\-\-Sw@{\-\_\-\-Sw}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Sw}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Sw}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ada92fc35065a11b889019f2948c1888d}
-$S_w$ is a $6\times6$ diagonal weighting selection matrix, defining whether position, velocity and/or acceleration of the \-Co\-M are tracked in each of the two horizontal directions.
+$\mathbf{S_w}$ is a $6N\times6N$ diagonal weighting selection matrix, defining whether position, velocity and/or acceleration of the \-Co\-M are tracked in each of the two horizontal directions.
 
 \begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000008}{\-Todo}]\-For the moment this has been hardcoded! \-Put it in configuration file. \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000009}{\-Todo}]\-For the moment this has been hardcoded to take into account only \-Co\-M velocity references. \end{DoxyRefDesc}
 \hypertarget{classMIQPController_a1143455ae85d0e221578dbe5d659af1d}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-T@{\-\_\-\-T}}
 \index{\-\_\-\-T@{\-\_\-\-T}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-T}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-T}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a1143455ae85d0e221578dbe5d659af1d}
@@ -736,13 +792,15 @@ $S_w$ is a $6\times6$ diagonal weighting selection matrix, defining whether posi
 
 \[ \mathbf{T} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} & \mathbf{0}_{10\times2}\\ \mathbf{0}_{6\times10} & \mathbf{B_h}_{6\times2} \end{array}\right] \]
 
-\begin{DoxySeeAlso}{\-See also}
+\-Size\-: $[16\times12]$ \begin{DoxySeeAlso}{\-See also}
 \hyperlink{classMIQPController_a9a989875871a898f0ad19b441a2c67ba}{\-\_\-\-Bh} 
 \end{DoxySeeAlso}
 \hypertarget{classMIQPController_aa8407451ad8b20c814b12fef631f43f6}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-ub@{\-\_\-ub}}
 \index{\-\_\-ub@{\-\_\-ub}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-ub}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-ub}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_aa8407451ad8b20c814b12fef631f43f6}
-\-Vector of upper bounds of the input vector $\mathcal{X}$ \hypertarget{classMIQPController_a2c3ddd93fd843a3a4650314b47436be7}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-variables\-Names@{\-\_\-variables\-Names}}
+\-Vector of upper bounds of the input vector $\mathcal{X}$
+
+\-Size\-: $[6\times1]$ \hypertarget{classMIQPController_a2c3ddd93fd843a3a4650314b47436be7}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-variables\-Names@{\-\_\-variables\-Names}}
 \index{\-\_\-variables\-Names@{\-\_\-variables\-Names}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-variables\-Names}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-variables\-Names}\mbox{[}{\bf \-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a2c3ddd93fd843a3a4650314b47436be7}
 \hypertarget{classMIQPController_a1143bf95d61a348b08010c909b190029}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-vars@{\-\_\-vars}}
@@ -751,10 +809,14 @@ $S_w$ is a $6\times6$ diagonal weighting selection matrix, defining whether posi
 \hypertarget{classMIQPController_a1fdfcba2c7b6422ac8d3b0b6095d7546}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-X\-\_\-kn@{\-\_\-\-X\-\_\-kn}}
 \index{\-\_\-\-X\-\_\-kn@{\-\_\-\-X\-\_\-kn}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-X\-\_\-kn}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-X\-\_\-kn}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a1fdfcba2c7b6422ac8d3b0b6095d7546}
-\-Solution $\mathcal{X_{k,N}}$ of the \-M\-I\-Q\-P problem \hypertarget{classMIQPController_ad1c63725dab2ce84382fcb0b071325ed}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-xi\-\_\-k@{\-\_\-xi\-\_\-k}}
+\-Solution $\mathcal{X}_{k,N}$ of the \-M\-I\-Q\-P problem \hypertarget{classMIQPController_ad1c63725dab2ce84382fcb0b071325ed}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-xi\-\_\-k@{\-\_\-xi\-\_\-k}}
 \index{\-\_\-xi\-\_\-k@{\-\_\-xi\-\_\-k}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-xi\-\_\-k}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-xi\-\_\-k}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ad1c63725dab2ce84382fcb0b071325ed}
+\-State vector $\xi_k$ of the \-M\-I\-Q\-P problem\-:
 
+\[ \begin{array}{ccccccccc} [\mathbf{a} & \mathbf{b} & \mathbf{\alpha} & \mathbf{\beta} & \delta & \gamma & \mathbf{h} & \dot{\mathbf{h}} & \ddot{\mathbf{h}}] \end{array} \]
+
+\-Where $\mathbf{a} \in \mathbb{R}^2$ are the upper bounds of the base of support (\-Bo\-S), $b \in \mathbb{R}^2$ are the lower bounds, $\mathbf{\alpha} \in \mathbb{R}^2$ the rising edges of $\mathbf{a}$, $\mathbf{\beta} \in \mathbb{R}^2$ are the falling edges of $\mathbf{b}$, $\delta$ indicates the potential change from double support to single support, while $\gamma$ indicates whether the robot is in single support (\-S\-S) or double support (\-D\-S). 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

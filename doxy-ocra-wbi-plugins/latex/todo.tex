@@ -3,11 +3,11 @@
 \item[\label{todo__todo000003}%
 \hypertarget{todo__todo000003}{}%
 \-Member \hyperlink{classConstancy_ae38922343ad8a98bd4e501e8ada5c83c}{\-Constancy\-:\-:\-Constancy} ()]\-Upper boundaries should be input somehow from configuration file  
-\item[\label{todo__todo000008}%
-\hypertarget{todo__todo000008}{}%
-\-Member \hyperlink{classMIQPController_ada92fc35065a11b889019f2948c1888d}{\-M\-I\-Q\-P\-Controller\-:\-:\-\_\-\-Sw} ]\-For the moment this has been hardcoded! \-Put it in configuration file.  
-\item[\label{todo__todo000006}%
-\hypertarget{todo__todo000006}{}%
+\item[\label{todo__todo000009}%
+\hypertarget{todo__todo000009}{}%
+\-Member \hyperlink{classMIQPController_ada92fc35065a11b889019f2948c1888d}{\-M\-I\-Q\-P\-Controller\-:\-:\-\_\-\-Sw} ]\-For the moment this has been hardcoded to take into account only \-Co\-M velocity references.  
+\item[\label{todo__todo000007}%
+\hypertarget{todo__todo000007}{}%
 \-Member \hyperlink{classMIQPController_aa8fd8452a14d8e7731bf45044e1c7a59}{\-M\-I\-Q\-P\-Controller\-:\-:run} ()]update\-State\-Vector() needs to be implemented. 
 
 \-Still gotta set the equality constraints such as \-Simultaneity 
@@ -15,8 +15,8 @@
 \-Watch out! \-\_\-eig\-Gurobi will add a 1/2. \-Therefore the 2. \-Check that this is correct. 
 
 \-: \-The expression for \-\_\-\-H\-\_\-\-N is missing regularization terms  
-\item[\label{todo__todo000007}%
-\hypertarget{todo__todo000007}{}%
+\item[\label{todo__todo000008}%
+\hypertarget{todo__todo000008}{}%
 \-Member \hyperlink{classMIQPController_a8320465a1ec80d0cf7ba0d17652feba5}{\-M\-I\-Q\-P\-Controller\-:\-:update\-State\-Vector} ()]\-Update state vector using \-\_\-robot\-Model 
 
 \-Update upper bounds (a, b) 
@@ -26,14 +26,17 @@
 \-Update \-S\-S/\-D\-S (delta) 
 
 \-Update potential change from \-D\-S to \-S\-S (gamma)  
+\item[\label{todo__todo000005}%
+\hypertarget{todo__todo000005}{}%
+\-Member \hyperlink{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{\-M\-I\-Q\-P\-Linear\-Constraints\-:\-:build\-Shape\-And\-Admissibility\-In\-Preview\-Window} ()]\-When walking constraints are added, matrix \-\_\-\-A will be a stack of the two  
 \item[\label{todo__todo000004}%
 \hypertarget{todo__todo000004}{}%
 \-Member \hyperlink{classMIQPLinearConstraints_a09f79be23a0269104add07a52c52f90f}{\-M\-I\-Q\-P\-Linear\-Constraints\-:\-:\-M\-I\-Q\-P\-Linear\-Constraints} (unsigned int dt, unsigned int \-N)]\-Once \-I add walking constraints this will change to include the rows added by walking constraints  
-\item[\label{todo__todo000005}%
-\hypertarget{todo__todo000005}{}%
+\item[\label{todo__todo000006}%
+\hypertarget{todo__todo000006}{}%
 \-Member \hyperlink{classSingleSupport_a78e5b7c89b828d718560cec73c0f6218}{\-Single\-Support\-:\-:build\-Matrix\-Ci} ()]\-Bound \-S must not be hardcoded  
-\item[\label{todo__todo000009}%
-\hypertarget{todo__todo000009}{}%
+\item[\label{todo__todo000010}%
+\hypertarget{todo__todo000010}{}%
 \-Member \hyperlink{classStepController_a8f061f201c651d920ca02f7daa07adfe}{\-Step\-Controller\-:\-:initialize} ()]\-This max velocity must be compatible with the one specified in the linar constraints  
 \item[\label{todo__todo000002}%
 \hypertarget{todo__todo000002}{}%
@@ -41,19 +44,19 @@
 \item[\label{todo__todo000001}%
 \hypertarget{todo__todo000001}{}%
 \-Class \hyperlink{classThread}{\-Thread} ]\-Remove task sequences. \-This class sets up an ocra\-::\-Model which is constructed from an \-Ocra\-Wbi\-Model and an ocra\-::\-Controller which can be specified as either a \-Wocra\-Controller, a \-Gocra\-Controller, or a \-Hocra\-Controller. \-The thread is looped at the period specified by the user (defaults to 10ms) and on each loop the \-Model is updated and the control torques are recalculated. $\ast$\-At the writing of this comment, task sequences are still in use and they too are initialized and updated here. \-They will be removed eventually.$\ast$  
-\item[\label{todo__todo000011}%
-\hypertarget{todo__todo000011}{}%
-\-Member \hyperlink{classWalkingClient_aba6a03fe29a4e947bc6bc0c09a713b2a}{\-Walking\-Client\-:\-:initialize} ()]\-Dummy initial \-C\-O\-M states reference!  
-\item[\label{todo__todo000010}%
-\hypertarget{todo__todo000010}{}%
-\-Member \hyperlink{classWalkingClient_aad39a3836319f9b7258d8eb129776b47}{\-Walking\-Client\-:\-:prepare\-Andset\-Desired\-Co\-M\-Task\-State} (\-Eigen\-::\-Vector\-Xd com\-State, bool do\-Set)]\-Change input to this method to just com acceleration.  
 \item[\label{todo__todo000012}%
 \hypertarget{todo__todo000012}{}%
-\-Member \hyperlink{classZmpController_a4c47608f6d62b6b490808816879c01b7}{\-Zmp\-Controller\-:\-:\-Zmp\-Controller} (const int period, std\-::shared\-\_\-ptr$<$ ocra\-::\-Model $>$ model\-Ptr, std\-::shared\-\_\-ptr$<$ Zmp\-Controller\-Params $>$ parameters)]\-Deprecate this class  
-\item[\label{todo__todo000014}%
-\hypertarget{todo__todo000014}{}%
-\-Member \hyperlink{classZmpPreviewController_ac28b93f8e76b4bd00d418f80c330bb67}{\-Zmp\-Preview\-Controller\-:\-:build\-Hh} (\-Eigen\-::\-Matrix\-Xd \-Ch, \-Eigen\-::\-Matrix\-Xd \-Bh, \-Eigen\-::\-Matrix\-Xd \-Ah, const int \-Nc, const int \-Np)]\-Check the first for loop of this method. \-I think this should be \-Np -\/ 1  
+\-Member \hyperlink{classWalkingClient_aba6a03fe29a4e947bc6bc0c09a713b2a}{\-Walking\-Client\-:\-:initialize} ()]\-Dummy initial \-C\-O\-M states reference!  
+\item[\label{todo__todo000011}%
+\hypertarget{todo__todo000011}{}%
+\-Member \hyperlink{classWalkingClient_aad39a3836319f9b7258d8eb129776b47}{\-Walking\-Client\-:\-:prepare\-Andset\-Desired\-Co\-M\-Task\-State} (\-Eigen\-::\-Vector\-Xd com\-State, bool do\-Set)]\-Change input to this method to just com acceleration.  
 \item[\label{todo__todo000013}%
 \hypertarget{todo__todo000013}{}%
+\-Member \hyperlink{classZmpController_a4c47608f6d62b6b490808816879c01b7}{\-Zmp\-Controller\-:\-:\-Zmp\-Controller} (const int period, std\-::shared\-\_\-ptr$<$ ocra\-::\-Model $>$ model\-Ptr, std\-::shared\-\_\-ptr$<$ Zmp\-Controller\-Params $>$ parameters)]\-Deprecate this class  
+\item[\label{todo__todo000015}%
+\hypertarget{todo__todo000015}{}%
+\-Member \hyperlink{classZmpPreviewController_ac28b93f8e76b4bd00d418f80c330bb67}{\-Zmp\-Preview\-Controller\-:\-:build\-Hh} (\-Eigen\-::\-Matrix\-Xd \-Ch, \-Eigen\-::\-Matrix\-Xd \-Bh, \-Eigen\-::\-Matrix\-Xd \-Ah, const int \-Nc, const int \-Np)]\-Check the first for loop of this method. \-I think this should be \-Np -\/ 1  
+\item[\label{todo__todo000014}%
+\hypertarget{todo__todo000014}{}%
 \-Member \hyperlink{classZmpPreviewController_aabdafde9ecc41a6d98134e0a01083d8a}{\-Zmp\-Preview\-Controller\-:\-:compute\-Optimal\-Input} (const \-Eigen\-::\-Matrix\-Base$<$ Derived $>$ \&zmp\-Ref, const \-Eigen\-::\-Matrix\-Base$<$ Derived $>$ \&com\-Vel\-Ref, const \-Eigen\-::\-Matrix\-Base$<$ Derived $>$ \&hk, \-Eigen\-::\-Matrix\-Base$<$ Derived $>$ \&optimal\-U)]\-Remember that the b\-Optimal \-I have to use is actually not \-Weiber's because it doesn't take into account com velocity references.
 \end{DoxyRefList}

@@ -632,7 +632,7 @@ Private Attributes</h2></td></tr>
 <li>Retrieves the solution.</li>
 </ul>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a>, <a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">MIQPLinearConstraints::updateRHS()</a>, <a class="el" href="classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f">setCOMStateRefInPreviewWindow()</a>, <a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction()</a>, Eigen::GurobiDense::solve() </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd><p class="startdd"><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a> needs to be implemented. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd><p class="startdd"><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a> needs to be implemented. </p>
 <p>Still gotta set the equality constraints such as Simultaneity </p>
 <p>Watch out! _eigGurobi will add a 1/2. Therefore the 2. Check that this is correct. </p>
 <p class="enddd">: The expression for _H_N is missing regularization terms </p>
@@ -840,7 +840,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Updates the state vector <a class="el" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">_xi_k</a>, i.e. \(xi_k\)</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd><p class="startdd">Update state vector using _robotModel </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd><p class="startdd">Update state vector using _robotModel </p>
 <p>Update upper bounds (a, b) </p>
 <p>Update rising/falling edges (alpha, beta) </p>
 <p>Update SS/DS (delta) </p>
@@ -869,7 +869,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{A_h} = \left[ \begin{array}{ccc} \mathbf{I}_2 &amp; \delta t \mathbf{I}_2 &amp; \frac{\delta t^2}{2} \mathbf{I}_2 \\ 0 &amp; \mathbf{I}_2 &amp; \delta t \mathbf{I}_2 \\ 0 &amp; 0 &amp; \mathbf{I}_2 \end{array} \right] \]
 </p>
- 
+<p>Size: \([6\times6]\) </p>
+
 </div>
 </div>
 <a class="anchor" id="a7678fd8e1c08986d7ae0dc1a884040e1"></a><!-- doxytag: member="MIQPController::_Aineq" ref="a7678fd8e1c08986d7ae0dc1a884040e1" args="" -->
@@ -908,7 +909,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{B_h} = \left[ \begin{array}{c} \frac{\delta^3}{6}\mathbf{I}_2 \\ \frac{\delta t^2}{2} \mathbf{I}_2 \\ \delta t \mathbf{I}_2 \end{array} \right] \]
 </p>
- 
+<p>Size: \([6\times2]\) </p>
+
 </div>
 </div>
 <a class="anchor" id="a02d441467a51e81e969163f096d3798a"></a><!-- doxytag: member="MIQPController::_Bineq" ref="a02d441467a51e81e969163f096d3798a" args="" -->
@@ -947,7 +949,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{C}_B &amp;= \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times12} \end{array}\right] \]
 </p>
- 
+<p>Size: \([2\times12]\) </p>
+
 </div>
 </div>
 <a class="anchor" id="a323718c0eaf8c8a7e159ea7f1ef5b72c"></a><!-- doxytag: member="MIQPController::_C_H" ref="a323718c0eaf8c8a7e159ea7f1ef5b72c" args="" -->
@@ -968,7 +971,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{C}_H = \left[ \begin{array}{cc} \mathbf{0}_{6\times10} &amp; \mathbf{I}_{6\times6} \end{array} \right] \]
 </p>
- 
+<p>Size: \([6\times16]\) </p>
+
 </div>
 </div>
 <a class="anchor" id="a17cf6f8279cf6b2ce333feb9c8fc5a5d"></a><!-- doxytag: member="MIQPController::_C_P" ref="a17cf6f8279cf6b2ce333feb9c8fc5a5d" args="" -->
@@ -989,7 +993,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{C}_P = \left[ \begin{array}{ccccc} \mathbf{0}_{2\times10} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times2} &amp; -\frac{c_z}{g}\mathbf{I}_{2\times2} \end{array}\right] \]
 </p>
- 
+<p>Size: \([2\times16]\) </p>
+
 </div>
 </div>
 <a class="anchor" id="ab74859a8dd208f3fc7608391d318d469"></a><!-- doxytag: member="MIQPController::_comStateRef" ref="ab74859a8dd208f3fc7608391d318d469" args="" -->
@@ -1002,7 +1007,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Matrix of CoM state references. Every row corresponds to the CoM state at a given time step. </p>
+<p>Matrix of CoM state references. Every row corresponds to the CoM state at a given time step.</p>
+<p>Size: \(n\times6\) Where \(n\) is the length of the trajectory. </p>
 
 </div>
 </div>
@@ -1058,7 +1064,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Positive definite matrix \(H_N\) with the coefficients of the quadratic objective of the MIQP for the walking MPC problem: </p>
+<p>Positive definite matrix \(\mathbf{H}_N\) with the coefficients of the quadratic objective of the MIQP for the walking MPC problem: </p>
 <p class="formulaDsp">
 \[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
 </p>
@@ -1066,7 +1072,7 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{R}_H^T \mathbf{S}_w \mathbf{R}_H + (\mathbf{R}_P - \mathbf{R}_B)^T \mathbf{N}_b (\mathbf{R}_P - \mathbf{R}_B) \]
 </p>
-<p> But this expression is missing the regularizing terms of the cost function. Current size is \(12N\times12N\) </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>But this expression is missing the regularizing terms of the cost function. Current size is \(12N\times12N\) </dd></dl>
 
 </div>
 </div>
@@ -1108,7 +1114,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Vector of lower bounds of the input vector \(\mathcal{X}\) </p>
+<p>Vector of lower bounds of the input vector \(\mathcal{X}\)</p>
+<p>Size: \([6\times1]\) </p>
 
 </div>
 </div>
@@ -1122,7 +1129,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Containts the state-dependent coefficients of the linear term of the objective function of the MIQP for the walking MPC problem.</p>
+<p>Contains the state-dependent coefficients of the linear term of the objective function of the MIQP for the walking MPC problem.</p>
 <p class="formulaDsp">
 \[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
 </p>
@@ -1172,7 +1179,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>\(N_b\) is a diagonal weighting matrix whose scalar weights help define the compromise between balance robustness and tracking performance. </p>
+<p>\(\mathbf{N}_b\) is a diagonal weighting matrix whose scalar weights help define the compromise between balance robustness and tracking performance. </p>
 
 </div>
 </div>
@@ -1209,7 +1216,9 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{P}_B = \left[\begin{array}{c} \mathbf{C}_B \mathbf{Q} \\ \vdots\\ \mathbf{C}_B \mathbf{Q}^N \end{array}\right] \]
 </p>
- 
+<p>Size: \([2N\times16]\)</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">_C_B</a>, <a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="afb83c4fddc4adba989506ccc9b62ff1e"></a><!-- doxytag: member="MIQPController::_P_H" ref="afb83c4fddc4adba989506ccc9b62ff1e" args="" -->
@@ -1231,7 +1240,9 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \begin{align*} \mathbf{P}_H = \left[\begin{array}{c} \mathbf{C}_H \mathbf{Q} \\ \vdots\\ \mathbf{C}_H \mathbf{Q}^N \end{array}\right] \end{align*}
 </p>
- 
+<p>Size: \([6N\times16]\)</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a323718c0eaf8c8a7e159ea7f1ef5b72c">_C_H</a>, <a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a8243f4111abb4ad6c331ac147a844118"></a><!-- doxytag: member="MIQPController::_P_P" ref="a8243f4111abb4ad6c331ac147a844118" args="" -->
@@ -1253,7 +1264,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \begin{align*} \mathbf{P}_P = \left[\begin{array}{c} \mathbf{C}_P \mathbf{Q} \\ \vdots\\ \mathbf{C}_P \mathbf{Q}^N \end{array}\right] \end{align*}
 </p>
- 
+<p>Size: \([2N\times16]\) </p>
+
 </div>
 </div>
 <a class="anchor" id="aed2ce53008e32e64e107398d85e75170"></a><!-- doxytag: member="MIQPController::_period" ref="aed2ce53008e32e64e107398d85e75170" args="" -->
@@ -1287,7 +1299,9 @@ Private Attributes</h2></td></tr>
  <p class="formulaDsp">
 \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} &amp; \mathbf{A_h}_{6\times6} \end{array}\right] \]
 </p>
- 
+<p>Size: \([16\times16]\)</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a388ed1c232c212e171276993b5cb3fec">_Ah</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a532459bb659a1cc39d449fdf3f81c63f"></a><!-- doxytag: member="MIQPController::_quadraticTermObjFunc" ref="a532459bb659a1cc39d449fdf3f81c63f" args="" -->
@@ -1322,7 +1336,9 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{R}_B = \left[\begin{array}{cccc} \mathbf{C}_B\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_B\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_B\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_B\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_B\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_B\mathbf{T} \end{array}\right] \]
 </p>
- 
+<p>Size: \([2N\times12N]\)</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">_C_B</a>, <a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a>, <a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a2207c17eb221166b1bc12fbca976035d"></a><!-- doxytag: member="MIQPController::_R_H" ref="a2207c17eb221166b1bc12fbca976035d" args="" -->
@@ -1342,9 +1358,11 @@ Private Attributes</h2></td></tr>
 </p>
 <p> Where: </p>
 <p class="formulaDsp">
-\[ \mathbf{R}_h = \left[\begin{array}{cccc} \mathbf{C}_H\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_H\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_H\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_H\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_H\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_H\mathbf{T} \end{array}\right] \]
+\[ \mathbf{R}_H = \left[\begin{array}{cccc} \mathbf{C}_H\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_H\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_H\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_H\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_H\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_H\mathbf{T} \end{array}\right] \]
 </p>
- 
+<p>Size: \([6N\times12N]\) </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a323718c0eaf8c8a7e159ea7f1ef5b72c">_C_H</a>, <a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a>, <a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a7cede44e7827c9b4b12f2549714f3adf"></a><!-- doxytag: member="MIQPController::_R_P" ref="a7cede44e7827c9b4b12f2549714f3adf" args="" -->
@@ -1362,11 +1380,12 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{P}_{k,N} = \mathbf{P}_p \mathbf{\xi}_k + \mathbf{R}_p \mathcal{X}_{k,N} \]
 </p>
-<p>Size: [2N * 12N] Where: </p>
+<p>Where: </p>
 <p class="formulaDsp">
-\[ \]
+\[ \mathbf{R}_P = \left[\begin{array}{cccc} \mathbf{C}_P\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_P\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_P\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_P\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_P\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_P\mathbf{T} \end{array}\right] \]
 </p>
- 
+<p>Size: \([2N\times12N]\) </p>
+
 </div>
 </div>
 <a class="anchor" id="a03735ecec3242cdfc9bf8a443c561724"></a><!-- doxytag: member="MIQPController::_robotModel" ref="a03735ecec3242cdfc9bf8a443c561724" args="" -->
@@ -1406,8 +1425,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>\(S_w\) is a \(6\times6\) diagonal weighting selection matrix, defining whether position, velocity and/or acceleration of the CoM are tracked in each of the two horizontal directions.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>For the moment this has been hardcoded! Put it in configuration file. </dd></dl>
+<p>\(\mathbf{S_w}\) is a \(6N\times6N\) diagonal weighting selection matrix, defining whether position, velocity and/or acceleration of the CoM are tracked in each of the two horizontal directions.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>For the moment this has been hardcoded to take into account only CoM velocity references. </dd></dl>
 
 </div>
 </div>
@@ -1428,6 +1447,7 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{T} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times2}\\ \mathbf{0}_{6\times10} &amp; \mathbf{B_h}_{6\times2} \end{array}\right] \]
 </p>
+<p>Size: \([16\times12]\) </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a9a989875871a898f0ad19b441a2c67ba">_Bh</a> </dd></dl>
 
 </div>
@@ -1442,7 +1462,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Vector of upper bounds of the input vector \(\mathcal{X}\) </p>
+<p>Vector of upper bounds of the input vector \(\mathcal{X}\)</p>
+<p>Size: \([6\times1]\) </p>
 
 </div>
 </div>
@@ -1482,7 +1503,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Solution \(\mathcal{X_{k,N}}\) of the MIQP problem </p>
+<p>Solution \(\mathcal{X}_{k,N}\) of the MIQP problem </p>
 
 </div>
 </div>
@@ -1496,6 +1517,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>State vector \(\xi_k\) of the MIQP problem:</p>
+<p class="formulaDsp">
+\[ \begin{array}{ccccccccc} [\mathbf{a} &amp; \mathbf{b} &amp; \mathbf{\alpha} &amp; \mathbf{\beta} &amp; \delta &amp; \gamma &amp; \mathbf{h} &amp; \dot{\mathbf{h}} &amp; \ddot{\mathbf{h}}] \end{array} \]
+</p>
+<p>Where \(\mathbf{a} \in \mathbb{R}^2\) are the upper bounds of the base of support (BoS), \(b \in \mathbb{R}^2\) are the lower bounds, \(\mathbf{\alpha} \in \mathbb{R}^2\) the rising edges of \(\mathbf{a}\), \(\mathbf{\beta} \in \mathbb{R}^2\) are the falling edges of \(\mathbf{b}\), \(\delta\) indicates the potential change from double support to single support, while \(\gamma\) indicates whether the robot is in single support (SS) or double support (DS). </p>
 
 </div>
 </div>
@@ -1523,7 +1549,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Thu Feb 23 2017 23:36:51 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Feb 24 2017 23:37:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

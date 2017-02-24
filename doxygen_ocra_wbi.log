@@ -448,16 +448,16 @@ Generating group/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-c
   parameter 'output'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:93: warning: The following parameters of MIQPController::setCOMStateRefInPreviewWindow(unsigned int k, Eigen::VectorXd &comStateRef) are not documented:
   parameter 'k'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:188: warning: explicit link request to 'xi' could not be resolved
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:168: warning: explicit link request to 'whichFoot' could not be resolved
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:174: warning: explicit link request to 'whichFoot' could not be resolved
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:159: warning: argument 'If' of command @param is not found in the argument list of MIQPState::isRobotInSS(FOOT &footInSS)
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:159: warning: The following parameters of MIQPState::isRobotInSS(FOOT &footInSS) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:183: warning: explicit link request to 'xi' could not be resolved
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:163: warning: explicit link request to 'whichFoot' could not be resolved
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:169: warning: explicit link request to 'whichFoot' could not be resolved
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:154: warning: argument 'If' of command @param is not found in the argument list of MIQPState::isRobotInSS(FOOT &footInSS)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:154: warning: The following parameters of MIQPState::isRobotInSS(FOOT &footInSS) are not documented:
   parameter 'footInSS'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:137: warning: explicit link request to 'a' could not be resolved
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:138: warning: explicit link request to 'b' could not be resolved
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:141: warning: explicit link request to 'a' could not be resolved
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:141: warning: explicit link request to 'b' could not be resolved
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:132: warning: explicit link request to 'a' could not be resolved
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:133: warning: explicit link request to 'b' could not be resolved
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:136: warning: explicit link request to 'a' could not be resolved
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:136: warning: explicit link request to 'b' could not be resolved
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef)
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: The following parameters of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef) are not documented:
   parameter 'threadRef'
@@ -546,6 +546,6 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Patching output file 1/1
-symbol cache used 836/65536 hits=45913 misses=836
-lookup cache used 1089/65536 hits=3620 misses=1112
+symbol cache used 836/65536 hits=45976 misses=836
+lookup cache used 1089/65536 hits=3648 misses=1112
 finished...

@@ -203,6 +203,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds \(A_h\).</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">_Ah</a> </dd></dl>
 
 </div>
 </div>
@@ -219,6 +221,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Actually builds the matrix A referred to in <a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow()</a></p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow</a> </dd></dl>
 
 </div>
 </div>
@@ -235,6 +239,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Builds \(B_h\) (<a class="el" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a>) called by the constructor of this class.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a> </dd></dl>
 
 </div>
 </div>
@@ -251,6 +257,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Actually builds the matrix B referred to in <a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow()</a></p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow</a> </dd></dl>
 
 </div>
 </div>
@@ -267,6 +275,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Actually builds the vector \(\bar{\mathbf{f}}_c\) referred to in <a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow()</a> </p>
 
 </div>
 </div>
@@ -283,7 +292,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Builds matrix Q (<a class="el" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">_Q</a>) from the preview model:</p>
+<p class="formulaDsp">
+\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="addee397c47be26fd9eebbe8374c3cc30"></a><!-- doxytag: member="MIQPLinearConstraints::buildMatrixT" ref="addee397c47be26fd9eebbe8374c3cc30" args="()" -->
@@ -299,7 +312,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Builds matrix T (<a class="el" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">_T</a>) from the preview model:</p>
+<p class="formulaDsp">
+\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a2f41d99a16293718b94d17ce9ee5b59d"></a><!-- doxytag: member="MIQPLinearConstraints::buildShapeAndAdmissibilityInPreviewWindow" ref="a2f41d99a16293718b94d17ce9ee5b59d" args="()" -->
@@ -315,6 +332,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Basically builds matrix \(\mathbf{A}\) (<a class="el" href="classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180">_AShapeAdmiss</a>) in the partial expression for the MIQP linear constraints, containing only shape and admissibility constraints, such that: </p>
+<p class="formulaDsp">
+\[ \mathbf{A} \mathcal{X}_{k,N} \leq \bar{\mathbf{f}}_c - \mathbf{B} \xi_k \]
+</p>
+<p class="formulaDsp">
+\[ \begin{array}{cccccc} A_{\text{cr}} Q^0 T &amp; 0 &amp; 0 &amp; 0 &amp; \hdots &amp; 0\\ (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}}Q^0 T &amp; 0 &amp; 0 &amp; \hdots &amp; 0 \\ (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T &amp; (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}} Q^0 T &amp; 0 &amp; \hdots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; &amp; &amp; \vdots \\ (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T &amp; (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T &amp; \hdots &amp; \hdots &amp; \hdots &amp; A_{\text{cr}}Q^0T \\ \end{array} \]
+</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e">buildAShapeAdmiss()</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>When walking constraints are added, matrix _A will be a stack of the two </dd></dl>
 
 </div>
 </div>
@@ -332,6 +358,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Retrieves the constraints matrix \(\mathbf{A}\). Before passing a matrix to copy <a class="el" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">_A</a> allocate the space for A by calling <a class="el" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints()</a> to know the number of rows, while SIZE_INPUT_VECTOR * SIZE_PREVIEW_WINDOW will be the number of columns.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Reference to matrix where the global constraints matrix _A will be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -365,6 +398,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Returns the total number of constraints.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>_nConstraints </dd></dl>
 
 </div>
 </div>
@@ -397,6 +432,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Stacks matrices \(C_{i}\) (Ci) from the shape and admissiblity constraints to set variable <a class="el" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">_Acl</a> </p>
 
 </div>
 </div>
@@ -413,6 +449,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Stacks matrices \(C_{i+1}\) (Cii) from the shape and admissibility constraints to set variable <a class="el" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">_Acr</a> </p>
 
 </div>
 </div>
@@ -430,6 +467,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Updates the state-dependent RHS of the inequality constraints</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">xi_k</td><td>Current state. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -496,7 +540,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>State matrix \(A_h\) from the CoM jerk integration scheme.</p>
+<p class="formulaDsp">
+\[ \mathbf{h}_{k+1} = \mathbf{A}_h \mathbf{h}_k + \mathbf{B}_h \mathbf{u}_k \]
+</p>
+<p>It is a constant matrix of size \(6\times6\) equal to: </p>
+<p class="formulaDsp">
+\[ \mathbf{A_h} = \left[ \begin{array}{ccc} \mathbf{I}_2 &amp; \delta t \mathbf{I}_2 &amp; \frac{\delta t^2}{2} \mathbf{I}_2 \\ 0 &amp; \mathbf{I}_2 &amp; \delta t \mathbf{I}_2 \\ 0 &amp; 0 &amp; \mathbf{I}_2 \end{array} \right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="a7ff7b3584cf9ff3e2124d80bd0684180"></a><!-- doxytag: member="MIQPLinearConstraints::_AShapeAdmiss" ref="a7ff7b3584cf9ff3e2124d80bd0684180" args="" -->
@@ -522,7 +574,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p>Input matrix \(\mathbf{B}_h\) from the linear state process of the CoMstate \(\hat{\mathbf{h}}\). It is constant of size \(6\times2\) and equal to: </p>
+<p class="formulaDsp">
+\[ \mathbf{B_h} = \left[ \begin{array}{c} \frac{\delta^3}{6}\mathbf{I}_2 \\ \frac{\delta t^2}{2} \mathbf{I}_2 \\ \delta t \mathbf{I}_2 \end{array} \right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="ab3ea8be40c22fa7d8035c7b5c5c1010c"></a><!-- doxytag: member="MIQPLinearConstraints::_BShapeAdmiss" ref="ab3ea8be40c22fa7d8035c7b5c5c1010c" args="" -->
@@ -548,6 +604,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Period in milliseconds </p>
 
 </div>
 </div>
@@ -574,6 +631,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Length of preview window </p>
 
 </div>
 </div>
@@ -587,6 +645,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Total number of constraints </p>
 
 </div>
 </div>
@@ -600,7 +659,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
+<p class="formulaDsp">
+\[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} &amp; \mathbf{A_h}_{6\times6} \end{array}\right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="ac8df74075c393100f5bddcb371503530"></a><!-- doxytag: member="MIQPLinearConstraints::_rhs" ref="ac8df74075c393100f5bddcb371503530" args="" -->
@@ -639,6 +701,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Matrix T in \( \underset{x}{\text{min}}\; x^TQx^T + c^Tx \)</p>
+<p class="formulaDsp">
+\[ \mathbf{T} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times2}\\ \mathbf{0}_{6\times10} &amp; \mathbf{B_h}_{6\times2} \end{array}\right] \]
+</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a> </dd></dl>
 
 </div>
 </div>
@@ -666,7 +733,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a>      </li>
 
-    <li class="footer">Generated on Thu Feb 23 2017 23:36:51 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Feb 24 2017 23:37:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
