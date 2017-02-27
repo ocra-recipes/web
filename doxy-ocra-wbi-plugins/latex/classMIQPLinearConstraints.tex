@@ -8,11 +8,9 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classMIQPLinearConstraints_a09f79be23a0269104add07a52c52f90f}{\-M\-I\-Q\-P\-Linear\-Constraints} (unsigned int dt, unsigned int \-N)
+\hyperlink{classMIQPLinearConstraints_a882b9a928fc7a89a4aa948b33bed72d1}{\-M\-I\-Q\-P\-Linear\-Constraints} (unsigned int dt, unsigned int \-N, bool add\-Shape\-Ctrs=true, bool add\-Admissibility\-Ctrs=true, bool add\-Walking\-Ctrs=false)
 \item 
 virtual \hyperlink{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints} ()
-\item 
-void \hyperlink{classMIQPLinearConstraints_aea229cfd938c50c5d50ed68d18d119ab}{initialize} ()
 \item 
 void \hyperlink{classMIQPLinearConstraints_aad3232078ef93e2105a1c619c510f16a}{update\-R\-H\-S} (\-Eigen\-::\-Vector\-Xd xi\-\_\-k)
 \item 
@@ -75,6 +73,12 @@ $<$ \hyperlink{classAdmissibilityConstraints}{\-Admissibility\-Constraints} $>$ 
 \item 
 \-Eigen\-::\-Matrix\-Xd \hyperlink{classMIQPLinearConstraints_aacba15c9dfc1c8f88e253a4f75e422fd}{\-\_\-\-Ah}
 \item 
+bool \hyperlink{classMIQPLinearConstraints_ae8df8b83e80484853b624f6693ed2725}{\-\_\-add\-Shape\-Ctrs}
+\item 
+bool \hyperlink{classMIQPLinearConstraints_a155ab4ad5ab14b793611c12473ce9297}{\-\_\-add\-Admissibility\-Ctrs}
+\item 
+bool \hyperlink{classMIQPLinearConstraints_ad1363c7fde3dd4f20adc92a7e1865579}{\-\_\-add\-Walking\-Ctrs}
+\item 
 unsigned int \hyperlink{classMIQPLinearConstraints_a403b0a1f684bda20236a759bd72950f2}{\-\_\-dt}
 \item 
 unsigned int \hyperlink{classMIQPLinearConstraints_a1edaf84d613dde3f86fd9e78aa14a077}{\-\_\-\-N}
@@ -84,14 +88,17 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classMIQPLinearConstraints_a09f79be23a0269104add07a52c52f90f}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\hypertarget{classMIQPLinearConstraints_a882b9a928fc7a89a4aa948b33bed72d1}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-M\-I\-Q\-P\-Linear\-Constraints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-M\-I\-Q\-P\-Linear\-Constraints} (
 \begin{DoxyParamCaption}
 \item[{unsigned int}]{dt, }
-\item[{unsigned int}]{\-N}
+\item[{unsigned int}]{\-N, }
+\item[{bool}]{add\-Shape\-Ctrs = {\ttfamily true}, }
+\item[{bool}]{add\-Admissibility\-Ctrs = {\ttfamily true}, }
+\item[{bool}]{add\-Walking\-Ctrs = {\ttfamily false}}
 \end{DoxyParamCaption}
-)}}\label{classMIQPLinearConstraints_a09f79be23a0269104add07a52c52f90f}
+)}}\label{classMIQPLinearConstraints_a882b9a928fc7a89a4aa948b33bed72d1}
 \begin{DoxyRefDesc}{\-Todo}
 \item[\hyperlink{todo__todo000004}{\-Todo}]\-Once \-I add walking constraints this will change to include the rows added by walking constraints \end{DoxyRefDesc}
 \hypertarget{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!$\sim$\-M\-I\-Q\-P\-Linear\-Constraints@{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints}}
@@ -226,13 +233,6 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 \begin{DoxyReturn}{\-Returns}
 \-\_\-n\-Constraints 
 \end{DoxyReturn}
-\hypertarget{classMIQPLinearConstraints_aea229cfd938c50c5d50ed68d18d119ab}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!initialize@{initialize}}
-\index{initialize@{initialize}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
-\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::initialize} (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{classMIQPLinearConstraints_aea229cfd938c50c5d50ed68d18d119ab}
 \hypertarget{classMIQPLinearConstraints_a2985d200d8e6baba2df17abfeaca8882}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!set\-Matrix\-Acl@{set\-Matrix\-Acl}}
 \index{set\-Matrix\-Acl@{set\-Matrix\-Acl}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{set\-Matrix\-Acl}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::set\-Matrix\-Acl} (
@@ -273,7 +273,16 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 \hypertarget{classMIQPLinearConstraints_a26250a3f878cdacc0fa0c5ccf04d0bed}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-Acr@{\-\_\-\-Acr}}
 \index{\-\_\-\-Acr@{\-\_\-\-Acr}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-Acr}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Acr}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a26250a3f878cdacc0fa0c5ccf04d0bed}
-\hypertarget{classMIQPLinearConstraints_a1ac00fe6aca254b4dd8568e199bd20a4}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-admissibility\-Cnstr@{\-\_\-admissibility\-Cnstr}}
+\hypertarget{classMIQPLinearConstraints_a155ab4ad5ab14b793611c12473ce9297}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-add\-Admissibility\-Ctrs@{\-\_\-add\-Admissibility\-Ctrs}}
+\index{\-\_\-add\-Admissibility\-Ctrs@{\-\_\-add\-Admissibility\-Ctrs}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\subsubsection[{\-\_\-add\-Admissibility\-Ctrs}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-add\-Admissibility\-Ctrs}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a155ab4ad5ab14b793611c12473ce9297}
+\-Boolean to add admissibility constraints. \hypertarget{classMIQPLinearConstraints_ae8df8b83e80484853b624f6693ed2725}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-add\-Shape\-Ctrs@{\-\_\-add\-Shape\-Ctrs}}
+\index{\-\_\-add\-Shape\-Ctrs@{\-\_\-add\-Shape\-Ctrs}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\subsubsection[{\-\_\-add\-Shape\-Ctrs}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-add\-Shape\-Ctrs}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_ae8df8b83e80484853b624f6693ed2725}
+\-Boolean too add shape constraints. \hypertarget{classMIQPLinearConstraints_ad1363c7fde3dd4f20adc92a7e1865579}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-add\-Walking\-Ctrs@{\-\_\-add\-Walking\-Ctrs}}
+\index{\-\_\-add\-Walking\-Ctrs@{\-\_\-add\-Walking\-Ctrs}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\subsubsection[{\-\_\-add\-Walking\-Ctrs}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-add\-Walking\-Ctrs}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_ad1363c7fde3dd4f20adc92a7e1865579}
+\-Boolean to add walking constraints. \hypertarget{classMIQPLinearConstraints_a1ac00fe6aca254b4dd8568e199bd20a4}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-admissibility\-Cnstr@{\-\_\-admissibility\-Cnstr}}
 \index{\-\_\-admissibility\-Cnstr@{\-\_\-admissibility\-Cnstr}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-admissibility\-Cnstr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-Admissibility\-Constraints}$>$ {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-admissibility\-Cnstr}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a1ac00fe6aca254b4dd8568e199bd20a4}
 \hypertarget{classMIQPLinearConstraints_aacba15c9dfc1c8f88e253a4f75e422fd}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-Ah@{\-\_\-\-Ah}}

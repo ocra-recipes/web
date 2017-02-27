@@ -151,139 +151,154 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00108"></a>00108     <span class="comment">// FIXME: Deprecate</span>
 <a name="l00113"></a>00113 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#ae61af28f2062b4372ce9c5cb37ebb161">setQuadraticPartObjectiveFunction</a>();
 <a name="l00114"></a>00114 
-<a name="l00119"></a>00119     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a65b06fe436dc1683ac56afcbed2e4cfe">setConstraintsMatrix</a>();
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121     <span class="comment">// FIXME: Deprecate</span>
-<a name="l00127"></a>00127 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a3f15855fdab618e9f3b51c2b7df52b4e">setVariablesTypes</a>(<span class="keywordtype">char</span> * variablesTypes);
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129     <span class="comment">// FIXME: Deprecate</span>
-<a name="l00134"></a>00134 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a1bb6f0a6b520aa1ee18fe59c760f8aa8">setObjectiveFunction</a>();
-<a name="l00135"></a>00135 
-<a name="l00136"></a>00136     <span class="comment">// FIXME: Deprecate</span>
-<a name="l00143"></a>00143 <span class="comment"></span>    GRBVar* <a class="code" href="classMIQPController.html#a8a4200f8a98ec13b93dfab56eb5cc423">addVariablesToModel</a>();
-<a name="l00144"></a>00144 
-<a name="l00148"></a>00148     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a2caf42a5b5dcd63d67de57cfbb93c653">setLowerAndUpperBounds</a>();
-<a name="l00149"></a>00149 
-<a name="l00160"></a>00160     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector</a>();
-<a name="l00161"></a>00161 
-<a name="l00169"></a>00169     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#aea16b6eac86da5330c7ffbfdb9c655f5">buildAh</a>(<span class="keywordtype">int</span> dt, Eigen::MatrixXd &amp;output);
-<a name="l00170"></a>00170 
-<a name="l00178"></a>00178     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#afc2df705b1238e2503e35f07e2f8270a">buildBh</a>(<span class="keywordtype">int</span> dt, Eigen::MatrixXd &amp;output);
-<a name="l00179"></a>00179 
-<a name="l00186"></a>00186     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#af492dfbff2e211ff1c1351c2193fe669">buildQ</a>(Eigen::MatrixXd &amp;output);
-<a name="l00187"></a>00187 
-<a name="l00194"></a>00194     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a52dc10cbc0941a6e4f4e6ffd462fffce">buildT</a>(Eigen::MatrixXd &amp;output);
-<a name="l00195"></a>00195 
-<a name="l00202"></a>00202     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#aa58686fc2883ef2d81d3e6d3554b338d">buildC_H</a>(Eigen::MatrixXd &amp;output);
-<a name="l00203"></a>00203 
-<a name="l00210"></a>00210     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#ac2a454e236bdb3a13b72b6930329f231">buildC_P</a>(Eigen::MatrixXd &amp;output);
-<a name="l00211"></a>00211 
-<a name="l00218"></a>00218     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a1be33f8ebb313f7ecddd2aa6af4fa62c">buildC_B</a>(Eigen::MatrixXd &amp;output);
-<a name="l00219"></a>00219 
-<a name="l00226"></a>00226     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#ab093df4b1c73c02a97609093fd037345">buildH_N</a>(Eigen::MatrixXd &amp;output);
-<a name="l00227"></a>00227     
-<a name="l00228"></a>00228     
-<a name="l00235"></a>00235     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a3860ad55d43b442069e806764ce48fc4">buildNb</a>(Eigen::MatrixXd &amp;output);
-<a name="l00236"></a>00236     
-<a name="l00237"></a>00237 
-<a name="l00244"></a>00244     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a9dfdebb8c769d380617d47b513d1a2b1">buildSw</a>(Eigen::MatrixXd &amp;output);
-<a name="l00245"></a>00245 
-<a name="l00246"></a>00246     
-<a name="l00259"></a>00259     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#aad69912c4251ecb0d1a052131d17a96e">buildPreviewStateMatrix</a>(Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;P);
-<a name="l00260"></a>00260 
-<a name="l00261"></a>00261     
-<a name="l00275"></a>00275     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#ac170171511569c7d2b9d76ebee30da47">buildPreviewInputMatrix</a>(Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R);
-<a name="l00276"></a>00276 
-<a name="l00277"></a>00277 <span class="keyword">private</span>:
-<a name="l00278"></a>00278     <span class="comment">// MARK: - PRIVATE VARIABLES</span>
-<a name="l00279"></a>00279     <span class="comment">/*</span>
-<a name="l00280"></a>00280 <span class="comment">     * Pointer to robot model which will be used by MIQPController::updateStateVector() to update the state vector by retrieving robot information set up by the hosting client (`walking-client`) and coordinated by the controller server.</span>
-<a name="l00281"></a>00281 <span class="comment">     */</span>
-<a name="l00282"></a><a class="code" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">00282</a>     ocra::Model::Ptr <a class="code" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">_robotModel</a>;
-<a name="l00283"></a>00283 
-<a name="l00287"></a><a class="code" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">00287</a>     <a class="code" href="structMIQPParameters.html">MIQPParameters</a> <a class="code" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">_miqpParams</a>;
-<a name="l00288"></a>00288 
-<a name="l00294"></a><a class="code" href="classMIQPController.html#ab74859a8dd208f3fc7608391d318d469">00294</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#ab74859a8dd208f3fc7608391d318d469">_comStateRef</a>;
-<a name="l00295"></a>00295 
-<a name="l00297"></a><a class="code" href="classMIQPController.html#aed2ce53008e32e64e107398d85e75170">00297</a>     <span class="keywordtype">int</span> <a class="code" href="classMIQPController.html#aed2ce53008e32e64e107398d85e75170">_period</a>;
+<a name="l00115"></a>00115     <span class="comment">// FIXME: Deprecate</span>
+<a name="l00121"></a>00121 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a3f15855fdab618e9f3b51c2b7df52b4e">setVariablesTypes</a>(<span class="keywordtype">char</span> * variablesTypes);
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123     <span class="comment">// FIXME: Deprecate</span>
+<a name="l00128"></a>00128 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a1bb6f0a6b520aa1ee18fe59c760f8aa8">setObjectiveFunction</a>();
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130     <span class="comment">// FIXME: Deprecate</span>
+<a name="l00137"></a>00137 <span class="comment"></span>    GRBVar* <a class="code" href="classMIQPController.html#a8a4200f8a98ec13b93dfab56eb5cc423">addVariablesToModel</a>();
+<a name="l00138"></a>00138 
+<a name="l00142"></a>00142     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a2caf42a5b5dcd63d67de57cfbb93c653">setLowerAndUpperBounds</a>();
+<a name="l00143"></a>00143 
+<a name="l00154"></a>00154     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector</a>();
+<a name="l00155"></a>00155 
+<a name="l00163"></a>00163     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#aea16b6eac86da5330c7ffbfdb9c655f5">buildAh</a>(<span class="keywordtype">int</span> dt, Eigen::MatrixXd &amp;output);
+<a name="l00164"></a>00164 
+<a name="l00172"></a>00172     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#afc2df705b1238e2503e35f07e2f8270a">buildBh</a>(<span class="keywordtype">int</span> dt, Eigen::MatrixXd &amp;output);
+<a name="l00173"></a>00173 
+<a name="l00180"></a>00180     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#af492dfbff2e211ff1c1351c2193fe669">buildQ</a>(Eigen::MatrixXd &amp;output);
+<a name="l00181"></a>00181 
+<a name="l00188"></a>00188     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a52dc10cbc0941a6e4f4e6ffd462fffce">buildT</a>(Eigen::MatrixXd &amp;output);
+<a name="l00189"></a>00189 
+<a name="l00196"></a>00196     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#aa58686fc2883ef2d81d3e6d3554b338d">buildC_H</a>(Eigen::MatrixXd &amp;output);
+<a name="l00197"></a>00197 
+<a name="l00204"></a>00204     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#ac2a454e236bdb3a13b72b6930329f231">buildC_P</a>(Eigen::MatrixXd &amp;output);
+<a name="l00205"></a>00205 
+<a name="l00212"></a>00212     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a1be33f8ebb313f7ecddd2aa6af4fa62c">buildC_B</a>(Eigen::MatrixXd &amp;output);
+<a name="l00213"></a>00213 
+<a name="l00220"></a>00220     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#ab093df4b1c73c02a97609093fd037345">buildH_N</a>(Eigen::MatrixXd &amp;output);
+<a name="l00221"></a>00221     
+<a name="l00222"></a>00222     
+<a name="l00229"></a>00229     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a3860ad55d43b442069e806764ce48fc4">buildNb</a>(Eigen::MatrixXd &amp;output);
+<a name="l00230"></a>00230     
+<a name="l00237"></a>00237     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a959d9957a931315d3f1cf95ad5c07a65">buildNx</a>(Eigen::MatrixXd &amp;output);
+<a name="l00238"></a>00238     
+<a name="l00245"></a>00245     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a9dfdebb8c769d380617d47b513d1a2b1">buildSw</a>(Eigen::MatrixXd &amp;output);
+<a name="l00246"></a>00246 
+<a name="l00247"></a>00247     
+<a name="l00260"></a>00260     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#aad69912c4251ecb0d1a052131d17a96e">buildPreviewStateMatrix</a>(Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;P);
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262     
+<a name="l00276"></a>00276     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#ac170171511569c7d2b9d76ebee30da47">buildPreviewInputMatrix</a>(Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R);
+<a name="l00277"></a>00277     
+<a name="l00284"></a>00284     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a85b7dc746b088c0669d715ee17b02865">buildEqualityConstraintsMatrices</a>(Eigen::MatrixXd&amp; Aeq, Eigen::VectorXd&amp; Beq, Eigen::VectorXd &amp;x_k);
+<a name="l00285"></a>00285 
+<a name="l00291"></a>00291     <span class="keywordtype">void</span> <a class="code" href="classMIQPController.html#a35df037b7a226f425a2a949b14d860d1">updateEqualityConstraints</a>(Eigen::VectorXd &amp;x_k);
+<a name="l00292"></a>00292 <span class="keyword">private</span>:
+<a name="l00293"></a>00293     <span class="comment">// MARK: - PRIVATE VARIABLES</span>
+<a name="l00294"></a>00294     <span class="comment">/*</span>
+<a name="l00295"></a>00295 <span class="comment">     * Pointer to robot model which will be used by MIQPController::updateStateVector() to update the state vector by retrieving robot information set up by the hosting client (`walking-client`) and coordinated by the controller server.</span>
+<a name="l00296"></a>00296 <span class="comment">     */</span>
+<a name="l00297"></a><a class="code" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">00297</a>     ocra::Model::Ptr <a class="code" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">_robotModel</a>;
 <a name="l00298"></a>00298 
-<a name="l00300"></a><a class="code" href="classMIQPController.html#aec530057d97a52549fdc3823a48f73cf">00300</a>     GRBEnv * <a class="code" href="classMIQPController.html#aec530057d97a52549fdc3823a48f73cf">_env</a>;
-<a name="l00301"></a>00301 
-<a name="l00306"></a><a class="code" href="classMIQPController.html#a2bafe24633a7f8c9d6211cde12b29a90">00306</a>     GRBModel * <a class="code" href="classMIQPController.html#a2bafe24633a7f8c9d6211cde12b29a90">_model</a>;
-<a name="l00307"></a>00307 
-<a name="l00308"></a>00308     <span class="comment">// FIXME: Deprecate. As this is created by eigen-gurobi as well</span>
-<a name="l00313"></a><a class="code" href="classMIQPController.html#a4bac1e68bd433553a7c00677bdc496dd">00313</a> <span class="comment"></span>    GRBQuadExpr <a class="code" href="classMIQPController.html#a4bac1e68bd433553a7c00677bdc496dd">_obj</a>;
-<a name="l00314"></a>00314 
-<a name="l00315"></a>00315     <span class="comment">// FIXME: Deprecate</span>
-<a name="l00316"></a><a class="code" href="classMIQPController.html#a1143bf95d61a348b08010c909b190029">00316</a>     GRBVar * <a class="code" href="classMIQPController.html#a1143bf95d61a348b08010c909b190029">_vars</a>;
-<a name="l00317"></a>00317 
-<a name="l00334"></a><a class="code" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">00334</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a>;
-<a name="l00335"></a>00335 
-<a name="l00336"></a>00336     <span class="comment">/*</span>
-<a name="l00337"></a>00337 <span class="comment">     * @note Deprecate</span>
-<a name="l00338"></a>00338 <span class="comment">     */</span>
-<a name="l00339"></a><a class="code" href="classMIQPController.html#a532459bb659a1cc39d449fdf3f81c63f">00339</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a532459bb659a1cc39d449fdf3f81c63f">_quadraticTermObjFunc</a>;
-<a name="l00340"></a>00340 
-<a name="l00345"></a><a class="code" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">00345</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a>;
-<a name="l00346"></a>00346 
-<a name="l00351"></a><a class="code" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">00351</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a>;
-<a name="l00352"></a>00352 
-<a name="l00353"></a>00353     <span class="comment">// TODO: Document</span>
-<a name="l00354"></a><a class="code" href="classMIQPController.html#a2c3ddd93fd843a3a4650314b47436be7">00354</a>     std::string <a class="code" href="classMIQPController.html#a2c3ddd93fd843a3a4650314b47436be7">_variablesNames</a>[<a class="code" href="MIQPController_8h.html#aa2f26540ce870ca91503bb6746a52e69">INPUT_VECTOR_SIZE</a>];
+<a name="l00302"></a><a class="code" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">00302</a>     <a class="code" href="structMIQPParameters.html">MIQPParameters</a> <a class="code" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">_miqpParams</a>;
+<a name="l00303"></a>00303 
+<a name="l00309"></a><a class="code" href="classMIQPController.html#ab74859a8dd208f3fc7608391d318d469">00309</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#ab74859a8dd208f3fc7608391d318d469">_comStateRef</a>;
+<a name="l00310"></a>00310 
+<a name="l00312"></a><a class="code" href="classMIQPController.html#aed2ce53008e32e64e107398d85e75170">00312</a>     <span class="keywordtype">int</span> <a class="code" href="classMIQPController.html#aed2ce53008e32e64e107398d85e75170">_period</a>;
+<a name="l00313"></a>00313 
+<a name="l00315"></a><a class="code" href="classMIQPController.html#aec530057d97a52549fdc3823a48f73cf">00315</a>     GRBEnv * <a class="code" href="classMIQPController.html#aec530057d97a52549fdc3823a48f73cf">_env</a>;
+<a name="l00316"></a>00316 
+<a name="l00321"></a><a class="code" href="classMIQPController.html#a2bafe24633a7f8c9d6211cde12b29a90">00321</a>     GRBModel * <a class="code" href="classMIQPController.html#a2bafe24633a7f8c9d6211cde12b29a90">_model</a>;
+<a name="l00322"></a>00322 
+<a name="l00323"></a>00323     <span class="comment">// FIXME: Deprecate. As this is created by eigen-gurobi as well</span>
+<a name="l00328"></a><a class="code" href="classMIQPController.html#a4bac1e68bd433553a7c00677bdc496dd">00328</a> <span class="comment"></span>    GRBQuadExpr <a class="code" href="classMIQPController.html#a4bac1e68bd433553a7c00677bdc496dd">_obj</a>;
+<a name="l00329"></a>00329 
+<a name="l00330"></a>00330     <span class="comment">// FIXME: Deprecate</span>
+<a name="l00331"></a><a class="code" href="classMIQPController.html#a1143bf95d61a348b08010c909b190029">00331</a>     GRBVar * <a class="code" href="classMIQPController.html#a1143bf95d61a348b08010c909b190029">_vars</a>;
+<a name="l00332"></a>00332 
+<a name="l00349"></a><a class="code" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">00349</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a>;
+<a name="l00350"></a>00350 
+<a name="l00351"></a>00351     <span class="comment">/*</span>
+<a name="l00352"></a>00352 <span class="comment">     * @note Deprecate</span>
+<a name="l00353"></a>00353 <span class="comment">     */</span>
+<a name="l00354"></a><a class="code" href="classMIQPController.html#a532459bb659a1cc39d449fdf3f81c63f">00354</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a532459bb659a1cc39d449fdf3f81c63f">_quadraticTermObjFunc</a>;
 <a name="l00355"></a>00355 
-<a name="l00369"></a><a class="code" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">00369</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">_xi_k</a>;
+<a name="l00360"></a><a class="code" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">00360</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a>;
+<a name="l00361"></a>00361 
+<a name="l00366"></a><a class="code" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">00366</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a>;
+<a name="l00367"></a>00367 
+<a name="l00368"></a>00368     <span class="comment">// TODO: Document</span>
+<a name="l00369"></a><a class="code" href="classMIQPController.html#a2c3ddd93fd843a3a4650314b47436be7">00369</a>     std::string <a class="code" href="classMIQPController.html#a2c3ddd93fd843a3a4650314b47436be7">_variablesNames</a>[<a class="code" href="MIQPController_8h.html#aa2f26540ce870ca91503bb6746a52e69">INPUT_VECTOR_SIZE</a>];
 <a name="l00370"></a>00370 
-<a name="l00373"></a><a class="code" href="classMIQPController.html#a1fdfcba2c7b6422ac8d3b0b6095d7546">00373</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a1fdfcba2c7b6422ac8d3b0b6095d7546">_X_kn</a>;
-<a name="l00374"></a>00374 
-<a name="l00393"></a><a class="code" href="classMIQPController.html#a388ed1c232c212e171276993b5cb3fec">00393</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a388ed1c232c212e171276993b5cb3fec">_Ah</a>;
-<a name="l00394"></a>00394 
-<a name="l00414"></a><a class="code" href="classMIQPController.html#a9a989875871a898f0ad19b441a2c67ba">00414</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a9a989875871a898f0ad19b441a2c67ba">_Bh</a>;
-<a name="l00415"></a>00415 
-<a name="l00432"></a><a class="code" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">00432</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a>;
-<a name="l00433"></a>00433 
-<a name="l00452"></a><a class="code" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">00452</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a>;
-<a name="l00453"></a>00453 
-<a name="l00473"></a><a class="code" href="classMIQPController.html#a323718c0eaf8c8a7e159ea7f1ef5b72c">00473</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a323718c0eaf8c8a7e159ea7f1ef5b72c">_C_H</a>;
-<a name="l00474"></a>00474 
-<a name="l00494"></a><a class="code" href="classMIQPController.html#a17cf6f8279cf6b2ce333feb9c8fc5a5d">00494</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a17cf6f8279cf6b2ce333feb9c8fc5a5d">_C_P</a>;
-<a name="l00495"></a>00495 
-<a name="l00516"></a><a class="code" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">00516</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">_C_B</a>;
-<a name="l00517"></a>00517 
-<a name="l00538"></a><a class="code" href="classMIQPController.html#afb83c4fddc4adba989506ccc9b62ff1e">00538</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#afb83c4fddc4adba989506ccc9b62ff1e">_P_H</a>;
-<a name="l00539"></a>00539 
-<a name="l00558"></a><a class="code" href="classMIQPController.html#a8243f4111abb4ad6c331ac147a844118">00558</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a8243f4111abb4ad6c331ac147a844118">_P_P</a>;
-<a name="l00559"></a>00559 
-<a name="l00581"></a><a class="code" href="classMIQPController.html#a848852d659dff4a566a8dca57819587d">00581</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a848852d659dff4a566a8dca57819587d">_P_B</a>;
-<a name="l00582"></a>00582 
-<a name="l00603"></a><a class="code" href="classMIQPController.html#a2207c17eb221166b1bc12fbca976035d">00603</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a2207c17eb221166b1bc12fbca976035d">_R_H</a>;
-<a name="l00604"></a>00604 
-<a name="l00625"></a><a class="code" href="classMIQPController.html#a7cede44e7827c9b4b12f2549714f3adf">00625</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a7cede44e7827c9b4b12f2549714f3adf">_R_P</a>;
-<a name="l00626"></a>00626 
-<a name="l00650"></a><a class="code" href="classMIQPController.html#a69fbc25a2e2f2392fe0f92c5811c12dd">00650</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a69fbc25a2e2f2392fe0f92c5811c12dd">_R_B</a>;
-<a name="l00651"></a>00651 
-<a name="l00658"></a><a class="code" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">00658</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">_Sw</a>;
-<a name="l00659"></a>00659 
-<a name="l00663"></a><a class="code" href="classMIQPController.html#aaed002a2578a0f83c4ee59516a793f98">00663</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#aaed002a2578a0f83c4ee59516a793f98">_Nb</a>;
-<a name="l00664"></a>00664 
-<a name="l00679"></a><a class="code" href="classMIQPController.html#ab4b99d844add54fa7ad6ca6b80cab089">00679</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#ab4b99d844add54fa7ad6ca6b80cab089">_H_N</a>;
-<a name="l00680"></a>00680 
-<a name="l00681"></a>00681 
-<a name="l00689"></a><a class="code" href="classMIQPController.html#a7678fd8e1c08986d7ae0dc1a884040e1">00689</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a7678fd8e1c08986d7ae0dc1a884040e1">_Aineq</a>;
-<a name="l00690"></a>00690 
-<a name="l00698"></a><a class="code" href="classMIQPController.html#a02d441467a51e81e969163f096d3798a">00698</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a02d441467a51e81e969163f096d3798a">_Bineq</a>;
-<a name="l00699"></a>00699 
-<a name="l00701"></a><a class="code" href="classMIQPController.html#a6d15db521a6b9c4e0b641709fef77373">00701</a>     Eigen::GurobiDense <a class="code" href="classMIQPController.html#a6d15db521a6b9c4e0b641709fef77373">_eigGurobi</a>;
+<a name="l00384"></a><a class="code" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">00384</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">_xi_k</a>;
+<a name="l00385"></a>00385 
+<a name="l00388"></a><a class="code" href="classMIQPController.html#a1fdfcba2c7b6422ac8d3b0b6095d7546">00388</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a1fdfcba2c7b6422ac8d3b0b6095d7546">_X_kn</a>;
+<a name="l00389"></a>00389 
+<a name="l00408"></a><a class="code" href="classMIQPController.html#a388ed1c232c212e171276993b5cb3fec">00408</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a388ed1c232c212e171276993b5cb3fec">_Ah</a>;
+<a name="l00409"></a>00409 
+<a name="l00429"></a><a class="code" href="classMIQPController.html#a9a989875871a898f0ad19b441a2c67ba">00429</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a9a989875871a898f0ad19b441a2c67ba">_Bh</a>;
+<a name="l00430"></a>00430 
+<a name="l00447"></a><a class="code" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">00447</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a>;
+<a name="l00448"></a>00448 
+<a name="l00467"></a><a class="code" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">00467</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a>;
+<a name="l00468"></a>00468 
+<a name="l00488"></a><a class="code" href="classMIQPController.html#a323718c0eaf8c8a7e159ea7f1ef5b72c">00488</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a323718c0eaf8c8a7e159ea7f1ef5b72c">_C_H</a>;
+<a name="l00489"></a>00489 
+<a name="l00509"></a><a class="code" href="classMIQPController.html#a17cf6f8279cf6b2ce333feb9c8fc5a5d">00509</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a17cf6f8279cf6b2ce333feb9c8fc5a5d">_C_P</a>;
+<a name="l00510"></a>00510 
+<a name="l00531"></a><a class="code" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">00531</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">_C_B</a>;
+<a name="l00532"></a>00532 
+<a name="l00553"></a><a class="code" href="classMIQPController.html#afb83c4fddc4adba989506ccc9b62ff1e">00553</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#afb83c4fddc4adba989506ccc9b62ff1e">_P_H</a>;
+<a name="l00554"></a>00554 
+<a name="l00573"></a><a class="code" href="classMIQPController.html#a8243f4111abb4ad6c331ac147a844118">00573</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a8243f4111abb4ad6c331ac147a844118">_P_P</a>;
+<a name="l00574"></a>00574 
+<a name="l00596"></a><a class="code" href="classMIQPController.html#a848852d659dff4a566a8dca57819587d">00596</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a848852d659dff4a566a8dca57819587d">_P_B</a>;
+<a name="l00597"></a>00597 
+<a name="l00618"></a><a class="code" href="classMIQPController.html#a2207c17eb221166b1bc12fbca976035d">00618</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a2207c17eb221166b1bc12fbca976035d">_R_H</a>;
+<a name="l00619"></a>00619 
+<a name="l00640"></a><a class="code" href="classMIQPController.html#a7cede44e7827c9b4b12f2549714f3adf">00640</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a7cede44e7827c9b4b12f2549714f3adf">_R_P</a>;
+<a name="l00641"></a>00641 
+<a name="l00665"></a><a class="code" href="classMIQPController.html#a69fbc25a2e2f2392fe0f92c5811c12dd">00665</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a69fbc25a2e2f2392fe0f92c5811c12dd">_R_B</a>;
+<a name="l00666"></a>00666 
+<a name="l00673"></a><a class="code" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">00673</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">_Sw</a>;
+<a name="l00674"></a>00674 
+<a name="l00678"></a><a class="code" href="classMIQPController.html#aaed002a2578a0f83c4ee59516a793f98">00678</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#aaed002a2578a0f83c4ee59516a793f98">_Nb</a>;
+<a name="l00679"></a>00679     
+<a name="l00684"></a><a class="code" href="classMIQPController.html#aefaa7a13d0c690dafca85792bdbed4fd">00684</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#aefaa7a13d0c690dafca85792bdbed4fd">_Nx</a>;
+<a name="l00685"></a>00685 
+<a name="l00700"></a><a class="code" href="classMIQPController.html#ab4b99d844add54fa7ad6ca6b80cab089">00700</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#ab4b99d844add54fa7ad6ca6b80cab089">_H_N</a>;
+<a name="l00701"></a>00701 
 <a name="l00702"></a>00702 
-<a name="l00704"></a><a class="code" href="classMIQPController.html#affac62ccd729155720b16de3137ef3f5">00704</a>     std::shared_ptr&lt;MIQPLinearConstraints&gt; <a class="code" href="classMIQPController.html#affac62ccd729155720b16de3137ef3f5">_constraints</a>;
-<a name="l00705"></a>00705     
-<a name="l00707"></a><a class="code" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">00707</a>     std::shared_ptr&lt;MIQPState&gt; <a class="code" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">_state</a>;
-<a name="l00708"></a>00708 
-<a name="l00710"></a><a class="code" href="classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c">00710</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c">_H_N_r</a>;
+<a name="l00710"></a><a class="code" href="classMIQPController.html#a7678fd8e1c08986d7ae0dc1a884040e1">00710</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a7678fd8e1c08986d7ae0dc1a884040e1">_Aineq</a>;
 <a name="l00711"></a>00711 
-<a name="l00713"></a><a class="code" href="classMIQPController.html#af60e2d5a786f4af4fa445dea6ba1b625">00713</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPController.html#af60e2d5a786f4af4fa445dea6ba1b625">_k</a>;
-<a name="l00714"></a>00714 };
-<a name="l00715"></a>00715 
-<a name="l00716"></a>00716 <span class="preprocessor">#endif</span>
+<a name="l00719"></a><a class="code" href="classMIQPController.html#a02d441467a51e81e969163f096d3798a">00719</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a02d441467a51e81e969163f096d3798a">_Bineq</a>;
+<a name="l00720"></a>00720         
+<a name="l00729"></a><a class="code" href="classMIQPController.html#abc22f1db5a2dbcab4006c1b903a19c4e">00729</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#abc22f1db5a2dbcab4006c1b903a19c4e">_Aeq</a>;
+<a name="l00730"></a>00730     
+<a name="l00739"></a><a class="code" href="classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79">00739</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79">_Beq</a>;
+<a name="l00740"></a>00740     
+<a name="l00747"></a><a class="code" href="classMIQPController.html#a60d2b06d2d130a874ae3d14c97176f34">00747</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#a60d2b06d2d130a874ae3d14c97176f34">_Ci_eq</a>;
+<a name="l00748"></a>00748     
+<a name="l00752"></a><a class="code" href="classMIQPController.html#a338af9b8197f5b08f4e05f2e31342037">00752</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a338af9b8197f5b08f4e05f2e31342037">_fcbar_eq</a>;
+<a name="l00753"></a>00753     
+<a name="l00757"></a><a class="code" href="classMIQPController.html#aa8e6df5286125975521b77501e792413">00757</a>     Eigen::MatrixXd <a class="code" href="classMIQPController.html#aa8e6df5286125975521b77501e792413">_rhs_2_eq</a>;
+<a name="l00758"></a>00758 
+<a name="l00760"></a><a class="code" href="classMIQPController.html#a6d15db521a6b9c4e0b641709fef77373">00760</a>     Eigen::GurobiDense <a class="code" href="classMIQPController.html#a6d15db521a6b9c4e0b641709fef77373">_eigGurobi</a>;
+<a name="l00761"></a>00761 
+<a name="l00763"></a><a class="code" href="classMIQPController.html#affac62ccd729155720b16de3137ef3f5">00763</a>     std::shared_ptr&lt;MIQPLinearConstraints&gt; <a class="code" href="classMIQPController.html#affac62ccd729155720b16de3137ef3f5">_constraints</a>;
+<a name="l00764"></a>00764     
+<a name="l00766"></a><a class="code" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">00766</a>     std::shared_ptr&lt;MIQPState&gt; <a class="code" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">_state</a>;
+<a name="l00767"></a>00767 
+<a name="l00769"></a><a class="code" href="classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c">00769</a>     Eigen::VectorXd <a class="code" href="classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c">_H_N_r</a>;
+<a name="l00770"></a>00770 
+<a name="l00772"></a><a class="code" href="classMIQPController.html#af60e2d5a786f4af4fa445dea6ba1b625">00772</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPController.html#af60e2d5a786f4af4fa445dea6ba1b625">_k</a>;   
+<a name="l00773"></a>00773     
+<a name="l00774"></a>00774 };
+<a name="l00775"></a>00775 
+<a name="l00776"></a>00776 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -304,7 +319,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="MIQPController_8h.html">MIQPController.h</a>      </li>
 
-    <li class="footer">Generated on Sun Feb 26 2017 23:39:11 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Feb 27 2017 23:38:38 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

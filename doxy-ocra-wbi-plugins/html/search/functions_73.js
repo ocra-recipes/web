@@ -2,7 +2,6 @@ var searchData=
 [
   ['sequentiality',['Sequentiality',['../classSequentiality.html#a3d8c4d770b1e057ffe207c47f5db6179',1,'Sequentiality']]],
   ['setcomstaterefinpreviewwindow',['setCOMStateRefInPreviewWindow',['../classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f',1,'MIQPController']]],
-  ['setconstraintsmatrix',['setConstraintsMatrix',['../classMIQPController.html#a65b06fe436dc1683ac56afcbed2e4cfe',1,'MIQPController']]],
   ['setdownfoot',['setDownFoot',['../classSteppingDemoClient.html#a930123dad5658ea8a3bb5f23cb4cb369',1,'SteppingDemoClient']]],
   ['setlinearpartobjectivefunction',['setLinearPartObjectiveFunction',['../classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f',1,'MIQPController']]],
   ['setlowerandupperbounds',['setLowerAndUpperBounds',['../classMIQPController.html#a2caf42a5b5dcd63d67de57cfbb93c653',1,'MIQPController']]],

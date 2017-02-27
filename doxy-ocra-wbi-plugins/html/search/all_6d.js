@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m',['m',['../structZmpControllerParams.html#a09a7a86043a6b356478105f00ad84049',1,'ZmpControllerParams::m()'],['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a56b6cb4adf9dead06b4d09fe38daa26e',1,'ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::M()']]],
+  ['m',['M',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a56b6cb4adf9dead06b4d09fe38daa26e',1,'ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::M()'],['../structZmpControllerParams.html#a09a7a86043a6b356478105f00ad84049',1,'ZmpControllerParams::m()']]],
   ['m_5ffull',['M_full',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#af57ebe4c5c15477a9592dd91a5c96f12',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['m_5ffull_5frm',['M_full_rm',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6ed8d69d83b0321920c0f79cf8e58bde',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['main',['main',['../ocra-icub-server_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../example-client_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;example-client.cpp'],['../ocra-icub-clients_2sitting-demo_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../ocra-icub-clients_2standing-demo_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../stepping-demo_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;stepping-demo.cpp'],['../task-operations-demo_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;task-operations-demo.cpp'],['../ocra-icub-clients_2walking-client_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
@@ -19,7 +19,7 @@ var searchData=
   ['miqpcontroller',['MIQPController',['../classMIQPController.html',1,'MIQPController'],['../classMIQPController.html#a73b26ce1edd4ab839826abedcc72a475',1,'MIQPController::MIQPController()']]],
   ['miqpcontroller_2ecpp',['MIQPController.cpp',['../MIQPController_8cpp.html',1,'']]],
   ['miqpcontroller_2eh',['MIQPController.h',['../MIQPController_8h.html',1,'']]],
-  ['miqplinearconstraints',['MIQPLinearConstraints',['../classMIQPLinearConstraints.html',1,'MIQPLinearConstraints'],['../classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f',1,'MIQPLinearConstraints::MIQPLinearConstraints()']]],
+  ['miqplinearconstraints',['MIQPLinearConstraints',['../classMIQPLinearConstraints.html',1,'MIQPLinearConstraints'],['../classMIQPLinearConstraints.html#a882b9a928fc7a89a4aa948b33bed72d1',1,'MIQPLinearConstraints::MIQPLinearConstraints()']]],
   ['miqplinearconstraints_2ecpp',['MIQPLinearConstraints.cpp',['../MIQPLinearConstraints_8cpp.html',1,'']]],
   ['miqplinearconstraints_2eh',['MIQPLinearConstraints.h',['../MIQPLinearConstraints_8h.html',1,'']]],
   ['miqpparameters',['MIQPParameters',['../structMIQPParameters.html',1,'']]],

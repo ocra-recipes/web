@@ -98,6 +98,9 @@ This is the complete list of members for <a class="el" href="classMIQPLinearCons
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">_A</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">_Acl</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">_Acr</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a155ab4ad5ab14b793611c12473ce9297">_addAdmissibilityCtrs</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725">_addShapeCtrs</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#ad1363c7fde3dd4f20adc92a7e1865579">_addWalkingCtrs</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a1ac00fe6aca254b4dd8568e199bd20a4">_admissibilityCnstr</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">_Ah</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180">_AShapeAdmiss</a></td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [private]</code></td></tr>
@@ -122,8 +125,7 @@ This is the complete list of members for <a class="el" href="classMIQPLinearCons
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a>(Eigen::MatrixXd &amp;A)</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a">getRHS</a>(Eigen::VectorXd &amp;rhs)</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints</a>()</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#aea229cfd938c50c5d50ed68d18d119ab">initialize</a>()</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f">MIQPLinearConstraints</a>(unsigned int dt, unsigned int N)</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a882b9a928fc7a89a4aa948b33bed72d1">MIQPLinearConstraints</a>(unsigned int dt, unsigned int N, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addWalkingCtrs=false)</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#a2985d200d8e6baba2df17abfeaca8882">setMatrixAcl</a>()</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#ad36868550b3d1f977a67e76a44160192">setMatrixAcr</a>()</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a>(Eigen::VectorXd xi_k)</td><td><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a></td><td></td></tr>
@@ -147,7 +149,7 @@ This is the complete list of members for <a class="el" href="classMIQPLinearCons
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Sun Feb 26 2017 23:39:11 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Feb 27 2017 23:38:39 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

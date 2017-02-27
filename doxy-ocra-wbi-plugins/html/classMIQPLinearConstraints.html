@@ -105,9 +105,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f">MIQPLinearConstraints</a> (unsigned int dt, unsigned int N)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a882b9a928fc7a89a4aa948b33bed72d1">MIQPLinearConstraints</a> (unsigned int dt, unsigned int N, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addWalkingCtrs=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2">~MIQPLinearConstraints</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aea229cfd938c50c5d50ed68d18d119ab">initialize</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a> (Eigen::VectorXd xi_k)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a> (Eigen::MatrixXd &amp;A)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints</a> ()</td></tr>
@@ -140,17 +139,20 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">_T</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">_Ah</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725">_addShapeCtrs</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a155ab4ad5ab14b793611c12473ce9297">_addAdmissibilityCtrs</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ad1363c7fde3dd4f20adc92a7e1865579">_addWalkingCtrs</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">_dt</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">_N</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a09f79be23a0269104add07a52c52f90f"></a><!-- doxytag: member="MIQPLinearConstraints::MIQPLinearConstraints" ref="a09f79be23a0269104add07a52c52f90f" args="(unsigned int dt, unsigned int N)" -->
+<a class="anchor" id="a882b9a928fc7a89a4aa948b33bed72d1"></a><!-- doxytag: member="MIQPLinearConstraints::MIQPLinearConstraints" ref="a882b9a928fc7a89a4aa948b33bed72d1" args="(unsigned int dt, unsigned int N, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addWalkingCtrs=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMIQPLinearConstraints.html#a09f79be23a0269104add07a52c52f90f">MIQPLinearConstraints::MIQPLinearConstraints</a> </td>
+          <td class="memname"><a class="el" href="classMIQPLinearConstraints.html#a882b9a928fc7a89a4aa948b33bed72d1">MIQPLinearConstraints::MIQPLinearConstraints</a> </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>dt</em>, </td>
@@ -159,7 +161,25 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>N</em>&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>addShapeCtrs</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>addAdmissibilityCtrs</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>addWalkingCtrs</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -403,22 +423,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aea229cfd938c50c5d50ed68d18d119ab"></a><!-- doxytag: member="MIQPLinearConstraints::initialize" ref="aea229cfd938c50c5d50ed68d18d119ab" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classMIQPLinearConstraints.html#aea229cfd938c50c5d50ed68d18d119ab">MIQPLinearConstraints::initialize</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a2985d200d8e6baba2df17abfeaca8882"></a><!-- doxytag: member="MIQPLinearConstraints::setMatrixAcl" ref="a2985d200d8e6baba2df17abfeaca8882" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -514,6 +518,48 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a155ab4ad5ab14b793611c12473ce9297"></a><!-- doxytag: member="MIQPLinearConstraints::_addAdmissibilityCtrs" ref="a155ab4ad5ab14b793611c12473ce9297" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classMIQPLinearConstraints.html#a155ab4ad5ab14b793611c12473ce9297">MIQPLinearConstraints::_addAdmissibilityCtrs</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Boolean to add admissibility constraints. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae8df8b83e80484853b624f6693ed2725"></a><!-- doxytag: member="MIQPLinearConstraints::_addShapeCtrs" ref="ae8df8b83e80484853b624f6693ed2725" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725">MIQPLinearConstraints::_addShapeCtrs</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Boolean too add shape constraints. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad1363c7fde3dd4f20adc92a7e1865579"></a><!-- doxytag: member="MIQPLinearConstraints::_addWalkingCtrs" ref="ad1363c7fde3dd4f20adc92a7e1865579" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classMIQPLinearConstraints.html#ad1363c7fde3dd4f20adc92a7e1865579">MIQPLinearConstraints::_addWalkingCtrs</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Boolean to add walking constraints. </p>
 
 </div>
 </div>
@@ -733,7 +779,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a>      </li>
 
-    <li class="footer">Generated on Sun Feb 26 2017 23:39:11 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Feb 27 2017 23:38:39 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
