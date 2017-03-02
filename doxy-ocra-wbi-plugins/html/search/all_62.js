@@ -1,6 +1,13 @@
 var searchData=
 [
   ['b',['B',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a71a78aa74a5b1422df339991ea6c6974',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['b_5fx',['B_X',['../namespaceMIQP.html#a437279e763ccbc43c283bfcb0508740ba55d1ab3641b91f8e15f6afac89af6045',1,'MIQP']]],
+  ['b_5fy',['B_Y',['../namespaceMIQP.html#a437279e763ccbc43c283bfcb0508740ba096c5f9dbaf1e3c61bd6d66f14cf8217',1,'MIQP']]],
+  ['baseofsupport',['BaseOfSupport',['../classBaseOfSupport.html',1,'BaseOfSupport'],['../classBaseOfSupport.html#a2490d7d641608be3b85c903de83313cc',1,'BaseOfSupport::BaseOfSupport()']]],
+  ['baseofsupport_2ecpp',['BaseOfSupport.cpp',['../BaseOfSupport_8cpp.html',1,'']]],
+  ['baseofsupport_2eh',['BaseOfSupport.h',['../BaseOfSupport_8h.html',1,'']]],
+  ['beta_5fx',['BETA_X',['../namespaceMIQP.html#a437279e763ccbc43c283bfcb0508740ba7bd01e30cce291cb10dea256da0dc7b6',1,'MIQP']]],
+  ['beta_5fy',['BETA_Y',['../namespaceMIQP.html#a437279e763ccbc43c283bfcb0508740ba2b4c206667dc4facf08f8da6e83a65e5',1,'MIQP']]],
   ['bh',['Bh',['../classZmpPreviewController.html#a98bd07d03d0a6004b345ef4310cf17b6',1,'ZmpPreviewController']]],
   ['boptimal',['bOptimal',['../classZmpPreviewController.html#a049829dccbeb5a7a1bf47f7e6679174a',1,'ZmpPreviewController']]],
   ['bounding',['Bounding',['../classBounding.html',1,'Bounding'],['../structShapeConstraintsStruct.html#a54e87c1a5d3df7ca724c4c8437a74ac8',1,'ShapeConstraintsStruct::bounding()'],['../classBounding.html#ab8478542374a91a79e47ef8bea4c3fca',1,'Bounding::Bounding()']]],

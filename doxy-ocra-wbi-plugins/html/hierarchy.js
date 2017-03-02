@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "AdmissibilityConstraintsStruct", "structAdmissibilityConstraintsStruct.html", null ],
+    [ "BaseOfSupport", "classBaseOfSupport.html", null ],
     [ "ShapeConstraintsStruct::boundingStruct", "structShapeConstraintsStruct_1_1boundingStruct.html", null ],
     [ "ShapeConstraintsStruct::constancyStruct", "structShapeConstraintsStruct_1_1constancyStruct.html", null ],
     [ "Constraint", "classConstraint.html", [
@@ -23,6 +24,7 @@ var hierarchy =
     [ "MIQPController", "classMIQPController.html", null ],
     [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html", null ],
     [ "MIQPParameters", "structMIQPParameters.html", null ],
+    [ "MIQP::MIQPState", "classMIQP_1_1MIQPState.html", null ],
     [ "MIQPState", "classMIQPState.html", null ],
     [ "ocra_icub::ModelInitializer", "classocra__icub_1_1ModelInitializer.html", null ],
     [ "Module", "classModule.html", null ],

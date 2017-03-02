@@ -1,6 +1,6 @@
 var classMIQPController =
 [
-    [ "MIQPController", "classMIQPController.html#a73b26ce1edd4ab839826abedcc72a475", null ],
+    [ "MIQPController", "classMIQPController.html#aa40045cd7c4579494fa03f1e99fc474f", null ],
     [ "~MIQPController", "classMIQPController.html#a46e1cc8dba1633a49d934aa20730e358", null ],
     [ "addVariablesToModel", "classMIQPController.html#a8a4200f8a98ec13b93dfab56eb5cc423", null ],
     [ "buildAh", "classMIQPController.html#aea16b6eac86da5330c7ffbfdb9c655f5", null ],
@@ -64,7 +64,8 @@ var classMIQPController =
     [ "_R_P", "classMIQPController.html#a7cede44e7827c9b4b12f2549714f3adf", null ],
     [ "_rhs_2_eq", "classMIQPController.html#aa8e6df5286125975521b77501e792413", null ],
     [ "_robotModel", "classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724", null ],
-    [ "_state", "classMIQPController.html#adc70be859da53c202bc0e0c84cc71917", null ],
+    [ "_state", "classMIQPController.html#aeaa4c96afe2d1d975667338e858f4a90", null ],
+    [ "_stepController", "classMIQPController.html#a10018469a257136470ad9293fc3fe84a", null ],
     [ "_Sw", "classMIQPController.html#ada92fc35065a11b889019f2948c1888d", null ],
     [ "_T", "classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d", null ],
     [ "_ub", "classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6", null ],

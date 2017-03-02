@@ -31,9 +31,14 @@ void \hyperlink{classStepController_a16b1f62737f1287b7f33b216871d1ba8}{do\-Compu
 bool \hyperlink{classStepController_a9e2415755548f47301277feb7a376270}{is\-Trajectory\-Finished} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot)
 \item 
 void \hyperlink{classStepController_a48224628b92c088a34d9db4a14f75f1a}{stop} ()
+\item 
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classStepController_afb77002292921660ef4a44657d6566f1}{get\-Contact2\-D\-Coordinates} ()
 \end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
+\item 
+std\-::vector\*
+$<$ ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr $>$ \hyperlink{classStepController_aabeb4837b7b6cf691cb9de57c6ea8800}{\-\_\-contacts\-Collection}
 \item 
 ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classStepController_ad778378c6e6ac12d972cc8c5a986dcf9}{\-\_\-\-Left\-Foot\-Contact\-\_\-\-Back\-Left}
 \item 
@@ -157,6 +162,18 @@ int \hyperlink{classStepController_a8b98494b6b9d13b41c6838d127078085}{\-\_\-peri
 \item[{double}]{step\-Height}
 \end{DoxyParamCaption}
 )}}\label{classStepController_a1bfcb66d504440f0cc7383ad688dad5c}
+\hypertarget{classStepController_afb77002292921660ef4a44657d6566f1}{\index{\-Step\-Controller@{\-Step\-Controller}!get\-Contact2\-D\-Coordinates@{get\-Contact2\-D\-Coordinates}}
+\index{get\-Contact2\-D\-Coordinates@{get\-Contact2\-D\-Coordinates}!StepController@{\-Step\-Controller}}
+\subsubsection[{get\-Contact2\-D\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Step\-Controller\-::get\-Contact2\-D\-Coordinates} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStepController_afb77002292921660ef4a44657d6566f1}
+\-Returns the 2\-D coordinates of the contacts defined at the task level.
+
+\begin{DoxyReturn}{\-Returns}
+\-Matrix of 2\-D coordinates of the contact points defined at task level. 
+\end{DoxyReturn}
 \hypertarget{classStepController_aa168e028dc086859400e1c93c0becdd2}{\index{\-Step\-Controller@{\-Step\-Controller}!get\-Left\-Foot\-Position@{get\-Left\-Foot\-Position}}
 \index{get\-Left\-Foot\-Position@{get\-Left\-Foot\-Position}!StepController@{\-Step\-Controller}}
 \subsubsection[{get\-Left\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Step\-Controller\-::get\-Left\-Foot\-Position} (
@@ -207,6 +224,9 @@ int \hyperlink{classStepController_a8b98494b6b9d13b41c6838d127078085}{\-\_\-peri
 \-Stops the feet trajectory threads. \-To be called during the release of the owner thread. 
 
 \subsection{\-Member \-Data \-Documentation}
+\hypertarget{classStepController_aabeb4837b7b6cf691cb9de57c6ea8800}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-contacts\-Collection@{\-\_\-contacts\-Collection}}
+\index{\-\_\-contacts\-Collection@{\-\_\-contacts\-Collection}!StepController@{\-Step\-Controller}}
+\subsubsection[{\-\_\-contacts\-Collection}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr$>$ {\bf \-Step\-Controller\-::\-\_\-contacts\-Collection}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_aabeb4837b7b6cf691cb9de57c6ea8800}
 \hypertarget{classStepController_adc2b0bf2d3c302c54d659d44cb34ba3e}{\index{\-Step\-Controller@{\-Step\-Controller}!\-\_\-left\-Foot\-\_\-\-Traj\-Thread@{\-\_\-left\-Foot\-\_\-\-Traj\-Thread}}
 \index{\-\_\-left\-Foot\-\_\-\-Traj\-Thread@{\-\_\-left\-Foot\-\_\-\-Traj\-Thread}!StepController@{\-Step\-Controller}}
 \subsubsection[{\-\_\-left\-Foot\-\_\-\-Traj\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ocra\-\_\-recipes\-::\-Trajectory\-Thread$>$ {\bf \-Step\-Controller\-::\-\_\-left\-Foot\-\_\-\-Traj\-Thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStepController_adc2b0bf2d3c302c54d659d44cb34ba3e}

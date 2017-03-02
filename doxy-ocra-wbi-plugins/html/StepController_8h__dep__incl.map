@@ -1,6 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$WalkingClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h" alt="" coords="145,83,668,112"/>
-<area shape="rect" id="node9" href="$StepController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/StepController.cpp" alt="" coords="692,83,1124,112"/>
-<area shape="rect" id="node5" href="$ocra-icub-clients_2walking-client_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp" alt="" coords="5,160,381,189"/>
-<area shape="rect" id="node7" href="$WalkingClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp" alt="" coords="405,160,835,189"/>
+<area shape="rect" id="node3" href="$BaseOfSupport_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/BaseOfSupport.h" alt="" coords="581,83,1112,112"/>
+<area shape="rect" id="node5" href="$MIQPLinearConstraints_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="5,160,651,189"/>
+<area shape="rect" id="node9" href="$WalkingClient_8h.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/include/walking&#45;client/WalkingClient.h" alt="" coords="729,315,1252,344"/>
+<area shape="rect" id="node23" href="$StepController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/StepController.cpp" alt="" coords="1187,83,1619,112"/>
+<area shape="rect" id="node19" href="$BaseOfSupport_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/BaseOfSupport.cpp" alt="" coords="675,160,1112,189"/>
+<area shape="rect" id="node7" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="63,237,593,267"/>
+<area shape="rect" id="node17" href="$MIQPLinearConstraints_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPLinearConstraints.cpp" alt="" coords="617,237,1103,267"/>
+<area shape="rect" id="node15" href="$MIQPController_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/MIQPController.cpp" alt="" coords="109,315,547,344"/>
+<area shape="rect" id="node11" href="$ocra-icub-clients_2walking-client_2src_2main_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/main.cpp" alt="" coords="589,392,965,421"/>
+<area shape="rect" id="node13" href="$WalkingClient_8cpp.html" title="ocra&#45;wbi&#45;plugins/ocra&#45;icub&#45;clients/walking&#45;client/src/WalkingClient.cpp" alt="" coords="989,392,1419,421"/>
 </map>

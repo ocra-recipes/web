@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m',['M',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a56b6cb4adf9dead06b4d09fe38daa26e',1,'ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::M()'],['../structZmpControllerParams.html#a09a7a86043a6b356478105f00ad84049',1,'ZmpControllerParams::m()']]],
+  ['m',['m',['../structZmpControllerParams.html#a09a7a86043a6b356478105f00ad84049',1,'ZmpControllerParams::m()'],['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a56b6cb4adf9dead06b4d09fe38daa26e',1,'ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::M()']]],
   ['m_5ffull',['M_full',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#af57ebe4c5c15477a9592dd91a5c96f12',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['m_5ffull_5frm',['M_full_rm',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6ed8d69d83b0321920c0f79cf8e58bde',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['maintainfinalposture',['maintainFinalPosture',['../classOcraControllerOptions.html#ae7b16a5b8264abd18ee8761eb1091ccf',1,'OcraControllerOptions']]],

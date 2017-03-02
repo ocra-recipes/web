@@ -1,0 +1,331 @@
+\hypertarget{classMIQP_1_1MIQPState}{\section{\-M\-I\-Q\-P\-:\-:\-M\-I\-Q\-P\-State \-Class \-Reference}
+\label{classMIQP_1_1MIQPState}\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+}
+
+
+{\ttfamily \#include $<$\-M\-I\-Q\-P\-State.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMIQP_1_1MIQPState_aaaf6b0ca121e6a74b61605634dbb5fc3}{\-M\-I\-Q\-P\-State} (ocra\-::\-Model\-::\-Ptr robot\-Model)
+\item 
+virtual \hyperlink{classMIQP_1_1MIQPState_a1f2f14c183d11b3a1e323b59fe47020b}{$\sim$\-M\-I\-Q\-P\-State} ()
+\item 
+bool \hyperlink{classMIQP_1_1MIQPState_adbae9a43d4d510e0873995bf0016d75a}{initialize} ()
+\item 
+void \hyperlink{classMIQP_1_1MIQPState_a149d9bd8fd8208734e66a5f945cfe39a}{update\-State\-Vector} ()
+\item 
+void \hyperlink{classMIQP_1_1MIQPState_a8dec06cabde0ad186c976c0bc61c4688}{update\-Base\-Of\-Support\-Descriptors} (\-Eigen\-::\-Vector2d \&a, \-Eigen\-::\-Vector2d \&b, \-Eigen\-::\-Vector2d \&alpha, \-Eigen\-::\-Vector2d \&beta, unsigned int \&delta, unsigned int \&gamma, double threshold\-Change)
+\item 
+void \hyperlink{classMIQP_1_1MIQPState_a91a2e7b0415bf56fdb26625eacf106ef}{update\-Horizontal\-Co\-M\-State} (\-Eigen\-::\-Vector\-Xd \&hk)
+\item 
+bool \hyperlink{classMIQP_1_1MIQPState_ac098f6c3e6b585c45a5dc24d455f15c2}{is\-Robot\-In\-S\-S} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} \&foot\-In\-S\-S)
+\item 
+bool \hyperlink{classMIQP_1_1MIQPState_abc509a2d35f1d97a9ebcd1352943dadc}{is\-Foot\-In\-Contact} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} which\-Foot, double \-Fz\-Threshold, double \-Pz\-Threshold)
+\item 
+bool \hyperlink{classMIQP_1_1MIQPState_a3710c3ded4a5da84c505ee8e052021a3}{read\-Foot\-Wrench} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} which\-Foot, \-Eigen\-::\-Vector\-Xd \&raw\-Wrench)
+\item 
+void \hyperlink{classMIQP_1_1MIQPState_ae1d43385c4b25dced6952ffdfbf5043a}{get\-Full\-State} (\-Eigen\-::\-Vector\-Xd \&xi)
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classMIQP_1_1MIQPState_a7a6c0d1fc5b3fb66d321867f9618e013}{get\-Left\-Foot\-Position} ()
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classMIQP_1_1MIQPState_afd73d24a2c94e32686160874c66b6b55}{get\-Right\-Foot\-Position} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classMIQP_1_1MIQPState_aee08863bacb44f7c667cbd566fa6ddcf}{\-\_\-xi\-\_\-k}
+\item 
+\-Eigen\-::\-Vector2d \hyperlink{classMIQP_1_1MIQPState_a6717fedc0f49df4f60ecb6b97955da1e}{\-\_\-a}
+\item 
+\-Eigen\-::\-Vector2d \hyperlink{classMIQP_1_1MIQPState_aafa5bce9860b191257cb0166c217e9a3}{\-\_\-b}
+\item 
+\-Eigen\-::\-Vector2d \hyperlink{classMIQP_1_1MIQPState_a584ef13e157d3a34333d4f990363abc7}{\-\_\-alpha}
+\item 
+\-Eigen\-::\-Vector2d \hyperlink{classMIQP_1_1MIQPState_ad5f8f3e9a18a29810b4347540ddf7c82}{\-\_\-beta}
+\item 
+unsigned int \hyperlink{classMIQP_1_1MIQPState_a5083cb38c427382e4d788e7d6b0aab79}{\-\_\-delta}
+\item 
+unsigned int \hyperlink{classMIQP_1_1MIQPState_ab82daf9a470a885186cb733c4d4a72f8}{\-\_\-gamma}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classMIQP_1_1MIQPState_a1fa7e57c280b3cf451275fb9c617182b}{\-\_\-hk}
+\item 
+ocra\-::\-Model\-::\-Ptr \hyperlink{classMIQP_1_1MIQPState_ab4a5a930c7db84035376864938d8a170}{\-\_\-robot\-Model}
+\item 
+std\-::string \hyperlink{classMIQP_1_1MIQPState_ad27b574f93e1b163ff9b01939bd00de3}{\-\_\-robot}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classMIQP_1_1MIQPState_a20ef40fafe48e0c80d52ef4da89e95b7}{\-\_\-r\-\_\-foot\-\_\-coord}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classMIQP_1_1MIQPState_a3027b3e93ce4c18f184c52438bed6e6a}{\-\_\-l\-\_\-foot\-\_\-coord}
+\item 
+yarp\-::os\-::\-Buffered\-Port\*
+$<$ yarp\-::sig\-::\-Vector $>$ \hyperlink{classMIQP_1_1MIQPState_ab00569102a1cf95cb2afbd3b1d9a95cb}{\-\_\-port\-Wrench\-Left\-Foot}
+\item 
+yarp\-::os\-::\-Buffered\-Port\*
+$<$ yarp\-::sig\-::\-Vector $>$ \hyperlink{classMIQP_1_1MIQPState_a2007f089d28885858db8fb470469ef37}{\-\_\-port\-Wrench\-Right\-Foot}
+\item 
+double \hyperlink{classMIQP_1_1MIQPState_a9eb5039dd699292c419f39514965e359}{\-\_\-\-Fz\-Threshold}
+\item 
+double \hyperlink{classMIQP_1_1MIQPState_aee7955c37422c6aa4cd115616feb4ea9}{\-\_\-\-Pz\-Threshold}
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{classMIQP_1_1MIQPState_ad32751f8094f2fa0f7c1ebca5eabf9df}{operator$<$$<$} (std\-::ostream \&out, const \hyperlink{classMIQP_1_1MIQPState}{\-M\-I\-Q\-P\-State} \&state)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classMIQP_1_1MIQPState_aaaf6b0ca121e6a74b61605634dbb5fc3}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-State}}
+\index{\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-State}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-M\-I\-Q\-P\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-State\-::\-M\-I\-Q\-P\-State} (
+\begin{DoxyParamCaption}
+\item[{ocra\-::\-Model\-::\-Ptr}]{robot\-Model}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_aaaf6b0ca121e6a74b61605634dbb5fc3}
+\hypertarget{classMIQP_1_1MIQPState_a1f2f14c183d11b3a1e323b59fe47020b}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!$\sim$\-M\-I\-Q\-P\-State@{$\sim$\-M\-I\-Q\-P\-State}}
+\index{$\sim$\-M\-I\-Q\-P\-State@{$\sim$\-M\-I\-Q\-P\-State}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{$\sim$\-M\-I\-Q\-P\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-State\-::$\sim$\-M\-I\-Q\-P\-State} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classMIQP_1_1MIQPState_a1f2f14c183d11b3a1e323b59fe47020b}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classMIQP_1_1MIQPState_ae1d43385c4b25dced6952ffdfbf5043a}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!get\-Full\-State@{get\-Full\-State}}
+\index{get\-Full\-State@{get\-Full\-State}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{get\-Full\-State}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-State\-::get\-Full\-State} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd \&}]{xi}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_ae1d43385c4b25dced6952ffdfbf5043a}
+\-Copies in \#xi the full state \hyperlink{classMIQP_1_1MIQPState_aee08863bacb44f7c667cbd566fa6ddcf}{\-\_\-xi\-\_\-k}.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt out}  & {\em xi} & \-Full state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMIQP_1_1MIQPState_a7a6c0d1fc5b3fb66d321867f9618e013}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!get\-Left\-Foot\-Position@{get\-Left\-Foot\-Position}}
+\index{get\-Left\-Foot\-Position@{get\-Left\-Foot\-Position}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{get\-Left\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-M\-I\-Q\-P\-State\-::get\-Left\-Foot\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_a7a6c0d1fc5b3fb66d321867f9618e013}
+\-Retrieves the translational part of the left foot position w.\-r.\-t world reference frame.
+
+\begin{DoxyReturn}{\-Returns}
+\-Left foot 3\-D position 
+\end{DoxyReturn}
+\hypertarget{classMIQP_1_1MIQPState_afd73d24a2c94e32686160874c66b6b55}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!get\-Right\-Foot\-Position@{get\-Right\-Foot\-Position}}
+\index{get\-Right\-Foot\-Position@{get\-Right\-Foot\-Position}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{get\-Right\-Foot\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-M\-I\-Q\-P\-State\-::get\-Right\-Foot\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_afd73d24a2c94e32686160874c66b6b55}
+\-Retrieves the translational part of the right foot position w.\-r.\-t. world reference frame.
+
+\begin{DoxyReturn}{\-Returns}
+\-Right foot 3\-D position. 
+\end{DoxyReturn}
+\hypertarget{classMIQP_1_1MIQPState_adbae9a43d4d510e0873995bf0016d75a}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!initialize@{initialize}}
+\index{initialize@{initialize}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-M\-I\-Q\-P\-State\-::initialize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_adbae9a43d4d510e0873995bf0016d75a}
+\-Open and connects ports to \-F/\-T sensors in the feet of the robot and sets some thresholds.
+
+\begin{DoxyReturn}{\-Returns}
+\-True if everything ends successfully. 
+\end{DoxyReturn}
+\hypertarget{classMIQP_1_1MIQPState_abc509a2d35f1d97a9ebcd1352943dadc}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!is\-Foot\-In\-Contact@{is\-Foot\-In\-Contact}}
+\index{is\-Foot\-In\-Contact@{is\-Foot\-In\-Contact}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{is\-Foot\-In\-Contact}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-M\-I\-Q\-P\-State\-::is\-Foot\-In\-Contact} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{which\-Foot, }
+\item[{double}]{\-Fz\-Threshold, }
+\item[{double}]{\-Pz\-Threshold}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_abc509a2d35f1d97a9ebcd1352943dadc}
+\-Determins if \#which\-Foot is in contact with the ground by checking the normal \-F/\-T measurement of the corresponding foot in combination with the $z$ coordinate.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em which\-Foot} & \-Foot for which you want to know whether it's in contact or not. \\
+\hline
+{\em \-Fz\-Threshold} & \-Z \-Force threshold to consider whether the foot is in contact or not. \\
+\hline
+{\em \-Pz\-Threshold} & \-Z position threshold to consider whether the foot is in contact or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if \#which\-Foot is in contact. \-False otherwise. 
+\end{DoxyReturn}
+\hypertarget{classMIQP_1_1MIQPState_ac098f6c3e6b585c45a5dc24d455f15c2}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!is\-Robot\-In\-S\-S@{is\-Robot\-In\-S\-S}}
+\index{is\-Robot\-In\-S\-S@{is\-Robot\-In\-S\-S}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{is\-Robot\-In\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-M\-I\-Q\-P\-State\-::is\-Robot\-In\-S\-S} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T} \&}]{foot\-In\-S\-S}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_ac098f6c3e6b585c45a5dc24d455f15c2}
+\-This method uses the normal measurements of the \-F/\-T sensors in the feet of the robot along with the $z$ coordinates of both feet to identify whether the robot is in \-D\-S or not.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt out}  & {\em \-If} & the robot is in \-S\-S, this variable contains the foot in \-S\-S. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if robot is found in \-S\-S, false if it is in \-D\-S. 
+\end{DoxyReturn}
+\hypertarget{classMIQP_1_1MIQPState_a3710c3ded4a5da84c505ee8e052021a3}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!read\-Foot\-Wrench@{read\-Foot\-Wrench}}
+\index{read\-Foot\-Wrench@{read\-Foot\-Wrench}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{read\-Foot\-Wrench}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-M\-I\-Q\-P\-State\-::read\-Foot\-Wrench} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{which\-Foot, }
+\item[{\-Eigen\-::\-Vector\-Xd \&}]{raw\-Wrench}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_a3710c3ded4a5da84c505ee8e052021a3}
+\-Reads the raw wrench published for the corresponding analog force/torque sensors in i\-Cub's feet.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em which\-Foot} & \-For which foot is the measurement read. \\
+\hline
+{\em raw\-Wrench} & \-Result of the reading. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if reading is successful, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classMIQP_1_1MIQPState_a8dec06cabde0ad186c976c0bc61c4688}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!update\-Base\-Of\-Support\-Descriptors@{update\-Base\-Of\-Support\-Descriptors}}
+\index{update\-Base\-Of\-Support\-Descriptors@{update\-Base\-Of\-Support\-Descriptors}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{update\-Base\-Of\-Support\-Descriptors}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-State\-::update\-Base\-Of\-Support\-Descriptors} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector2d \&}]{a, }
+\item[{\-Eigen\-::\-Vector2d \&}]{b, }
+\item[{\-Eigen\-::\-Vector2d \&}]{alpha, }
+\item[{\-Eigen\-::\-Vector2d \&}]{beta, }
+\item[{unsigned int \&}]{delta, }
+\item[{unsigned int \&}]{gamma, }
+\item[{double}]{threshold\-Change}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_a8dec06cabde0ad186c976c0bc61c4688}
+\-Updates the base of support (\-Bo\-S) descriptors, i.\-e. \hyperlink{classMIQP_1_1MIQPState_a6717fedc0f49df4f60ecb6b97955da1e}{\-\_\-a}, \hyperlink{classMIQP_1_1MIQPState_aafa5bce9860b191257cb0166c217e9a3}{\-\_\-b}, \hyperlink{classMIQP_1_1MIQPState_a584ef13e157d3a34333d4f990363abc7}{\-\_\-alpha}, \hyperlink{classMIQP_1_1MIQPState_ad5f8f3e9a18a29810b4347540ddf7c82}{\-\_\-beta}, \hyperlink{classMIQP_1_1MIQPState_a5083cb38c427382e4d788e7d6b0aab79}{\-\_\-delta}, \hyperlink{classMIQP_1_1MIQPState_ab82daf9a470a885186cb733c4d4a72f8}{\-\_\-gamma}.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt out}  & {\em a} & \-Upper bounds variable. \\
+\hline
+\mbox{\tt out}  & {\em b} & \-Lower bounds variable. \\
+\hline
+\mbox{\tt out}  & {\em alpha} & \-Rising/falling edges of \#a. \\
+\hline
+\mbox{\tt out}  & {\em beta} & \-Rising/falling edges of \#b. \\
+\hline
+\mbox{\tt out}  & {\em delta} & \-Potential change from \-D\-S to \-S\-S. \\
+\hline
+\mbox{\tt out}  & {\em gamma} & \-S\-S/\-D\-S indicator. \\
+\hline
+ & {\em threshold\-Change} & \-Threshold used to detect a change in \#a and \#b. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMIQP_1_1MIQPState_a91a2e7b0415bf56fdb26625eacf106ef}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!update\-Horizontal\-Co\-M\-State@{update\-Horizontal\-Co\-M\-State}}
+\index{update\-Horizontal\-Co\-M\-State@{update\-Horizontal\-Co\-M\-State}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{update\-Horizontal\-Co\-M\-State}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-State\-::update\-Horizontal\-Co\-M\-State} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd \&}]{hk}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_a91a2e7b0415bf56fdb26625eacf106ef}
+\-Updates the horizontal \-Co\-M state (horizonal position, velocity and acceleration).
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt out}  & {\em hk} & 6-\/dimensional \-Co\-M state vector. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMIQP_1_1MIQPState_a149d9bd8fd8208734e66a5f945cfe39a}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!update\-State\-Vector@{update\-State\-Vector}}
+\index{update\-State\-Vector@{update\-State\-Vector}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{update\-State\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-State\-::update\-State\-Vector} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMIQP_1_1MIQPState_a149d9bd8fd8208734e66a5f945cfe39a}
+\-Calls the update of all the base of support descriptors and \-Co\-M state, and fills \hyperlink{classMIQP_1_1MIQPState_aee08863bacb44f7c667cbd566fa6ddcf}{\-\_\-xi\-\_\-k} with it. \-In order to retrieve, call \hyperlink{classMIQP_1_1MIQPState_ae1d43385c4b25dced6952ffdfbf5043a}{\-M\-I\-Q\-P\-State\-::get\-Full\-State()}. 
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classMIQP_1_1MIQPState_ad32751f8094f2fa0f7c1ebca5eabf9df}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out, }
+\item[{const {\bf \-M\-I\-Q\-P\-State} \&}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classMIQP_1_1MIQPState_ad32751f8094f2fa0f7c1ebca5eabf9df}
+\-Operator to write the current state contents in a \char`\"{}pretty\char`\"{} way. 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classMIQP_1_1MIQPState_a6717fedc0f49df4f60ecb6b97955da1e}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-a@{\-\_\-a}}
+\index{\-\_\-a@{\-\_\-a}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector2d {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-a}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_a6717fedc0f49df4f60ecb6b97955da1e}
+\-Upper bounds $\mathbf{a} = (a_x, a_y)$. \-Its coordinates coincide with foot center coordinates. \hypertarget{classMIQP_1_1MIQPState_a584ef13e157d3a34333d4f990363abc7}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-alpha@{\-\_\-alpha}}
+\index{\-\_\-alpha@{\-\_\-alpha}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-alpha}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector2d {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-alpha}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_a584ef13e157d3a34333d4f990363abc7}
+\-Rising/\-Falling edge indicator for $\mathbf{a}$ (\hyperlink{classMIQP_1_1MIQPState_a6717fedc0f49df4f60ecb6b97955da1e}{\-\_\-a}) \hypertarget{classMIQP_1_1MIQPState_aafa5bce9860b191257cb0166c217e9a3}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-b@{\-\_\-b}}
+\index{\-\_\-b@{\-\_\-b}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector2d {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-b}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_aafa5bce9860b191257cb0166c217e9a3}
+\-Lower bounds $\mathbf{b} = (b_x, b_y)$. \-It scoordinates coincide with foot center coordinates. \hypertarget{classMIQP_1_1MIQPState_ad5f8f3e9a18a29810b4347540ddf7c82}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-beta@{\-\_\-beta}}
+\index{\-\_\-beta@{\-\_\-beta}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-beta}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector2d {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-beta}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_ad5f8f3e9a18a29810b4347540ddf7c82}
+\-Rising/\-Falling edge indicator for $\mathbf{b}$ (\hyperlink{classMIQP_1_1MIQPState_aafa5bce9860b191257cb0166c217e9a3}{\-\_\-b}) \hypertarget{classMIQP_1_1MIQPState_a5083cb38c427382e4d788e7d6b0aab79}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-delta@{\-\_\-delta}}
+\index{\-\_\-delta@{\-\_\-delta}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-delta}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-delta}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_a5083cb38c427382e4d788e7d6b0aab79}
+\-Binary variable indicating potential changes in $\mathbf{a}$ and $\mathbf{b}$ from \-D\-S to \-S\-S.
+
+\-If $\alpha_x$ and $\alpha_y$ change or $\beta_x$ and $\beta_y$ change, then $\delta = 1$.
+
+\-If $\alpha_x$ and $\beta_y$ or $\beta_x$ and $\alpha_y$ change, then $\delta = 0$. \hypertarget{classMIQP_1_1MIQPState_a9eb5039dd699292c419f39514965e359}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-\-Fz\-Threshold@{\-\_\-\-Fz\-Threshold}}
+\index{\-\_\-\-Fz\-Threshold@{\-\_\-\-Fz\-Threshold}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-\-Fz\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-\-Fz\-Threshold}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_a9eb5039dd699292c419f39514965e359}
+\hypertarget{classMIQP_1_1MIQPState_ab82daf9a470a885186cb733c4d4a72f8}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-gamma@{\-\_\-gamma}}
+\index{\-\_\-gamma@{\-\_\-gamma}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-gamma}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-gamma}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_ab82daf9a470a885186cb733c4d4a72f8}
+\-Single/\-Double \-Support indicator. \-If the robot is in \-Double \-Support, then $\delta = 1$ \-If the robot is in \-Single \-Support, then $\delta = 0$ \hypertarget{classMIQP_1_1MIQPState_a1fa7e57c280b3cf451275fb9c617182b}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-hk@{\-\_\-hk}}
+\index{\-\_\-hk@{\-\_\-hk}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-hk}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-hk}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_a1fa7e57c280b3cf451275fb9c617182b}
+\-Horizonal \-Co\-M state, i.\-e. $\hat{\mathbf{h}}_k = [\mathbf{h}\;\dot{\mathbf{h}}\;\ddot{\mathbf{h}}]$. \hypertarget{classMIQP_1_1MIQPState_a3027b3e93ce4c18f184c52438bed6e6a}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-l\-\_\-foot\-\_\-coord@{\-\_\-l\-\_\-foot\-\_\-coord}}
+\index{\-\_\-l\-\_\-foot\-\_\-coord@{\-\_\-l\-\_\-foot\-\_\-coord}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-l\-\_\-foot\-\_\-coord}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-l\-\_\-foot\-\_\-coord}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_a3027b3e93ce4c18f184c52438bed6e6a}
+\hypertarget{classMIQP_1_1MIQPState_ab00569102a1cf95cb2afbd3b1d9a95cb}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-port\-Wrench\-Left\-Foot@{\-\_\-port\-Wrench\-Left\-Foot}}
+\index{\-\_\-port\-Wrench\-Left\-Foot@{\-\_\-port\-Wrench\-Left\-Foot}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-port\-Wrench\-Left\-Foot}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Buffered\-Port$<$yarp\-::sig\-::\-Vector$>$ {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-port\-Wrench\-Left\-Foot}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_ab00569102a1cf95cb2afbd3b1d9a95cb}
+\hypertarget{classMIQP_1_1MIQPState_a2007f089d28885858db8fb470469ef37}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-port\-Wrench\-Right\-Foot@{\-\_\-port\-Wrench\-Right\-Foot}}
+\index{\-\_\-port\-Wrench\-Right\-Foot@{\-\_\-port\-Wrench\-Right\-Foot}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-port\-Wrench\-Right\-Foot}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Buffered\-Port$<$yarp\-::sig\-::\-Vector$>$ {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-port\-Wrench\-Right\-Foot}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_a2007f089d28885858db8fb470469ef37}
+\hypertarget{classMIQP_1_1MIQPState_aee7955c37422c6aa4cd115616feb4ea9}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-\-Pz\-Threshold@{\-\_\-\-Pz\-Threshold}}
+\index{\-\_\-\-Pz\-Threshold@{\-\_\-\-Pz\-Threshold}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-\-Pz\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-\-Pz\-Threshold}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_aee7955c37422c6aa4cd115616feb4ea9}
+\hypertarget{classMIQP_1_1MIQPState_a20ef40fafe48e0c80d52ef4da89e95b7}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-r\-\_\-foot\-\_\-coord@{\-\_\-r\-\_\-foot\-\_\-coord}}
+\index{\-\_\-r\-\_\-foot\-\_\-coord@{\-\_\-r\-\_\-foot\-\_\-coord}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-r\-\_\-foot\-\_\-coord}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-r\-\_\-foot\-\_\-coord}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_a20ef40fafe48e0c80d52ef4da89e95b7}
+\hypertarget{classMIQP_1_1MIQPState_ad27b574f93e1b163ff9b01939bd00de3}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-robot@{\-\_\-robot}}
+\index{\-\_\-robot@{\-\_\-robot}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-robot}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-robot}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_ad27b574f93e1b163ff9b01939bd00de3}
+\-Robot prefix to be used (icub\-Gazebo\-Sim, icub) \hypertarget{classMIQP_1_1MIQPState_ab4a5a930c7db84035376864938d8a170}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-robot\-Model@{\-\_\-robot\-Model}}
+\index{\-\_\-robot\-Model@{\-\_\-robot\-Model}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-robot\-Model}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-::\-Model\-::\-Ptr {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-robot\-Model}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_ab4a5a930c7db84035376864938d8a170}
+\-Robot model object necessary to update all the variables of the state vector. \-Robot state will be queried through this object. \hypertarget{classMIQP_1_1MIQPState_aee08863bacb44f7c667cbd566fa6ddcf}{\index{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}!\-\_\-xi\-\_\-k@{\-\_\-xi\-\_\-k}}
+\index{\-\_\-xi\-\_\-k@{\-\_\-xi\-\_\-k}!MIQP::MIQPState@{\-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State}}
+\subsubsection[{\-\_\-xi\-\_\-k}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-::\-M\-I\-Q\-P\-State\-::\-\_\-xi\-\_\-k}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQP_1_1MIQPState_aee08863bacb44f7c667cbd566fa6ddcf}
+\-Full state $\mathbf{\xi}_k = (\mathbf{a} \; \mathbf{b} \; \mathbf{\alpha} \; \mathbf{\beta} \; \delta \; \gamma \; \mathbf{h} \; \mathbf{\dot{h}} \; \mathbf{\ddot{h}} )$ 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\hyperlink{MIQPState_8h}{\-M\-I\-Q\-P\-State.\-h}\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/src/\hyperlink{MIQPState_8cpp}{\-M\-I\-Q\-P\-State.\-cpp}\end{DoxyCompactItemize}

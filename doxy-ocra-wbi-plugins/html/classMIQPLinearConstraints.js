@@ -1,6 +1,6 @@
 var classMIQPLinearConstraints =
 [
-    [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html#a882b9a928fc7a89a4aa948b33bed72d1", null ],
+    [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html#ae784e0e4a3fbde27d999c5315119fa0f", null ],
     [ "~MIQPLinearConstraints", "classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2", null ],
     [ "buildAh", "classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27", null ],
     [ "buildAShapeAdmiss", "classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e", null ],
@@ -20,11 +20,13 @@ var classMIQPLinearConstraints =
     [ "_Acl", "classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120", null ],
     [ "_Acr", "classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed", null ],
     [ "_addAdmissibilityCtrs", "classMIQPLinearConstraints.html#a155ab4ad5ab14b793611c12473ce9297", null ],
+    [ "_addCoPConstraints", "classMIQPLinearConstraints.html#a8e20d42828c638f41d074153cc0957d8", null ],
     [ "_addShapeCtrs", "classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725", null ],
     [ "_addWalkingCtrs", "classMIQPLinearConstraints.html#ad1363c7fde3dd4f20adc92a7e1865579", null ],
     [ "_admissibilityCnstr", "classMIQPLinearConstraints.html#a1ac00fe6aca254b4dd8568e199bd20a4", null ],
     [ "_Ah", "classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd", null ],
     [ "_AShapeAdmiss", "classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180", null ],
+    [ "_baseOfSupport", "classMIQPLinearConstraints.html#ae39cc39151d69efaaaa8c520de8248f4", null ],
     [ "_Bh", "classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5", null ],
     [ "_BShapeAdmiss", "classMIQPLinearConstraints.html#ab3ea8be40c22fa7d8035c7b5c5c1010c", null ],
     [ "_dt", "classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2", null ],
@@ -34,5 +36,6 @@ var classMIQPLinearConstraints =
     [ "_Q", "classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511", null ],
     [ "_rhs", "classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530", null ],
     [ "_shapeCnstr", "classMIQPLinearConstraints.html#a5c8788e52f7b0664606662cfa758ae88", null ],
+    [ "_stepController", "classMIQPLinearConstraints.html#ac1ea7dbfb54c84c9c3e172d36aa42671", null ],
     [ "_T", "classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a", null ]
 ];

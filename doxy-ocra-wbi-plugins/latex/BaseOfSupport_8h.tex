@@ -1,0 +1,50 @@
+\hypertarget{BaseOfSupport_8h}{\section{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Base\-Of\-Support.h \-File \-Reference}
+\label{BaseOfSupport_8h}\index{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Base\-Of\-Support.\-h@{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Base\-Of\-Support.\-h}}
+}
+{\ttfamily \#include $<$boost/geometry.\-hpp$>$}\*
+{\ttfamily \#include $<$boost/geometry/geometries/polygon.\-hpp$>$}\*
+{\ttfamily \#include $<$boost/geometry/geometries/adapted/boost\-\_\-tuple.\-hpp$>$}\*
+{\ttfamily \#include $<$\-Eigen/\-Core$>$}\*
+{\ttfamily \#include $<$walking-\/client/\-M\-I\-Q\-P\-State.\-h$>$}\*
+{\ttfamily \#include $<$walking-\/client/\-Step\-Controller.\-h$>$}\*
+{\ttfamily \#include $<$ocra-\/recipes/\-Task\-Connection.\-h$>$}\*
+\-Include dependency graph for \-Base\-Of\-Support.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BaseOfSupport_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BaseOfSupport_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support}
+\begin{DoxyCompactList}\small\item\em \-Builds base of support and corresponding constraints based on the robot's feet location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::tuple$<$ double, \*
+double $>$ \hyperlink{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}{point}
+\item 
+typedef \*
+boost\-::geometry\-::model\-::polygon\*
+$<$ \hyperlink{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}{point} $>$ \hyperlink{BaseOfSupport_8h_a3b0bf53b9d321e300a59729ebe10e02c}{\-Polygon}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}{\index{\-Base\-Of\-Support.\-h@{\-Base\-Of\-Support.\-h}!point@{point}}
+\index{point@{point}!BaseOfSupport.h@{\-Base\-Of\-Support.\-h}}
+\subsubsection[{point}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::tuple$<$double, double$>$ {\bf point}}}\label{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}
+\hypertarget{BaseOfSupport_8h_a3b0bf53b9d321e300a59729ebe10e02c}{\index{\-Base\-Of\-Support.\-h@{\-Base\-Of\-Support.\-h}!\-Polygon@{\-Polygon}}
+\index{\-Polygon@{\-Polygon}!BaseOfSupport.h@{\-Base\-Of\-Support.\-h}}
+\subsubsection[{\-Polygon}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::geometry\-::model\-::polygon$<${\bf point}$>$ {\bf \-Polygon}}}\label{BaseOfSupport_8h_a3b0bf53b9d321e300a59729ebe10e02c}

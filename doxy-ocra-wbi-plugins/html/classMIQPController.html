@@ -110,7 +110,7 @@ Collaboration diagram for MIQPController:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a73b26ce1edd4ab839826abedcc72a475">MIQPController</a> (int period, <a class="el" href="structMIQPParameters.html">MIQPParameters</a> params, ocra::Model::Ptr robotModel, const Eigen::MatrixXd &amp;comStateRef)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aa40045cd7c4579494fa03f1e99fc474f">MIQPController</a> (int period, <a class="el" href="structMIQPParameters.html">MIQPParameters</a> params, ocra::Model::Ptr robotModel, std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt; stepController, const Eigen::MatrixXd &amp;comStateRef)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a46e1cc8dba1633a49d934aa20730e358">~MIQPController</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a7e82a26dc823c7f69d00997d0ca98052">threadInit</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a43faa045ed47859b04f39e99805888c1">threadRelease</a> ()</td></tr>
@@ -143,6 +143,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">ocra::Model::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">_robotModel</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a10018469a257136470ad9293fc3fe84a">_stepController</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMIQPParameters.html">MIQPParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">_miqpParams</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ab74859a8dd208f3fc7608391d318d469">_comStateRef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aed2ce53008e32e64e107398d85e75170">_period</a></td></tr>
@@ -184,17 +185,17 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::GurobiDense&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a6d15db521a6b9c4e0b641709fef77373">_eigGurobi</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#affac62ccd729155720b16de3137ef3f5">_constraints</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classMIQPState.html">MIQPState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">_state</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classMIQP_1_1MIQPState.html">MIQP::MIQPState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aeaa4c96afe2d1d975667338e858f4a90">_state</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c">_H_N_r</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#af60e2d5a786f4af4fa445dea6ba1b625">_k</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a73b26ce1edd4ab839826abedcc72a475"></a><!-- doxytag: member="MIQPController::MIQPController" ref="a73b26ce1edd4ab839826abedcc72a475" args="(int period, MIQPParameters params, ocra::Model::Ptr robotModel, const Eigen::MatrixXd &amp;comStateRef)" -->
+<a class="anchor" id="aa40045cd7c4579494fa03f1e99fc474f"></a><!-- doxytag: member="MIQPController::MIQPController" ref="aa40045cd7c4579494fa03f1e99fc474f" args="(int period, MIQPParameters params, ocra::Model::Ptr robotModel, std::shared_ptr&lt; StepController &gt; stepController, const Eigen::MatrixXd &amp;comStateRef)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMIQPController.html#a73b26ce1edd4ab839826abedcc72a475">MIQPController::MIQPController</a> </td>
+          <td class="memname"><a class="el" href="classMIQPController.html#aa40045cd7c4579494fa03f1e99fc474f">MIQPController::MIQPController</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>period</em>, </td>
@@ -214,6 +215,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt;&#160;</td>
+          <td class="paramname"><em>stepController</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
           <td class="paramname"><em>comStateRef</em>&#160;</td>
         </tr>
@@ -229,7 +236,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">period</td><td><a class="el" href="classThread.html" title="The meat and potatoes of the controller server.">Thread</a> period in ms </td></tr>
-    <tr><td class="paramname">params</td><td>MIQP parameters  robotModel Pointer to the robot model instantiated by the containing client (walking-client) </td></tr>
+    <tr><td class="paramname">params</td><td><a class="el" href="namespaceMIQP.html">MIQP</a> parameters  robotModel Pointer to the robot model instantiated by the containing client (walking-client) </td></tr>
     <tr><td class="paramname">comStateRef</td><td>Reference to a matrix of CoM state references. The k-th row contains the desired CoM state at time k </td></tr>
   </table>
   </dd>
@@ -762,7 +769,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Sets <a class="el" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a>, which corresponds to the linear part of the objective function of the MIQP </p>
+<p>Sets <a class="el" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a>, which corresponds to the linear part of the objective function of the <a class="el" href="namespaceMIQP.html">MIQP</a> </p>
 
 </div>
 </div>
@@ -856,7 +863,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Performs all the initialization of the MIQP controller such as:</p>
+<p>Performs all the initialization of the <a class="el" href="namespaceMIQP.html">MIQP</a> controller such as:</p>
 <ul>
 <li>Initializing the Gurobi model.</li>
 <li>Set lower and upper bounds of the optimization variables.</li>
@@ -938,7 +945,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Matrix A of the equality constraints of the MIQP problem, i.e. </p>
+<p>Matrix A of the equality constraints of the <a class="el" href="namespaceMIQP.html">MIQP</a> problem, i.e. </p>
 <p class="formulaDsp">
 \[ A_{\text{eq}} x = b_{\text{eq}} \]
 </p>
@@ -978,7 +985,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Inequality matrix of the MIQP problem, i.e. </p>
+<p>Inequality matrix of the <a class="el" href="namespaceMIQP.html">MIQP</a> problem, i.e. </p>
 <p class="formulaDsp">
 \[ A_{\text{ineq}} x \leq b_{\text{ineq}} \]
 </p>
@@ -996,7 +1003,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>RHS of the equality constraints of the MIQP problem, i.e. </p>
+<p>RHS of the equality constraints of the <a class="el" href="namespaceMIQP.html">MIQP</a> problem, i.e. </p>
 <p class="formulaDsp">
 \[ A_{\text{eq}} x = b_{\test{eq}} \]
 </p>
@@ -1036,7 +1043,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>RHS inequality vector \(b_{\text{ineq}}\) of the MIQP problem, i.e. </p>
+<p>RHS inequality vector \(b_{\text{ineq}}\) of the <a class="el" href="namespaceMIQP.html">MIQP</a> problem, i.e. </p>
 <p class="formulaDsp">
 \[ A_{\text{ineq}} x \leq b_{\text{ineq}} \]
 </p>
@@ -1208,7 +1215,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Positive definite matrix \(\mathbf{H}_N\) with the coefficients of the quadratic objective of the MIQP for the walking MPC problem: </p>
+<p>Positive definite matrix \(\mathbf{H}_N\) with the coefficients of the quadratic objective of the <a class="el" href="namespaceMIQP.html">MIQP</a> for the walking MPC problem: </p>
 <p class="formulaDsp">
 \[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
 </p>
@@ -1273,7 +1280,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Contains the state-dependent coefficients of the linear term of the objective function of the MIQP for the walking MPC problem.</p>
+<p>Contains the state-dependent coefficients of the linear term of the objective function of the <a class="el" href="namespaceMIQP.html">MIQP</a> for the walking MPC problem.</p>
 <p class="formulaDsp">
 \[ \underset{\mathcal{X}}{\text{min}} \; \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X} \]
 </p>
@@ -1295,7 +1302,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Object containing basic MIQP parameters. </p>
+<p>Object containing basic <a class="el" href="namespaceMIQP.html">MIQP</a> parameters. </p>
 
 </div>
 </div>
@@ -1573,17 +1580,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adc70be859da53c202bc0e0c84cc71917"></a><!-- doxytag: member="MIQPController::_state" ref="adc70be859da53c202bc0e0c84cc71917" args="" -->
+<a class="anchor" id="aeaa4c96afe2d1d975667338e858f4a90"></a><!-- doxytag: member="MIQPController::_state" ref="aeaa4c96afe2d1d975667338e858f4a90" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classMIQPState.html">MIQPState</a>&gt; <a class="el" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">MIQPController::_state</a><code> [private]</code></td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classMIQP_1_1MIQPState.html">MIQP::MIQPState</a>&gt; <a class="el" href="classMIQPController.html#aeaa4c96afe2d1d975667338e858f4a90">MIQPController::_state</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>MIQP State </p>
+<p><a class="el" href="namespaceMIQP.html">MIQP</a> State </p>
+
+</div>
+</div>
+<a class="anchor" id="a10018469a257136470ad9293fc3fe84a"></a><!-- doxytag: member="MIQPController::_stepController" ref="a10018469a257136470ad9293fc3fe84a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classStepController.html">StepController</a>&gt; <a class="el" href="classMIQPController.html#a10018469a257136470ad9293fc3fe84a">MIQPController::_stepController</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -1675,7 +1695,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Solution \(\mathcal{X}_{k,N}\) of the MIQP problem </p>
+<p>Solution \(\mathcal{X}_{k,N}\) of the <a class="el" href="namespaceMIQP.html">MIQP</a> problem </p>
 
 </div>
 </div>
@@ -1689,7 +1709,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>State vector \(\xi_k\) of the MIQP problem:</p>
+<p>State vector \(\xi_k\) of the <a class="el" href="namespaceMIQP.html">MIQP</a> problem:</p>
 <p class="formulaDsp">
 \[ \begin{array}{ccccccccc} [\mathbf{a} &amp; \mathbf{b} &amp; \mathbf{\alpha} &amp; \mathbf{\beta} &amp; \delta &amp; \gamma &amp; \mathbf{h} &amp; \dot{\mathbf{h}} &amp; \ddot{\mathbf{h}}] \end{array} \]
 </p>
@@ -1721,7 +1741,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 1 2017 23:39:56 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Mar 2 2017 23:40:37 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

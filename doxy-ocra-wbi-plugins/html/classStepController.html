@@ -116,8 +116,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#a16b1f62737f1287b7f33b216871d1ba8">doComputeMidPoint</a> (Eigen::Vector3d currentFootPosition, Eigen::Vector3d <a class="el" href="classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d">target</a>, double stepHeight, Eigen::Vector3d &amp;midPoint)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#a9e2415755548f47301277feb7a376270">isTrajectoryFinished</a> (<a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#a48224628b92c088a34d9db4a14f75f1a">stop</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#afb77002292921660ef4a44657d6566f1">getContact2DCoordinates</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::vector<br class="typebreak"/>
+&lt; ocra_recipes::TaskConnection::Ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#aabeb4837b7b6cf691cb9de57c6ea8800">_contactsCollection</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">ocra_recipes::TaskConnection::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#ad778378c6e6ac12d972cc8c5a986dcf9">_LeftFootContact_BackLeft</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">ocra_recipes::TaskConnection::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#a74e19501ce4f336bb4c26beebe3d39e2">_LeftFootContact_FrontLeft</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">ocra_recipes::TaskConnection::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#a9c733b7ab0ce610c84158f7d1de60267">_LeftFootContact_BackRight</a></td></tr>
@@ -344,6 +347,24 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afb77002292921660ef4a44657d6566f1"></a><!-- doxytag: member="StepController::getContact2DCoordinates" ref="afb77002292921660ef4a44657d6566f1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classStepController.html#afb77002292921660ef4a44657d6566f1">StepController::getContact2DCoordinates</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Returns the 2D coordinates of the contacts defined at the task level.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Matrix of 2D coordinates of the contact points defined at task level. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aa168e028dc086859400e1c93c0becdd2"></a><!-- doxytag: member="StepController::getLeftFootPosition" ref="aa168e028dc086859400e1c93c0becdd2" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -432,6 +453,19 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="aabeb4837b7b6cf691cb9de57c6ea8800"></a><!-- doxytag: member="StepController::_contactsCollection" ref="aabeb4837b7b6cf691cb9de57c6ea8800" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;ocra_recipes::TaskConnection::Ptr&gt; <a class="el" href="classStepController.html#aabeb4837b7b6cf691cb9de57c6ea8800">StepController::_contactsCollection</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="adc2b0bf2d3c302c54d659d44cb34ba3e"></a><!-- doxytag: member="StepController::_leftFoot_TrajThread" ref="adc2b0bf2d3c302c54d659d44cb34ba3e" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -651,7 +685,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classStepController.html">StepController</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 1 2017 23:39:57 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Mar 2 2017 23:40:37 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

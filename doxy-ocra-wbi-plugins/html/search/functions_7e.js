@@ -1,6 +1,7 @@
 var searchData=
 [
   ['_7eadmissibilityconstraints',['~AdmissibilityConstraints',['../classAdmissibilityConstraints.html#a7daa761292772da2f01084584fc46736',1,'AdmissibilityConstraints']]],
+  ['_7ebaseofsupport',['~BaseOfSupport',['../classBaseOfSupport.html#a8f2261d4d25cd677d0114df426dfbfa7',1,'BaseOfSupport']]],
   ['_7ebounding',['~Bounding',['../classBounding.html#a8e3b81ea2078454840fe93a44f634d56',1,'Bounding']]],
   ['_7econstancy',['~Constancy',['../classConstancy.html#a1cc620e04f04b406913bc60fd883bd66',1,'Constancy']]],
   ['_7econtactconfigenforcement',['~ContactConfigEnforcement',['../classContactConfigEnforcement.html#a8a58b4c421e538be35979680c96fd1d9',1,'ContactConfigEnforcement']]],
@@ -9,7 +10,7 @@ var searchData=
   ['_7eicubcontrollerserver',['~IcubControllerServer',['../classIcubControllerServer.html#a7582d4bbf9851ee9b58913ea2a89e5fd',1,'IcubControllerServer']]],
   ['_7emiqpcontroller',['~MIQPController',['../classMIQPController.html#a46e1cc8dba1633a49d934aa20730e358',1,'MIQPController']]],
   ['_7emiqplinearconstraints',['~MIQPLinearConstraints',['../classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2',1,'MIQPLinearConstraints']]],
-  ['_7emiqpstate',['~MIQPState',['../classMIQPState.html#a1f2f14c183d11b3a1e323b59fe47020b',1,'MIQPState']]],
+  ['_7emiqpstate',['~MIQPState',['../classMIQP_1_1MIQPState.html#a1f2f14c183d11b3a1e323b59fe47020b',1,'MIQP::MIQPState']]],
   ['_7emodelinitializer',['~ModelInitializer',['../classocra__icub_1_1ModelInitializer.html#af72e47a78f20f34f77be2b9e6921ca19',1,'ocra_icub::ModelInitializer']]],
   ['_7emodule',['~Module',['../classModule.html#a7c9d9c096786d127590fdd8aa2b7d681',1,'Module']]],
   ['_7eocracontrolleroptions',['~OcraControllerOptions',['../classOcraControllerOptions.html#a22f514e92ccf91cc362c48a6c340ac19',1,'OcraControllerOptions']]],

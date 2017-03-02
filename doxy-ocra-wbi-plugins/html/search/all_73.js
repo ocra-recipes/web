@@ -63,6 +63,7 @@ var searchData=
   ['state_5fvector_5fsize',['STATE_VECTOR_SIZE',['../MIQPController_8h.html#ab0e06eaa253307db2bac3c9b0a9e6b10',1,'MIQPController.h']]],
   ['statemachinewithoutpauseindoublesupport',['stateMachineWithoutPauseInDoubleSupport',['../classSteppingDemoClient.html#a256284578a6b9818a8f726451d2fb2c4',1,'SteppingDemoClient']]],
   ['statemachinewithpauseindoublesupport',['stateMachineWithPauseInDoubleSupport',['../classSteppingDemoClient.html#a346a8fd10641897532a26f598db7799d',1,'SteppingDemoClient']]],
+  ['statevectorindex',['StateVectorIndex',['../namespaceMIQP.html#a437279e763ccbc43c283bfcb0508740b',1,'MIQP']]],
   ['static_5fwalking',['STATIC_WALKING',['../SteppingDemoClient_8h.html#abd6d177d63e98aa1b4ed4b8329e2a379ada7017955bb1db9f0954017358028fa6',1,'SteppingDemoClient.h']]],
   ['staticwalkingloop',['staticWalkingLoop',['../classSteppingDemoClient.html#a0f6b689c5f032351484b03e71a3530e1',1,'SteppingDemoClient']]],
   ['stddev',['stdDev',['../classModule.html#af66a2dab82208cb2ea25da22fcaaa4a3',1,'Module']]],

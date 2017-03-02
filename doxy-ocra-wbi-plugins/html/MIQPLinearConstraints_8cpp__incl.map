@@ -1,14 +1,20 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$MIQPLinearConstraints_8h.html" title="walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="632,83,952,112"/>
-<area shape="rect" id="node5" href="$ShapeConstraints_8h.html" title="walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="264,160,552,189"/>
-<area shape="rect" id="node28" href="$AdmissibilityConstraints_8h.html" title="walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="1015,160,1340,189"/>
-<area shape="rect" id="node7" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="729,315,972,344"/>
-<area shape="rect" id="node19" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="24,237,261,267"/>
-<area shape="rect" id="node22" href="$Constancy_8h.html" title="walking&#45;client/constraints/Constancy.h" alt="" coords="285,237,531,267"/>
-<area shape="rect" id="node25" href="$Sequentiality_8h.html" title="walking&#45;client/constraints/Sequentiality.h" alt="" coords="555,237,813,267"/>
-<area shape="rect" id="node9" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="465,392,604,421"/>
-<area shape="rect" id="node31" href="$SSDSAlternation_8h.html" title="walking&#45;client/constraints/SSDSAlternation.h" alt="" coords="888,237,1171,267"/>
-<area shape="rect" id="node34" href="$SingleSupport_8h.html" title="walking&#45;client/constraints/SingleSupport.h" alt="" coords="1195,237,1459,267"/>
-<area shape="rect" id="node37" href="$ContactConfigHistory_8h.html" title="walking&#45;client/constraints/ContactConfigHistory.h" alt="" coords="1483,237,1792,267"/>
-<area shape="rect" id="node40" href="$ContactConfigEnforcement_8h.html" title="walking&#45;client/constraints/ContactConfigEnforcement.h" alt="" coords="1816,237,2157,267"/>
+<area shape="rect" id="node3" href="$MIQPLinearConstraints_8h.html" title="walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="2041,83,2361,112"/>
+<area shape="rect" id="node5" href="$ShapeConstraints_8h.html" title="walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="2235,160,2523,189"/>
+<area shape="rect" id="node28" href="$AdmissibilityConstraints_8h.html" title="walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="3299,160,3624,189"/>
+<area shape="rect" id="node43" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="1192,315,1389,344"/>
+<area shape="rect" id="node48" href="$BaseOfSupport_8h.html" title="walking&#45;client/BaseOfSupport.h" alt="" coords="1751,237,1956,267"/>
+<area shape="rect" id="node7" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="2801,315,3044,344"/>
+<area shape="rect" id="node19" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="2583,237,2820,267"/>
+<area shape="rect" id="node22" href="$Constancy_8h.html" title="walking&#45;client/constraints/Constancy.h" alt="" coords="1980,237,2225,267"/>
+<area shape="rect" id="node25" href="$Sequentiality_8h.html" title="walking&#45;client/constraints/Sequentiality.h" alt="" coords="2249,237,2508,267"/>
+<area shape="rect" id="node9" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="1665,392,1804,421"/>
+<area shape="rect" id="node31" href="$SSDSAlternation_8h.html" title="walking&#45;client/constraints/SSDSAlternation.h" alt="" coords="3881,237,4164,267"/>
+<area shape="rect" id="node34" href="$SingleSupport_8h.html" title="walking&#45;client/constraints/SingleSupport.h" alt="" coords="2844,237,3108,267"/>
+<area shape="rect" id="node37" href="$ContactConfigHistory_8h.html" title="walking&#45;client/constraints/ContactConfigHistory.h" alt="" coords="3132,237,3441,267"/>
+<area shape="rect" id="node40" href="$ContactConfigEnforcement_8h.html" title="walking&#45;client/constraints/ContactConfigEnforcement.h" alt="" coords="3465,237,3807,267"/>
+<area shape="rect" id="node57" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="2267,315,2448,344"/>
+<area shape="rect" id="node61" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="2445,392,2621,421"/>
+<area shape="rect" id="node80" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1852,547,1985,576"/>
+<area shape="rect" id="node70" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="2571,469,2784,499"/>
 </map>

@@ -118,66 +118,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00045"></a>00045 <span class="preprocessor"></span>
 <a name="l00046"></a>00046 <span class="preprocessor">#include &quot;<a class="code" href="ShapeConstraints_8h.html">walking-client/constraints/ShapeConstraints.h</a>&quot;</span>
 <a name="l00047"></a>00047 <span class="preprocessor">#include &quot;<a class="code" href="AdmissibilityConstraints_8h.html">walking-client/constraints/AdmissibilityConstraints.h</a>&quot;</span>
-<a name="l00048"></a>00048 
-<a name="l00049"></a><a class="code" href="classMIQPLinearConstraints.html">00049</a> <span class="keyword">class </span><a class="code" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a> {
-<a name="l00050"></a>00050 <span class="keyword">private</span>:
-<a name="l00051"></a><a class="code" href="classMIQPLinearConstraints.html#a5c8788e52f7b0664606662cfa758ae88">00051</a>     std::shared_ptr&lt;ShapeConstraints&gt; <a class="code" href="classMIQPLinearConstraints.html#a5c8788e52f7b0664606662cfa758ae88">_shapeCnstr</a>;
-<a name="l00052"></a><a class="code" href="classMIQPLinearConstraints.html#a1ac00fe6aca254b4dd8568e199bd20a4">00052</a>     std::shared_ptr&lt;AdmissibilityConstraints&gt; <a class="code" href="classMIQPLinearConstraints.html#a1ac00fe6aca254b4dd8568e199bd20a4">_admissibilityCnstr</a>;
-<a name="l00053"></a><a class="code" href="classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180">00053</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180">_AShapeAdmiss</a>;
-<a name="l00054"></a><a class="code" href="classMIQPLinearConstraints.html#ab3ea8be40c22fa7d8035c7b5c5c1010c">00054</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#ab3ea8be40c22fa7d8035c7b5c5c1010c">_BShapeAdmiss</a>;
-<a name="l00055"></a><a class="code" href="classMIQPLinearConstraints.html#a4e1cac634590c04e81d9b9341088efeb">00055</a>     Eigen::VectorXd <a class="code" href="classMIQPLinearConstraints.html#a4e1cac634590c04e81d9b9341088efeb">_fcbarShapeAdmiss</a>;
-<a name="l00056"></a><a class="code" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">00056</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">_A</a>;
-<a name="l00057"></a>00057     <span class="comment">// f_c - B*Xi_k</span>
-<a name="l00058"></a><a class="code" href="classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530">00058</a>     Eigen::VectorXd <a class="code" href="classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530">_rhs</a>;
-<a name="l00059"></a><a class="code" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">00059</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">_Acr</a>;
-<a name="l00060"></a><a class="code" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">00060</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">_Acl</a>;
-<a name="l00061"></a>00061     
-<a name="l00071"></a><a class="code" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">00071</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">_Q</a>;
-<a name="l00072"></a>00072     
-<a name="l00085"></a><a class="code" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">00085</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">_T</a>;
-<a name="l00086"></a>00086 
-<a name="l00097"></a><a class="code" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">00097</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a>;
-<a name="l00098"></a>00098     
-<a name="l00115"></a><a class="code" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">00115</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">_Ah</a>;
-<a name="l00116"></a>00116     
-<a name="l00120"></a><a class="code" href="classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725">00120</a>     <span class="keywordtype">bool</span> <a class="code" href="classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725">_addShapeCtrs</a>;
-<a name="l00121"></a>00121     
-<a name="l00125"></a><a class="code" href="classMIQPLinearConstraints.html#a155ab4ad5ab14b793611c12473ce9297">00125</a>     <span class="keywordtype">bool</span> <a class="code" href="classMIQPLinearConstraints.html#a155ab4ad5ab14b793611c12473ce9297">_addAdmissibilityCtrs</a>;
-<a name="l00126"></a>00126     
-<a name="l00130"></a><a class="code" href="classMIQPLinearConstraints.html#ad1363c7fde3dd4f20adc92a7e1865579">00130</a>     <span class="keywordtype">bool</span> <a class="code" href="classMIQPLinearConstraints.html#ad1363c7fde3dd4f20adc92a7e1865579">_addWalkingCtrs</a>;
-<a name="l00131"></a>00131 
-<a name="l00133"></a><a class="code" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">00133</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">_dt</a>;
+<a name="l00048"></a>00048 <span class="preprocessor">#include &quot;<a class="code" href="StepController_8h.html">walking-client/StepController.h</a>&quot;</span>
+<a name="l00049"></a>00049 <span class="preprocessor">#include &quot;<a class="code" href="BaseOfSupport_8h.html">walking-client/BaseOfSupport.h</a>&quot;</span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a><a class="code" href="classMIQPLinearConstraints.html">00051</a> <span class="keyword">class </span><a class="code" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a> {
+<a name="l00052"></a>00052 <span class="keyword">private</span>:
+<a name="l00053"></a><a class="code" href="classMIQPLinearConstraints.html#a5c8788e52f7b0664606662cfa758ae88">00053</a>     std::shared_ptr&lt;ShapeConstraints&gt; <a class="code" href="classMIQPLinearConstraints.html#a5c8788e52f7b0664606662cfa758ae88">_shapeCnstr</a>;
+<a name="l00054"></a><a class="code" href="classMIQPLinearConstraints.html#a1ac00fe6aca254b4dd8568e199bd20a4">00054</a>     std::shared_ptr&lt;AdmissibilityConstraints&gt; <a class="code" href="classMIQPLinearConstraints.html#a1ac00fe6aca254b4dd8568e199bd20a4">_admissibilityCnstr</a>;
+<a name="l00055"></a><a class="code" href="classMIQPLinearConstraints.html#ac1ea7dbfb54c84c9c3e172d36aa42671">00055</a>     std::shared_ptr&lt;StepController&gt; <a class="code" href="classMIQPLinearConstraints.html#ac1ea7dbfb54c84c9c3e172d36aa42671">_stepController</a>;
+<a name="l00056"></a><a class="code" href="classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180">00056</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180">_AShapeAdmiss</a>;
+<a name="l00057"></a><a class="code" href="classMIQPLinearConstraints.html#ab3ea8be40c22fa7d8035c7b5c5c1010c">00057</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#ab3ea8be40c22fa7d8035c7b5c5c1010c">_BShapeAdmiss</a>;
+<a name="l00058"></a><a class="code" href="classMIQPLinearConstraints.html#a4e1cac634590c04e81d9b9341088efeb">00058</a>     Eigen::VectorXd <a class="code" href="classMIQPLinearConstraints.html#a4e1cac634590c04e81d9b9341088efeb">_fcbarShapeAdmiss</a>;
+<a name="l00059"></a><a class="code" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">00059</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">_A</a>;
+<a name="l00060"></a>00060     <span class="comment">// f_c - B*Xi_k</span>
+<a name="l00061"></a><a class="code" href="classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530">00061</a>     Eigen::VectorXd <a class="code" href="classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530">_rhs</a>;
+<a name="l00062"></a><a class="code" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">00062</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed">_Acr</a>;
+<a name="l00063"></a><a class="code" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">00063</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120">_Acl</a>;
+<a name="l00064"></a>00064     
+<a name="l00074"></a><a class="code" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">00074</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">_Q</a>;
+<a name="l00075"></a>00075     
+<a name="l00088"></a><a class="code" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">00088</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">_T</a>;
+<a name="l00089"></a>00089 
+<a name="l00100"></a><a class="code" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">00100</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5">_Bh</a>;
+<a name="l00101"></a>00101     
+<a name="l00118"></a><a class="code" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">00118</a>     Eigen::MatrixXd <a class="code" href="classMIQPLinearConstraints.html#aacba15c9dfc1c8f88e253a4f75e422fd">_Ah</a>;
+<a name="l00119"></a>00119     
+<a name="l00123"></a><a class="code" href="classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725">00123</a>     <span class="keywordtype">bool</span> <a class="code" href="classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725">_addShapeCtrs</a>;
+<a name="l00124"></a>00124     
+<a name="l00128"></a><a class="code" href="classMIQPLinearConstraints.html#a155ab4ad5ab14b793611c12473ce9297">00128</a>     <span class="keywordtype">bool</span> <a class="code" href="classMIQPLinearConstraints.html#a155ab4ad5ab14b793611c12473ce9297">_addAdmissibilityCtrs</a>;
+<a name="l00129"></a>00129     
+<a name="l00133"></a><a class="code" href="classMIQPLinearConstraints.html#a8e20d42828c638f41d074153cc0957d8">00133</a>     <span class="keywordtype">bool</span> <a class="code" href="classMIQPLinearConstraints.html#a8e20d42828c638f41d074153cc0957d8">_addCoPConstraints</a>;
 <a name="l00134"></a>00134     
-<a name="l00136"></a><a class="code" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">00136</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">_N</a>;
-<a name="l00137"></a>00137     
-<a name="l00139"></a><a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">00139</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a>;
-<a name="l00140"></a>00140 <span class="keyword">public</span>:
-<a name="l00141"></a>00141 
-<a name="l00145"></a>00145     <a class="code" href="classMIQPLinearConstraints.html#a882b9a928fc7a89a4aa948b33bed72d1">MIQPLinearConstraints</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dt, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N, <span class="keywordtype">bool</span> addShapeCtrs=<span class="keyword">true</span>, <span class="keywordtype">bool</span> addAdmissibilityCtrs=<span class="keyword">true</span>, <span class="keywordtype">bool</span> addWalkingCtrs=<span class="keyword">false</span>);
-<a name="l00146"></a>00146     
-<a name="l00147"></a>00147     <span class="keyword">virtual</span> <a class="code" href="classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2">~MIQPLinearConstraints</a> ();
+<a name="l00138"></a><a class="code" href="classMIQPLinearConstraints.html#ad1363c7fde3dd4f20adc92a7e1865579">00138</a>     <span class="keywordtype">bool</span> <a class="code" href="classMIQPLinearConstraints.html#ad1363c7fde3dd4f20adc92a7e1865579">_addWalkingCtrs</a>;
+<a name="l00139"></a>00139 
+<a name="l00141"></a><a class="code" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">00141</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">_dt</a>;
+<a name="l00142"></a>00142     
+<a name="l00144"></a><a class="code" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">00144</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">_N</a>;
+<a name="l00145"></a>00145     
+<a name="l00147"></a><a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">00147</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a>;
 <a name="l00148"></a>00148     
-<a name="l00154"></a>00154     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a>(Eigen::VectorXd xi_k);
-<a name="l00155"></a>00155     
-<a name="l00163"></a>00163     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a>(Eigen::MatrixXd &amp;A);
-<a name="l00164"></a>00164     
-<a name="l00170"></a>00170     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints</a>();
-<a name="l00171"></a>00171 
-<a name="l00172"></a>00172     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a">getRHS</a>(Eigen::VectorXd &amp;rhs);
-<a name="l00173"></a>00173 
-<a name="l00174"></a>00174 <span class="keyword">protected</span>:
-<a name="l00195"></a>00195     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow</a>();
-<a name="l00201"></a>00201     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e">buildAShapeAdmiss</a>();
-<a name="l00207"></a>00207     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aa3752e85f1167129814b1a41d6b0198e">buildBShapeAdmiss</a>();
-<a name="l00211"></a>00211     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a5231950d561e42e0d6590a398bec771c">buildFcBarShapeAdmiss</a>();
-<a name="l00215"></a>00215     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ad36868550b3d1f977a67e76a44160192">setMatrixAcr</a>();
-<a name="l00219"></a>00219     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a2985d200d8e6baba2df17abfeaca8882">setMatrixAcl</a>();
-<a name="l00227"></a>00227     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a127e7ddd641f11d1b6137c59d80ef8b5">buildMatrixQ</a>();
-<a name="l00235"></a>00235     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#addee397c47be26fd9eebbe8374c3cc30">buildMatrixT</a>();
-<a name="l00241"></a>00241     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ae6ecdf8d77474a8b099f2526d6cc0d75">buildBh</a>();
-<a name="l00247"></a>00247     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27">buildAh</a>();
-<a name="l00248"></a>00248 };
-<a name="l00249"></a>00249 <span class="preprocessor">#endif</span>
+<a name="l00150"></a><a class="code" href="classMIQPLinearConstraints.html#ae39cc39151d69efaaaa8c520de8248f4">00150</a>     <a class="code" href="classBaseOfSupport.html" title="Builds base of support and corresponding constraints based on the robot&#39;s feet location.">BaseOfSupport</a> <a class="code" href="classMIQPLinearConstraints.html#ae39cc39151d69efaaaa8c520de8248f4">_baseOfSupport</a>;
+<a name="l00151"></a>00151 <span class="keyword">public</span>:
+<a name="l00152"></a>00152 
+<a name="l00156"></a>00156     <a class="code" href="classMIQPLinearConstraints.html#ae784e0e4a3fbde27d999c5315119fa0f">MIQPLinearConstraints</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dt, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N, std::shared_ptr&lt;StepController&gt; stepController, <span class="keywordtype">bool</span> addShapeCtrs=<span class="keyword">true</span>, <span class="keywordtype">bool</span> addAdmissibilityCtrs=<span class="keyword">true</span>, <span class="keywordtype">bool</span> addCoPConstraints=<span class="keyword">false</span>, <span class="keywordtype">bool</span> addWalkingCtrs=<span class="keyword">false</span>);
+<a name="l00157"></a>00157     
+<a name="l00158"></a>00158     <span class="keyword">virtual</span> <a class="code" href="classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2">~MIQPLinearConstraints</a> ();
+<a name="l00159"></a>00159     
+<a name="l00165"></a>00165     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a>(Eigen::VectorXd xi_k);
+<a name="l00166"></a>00166     
+<a name="l00174"></a>00174     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a>(Eigen::MatrixXd &amp;A);
+<a name="l00175"></a>00175     
+<a name="l00181"></a>00181     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints</a>();
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a">getRHS</a>(Eigen::VectorXd &amp;rhs);
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185 <span class="keyword">protected</span>:
+<a name="l00206"></a>00206     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">buildShapeAndAdmissibilityInPreviewWindow</a>();
+<a name="l00212"></a>00212     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e">buildAShapeAdmiss</a>();
+<a name="l00218"></a>00218     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#aa3752e85f1167129814b1a41d6b0198e">buildBShapeAdmiss</a>();
+<a name="l00222"></a>00222     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a5231950d561e42e0d6590a398bec771c">buildFcBarShapeAdmiss</a>();
+<a name="l00226"></a>00226     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ad36868550b3d1f977a67e76a44160192">setMatrixAcr</a>();
+<a name="l00230"></a>00230     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a2985d200d8e6baba2df17abfeaca8882">setMatrixAcl</a>();
+<a name="l00238"></a>00238     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a127e7ddd641f11d1b6137c59d80ef8b5">buildMatrixQ</a>();
+<a name="l00246"></a>00246     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#addee397c47be26fd9eebbe8374c3cc30">buildMatrixT</a>();
+<a name="l00252"></a>00252     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#ae6ecdf8d77474a8b099f2526d6cc0d75">buildBh</a>();
+<a name="l00258"></a>00258     <span class="keywordtype">void</span> <a class="code" href="classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27">buildAh</a>();
+<a name="l00259"></a>00259 };
+<a name="l00260"></a>00260 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -198,7 +205,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="MIQPLinearConstraints_8h.html">MIQPLinearConstraints.h</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 1 2017 23:39:56 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Mar 2 2017 23:40:36 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -4,5 +4,5 @@ var searchData=
   ['ocratowbitwistvector',['ocraToWbiTwistVector',['../classocra__icub_1_1OcraWbiConversions.html#a7725aea95eb71c805def4a064a2693fa',1,'ocra_icub::OcraWbiConversions']]],
   ['ocrawbimodel',['OcraWbiModel',['../classocra__icub_1_1OcraWbiModel.html#a57a4f0f140f56d7ec0a00b31e16f9673',1,'ocra_icub::OcraWbiModel']]],
   ['ocrawbimodel_5fpimpl',['OcraWbiModel_pimpl',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a160077c75e80a7d0fcc8b2491de7f86c',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
-  ['operator_3c_3c',['operator<<',['../Thread_8cpp.html#a30ab3a18ec4f8101aa6f1df6926888f6',1,'operator&lt;&lt;(std::ostream &amp;out, const OcraControllerOptions &amp;opts):&#160;Thread.cpp'],['../MIQPState_8cpp.html#ad32751f8094f2fa0f7c1ebca5eabf9df',1,'operator&lt;&lt;(std::ostream &amp;out, const MIQPState &amp;state):&#160;MIQPState.cpp']]]
+  ['operator_3c_3c',['operator<<',['../Thread_8cpp.html#a30ab3a18ec4f8101aa6f1df6926888f6',1,'Thread.cpp']]]
 ];

@@ -2,6 +2,7 @@ var annotated =
 [
     [ "AdmissibilityConstraints", "classAdmissibilityConstraints.html", "classAdmissibilityConstraints" ],
     [ "AdmissibilityConstraintsStruct", "structAdmissibilityConstraintsStruct.html", "structAdmissibilityConstraintsStruct" ],
+    [ "BaseOfSupport", "classBaseOfSupport.html", "classBaseOfSupport" ],
     [ "Bounding", "classBounding.html", "classBounding" ],
     [ "ShapeConstraintsStruct::boundingStruct", "structShapeConstraintsStruct_1_1boundingStruct.html", "structShapeConstraintsStruct_1_1boundingStruct" ],
     [ "Constancy", "classConstancy.html", "classConstancy" ],
@@ -18,7 +19,8 @@ var annotated =
     [ "MIQPController", "classMIQPController.html", "classMIQPController" ],
     [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html", "classMIQPLinearConstraints" ],
     [ "MIQPParameters", "structMIQPParameters.html", "structMIQPParameters" ],
-    [ "MIQPState", "classMIQPState.html", "classMIQPState" ],
+    [ "MIQP::MIQPState", "classMIQP_1_1MIQPState.html", "classMIQP_1_1MIQPState" ],
+    [ "MIQPState", "classMIQPState.html", null ],
     [ "ocra_icub::ModelInitializer", "classocra__icub_1_1ModelInitializer.html", "classocra__icub_1_1ModelInitializer" ],
     [ "Module", "classModule.html", "classModule" ],
     [ "OcraControllerOptions", "classOcraControllerOptions.html", "classOcraControllerOptions" ],

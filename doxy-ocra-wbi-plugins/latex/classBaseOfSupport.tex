@@ -1,0 +1,159 @@
+\hypertarget{classBaseOfSupport}{\section{\-Base\-Of\-Support \-Class \-Reference}
+\label{classBaseOfSupport}\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}}
+}
+
+
+\-Builds base of support and corresponding constraints based on the robot's feet location.  
+
+
+
+
+{\ttfamily \#include $<$\-Base\-Of\-Support.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBaseOfSupport_a2490d7d641608be3b85c903de83313cc}{\-Base\-Of\-Support} (std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>$ step\-Controller)
+\item 
+virtual \hyperlink{classBaseOfSupport_a8f2261d4d25cd677d0114df426dfbfa7}{$\sim$\-Base\-Of\-Support} ()
+\item 
+void \hyperlink{classBaseOfSupport_af88e70d87098060a46e4a6fc9c876a22}{compute\-Bo\-S\-Center} (\-Eigen\-::\-Vector2d \&r)
+\item 
+void \hyperlink{classBaseOfSupport_ac0e7a364ac0ac945469a34d12ab3c9f4}{compute\-Aand\-B} (\-Eigen\-::\-Matrix\-Xd \&list\-Convex\-Hull, \-Eigen\-::\-Vector2d a, \-Eigen\-::\-Vector2d b)
+\item 
+void \hyperlink{classBaseOfSupport_a09b197a9869db126658d227532c1e03a}{compute\-Ai\-Bi} (\-Eigen\-::\-Vector2d r, \-Eigen\-::\-Vector2d p1, \-Eigen\-::\-Vector2d p2, \-Eigen\-::\-Row\-Vector2d \&\-Ai, double \&bi, double tol\-Diff=1e-\/2)
+\item 
+void \hyperlink{classBaseOfSupport_ad9a709f6df002662bfd67982a2c0e201}{compute\-Midpoint} (\-Eigen\-::\-Vector2d a, \-Eigen\-::\-Vector2d b, \-Eigen\-::\-Vector2d \&r)
+\item 
+bool \hyperlink{classBaseOfSupport_af7907a87712c10c72f812f0304c013e4}{update} (\-Eigen\-::\-Vector\-Xd xi\-\_\-k)
+\item 
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classBaseOfSupport_ae98c5398e4c53666e324c1fcfb1ef167}{compute\-Convex\-Hull} (\-Eigen\-::\-Matrix\-Xd \&feet\-Corners)
+\item 
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classBaseOfSupport_afc033ba8e5530f667f90ae539adb27f3}{get\-Feet\-Corners} (int gamma)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}{\-\_\-\-A}
+\item 
+\-Eigen\-::\-Vector\-Xd \hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B}
+\item 
+\hyperlink{BaseOfSupport_8h_a3b0bf53b9d321e300a59729ebe10e02c}{\-Polygon} \hyperlink{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}{\-\_\-poly}
+\item 
+\hyperlink{BaseOfSupport_8h_a3b0bf53b9d321e300a59729ebe10e02c}{\-Polygon} \hyperlink{classBaseOfSupport_a3caa9bcea814865f12d891c0a1c8c4ea}{\-\_\-hull}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>$ \hyperlink{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}{\-\_\-step\-Controller}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Builds base of support and corresponding constraints based on the robot's feet location. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Jorhabib \-Eljaik \cite{ibanezThesis2015} 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{\-Warning}
+\-Work in progress! \-This is still a barebone class in the process of being tested.
+\end{DoxyWarning}
+\-This class uses the \-Geometry \-Boost libraries in order to find the vertices of the base of support (support polygon) defined by the location of the feet of the robot. \-Afterwards, it will build the inequality constraints that define the area of this polygon, useful to \hyperlink{classMIQPLinearConstraints}{\-M\-I\-Q\-P\-Linear\-Constraints} to define the constraints on the \-Center of \-Pressure which should always lie within the support polygon. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classBaseOfSupport_a2490d7d641608be3b85c903de83313cc}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-Base\-Of\-Support@{\-Base\-Of\-Support}}
+\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{\-Base\-Of\-Support}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Base\-Of\-Support\-::\-Base\-Of\-Support} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Step\-Controller} $>$}]{step\-Controller}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_a2490d7d641608be3b85c903de83313cc}
+\hypertarget{classBaseOfSupport_a8f2261d4d25cd677d0114df426dfbfa7}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!$\sim$\-Base\-Of\-Support@{$\sim$\-Base\-Of\-Support}}
+\index{$\sim$\-Base\-Of\-Support@{$\sim$\-Base\-Of\-Support}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{$\sim$\-Base\-Of\-Support}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Base\-Of\-Support\-::$\sim$\-Base\-Of\-Support} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classBaseOfSupport_a8f2261d4d25cd677d0114df426dfbfa7}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classBaseOfSupport_ac0e7a364ac0ac945469a34d12ab3c9f4}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Aand\-B@{compute\-Aand\-B}}
+\index{compute\-Aand\-B@{compute\-Aand\-B}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{compute\-Aand\-B}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::compute\-Aand\-B} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{list\-Convex\-Hull, }
+\item[{\-Eigen\-::\-Vector2d}]{a, }
+\item[{\-Eigen\-::\-Vector2d}]{b}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_ac0e7a364ac0ac945469a34d12ab3c9f4}
+\hypertarget{classBaseOfSupport_a09b197a9869db126658d227532c1e03a}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Ai\-Bi@{compute\-Ai\-Bi}}
+\index{compute\-Ai\-Bi@{compute\-Ai\-Bi}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{compute\-Ai\-Bi}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::compute\-Ai\-Bi} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector2d}]{r, }
+\item[{\-Eigen\-::\-Vector2d}]{p1, }
+\item[{\-Eigen\-::\-Vector2d}]{p2, }
+\item[{\-Eigen\-::\-Row\-Vector2d \&}]{\-Ai, }
+\item[{double \&}]{bi, }
+\item[{double}]{tol\-Diff = {\ttfamily 1e-\/2}}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_a09b197a9869db126658d227532c1e03a}
+\hypertarget{classBaseOfSupport_af88e70d87098060a46e4a6fc9c876a22}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Bo\-S\-Center@{compute\-Bo\-S\-Center}}
+\index{compute\-Bo\-S\-Center@{compute\-Bo\-S\-Center}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{compute\-Bo\-S\-Center}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::compute\-Bo\-S\-Center} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector2d \&}]{r}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_af88e70d87098060a46e4a6fc9c876a22}
+\hypertarget{classBaseOfSupport_ae98c5398e4c53666e324c1fcfb1ef167}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Convex\-Hull@{compute\-Convex\-Hull}}
+\index{compute\-Convex\-Hull@{compute\-Convex\-Hull}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{compute\-Convex\-Hull}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::compute\-Convex\-Hull} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{feet\-Corners}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_ae98c5398e4c53666e324c1fcfb1ef167}
+\hypertarget{classBaseOfSupport_ad9a709f6df002662bfd67982a2c0e201}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Midpoint@{compute\-Midpoint}}
+\index{compute\-Midpoint@{compute\-Midpoint}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{compute\-Midpoint}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::compute\-Midpoint} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector2d}]{a, }
+\item[{\-Eigen\-::\-Vector2d}]{b, }
+\item[{\-Eigen\-::\-Vector2d \&}]{r}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_ad9a709f6df002662bfd67982a2c0e201}
+\hypertarget{classBaseOfSupport_afc033ba8e5530f667f90ae539adb27f3}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!get\-Feet\-Corners@{get\-Feet\-Corners}}
+\index{get\-Feet\-Corners@{get\-Feet\-Corners}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{get\-Feet\-Corners}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::get\-Feet\-Corners} (
+\begin{DoxyParamCaption}
+\item[{int}]{gamma}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_afc033ba8e5530f667f90ae539adb27f3}
+\hypertarget{classBaseOfSupport_af7907a87712c10c72f812f0304c013e4}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!update@{update}}
+\index{update@{update}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Base\-Of\-Support\-::update} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd}]{xi\-\_\-k}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_af7907a87712c10c72f812f0304c013e4}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-A@{\-\_\-\-A}}
+\index{\-\_\-\-A@{\-\_\-\-A}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-A}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}
+\hypertarget{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-B@{\-\_\-\-B}}
+\index{\-\_\-\-B@{\-\_\-\-B}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-B}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}
+\hypertarget{classBaseOfSupport_a3caa9bcea814865f12d891c0a1c8c4ea}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-hull@{\-\_\-hull}}
+\index{\-\_\-hull@{\-\_\-hull}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{\-\_\-hull}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Polygon} {\bf \-Base\-Of\-Support\-::\-\_\-hull}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a3caa9bcea814865f12d891c0a1c8c4ea}
+\hypertarget{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-poly@{\-\_\-poly}}
+\index{\-\_\-poly@{\-\_\-poly}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{\-\_\-poly}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Polygon} {\bf \-Base\-Of\-Support\-::\-\_\-poly}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}
+\hypertarget{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-step\-Controller@{\-\_\-step\-Controller}}
+\index{\-\_\-step\-Controller@{\-\_\-step\-Controller}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{\-\_\-step\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-Step\-Controller}$>$ {\bf \-Base\-Of\-Support\-::\-\_\-step\-Controller}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\hyperlink{BaseOfSupport_8h}{\-Base\-Of\-Support.\-h}\item 
+ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/src/\hyperlink{BaseOfSupport_8cpp}{\-Base\-Of\-Support.\-cpp}\end{DoxyCompactItemize}

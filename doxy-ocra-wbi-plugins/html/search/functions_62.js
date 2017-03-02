@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['baseofsupport',['BaseOfSupport',['../classBaseOfSupport.html#a2490d7d641608be3b85c903de83313cc',1,'BaseOfSupport']]],
   ['bounding',['Bounding',['../classBounding.html#ab8478542374a91a79e47ef8bea4c3fca',1,'Bounding']]],
   ['buildah',['buildAh',['../classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27',1,'MIQPLinearConstraints::buildAh()'],['../classMIQPController.html#aea16b6eac86da5330c7ffbfdb9c655f5',1,'MIQPController::buildAh()'],['../classZmpPreviewController.html#a39ffdba07960f90a6cce247065f12504',1,'ZmpPreviewController::buildAh()']]],
   ['buildashapeadmiss',['buildAShapeAdmiss',['../classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e',1,'MIQPLinearConstraints']]],

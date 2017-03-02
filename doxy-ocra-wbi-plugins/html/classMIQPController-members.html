@@ -131,7 +131,8 @@ This is the complete list of members for <a class="el" href="classMIQPController
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a7cede44e7827c9b4b12f2549714f3adf">_R_P</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#aa8e6df5286125975521b77501e792413">_rhs_2_eq</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">_robotModel</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classMIQPController.html#adc70be859da53c202bc0e0c84cc71917">_state</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPController.html#aeaa4c96afe2d1d975667338e858f4a90">_state</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPController.html#a10018469a257136470ad9293fc3fe84a">_stepController</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">_Sw</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a></td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [private]</code></td></tr>
@@ -154,7 +155,7 @@ This is the complete list of members for <a class="el" href="classMIQPController
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#af492dfbff2e211ff1c1351c2193fe669">buildQ</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a9dfdebb8c769d380617d47b513d1a2b1">buildSw</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a52dc10cbc0941a6e4f4e6ffd462fffce">buildT</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classMIQPController.html#a73b26ce1edd4ab839826abedcc72a475">MIQPController</a>(int period, MIQPParameters params, ocra::Model::Ptr robotModel, const Eigen::MatrixXd &amp;comStateRef)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPController.html#aa40045cd7c4579494fa03f1e99fc474f">MIQPController</a>(int period, MIQPParameters params, ocra::Model::Ptr robotModel, std::shared_ptr&lt; StepController &gt; stepController, const Eigen::MatrixXd &amp;comStateRef)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#aa8fd8452a14d8e7731bf45044e1c7a59">run</a>()</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f">setCOMStateRefInPreviewWindow</a>(unsigned int k, Eigen::VectorXd &amp;comStateRef)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction</a>()</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
@@ -186,7 +187,7 @@ This is the complete list of members for <a class="el" href="classMIQPController
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Wed Mar 1 2017 23:39:56 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Mar 2 2017 23:40:37 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

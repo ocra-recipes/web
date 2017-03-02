@@ -4,6 +4,7 @@ var searchData=
   ['miqplinearconstraints',['MIQPLinearConstraints',['../classMIQPLinearConstraints.html',1,'']]],
   ['miqpparameters',['MIQPParameters',['../structMIQPParameters.html',1,'']]],
   ['miqpstate',['MIQPState',['../classMIQPState.html',1,'']]],
+  ['miqpstate',['MIQPState',['../classMIQP_1_1MIQPState.html',1,'MIQP']]],
   ['modelinitializer',['ModelInitializer',['../classocra__icub_1_1ModelInitializer.html',1,'ocra_icub']]],
   ['module',['Module',['../classModule.html',1,'']]]
 ];

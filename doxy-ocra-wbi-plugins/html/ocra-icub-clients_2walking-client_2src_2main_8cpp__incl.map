@@ -1,14 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node13" href="$IcubClient_8h.html" title="ocra&#45;icub/IcubClient.h" alt="" coords="1215,160,1364,189"/>
-<area shape="rect" id="node96" href="$WalkingClient_8h.html" title="walking&#45;client/WalkingClient.h" alt="" coords="1701,83,1899,112"/>
-<area shape="rect" id="node15" href="$ModelInitializer_8h.html" title="ocra&#45;icub/ModelInitializer.h" alt="" coords="503,237,679,267"/>
-<area shape="rect" id="node17" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="1292,315,1468,344"/>
-<area shape="rect" id="node26" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="1152,392,1365,421"/>
-<area shape="rect" id="node40" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1488,469,1621,499"/>
-<area shape="rect" id="node104" href="$ZmpPreviewController_8h.html" title="walking&#45;client/ZmpPreviewController.h" alt="" coords="2825,237,3071,267"/>
-<area shape="rect" id="node111" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="1919,315,2057,344"/>
-<area shape="rect" id="node113" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="1448,160,1645,189"/>
-<area shape="rect" id="node118" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="2021,160,2227,189"/>
-<area shape="rect" id="node129" href="$MIQPLinearConstraints_8h.html" title="walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="2481,237,2801,267"/>
-<area shape="rect" id="node131" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="2025,237,2207,267"/>
+<area shape="rect" id="node13" href="$IcubClient_8h.html" title="ocra&#45;icub/IcubClient.h" alt="" coords="1313,160,1463,189"/>
+<area shape="rect" id="node96" href="$WalkingClient_8h.html" title="walking&#45;client/WalkingClient.h" alt="" coords="1699,83,1896,112"/>
+<area shape="rect" id="node15" href="$ModelInitializer_8h.html" title="ocra&#45;icub/ModelInitializer.h" alt="" coords="660,237,836,267"/>
+<area shape="rect" id="node17" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="1400,315,1576,344"/>
+<area shape="rect" id="node26" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="1243,392,1456,421"/>
+<area shape="rect" id="node40" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1579,469,1712,499"/>
+<area shape="rect" id="node104" href="$ZmpPreviewController_8h.html" title="walking&#45;client/ZmpPreviewController.h" alt="" coords="2785,315,3031,344"/>
+<area shape="rect" id="node111" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="2485,392,2624,421"/>
+<area shape="rect" id="node113" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="1757,315,1955,344"/>
+<area shape="rect" id="node118" href="$MIQPController_8h.html" title="A thread for launching trajectory generators." alt="" coords="2353,160,2559,189"/>
+<area shape="rect" id="node129" href="$MIQPLinearConstraints_8h.html" title="walking&#45;client/constraints/MIQPLinearConstraints.h" alt="" coords="2197,237,2517,267"/>
+<area shape="rect" id="node132" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="2843,237,3024,267"/>
 </map>
