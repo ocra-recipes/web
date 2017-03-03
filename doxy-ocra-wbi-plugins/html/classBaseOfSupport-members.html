@@ -101,12 +101,12 @@ This is the complete list of members for <a class="el" href="classBaseOfSupport.
   <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">_poly</a></td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#a023d28c6900f0e97d9de42ca2c5d94a5">_stepController</a></td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#a2490d7d641608be3b85c903de83313cc">BaseOfSupport</a>(std::shared_ptr&lt; StepController &gt; stepController)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#ac0e7a364ac0ac945469a34d12ab3c9f4">computeAandB</a>(Eigen::MatrixXd &amp;listConvexHull, Eigen::Vector2d a, Eigen::Vector2d b)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#a09b197a9869db126658d227532c1e03a">computeAiBi</a>(Eigen::Vector2d r, Eigen::Vector2d p1, Eigen::Vector2d p2, Eigen::RowVector2d &amp;Ai, double &amp;bi, double tolDiff=1e-2)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#af88e70d87098060a46e4a6fc9c876a22">computeBoSCenter</a>(Eigen::Vector2d &amp;r)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#ac0e7a364ac0ac945469a34d12ab3c9f4">computeAandB</a>(Eigen::MatrixXd &amp;listConvexHull, Eigen::Vector2d a, Eigen::Vector2d b)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#a09b197a9869db126658d227532c1e03a">computeAiBi</a>(Eigen::Vector2d r, Eigen::Vector2d p1, Eigen::Vector2d p2, Eigen::RowVector2d &amp;Ai, double &amp;bi, double tolDiff=1e-2)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#ae98c5398e4c53666e324c1fcfb1ef167">computeConvexHull</a>(Eigen::MatrixXd &amp;feetCorners)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#ad9a709f6df002662bfd67982a2c0e201">computeMidpoint</a>(Eigen::Vector2d a, Eigen::Vector2d b, Eigen::Vector2d &amp;r)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#afc033ba8e5530f667f90ae539adb27f3">getFeetCorners</a>(int gamma)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#ad9a709f6df002662bfd67982a2c0e201">computeMidpoint</a>(Eigen::Vector2d a, Eigen::Vector2d b, Eigen::Vector2d &amp;r)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#aea8a83e44da4acb1fdbf47cf0e3484d8">getA</a>(Eigen::MatrixXd &amp;A)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#aadb8d9f374904f9f1a2fab2653437d27">getB</a>(Eigen::VectorXd &amp;B)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#af7907a87712c10c72f812f0304c013e4">update</a>(Eigen::VectorXd xi_k)</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classBaseOfSupport.html#a8f2261d4d25cd677d0114df426dfbfa7">~BaseOfSupport</a>()</td><td><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a></td><td><code> [virtual]</code></td></tr>
 </table></div><!-- contents -->
@@ -128,7 +128,7 @@ This is the complete list of members for <a class="el" href="classBaseOfSupport.
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Thu Mar 2 2017 23:40:37 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Mar 3 2017 23:40:28 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

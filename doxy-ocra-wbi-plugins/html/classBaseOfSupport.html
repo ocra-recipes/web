@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">BaseOfSupport Class Reference</div>  </div>
@@ -109,13 +110,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a2490d7d641608be3b85c903de83313cc">BaseOfSupport</a> (std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt; stepController)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a8f2261d4d25cd677d0114df426dfbfa7">~BaseOfSupport</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#af88e70d87098060a46e4a6fc9c876a22">computeBoSCenter</a> (Eigen::Vector2d &amp;r)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#af7907a87712c10c72f812f0304c013e4">update</a> (Eigen::VectorXd xi_k)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ae98c5398e4c53666e324c1fcfb1ef167">computeConvexHull</a> (Eigen::MatrixXd &amp;feetCorners)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#aea8a83e44da4acb1fdbf47cf0e3484d8">getA</a> (Eigen::MatrixXd &amp;A)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#aadb8d9f374904f9f1a2fab2653437d27">getB</a> (Eigen::VectorXd &amp;B)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ac0e7a364ac0ac945469a34d12ab3c9f4">computeAandB</a> (Eigen::MatrixXd &amp;listConvexHull, Eigen::Vector2d a, Eigen::Vector2d b)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a09b197a9869db126658d227532c1e03a">computeAiBi</a> (Eigen::Vector2d r, Eigen::Vector2d p1, Eigen::Vector2d p2, Eigen::RowVector2d &amp;Ai, double &amp;bi, double tolDiff=1e-2)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ad9a709f6df002662bfd67982a2c0e201">computeMidpoint</a> (Eigen::Vector2d a, Eigen::Vector2d b, Eigen::Vector2d &amp;r)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#af7907a87712c10c72f812f0304c013e4">update</a> (Eigen::VectorXd xi_k)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ae98c5398e4c53666e324c1fcfb1ef167">computeConvexHull</a> (Eigen::MatrixXd &amp;feetCorners)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#afc033ba8e5530f667f90ae539adb27f3">getFeetCorners</a> (int gamma)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a></td></tr>
@@ -144,6 +147,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stepController</td><td>Pointer to the stepController object instantiated by `walking-client`</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Need to make this thread-safe as this class is running in a different thread from `walking-client`'s </dd></dl>
 
 </div>
 </div>
@@ -160,6 +171,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Destructor </p>
 
 </div>
 </div>
@@ -189,7 +201,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -240,24 +252,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af88e70d87098060a46e4a6fc9c876a22"></a><!-- doxytag: member="BaseOfSupport::computeBoSCenter" ref="af88e70d87098060a46e4a6fc9c876a22" args="(Eigen::Vector2d &amp;r)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classBaseOfSupport.html#af88e70d87098060a46e4a6fc9c876a22">BaseOfSupport::computeBoSCenter</a> </td>
-          <td>(</td>
-          <td class="paramtype">Eigen::Vector2d &amp;&#160;</td>
-          <td class="paramname"><em>r</em></td><td>)</td>
-          <td></td>
+          <td></td><td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -279,6 +274,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Computes the convex hull points for the current support configuration given the corners of the robot's feet in #feetCorners.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">feetCorners</td><td>Matrix of 2D coordinates of the feet corners (or contact points).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classStepController.html#afb77002292921660ef4a44657d6566f1">StepController::getContact2DCoordinates()</a> </dd></dl>
 
 </div>
 </div>
@@ -307,7 +310,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -315,20 +318,41 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afc033ba8e5530f667f90ae539adb27f3"></a><!-- doxytag: member="BaseOfSupport::getFeetCorners" ref="afc033ba8e5530f667f90ae539adb27f3" args="(int gamma)" -->
+<a class="anchor" id="aea8a83e44da4acb1fdbf47cf0e3484d8"></a><!-- doxytag: member="BaseOfSupport::getA" ref="aea8a83e44da4acb1fdbf47cf0e3484d8" args="(Eigen::MatrixXd &amp;A)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::MatrixXd <a class="el" href="classBaseOfSupport.html#afc033ba8e5530f667f90ae539adb27f3">BaseOfSupport::getFeetCorners</a> </td>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#aea8a83e44da4acb1fdbf47cf0e3484d8">BaseOfSupport::getA</a> </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>gamma</em></td><td>)</td>
+          <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Getter for the inequality matrix A</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aadb8d9f374904f9f1a2fab2653437d27"></a><!-- doxytag: member="BaseOfSupport::getB" ref="aadb8d9f374904f9f1a2fab2653437d27" args="(Eigen::VectorXd &amp;B)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#aadb8d9f374904f9f1a2fab2653437d27">BaseOfSupport::getB</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>B</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Getter for the inequality vector b</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a> </dd></dl>
 
 </div>
 </div>
@@ -346,6 +370,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>To be called at every update cycle of the hosting client.</p>
+<p>Calls <a class="el" href="classBaseOfSupport.html#ae98c5398e4c53666e324c1fcfb1ef167">computeConvexHull()</a> and <a class="el" href="classStepController.html#afb77002292921660ef4a44657d6566f1">StepController::getContact2DCoordinates()</a>, then uses the current system state #xi_k to finally compute <a class="el" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a> and <a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a>.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a>, <a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a> </dd></dl>
 
 </div>
 </div>
@@ -360,6 +387,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Matrix \(\mathbf{A}_p\) in the inequality expressing the CoP constraints of the system at the current time instant \(k\) and given by \(\mathbf{A}_p \mathbf{\xi}_k \leq \mathbf{f}_p\). \(\mathbf{A}_p\) is a \(n_p \times 16\) matrix and \(\mathbf{f}_p\) a vector in \(\mathbb{R}^{n_p}\) </p>
 
 </div>
 </div>
@@ -373,6 +401,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Vector \(\mathbf{f}_p\) in the inequality expressing the CoP constraints of the system at the current time instant \(k\) and given by \(\mathbf{A}_p \mathbf{\xi}_k \leq \mathbf{f}_p\) </p>
 
 </div>
 </div>
@@ -386,6 +415,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Polygon object representing the convex hull delimiting <a class="el" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">_poly</a> </p>
 
 </div>
 </div>
@@ -399,6 +429,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Polygon object holding the current points of contact. </p>
 
 </div>
 </div>
@@ -412,6 +443,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Pointer to the `stepController` object instantiated by the `walking-client`. Since it contains all the contact tasks, it was easier to interface to it to requests the current contact state of the robot, i.e. contact points locations on the ground.</p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This is not thread safe yet. It might be better to do this in a different way. </dd></dl>
 
 </div>
 </div>
@@ -439,7 +472,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a>      </li>
 
-    <li class="footer">Generated on Thu Mar 2 2017 23:40:37 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Mar 3 2017 23:40:28 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

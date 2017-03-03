@@ -5,16 +5,6 @@
 
 {\ttfamily \#include $<$\-M\-I\-Q\-P\-Linear\-Constraints.\-h$>$}
 
-
-
-\-Collaboration diagram for \-M\-I\-Q\-P\-Linear\-Constraints\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=213pt]{classMIQPLinearConstraints__coll__graph}
-\end{center}
-\end{figure}
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -99,7 +89,7 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a1edaf84d613dde3f86fd9e78aa14
 \item 
 unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b418d0f}{\-\_\-n\-Constraints}
 \item 
-\hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} \hyperlink{classMIQPLinearConstraints_ae39cc39151d69efaaaa8c520de8248f4}{\-\_\-base\-Of\-Support}
+std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>$ \hyperlink{classMIQPLinearConstraints_a9b26abbc012b0f39c6bef163d9c3faed}{\-\_\-base\-Of\-Support}
 \end{DoxyCompactItemize}
 
 
@@ -279,7 +269,7 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 \mbox{\tt in}  & {\em xi\-\_\-k} & \-Current state. \\
 \hline
 \end{DoxyParams}
-
+\-F\-I\-X\-M\-E \-T\-E\-M\-P\-O\-R\-A\-R\-Y!! 
 
 \subsection{\-Member \-Data \-Documentation}
 \hypertarget{classMIQPLinearConstraints_a5dfdc7553c4cbbe75ac54b34c4f29732}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-A@{\-\_\-\-A}}
@@ -316,9 +306,9 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b41
 \-It is a constant matrix of size $6\times6$ equal to\-: \[ \mathbf{A_h} = \left[ \begin{array}{ccc} \mathbf{I}_2 & \delta t \mathbf{I}_2 & \frac{\delta t^2}{2} \mathbf{I}_2 \\ 0 & \mathbf{I}_2 & \delta t \mathbf{I}_2 \\ 0 & 0 & \mathbf{I}_2 \end{array} \right] \] \hypertarget{classMIQPLinearConstraints_a7ff7b3584cf9ff3e2124d80bd0684180}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-A\-Shape\-Admiss@{\-\_\-\-A\-Shape\-Admiss}}
 \index{\-\_\-\-A\-Shape\-Admiss@{\-\_\-\-A\-Shape\-Admiss}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-A\-Shape\-Admiss}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-A\-Shape\-Admiss}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a7ff7b3584cf9ff3e2124d80bd0684180}
-\hypertarget{classMIQPLinearConstraints_ae39cc39151d69efaaaa8c520de8248f4}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-base\-Of\-Support@{\-\_\-base\-Of\-Support}}
+\hypertarget{classMIQPLinearConstraints_a9b26abbc012b0f39c6bef163d9c3faed}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-base\-Of\-Support@{\-\_\-base\-Of\-Support}}
 \index{\-\_\-base\-Of\-Support@{\-\_\-base\-Of\-Support}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
-\subsubsection[{\-\_\-base\-Of\-Support}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Base\-Of\-Support} {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-base\-Of\-Support}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_ae39cc39151d69efaaaa8c520de8248f4}
+\subsubsection[{\-\_\-base\-Of\-Support}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-Base\-Of\-Support}$>$ {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-base\-Of\-Support}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a9b26abbc012b0f39c6bef163d9c3faed}
 \-Base of support object to retrieve the corresponding inequality constraints \hypertarget{classMIQPLinearConstraints_a0c0fbbb1b86c5d51a133ee661977c1f5}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-Bh@{\-\_\-\-Bh}}
 \index{\-\_\-\-Bh@{\-\_\-\-Bh}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-Bh}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Bh}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a0c0fbbb1b86c5d51a133ee661977c1f5}

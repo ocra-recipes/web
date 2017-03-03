@@ -15,7 +15,7 @@ var searchData=
   ['_5famplitudefraction',['_amplitudeFraction',['../classWalkingClient.html#ac548ce03ea9ceffb4b42981942f66dd0',1,'WalkingClient']]],
   ['_5fashapeadmiss',['_AShapeAdmiss',['../classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180',1,'MIQPLinearConstraints']]],
   ['_5fb',['_b',['../classMIQP_1_1MIQPState.html#aafa5bce9860b191257cb0166c217e9a3',1,'MIQP::MIQPState::_b()'],['../classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246',1,'BaseOfSupport::_B()']]],
-  ['_5fbaseofsupport',['_baseOfSupport',['../classMIQPLinearConstraints.html#ae39cc39151d69efaaaa8c520de8248f4',1,'MIQPLinearConstraints']]],
+  ['_5fbaseofsupport',['_baseOfSupport',['../classMIQPLinearConstraints.html#a9b26abbc012b0f39c6bef163d9c3faed',1,'MIQPLinearConstraints']]],
   ['_5fbeq',['_Beq',['../classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79',1,'MIQPController']]],
   ['_5fbeta',['_beta',['../classMIQP_1_1MIQPState.html#ad5f8f3e9a18a29810b4347540ddf7c82',1,'MIQP::MIQPState']]],
   ['_5fbh',['_Bh',['../classMIQPLinearConstraints.html#a0c0fbbb1b86c5d51a133ee661977c1f5',1,'MIQPLinearConstraints::_Bh()'],['../classMIQPController.html#a9a989875871a898f0ad19b441a2c67ba',1,'MIQPController::_Bh()']]],

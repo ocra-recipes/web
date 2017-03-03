@@ -17,19 +17,22 @@
 \item 
 virtual \hyperlink{classBaseOfSupport_a8f2261d4d25cd677d0114df426dfbfa7}{$\sim$\-Base\-Of\-Support} ()
 \item 
-void \hyperlink{classBaseOfSupport_af88e70d87098060a46e4a6fc9c876a22}{compute\-Bo\-S\-Center} (\-Eigen\-::\-Vector2d \&r)
+bool \hyperlink{classBaseOfSupport_af7907a87712c10c72f812f0304c013e4}{update} (\-Eigen\-::\-Vector\-Xd xi\-\_\-k)
+\item 
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classBaseOfSupport_ae98c5398e4c53666e324c1fcfb1ef167}{compute\-Convex\-Hull} (\-Eigen\-::\-Matrix\-Xd \&feet\-Corners)
+\item 
+void \hyperlink{classBaseOfSupport_aea8a83e44da4acb1fdbf47cf0e3484d8}{get\-A} (\-Eigen\-::\-Matrix\-Xd \&\-A)
+\item 
+void \hyperlink{classBaseOfSupport_aadb8d9f374904f9f1a2fab2653437d27}{get\-B} (\-Eigen\-::\-Vector\-Xd \&\-B)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classBaseOfSupport_ac0e7a364ac0ac945469a34d12ab3c9f4}{compute\-Aand\-B} (\-Eigen\-::\-Matrix\-Xd \&list\-Convex\-Hull, \-Eigen\-::\-Vector2d a, \-Eigen\-::\-Vector2d b)
 \item 
 void \hyperlink{classBaseOfSupport_a09b197a9869db126658d227532c1e03a}{compute\-Ai\-Bi} (\-Eigen\-::\-Vector2d r, \-Eigen\-::\-Vector2d p1, \-Eigen\-::\-Vector2d p2, \-Eigen\-::\-Row\-Vector2d \&\-Ai, double \&bi, double tol\-Diff=1e-\/2)
 \item 
 void \hyperlink{classBaseOfSupport_ad9a709f6df002662bfd67982a2c0e201}{compute\-Midpoint} (\-Eigen\-::\-Vector2d a, \-Eigen\-::\-Vector2d b, \-Eigen\-::\-Vector2d \&r)
-\item 
-bool \hyperlink{classBaseOfSupport_af7907a87712c10c72f812f0304c013e4}{update} (\-Eigen\-::\-Vector\-Xd xi\-\_\-k)
-\item 
-\-Eigen\-::\-Matrix\-Xd \hyperlink{classBaseOfSupport_ae98c5398e4c53666e324c1fcfb1ef167}{compute\-Convex\-Hull} (\-Eigen\-::\-Matrix\-Xd \&feet\-Corners)
-\item 
-\-Eigen\-::\-Matrix\-Xd \hyperlink{classBaseOfSupport_afc033ba8e5530f667f90ae539adb27f3}{get\-Feet\-Corners} (int gamma)
 \end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
@@ -65,6 +68,14 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \item[{std\-::shared\-\_\-ptr$<$ {\bf \-Step\-Controller} $>$}]{step\-Controller}
 \end{DoxyParamCaption}
 )}}\label{classBaseOfSupport_a2490d7d641608be3b85c903de83313cc}
+\-Constructor. 
+\begin{DoxyParams}{\-Parameters}
+{\em step\-Controller} & \-Pointer to the step\-Controller object instantiated by `walking-\/client`\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{\-Warning}
+\-Need to make this thread-\/safe as this class is running in a different thread from `walking-\/client`'s 
+\end{DoxyWarning}
 \hypertarget{classBaseOfSupport_a8f2261d4d25cd677d0114df426dfbfa7}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!$\sim$\-Base\-Of\-Support@{$\sim$\-Base\-Of\-Support}}
 \index{$\sim$\-Base\-Of\-Support@{$\sim$\-Base\-Of\-Support}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{$\sim$\-Base\-Of\-Support}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Base\-Of\-Support\-::$\sim$\-Base\-Of\-Support} (
@@ -72,7 +83,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classBaseOfSupport_a8f2261d4d25cd677d0114df426dfbfa7}
-
+\-Destructor 
 
 \subsection{\-Member \-Function \-Documentation}
 \hypertarget{classBaseOfSupport_ac0e7a364ac0ac945469a34d12ab3c9f4}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Aand\-B@{compute\-Aand\-B}}
@@ -83,7 +94,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \item[{\-Eigen\-::\-Vector2d}]{a, }
 \item[{\-Eigen\-::\-Vector2d}]{b}
 \end{DoxyParamCaption}
-)}}\label{classBaseOfSupport_ac0e7a364ac0ac945469a34d12ab3c9f4}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classBaseOfSupport_ac0e7a364ac0ac945469a34d12ab3c9f4}
 \hypertarget{classBaseOfSupport_a09b197a9869db126658d227532c1e03a}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Ai\-Bi@{compute\-Ai\-Bi}}
 \index{compute\-Ai\-Bi@{compute\-Ai\-Bi}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{compute\-Ai\-Bi}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::compute\-Ai\-Bi} (
@@ -95,14 +106,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \item[{double \&}]{bi, }
 \item[{double}]{tol\-Diff = {\ttfamily 1e-\/2}}
 \end{DoxyParamCaption}
-)}}\label{classBaseOfSupport_a09b197a9869db126658d227532c1e03a}
-\hypertarget{classBaseOfSupport_af88e70d87098060a46e4a6fc9c876a22}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Bo\-S\-Center@{compute\-Bo\-S\-Center}}
-\index{compute\-Bo\-S\-Center@{compute\-Bo\-S\-Center}!BaseOfSupport@{\-Base\-Of\-Support}}
-\subsubsection[{compute\-Bo\-S\-Center}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::compute\-Bo\-S\-Center} (
-\begin{DoxyParamCaption}
-\item[{\-Eigen\-::\-Vector2d \&}]{r}
-\end{DoxyParamCaption}
-)}}\label{classBaseOfSupport_af88e70d87098060a46e4a6fc9c876a22}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classBaseOfSupport_a09b197a9869db126658d227532c1e03a}
 \hypertarget{classBaseOfSupport_ae98c5398e4c53666e324c1fcfb1ef167}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Convex\-Hull@{compute\-Convex\-Hull}}
 \index{compute\-Convex\-Hull@{compute\-Convex\-Hull}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{compute\-Convex\-Hull}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::compute\-Convex\-Hull} (
@@ -110,6 +114,16 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \item[{\-Eigen\-::\-Matrix\-Xd \&}]{feet\-Corners}
 \end{DoxyParamCaption}
 )}}\label{classBaseOfSupport_ae98c5398e4c53666e324c1fcfb1ef167}
+\-Computes the convex hull points for the current support configuration given the corners of the robot's feet in \#feet\-Corners.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em feet\-Corners} & \-Matrix of 2\-D coordinates of the feet corners (or contact points).\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classStepController_afb77002292921660ef4a44657d6566f1}{\-Step\-Controller\-::get\-Contact2\-D\-Coordinates()} 
+\end{DoxySeeAlso}
 \hypertarget{classBaseOfSupport_ad9a709f6df002662bfd67982a2c0e201}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!compute\-Midpoint@{compute\-Midpoint}}
 \index{compute\-Midpoint@{compute\-Midpoint}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{compute\-Midpoint}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::compute\-Midpoint} (
@@ -118,14 +132,31 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \item[{\-Eigen\-::\-Vector2d}]{b, }
 \item[{\-Eigen\-::\-Vector2d \&}]{r}
 \end{DoxyParamCaption}
-)}}\label{classBaseOfSupport_ad9a709f6df002662bfd67982a2c0e201}
-\hypertarget{classBaseOfSupport_afc033ba8e5530f667f90ae539adb27f3}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!get\-Feet\-Corners@{get\-Feet\-Corners}}
-\index{get\-Feet\-Corners@{get\-Feet\-Corners}!BaseOfSupport@{\-Base\-Of\-Support}}
-\subsubsection[{get\-Feet\-Corners}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::get\-Feet\-Corners} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classBaseOfSupport_ad9a709f6df002662bfd67982a2c0e201}
+\hypertarget{classBaseOfSupport_aea8a83e44da4acb1fdbf47cf0e3484d8}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!get\-A@{get\-A}}
+\index{get\-A@{get\-A}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{get\-A}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::get\-A} (
 \begin{DoxyParamCaption}
-\item[{int}]{gamma}
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{\-A}
 \end{DoxyParamCaption}
-)}}\label{classBaseOfSupport_afc033ba8e5530f667f90ae539adb27f3}
+)}}\label{classBaseOfSupport_aea8a83e44da4acb1fdbf47cf0e3484d8}
+\-Getter for the inequality matrix \-A
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}{\-\_\-\-A} 
+\end{DoxySeeAlso}
+\hypertarget{classBaseOfSupport_aadb8d9f374904f9f1a2fab2653437d27}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!get\-B@{get\-B}}
+\index{get\-B@{get\-B}!BaseOfSupport@{\-Base\-Of\-Support}}
+\subsubsection[{get\-B}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Base\-Of\-Support\-::get\-B} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd \&}]{\-B}
+\end{DoxyParamCaption}
+)}}\label{classBaseOfSupport_aadb8d9f374904f9f1a2fab2653437d27}
+\-Getter for the inequality vector b
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B} 
+\end{DoxySeeAlso}
 \hypertarget{classBaseOfSupport_af7907a87712c10c72f812f0304c013e4}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!update@{update}}
 \index{update@{update}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Base\-Of\-Support\-::update} (
@@ -133,24 +164,36 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \item[{\-Eigen\-::\-Vector\-Xd}]{xi\-\_\-k}
 \end{DoxyParamCaption}
 )}}\label{classBaseOfSupport_af7907a87712c10c72f812f0304c013e4}
+\-To be called at every update cycle of the hosting client.
+
+\-Calls \hyperlink{classBaseOfSupport_ae98c5398e4c53666e324c1fcfb1ef167}{compute\-Convex\-Hull()} and \hyperlink{classStepController_afb77002292921660ef4a44657d6566f1}{\-Step\-Controller\-::get\-Contact2\-D\-Coordinates()}, then uses the current system state \#xi\-\_\-k to finally compute \hyperlink{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}{\-\_\-\-A} and \hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B}.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}{\-\_\-\-A}, \hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B} 
+\end{DoxySeeAlso}
 
 
 \subsection{\-Member \-Data \-Documentation}
 \hypertarget{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-A@{\-\_\-\-A}}
 \index{\-\_\-\-A@{\-\_\-\-A}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-A}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}
-\hypertarget{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-B@{\-\_\-\-B}}
+\-Matrix $\mathbf{A}_p$ in the inequality expressing the \-Co\-P constraints of the system at the current time instant $k$ and given by $\mathbf{A}_p \mathbf{\xi}_k \leq \mathbf{f}_p$. $\mathbf{A}_p$ is a $n_p \times 16$ matrix and $\mathbf{f}_p$ a vector in $\mathbb{R}^{n_p}$ \hypertarget{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-B@{\-\_\-\-B}}
 \index{\-\_\-\-B@{\-\_\-\-B}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-B}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}
-\hypertarget{classBaseOfSupport_a3caa9bcea814865f12d891c0a1c8c4ea}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-hull@{\-\_\-hull}}
+\-Vector $\mathbf{f}_p$ in the inequality expressing the \-Co\-P constraints of the system at the current time instant $k$ and given by $\mathbf{A}_p \mathbf{\xi}_k \leq \mathbf{f}_p$ \hypertarget{classBaseOfSupport_a3caa9bcea814865f12d891c0a1c8c4ea}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-hull@{\-\_\-hull}}
 \index{\-\_\-hull@{\-\_\-hull}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-hull}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Polygon} {\bf \-Base\-Of\-Support\-::\-\_\-hull}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a3caa9bcea814865f12d891c0a1c8c4ea}
-\hypertarget{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-poly@{\-\_\-poly}}
+\-Polygon object representing the convex hull delimiting \hyperlink{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}{\-\_\-poly} \hypertarget{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-poly@{\-\_\-poly}}
 \index{\-\_\-poly@{\-\_\-poly}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-poly}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Polygon} {\bf \-Base\-Of\-Support\-::\-\_\-poly}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}
-\hypertarget{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-step\-Controller@{\-\_\-step\-Controller}}
+\-Polygon object holding the current points of contact. \hypertarget{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-step\-Controller@{\-\_\-step\-Controller}}
 \index{\-\_\-step\-Controller@{\-\_\-step\-Controller}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-step\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-Step\-Controller}$>$ {\bf \-Base\-Of\-Support\-::\-\_\-step\-Controller}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}
+\-Pointer to the `step\-Controller` object instantiated by the `walking-\/client`. \-Since it contains all the contact tasks, it was easier to interface to it to requests the current contact state of the robot, i.\-e. contact points locations on the ground.
+
+\begin{DoxyWarning}{\-Warning}
+\-This is not thread safe yet. \-It might be better to do this in a different way. 
+\end{DoxyWarning}
 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

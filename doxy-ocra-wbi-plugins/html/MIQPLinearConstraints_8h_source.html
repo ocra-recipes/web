@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00145"></a>00145     
 <a name="l00147"></a><a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">00147</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a>;
 <a name="l00148"></a>00148     
-<a name="l00150"></a><a class="code" href="classMIQPLinearConstraints.html#ae39cc39151d69efaaaa8c520de8248f4">00150</a>     <a class="code" href="classBaseOfSupport.html" title="Builds base of support and corresponding constraints based on the robot&#39;s feet location.">BaseOfSupport</a> <a class="code" href="classMIQPLinearConstraints.html#ae39cc39151d69efaaaa8c520de8248f4">_baseOfSupport</a>;
+<a name="l00150"></a><a class="code" href="classMIQPLinearConstraints.html#a9b26abbc012b0f39c6bef163d9c3faed">00150</a>     std::shared_ptr&lt;BaseOfSupport&gt; <a class="code" href="classMIQPLinearConstraints.html#a9b26abbc012b0f39c6bef163d9c3faed">_baseOfSupport</a>;
 <a name="l00151"></a>00151 <span class="keyword">public</span>:
 <a name="l00152"></a>00152 
 <a name="l00156"></a>00156     <a class="code" href="classMIQPLinearConstraints.html#ae784e0e4a3fbde27d999c5315119fa0f">MIQPLinearConstraints</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dt, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N, std::shared_ptr&lt;StepController&gt; stepController, <span class="keywordtype">bool</span> addShapeCtrs=<span class="keyword">true</span>, <span class="keywordtype">bool</span> addAdmissibilityCtrs=<span class="keyword">true</span>, <span class="keywordtype">bool</span> addCoPConstraints=<span class="keyword">false</span>, <span class="keywordtype">bool</span> addWalkingCtrs=<span class="keyword">false</span>);
@@ -205,7 +205,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="MIQPLinearConstraints_8h.html">MIQPLinearConstraints.h</a>      </li>
 
-    <li class="footer">Generated on Thu Mar 2 2017 23:40:36 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Mar 3 2017 23:40:28 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

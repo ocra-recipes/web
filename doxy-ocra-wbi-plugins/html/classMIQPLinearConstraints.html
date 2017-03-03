@@ -100,12 +100,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <!-- doxytag: class="MIQPLinearConstraints" -->
 <p><code>#include &lt;<a class="el" href="MIQPLinearConstraints_8h_source.html">MIQPLinearConstraints.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for MIQPLinearConstraints:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classMIQPLinearConstraints__coll__graph.svg" width="188" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classMIQPLinearConstraints-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -153,7 +147,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2">_dt</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">_N</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ae39cc39151d69efaaaa8c520de8248f4">_baseOfSupport</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classBaseOfSupport.html">BaseOfSupport</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a9b26abbc012b0f39c6bef163d9c3faed">_baseOfSupport</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae784e0e4a3fbde27d999c5315119fa0f"></a><!-- doxytag: member="MIQPLinearConstraints::MIQPLinearConstraints" ref="ae784e0e4a3fbde27d999c5315119fa0f" args="(unsigned int dt, unsigned int N, std::shared_ptr&lt; StepController &gt; stepController, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addCoPConstraints=false, bool addWalkingCtrs=false)" -->
@@ -499,6 +493,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<p>FIXME TEMPORARY!! </p>
 
 </div>
 </div>
@@ -645,12 +640,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae39cc39151d69efaaaa8c520de8248f4"></a><!-- doxytag: member="MIQPLinearConstraints::_baseOfSupport" ref="ae39cc39151d69efaaaa8c520de8248f4" args="" -->
+<a class="anchor" id="a9b26abbc012b0f39c6bef163d9c3faed"></a><!-- doxytag: member="MIQPLinearConstraints::_baseOfSupport" ref="a9b26abbc012b0f39c6bef163d9c3faed" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a> <a class="el" href="classMIQPLinearConstraints.html#ae39cc39151d69efaaaa8c520de8248f4">MIQPLinearConstraints::_baseOfSupport</a><code> [private]</code></td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classBaseOfSupport.html">BaseOfSupport</a>&gt; <a class="el" href="classMIQPLinearConstraints.html#a9b26abbc012b0f39c6bef163d9c3faed">MIQPLinearConstraints::_baseOfSupport</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -841,7 +836,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a>      </li>
 
-    <li class="footer">Generated on Thu Mar 2 2017 23:40:37 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Mar 3 2017 23:40:28 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
