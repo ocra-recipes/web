@@ -1,6 +1,6 @@
 var classMIQPLinearConstraints =
 [
-    [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html#ae784e0e4a3fbde27d999c5315119fa0f", null ],
+    [ "MIQPLinearConstraints", "classMIQPLinearConstraints.html#aaa55e8fc7fac6499f60c40e13b0d6605", null ],
     [ "~MIQPLinearConstraints", "classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2", null ],
     [ "buildAh", "classMIQPLinearConstraints.html#a70bcc70db0ab171390d20af674e80c27", null ],
     [ "buildAShapeAdmiss", "classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e", null ],
@@ -31,6 +31,7 @@ var classMIQPLinearConstraints =
     [ "_BShapeAdmiss", "classMIQPLinearConstraints.html#ab3ea8be40c22fa7d8035c7b5c5c1010c", null ],
     [ "_dt", "classMIQPLinearConstraints.html#a403b0a1f684bda20236a759bd72950f2", null ],
     [ "_fcbarShapeAdmiss", "classMIQPLinearConstraints.html#a4e1cac634590c04e81d9b9341088efeb", null ],
+    [ "_miqpParams", "classMIQPLinearConstraints.html#a22f1b42e65d283a0d748333cc7119a7e", null ],
     [ "_N", "classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077", null ],
     [ "_nConstraints", "classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f", null ],
     [ "_Q", "classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511", null ],

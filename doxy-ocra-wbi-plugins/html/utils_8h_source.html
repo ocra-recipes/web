@@ -120,17 +120,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00027"></a>00027 
 <a name="l00028"></a><a class="code" href="structMIQPParameters.html">00028</a> <span class="keyword">struct </span><a class="code" href="structMIQPParameters.html">MIQPParameters</a> {
 <a name="l00029"></a>00029     <span class="comment">/* Size of preview window */</span>
-<a name="l00030"></a><a class="code" href="structMIQPParameters.html#ae421b7ca77da7e1e50239ab58b8771c5">00030</a>     <span class="keywordtype">int</span> <a class="code" href="structMIQPParameters.html#ae421b7ca77da7e1e50239ab58b8771c5">N</a>;
+<a name="l00030"></a><a class="code" href="structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c">00030</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c">N</a>;
 <a name="l00031"></a>00031     <span class="comment">/* Constant com height */</span>
 <a name="l00032"></a><a class="code" href="structMIQPParameters.html#ab8158e2bf119d70c9856b6a277e3c42a">00032</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#ab8158e2bf119d70c9856b6a277e3c42a">cz</a>;
 <a name="l00033"></a>00033     <span class="comment">/* Gavity acceleration */</span>
 <a name="l00034"></a><a class="code" href="structMIQPParameters.html#a31eca71d200b5b1468bd60b3266d0688">00034</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a31eca71d200b5b1468bd60b3266d0688">g</a>;
 <a name="l00035"></a>00035     <span class="comment">//TODO: Missing state selection matrix S</span>
-<a name="l00036"></a>00036 };
-<a name="l00037"></a>00037 
-<a name="l00038"></a><a class="code" href="utils_8h.html#adcb996b47cedb6d21e97c37da2ac82df">00038</a> <span class="preprocessor">#define SIZE_STATE_VECTOR 16</span>
-<a name="l00039"></a>00039 <span class="preprocessor"></span>
-<a name="l00040"></a>00040 <span class="preprocessor">#endif</span>
+<a name="l00036"></a>00036     <span class="comment">/* Thread period */</span>
+<a name="l00037"></a><a class="code" href="structMIQPParameters.html#ab4fca30503423e047dc55d27f0c9f3c9">00037</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structMIQPParameters.html#ab4fca30503423e047dc55d27f0c9f3c9">dt</a>;
+<a name="l00038"></a>00038 };
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="utils_8h.html#ab0e06eaa253307db2bac3c9b0a9e6b10">00040</a> <span class="preprocessor">#define STATE_VECTOR_SIZE 16</span>
+<a name="l00041"></a><a class="code" href="utils_8h.html#aa2f26540ce870ca91503bb6746a52e69">00041</a> <span class="preprocessor"></span><span class="preprocessor">#define INPUT_VECTOR_SIZE 12</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00043"></a>00043 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -151,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="utils_8h.html">utils.h</a>      </li>
 
-    <li class="footer">Generated on Mon Mar 6 2017 23:41:58 for ocra-wbi-plugins by
+    <li class="footer">Generated on Tue Mar 7 2017 23:41:57 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

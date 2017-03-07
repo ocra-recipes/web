@@ -2,9 +2,9 @@ var searchData=
 [
   ['close',['close',['../classModule.html#ab07583e4393148dfe0fd2ae6e7998a4b',1,'Module']]],
   ['composeportname',['composePortName',['../classWalkingClient.html#ae8f7dc629313df7d362e3edd6f45ae10',1,'WalkingClient']]],
-  ['computeaandb',['computeAandB',['../classBaseOfSupport.html#ac0e7a364ac0ac945469a34d12ab3c9f4',1,'BaseOfSupport']]],
+  ['computeaandb',['computeAandB',['../classBaseOfSupport.html#ac912464ec5a8f70374dae34d3d823bdb',1,'BaseOfSupport']]],
   ['computeaibi',['computeAiBi',['../classBaseOfSupport.html#a09b197a9869db126658d227532c1e03a',1,'BaseOfSupport']]],
-  ['computeconvexhull',['computeConvexHull',['../classBaseOfSupport.html#ae98c5398e4c53666e324c1fcfb1ef167',1,'BaseOfSupport']]],
+  ['computeboundingbox',['computeBoundingBox',['../classBaseOfSupport.html#a7bfb9f5992767e2c3c3577d96eb47df9',1,'BaseOfSupport']]],
   ['computefootzmp',['computeFootZMP',['../classZmpController.html#a6fd41771d83a31bd190f4031f82649e0',1,'ZmpController::computeFootZMP()'],['../classZmpPreviewController.html#a1f5bf084ce93391fbebd63e467d9adbc',1,'ZmpPreviewController::computeFootZMP()']]],
   ['computeglobalzmpfromsensors',['computeGlobalZMPFromSensors',['../classZmpController.html#aae5cc381a922206dad10ba2d425992ce',1,'ZmpController::computeGlobalZMPFromSensors()'],['../classZmpPreviewController.html#a46dfe0448f3f14927960a072dc42346d',1,'ZmpPreviewController::computeGlobalZMPFromSensors()']]],
   ['computeh',['computeh',['../classZmpController.html#a3e275de73186b889c755e6dc618d29bf',1,'ZmpController']]],

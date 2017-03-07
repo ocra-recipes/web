@@ -103,46 +103,117 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classBaseOfSupport.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="BaseOfSupport_8h_source.html">BaseOfSupport.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for BaseOfSupport:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classBaseOfSupport__coll__graph.svg" width="158" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classBaseOfSupport-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a2490d7d641608be3b85c903de83313cc">BaseOfSupport</a> (std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt; stepController)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a151ca13d50f730d0cdf2368bffd4ee72">BaseOfSupport</a> (std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt; stepController, Eigen::MatrixXd Q, Eigen::MatrixXd T, <a class="el" href="structMIQPParameters.html">MIQPParameters</a> miqpParams)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a8f2261d4d25cd677d0114df426dfbfa7">~BaseOfSupport</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#af7907a87712c10c72f812f0304c013e4">update</a> (Eigen::VectorXd xi_k)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ae98c5398e4c53666e324c1fcfb1ef167">computeConvexHull</a> (Eigen::MatrixXd &amp;feetCorners)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a9301442842af0ea76629227c26074c86">update</a> (Eigen::VectorXd &amp;xi_k)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a7bfb9f5992767e2c3c3577d96eb47df9">computeBoundingBox</a> (Eigen::MatrixXd &amp;feetCorners, Eigen::Matrix2d &amp;minMaxBoundingBox)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#aea8a83e44da4acb1fdbf47cf0e3484d8">getA</a> (Eigen::MatrixXd &amp;A)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#aadb8d9f374904f9f1a2fab2653437d27">getB</a> (Eigen::VectorXd &amp;B)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a4704ca8a8e7058cc1ba8241d084625bb">getrhs</a> (Eigen::VectorXd &amp;B)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ac0e7a364ac0ac945469a34d12ab3c9f4">computeAandB</a> (Eigen::MatrixXd &amp;listConvexHull, Eigen::Vector2d a, Eigen::Vector2d b)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a70bb139aba387291e0180458a53fb8e5">buildAb</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ab8dfd61d0b11e780e88ae972f9542336">buildb</a> (Eigen::Matrix2d minMaxBoundingBox)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a7efc6cad789632e88d8c85ab171a9eef">buildCp</a> (double cz, double g)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a44cb4e3826c95af4b605309a8bcfc03c">buildCi</a> (Eigen::MatrixXd &amp;Ab, Eigen::MatrixXd &amp;Cp)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#af5bb488bb7004a8b14dd0617c4c27700">buildf</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#afe923e94cbb6308dc3028f72a7ee82db">buildfbar</a> (Eigen::VectorXd &amp;f)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a7bb54c5f9b2021dd5e393b19e36f0167">buildB</a> (Eigen::MatrixXd Ci, Eigen::MatrixXd Q)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ab0a2eb399e02b43872d2917c683d6a08">buildA</a> (const Eigen::MatrixXd &amp;Ci, const Eigen::MatrixXd &amp;Q, const Eigen::MatrixXd &amp;T)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ac912464ec5a8f70374dae34d3d823bdb">computeAandB</a> (Eigen::Matrix2d &amp;boundingBox, Eigen::Vector2d a, Eigen::Vector2d b)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a09b197a9869db126658d227532c1e03a">computeAiBi</a> (Eigen::Vector2d r, Eigen::Vector2d p1, Eigen::Vector2d p2, Eigen::RowVector2d &amp;Ai, double &amp;bi, double tolDiff=1e-2)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#ad9a709f6df002662bfd67982a2c0e201">computeMidpoint</a> (Eigen::Vector2d a, Eigen::Vector2d b, Eigen::Vector2d &amp;r)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a42d531cd89c34cf8821c5cdeff321bc1">_Ab</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7">_b</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a0ff0fd44966f86d5a62e4d38c3cfea60">_Cp</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#aa2d0af7272d153ead5e088ff67c981e8">_f</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">_fbar</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">_rhs</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">Polygon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">_poly</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">Polygon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a3caa9bcea814865f12d891c0a1c8c4ea">_hull</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033">_bbox</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a023d28c6900f0e97d9de42ca2c5d94a5">_stepController</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">_T</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMIQPParameters.html">MIQPParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a82f86511c236d038f1670dd515e53a8f">_miqpParams</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Builds base of support and corresponding constraints based on the robot's feet location. </p>
 <dl class="author"><dt><b>Author:</b></dt><dd>Jorhabib Eljaik <a class="el" href="citelist.html#CITEREF_ibanezThesis2015">ibanezThesis2015</a> </dd></dl>
 <dl class="warning"><dt><b>Warning:</b></dt><dd>Work in progress! This is still a barebone class in the process of being tested.</dd></dl>
-<p>This class uses the Geometry Boost libraries in order to find the vertices of the base of support (support polygon) defined by the location of the feet of the robot. Afterwards, it will build the inequality constraints that define the area of this polygon, useful to <a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a> to define the constraints on the Center of Pressure which should always lie within the support polygon. </p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2490d7d641608be3b85c903de83313cc"></a><!-- doxytag: member="BaseOfSupport::BaseOfSupport" ref="a2490d7d641608be3b85c903de83313cc" args="(std::shared_ptr&lt; StepController &gt; stepController)" -->
+<p>This class uses the Geometry Boost libraries in order to find the vertices of the bounding box defined by the location of the feet of the robot. Afterwards, it will build the inequality constraints in a preview window of size \(N\) delimiting the area of this polygoon where the Center of Pressure is constrained to lie.</p>
+<p>The bounding box of the Base of Support writes as a set of intequality constraints: </p>
+<p class="formulaDsp">
+\[ \left[\begin{array}{cc} -1 &amp; 0\\ 1 &amp; 0\\ 0 &amp; -1\\ 0 &amp; 1 \end{array}\right] \mathbf{p} \leq \left[\begin{array}{c} -x_{\text{min}}\\ x_{\text{max}}\\ -y_{\text{min}}\\ y_{\text{max}} \end{array}\right] \]
+</p>
+<p> or, </p>
+<p class="formulaDsp">
+\[ \mathbf{A}_b\mathbf{p} \leq \mathbf{b} \]
+</p>
+<p> Which in terms of the system state \(\xi\) writes: </p>
+<p class="formulaDsp">
+\[ \left[\begin{array}{cc} \mathbf{0}_{10\times10} &amp; \\ &amp; \mathbf{A}_b \mathbf{C}_p \end{array}\right] \mathbf{\xi} \leq \left[\begin{array}{c} \mathbf{0} \\ \mathbf{b} \end{array}\right] \]
+</p>
+<p> or: </p>
+<p class="formulaDsp">
+\[ \mathbf{C}_i \mathbf{\xi} \leq \mathbf{f} \]
+</p>
+<p> Where \(\mathbf{C}_p\) expresses the relationship between CoM and CoP, see <a class="el" href="classBaseOfSupport.html#a7efc6cad789632e88d8c85ab171a9eef">buildCp()</a> for more details.</p>
+<p>For this type of constraint, in a preview window of size \(N\) we have: </p>
+<p class="formulaDsp">
+\[ \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_i\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_i\mathbf{T} \end{array}\right] \mathbf{\mathcal{X}}_{N,k} = \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] - \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \mathbf{\xi}_k \]
+</p>
+<p> or: </p>
+<p class="formulaDsp">
+\[ \mathbf{A} \mathbf{\mathcal{X}}_{N,k} \leq \bar{\mathbf{f}} - \mathbf{B}\xi_k \]
+</p>
+ </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a151ca13d50f730d0cdf2368bffd4ee72"></a><!-- doxytag: member="BaseOfSupport::BaseOfSupport" ref="a151ca13d50f730d0cdf2368bffd4ee72" args="(std::shared_ptr&lt; StepController &gt; stepController, Eigen::MatrixXd Q, Eigen::MatrixXd T, MIQPParameters miqpParams)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classBaseOfSupport.html#a2490d7d641608be3b85c903de83313cc">BaseOfSupport::BaseOfSupport</a> </td>
+          <td class="memname"><a class="el" href="classBaseOfSupport.html#a151ca13d50f730d0cdf2368bffd4ee72">BaseOfSupport::BaseOfSupport</a> </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt;&#160;</td>
-          <td class="paramname"><em>stepController</em></td><td>)</td>
+          <td class="paramname"><em>stepController</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">Eigen::MatrixXd&#160;</td>
+          <td class="paramname"><em>Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixXd&#160;</td>
+          <td class="paramname"><em>T</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structMIQPParameters.html">MIQPParameters</a>&#160;</td>
+          <td class="paramname"><em>miqpParams</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -176,15 +247,195 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac0e7a364ac0ac945469a34d12ab3c9f4"></a><!-- doxytag: member="BaseOfSupport::computeAandB" ref="ac0e7a364ac0ac945469a34d12ab3c9f4" args="(Eigen::MatrixXd &amp;listConvexHull, Eigen::Vector2d a, Eigen::Vector2d b)" -->
+<a class="anchor" id="ab0a2eb399e02b43872d2917c683d6a08"></a><!-- doxytag: member="BaseOfSupport::buildA" ref="ab0a2eb399e02b43872d2917c683d6a08" args="(const Eigen::MatrixXd &amp;Ci, const Eigen::MatrixXd &amp;Q, const Eigen::MatrixXd &amp;T)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classBaseOfSupport.html#ac0e7a364ac0ac945469a34d12ab3c9f4">BaseOfSupport::computeAandB</a> </td>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#ab0a2eb399e02b43872d2917c683d6a08">BaseOfSupport::buildA</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>Ci</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>T</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a70bb139aba387291e0180458a53fb8e5"></a><!-- doxytag: member="BaseOfSupport::buildAb" ref="a70bb139aba387291e0180458a53fb8e5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#a70bb139aba387291e0180458a53fb8e5">BaseOfSupport::buildAb</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab8dfd61d0b11e780e88ae972f9542336"></a><!-- doxytag: member="BaseOfSupport::buildb" ref="ab8dfd61d0b11e780e88ae972f9542336" args="(Eigen::Matrix2d minMaxBoundingBox)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#ab8dfd61d0b11e780e88ae972f9542336">BaseOfSupport::buildb</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Matrix2d&#160;</td>
+          <td class="paramname"><em>minMaxBoundingBox</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7bb54c5f9b2021dd5e393b19e36f0167"></a><!-- doxytag: member="BaseOfSupport::buildB" ref="a7bb54c5f9b2021dd5e393b19e36f0167" args="(Eigen::MatrixXd Ci, Eigen::MatrixXd Q)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#a7bb54c5f9b2021dd5e393b19e36f0167">BaseOfSupport::buildB</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::MatrixXd&#160;</td>
+          <td class="paramname"><em>Ci</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixXd&#160;</td>
+          <td class="paramname"><em>Q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44cb4e3826c95af4b605309a8bcfc03c"></a><!-- doxytag: member="BaseOfSupport::buildCi" ref="a44cb4e3826c95af4b605309a8bcfc03c" args="(Eigen::MatrixXd &amp;Ab, Eigen::MatrixXd &amp;Cp)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#a44cb4e3826c95af4b605309a8bcfc03c">BaseOfSupport::buildCi</a> </td>
           <td>(</td>
           <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
-          <td class="paramname"><em>listConvexHull</em>, </td>
+          <td class="paramname"><em>Ab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>Cp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7efc6cad789632e88d8c85ab171a9eef"></a><!-- doxytag: member="BaseOfSupport::buildCp" ref="a7efc6cad789632e88d8c85ab171a9eef" args="(double cz, double g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#a7efc6cad789632e88d8c85ab171a9eef">BaseOfSupport::buildCp</a> </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af5bb488bb7004a8b14dd0617c4c27700"></a><!-- doxytag: member="BaseOfSupport::buildf" ref="af5bb488bb7004a8b14dd0617c4c27700" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#af5bb488bb7004a8b14dd0617c4c27700">BaseOfSupport::buildf</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afe923e94cbb6308dc3028f72a7ee82db"></a><!-- doxytag: member="BaseOfSupport::buildfbar" ref="afe923e94cbb6308dc3028f72a7ee82db" args="(Eigen::VectorXd &amp;f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#afe923e94cbb6308dc3028f72a7ee82db">BaseOfSupport::buildfbar</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac912464ec5a8f70374dae34d3d823bdb"></a><!-- doxytag: member="BaseOfSupport::computeAandB" ref="ac912464ec5a8f70374dae34d3d823bdb" args="(Eigen::Matrix2d &amp;boundingBox, Eigen::Vector2d a, Eigen::Vector2d b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#ac912464ec5a8f70374dae34d3d823bdb">BaseOfSupport::computeAandB</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Matrix2d &amp;&#160;</td>
+          <td class="paramname"><em>boundingBox</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -260,24 +511,35 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae98c5398e4c53666e324c1fcfb1ef167"></a><!-- doxytag: member="BaseOfSupport::computeConvexHull" ref="ae98c5398e4c53666e324c1fcfb1ef167" args="(Eigen::MatrixXd &amp;feetCorners)" -->
+<a class="anchor" id="a7bfb9f5992767e2c3c3577d96eb47df9"></a><!-- doxytag: member="BaseOfSupport::computeBoundingBox" ref="a7bfb9f5992767e2c3c3577d96eb47df9" args="(Eigen::MatrixXd &amp;feetCorners, Eigen::Matrix2d &amp;minMaxBoundingBox)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::MatrixXd <a class="el" href="classBaseOfSupport.html#ae98c5398e4c53666e324c1fcfb1ef167">BaseOfSupport::computeConvexHull</a> </td>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#a7bfb9f5992767e2c3c3577d96eb47df9">BaseOfSupport::computeBoundingBox</a> </td>
           <td>(</td>
           <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
-          <td class="paramname"><em>feetCorners</em></td><td>)</td>
+          <td class="paramname"><em>feetCorners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">Eigen::Matrix2d &amp;&#160;</td>
+          <td class="paramname"><em>minMaxBoundingBox</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Computes the convex hull points for the current support configuration given the corners of the robot's feet in #feetCorners.</p>
+<p>Computes the bounding box points (minimum and maximum points of the box of the current support configuration) given the corners of the robot's feet in #feetCorners.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">feetCorners</td><td>Matrix of 2D coordinates of the feet corners (or contact points).</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">feetCorners</td><td>Matrix of 2D coordinates of the feet corners (or contact points). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">minMaxBoundingBox</td><td>Two row-wise points corresponding to the minimum and maximum points and in the resulting bounding box.</td></tr>
   </table>
   </dd>
 </dl>
@@ -337,12 +599,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aadb8d9f374904f9f1a2fab2653437d27"></a><!-- doxytag: member="BaseOfSupport::getB" ref="aadb8d9f374904f9f1a2fab2653437d27" args="(Eigen::VectorXd &amp;B)" -->
+<a class="anchor" id="a4704ca8a8e7058cc1ba8241d084625bb"></a><!-- doxytag: member="BaseOfSupport::getrhs" ref="a4704ca8a8e7058cc1ba8241d084625bb" args="(Eigen::VectorXd &amp;B)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classBaseOfSupport.html#aadb8d9f374904f9f1a2fab2653437d27">BaseOfSupport::getB</a> </td>
+          <td class="memname">void <a class="el" href="classBaseOfSupport.html#a4704ca8a8e7058cc1ba8241d084625bb">BaseOfSupport::getrhs</a> </td>
           <td>(</td>
           <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
           <td class="paramname"><em>B</em></td><td>)</td>
@@ -352,18 +614,18 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Getter for the inequality vector b</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">_rhs</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="af7907a87712c10c72f812f0304c013e4"></a><!-- doxytag: member="BaseOfSupport::update" ref="af7907a87712c10c72f812f0304c013e4" args="(Eigen::VectorXd xi_k)" -->
+<a class="anchor" id="a9301442842af0ea76629227c26074c86"></a><!-- doxytag: member="BaseOfSupport::update" ref="a9301442842af0ea76629227c26074c86" args="(Eigen::VectorXd &amp;xi_k)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classBaseOfSupport.html#af7907a87712c10c72f812f0304c013e4">BaseOfSupport::update</a> </td>
+          <td class="memname">bool <a class="el" href="classBaseOfSupport.html#a9301442842af0ea76629227c26074c86">BaseOfSupport::update</a> </td>
           <td>(</td>
-          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
           <td class="paramname"><em>xi_k</em></td><td>)</td>
           <td></td>
         </tr>
@@ -371,8 +633,18 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>To be called at every update cycle of the hosting client.</p>
-<p>Calls <a class="el" href="classBaseOfSupport.html#ae98c5398e4c53666e324c1fcfb1ef167">computeConvexHull()</a> and <a class="el" href="classStepController.html#afb77002292921660ef4a44657d6566f1">StepController::getContact2DCoordinates()</a>, then uses the current system state #xi_k to finally compute <a class="el" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a> and <a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a>.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a>, <a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a> </dd></dl>
+<ul>
+<li>Retrieves the feet corners.</li>
+<li>Computes the bounding box.</li>
+<li>Updates the state-dependent right hand side of the constraints. Calls <a class="el" href="classBaseOfSupport.html#a7bfb9f5992767e2c3c3577d96eb47df9">computeBoundingBox()</a> and <a class="el" href="classStepController.html#afb77002292921660ef4a44657d6566f1">StepController::getContact2DCoordinates()</a>, then updates <a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a></li>
+</ul>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xi_k</td><td>Current system state.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a> </dd></dl>
 
 </div>
 </div>
@@ -387,8 +659,45 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Matrix \(\mathbf{A}_p\) in the inequality expressing the CoP constraints of the system at the current time instant \(k\) and given by \(\mathbf{A}_p \mathbf{\xi}_k \leq \mathbf{f}_p\). \(\mathbf{A}_p\) is a \(n_p \times 16\) matrix and \(\mathbf{f}_p\) a vector in \(\mathbb{R}^{n_p}\) </p>
-
+<p>Matrix \(\mathbf{A}\) in the bounding box constraints for a preview window of size \(N\) </p>
+<p class="formulaDsp">
+\[ \mathbf{A} = \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_i\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_i\mathbf{T} \end{array}\right] \]
+</p>
+ 
+</div>
+</div>
+<a class="anchor" id="a42d531cd89c34cf8821c5cdeff321bc1"></a><!-- doxytag: member="BaseOfSupport::_Ab" ref="a42d531cd89c34cf8821c5cdeff321bc1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classBaseOfSupport.html#a42d531cd89c34cf8821c5cdeff321bc1">BaseOfSupport::_Ab</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Inequality matrix \(\mathbf{A}_b\) expressing the bounding box for the current contact configuration of the robot's feet </p>
+<p class="formulaDsp">
+\[ \mathbf{A}_b = \left[\begin{array}{cc} -1 &amp; 0\\ 1 &amp; 0\\ 0 &amp; -1\\ 0 &amp; 1 \end{array}\right] \]
+</p>
+ 
+</div>
+</div>
+<a class="anchor" id="a9a77c3e98a73065f60b99e888c50fcc7"></a><!-- doxytag: member="BaseOfSupport::_b" ref="a9a77c3e98a73065f60b99e888c50fcc7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7">BaseOfSupport::_b</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Right-hand-side vector of the inequality expression the interior of the bounding box for the current contact configuration of the robot's feet. For the current bounding box defined by minimum and maximum points \(\mathbf{p}_{\text{min}}\) and \(\mathbf{p}_{\text{max}}\) we get: </p>
+<p class="formulaDsp">
+\[ \mathbf{b} = \left[ \begin{array}{c} -x_{\text{min}}\\ x_{\text{max}}\\ -y_{\text{min}}\\ y_{\text{max}} \end{array} \right] \]
+</p>
+ 
 </div>
 </div>
 <a class="anchor" id="adfa70199064a50d9d7aea9a6d4b13246"></a><!-- doxytag: member="BaseOfSupport::_B" ref="adfa70199064a50d9d7aea9a6d4b13246" args="" -->
@@ -401,21 +710,110 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Vector \(\mathbf{f}_p\) in the inequality expressing the CoP constraints of the system at the current time instant \(k\) and given by \(\mathbf{A}_p \mathbf{\xi}_k \leq \mathbf{f}_p\) </p>
-
+<p>Matrix \(\mathbf{B}\) appearing in the bounding box constraints for a preview window of size \(N\):</p>
+<p class="formulaDsp">
+\[ \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \]
+</p>
+ 
 </div>
 </div>
-<a class="anchor" id="a3caa9bcea814865f12d891c0a1c8c4ea"></a><!-- doxytag: member="BaseOfSupport::_hull" ref="a3caa9bcea814865f12d891c0a1c8c4ea" args="" -->
+<a class="anchor" id="a8af13ff0086dc08252d49f69b1752033"></a><!-- doxytag: member="BaseOfSupport::_bbox" ref="a8af13ff0086dc08252d49f69b1752033" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">Polygon</a> <a class="el" href="classBaseOfSupport.html#a3caa9bcea814865f12d891c0a1c8c4ea">BaseOfSupport::_hull</a><code> [private]</code></td>
+          <td class="memname"><a class="el" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">Box</a> <a class="el" href="classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033">BaseOfSupport::_bbox</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Polygon object representing the convex hull delimiting <a class="el" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">_poly</a> </p>
+<p>Polygon object representing the bounding box (envelope) delimiting <a class="el" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">_poly</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0a7a51d0d278841633e4b291df96065d"></a><!-- doxytag: member="BaseOfSupport::_Ci" ref="a0a7a51d0d278841633e4b291df96065d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">BaseOfSupport::_Ci</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Matrix \(\mathbf{C}_i\) in the inequality expressing the CoP constraints of the system at the current time instant \(k\) and given by \(\mathbf{C}_i \xi_k \leq \mathbf{f}\). \(\mathbf{C}_i\) is a \(14 \times 16\) matrix, and \(\mathbf{f}_p\) a vector in \(\mathbb{R}^{n_p}\) or: </p>
+<p class="formulaDsp">
+\[ \left[\begin{array}{cc} \mathbf{0}_{10\times10} &amp; \\ &amp; \mathbf{A}_b \mathbf{C}_p \end{array}\right] \mathbf{\xi} \leq \left[\begin{array}{c} \mathbf{0} \\ \mathbf{b} \end{array}\right] \]
+</p>
+ 
+</div>
+</div>
+<a class="anchor" id="a0ff0fd44966f86d5a62e4d38c3cfea60"></a><!-- doxytag: member="BaseOfSupport::_Cp" ref="a0ff0fd44966f86d5a62e4d38c3cfea60" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classBaseOfSupport.html#a0ff0fd44966f86d5a62e4d38c3cfea60">BaseOfSupport::_Cp</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Output matrix \(\mathbf{C_P}\) of the CoP state space representation</p>
+<p class="formulaDsp">
+\begin{align*} \mathbf{\xi}_{k+1|k} &amp;= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \mathbf{p}_{k|k} &amp; =\mathbf{C}_P \xi_{k|k} \end{align*}
+</p>
+<p>Where</p>
+<p class="formulaDsp">
+\[ \mathbf{C}_P = \left[ \begin{array}{ccccc} \mathbf{0}_{2\times10} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times2} &amp; -\frac{c_z}{g}\mathbf{I}_{2\times2} \end{array}\right] \]
+</p>
+<p>Size: \([2\times16]\) </p>
+
+</div>
+</div>
+<a class="anchor" id="aa2d0af7272d153ead5e088ff67c981e8"></a><!-- doxytag: member="BaseOfSupport::_f" ref="aa2d0af7272d153ead5e088ff67c981e8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classBaseOfSupport.html#aa2d0af7272d153ead5e088ff67c981e8">BaseOfSupport::_f</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Right-hand side vector of the inequalities expressing the bounding box, when the latter is expressed in terms of the sytem state \(\xi_k\) and equal to:</p>
+<p class="formulaDsp">
+\[ \begin{array}{c} \left[ \mathbf{0}\\ \mathbf{b} \end{array}\right] \]
+</p>
+ 
+</div>
+</div>
+<a class="anchor" id="aa578314a7473867f545b95883beb6c6b"></a><!-- doxytag: member="BaseOfSupport::_fbar" ref="aa578314a7473867f545b95883beb6c6b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">BaseOfSupport::_fbar</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Vector \(\bar{\mathbf{f}}\) in the bounding box constraints for a preview window of size \(N\) </p>
+<p class="formulaDsp">
+\[ \mathbf{f} = \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] \]
+</p>
+ 
+</div>
+</div>
+<a class="anchor" id="a82f86511c236d038f1670dd515e53a8f"></a><!-- doxytag: member="BaseOfSupport::_miqpParams" ref="a82f86511c236d038f1670dd515e53a8f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMIQPParameters.html">MIQPParameters</a> <a class="el" href="classBaseOfSupport.html#a82f86511c236d038f1670dd515e53a8f">BaseOfSupport::_miqpParams</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -433,6 +831,36 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a22efc7f81862ffd1268b862ddb9d59ff"></a><!-- doxytag: member="BaseOfSupport::_Q" ref="a22efc7f81862ffd1268b862ddb9d59ff" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">BaseOfSupport::_Q</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a274325bb39f10aac06153b82a2541c3b"></a><!-- doxytag: member="BaseOfSupport::_rhs" ref="a274325bb39f10aac06153b82a2541c3b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">BaseOfSupport::_rhs</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Right-hand side of the constraints of the bounding box in a preview window of size \(N\) and equal to: </p>
+<p class="formulaDsp">
+\[ \bar{\mathbf{f}} - \mathbf{B}\xi_k \]
+</p>
+ 
+</div>
+</div>
 <a class="anchor" id="a023d28c6900f0e97d9de42ca2c5d94a5"></a><!-- doxytag: member="BaseOfSupport::_stepController" ref="a023d28c6900f0e97d9de42ca2c5d94a5" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -445,6 +873,19 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Pointer to the `stepController` object instantiated by the `walking-client`. Since it contains all the contact tasks, it was easier to interface to it to requests the current contact state of the robot, i.e. contact points locations on the ground.</p>
 <dl class="warning"><dt><b>Warning:</b></dt><dd>This is not thread safe yet. It might be better to do this in a different way. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a52f07f15e1667eb7876e614dcd817ef1"></a><!-- doxytag: member="BaseOfSupport::_T" ref="a52f07f15e1667eb7876e614dcd817ef1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">BaseOfSupport::_T</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -472,7 +913,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a>      </li>
 
-    <li class="footer">Generated on Mon Mar 6 2017 23:41:59 for ocra-wbi-plugins by
+    <li class="footer">Generated on Tue Mar 7 2017 23:41:57 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

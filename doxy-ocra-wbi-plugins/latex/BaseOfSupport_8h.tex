@@ -3,12 +3,16 @@
 }
 {\ttfamily \#include $<$boost/geometry.\-hpp$>$}\*
 {\ttfamily \#include $<$boost/geometry/geometries/polygon.\-hpp$>$}\*
+{\ttfamily \#include $<$boost/geometry/geometries/box.\-hpp$>$}\*
 {\ttfamily \#include $<$boost/geometry/geometries/adapted/boost\-\_\-tuple.\-hpp$>$}\*
+{\ttfamily \#include \char`\"{}unsupported/\-Eigen/\-Matrix\-Functions\char`\"{}}\*
 {\ttfamily \#include $<$\-Eigen/\-Core$>$}\*
 {\ttfamily \#include $<$walking-\/client/\-M\-I\-Q\-P\-State.\-h$>$}\*
 {\ttfamily \#include $<$walking-\/client/\-Step\-Controller.\-h$>$}\*
+{\ttfamily \#include $<$walking-\/client/utils.\-h$>$}\*
 {\ttfamily \#include $<$ocra-\/recipes/\-Task\-Connection.\-h$>$}\*
-\-Include dependency graph for \-Base\-Of\-Support.\-h\-:\nopagebreak
+\-Include dependency graph for \-Base\-Of\-Support.\-h\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,10 +40,17 @@ double $>$ \hyperlink{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}{point}
 typedef \*
 boost\-::geometry\-::model\-::polygon\*
 $<$ \hyperlink{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}{point} $>$ \hyperlink{BaseOfSupport_8h_a3b0bf53b9d321e300a59729ebe10e02c}{\-Polygon}
+\item 
+typedef \*
+boost\-::geometry\-::model\-::box\*
+$<$ \hyperlink{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}{point} $>$ \hyperlink{BaseOfSupport_8h_ac470b50f15f04405e67b9031615134f0}{\-Box}
 \end{DoxyCompactItemize}
 
 
 \subsection{\-Typedef \-Documentation}
+\hypertarget{BaseOfSupport_8h_ac470b50f15f04405e67b9031615134f0}{\index{\-Base\-Of\-Support.\-h@{\-Base\-Of\-Support.\-h}!\-Box@{\-Box}}
+\index{\-Box@{\-Box}!BaseOfSupport.h@{\-Base\-Of\-Support.\-h}}
+\subsubsection[{\-Box}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::geometry\-::model\-::box$<${\bf point}$>$ {\bf \-Box}}}\label{BaseOfSupport_8h_ac470b50f15f04405e67b9031615134f0}
 \hypertarget{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}{\index{\-Base\-Of\-Support.\-h@{\-Base\-Of\-Support.\-h}!point@{point}}
 \index{point@{point}!BaseOfSupport.h@{\-Base\-Of\-Support.\-h}}
 \subsubsection[{point}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::tuple$<$double, double$>$ {\bf point}}}\label{BaseOfSupport_8h_ac09614442423c31cf4372f1304b03cb0}

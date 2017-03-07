@@ -5,10 +5,20 @@
 
 {\ttfamily \#include $<$\-M\-I\-Q\-P\-Linear\-Constraints.\-h$>$}
 
+
+
+\-Collaboration diagram for \-M\-I\-Q\-P\-Linear\-Constraints\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classMIQPLinearConstraints__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classMIQPLinearConstraints_ae784e0e4a3fbde27d999c5315119fa0f}{\-M\-I\-Q\-P\-Linear\-Constraints} (unsigned int dt, unsigned int \-N, std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>$ step\-Controller, bool add\-Shape\-Ctrs=true, bool add\-Admissibility\-Ctrs=true, bool add\-Co\-P\-Constraints=false, bool add\-Walking\-Ctrs=false)
+\hyperlink{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}{\-M\-I\-Q\-P\-Linear\-Constraints} (std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>$ step\-Controller, \hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} miqp\-Params, bool add\-Shape\-Ctrs=true, bool add\-Admissibility\-Ctrs=true, bool add\-Co\-P\-Constraints=false, bool add\-Walking\-Ctrs=false)
 \item 
 virtual \hyperlink{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints} ()
 \item 
@@ -90,23 +100,24 @@ unsigned int \hyperlink{classMIQPLinearConstraints_a1edaf84d613dde3f86fd9e78aa14
 unsigned int \hyperlink{classMIQPLinearConstraints_a2726424eb890fe556ce503096b418d0f}{\-\_\-n\-Constraints}
 \item 
 std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>$ \hyperlink{classMIQPLinearConstraints_a9b26abbc012b0f39c6bef163d9c3faed}{\-\_\-base\-Of\-Support}
+\item 
+\hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} \hyperlink{classMIQPLinearConstraints_a22f1b42e65d283a0d748333cc7119a7e}{\-\_\-miqp\-Params}
 \end{DoxyCompactItemize}
 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classMIQPLinearConstraints_ae784e0e4a3fbde27d999c5315119fa0f}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\hypertarget{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-M\-I\-Q\-P\-Linear\-Constraints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-M\-I\-Q\-P\-Linear\-Constraints} (
 \begin{DoxyParamCaption}
-\item[{unsigned int}]{dt, }
-\item[{unsigned int}]{\-N, }
 \item[{std\-::shared\-\_\-ptr$<$ {\bf \-Step\-Controller} $>$}]{step\-Controller, }
+\item[{{\bf \-M\-I\-Q\-P\-Parameters}}]{miqp\-Params, }
 \item[{bool}]{add\-Shape\-Ctrs = {\ttfamily true}, }
 \item[{bool}]{add\-Admissibility\-Ctrs = {\ttfamily true}, }
 \item[{bool}]{add\-Co\-P\-Constraints = {\ttfamily false}, }
 \item[{bool}]{add\-Walking\-Ctrs = {\ttfamily false}}
 \end{DoxyParamCaption}
-)}}\label{classMIQPLinearConstraints_ae784e0e4a3fbde27d999c5315119fa0f}
+)}}\label{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}
 \begin{DoxyRefDesc}{\-Todo}
 \item[\hyperlink{todo__todo000004}{\-Todo}]\-Once \-I add walking constraints this will change to include the rows added by walking constraints \end{DoxyRefDesc}
 \hypertarget{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!$\sim$\-M\-I\-Q\-P\-Linear\-Constraints@{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints}}
@@ -215,7 +226,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \item[{\-Eigen\-::\-Matrix\-Xd \&}]{\-A}
 \end{DoxyParamCaption}
 )}}\label{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}
-\-Retrieves the constraints matrix $\mathbf{A}$. \-Before passing a matrix to copy \hyperlink{classMIQPLinearConstraints_a5dfdc7553c4cbbe75ac54b34c4f29732}{\-\_\-\-A} allocate the space for \-A by calling \hyperlink{classMIQPLinearConstraints_a656681ab464709b025e4522df3458fa1}{get\-Total\-Number\-Of\-Constraints()} to know the number of rows, while \-S\-I\-Z\-E\-\_\-\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R $\ast$ \-S\-I\-Z\-E\-\_\-\-P\-R\-E\-V\-I\-E\-W\-\_\-\-W\-I\-N\-D\-O\-W will be the number of columns.
+\-Retrieves the constraints matrix $\mathbf{A}$. \-Before passing a matrix to copy \hyperlink{classMIQPLinearConstraints_a5dfdc7553c4cbbe75ac54b34c4f29732}{\-\_\-\-A} allocate the space for \-A by calling \hyperlink{classMIQPLinearConstraints_a656681ab464709b025e4522df3458fa1}{get\-Total\-Number\-Of\-Constraints()} to know the number of rows, while \-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E $\ast$ \-S\-I\-Z\-E\-\_\-\-P\-R\-E\-V\-I\-E\-W\-\_\-\-W\-I\-N\-D\-O\-W will be the number of columns.
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -269,7 +280,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \mbox{\tt in}  & {\em xi\-\_\-k} & \-Current state. \\
 \hline
 \end{DoxyParams}
-\-F\-I\-X\-M\-E \-T\-E\-M\-P\-O\-R\-A\-R\-Y!! 
+\-F\-I\-X\-M\-E\-: \-T\-E\-M\-P\-O\-R\-A\-R\-Y!! \-Maybe it's best to have a more generic update method 
 
 \subsection{\-Member \-Data \-Documentation}
 \hypertarget{classMIQPLinearConstraints_a5dfdc7553c4cbbe75ac54b34c4f29732}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-A@{\-\_\-\-A}}
@@ -321,6 +332,9 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \-Period in milliseconds \hypertarget{classMIQPLinearConstraints_a4e1cac634590c04e81d9b9341088efeb}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-fcbar\-Shape\-Admiss@{\-\_\-fcbar\-Shape\-Admiss}}
 \index{\-\_\-fcbar\-Shape\-Admiss@{\-\_\-fcbar\-Shape\-Admiss}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-fcbar\-Shape\-Admiss}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-fcbar\-Shape\-Admiss}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a4e1cac634590c04e81d9b9341088efeb}
+\hypertarget{classMIQPLinearConstraints_a22f1b42e65d283a0d748333cc7119a7e}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-miqp\-Params@{\-\_\-miqp\-Params}}
+\index{\-\_\-miqp\-Params@{\-\_\-miqp\-Params}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\subsubsection[{\-\_\-miqp\-Params}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-Parameters} {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-miqp\-Params}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a22f1b42e65d283a0d748333cc7119a7e}
 \hypertarget{classMIQPLinearConstraints_a1edaf84d613dde3f86fd9e78aa14a077}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-N@{\-\_\-\-N}}
 \index{\-\_\-\-N@{\-\_\-\-N}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-N}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a1edaf84d613dde3f86fd9e78aa14a077}

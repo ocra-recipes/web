@@ -1,9 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$BaseOfSupport_8h.html" title="walking&#45;client/BaseOfSupport.h" alt="" coords="2663,83,2868,112"/>
-<area shape="rect" id="node13" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="2832,160,3013,189"/>
-<area shape="rect" id="node91" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="3037,160,3235,189"/>
-<area shape="rect" id="node17" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="2777,237,2953,267"/>
-<area shape="rect" id="node41" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1712,392,1845,421"/>
-<area shape="rect" id="node88" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="3067,237,3205,267"/>
-<area shape="rect" id="node27" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="1568,315,1781,344"/>
+<area shape="rect" id="node3" href="$BaseOfSupport_8h.html" title="walking&#45;client/BaseOfSupport.h" alt="" coords="2589,83,2795,112"/>
+<area shape="rect" id="node17" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="2849,160,3031,189"/>
+<area shape="rect" id="node92" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="3067,237,3205,267"/>
+<area shape="rect" id="node95" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="3105,160,3303,189"/>
+<area shape="rect" id="node21" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="2777,237,2953,267"/>
+<area shape="rect" id="node45" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1712,392,1845,421"/>
+<area shape="rect" id="node31" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="1568,315,1781,344"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node11" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="2832,83,3013,112"/>
-<area shape="rect" id="node89" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="3037,83,3235,112"/>
-<area shape="rect" id="node15" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="2777,160,2953,189"/>
-<area shape="rect" id="node39" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1712,315,1845,344"/>
-<area shape="rect" id="node86" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="3067,160,3205,189"/>
-<area shape="rect" id="node25" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="1568,237,1781,267"/>
+<area shape="rect" id="node15" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="2849,83,3031,112"/>
+<area shape="rect" id="node90" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="3067,160,3205,189"/>
+<area shape="rect" id="node93" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="3105,83,3303,112"/>
+<area shape="rect" id="node19" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="2777,160,2953,189"/>
+<area shape="rect" id="node43" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1712,315,1845,344"/>
+<area shape="rect" id="node29" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="1568,237,1781,267"/>
 </map>

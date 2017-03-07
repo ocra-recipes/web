@@ -100,12 +100,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <!-- doxytag: class="MIQPLinearConstraints" -->
 <p><code>#include &lt;<a class="el" href="MIQPLinearConstraints_8h_source.html">MIQPLinearConstraints.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for MIQPLinearConstraints:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classMIQPLinearConstraints__coll__graph.svg" width="175" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classMIQPLinearConstraints-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ae784e0e4a3fbde27d999c5315119fa0f">MIQPLinearConstraints</a> (unsigned int dt, unsigned int N, std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt; stepController, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addCoPConstraints=false, bool addWalkingCtrs=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aaa55e8fc7fac6499f60c40e13b0d6605">MIQPLinearConstraints</a> (std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt; stepController, <a class="el" href="structMIQPParameters.html">MIQPParameters</a> miqpParams, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addCoPConstraints=false, bool addWalkingCtrs=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2">~MIQPLinearConstraints</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a> (Eigen::VectorXd xi_k)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a> (Eigen::MatrixXd &amp;A)</td></tr>
@@ -148,29 +154,24 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a1edaf84d613dde3f86fd9e78aa14a077">_N</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a2726424eb890fe556ce503096b418d0f">_nConstraints</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classBaseOfSupport.html">BaseOfSupport</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a9b26abbc012b0f39c6bef163d9c3faed">_baseOfSupport</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMIQPParameters.html">MIQPParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a22f1b42e65d283a0d748333cc7119a7e">_miqpParams</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae784e0e4a3fbde27d999c5315119fa0f"></a><!-- doxytag: member="MIQPLinearConstraints::MIQPLinearConstraints" ref="ae784e0e4a3fbde27d999c5315119fa0f" args="(unsigned int dt, unsigned int N, std::shared_ptr&lt; StepController &gt; stepController, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addCoPConstraints=false, bool addWalkingCtrs=false)" -->
+<a class="anchor" id="aaa55e8fc7fac6499f60c40e13b0d6605"></a><!-- doxytag: member="MIQPLinearConstraints::MIQPLinearConstraints" ref="aaa55e8fc7fac6499f60c40e13b0d6605" args="(std::shared_ptr&lt; StepController &gt; stepController, MIQPParameters miqpParams, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addCoPConstraints=false, bool addWalkingCtrs=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMIQPLinearConstraints.html#ae784e0e4a3fbde27d999c5315119fa0f">MIQPLinearConstraints::MIQPLinearConstraints</a> </td>
+          <td class="memname"><a class="el" href="classMIQPLinearConstraints.html#aaa55e8fc7fac6499f60c40e13b0d6605">MIQPLinearConstraints::MIQPLinearConstraints</a> </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>dt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>N</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt;&#160;</td>
           <td class="paramname"><em>stepController</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structMIQPParameters.html">MIQPParameters</a>&#160;</td>
+          <td class="paramname"><em>miqpParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -393,7 +394,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Retrieves the constraints matrix \(\mathbf{A}\). Before passing a matrix to copy <a class="el" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">_A</a> allocate the space for A by calling <a class="el" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints()</a> to know the number of rows, while SIZE_INPUT_VECTOR * SIZE_PREVIEW_WINDOW will be the number of columns.</p>
+<p>Retrieves the constraints matrix \(\mathbf{A}\). Before passing a matrix to copy <a class="el" href="classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732">_A</a> allocate the space for A by calling <a class="el" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints()</a> to know the number of rows, while INPUT_VECTOR_SIZE * SIZE_PREVIEW_WINDOW will be the number of columns.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>Reference to matrix where the global constraints matrix _A will be copied. </td></tr>
@@ -493,7 +494,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>FIXME TEMPORARY!! </p>
+<p>FIXME: TEMPORARY!! Maybe it's best to have a more generic update method </p>
 
 </div>
 </div>
@@ -711,6 +712,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a22f1b42e65d283a0d748333cc7119a7e"></a><!-- doxytag: member="MIQPLinearConstraints::_miqpParams" ref="a22f1b42e65d283a0d748333cc7119a7e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMIQPParameters.html">MIQPParameters</a> <a class="el" href="classMIQPLinearConstraints.html#a22f1b42e65d283a0d748333cc7119a7e">MIQPLinearConstraints::_miqpParams</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a1edaf84d613dde3f86fd9e78aa14a077"></a><!-- doxytag: member="MIQPLinearConstraints::_N" ref="a1edaf84d613dde3f86fd9e78aa14a077" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -836,7 +850,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a>      </li>
 
-    <li class="footer">Generated on Mon Mar 6 2017 23:41:59 for ocra-wbi-plugins by
+    <li class="footer">Generated on Tue Mar 7 2017 23:41:57 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

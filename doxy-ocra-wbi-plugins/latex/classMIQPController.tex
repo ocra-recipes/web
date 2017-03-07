@@ -17,7 +17,7 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classMIQPController_aa40045cd7c4579494fa03f1e99fc474f}{\-M\-I\-Q\-P\-Controller} (int period, \hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} params, ocra\-::\-Model\-::\-Ptr robot\-Model, std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>$ step\-Controller, const \-Eigen\-::\-Matrix\-Xd \&com\-State\-Ref)
+\hyperlink{classMIQPController_a5fec189a29105d999d3bb2721977945a}{\-M\-I\-Q\-P\-Controller} (\hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} params, ocra\-::\-Model\-::\-Ptr robot\-Model, std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>$ step\-Controller, const \-Eigen\-::\-Matrix\-Xd \&com\-State\-Ref)
 \item 
 virtual \hyperlink{classMIQPController_a46e1cc8dba1633a49d934aa20730e358}{$\sim$\-M\-I\-Q\-P\-Controller} ()
 \item 
@@ -105,7 +105,7 @@ int \hyperlink{classMIQPController_aed2ce53008e32e64e107398d85e75170}{\-\_\-peri
 \item 
 \-Eigen\-::\-Vector\-Xd \hyperlink{classMIQPController_aa8407451ad8b20c814b12fef631f43f6}{\-\_\-ub}
 \item 
-std\-::string \hyperlink{classMIQPController_a2c3ddd93fd843a3a4650314b47436be7}{\-\_\-variables\-Names} \mbox{[}\hyperlink{MIQPController_8h_aa2f26540ce870ca91503bb6746a52e69}{\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}\mbox{]}
+std\-::string \hyperlink{classMIQPController_a2c3ddd93fd843a3a4650314b47436be7}{\-\_\-variables\-Names} \mbox{[}\hyperlink{utils_8h_aa2f26540ce870ca91503bb6746a52e69}{\-I\-N\-P\-U\-T\-\_\-\-V\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}\mbox{]}
 \item 
 \-Eigen\-::\-Vector\-Xd \hyperlink{classMIQPController_ad1c63725dab2ce84382fcb0b071325ed}{\-\_\-xi\-\_\-k}
 \item 
@@ -173,23 +173,20 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classMIQPController_aa40045cd7c4579494fa03f1e99fc474f}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}}
+\hypertarget{classMIQPController_a5fec189a29105d999d3bb2721977945a}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}}
 \index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-M\-I\-Q\-P\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-Controller\-::\-M\-I\-Q\-P\-Controller} (
 \begin{DoxyParamCaption}
-\item[{int}]{period, }
 \item[{{\bf \-M\-I\-Q\-P\-Parameters}}]{params, }
 \item[{ocra\-::\-Model\-::\-Ptr}]{robot\-Model, }
 \item[{std\-::shared\-\_\-ptr$<$ {\bf \-Step\-Controller} $>$}]{step\-Controller, }
 \item[{const \-Eigen\-::\-Matrix\-Xd \&}]{com\-State\-Ref}
 \end{DoxyParamCaption}
-)}}\label{classMIQPController_aa40045cd7c4579494fa03f1e99fc474f}
+)}}\label{classMIQPController_a5fec189a29105d999d3bb2721977945a}
 \-Constructor.
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em period} & \hyperlink{classThread}{\-Thread} period in ms \\
-\hline
 {\em params} & \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} parameters  robot\-Model \-Pointer to the robot model instantiated by the containing client (walking-\/client) \\
 \hline
 {\em com\-State\-Ref} & \-Reference to a matrix of \-Co\-M state references. \-The k-\/th row contains the desired \-Co\-M state at time k \\
@@ -321,6 +318,8 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPController_a85b7dc746b088c0669d715ee17b02865}
 \-Builds the equality constraints matrices \hyperlink{classMIQPController_abc22f1db5a2dbcab4006c1b903a19c4e}{\-\_\-\-Aeq}, \#\-\_\-\-R\-H\-Seq
+
+\mbox{[}\{array\}\{cccc\} \{\-C\}\-\_\-i\{\-T\} \& 0 \&  \& 0 $\backslash$ \{\-C\}\-\_\-i\{\-Q\}\{\-T\} \& \{\-C\}\-\_\-i\{\-T\} \&  \& 0 $\backslash$  \&  \&  \&  $\backslash$ \{\-C\}\-\_\-i\{\-Q\}$^\wedge$\{\-N-\/1\}\{\-T\} \& \{\-C\}\-\_\-i\{\-Q\}$^\wedge$\{\-N-\/2\}\{\-T\} \&  \& \{\-C\}\-\_\-i\{\-T\} \{array\}\mbox{]} = \mbox{[}\{array\}\{c\} \{f\}\-\_\-c$\backslash$ \{f\}\-\_\-c$\backslash$ $\backslash$ \{f\}\-\_\-c \{array\}\mbox{]} -\/ \mbox{[}\{array\}\{c\} \{\-C\}\-\_\-i\{\-Q\}$\backslash$ \{\-C\}\-\_\-i\{\-Q\}$^\wedge$2$\backslash$ $\backslash$ \{\-C\}\-\_\-i\{\-Q\}$^\wedge$\-N \{array\}\mbox{]} \{\}\-\_\-k
 
 
 \begin{DoxyParams}{\-Parameters}
@@ -624,7 +623,7 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \hypertarget{classMIQPController_abc22f1db5a2dbcab4006c1b903a19c4e}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Aeq@{\-\_\-\-Aeq}}
 \index{\-\_\-\-Aeq@{\-\_\-\-Aeq}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Aeq}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Aeq}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_abc22f1db5a2dbcab4006c1b903a19c4e}
-\-Matrix \-A of the equality constraints of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} problem, i.\-e. \[ A_{\text{eq}} x = b_{\text{eq}} \]
+\-Matrix \-A of the equality constraints of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} problem, i.\-e. \[ \mathbf{A}_{\text{eq}} \mathcal{\mathbf{X}} = \mathbf{b}_{\text{eq}} \]
 
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{classMIQPController_a85b7dc746b088c0669d715ee17b02865}{build\-Equality\-Constraints\-Matrices()} 
@@ -646,7 +645,7 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \-Set by \hyperlink{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}{\-M\-I\-Q\-P\-Linear\-Constraints\-::get\-Constraints\-Matrix\-A()}. \hypertarget{classMIQPController_a59bee510bcc945ad2267a82ec2116d79}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Beq@{\-\_\-\-Beq}}
 \index{\-\_\-\-Beq@{\-\_\-\-Beq}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Beq}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Beq}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a59bee510bcc945ad2267a82ec2116d79}
-\-R\-H\-S of the equality constraints of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} problem, i.\-e. \[ A_{\text{eq}} x = b_{\test{eq}} \]
+\-R\-H\-S of the equality constraints of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} problem, i.\-e. \[ \mathbf{A}_{\text{eq}} x = \mathbf{b}_{\text{eq}} \]
 
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{classMIQPController_a85b7dc746b088c0669d715ee17b02865}{build\-Equality\-Constraints\-Matrices()} 

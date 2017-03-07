@@ -1,6 +1,6 @@
 var classMIQPController =
 [
-    [ "MIQPController", "classMIQPController.html#aa40045cd7c4579494fa03f1e99fc474f", null ],
+    [ "MIQPController", "classMIQPController.html#a5fec189a29105d999d3bb2721977945a", null ],
     [ "~MIQPController", "classMIQPController.html#a46e1cc8dba1633a49d934aa20730e358", null ],
     [ "addVariablesToModel", "classMIQPController.html#a8a4200f8a98ec13b93dfab56eb5cc423", null ],
     [ "buildAh", "classMIQPController.html#aea16b6eac86da5330c7ffbfdb9c655f5", null ],

@@ -99,15 +99,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;boost/geometry.hpp&gt;</code><br/>
 <code>#include &lt;boost/geometry/geometries/polygon.hpp&gt;</code><br/>
+<code>#include &lt;boost/geometry/geometries/box.hpp&gt;</code><br/>
 <code>#include &lt;boost/geometry/geometries/adapted/boost_tuple.hpp&gt;</code><br/>
+<code>#include &quot;unsupported/Eigen/MatrixFunctions&quot;</code><br/>
 <code>#include &lt;Eigen/Core&gt;</code><br/>
 <code>#include &lt;<a class="el" href="MIQPState_8h_source.html">walking-client/MIQPState.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="StepController_8h_source.html">walking-client/StepController.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="utils_8h_source.html">walking-client/utils.h</a>&gt;</code><br/>
 <code>#include &lt;ocra-recipes/TaskConnection.h&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BaseOfSupport.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="BaseOfSupport_8h__incl.svg" width="3467" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="BaseOfSupport_8h__incl.svg" width="3535" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -128,8 +132,24 @@ double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 boost::geometry::model::polygon<br class="typebreak"/>
 &lt; <a class="el" href="BaseOfSupport_8h.html#ac09614442423c31cf4372f1304b03cb0">point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">Polygon</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+boost::geometry::model::box<br class="typebreak"/>
+&lt; <a class="el" href="BaseOfSupport_8h.html#ac09614442423c31cf4372f1304b03cb0">point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">Box</a></td></tr>
 </table>
 <hr/><h2>Typedef Documentation</h2>
+<a class="anchor" id="ac470b50f15f04405e67b9031615134f0"></a><!-- doxytag: member="BaseOfSupport.h::Box" ref="ac470b50f15f04405e67b9031615134f0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::geometry::model::box&lt;<a class="el" href="BaseOfSupport_8h.html#ac09614442423c31cf4372f1304b03cb0">point</a>&gt; <a class="el" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">Box</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ac09614442423c31cf4372f1304b03cb0"></a><!-- doxytag: member="BaseOfSupport.h::point" ref="ac09614442423c31cf4372f1304b03cb0" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +196,7 @@ boost::geometry::model::polygon<br class="typebreak"/>
     <ul>
       <li class="navelem"><a class="el" href="BaseOfSupport_8h.html">BaseOfSupport.h</a>      </li>
 
-    <li class="footer">Generated on Mon Mar 6 2017 23:41:59 for ocra-wbi-plugins by
+    <li class="footer">Generated on Tue Mar 7 2017 23:41:57 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

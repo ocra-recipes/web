@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['update',['update',['../classBaseOfSupport.html#af7907a87712c10c72f812f0304c013e4',1,'BaseOfSupport']]],
+  ['update',['update',['../classBaseOfSupport.html#a9301442842af0ea76629227c26074c86',1,'BaseOfSupport']]],
   ['updatebaseofsupportdescriptors',['updateBaseOfSupportDescriptors',['../classMIQP_1_1MIQPState.html#a8dec06cabde0ad186c976c0bc61c4688',1,'MIQP::MIQPState']]],
   ['updateequalityconstraints',['updateEqualityConstraints',['../classMIQPController.html#a35df037b7a226f425a2a949b14d860d1',1,'MIQPController']]],
   ['updatehorizontalcomstate',['updateHorizontalCoMState',['../classMIQP_1_1MIQPState.html#a91a2e7b0415bf56fdb26625eacf106ef',1,'MIQP::MIQPState']]],
