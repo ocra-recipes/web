@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$ShapeConstraints_8h.html" title="walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="247,83,535,112"/>
 <area shape="rect" id="node5" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="269,237,512,267"/>
-<area shape="rect" id="node17" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="140,160,377,189"/>
-<area shape="rect" id="node20" href="$Constancy_8h.html" title="walking&#45;client/constraints/Constancy.h" alt="" coords="401,160,647,189"/>
-<area shape="rect" id="node23" href="$Sequentiality_8h.html" title="walking&#45;client/constraints/Sequentiality.h" alt="" coords="671,160,929,189"/>
+<area shape="rect" id="node19" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="140,160,377,189"/>
+<area shape="rect" id="node22" href="$Constancy_8h.html" title="walking&#45;client/constraints/Constancy.h" alt="" coords="401,160,647,189"/>
+<area shape="rect" id="node25" href="$Sequentiality_8h.html" title="walking&#45;client/constraints/Sequentiality.h" alt="" coords="671,160,929,189"/>
 <area shape="rect" id="node7" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="5,315,144,344"/>
 </map>

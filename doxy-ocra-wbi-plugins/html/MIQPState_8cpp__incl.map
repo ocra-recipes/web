@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="1156,83,1337,112"/>
-<area shape="rect" id="node7" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="1033,160,1209,189"/>
-<area shape="rect" id="node31" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1480,315,1613,344"/>
-<area shape="rect" id="node78" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="1463,160,1601,189"/>
-<area shape="rect" id="node17" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="657,237,871,267"/>
+<area shape="rect" id="node3" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="1887,83,2068,112"/>
+<area shape="rect" id="node7" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="1889,160,2065,189"/>
+<area shape="rect" id="node31" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1785,315,1919,344"/>
+<area shape="rect" id="node78" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="2913,237,3052,267"/>
+<area shape="rect" id="node17" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="621,237,835,267"/>
 </map>

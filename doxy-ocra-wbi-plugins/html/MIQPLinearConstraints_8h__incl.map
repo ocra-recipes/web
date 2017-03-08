@@ -1,19 +1,19 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ShapeConstraints_8h.html" title="walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="2469,83,2757,112"/>
-<area shape="rect" id="node7" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="351,315,489,344"/>
-<area shape="rect" id="node26" href="$AdmissibilityConstraints_8h.html" title="walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="1428,83,1753,112"/>
-<area shape="rect" id="node41" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="135,237,332,267"/>
-<area shape="rect" id="node46" href="$BaseOfSupport_8h.html" title="walking&#45;client/BaseOfSupport.h" alt="" coords="744,160,949,189"/>
-<area shape="rect" id="node5" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="2031,237,2273,267"/>
-<area shape="rect" id="node17" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="2651,160,2888,189"/>
-<area shape="rect" id="node20" href="$Constancy_8h.html" title="walking&#45;client/constraints/Constancy.h" alt="" coords="2912,160,3157,189"/>
-<area shape="rect" id="node23" href="$Sequentiality_8h.html" title="walking&#45;client/constraints/Sequentiality.h" alt="" coords="2317,160,2576,189"/>
-<area shape="rect" id="node29" href="$SSDSAlternation_8h.html" title="walking&#45;client/constraints/SSDSAlternation.h" alt="" coords="2011,160,2293,189"/>
-<area shape="rect" id="node32" href="$SingleSupport_8h.html" title="walking&#45;client/constraints/SingleSupport.h" alt="" coords="973,160,1237,189"/>
-<area shape="rect" id="node35" href="$ContactConfigHistory_8h.html" title="walking&#45;client/constraints/ContactConfigHistory.h" alt="" coords="1261,160,1571,189"/>
-<area shape="rect" id="node38" href="$ContactConfigEnforcement_8h.html" title="walking&#45;client/constraints/ContactConfigEnforcement.h" alt="" coords="1595,160,1936,189"/>
-<area shape="rect" id="node58" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="1497,237,1679,267"/>
-<area shape="rect" id="node62" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="1551,315,1727,344"/>
-<area shape="rect" id="node81" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="1508,469,1641,499"/>
-<area shape="rect" id="node71" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="673,392,887,421"/>
+<area shape="rect" id="node3" href="$ShapeConstraints_8h.html" title="walking&#45;client/constraints/ShapeConstraints.h" alt="" coords="1657,83,1945,112"/>
+<area shape="rect" id="node7" href="$utils_8h.html" title="walking&#45;client/utils.h" alt="" coords="2301,315,2440,344"/>
+<area shape="rect" id="node28" href="$AdmissibilityConstraints_8h.html" title="walking&#45;client/constraints/AdmissibilityConstraints.h" alt="" coords="549,83,875,112"/>
+<area shape="rect" id="node43" href="$StepController_8h.html" title="walking&#45;client/StepController.h" alt="" coords="1632,237,1829,267"/>
+<area shape="rect" id="node48" href="$BaseOfSupport_8h.html" title="walking&#45;client/BaseOfSupport.h" alt="" coords="2264,160,2469,189"/>
+<area shape="rect" id="node5" href="$Constraint_8h.html" title="A constraint base class." alt="" coords="1264,237,1507,267"/>
+<area shape="rect" id="node19" href="$Bounding_8h.html" title="walking&#45;client/constraints/Bounding.h" alt="" coords="1683,160,1920,189"/>
+<area shape="rect" id="node22" href="$Constancy_8h.html" title="walking&#45;client/constraints/Constancy.h" alt="" coords="1944,160,2189,189"/>
+<area shape="rect" id="node25" href="$Sequentiality_8h.html" title="walking&#45;client/constraints/Sequentiality.h" alt="" coords="1349,160,1608,189"/>
+<area shape="rect" id="node31" href="$SSDSAlternation_8h.html" title="walking&#45;client/constraints/SSDSAlternation.h" alt="" coords="421,160,704,189"/>
+<area shape="rect" id="node34" href="$SingleSupport_8h.html" title="walking&#45;client/constraints/SingleSupport.h" alt="" coords="728,160,992,189"/>
+<area shape="rect" id="node37" href="$ContactConfigHistory_8h.html" title="walking&#45;client/constraints/ContactConfigHistory.h" alt="" coords="1016,160,1325,189"/>
+<area shape="rect" id="node40" href="$ContactConfigEnforcement_8h.html" title="walking&#45;client/constraints/ContactConfigEnforcement.h" alt="" coords="5,160,347,189"/>
+<area shape="rect" id="node60" href="$MIQPState_8h.html" title="walking&#45;client/MIQPState.h" alt="" coords="3221,237,3403,267"/>
+<area shape="rect" id="node64" href="$OcraWbiModel_8h.html" title="Implementation of ocra::Model using wholeBodyInterface." alt="" coords="3429,315,3605,344"/>
+<area shape="rect" id="node83" href="$Utilities_8h.html" title="Some useful tools for the ocra&#45;icub lib." alt="" coords="3451,469,3584,499"/>
+<area shape="rect" id="node73" href="$OcraWbiConversions_8h.html" title="A utility class full of static conversion functions." alt="" coords="4516,392,4729,421"/>
 </map>

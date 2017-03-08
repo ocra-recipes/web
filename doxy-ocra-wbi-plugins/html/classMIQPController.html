@@ -119,10 +119,6 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ae61af28f2062b4372ce9c5cb37ebb161">setQuadraticPartObjectiveFunction</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a3f15855fdab618e9f3b51c2b7df52b4e">setVariablesTypes</a> (char *variablesTypes)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a1bb6f0a6b520aa1ee18fe59c760f8aa8">setObjectiveFunction</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">GRBVar *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a8a4200f8a98ec13b93dfab56eb5cc423">addVariablesToModel</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a2caf42a5b5dcd63d67de57cfbb93c653">setLowerAndUpperBounds</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aea16b6eac86da5330c7ffbfdb9c655f5">buildAh</a> (int dt, Eigen::MatrixXd &amp;output)</td></tr>
@@ -136,10 +132,12 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a3860ad55d43b442069e806764ce48fc4">buildNb</a> (Eigen::MatrixXd &amp;output)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a959d9957a931315d3f1cf95ad5c07a65">buildNx</a> (Eigen::MatrixXd &amp;output)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a9dfdebb8c769d380617d47b513d1a2b1">buildSw</a> (Eigen::MatrixXd &amp;output)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aad69912c4251ecb0d1a052131d17a96e">buildPreviewStateMatrix</a> (Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;P)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ac170171511569c7d2b9d76ebee30da47">buildPreviewInputMatrix</a> (Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a85b7dc746b088c0669d715ee17b02865">buildEqualityConstraintsMatrices</a> (Eigen::MatrixXd &amp;Aeq, Eigen::VectorXd &amp;Beq, Eigen::VectorXd &amp;x_k)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a35df037b7a226f425a2a949b14d860d1">updateEqualityConstraints</a> (Eigen::VectorXd &amp;x_k)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ad9a2e7d2c658937c847097f83d3408e3">buildPreviewStateMatrix</a> (const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;P)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a9e4f007d1b6b7f68582aebbc09cf0813">buildPreviewInputMatrix</a> (const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082">buildEqualityConstraintsMatrices</a> (const Eigen::VectorXd &amp;x_k, Eigen::MatrixXd &amp;Aeq, Eigen::VectorXd &amp;Beq)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a4c3f665528fae6c051160456692372ee">updateEqualityConstraints</a> (const Eigen::VectorXd &amp;x_k, Eigen::VectorXd &amp;Beq)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#afce6feca593352323e052b6c993cbf69">setBinaryVariables</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a014cab392ddec6085df74f2590af4791">writeToFile</a> (const double &amp;time, const Eigen::VectorXd &amp;X_kn, std::string &amp;home)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">ocra::Model::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">_robotModel</a></td></tr>
@@ -147,12 +145,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMIQPParameters.html">MIQPParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">_miqpParams</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ab74859a8dd208f3fc7608391d318d469">_comStateRef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aed2ce53008e32e64e107398d85e75170">_period</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">GRBEnv *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aec530057d97a52549fdc3823a48f73cf">_env</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">GRBModel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a2bafe24633a7f8c9d6211cde12b29a90">_model</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">GRBQuadExpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a4bac1e68bd433553a7c00677bdc496dd">_obj</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">GRBVar *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a1143bf95d61a348b08010c909b190029">_vars</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a532459bb659a1cc39d449fdf3f81c63f">_quadraticTermObjFunc</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a2c3ddd93fd843a3a4650314b47436be7">_variablesNames</a> [<a class="el" href="utils_8h.html#aa2f26540ce870ca91503bb6746a52e69">INPUT_VECTOR_SIZE</a>]</td></tr>
@@ -255,25 +248,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8a4200f8a98ec13b93dfab56eb5cc423"></a><!-- doxytag: member="MIQPController::addVariablesToModel" ref="a8a4200f8a98ec13b93dfab56eb5cc423" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GRBVar * <a class="el" href="classMIQPController.html#a8a4200f8a98ec13b93dfab56eb5cc423">MIQPController::addVariablesToModel</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Adds variables to the model. Sets also the variable types and calls the lower and upper bounds method</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to object of Gurobi variables. </dd></dl>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>To be deprecated if eigen-gurobi works fine </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="aea16b6eac86da5330c7ffbfdb9c655f5"></a><!-- doxytag: member="MIQPController::buildAh" ref="aea16b6eac86da5330c7ffbfdb9c655f5" args="(int dt, Eigen::MatrixXd &amp;output)" -->
 <div class="memitem">
 <div class="memproto">
@@ -421,13 +395,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a85b7dc746b088c0669d715ee17b02865"></a><!-- doxytag: member="MIQPController::buildEqualityConstraintsMatrices" ref="a85b7dc746b088c0669d715ee17b02865" args="(Eigen::MatrixXd &amp;Aeq, Eigen::VectorXd &amp;Beq, Eigen::VectorXd &amp;x_k)" -->
+<a class="anchor" id="a870c7d3c0e5fcfd46f7bb95924007082"></a><!-- doxytag: member="MIQPController::buildEqualityConstraintsMatrices" ref="a870c7d3c0e5fcfd46f7bb95924007082" args="(const Eigen::VectorXd &amp;x_k, Eigen::MatrixXd &amp;Aeq, Eigen::VectorXd &amp;Beq)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMIQPController.html#a85b7dc746b088c0669d715ee17b02865">MIQPController::buildEqualityConstraintsMatrices</a> </td>
+          <td class="memname">void <a class="el" href="classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082">MIQPController::buildEqualityConstraintsMatrices</a> </td>
           <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>x_k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
           <td class="paramname"><em>Aeq</em>, </td>
         </tr>
@@ -435,13 +415,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>Beq</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>x_k</em>&#160;</td>
+          <td class="paramname"><em>Beq</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -451,13 +425,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds the equality constraints matrices <a class="el" href="classMIQPController.html#abc22f1db5a2dbcab4006c1b903a19c4e">_Aeq</a>, #_RHSeq</p>
-<p>[{array}{cccc} {C}_i{T} &amp; 0 &amp;  &amp; 0 \ {C}_i{Q}{T} &amp; {C}_i{T} &amp;  &amp; 0 \  &amp;  &amp;  &amp;  \ {C}_i{Q}^{N-1}{T} &amp; {C}_i{Q}^{N-2}{T} &amp;  &amp; {C}_i{T} {array}] = [{array}{c} {f}_c\ {f}_c\ \ {f}_c {array}] - [{array}{c} {C}_i{Q}\ {C}_i{Q}^2\ \ {C}_i{Q}^N {array}] {}_k</p>
+<p>Builds the equality constraints matrices <a class="el" href="classMIQPController.html#abc22f1db5a2dbcab4006c1b903a19c4e">_Aeq</a>, <a class="el" href="classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79">_Beq</a>. For the time being, the equality constraints are composed of only the so-called Simultaneity constraints of the problem, which guarantee that allowing a discontinuity of one of the bounds ( \(\matbf{a},\mathbf{b}\)) in one direction simultaneously allows a discontinuity in the orthogonal direction. This requirement writes:</p>
+<p class="formulaDsp">
+\[ \forall i, \alpha_{x_i} + \beta_{x_i} = \alpha_{y_i} + \beta_{y_i} \]
+</p>
+<p>Which then in a preview window of size \(N\) writes:</p>
+<p class="formulaDsp">
+\[ \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_i\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_i\mathbf{T} \end{array}\right] = \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] - \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \mathbf{\xi}_k \]
+</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">Aeq</td><td>Reference to output matrix. </td></tr>
-    <tr><td class="paramname">Beq</td><td>Reference to right hand side vector. </td></tr>
-    <tr><td class="paramname">x_k</td><td>Current state vector. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_k</td><td>Current state vector. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Aeq</td><td>Reference to output matrix. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Beq</td><td>Reference to right hand side vector. </td></tr>
   </table>
   </dd>
 </dl>
@@ -539,14 +519,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac170171511569c7d2b9d76ebee30da47"></a><!-- doxytag: member="MIQPController::buildPreviewInputMatrix" ref="ac170171511569c7d2b9d76ebee30da47" args="(Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R)" -->
+<a class="anchor" id="a9e4f007d1b6b7f68582aebbc09cf0813"></a><!-- doxytag: member="MIQPController::buildPreviewInputMatrix" ref="a9e4f007d1b6b7f68582aebbc09cf0813" args="(const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMIQPController.html#ac170171511569c7d2b9d76ebee30da47">MIQPController::buildPreviewInputMatrix</a> </td>
+          <td class="memname">void <a class="el" href="classMIQPController.html#a9e4f007d1b6b7f68582aebbc09cf0813">MIQPController::buildPreviewInputMatrix</a> </td>
           <td>(</td>
-          <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
           <td class="paramname"><em>C</em>, </td>
         </tr>
         <tr>
@@ -563,7 +543,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds a Preview Input Matrix for a preview window of size \(N\) with the following form {R} = [{array}{cccc} {C}{T} &amp; 0 &amp;  &amp; 0 \ {C}{Q}{T} &amp; {C}{T} &amp;  &amp; 0 \  &amp;  &amp;  &amp;  \ {C}{Q}^{N-1}{T} &amp; {C}{Q}^{N-2}{T} &amp;  &amp; {C}{T} {array}]</p>
+<p>Builds a Preview Input Matrix for a preview window of size \(N\) with the following form </p>
+<p class="formulaDsp">
+\[ \mathbf{R} = \left[\begin{array}{cccc} \mathbf{C}\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}\mathbf{Q}\mathbf{T} &amp; \mathbf{C}\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}\mathbf{T} \end{array}\right] \]
+</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">C</td><td>Output matrix from a state space representation. </td></tr>
@@ -575,14 +558,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aad69912c4251ecb0d1a052131d17a96e"></a><!-- doxytag: member="MIQPController::buildPreviewStateMatrix" ref="aad69912c4251ecb0d1a052131d17a96e" args="(Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;P)" -->
+<a class="anchor" id="ad9a2e7d2c658937c847097f83d3408e3"></a><!-- doxytag: member="MIQPController::buildPreviewStateMatrix" ref="ad9a2e7d2c658937c847097f83d3408e3" args="(const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;P)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMIQPController.html#aad69912c4251ecb0d1a052131d17a96e">MIQPController::buildPreviewStateMatrix</a> </td>
+          <td class="memname">void <a class="el" href="classMIQPController.html#ad9a2e7d2c658937c847097f83d3408e3">MIQPController::buildPreviewStateMatrix</a> </td>
           <td>(</td>
-          <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
           <td class="paramname"><em>C</em>, </td>
         </tr>
         <tr>
@@ -599,7 +582,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds a Preview State Matrix for a preview window of size \(N\) with the following form: {P} = [{array}{c} {C} {Q} \ \ {C} {Q}^N {array}]</p>
+<p>Builds a Preview State Matrix for a preview window of size \(N\) with the following form: </p>
+<p class="formulaDsp">
+\[ \mathbf{P} = \left[\begin{array}{c} \mathbf{C} \mathbf{Q} \\ \vdots\\ \mathbf{C} \mathbf{Q}^N \end{array}\right] \]
+</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">C</td><td>Output matrix from a state space representation. </td></tr>
@@ -707,12 +693,26 @@ Private Attributes</h2></td></tr>
 <li>Solves the optimization problem.</li>
 <li>Retrieves the solution.</li>
 </ul>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a>, <a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">MIQPLinearConstraints::updateRHS()</a>, <a class="el" href="classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f">setCOMStateRefInPreviewWindow()</a>, <a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction()</a>, Eigen::GurobiDense::solve() </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd><p class="startdd"><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a> needs to be implemented. </p>
-<p>Still gotta set the equality constraints such as Simultaneity </p>
-<p>Watch out! _eigGurobi will add a 1/2. Therefore the 2. Check that this is correct. </p>
-<p class="enddd">: The expression for _H_N is missing regularization terms </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a>, <a class="el" href="classMIQPLinearConstraints.html#a27ae3bdf1d4b4bd1e5279607e4b96f1a">MIQPLinearConstraints::updateRHS()</a>, <a class="el" href="classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f">setCOMStateRefInPreviewWindow()</a>, <a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction()</a>, Eigen::GurobiDense::solve() </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd><p class="startdd">Watch out! _eigGurobi will add a 1/2. Therefore the 2. Check that this is correct. </p>
+<p class="enddd">The expression for _H_N is missing regularization terms </p>
 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afce6feca593352323e052b6c993cbf69"></a><!-- doxytag: member="MIQPController::setBinaryVariables" ref="afce6feca593352323e052b6c993cbf69" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPController.html#afce6feca593352323e052b6c993cbf69">MIQPController::setBinaryVariables</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -740,10 +740,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Takes N elements from an original trajectory of desired CoM states from state k</p>
+<p>Takes \(N\) elements from an original trajectory of desired CoM states from state \(k\)</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">comStateRef</td><td>Sets _H_N_r for a preview window of size N from time k </td></tr>
+    <tr><td class="paramname">comStateRef</td><td>Sets <a class="el" href="classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c">_H_N_r</a> for a preview window of size N from time k </td></tr>
   </table>
   </dd>
 </dl>
@@ -763,7 +763,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Sets <a class="el" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a>, which corresponds to the linear part of the objective function of the <a class="el" href="namespaceMIQP.html">MIQP</a> </p>
+<p>Sets <a class="el" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a>, which corresponds to the linear part of the objective function of the <a class="el" href="namespaceMIQP.html">MIQP</a></p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a> </dd></dl>
 
 </div>
 </div>
@@ -780,67 +781,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Sets <a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a> and <a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a> </p>
+<p>Sets <a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a> and <a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a></p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a> <a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a1bb6f0a6b520aa1ee18fe59c760f8aa8"></a><!-- doxytag: member="MIQPController::setObjectiveFunction" ref="a1bb6f0a6b520aa1ee18fe59c760f8aa8" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classMIQPController.html#a1bb6f0a6b520aa1ee18fe59c760f8aa8">MIQPController::setObjectiveFunction</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Sets the objective function with only the quadratic term. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>To be deprecated if eigen-gurobi works fine </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ae61af28f2062b4372ce9c5cb37ebb161"></a><!-- doxytag: member="MIQPController::setQuadraticPartObjectiveFunction" ref="ae61af28f2062b4372ce9c5cb37ebb161" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classMIQPController.html#ae61af28f2062b4372ce9c5cb37ebb161">MIQPController::setQuadraticPartObjectiveFunction</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Sets the objective function object for Gurobi. /warning To be deprecated if eigen-gurobi works fine </p>
-
-</div>
-</div>
-<a class="anchor" id="a3f15855fdab618e9f3b51c2b7df52b4e"></a><!-- doxytag: member="MIQPController::setVariablesTypes" ref="a3f15855fdab618e9f3b51c2b7df52b4e" args="(char *variablesTypes)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classMIQPController.html#a3f15855fdab618e9f3b51c2b7df52b4e">MIQPController::setVariablesTypes</a> </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>variablesTypes</em></td><td>)</td>
-          <td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>/warning To be deprecated if eigen-gurobi works fine</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">variablesTypes</td><td>Vector of variables' types </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -885,22 +827,39 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a35df037b7a226f425a2a949b14d860d1"></a><!-- doxytag: member="MIQPController::updateEqualityConstraints" ref="a35df037b7a226f425a2a949b14d860d1" args="(Eigen::VectorXd &amp;x_k)" -->
+<a class="anchor" id="a4c3f665528fae6c051160456692372ee"></a><!-- doxytag: member="MIQPController::updateEqualityConstraints" ref="a4c3f665528fae6c051160456692372ee" args="(const Eigen::VectorXd &amp;x_k, Eigen::VectorXd &amp;Beq)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMIQPController.html#a35df037b7a226f425a2a949b14d860d1">MIQPController::updateEqualityConstraints</a> </td>
+          <td class="memname">void <a class="el" href="classMIQPController.html#a4c3f665528fae6c051160456692372ee">MIQPController::updateEqualityConstraints</a> </td>
           <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>x_k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>x_k</em></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td class="paramname"><em>Beq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>Updates the RHS of the equality constraints.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a85b7dc746b088c0669d715ee17b02865">buildEqualityConstraintsMatrices()</a>, <a class="el" href="classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79">_Beq</a> </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_k</td><td>System state vector at time k. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Beq</td><td>Output matrix. It should be a reference to <a class="el" href="classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79">_Beq</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082">buildEqualityConstraintsMatrices()</a>, <a class="el" href="classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79">_Beq</a> </dd></dl>
 
 </div>
 </div>
@@ -918,13 +877,49 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Updates the state vector <a class="el" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">_xi_k</a>, i.e. \(xi_k\)</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd><p class="startdd">Update state vector using _robotModel </p>
-<p>Update upper bounds (a, b) </p>
-<p>Update rising/falling edges (alpha, beta) </p>
-<p>Update SS/DS (delta) </p>
-<p class="enddd">Update potential change from DS to SS (gamma) </p>
-</dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">_xi_k</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a014cab392ddec6085df74f2590af4791"></a><!-- doxytag: member="MIQPController::writeToFile" ref="a014cab392ddec6085df74f2590af4791" args="(const double &amp;time, const Eigen::VectorXd &amp;X_kn, std::string &amp;home)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPController.html#a014cab392ddec6085df74f2590af4791">MIQPController::writeToFile</a> </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>X_kn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>home</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Writes optimization result to file for plotting.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>Timestamp. </td></tr>
+    <tr><td class="paramname">X_kn</td><td>result of optimization. </td></tr>
+    <tr><td class="paramname">home</td><td>Root directory where to write the file. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -941,9 +936,9 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Matrix A of the equality constraints of the <a class="el" href="namespaceMIQP.html">MIQP</a> problem, i.e. </p>
 <p class="formulaDsp">
-\[ \mathbf{A}_{\text{eq}} \mathcal{\mathbf{X}} = \mathbf{b}_{\text{eq}} \]
+\[ \mathbf{A}_{\text{eq}} \mathbf{\mathcal{X}} = \mathbf{b}_{\text{eq}} \]
 </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a85b7dc746b088c0669d715ee17b02865">buildEqualityConstraintsMatrices()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082">buildEqualityConstraintsMatrices()</a> </dd></dl>
 
 </div>
 </div>
@@ -1001,7 +996,7 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{A}_{\text{eq}} x = \mathbf{b}_{\text{eq}} \]
 </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a85b7dc746b088c0669d715ee17b02865">buildEqualityConstraintsMatrices()</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082">buildEqualityConstraintsMatrices()</a> </dd></dl>
 
 </div>
 </div>
@@ -1171,20 +1166,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec530057d97a52549fdc3823a48f73cf"></a><!-- doxytag: member="MIQPController::_env" ref="aec530057d97a52549fdc3823a48f73cf" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GRBEnv* <a class="el" href="classMIQPController.html#aec530057d97a52549fdc3823a48f73cf">MIQPController::_env</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Gurobi environment. Necessary before setting up the gurobi model </p>
-
-</div>
-</div>
 <a class="anchor" id="a338af9b8197f5b08f4e05f2e31342037"></a><!-- doxytag: member="MIQPController::_fcbar_eq" ref="a338af9b8197f5b08f4e05f2e31342037" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1300,20 +1281,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2bafe24633a7f8c9d6211cde12b29a90"></a><!-- doxytag: member="MIQPController::_model" ref="a2bafe24633a7f8c9d6211cde12b29a90" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GRBModel* <a class="el" href="classMIQPController.html#a2bafe24633a7f8c9d6211cde12b29a90">MIQPController::_model</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Gurobi model. It is built by adding variables and constraints to it and it can be asked to perform the optimization or integrate model changes. </p>
-
-</div>
-</div>
 <a class="anchor" id="aaed002a2578a0f83c4ee59516a793f98"></a><!-- doxytag: member="MIQPController::_Nb" ref="aaed002a2578a0f83c4ee59516a793f98" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1339,20 +1306,6 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>\(N_x\) is a diagonal weighting matrix to include the consideration given to the size of the CoM jerks in \(\mathcal{X}\). Part of the regularization terms of the quadratic coefficients <a class="el" href="classMIQPController.html#ab4b99d844add54fa7ad6ca6b80cab089">_H_N</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4bac1e68bd433553a7c00677bdc496dd"></a><!-- doxytag: member="MIQPController::_obj" ref="a4bac1e68bd433553a7c00677bdc496dd" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GRBQuadExpr <a class="el" href="classMIQPController.html#a4bac1e68bd433553a7c00677bdc496dd">MIQPController::_obj</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Objective function as a GRBQadExpr object. Consists of a linear expression, plus a list of coefficient-variable-variable triples that capture the quadratic terms. </p>
 
 </div>
 </div>
@@ -1463,19 +1416,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a532459bb659a1cc39d449fdf3f81c63f"></a><!-- doxytag: member="MIQPController::_quadraticTermObjFunc" ref="a532459bb659a1cc39d449fdf3f81c63f" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorXd <a class="el" href="classMIQPController.html#a532459bb659a1cc39d449fdf3f81c63f">MIQPController::_quadraticTermObjFunc</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a69fbc25a2e2f2392fe0f92c5811c12dd"></a><!-- doxytag: member="MIQPController::_R_B" ref="a69fbc25a2e2f2392fe0f92c5811c12dd" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1557,7 +1497,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>State matrix of the RHS of the Simultaneity equality constraint. </p>
+<p>State matrix of the RHS of the Simultaneity equality constraint.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082">buildEqualityConstraintsMatrices()</a> </dd></dl>
 
 </div>
 </div>
@@ -1666,19 +1607,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1143bf95d61a348b08010c909b190029"></a><!-- doxytag: member="MIQPController::_vars" ref="a1143bf95d61a348b08010c909b190029" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GRBVar* <a class="el" href="classMIQPController.html#a1143bf95d61a348b08010c909b190029">MIQPController::_vars</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a1fdfcba2c7b6422ac8d3b0b6095d7546"></a><!-- doxytag: member="MIQPController::_X_kn" ref="a1fdfcba2c7b6422ac8d3b0b6095d7546" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1707,7 +1635,7 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \begin{array}{ccccccccc} [\mathbf{a} &amp; \mathbf{b} &amp; \mathbf{\alpha} &amp; \mathbf{\beta} &amp; \delta &amp; \gamma &amp; \mathbf{h} &amp; \dot{\mathbf{h}} &amp; \ddot{\mathbf{h}}] \end{array} \]
 </p>
-<p>Where \(\mathbf{a} \in \mathbb{R}^2\) are the upper bounds of the base of support (BoS), \(b \in \mathbb{R}^2\) are the lower bounds, \(\mathbf{\alpha} \in \mathbb{R}^2\) the rising edges of \(\mathbf{a}\), \(\mathbf{\beta} \in \mathbb{R}^2\) are the falling edges of \(\mathbf{b}\), \(\delta\) indicates the potential change from double support to single support, while \(\gamma\) indicates whether the robot is in single support (SS) or double support (DS). </p>
+<p>Where \(\mathbf{a} \in \mathbb{R}^2\) are the upper bounds of the base of support (BoS), \(b \in \mathbb{R}^2\) are the lower bounds, \(\mathbf{\alpha} \in \mathbb{R}^2\) the rising edges of \(\mathbf{a}\), \(\mathbf{\beta} \in \mathbb{R}^2\) are the falling edges of \(\mathbf{b}\), \(\delta\) indicates the potential change from double support to single support, while \(\gamma\) indicates whether the robot is in single support (SS) or double support (DS). \(\mathbf{h}, \dot{\mathbf{h}}, \ddot{\mathbf{h}}\) </p>
 
 </div>
 </div>
@@ -1735,7 +1663,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Tue Mar 7 2017 23:41:57 for ocra-wbi-plugins by
+    <li class="footer">Generated on Wed Mar 8 2017 23:42:40 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

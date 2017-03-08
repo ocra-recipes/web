@@ -1,15 +1,13 @@
 var searchData=
 [
   ['sequentiality',['Sequentiality',['../classSequentiality.html#a3d8c4d770b1e057ffe207c47f5db6179',1,'Sequentiality']]],
+  ['setbinaryvariables',['setBinaryVariables',['../classMIQPController.html#afce6feca593352323e052b6c993cbf69',1,'MIQPController']]],
   ['setcomstaterefinpreviewwindow',['setCOMStateRefInPreviewWindow',['../classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f',1,'MIQPController']]],
   ['setdownfoot',['setDownFoot',['../classSteppingDemoClient.html#a930123dad5658ea8a3bb5f23cb4cb369',1,'SteppingDemoClient']]],
   ['setlinearpartobjectivefunction',['setLinearPartObjectiveFunction',['../classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f',1,'MIQPController']]],
   ['setlowerandupperbounds',['setLowerAndUpperBounds',['../classMIQPController.html#a2caf42a5b5dcd63d67de57cfbb93c653',1,'MIQPController']]],
   ['setmatrixacl',['setMatrixAcl',['../classMIQPLinearConstraints.html#a2985d200d8e6baba2df17abfeaca8882',1,'MIQPLinearConstraints']]],
   ['setmatrixacr',['setMatrixAcr',['../classMIQPLinearConstraints.html#ad36868550b3d1f977a67e76a44160192',1,'MIQPLinearConstraints']]],
-  ['setobjectivefunction',['setObjectiveFunction',['../classMIQPController.html#a1bb6f0a6b520aa1ee18fe59c760f8aa8',1,'MIQPController']]],
-  ['setquadraticpartobjectivefunction',['setQuadraticPartObjectiveFunction',['../classMIQPController.html#ae61af28f2062b4372ce9c5cb37ebb161',1,'MIQPController']]],
-  ['setvariablestypes',['setVariablesTypes',['../classMIQPController.html#a3f15855fdab618e9f3b51c2b7df52b4e',1,'MIQPController']]],
   ['shapeconstraints',['ShapeConstraints',['../classShapeConstraints.html#a64f2900bc242720b52f6546e44858e33',1,'ShapeConstraints']]],
   ['singlesupport',['SingleSupport',['../classSingleSupport.html#af952e77f8d2139224fc0af9b73a6a0d1',1,'SingleSupport']]],
   ['sittingdemoclient',['SittingDemoClient',['../classSittingDemoClient.html#aedcb6c4ad7b4fa19f1b188e700c0a079',1,'SittingDemoClient']]],

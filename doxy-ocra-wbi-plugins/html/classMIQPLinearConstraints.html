@@ -103,8 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Collaboration diagram for MIQPLinearConstraints:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classMIQPLinearConstraints__coll__graph.svg" width="175" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classMIQPLinearConstraints__coll__graph.svg" width="175" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classMIQPLinearConstraints-members.html">List of all members.</a></p>
@@ -113,7 +112,7 @@ Collaboration diagram for MIQPLinearConstraints:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aaa55e8fc7fac6499f60c40e13b0d6605">MIQPLinearConstraints</a> (std::shared_ptr&lt; <a class="el" href="classStepController.html">StepController</a> &gt; stepController, <a class="el" href="structMIQPParameters.html">MIQPParameters</a> miqpParams, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addCoPConstraints=false, bool addWalkingCtrs=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a1539d3c8eb2af42daa9bb17dd0f44bd2">~MIQPLinearConstraints</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">updateRHS</a> (Eigen::VectorXd xi_k)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a27ae3bdf1d4b4bd1e5279607e4b96f1a">updateRHS</a> (const Eigen::VectorXd &amp;xi_k)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">getConstraintsMatrixA</a> (Eigen::MatrixXd &amp;A)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1">getTotalNumberOfConstraints</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a">getRHS</a> (Eigen::VectorXd &amp;rhs)</td></tr>
@@ -206,6 +205,18 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Once I add walking constraints this will change to include the rows added by walking constraints </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stepController</td><td>Pointer to <a class="el" href="classStepController.html">StepController</a> object which is instantiated by the hosting client. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">miqpParams</td><td>Container of the <a class="el" href="namespaceMIQP.html">MIQP</a> parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addShapeCtrs</td><td>Boolean indicating whether shape constraints are added to the problem. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addAdmissibilityCtrs</td><td>Boolean indicating whether admissibility constraints are added to the problem. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addCoPConstraints</td><td>Boolean indicating whether CoP constraints are added to the problem. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addWalkingCtrs</td><td>Boolean indicating whether walking constraints are added to the problem.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Handle the booleans in a different form. This is sort of ugly. </dd></dl>
 
 </div>
 </div>
@@ -222,6 +233,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Default destructor </p>
 
 </div>
 </div>
@@ -376,7 +388,7 @@ Private Attributes</h2></td></tr>
 \[ \begin{array}{cccccc} A_{\text{cr}} Q^0 T &amp; 0 &amp; 0 &amp; 0 &amp; \hdots &amp; 0\\ (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}}Q^0 T &amp; 0 &amp; 0 &amp; \hdots &amp; 0 \\ (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T &amp; (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}} Q^0 T &amp; 0 &amp; \hdots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; &amp; &amp; \vdots \\ (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T &amp; (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T &amp; \hdots &amp; \hdots &amp; \hdots &amp; A_{\text{cr}}Q^0T \\ \end{array} \]
 </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e">buildAShapeAdmiss()</a> </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>When walking constraints are added, matrix _A will be a stack of the two </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>When walking constraints are added, matrix _A will be a stack of the two </dd></dl>
 
 </div>
 </div>
@@ -418,6 +430,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Returns in #rhs the right-hand size of the inequality constraints of the problem.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">rhs</td><td>State-dependent right hand side. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a27ae3bdf1d4b4bd1e5279607e4b96f1a">updateRHS()</a> </dd></dl>
 
 </div>
 </div>
@@ -473,14 +493,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aad3232078ef93e2105a1c619c510f16a"></a><!-- doxytag: member="MIQPLinearConstraints::updateRHS" ref="aad3232078ef93e2105a1c619c510f16a" args="(Eigen::VectorXd xi_k)" -->
+<a class="anchor" id="a27ae3bdf1d4b4bd1e5279607e4b96f1a"></a><!-- doxytag: member="MIQPLinearConstraints::updateRHS" ref="a27ae3bdf1d4b4bd1e5279607e4b96f1a" args="(const Eigen::VectorXd &amp;xi_k)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a">MIQPLinearConstraints::updateRHS</a> </td>
+          <td class="memname">void <a class="el" href="classMIQPLinearConstraints.html#a27ae3bdf1d4b4bd1e5279607e4b96f1a">MIQPLinearConstraints::updateRHS</a> </td>
           <td>(</td>
-          <td class="paramtype">Eigen::VectorXd&#160;</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
           <td class="paramname"><em>xi_k</em></td><td>)</td>
           <td></td>
         </tr>
@@ -850,7 +870,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a>      </li>
 
-    <li class="footer">Generated on Tue Mar 7 2017 23:41:57 for ocra-wbi-plugins by
+    <li class="footer">Generated on Wed Mar 8 2017 23:42:40 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -9,7 +9,6 @@ var searchData=
   ['add_5fexisting_5ftask',['ADD_EXISTING_TASK',['../TaskOpsClient_8h.html#a0140057ae3fbe1db5f5c418dfc67d9dba8ffc9eba853106ab798ee2a0c5763d1b',1,'TaskOpsClient.h']]],
   ['add_5fexisting_5ftask_5fno_5foverwrite',['ADD_EXISTING_TASK_NO_OVERWRITE',['../TaskOpsClient_8h.html#a0140057ae3fbe1db5f5c418dfc67d9dba7eaf30861bc723f003ea1a8e4a7a4977',1,'TaskOpsClient.h']]],
   ['add_5fnew_5ftask',['ADD_NEW_TASK',['../TaskOpsClient_8h.html#a0140057ae3fbe1db5f5c418dfc67d9dba6aa666a68fed72da5438e0ef9b7cba8f',1,'TaskOpsClient.h']]],
-  ['addvariablestomodel',['addVariablesToModel',['../classMIQPController.html#a8a4200f8a98ec13b93dfab56eb5cc423',1,'MIQPController']]],
   ['adjointmatrix',['AdjointMatrix',['../OcraWbiModel_8cpp.html#a2ee3f7feea423a8bc6b8fbcea1d4e217',1,'OcraWbiModel.cpp']]],
   ['admissibility_5fconstraints',['ADMISSIBILITY_CONSTRAINTS',['../constraintsStructs_8h.html#aa9522c516e629788f7eac510abe3dadda976183e2a10817758df0c380039efef8',1,'constraintsStructs.h']]],
   ['admissibilityconstraints',['AdmissibilityConstraints',['../classAdmissibilityConstraints.html',1,'AdmissibilityConstraints'],['../classAdmissibilityConstraints.html#a43220ed86e4b8b841e24e39fc91628a6',1,'AdmissibilityConstraints::AdmissibilityConstraints()']]],

@@ -6,34 +6,21 @@
 \item[\label{todo__todo000009}%
 \hypertarget{todo__todo000009}{}%
 \-Member \hyperlink{classMIQPController_ada92fc35065a11b889019f2948c1888d}{\-M\-I\-Q\-P\-Controller\-:\-:\-\_\-\-Sw} ]\-For the moment this has been hardcoded to take into account only \-Co\-M velocity references.  
-\item[\label{todo__todo000007}%
-\hypertarget{todo__todo000007}{}%
-\-Member \hyperlink{classMIQPController_aa8fd8452a14d8e7731bf45044e1c7a59}{\-M\-I\-Q\-P\-Controller\-:\-:run} ()]update\-State\-Vector() needs to be implemented. 
-
-\-Still gotta set the equality constraints such as \-Simultaneity 
-
-\-Watch out! \-\_\-eig\-Gurobi will add a 1/2. \-Therefore the 2. \-Check that this is correct. 
-
-\-: \-The expression for \-\_\-\-H\-\_\-\-N is missing regularization terms  
 \item[\label{todo__todo000008}%
 \hypertarget{todo__todo000008}{}%
-\-Member \hyperlink{classMIQPController_a8320465a1ec80d0cf7ba0d17652feba5}{\-M\-I\-Q\-P\-Controller\-:\-:update\-State\-Vector} ()]\-Update state vector using \-\_\-robot\-Model 
+\-Member \hyperlink{classMIQPController_aa8fd8452a14d8e7731bf45044e1c7a59}{\-M\-I\-Q\-P\-Controller\-:\-:run} ()]\-Watch out! \-\_\-eig\-Gurobi will add a 1/2. \-Therefore the 2. \-Check that this is correct. 
 
-\-Update upper bounds (a, b) 
-
-\-Update rising/falling edges (alpha, beta) 
-
-\-Update \-S\-S/\-D\-S (delta) 
-
-\-Update potential change from \-D\-S to \-S\-S (gamma)  
-\item[\label{todo__todo000005}%
-\hypertarget{todo__todo000005}{}%
+\-The expression for \-\_\-\-H\-\_\-\-N is missing regularization terms  
+\item[\label{todo__todo000006}%
+\hypertarget{todo__todo000006}{}%
 \-Member \hyperlink{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{\-M\-I\-Q\-P\-Linear\-Constraints\-:\-:build\-Shape\-And\-Admissibility\-In\-Preview\-Window} ()]\-When walking constraints are added, matrix \-\_\-\-A will be a stack of the two  
 \item[\label{todo__todo000004}%
 \hypertarget{todo__todo000004}{}%
-\-Member \hyperlink{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}{\-M\-I\-Q\-P\-Linear\-Constraints\-:\-:\-M\-I\-Q\-P\-Linear\-Constraints} (std\-::shared\-\_\-ptr$<$ Step\-Controller $>$ step\-Controller, \hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} miqp\-Params, bool add\-Shape\-Ctrs=true, bool add\-Admissibility\-Ctrs=true, bool add\-Co\-P\-Constraints=false, bool add\-Walking\-Ctrs=false)]\-Once \-I add walking constraints this will change to include the rows added by walking constraints  
-\item[\label{todo__todo000006}%
-\hypertarget{todo__todo000006}{}%
+\-Member \hyperlink{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}{\-M\-I\-Q\-P\-Linear\-Constraints\-:\-:\-M\-I\-Q\-P\-Linear\-Constraints} (std\-::shared\-\_\-ptr$<$ Step\-Controller $>$ step\-Controller, \hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} miqp\-Params, bool add\-Shape\-Ctrs=true, bool add\-Admissibility\-Ctrs=true, bool add\-Co\-P\-Constraints=false, bool add\-Walking\-Ctrs=false)]\-Once \-I add walking constraints this will change to include the rows added by walking constraints 
+
+\-Handle the booleans in a different form. \-This is sort of ugly.  
+\item[\label{todo__todo000007}%
+\hypertarget{todo__todo000007}{}%
 \-Member \hyperlink{classSingleSupport_a78e5b7c89b828d718560cec73c0f6218}{\-Single\-Support\-:\-:build\-Matrix\-Ci} ()]\-Bound \-S must not be hardcoded  
 \item[\label{todo__todo000010}%
 \hypertarget{todo__todo000010}{}%

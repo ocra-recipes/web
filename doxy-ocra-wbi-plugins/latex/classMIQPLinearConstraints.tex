@@ -7,8 +7,7 @@
 
 
 
-\-Collaboration diagram for \-M\-I\-Q\-P\-Linear\-Constraints\-:
-\nopagebreak
+\-Collaboration diagram for \-M\-I\-Q\-P\-Linear\-Constraints\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,7 +21,7 @@
 \item 
 virtual \hyperlink{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints} ()
 \item 
-void \hyperlink{classMIQPLinearConstraints_aad3232078ef93e2105a1c619c510f16a}{update\-R\-H\-S} (\-Eigen\-::\-Vector\-Xd xi\-\_\-k)
+void \hyperlink{classMIQPLinearConstraints_a27ae3bdf1d4b4bd1e5279607e4b96f1a}{update\-R\-H\-S} (const \-Eigen\-::\-Vector\-Xd \&xi\-\_\-k)
 \item 
 void \hyperlink{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}{get\-Constraints\-Matrix\-A} (\-Eigen\-::\-Matrix\-Xd \&\-A)
 \item 
@@ -120,6 +119,23 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 )}}\label{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}
 \begin{DoxyRefDesc}{\-Todo}
 \item[\hyperlink{todo__todo000004}{\-Todo}]\-Once \-I add walking constraints this will change to include the rows added by walking constraints \end{DoxyRefDesc}
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em step\-Controller} & \-Pointer to \hyperlink{classStepController}{\-Step\-Controller} object which is instantiated by the hosting client. \\
+\hline
+\mbox{\tt in}  & {\em miqp\-Params} & \-Container of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} parameters. \\
+\hline
+\mbox{\tt in}  & {\em add\-Shape\-Ctrs} & \-Boolean indicating whether shape constraints are added to the problem. \\
+\hline
+\mbox{\tt in}  & {\em add\-Admissibility\-Ctrs} & \-Boolean indicating whether admissibility constraints are added to the problem. \\
+\hline
+\mbox{\tt in}  & {\em add\-Co\-P\-Constraints} & \-Boolean indicating whether \-Co\-P constraints are added to the problem. \\
+\hline
+\mbox{\tt in}  & {\em add\-Walking\-Ctrs} & \-Boolean indicating whether walking constraints are added to the problem.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{\-Todo}
+\item[\hyperlink{todo__todo000005}{\-Todo}]\-Handle the booleans in a different form. \-This is sort of ugly. \end{DoxyRefDesc}
 \hypertarget{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!$\sim$\-M\-I\-Q\-P\-Linear\-Constraints@{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints}}
 \index{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints@{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::$\sim$\-M\-I\-Q\-P\-Linear\-Constraints} (
@@ -127,7 +143,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}
-
+\-Default destructor 
 
 \subsection{\-Member \-Function \-Documentation}
 \hypertarget{classMIQPLinearConstraints_a70bcc70db0ab171390d20af674e80c27}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Ah@{build\-Ah}}
@@ -218,7 +234,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \hyperlink{classMIQPLinearConstraints_ae9b8c02ee58863d05d2aab41e780413e}{build\-A\-Shape\-Admiss()} 
 \end{DoxySeeAlso}
 \begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000005}{\-Todo}]\-When walking constraints are added, matrix \-\_\-\-A will be a stack of the two \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000006}{\-Todo}]\-When walking constraints are added, matrix \-\_\-\-A will be a stack of the two \end{DoxyRefDesc}
 \hypertarget{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!get\-Constraints\-Matrix\-A@{get\-Constraints\-Matrix\-A}}
 \index{get\-Constraints\-Matrix\-A@{get\-Constraints\-Matrix\-A}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{get\-Constraints\-Matrix\-A}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::get\-Constraints\-Matrix\-A} (
@@ -240,6 +256,16 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \item[{\-Eigen\-::\-Vector\-Xd \&}]{rhs}
 \end{DoxyParamCaption}
 )}}\label{classMIQPLinearConstraints_abf2bd3e8f0dfa5b919efa1b90b56232a}
+\-Returns in \#rhs the right-\/hand size of the inequality constraints of the problem.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt out}  & {\em rhs} & \-State-\/dependent right hand side. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPLinearConstraints_a27ae3bdf1d4b4bd1e5279607e4b96f1a}{update\-R\-H\-S()} 
+\end{DoxySeeAlso}
 \hypertarget{classMIQPLinearConstraints_a656681ab464709b025e4522df3458fa1}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!get\-Total\-Number\-Of\-Constraints@{get\-Total\-Number\-Of\-Constraints}}
 \index{get\-Total\-Number\-Of\-Constraints@{get\-Total\-Number\-Of\-Constraints}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{get\-Total\-Number\-Of\-Constraints}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::get\-Total\-Number\-Of\-Constraints} (
@@ -266,13 +292,13 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_ad36868550b3d1f977a67e76a44160192}
-\-Stacks matrices $C_{i+1}$ (\-Cii) from the shape and admissibility constraints to set variable \hyperlink{classMIQPLinearConstraints_a26250a3f878cdacc0fa0c5ccf04d0bed}{\-\_\-\-Acr} \hypertarget{classMIQPLinearConstraints_aad3232078ef93e2105a1c619c510f16a}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!update\-R\-H\-S@{update\-R\-H\-S}}
+\-Stacks matrices $C_{i+1}$ (\-Cii) from the shape and admissibility constraints to set variable \hyperlink{classMIQPLinearConstraints_a26250a3f878cdacc0fa0c5ccf04d0bed}{\-\_\-\-Acr} \hypertarget{classMIQPLinearConstraints_a27ae3bdf1d4b4bd1e5279607e4b96f1a}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!update\-R\-H\-S@{update\-R\-H\-S}}
 \index{update\-R\-H\-S@{update\-R\-H\-S}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{update\-R\-H\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::update\-R\-H\-S} (
 \begin{DoxyParamCaption}
-\item[{\-Eigen\-::\-Vector\-Xd}]{xi\-\_\-k}
+\item[{const \-Eigen\-::\-Vector\-Xd \&}]{xi\-\_\-k}
 \end{DoxyParamCaption}
-)}}\label{classMIQPLinearConstraints_aad3232078ef93e2105a1c619c510f16a}
+)}}\label{classMIQPLinearConstraints_a27ae3bdf1d4b4bd1e5279607e4b96f1a}
 \-Updates the state-\/dependent \-R\-H\-S of the inequality constraints
 
 

@@ -15,7 +15,7 @@ var classMIQPLinearConstraints =
     [ "getTotalNumberOfConstraints", "classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1", null ],
     [ "setMatrixAcl", "classMIQPLinearConstraints.html#a2985d200d8e6baba2df17abfeaca8882", null ],
     [ "setMatrixAcr", "classMIQPLinearConstraints.html#ad36868550b3d1f977a67e76a44160192", null ],
-    [ "updateRHS", "classMIQPLinearConstraints.html#aad3232078ef93e2105a1c619c510f16a", null ],
+    [ "updateRHS", "classMIQPLinearConstraints.html#a27ae3bdf1d4b4bd1e5279607e4b96f1a", null ],
     [ "_A", "classMIQPLinearConstraints.html#a5dfdc7553c4cbbe75ac54b34c4f29732", null ],
     [ "_Acl", "classMIQPLinearConstraints.html#a100ca667cae697cda19ae4aef3543120", null ],
     [ "_Acr", "classMIQPLinearConstraints.html#a26250a3f878cdacc0fa0c5ccf04d0bed", null ],
