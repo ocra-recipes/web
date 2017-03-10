@@ -317,7 +317,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 
 
 \begin{DoxyParams}[1]{\-Parameters}
-\mbox{\tt out}  & {\em \-Right-\/hand} & side vector $\bar{\mathbf{f}} - \mathbf{B}\xi_k$ \\
+\mbox{\tt out}  & {\em rhs} & \-Right-\/hand side vector $\bar{\mathbf{f}} - \mathbf{B}\xi_k$ \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{\-See also}
@@ -398,7 +398,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \-Polygon object holding the current points of contact. \hypertarget{classBaseOfSupport_a22efc7f81862ffd1268b862ddb9d59ff}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-Q@{\-\_\-\-Q}}
 \index{\-\_\-\-Q@{\-\_\-\-Q}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-Q}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a22efc7f81862ffd1268b862ddb9d59ff}
-\-Matrix $\mathbf{Q}$ in preview state model\-: \[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \] \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} & \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} & \mathbf{A_h}_{6\times6} \end{array}\right] \]
+\-Matrix $\mathbf{Q}$ in preview state model\-: \[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \] \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{0}_{10\times10} & \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} & \mathbf{A_h}_{6\times6} \end{array}\right] \]
 
 \-Size\-: $[16\times16]$
 

@@ -95,91 +95,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="BaseOfSupport_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00078"></a>00078 <span class="preprocessor">#ifndef _BASE_OF_SUPPORT_H_</span>
-<a name="l00079"></a>00079 <span class="preprocessor"></span><span class="preprocessor">#define _BASE_OF_SUPPORT_H_</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span>
-<a name="l00081"></a>00081 <span class="comment">// Boost headers</span>
-<a name="l00082"></a>00082 <span class="preprocessor">#include &lt;boost/geometry.hpp&gt;</span>
-<a name="l00083"></a>00083 <span class="preprocessor">#include &lt;boost/geometry/geometries/polygon.hpp&gt;</span>
-<a name="l00084"></a>00084 <span class="preprocessor">#include &lt;boost/geometry/geometries/box.hpp&gt;</span>
-<a name="l00085"></a>00085 <span class="preprocessor">#include &lt;boost/geometry/geometries/adapted/boost_tuple.hpp&gt;</span>
-<a name="l00086"></a>00086 <span class="preprocessor">#include &quot;unsupported/Eigen/MatrixFunctions&quot;</span>
-<a name="l00087"></a>00087 <span class="comment">// Eigen headers</span>
-<a name="l00088"></a>00088 <span class="preprocessor">#include &lt;Eigen/Core&gt;</span>
-<a name="l00089"></a>00089 <span class="preprocessor">#include &lt;<a class="code" href="MIQPState_8h.html">walking-client/MIQPState.h</a>&gt;</span>
-<a name="l00090"></a>00090 <span class="preprocessor">#include &lt;<a class="code" href="StepController_8h.html">walking-client/StepController.h</a>&gt;</span>
-<a name="l00091"></a>00091 <span class="preprocessor">#include &lt;<a class="code" href="utils_8h.html">walking-client/utils.h</a>&gt;</span>
-<a name="l00092"></a>00092 <span class="preprocessor">#include &lt;ocra-recipes/TaskConnection.h&gt;</span>
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 BOOST_GEOMETRY_REGISTER_BOOST_TUPLE_CS(cs::cartesian)
-<a name="l00095"></a><a class="code" href="BaseOfSupport_8h.html#ac09614442423c31cf4372f1304b03cb0">00095</a> typedef boost::tuple&lt;<span class="keywordtype">double</span>, <span class="keywordtype">double</span>&gt; <a class="code" href="BaseOfSupport_8h.html#ac09614442423c31cf4372f1304b03cb0">point</a>;
-<a name="l00096"></a><a class="code" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">00096</a> typedef boost::geometry::model::polygon&lt;point&gt; <a class="code" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">Polygon</a>;
-<a name="l00097"></a><a class="code" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">00097</a> typedef boost::geometry::model::box&lt;point&gt; <a class="code" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">Box</a>;
-<a name="l00098"></a>00098 
-<a name="l00099"></a><a class="code" href="classBaseOfSupport.html">00099</a> class <a class="code" href="classBaseOfSupport.html" title="Builds base of support and corresponding constraints based on the robot&#39;s feet location.">BaseOfSupport</a> {
-<a name="l00100"></a>00100 <span class="keyword">private</span>:
-<a name="l00113"></a><a class="code" href="classBaseOfSupport.html#a42d531cd89c34cf8821c5cdeff321bc1">00113</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a42d531cd89c34cf8821c5cdeff321bc1">_Ab</a>;
-<a name="l00114"></a>00114     
-<a name="l00132"></a><a class="code" href="classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7">00132</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7">_b</a>;
-<a name="l00133"></a>00133 
-<a name="l00153"></a><a class="code" href="classBaseOfSupport.html#a0ff0fd44966f86d5a62e4d38c3cfea60">00153</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a0ff0fd44966f86d5a62e4d38c3cfea60">_Cp</a>;
-<a name="l00154"></a>00154 
-<a name="l00171"></a><a class="code" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">00171</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a>;
-<a name="l00172"></a>00172     
-<a name="l00185"></a><a class="code" href="classBaseOfSupport.html#aa2d0af7272d153ead5e088ff67c981e8">00185</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#aa2d0af7272d153ead5e088ff67c981e8">_f</a>;
-<a name="l00186"></a>00186 
-<a name="l00199"></a><a class="code" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">00199</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a>;
-<a name="l00200"></a>00200     
-<a name="l00213"></a><a class="code" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">00213</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">_fbar</a>;
-<a name="l00214"></a>00214     
-<a name="l00227"></a><a class="code" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">00227</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a>;
-<a name="l00228"></a>00228     
-<a name="l00236"></a><a class="code" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">00236</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">_rhs</a>;
-<a name="l00237"></a>00237     
-<a name="l00241"></a><a class="code" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">00241</a>     Polygon <a class="code" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">_poly</a>;
-<a name="l00245"></a><a class="code" href="classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033">00245</a>     Box <a class="code" href="classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033">_bbox</a>;
-<a name="l00253"></a><a class="code" href="classBaseOfSupport.html#a023d28c6900f0e97d9de42ca2c5d94a5">00253</a>     std::shared_ptr&lt;StepController&gt; <a class="code" href="classBaseOfSupport.html#a023d28c6900f0e97d9de42ca2c5d94a5">_stepController</a>;
-<a name="l00254"></a>00254     
-<a name="l00271"></a><a class="code" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">00271</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a>;
-<a name="l00272"></a>00272     
-<a name="l00291"></a><a class="code" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">00291</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">_T</a>;
-<a name="l00292"></a>00292     
-<a name="l00296"></a><a class="code" href="classBaseOfSupport.html#a82f86511c236d038f1670dd515e53a8f">00296</a>     <a class="code" href="structMIQPParameters.html">MIQPParameters</a> <a class="code" href="classBaseOfSupport.html#a82f86511c236d038f1670dd515e53a8f">_miqpParams</a>;
-<a name="l00297"></a>00297     
-<a name="l00298"></a>00298 <span class="keyword">public</span>:
-<a name="l00305"></a>00305     BaseOfSupport(std::shared_ptr&lt;StepController&gt; stepController, <span class="keyword">const</span> Eigen::MatrixXd&amp; Q, <span class="keyword">const</span> Eigen::MatrixXd&amp; T, <a class="code" href="structMIQPParameters.html">MIQPParameters</a> miqpParams);
-<a name="l00306"></a>00306     
-<a name="l00310"></a>00310     <span class="keyword">virtual</span> ~BaseOfSupport ();
-<a name="l00311"></a>00311     
-<a name="l00325"></a>00325     <span class="keywordtype">bool</span> update(<span class="keyword">const</span> Eigen::VectorXd&amp; xi_k);
-<a name="l00326"></a>00326     
-<a name="l00336"></a>00336     <span class="keywordtype">void</span> computeBoundingBox(<span class="keyword">const</span> Eigen::MatrixXd &amp;feetCorners, Eigen::Matrix2d &amp;minMaxBoundingBox);
-<a name="l00337"></a>00337     
-<a name="l00344"></a>00344     <span class="keywordtype">void</span> getA(Eigen::MatrixXd&amp; A);
-<a name="l00345"></a>00345     
-<a name="l00352"></a>00352     <span class="keywordtype">void</span> getrhs(Eigen::VectorXd&amp; rhs);
-<a name="l00353"></a>00353     
-<a name="l00354"></a>00354 <span class="keyword">protected</span>:
-<a name="l00355"></a>00355     
+<a name="l00079"></a>00079 <span class="preprocessor">#ifndef _BASE_OF_SUPPORT_H_</span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span><span class="preprocessor">#define _BASE_OF_SUPPORT_H_</span>
+<a name="l00081"></a>00081 <span class="preprocessor"></span>
+<a name="l00082"></a>00082 <span class="comment">// Boost headers</span>
+<a name="l00083"></a>00083 <span class="preprocessor">#include &lt;boost/geometry.hpp&gt;</span>
+<a name="l00084"></a>00084 <span class="preprocessor">#include &lt;boost/geometry/geometries/polygon.hpp&gt;</span>
+<a name="l00085"></a>00085 <span class="preprocessor">#include &lt;boost/geometry/geometries/box.hpp&gt;</span>
+<a name="l00086"></a>00086 <span class="preprocessor">#include &lt;boost/geometry/geometries/adapted/boost_tuple.hpp&gt;</span>
+<a name="l00087"></a>00087 <span class="preprocessor">#include &quot;unsupported/Eigen/MatrixFunctions&quot;</span>
+<a name="l00088"></a>00088 <span class="comment">// Eigen headers</span>
+<a name="l00089"></a>00089 <span class="preprocessor">#include &lt;Eigen/Core&gt;</span>
+<a name="l00090"></a>00090 <span class="preprocessor">#include &lt;<a class="code" href="MIQPState_8h.html">walking-client/MIQPState.h</a>&gt;</span>
+<a name="l00091"></a>00091 <span class="preprocessor">#include &lt;<a class="code" href="StepController_8h.html">walking-client/StepController.h</a>&gt;</span>
+<a name="l00092"></a>00092 <span class="preprocessor">#include &lt;<a class="code" href="utils_8h.html">walking-client/utils.h</a>&gt;</span>
+<a name="l00093"></a>00093 <span class="preprocessor">#include &lt;ocra-recipes/TaskConnection.h&gt;</span>
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 BOOST_GEOMETRY_REGISTER_BOOST_TUPLE_CS(cs::cartesian)
+<a name="l00096"></a><a class="code" href="BaseOfSupport_8h.html#ac09614442423c31cf4372f1304b03cb0">00096</a> typedef boost::tuple&lt;<span class="keywordtype">double</span>, <span class="keywordtype">double</span>&gt; <a class="code" href="BaseOfSupport_8h.html#ac09614442423c31cf4372f1304b03cb0">point</a>;
+<a name="l00097"></a><a class="code" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">00097</a> typedef boost::geometry::model::polygon&lt;point&gt; <a class="code" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">Polygon</a>;
+<a name="l00098"></a><a class="code" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">00098</a> typedef boost::geometry::model::box&lt;point&gt; <a class="code" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">Box</a>;
+<a name="l00099"></a>00099 
+<a name="l00100"></a><a class="code" href="classBaseOfSupport.html">00100</a> class <a class="code" href="classBaseOfSupport.html" title="Builds base of support and corresponding constraints based on the robot&#39;s feet location.">BaseOfSupport</a> {
+<a name="l00101"></a>00101 <span class="keyword">private</span>:
+<a name="l00114"></a><a class="code" href="classBaseOfSupport.html#a42d531cd89c34cf8821c5cdeff321bc1">00114</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a42d531cd89c34cf8821c5cdeff321bc1">_Ab</a>;
+<a name="l00115"></a>00115     
+<a name="l00133"></a><a class="code" href="classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7">00133</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7">_b</a>;
+<a name="l00134"></a>00134 
+<a name="l00154"></a><a class="code" href="classBaseOfSupport.html#a0ff0fd44966f86d5a62e4d38c3cfea60">00154</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a0ff0fd44966f86d5a62e4d38c3cfea60">_Cp</a>;
+<a name="l00155"></a>00155 
+<a name="l00172"></a><a class="code" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">00172</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a>;
+<a name="l00173"></a>00173     
+<a name="l00186"></a><a class="code" href="classBaseOfSupport.html#aa2d0af7272d153ead5e088ff67c981e8">00186</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#aa2d0af7272d153ead5e088ff67c981e8">_f</a>;
+<a name="l00187"></a>00187 
+<a name="l00200"></a><a class="code" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">00200</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a>;
+<a name="l00201"></a>00201     
+<a name="l00214"></a><a class="code" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">00214</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">_fbar</a>;
+<a name="l00215"></a>00215     
+<a name="l00228"></a><a class="code" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">00228</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a>;
+<a name="l00229"></a>00229     
+<a name="l00237"></a><a class="code" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">00237</a>     Eigen::VectorXd <a class="code" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">_rhs</a>;
+<a name="l00238"></a>00238     
+<a name="l00242"></a><a class="code" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">00242</a>     Polygon <a class="code" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">_poly</a>;
+<a name="l00246"></a><a class="code" href="classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033">00246</a>     Box <a class="code" href="classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033">_bbox</a>;
+<a name="l00254"></a><a class="code" href="classBaseOfSupport.html#a023d28c6900f0e97d9de42ca2c5d94a5">00254</a>     std::shared_ptr&lt;StepController&gt; <a class="code" href="classBaseOfSupport.html#a023d28c6900f0e97d9de42ca2c5d94a5">_stepController</a>;
+<a name="l00255"></a>00255     
+<a name="l00272"></a><a class="code" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">00272</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a>;
+<a name="l00273"></a>00273     
+<a name="l00292"></a><a class="code" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">00292</a>     Eigen::MatrixXd <a class="code" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">_T</a>;
+<a name="l00293"></a>00293     
+<a name="l00297"></a><a class="code" href="classBaseOfSupport.html#a82f86511c236d038f1670dd515e53a8f">00297</a>     <a class="code" href="structMIQPParameters.html">MIQPParameters</a> <a class="code" href="classBaseOfSupport.html#a82f86511c236d038f1670dd515e53a8f">_miqpParams</a>;
+<a name="l00298"></a>00298     
+<a name="l00299"></a>00299 <span class="keyword">public</span>:
+<a name="l00306"></a>00306     BaseOfSupport(std::shared_ptr&lt;StepController&gt; stepController, <span class="keyword">const</span> Eigen::MatrixXd&amp; Q, <span class="keyword">const</span> Eigen::MatrixXd&amp; T, <a class="code" href="structMIQPParameters.html">MIQPParameters</a> miqpParams);
+<a name="l00307"></a>00307     
+<a name="l00311"></a>00311     <span class="keyword">virtual</span> ~BaseOfSupport ();
+<a name="l00312"></a>00312     
+<a name="l00326"></a>00326     <span class="keywordtype">bool</span> update(<span class="keyword">const</span> Eigen::VectorXd&amp; xi_k);
+<a name="l00327"></a>00327     
+<a name="l00337"></a>00337     <span class="keywordtype">void</span> computeBoundingBox(<span class="keyword">const</span> Eigen::MatrixXd &amp;feetCorners, Eigen::Matrix2d &amp;minMaxBoundingBox);
+<a name="l00338"></a>00338     
+<a name="l00345"></a>00345     <span class="keywordtype">void</span> getA(Eigen::MatrixXd&amp; A);
+<a name="l00346"></a>00346     
+<a name="l00353"></a>00353     <span class="keywordtype">void</span> getrhs(Eigen::VectorXd&amp; rhs);
+<a name="l00354"></a>00354     
+<a name="l00355"></a>00355 <span class="keyword">protected</span>:
 <a name="l00356"></a>00356     
-<a name="l00361"></a>00361     <span class="keywordtype">void</span> buildAb();
-<a name="l00362"></a>00362     
-<a name="l00369"></a>00369     <span class="keywordtype">void</span> buildb(<span class="keyword">const</span> Eigen::Matrix2d&amp; minMaxBoundingBox);
-<a name="l00370"></a>00370     
-<a name="l00378"></a>00378     <span class="keywordtype">void</span> buildCp(<span class="keywordtype">double</span> cz, <span class="keywordtype">double</span> g);
-<a name="l00379"></a>00379     
-<a name="l00387"></a>00387     <span class="keywordtype">void</span> buildCi(<span class="keyword">const</span> Eigen::MatrixXd&amp; Ab, <span class="keyword">const</span> Eigen::MatrixXd&amp; Cp);
-<a name="l00388"></a>00388     
-<a name="l00393"></a>00393     <span class="keywordtype">void</span> buildf();
-<a name="l00394"></a>00394     
-<a name="l00401"></a>00401     <span class="keywordtype">void</span> buildfbar(<span class="keyword">const</span> Eigen::VectorXd&amp; f);
-<a name="l00402"></a>00402     
-<a name="l00410"></a>00410     <span class="keywordtype">void</span> buildB(<span class="keyword">const</span> Eigen::MatrixXd&amp; Ci, <span class="keyword">const</span> Eigen::MatrixXd&amp; Q);
-<a name="l00411"></a>00411     
-<a name="l00420"></a>00420     <span class="keywordtype">void</span> buildA(<span class="keyword">const</span> Eigen::MatrixXd&amp; Ci, <span class="keyword">const</span> Eigen::MatrixXd&amp; Q, <span class="keyword">const</span> Eigen::MatrixXd&amp; T);
-<a name="l00421"></a>00421 };
-<a name="l00422"></a>00422 
-<a name="l00423"></a>00423 <span class="preprocessor">#endif</span>
+<a name="l00357"></a>00357     
+<a name="l00362"></a>00362     <span class="keywordtype">void</span> buildAb();
+<a name="l00363"></a>00363     
+<a name="l00370"></a>00370     <span class="keywordtype">void</span> buildb(<span class="keyword">const</span> Eigen::Matrix2d&amp; minMaxBoundingBox);
+<a name="l00371"></a>00371     
+<a name="l00379"></a>00379     <span class="keywordtype">void</span> buildCp(<span class="keywordtype">double</span> cz, <span class="keywordtype">double</span> g);
+<a name="l00380"></a>00380     
+<a name="l00388"></a>00388     <span class="keywordtype">void</span> buildCi(<span class="keyword">const</span> Eigen::MatrixXd&amp; Ab, <span class="keyword">const</span> Eigen::MatrixXd&amp; Cp);
+<a name="l00389"></a>00389     
+<a name="l00394"></a>00394     <span class="keywordtype">void</span> buildf();
+<a name="l00395"></a>00395     
+<a name="l00402"></a>00402     <span class="keywordtype">void</span> buildfbar(<span class="keyword">const</span> Eigen::VectorXd&amp; f);
+<a name="l00403"></a>00403     
+<a name="l00411"></a>00411     <span class="keywordtype">void</span> buildB(<span class="keyword">const</span> Eigen::MatrixXd&amp; Ci, <span class="keyword">const</span> Eigen::MatrixXd&amp; Q);
+<a name="l00412"></a>00412     
+<a name="l00421"></a>00421     <span class="keywordtype">void</span> buildA(<span class="keyword">const</span> Eigen::MatrixXd&amp; Ci, <span class="keyword">const</span> Eigen::MatrixXd&amp; Q, <span class="keyword">const</span> Eigen::MatrixXd&amp; T);
+<a name="l00422"></a>00422 };
+<a name="l00423"></a>00423 
+<a name="l00424"></a>00424 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -200,7 +200,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="BaseOfSupport_8h.html">BaseOfSupport.h</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 8 2017 23:42:40 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Mar 10 2017 19:05:29 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

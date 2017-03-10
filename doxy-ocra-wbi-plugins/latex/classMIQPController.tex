@@ -288,7 +288,7 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \item[{\-Eigen\-::\-Vector\-Xd \&}]{\-Beq}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPController_a870c7d3c0e5fcfd46f7bb95924007082}
-\-Builds the equality constraints matrices \hyperlink{classMIQPController_abc22f1db5a2dbcab4006c1b903a19c4e}{\-\_\-\-Aeq}, \hyperlink{classMIQPController_a59bee510bcc945ad2267a82ec2116d79}{\-\_\-\-Beq}. \-For the time being, the equality constraints are composed of only the so-\/called \-Simultaneity constraints of the problem, which guarantee that allowing a discontinuity of one of the bounds ( $\matbf{a},\mathbf{b}$) in one direction simultaneously allows a discontinuity in the orthogonal direction. \-This requirement writes\-:
+\-Builds the equality constraints matrices \hyperlink{classMIQPController_abc22f1db5a2dbcab4006c1b903a19c4e}{\-\_\-\-Aeq}, \hyperlink{classMIQPController_a59bee510bcc945ad2267a82ec2116d79}{\-\_\-\-Beq}. \-For the time being, the equality constraints are composed of only the so-\/called \-Simultaneity constraints of the problem, which guarantee that allowing a discontinuity of one of the bounds ( $\mathbf{a},\mathbf{b}$) in one direction simultaneously allows a discontinuity in the orthogonal direction. \-This requirement writes\-:
 
 \[ \forall i, \alpha_{x_i} + \beta_{x_i} = \alpha_{y_i} + \beta_{y_i} \]
 
@@ -612,7 +612,7 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \-Size\-: $[6\times6]$ \hypertarget{classMIQPController_a7678fd8e1c08986d7ae0dc1a884040e1}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Aineq@{\-\_\-\-Aineq}}
 \index{\-\_\-\-Aineq@{\-\_\-\-Aineq}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Aineq}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Aineq}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a7678fd8e1c08986d7ae0dc1a884040e1}
-\-Inequality matrix of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} problem, i.\-e. \[ A_{\text{ineq}} x \leq b_{\text{ineq}} \]
+\-Inequality matrix of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} problem, i.\-e. \[ A_{\text{ineq}} \mathcal{X} \leq b_{\text{ineq}} \]
 
 \-Set by \hyperlink{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}{\-M\-I\-Q\-P\-Linear\-Constraints\-::get\-Constraints\-Matrix\-A()}. \hypertarget{classMIQPController_a59bee510bcc945ad2267a82ec2116d79}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Beq@{\-\_\-\-Beq}}
 \index{\-\_\-\-Beq@{\-\_\-\-Beq}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
@@ -647,14 +647,14 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 
 \-Where
 
-\[ \mathbf{C}_B &= \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times12} \end{array}\right] \]
+\[ \mathbf{C}_B = \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times12} \end{array}\right] \]
 
 \-Size\-: $[2\times12]$ \hypertarget{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-C\-\_\-\-H@{\-\_\-\-C\-\_\-\-H}}
 \index{\-\_\-\-C\-\_\-\-H@{\-\_\-\-C\-\_\-\-H}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-C\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-C\-\_\-\-H}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_a323718c0eaf8c8a7e159ea7f1ef5b72c}
 \-Output matrix $\mathbf{C}_H$ of the \-Co\-M state space representation
 
-\begin{align*} \mathbf{\xi}_{k+1|k} &= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \hat{\mathbf{h}}_k & =\mathbf{C}_H \xi_{k|k} \end{align*}
+\begin{align*} \mathbf{\xi}_{k+1|k} &= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \hat{\mathbf{h}}_{k|k} & =\mathbf{C}_H \xi_{k|k} \end{align*}
 
 \-Where
 
@@ -741,7 +741,7 @@ $N_x$ is a diagonal weighting matrix to include the consideration given to the s
 
 \-For a preview window of size $N$\-:
 
-\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \] \-Where\-: \[ \mathbf{P}_B = \left[\begin{array}{c} \mathbf{C}_B \mathbf{Q} \\ \vdots\\ \mathbf{C}_B \mathbf{Q}^N \end{array}\right] \]
+\[ \mathbf{R}_{k,N} = \mathbf{P}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \] \-Where\-: \[ \mathbf{P}_B = \left[\begin{array}{c} \mathbf{C}_B \mathbf{Q} \\ \vdots\\ \mathbf{C}_B \mathbf{Q}^N \end{array}\right] \]
 
 \-Size\-: $[2N\times16]$
 
@@ -773,7 +773,7 @@ $N_x$ is a diagonal weighting matrix to include the consideration given to the s
 \hyperlink{classThread}{\-Thread} period in milliseconds \hypertarget{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-\-Q@{\-\_\-\-Q}}
 \index{\-\_\-\-Q@{\-\_\-\-Q}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-\-Q}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}
-\-Matrix $\mathbf{Q}$ in preview state model\-: \[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \] \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} & \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} & \mathbf{A_h}_{6\times6} \end{array}\right] \]
+\-Matrix $\mathbf{Q}$ in preview state model\-: \[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \] \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{0}_{10\times10} & \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} & \mathbf{A_h}_{6\times6} \end{array}\right] \]
 
 \-Size\-: $[16\times16]$
 
@@ -815,7 +815,12 @@ $N_x$ is a diagonal weighting matrix to include the consideration given to the s
 
 \-Where\-: \[ \mathbf{R}_P = \left[\begin{array}{cccc} \mathbf{C}_P\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_P\mathbf{Q}\mathbf{T} & \mathbf{C}_P\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_P\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_P\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_P\mathbf{T} \end{array}\right] \]
 
-\-Size\-: $[2N\times12N]$ \hypertarget{classMIQPController_aa8e6df5286125975521b77501e792413}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-rhs\-\_\-2\-\_\-eq@{\-\_\-rhs\-\_\-2\-\_\-eq}}
+\-Size\-: $[2N\times12N]$
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPController_a17cf6f8279cf6b2ce333feb9c8fc5a5d}{\-\_\-\-C\-\_\-\-P}, \hyperlink{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}{\-\_\-\-Q}, \hyperlink{classMIQPController_a1143455ae85d0e221578dbe5d659af1d}{\-\_\-\-T} 
+\end{DoxySeeAlso}
+\hypertarget{classMIQPController_aa8e6df5286125975521b77501e792413}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!\-\_\-rhs\-\_\-2\-\_\-eq@{\-\_\-rhs\-\_\-2\-\_\-eq}}
 \index{\-\_\-rhs\-\_\-2\-\_\-eq@{\-\_\-rhs\-\_\-2\-\_\-eq}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{\-\_\-rhs\-\_\-2\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Controller\-::\-\_\-rhs\-\_\-2\-\_\-eq}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPController_aa8e6df5286125975521b77501e792413}
 \-State matrix of the \-R\-H\-S of the \-Simultaneity equality constraint.

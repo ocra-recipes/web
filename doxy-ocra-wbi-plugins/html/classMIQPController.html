@@ -425,7 +425,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Builds the equality constraints matrices <a class="el" href="classMIQPController.html#abc22f1db5a2dbcab4006c1b903a19c4e">_Aeq</a>, <a class="el" href="classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79">_Beq</a>. For the time being, the equality constraints are composed of only the so-called Simultaneity constraints of the problem, which guarantee that allowing a discontinuity of one of the bounds ( \(\matbf{a},\mathbf{b}\)) in one direction simultaneously allows a discontinuity in the orthogonal direction. This requirement writes:</p>
+<p>Builds the equality constraints matrices <a class="el" href="classMIQPController.html#abc22f1db5a2dbcab4006c1b903a19c4e">_Aeq</a>, <a class="el" href="classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79">_Beq</a>. For the time being, the equality constraints are composed of only the so-called Simultaneity constraints of the problem, which guarantee that allowing a discontinuity of one of the bounds ( \(\mathbf{a},\mathbf{b}\)) in one direction simultaneously allows a discontinuity in the orthogonal direction. This requirement writes:</p>
 <p class="formulaDsp">
 \[ \forall i, \alpha_{x_i} + \beta_{x_i} = \alpha_{y_i} + \beta_{y_i} \]
 </p>
@@ -976,7 +976,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Inequality matrix of the <a class="el" href="namespaceMIQP.html">MIQP</a> problem, i.e. </p>
 <p class="formulaDsp">
-\[ A_{\text{ineq}} x \leq b_{\text{ineq}} \]
+\[ A_{\text{ineq}} \mathcal{X} \leq b_{\text{ineq}} \]
 </p>
 <p>Set by <a class="el" href="classMIQPLinearConstraints.html#ab556e990dcc0b1fcd152f41a8c00e1f6">MIQPLinearConstraints::getConstraintsMatrixA()</a>. </p>
 
@@ -1056,7 +1056,7 @@ Private Attributes</h2></td></tr>
 </p>
 <p>Where</p>
 <p class="formulaDsp">
-\[ \mathbf{C}_B &amp;= \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times12} \end{array}\right] \]
+\[ \mathbf{C}_B = \frac{1}{2} \left[ \begin{array}{ccc} \mathbf{I}_{2\times2} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times12} \end{array}\right] \]
 </p>
 <p>Size: \([2\times12]\) </p>
 
@@ -1074,7 +1074,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Output matrix \(\mathbf{C}_H\) of the CoM state space representation</p>
 <p class="formulaDsp">
-\begin{align*} \mathbf{\xi}_{k+1|k} &amp;= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \hat{\mathbf{h}}_k &amp; =\mathbf{C}_H \xi_{k|k} \end{align*}
+\begin{align*} \mathbf{\xi}_{k+1|k} &amp;= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \hat{\mathbf{h}}_{k|k} &amp; =\mathbf{C}_H \xi_{k|k} \end{align*}
 </p>
 <p>Where</p>
 <p class="formulaDsp">
@@ -1322,7 +1322,7 @@ Private Attributes</h2></td></tr>
 <p>Matrix \(\mathbf{P}_B\) in the equation for the preview center of BoS output matrix \(\mathbf{R}_{k,N} = \left\{ \mathbf{r}_{k+1|k}, \mathbf{r}_{k+2|k}, \dots, \mathbf{r}_{k+N|k} \right\}\)</p>
 <p>For a preview window of size \(N\):</p>
 <p class="formulaDsp">
-\[ \mathbf{R}_{k,N} = \mathbf{R}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \]
+\[ \mathbf{R}_{k,N} = \mathbf{P}_B \mathbf{\xi}_k + \mathbf{R}_B \mathcal{X}_{k,N} \]
 </p>
 <p> Where: </p>
 <p class="formulaDsp">
@@ -1409,7 +1409,7 @@ Private Attributes</h2></td></tr>
 \[ \mathbf{\xi}_{k+1|k} = \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \]
 </p>
  <p class="formulaDsp">
-\[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} &amp; \mathbf{A_h}_{6\times6} \end{array}\right] \]
+\[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{0}_{10\times10} &amp; \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} &amp; \mathbf{A_h}_{6\times6} \end{array}\right] \]
 </p>
 <p>Size: \([16\times16]\)</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a388ed1c232c212e171276993b5cb3fec">_Ah</a> </dd></dl>
@@ -1483,7 +1483,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{R}_P = \left[\begin{array}{cccc} \mathbf{C}_P\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_P\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_P\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_P\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_P\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_P\mathbf{T} \end{array}\right] \]
 </p>
-<p>Size: \([2N\times12N]\) </p>
+<p>Size: \([2N\times12N]\)</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a17cf6f8279cf6b2ce333feb9c8fc5a5d">_C_P</a>, <a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a>, <a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a> </dd></dl>
 
 </div>
 </div>
@@ -1663,7 +1664,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 8 2017 23:42:40 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Mar 10 2017 19:05:30 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
