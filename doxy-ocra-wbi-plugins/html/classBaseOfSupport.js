@@ -17,7 +17,7 @@ var classBaseOfSupport =
     [ "_A", "classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d", null ],
     [ "_Ab", "classBaseOfSupport.html#a42d531cd89c34cf8821c5cdeff321bc1", null ],
     [ "_b", "classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7", null ],
-    [ "_B", "classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246", null ],
+    [ "_B", "classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8", null ],
     [ "_bbox", "classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033", null ],
     [ "_Ci", "classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d", null ],
     [ "_Cp", "classBaseOfSupport.html#a0ff0fd44966f86d5a62e4d38c3cfea60", null ],

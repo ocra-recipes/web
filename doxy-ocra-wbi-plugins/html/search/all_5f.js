@@ -15,7 +15,7 @@ var searchData=
   ['_5falpha',['_alpha',['../classMIQP_1_1MIQPState.html#a584ef13e157d3a34333d4f990363abc7',1,'MIQP::MIQPState']]],
   ['_5famplitudefraction',['_amplitudeFraction',['../classWalkingClient.html#ac548ce03ea9ceffb4b42981942f66dd0',1,'WalkingClient']]],
   ['_5fashapeadmiss',['_AShapeAdmiss',['../classMIQPLinearConstraints.html#a7ff7b3584cf9ff3e2124d80bd0684180',1,'MIQPLinearConstraints']]],
-  ['_5fb',['_b',['../classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7',1,'BaseOfSupport::_b()'],['../classMIQP_1_1MIQPState.html#aafa5bce9860b191257cb0166c217e9a3',1,'MIQP::MIQPState::_b()'],['../classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246',1,'BaseOfSupport::_B()']]],
+  ['_5fb',['_b',['../classBaseOfSupport.html#a9a77c3e98a73065f60b99e888c50fcc7',1,'BaseOfSupport::_b()'],['../classMIQP_1_1MIQPState.html#aafa5bce9860b191257cb0166c217e9a3',1,'MIQP::MIQPState::_b()'],['../classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8',1,'BaseOfSupport::_B()']]],
   ['_5fbaseofsupport',['_baseOfSupport',['../classMIQPLinearConstraints.html#a9b26abbc012b0f39c6bef163d9c3faed',1,'MIQPLinearConstraints']]],
   ['_5fbbox',['_bbox',['../classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033',1,'BaseOfSupport']]],
   ['_5fbeq',['_Beq',['../classMIQPController.html#a59bee510bcc945ad2267a82ec2116d79',1,'MIQPController']]],

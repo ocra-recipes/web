@@ -210,7 +210,12 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_a127e7ddd641f11d1b6137c59d80ef8b5}
 \-Builds matrix \-Q (\hyperlink{classMIQPLinearConstraints_afecaf6e02135bfba45045fab6cce3511}{\-\_\-\-Q}) from the preview model\-:
 
-\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \] \hypertarget{classMIQPLinearConstraints_addee397c47be26fd9eebbe8374c3cc30}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Matrix\-T@{build\-Matrix\-T}}
+\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPLinearConstraints_afecaf6e02135bfba45045fab6cce3511}{\-\_\-\-Q} 
+\end{DoxySeeAlso}
+\hypertarget{classMIQPLinearConstraints_addee397c47be26fd9eebbe8374c3cc30}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Matrix\-T@{build\-Matrix\-T}}
 \index{build\-Matrix\-T@{build\-Matrix\-T}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-Matrix\-T}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-Matrix\-T} (
 \begin{DoxyParamCaption}
@@ -219,7 +224,12 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_addee397c47be26fd9eebbe8374c3cc30}
 \-Builds matrix \-T (\hyperlink{classMIQPLinearConstraints_a5e6d37521f3da248b19ff424526d700a}{\-\_\-\-T}) from the preview model\-:
 
-\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \] \hypertarget{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Shape\-And\-Admissibility\-In\-Preview\-Window@{build\-Shape\-And\-Admissibility\-In\-Preview\-Window}}
+\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classMIQPLinearConstraints_a5e6d37521f3da248b19ff424526d700a}{\-\_\-\-T} 
+\end{DoxySeeAlso}
+\hypertarget{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!build\-Shape\-And\-Admissibility\-In\-Preview\-Window@{build\-Shape\-And\-Admissibility\-In\-Preview\-Window}}
 \index{build\-Shape\-And\-Admissibility\-In\-Preview\-Window@{build\-Shape\-And\-Admissibility\-In\-Preview\-Window}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{build\-Shape\-And\-Admissibility\-In\-Preview\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::build\-Shape\-And\-Admissibility\-In\-Preview\-Window} (
 \begin{DoxyParamCaption}
@@ -228,7 +238,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPLinearConstraints_a2f41d99a16293718b94d17ce9ee5b59d}
 \-Basically builds matrix $\mathbf{A}$ (\hyperlink{classMIQPLinearConstraints_a7ff7b3584cf9ff3e2124d80bd0684180}{\-\_\-\-A\-Shape\-Admiss}) in the partial expression for the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} linear constraints, containing only shape and admissibility constraints, such that\-: \[ \mathbf{A} \mathcal{X}_{k,N} \leq \bar{\mathbf{f}}_c - \mathbf{B} \xi_k \]
 
-\[ \begin{array}{cccccc} A_{\text{cr}} Q^0 T & 0 & 0 & 0 & \hdots & 0\\ (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T & A_{\text{cr}}Q^0 T & 0 & 0 & \hdots & 0 \\ (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T & (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T & A_{\text{cr}} Q^0 T & 0 & \hdots & 0 \\ \vdots & \vdots & & & & \vdots \\ (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T & (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T & \hdots & \hdots & \hdots & A_{\text{cr}}Q^0T \\ \end{array} \]
+\[ \begin{array}{cccccc} A_{\text{cr}} Q^0 T & 0 & 0 & 0 & \dots & 0\\ (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T & A_{\text{cr}}Q^0 T & 0 & 0 & \dots & 0 \\ (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T & (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T & A_{\text{cr}} Q^0 T & 0 & \dots & 0 \\ \vdots & \vdots & & & & \vdots \\ (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T & (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T & \dots & \dots & \dots & A_{\text{cr}}Q^0T \\ \end{array} \]
 
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{classMIQPLinearConstraints_ae9b8c02ee58863d05d2aab41e780413e}{build\-A\-Shape\-Admiss()} 
@@ -370,6 +380,8 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \-Total number of constraints \hypertarget{classMIQPLinearConstraints_afecaf6e02135bfba45045fab6cce3511}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-Q@{\-\_\-\-Q}}
 \index{\-\_\-\-Q@{\-\_\-\-Q}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-Q}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_afecaf6e02135bfba45045fab6cce3511}
+\-Matrix $\mathbf{Q}$ from the preview model\-: \[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
+
 \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{0}_{10\times10} & \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} & \mathbf{A_h}_{6\times6} \end{array}\right] \] \hypertarget{classMIQPLinearConstraints_ac8df74075c393100f5bddcb371503530}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-rhs@{\-\_\-rhs}}
 \index{\-\_\-rhs@{\-\_\-rhs}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-rhs}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-rhs}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_ac8df74075c393100f5bddcb371503530}
@@ -382,7 +394,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \hypertarget{classMIQPLinearConstraints_a5e6d37521f3da248b19ff424526d700a}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-\_\-\-T@{\-\_\-\-T}}
 \index{\-\_\-\-T@{\-\_\-\-T}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-\_\-\-T}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-\_\-\-T}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classMIQPLinearConstraints_a5e6d37521f3da248b19ff424526d700a}
-\-Matrix \-T in $ \underset{x}{\text{min}}\; x^TQx^T + c^Tx $
+\-Matrix $\mathbf{T}$ from the preview model\-: \[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
 
 \[ \mathbf{T} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} & \mathbf{0}_{10\times2}\\ \mathbf{0}_{6\times10} & \mathbf{B_h}_{6\times2} \end{array}\right] \]
 

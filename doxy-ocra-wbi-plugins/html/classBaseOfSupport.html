@@ -138,7 +138,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#aa2d0af7272d153ead5e088ff67c981e8">_f</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a54a35d087a8dfaee9a27d025d46f706d">_A</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">_fbar</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8">_B</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">_rhs</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="BaseOfSupport_8h.html#a3b0bf53b9d321e300a59729ebe10e02c">Polygon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a7e9b4ef515f90e2a7012871e7287bf5e">_poly</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="BaseOfSupport_8h.html#ac470b50f15f04405e67b9031615134f0">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseOfSupport.html#a8af13ff0086dc08252d49f69b1752033">_bbox</a></td></tr>
@@ -151,8 +151,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Builds base of support and corresponding constraints based on the robot's feet location. </p>
 <dl class="author"><dt><b>Author:</b></dt><dd>Jorhabib Eljaik <a class="el" href="citelist.html#CITEREF_ibanezThesis2015">ibanezThesis2015</a> </dd></dl>
 <dl class="warning"><dt><b>Warning:</b></dt><dd>Work in progress! This is still a barebone class in the process of being tested.</dd></dl>
-<p>This class uses the Geometry Boost libraries in order to find the vertices of the bounding box defined by the location of the feet of the robot. Afterwards, it will build the inequality constraints in a preview window of size \(N\) delimiting the area of this polygoon where the Center of Pressure is constrained to lie.</p>
-<p>The bounding box of the Base of Support writes as a set of intequality constraints, where \(\mathbf{p}\) is the horizonal Center of Pressure (CoP). </p>
+<p>This class uses the Geometry Boost libraries in order to find the vertices of the bounding box defined by the location of the feet of the robot. Afterwards, it will build the inequality constraints in a preview window of size \(N\) delimiting the area of this polygon where the Center of Pressure is constrained to lie.</p>
+ The bounding box of the Base of Support as the ones shown in the figure above writes as a set of intequality constraints, where \(\mathbf{p}\) is the horizonal Center of Pressure (CoP). </p>
 <p class="formulaDsp">
 \[ \left[\begin{array}{cc} -1 &amp; 0\\ 1 &amp; 0\\ 0 &amp; -1\\ 0 &amp; 1 \end{array}\right] \mathbf{p} \leq \left[\begin{array}{c} -x_{\text{min}}\\ x_{\text{max}}\\ -y_{\text{min}}\\ y_{\text{max}} \end{array}\right] \]
 </p>
@@ -171,7 +171,7 @@ Private Attributes</h2></td></tr>
 <p> Where \(\mathbf{C}_p\) expresses the relationship between CoM and CoP, see <a class="el" href="classBaseOfSupport.html#a7efc6cad789632e88d8c85ab171a9eef">buildCp()</a> for more details.</p>
 <p>For this type of constraint, in a preview window of size \(N\) we have: </p>
 <p class="formulaDsp">
-\[ \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_i\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_i\mathbf{T} \end{array}\right] \mathbf{\mathcal{X}}_{N,k} = \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] - \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \mathbf{\xi}_k \]
+\[ \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_i\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_i\mathbf{T} \end{array}\right] \mathbf{\mathcal{X}}_{N,k} \leq \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] - \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \mathbf{\xi}_k \]
 </p>
 <p> or: </p>
 <p class="formulaDsp">
@@ -276,9 +276,9 @@ Private Attributes</h2></td></tr>
 <p>Builds constraints matrix \(\mathbf{A}\).</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">Ci</td><td>See <a class="el" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a> </td></tr>
-    <tr><td class="paramname">Q</td><td>See <a class="el" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a> </td></tr>
-    <tr><td class="paramname">T</td><td>See <a class="el" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">_T</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Ci</td><td>See <a class="el" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Q</td><td>See <a class="el" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">T</td><td>See <a class="el" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">_T</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -356,12 +356,12 @@ Private Attributes</h2></td></tr>
 <p>Builds matrix \(\mathbf{B}\)</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">Ci</td><td>See <a class="el" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a> </td></tr>
-    <tr><td class="paramname">Q</td><td>See <a class="el" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Ci</td><td>See <a class="el" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Q</td><td>See <a class="el" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8">_B</a> </dd></dl>
 
 </div>
 </div>
@@ -562,7 +562,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">_rhs</a>, <a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a>, <a class="el" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">_fbar</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">_rhs</a>, <a class="el" href="classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8">_B</a>, <a class="el" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">_fbar</a> </dd></dl>
 
 </div>
 </div>
@@ -584,7 +584,7 @@ Private Attributes</h2></td></tr>
 <ul>
 <li>Retrieves the feet corners.</li>
 <li>Computes the bounding box.</li>
-<li>Updates the state-dependent right hand side of the constraints. Calls <a class="el" href="classBaseOfSupport.html#a8ab32cc933754f6307c7d749189adbfe">computeBoundingBox()</a> and <a class="el" href="classStepController.html#afb77002292921660ef4a44657d6566f1">StepController::getContact2DCoordinates()</a>, then updates <a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a></li>
+<li>Updates the state-dependent right hand side of the constraints. Calls <a class="el" href="classBaseOfSupport.html#a8ab32cc933754f6307c7d749189adbfe">computeBoundingBox()</a> and <a class="el" href="classStepController.html#afb77002292921660ef4a44657d6566f1">StepController::getContact2DCoordinates()</a>, then updates <a class="el" href="classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8">_B</a></li>
 </ul>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -592,7 +592,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">_B</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8">_B</a> </dd></dl>
 
 </div>
 </div>
@@ -611,7 +611,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \mathbf{A} = \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} &amp; 0 &amp; \cdots &amp; 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} &amp; \mathbf{C}_i\mathbf{T} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} &amp; \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} &amp; \cdots &amp; \mathbf{C}_i\mathbf{T} \end{array}\right] \]
 </p>
- 
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a>, <a class="el" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a>, <a class="el" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">_T</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a42d531cd89c34cf8821c5cdeff321bc1"></a><!-- doxytag: member="BaseOfSupport::_Ab" ref="a42d531cd89c34cf8821c5cdeff321bc1" args="" -->
@@ -648,12 +649,12 @@ Private Attributes</h2></td></tr>
  
 </div>
 </div>
-<a class="anchor" id="adfa70199064a50d9d7aea9a6d4b13246"></a><!-- doxytag: member="BaseOfSupport::_B" ref="adfa70199064a50d9d7aea9a6d4b13246" args="" -->
+<a class="anchor" id="a8dd3c63ff193e5722c93307a952178a8"></a><!-- doxytag: member="BaseOfSupport::_B" ref="a8dd3c63ff193e5722c93307a952178a8" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd <a class="el" href="classBaseOfSupport.html#adfa70199064a50d9d7aea9a6d4b13246">BaseOfSupport::_B</a><code> [private]</code></td>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8">BaseOfSupport::_B</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -662,7 +663,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \]
 </p>
- 
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#a0a7a51d0d278841633e4b291df96065d">_Ci</a>, <a class="el" href="classBaseOfSupport.html#a22efc7f81862ffd1268b862ddb9d59ff">_Q</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a8af13ff0086dc08252d49f69b1752033"></a><!-- doxytag: member="BaseOfSupport::_bbox" ref="a8af13ff0086dc08252d49f69b1752033" args="" -->
@@ -706,16 +708,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Output matrix \(\mathbf{C_P}\) of the CoP state space representation</p>
+<p>State matrix \(\mathbf{G}_p\) from the preview horizon of ZMP outputs \(\mathbf{P}\). It is of size \(2N_p \times 6\) and equal to: </p>
 <p class="formulaDsp">
-\begin{align*} \mathbf{\xi}_{k+1|k} &amp;= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \mathbf{p}_{k|k} &amp; =\mathbf{C}_P \xi_{k|k} \end{align*}
+\[ \mathbf{G}_p = \left[\begin{array}{c} \mathbf{C}_p\mathbf{A}_h \\ \vdots \\ \mathbf{C}_p\mathbf{A}^{N_p}_h \end{array}\right] \]
 </p>
-<p>Where</p>
-<p class="formulaDsp">
-\[ \mathbf{C}_P = \left[ \begin{array}{ccccc} \mathbf{0}_{2\times10} &amp; \mathbf{I}_{2\times2} &amp; \mathbf{0}_{2\times2} &amp; -\frac{c_z}{g}\mathbf{I}_{2\times2} \end{array}\right] \]
-</p>
-<p>Size: \([2\times16]\) </p>
-
+ 
 </div>
 </div>
 <a class="anchor" id="aa2d0af7272d153ead5e088ff67c981e8"></a><!-- doxytag: member="BaseOfSupport::_f" ref="aa2d0af7272d153ead5e088ff67c981e8" args="" -->
@@ -728,7 +725,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Right-hand side vector of the inequalities expressing the bounding box, when the latter is expressed in terms of the sytem state \(\xi_k\) and equal to:</p>
+<p>Right-hand side vector \(\mathbf{f}_c\) of the inequalities expressing the bounding box, when the latter is expressed in terms of the sytem state \(\xi_k\) and equal to:</p>
 <p class="formulaDsp">
 \[ \left[ \begin{array}{c} \mathbf{0}\\ \mathbf{b} \end{array}\right] \]
 </p>
@@ -749,7 +746,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \bar{\mathbf{f}} = \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] \]
 </p>
- 
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#aa2d0af7272d153ead5e088ff67c981e8">_f</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a82f86511c236d038f1670dd515e53a8f"></a><!-- doxytag: member="BaseOfSupport::_miqpParams" ref="a82f86511c236d038f1670dd515e53a8f" args="" -->
@@ -816,7 +814,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \bar{\mathbf{f}} - \mathbf{B}\xi_k \]
 </p>
- 
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classBaseOfSupport.html#aa578314a7473867f545b95883beb6c6b">_fbar</a>, <a class="el" href="classBaseOfSupport.html#a8dd3c63ff193e5722c93307a952178a8">_B</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a023d28c6900f0e97d9de42ca2c5d94a5"></a><!-- doxytag: member="BaseOfSupport::_stepController" ref="a023d28c6900f0e97d9de42ca2c5d94a5" args="" -->
@@ -829,7 +828,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Pointer to the `stepController` object instantiated by the `walking-client`. Since it contains all the contact tasks, it was easier to interface to it to requests the current contact state of the robot, i.e. contact points locations on the ground.</p>
+<p>Pointer to the stepController object instantiated by the `walking-client`. Since it contains all the contact tasks, it was easier to interface to it to requests the current contact state of the robot, i.e. contact points locations on the ground.</p>
 <dl class="warning"><dt><b>Warning:</b></dt><dd>This is not thread safe yet. It might be better to do this in a different way. </dd></dl>
 
 </div>
@@ -880,7 +879,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classBaseOfSupport.html">BaseOfSupport</a>      </li>
 
-    <li class="footer">Generated on Tue Mar 14 2017 23:45:41 for ocra-wbi-plugins by
+    <li class="footer">Generated on Wed Mar 15 2017 23:45:59 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

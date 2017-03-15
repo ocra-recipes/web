@@ -344,7 +344,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
 </p>
- 
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">_Q</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="addee397c47be26fd9eebbe8374c3cc30"></a><!-- doxytag: member="MIQPLinearConstraints::buildMatrixT" ref="addee397c47be26fd9eebbe8374c3cc30" args="()" -->
@@ -364,7 +365,8 @@ Private Attributes</h2></td></tr>
 <p class="formulaDsp">
 \[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
 </p>
- 
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">_T</a> </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a2f41d99a16293718b94d17ce9ee5b59d"></a><!-- doxytag: member="MIQPLinearConstraints::buildShapeAndAdmissibilityInPreviewWindow" ref="a2f41d99a16293718b94d17ce9ee5b59d" args="()" -->
@@ -385,7 +387,7 @@ Private Attributes</h2></td></tr>
 \[ \mathbf{A} \mathcal{X}_{k,N} \leq \bar{\mathbf{f}}_c - \mathbf{B} \xi_k \]
 </p>
 <p class="formulaDsp">
-\[ \begin{array}{cccccc} A_{\text{cr}} Q^0 T &amp; 0 &amp; 0 &amp; 0 &amp; \hdots &amp; 0\\ (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}}Q^0 T &amp; 0 &amp; 0 &amp; \hdots &amp; 0 \\ (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T &amp; (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}} Q^0 T &amp; 0 &amp; \hdots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; &amp; &amp; \vdots \\ (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T &amp; (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T &amp; \hdots &amp; \hdots &amp; \hdots &amp; A_{\text{cr}}Q^0T \\ \end{array} \]
+\[ \begin{array}{cccccc} A_{\text{cr}} Q^0 T &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; 0\\ (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}}Q^0 T &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\ (A_{\text{cl}}Q^1 + A_{\text{cr}}Q^2)T &amp; (A_{\text{cl}}Q^0 + A_{\text{cr}}Q^1)T &amp; A_{\text{cr}} Q^0 T &amp; 0 &amp; \dots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; &amp; &amp; \vdots \\ (A_{\text{cl}}Q^{N-2} + A_{\text{cr}}Q^{N-1})T &amp; (A_{\text{cl}}Q^{N-3} + A_{\text{cr}}Q^{N-2})T &amp; \dots &amp; \dots &amp; \dots &amp; A_{\text{cr}}Q^0T \\ \end{array} \]
 </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPLinearConstraints.html#ae9b8c02ee58863d05d2aab41e780413e">buildAShapeAdmiss()</a> </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>When walking constraints are added, matrix _A will be a stack of the two </dd></dl>
@@ -783,6 +785,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Matrix \(\mathbf{Q}\) from the preview model: </p>
+<p class="formulaDsp">
+\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
+</p>
 <p class="formulaDsp">
 \[ \mathbf{Q} = \left[\begin{array}{cc} \mathbf{0}_{10\times10} &amp; \mathbf{0}_{10\times6}\\ \mathbf{0}_{6\times10} &amp; \mathbf{A_h}_{6\times6} \end{array}\right] \]
 </p>
@@ -838,7 +844,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Matrix T in \( \underset{x}{\text{min}}\; x^TQx^T + c^Tx \)</p>
+<p>Matrix \(\mathbf{T}\) from the preview model: </p>
+<p class="formulaDsp">
+\[ \forall j \in \mathbb{N}^*, \xi_{k+j+1|k} = \mathbf{Q} \xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k} \]
+</p>
 <p class="formulaDsp">
 \[ \mathbf{T} = \left[\begin{array}{cc} \mathbf{I}_{10\times10} &amp; \mathbf{0}_{10\times2}\\ \mathbf{0}_{6\times10} &amp; \mathbf{B_h}_{6\times2} \end{array}\right] \]
 </p>
@@ -870,7 +879,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPLinearConstraints.html">MIQPLinearConstraints</a>      </li>
 
-    <li class="footer">Generated on Tue Mar 14 2017 23:45:41 for ocra-wbi-plugins by
+    <li class="footer">Generated on Wed Mar 15 2017 23:45:59 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

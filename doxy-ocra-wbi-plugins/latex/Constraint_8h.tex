@@ -42,6 +42,16 @@ class \hyperlink{classConstraint}{\-Constraint}
 \begin{DoxyCopyright}{\-Copyright}
 \-G\-N\-U \-General \-Public \-License.
 \end{DoxyCopyright}
+\-The basic form of a linear constraint in our \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} formulation is
+
+\-This file is part of ocra-\/recipes. \-Copyright (\-C) 2016 \-Institut des \-Systèmes \-Intelligents et de \-Robotique (\-I\-S\-I\-R)
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$.
+
 \-In order to use this class instantiate an object of type \hyperlink{classMIQPLinearConstraints}{\-M\-I\-Q\-P\-Linear\-Constraints} passing to it the period of execution of the containing thread (in ms) and the length of the preview window. \-At 'construction' time, shape and admissibility matrices will be built while the \-R\-H\-S of the total inequality constraints will be only allocated, waiting for an update by the user with the current and a history of states which can be done through the update\-R\-H\-S() method. \-If the user requires the total constraints matrix, the latter can be queried through the method get\-Constraints\-Matrix\-A(), for speed concerns, the user needs to pass a matrix to this method already allocated. \-This can be done by querying the resulting total number of constraints through get\-Total\-Number\-Of\-Constraints() to resize the rows of your output matrix, while the columns will correspond to (size of input vector times the size of the preview window). \-After this, the user is left with updating the \-R\-H\-S of the inequalities to be queried also through \begin{DoxyWarning}{\-Warning}
 \-Currently this class is only taking into account all the shape and admissibility constraints used in \-Ibanes 2016 thesis, thus missing any walking constraints. 
 \end{DoxyWarning}

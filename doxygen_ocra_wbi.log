@@ -370,13 +370,14 @@ Generating docs for file ocra-wbi-plugins/ocra-icub-server/src/Module.cpp...
 Generating docs for file ocra-wbi-plugins/ocra-icub-server/src/Thread.cpp...
 Generating docs for file ocra-wbi-plugins/ocra-icub/include/ocracitelist:3: warning: expected <dt> tag but found <dl> instead!
 citelist:4: warning: unexpected end of comment while looking for a html description title
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:300: warning: The following parameters of BaseOfSupport::BaseOfSupport(std::shared_ptr< StepController > stepController, const Eigen::MatrixXd &Q, const Eigen::MatrixXd &T, MIQPParameters miqpParams) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:11: warning: image file bounding-box.eps is not found in IMAGE_PATH: assuming external image.
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:302: warning: The following parameters of BaseOfSupport::BaseOfSupport(std::shared_ptr< StepController > stepController, const Eigen::MatrixXd &Q, const Eigen::MatrixXd &T, MIQPParameters miqpParams) are not documented:
   parameter 'Q'
   parameter 'T'
   parameter 'miqpParams'
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:329: warning: explicit link request to 'feetCorners' could not be resolved
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:339: warning: argument 'Constraint' of command @param is not found in the argument list of BaseOfSupport::getA(Eigen::MatrixXd &A)
-/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:339: warning: The following parameters of BaseOfSupport::getA(Eigen::MatrixXd &A) are not documented:
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:331: warning: explicit link request to 'feetCorners' could not be resolved
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:341: warning: argument 'Constraint' of command @param is not found in the argument list of BaseOfSupport::getA(Eigen::MatrixXd &A)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h:341: warning: The following parameters of BaseOfSupport::getA(Eigen::MatrixXd &A) are not documented:
   parameter 'A'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:46: warning: Found unknown command `\params'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:43: warning: The following parameters of MIQPController::MIQPController(MIQPParameters params, ocra::Model::Ptr robotModel, std::shared_ptr< StepController > stepController, const Eigen::MatrixXd &comStateRef) are not documented:
@@ -531,6 +532,6 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Patching output file 1/1
-symbol cache used 895/65536 hits=50132 misses=895
-lookup cache used 1173/65536 hits=3890 misses=1196
+symbol cache used 895/65536 hits=50165 misses=895
+lookup cache used 1173/65536 hits=3900 misses=1196
 finished...

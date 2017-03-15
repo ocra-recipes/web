@@ -70,7 +70,7 @@ void \hyperlink{classBaseOfSupport_ab0a2eb399e02b43872d2917c683d6a08}{build\-A} 
 \item 
 \-Eigen\-::\-Vector\-Xd \hyperlink{classBaseOfSupport_aa578314a7473867f545b95883beb6c6b}{\-\_\-fbar}
 \item 
-\-Eigen\-::\-Vector\-Xd \hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B}
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classBaseOfSupport_a8dd3c63ff193e5722c93307a952178a8}{\-\_\-\-B}
 \item 
 \-Eigen\-::\-Vector\-Xd \hyperlink{classBaseOfSupport_a274325bb39f10aac06153b82a2541c3b}{\-\_\-rhs}
 \item 
@@ -97,11 +97,16 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \begin{DoxyWarning}{\-Warning}
 \-Work in progress! \-This is still a barebone class in the process of being tested.
 \end{DoxyWarning}
-\-This class uses the \-Geometry \-Boost libraries in order to find the vertices of the bounding box defined by the location of the feet of the robot. \-Afterwards, it will build the inequality constraints in a preview window of size $N$ delimiting the area of this polygoon where the \-Center of \-Pressure is constrained to lie.
+\-This class uses the \-Geometry \-Boost libraries in order to find the vertices of the bounding box defined by the location of the feet of the robot. \-Afterwards, it will build the inequality constraints in a preview window of size $N$ delimiting the area of this polygon where the \-Center of \-Pressure is constrained to lie.
 
-\-The bounding box of the \-Base of \-Support writes as a set of intequality constraints, where $\mathbf{p}$ is the horizonal \-Center of \-Pressure (\-Co\-P). \[ \left[\begin{array}{cc} -1 & 0\\ 1 & 0\\ 0 & -1\\ 0 & 1 \end{array}\right] \mathbf{p} \leq \left[\begin{array}{c} -x_{\text{min}}\\ x_{\text{max}}\\ -y_{\text{min}}\\ y_{\text{max}} \end{array}\right] \] or, \[ \mathbf{A}_b\mathbf{p} \leq \mathbf{b} \] \-Which in terms of the system state $\xi$ writes\-: \[ \left[\begin{array}{cc} \mathbf{0}_{10\times10} & \\ & \mathbf{A}_b \mathbf{C}_p \end{array}\right] \mathbf{\xi} \leq \left[\begin{array}{c} \mathbf{0} \\ \mathbf{b} \end{array}\right] \] or\-: \[ \mathbf{C}_i \mathbf{\xi} \leq \mathbf{f}_c \] \-Where $\mathbf{C}_p$ expresses the relationship between \-Co\-M and \-Co\-P, see \hyperlink{classBaseOfSupport_a7efc6cad789632e88d8c85ab171a9eef}{build\-Cp()} for more details.
 
-\-For this type of constraint, in a preview window of size $N$ we have\-: \[ \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} & \mathbf{C}_i\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_i\mathbf{T} \end{array}\right] \mathbf{\mathcal{X}}_{N,k} = \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] - \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \mathbf{\xi}_k \] or\-: \[ \mathbf{A} \mathbf{\mathcal{X}}_{N,k} \leq \bar{\mathbf{f}} - \mathbf{B}\xi_k \] 
+\begin{DoxyImage}
+\includegraphics{bounding-box}
+\caption{\-Two examples of the bounding box given double support configurations. \-For single support the bounding box goes around the single foot in a similar fashion.}
+\end{DoxyImage}
+ \-The bounding box of the \-Base of \-Support as the ones shown in the figure above writes as a set of intequality constraints, where $\mathbf{p}$ is the horizonal \-Center of \-Pressure (\-Co\-P). \[ \left[\begin{array}{cc} -1 & 0\\ 1 & 0\\ 0 & -1\\ 0 & 1 \end{array}\right] \mathbf{p} \leq \left[\begin{array}{c} -x_{\text{min}}\\ x_{\text{max}}\\ -y_{\text{min}}\\ y_{\text{max}} \end{array}\right] \] or, \[ \mathbf{A}_b\mathbf{p} \leq \mathbf{b} \] \-Which in terms of the system state $\xi$ writes\-: \[ \left[\begin{array}{cc} \mathbf{0}_{10\times10} & \\ & \mathbf{A}_b \mathbf{C}_p \end{array}\right] \mathbf{\xi} \leq \left[\begin{array}{c} \mathbf{0} \\ \mathbf{b} \end{array}\right] \] or\-: \[ \mathbf{C}_i \mathbf{\xi} \leq \mathbf{f}_c \] \-Where $\mathbf{C}_p$ expresses the relationship between \-Co\-M and \-Co\-P, see \hyperlink{classBaseOfSupport_a7efc6cad789632e88d8c85ab171a9eef}{build\-Cp()} for more details.
+
+\-For this type of constraint, in a preview window of size $N$ we have\-: \[ \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} & \mathbf{C}_i\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_i\mathbf{T} \end{array}\right] \mathbf{\mathcal{X}}_{N,k} \leq \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] - \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \mathbf{\xi}_k \] or\-: \[ \mathbf{A} \mathbf{\mathcal{X}}_{N,k} \leq \bar{\mathbf{f}} - \mathbf{B}\xi_k \] 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
 \hypertarget{classBaseOfSupport_a08c057e24478097c54ddaf7e4378466e}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-Base\-Of\-Support@{\-Base\-Of\-Support}}
@@ -144,12 +149,12 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \-Builds constraints matrix $\mathbf{A}$.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em \-Ci} & \-See \hyperlink{classBaseOfSupport_a0a7a51d0d278841633e4b291df96065d}{\-\_\-\-Ci} \\
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em \-Ci} & \-See \hyperlink{classBaseOfSupport_a0a7a51d0d278841633e4b291df96065d}{\-\_\-\-Ci} \\
 \hline
-{\em \-Q} & \-See \hyperlink{classBaseOfSupport_a22efc7f81862ffd1268b862ddb9d59ff}{\-\_\-\-Q} \\
+\mbox{\tt in}  & {\em \-Q} & \-See \hyperlink{classBaseOfSupport_a22efc7f81862ffd1268b862ddb9d59ff}{\-\_\-\-Q} \\
 \hline
-{\em \-T} & \-See \hyperlink{classBaseOfSupport_a52f07f15e1667eb7876e614dcd817ef1}{\-\_\-\-T} \\
+\mbox{\tt in}  & {\em \-T} & \-See \hyperlink{classBaseOfSupport_a52f07f15e1667eb7876e614dcd817ef1}{\-\_\-\-T} \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{\-See also}
@@ -193,14 +198,14 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \-Builds matrix $\mathbf{B}$
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em \-Ci} & \-See \hyperlink{classBaseOfSupport_a0a7a51d0d278841633e4b291df96065d}{\-\_\-\-Ci} \\
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em \-Ci} & \-See \hyperlink{classBaseOfSupport_a0a7a51d0d278841633e4b291df96065d}{\-\_\-\-Ci} \\
 \hline
-{\em \-Q} & \-See \hyperlink{classBaseOfSupport_a22efc7f81862ffd1268b862ddb9d59ff}{\-\_\-\-Q} \\
+\mbox{\tt in}  & {\em \-Q} & \-See \hyperlink{classBaseOfSupport_a22efc7f81862ffd1268b862ddb9d59ff}{\-\_\-\-Q} \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{\-See also}
-\hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B} 
+\hyperlink{classBaseOfSupport_a8dd3c63ff193e5722c93307a952178a8}{\-\_\-\-B} 
 \end{DoxySeeAlso}
 \hypertarget{classBaseOfSupport_a1c9e19126fd1092462209ce9a3455cea}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!build\-Ci@{build\-Ci}}
 \index{build\-Ci@{build\-Ci}!BaseOfSupport@{\-Base\-Of\-Support}}
@@ -321,7 +326,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{\-See also}
-\hyperlink{classBaseOfSupport_a274325bb39f10aac06153b82a2541c3b}{\-\_\-rhs}, \hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B}, \hyperlink{classBaseOfSupport_aa578314a7473867f545b95883beb6c6b}{\-\_\-fbar} 
+\hyperlink{classBaseOfSupport_a274325bb39f10aac06153b82a2541c3b}{\-\_\-rhs}, \hyperlink{classBaseOfSupport_a8dd3c63ff193e5722c93307a952178a8}{\-\_\-\-B}, \hyperlink{classBaseOfSupport_aa578314a7473867f545b95883beb6c6b}{\-\_\-fbar} 
 \end{DoxySeeAlso}
 \hypertarget{classBaseOfSupport_a1b9919def962e87ba6de27fb744da284}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!update@{update}}
 \index{update@{update}!BaseOfSupport@{\-Base\-Of\-Support}}
@@ -336,7 +341,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \begin{DoxyItemize}
 \item \-Retrieves the feet corners.
 \item \-Computes the bounding box.
-\item \-Updates the state-\/dependent right hand side of the constraints. \-Calls \hyperlink{classBaseOfSupport_a8ab32cc933754f6307c7d749189adbfe}{compute\-Bounding\-Box()} and \hyperlink{classStepController_afb77002292921660ef4a44657d6566f1}{\-Step\-Controller\-::get\-Contact2\-D\-Coordinates()}, then updates \hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B}
+\item \-Updates the state-\/dependent right hand side of the constraints. \-Calls \hyperlink{classBaseOfSupport_a8ab32cc933754f6307c7d749189adbfe}{compute\-Bounding\-Box()} and \hyperlink{classStepController_afb77002292921660ef4a44657d6566f1}{\-Step\-Controller\-::get\-Contact2\-D\-Coordinates()}, then updates \hyperlink{classBaseOfSupport_a8dd3c63ff193e5722c93307a952178a8}{\-\_\-\-B}
 \end{DoxyItemize}
 
 
@@ -345,7 +350,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{\-See also}
-\hyperlink{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\-\_\-\-B} 
+\hyperlink{classBaseOfSupport_a8dd3c63ff193e5722c93307a952178a8}{\-\_\-\-B} 
 \end{DoxySeeAlso}
 
 
@@ -353,18 +358,28 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \hypertarget{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-A@{\-\_\-\-A}}
 \index{\-\_\-\-A@{\-\_\-\-A}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-A}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a54a35d087a8dfaee9a27d025d46f706d}
-\-Matrix $\mathbf{A}$ in the bounding box constraints for a preview window of size $N$ \[ \mathbf{A} = \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} & \mathbf{C}_i\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_i\mathbf{T} \end{array}\right] \] \hypertarget{classBaseOfSupport_a42d531cd89c34cf8821c5cdeff321bc1}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-Ab@{\-\_\-\-Ab}}
+\-Matrix $\mathbf{A}$ in the bounding box constraints for a preview window of size $N$ \[ \mathbf{A} = \left[\begin{array}{cccc} \mathbf{C}_i\mathbf{T} & 0 & \cdots & 0 \\ \mathbf{C}_i\mathbf{Q}\mathbf{T} & \mathbf{C}_i\mathbf{T} & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ \mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_i\mathbf{T} \end{array}\right] \]
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classBaseOfSupport_a0a7a51d0d278841633e4b291df96065d}{\-\_\-\-Ci}, \hyperlink{classBaseOfSupport_a22efc7f81862ffd1268b862ddb9d59ff}{\-\_\-\-Q}, \hyperlink{classBaseOfSupport_a52f07f15e1667eb7876e614dcd817ef1}{\-\_\-\-T} 
+\end{DoxySeeAlso}
+\hypertarget{classBaseOfSupport_a42d531cd89c34cf8821c5cdeff321bc1}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-Ab@{\-\_\-\-Ab}}
 \index{\-\_\-\-Ab@{\-\_\-\-Ab}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-\-Ab}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-Ab}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a42d531cd89c34cf8821c5cdeff321bc1}
 \-Inequality matrix $\mathbf{A}_b$ expressing the bounding box for the current contact configuration of the robot's feet \[ \mathbf{A}_b = \left[\begin{array}{cc} -1 & 0\\ 1 & 0\\ 0 & -1\\ 0 & 1 \end{array}\right] \] \hypertarget{classBaseOfSupport_a9a77c3e98a73065f60b99e888c50fcc7}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-b@{\-\_\-b}}
 \index{\-\_\-b@{\-\_\-b}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-b}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a9a77c3e98a73065f60b99e888c50fcc7}
-\-Right-\/hand-\/side vector of the inequality expression the interior of the bounding box for the current contact configuration of the robot's feet. \-For the current bounding box defined by minimum and maximum points $\mathbf{p}_{\text{min}}$ and $\mathbf{p}_{\text{max}}$ we get\-: \[ \mathbf{b} = \left[ \begin{array}{c} -x_{\text{min}}\\ x_{\text{max}}\\ -y_{\text{min}}\\ y_{\text{max}} \end{array} \right] \] \hypertarget{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-B@{\-\_\-\-B}}
+\-Right-\/hand-\/side vector of the inequality expression the interior of the bounding box for the current contact configuration of the robot's feet. \-For the current bounding box defined by minimum and maximum points $\mathbf{p}_{\text{min}}$ and $\mathbf{p}_{\text{max}}$ we get\-: \[ \mathbf{b} = \left[ \begin{array}{c} -x_{\text{min}}\\ x_{\text{max}}\\ -y_{\text{min}}\\ y_{\text{max}} \end{array} \right] \] \hypertarget{classBaseOfSupport_a8dd3c63ff193e5722c93307a952178a8}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-B@{\-\_\-\-B}}
 \index{\-\_\-\-B@{\-\_\-\-B}!BaseOfSupport@{\-Base\-Of\-Support}}
-\subsubsection[{\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-B}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_adfa70199064a50d9d7aea9a6d4b13246}
+\subsubsection[{\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-B}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a8dd3c63ff193e5722c93307a952178a8}
 \-Matrix $\mathbf{B}$ appearing in the bounding box constraints for a preview window of size $N$\-:
 
-\[ \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \] \hypertarget{classBaseOfSupport_a8af13ff0086dc08252d49f69b1752033}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-bbox@{\-\_\-bbox}}
+\[ \left[\begin{array}{c} \mathbf{C}_i\mathbf{Q}\\ \mathbf{C}_i\mathbf{Q}^2\\ \vdots\\ \mathbf{C}_i\mathbf{Q}^N \end{array}\right] \]
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classBaseOfSupport_a0a7a51d0d278841633e4b291df96065d}{\-\_\-\-Ci}, \hyperlink{classBaseOfSupport_a22efc7f81862ffd1268b862ddb9d59ff}{\-\_\-\-Q} 
+\end{DoxySeeAlso}
+\hypertarget{classBaseOfSupport_a8af13ff0086dc08252d49f69b1752033}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-bbox@{\-\_\-bbox}}
 \index{\-\_\-bbox@{\-\_\-bbox}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-bbox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Box} {\bf \-Base\-Of\-Support\-::\-\_\-bbox}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a8af13ff0086dc08252d49f69b1752033}
 \-Polygon object representing the bounding box (envelope) delimiting \hyperlink{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}{\-\_\-poly}. \hypertarget{classBaseOfSupport_a0a7a51d0d278841633e4b291df96065d}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-Ci@{\-\_\-\-Ci}}
@@ -373,23 +388,20 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \-Matrix $\mathbf{C}_i$ in the inequality expressing the \-Co\-P constraints of the system at the current time instant $k$ and given by $\mathbf{C}_i \xi_k \leq \mathbf{f}$. $\mathbf{C}_i$ is a $14 \times 16$ matrix, and $\mathbf{f}_p$ a vector in $\mathbb{R}^{n_p}$ or\-: \[ \left[\begin{array}{cc} \mathbf{0}_{10\times10} & \\ & \mathbf{A}_b \mathbf{C}_p \end{array}\right] \mathbf{\xi} \leq \left[\begin{array}{c} \mathbf{0} \\ \mathbf{b} \end{array}\right] \] \hypertarget{classBaseOfSupport_a0ff0fd44966f86d5a62e4d38c3cfea60}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-\-Cp@{\-\_\-\-Cp}}
 \index{\-\_\-\-Cp@{\-\_\-\-Cp}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-\-Cp}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-\-Cp}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a0ff0fd44966f86d5a62e4d38c3cfea60}
-\-Output matrix $\mathbf{C_P}$ of the \-Co\-P state space representation
-
-\begin{align*} \mathbf{\xi}_{k+1|k} &= \mathbf{Q} \xi_{k|k} + \mathbf{T}\mathcal{X}_{k+1|k} \\ \mathbf{p}_{k|k} & =\mathbf{C}_P \xi_{k|k} \end{align*}
-
-\-Where
-
-\[ \mathbf{C}_P = \left[ \begin{array}{ccccc} \mathbf{0}_{2\times10} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times2} & -\frac{c_z}{g}\mathbf{I}_{2\times2} \end{array}\right] \]
-
-\-Size\-: $[2\times16]$ \hypertarget{classBaseOfSupport_aa2d0af7272d153ead5e088ff67c981e8}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-f@{\-\_\-f}}
+\-State matrix $\mathbf{G}_p$ from the preview horizon of \-Z\-M\-P outputs $\mathbf{P}$. \-It is of size $2N_p \times 6$ and equal to\-: \[ \mathbf{G}_p = \left[\begin{array}{c} \mathbf{C}_p\mathbf{A}_h \\ \vdots \\ \mathbf{C}_p\mathbf{A}^{N_p}_h \end{array}\right] \] \hypertarget{classBaseOfSupport_aa2d0af7272d153ead5e088ff67c981e8}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-f@{\-\_\-f}}
 \index{\-\_\-f@{\-\_\-f}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-f}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-f}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_aa2d0af7272d153ead5e088ff67c981e8}
-\-Right-\/hand side vector of the inequalities expressing the bounding box, when the latter is expressed in terms of the sytem state $\xi_k$ and equal to\-:
+\-Right-\/hand side vector $\mathbf{f}_c$ of the inequalities expressing the bounding box, when the latter is expressed in terms of the sytem state $\xi_k$ and equal to\-:
 
 \[ \left[ \begin{array}{c} \mathbf{0}\\ \mathbf{b} \end{array}\right] \] \hypertarget{classBaseOfSupport_aa578314a7473867f545b95883beb6c6b}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-fbar@{\-\_\-fbar}}
 \index{\-\_\-fbar@{\-\_\-fbar}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-fbar}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-fbar}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_aa578314a7473867f545b95883beb6c6b}
-\-Vector $\bar{\mathbf{f}}$ in the bounding box constraints for a preview window of size $N$ \[ \bar{\mathbf{f}} = \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] \] \hypertarget{classBaseOfSupport_a82f86511c236d038f1670dd515e53a8f}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-miqp\-Params@{\-\_\-miqp\-Params}}
+\-Vector $\bar{\mathbf{f}}$ in the bounding box constraints for a preview window of size $N$ \[ \bar{\mathbf{f}} = \left[\begin{array}{c} \mathbf{f}_c\\ \mathbf{f}_c\\ \vdots\\ \mathbf{f}_c \end{array}\right] \]
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classBaseOfSupport_aa2d0af7272d153ead5e088ff67c981e8}{\-\_\-f} 
+\end{DoxySeeAlso}
+\hypertarget{classBaseOfSupport_a82f86511c236d038f1670dd515e53a8f}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-miqp\-Params@{\-\_\-miqp\-Params}}
 \index{\-\_\-miqp\-Params@{\-\_\-miqp\-Params}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-miqp\-Params}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-Parameters} {\bf \-Base\-Of\-Support\-::\-\_\-miqp\-Params}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a82f86511c236d038f1670dd515e53a8f}
 \-Copy of the parameters of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} controller which instantiates \hyperlink{classMIQPLinearConstraints}{\-M\-I\-Q\-P\-Linear\-Constraints} in which the \-Bounding\-Box object will be instantiated. \hypertarget{classBaseOfSupport_a7e9b4ef515f90e2a7012871e7287bf5e}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-poly@{\-\_\-poly}}
@@ -408,10 +420,15 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>
 \hypertarget{classBaseOfSupport_a274325bb39f10aac06153b82a2541c3b}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-rhs@{\-\_\-rhs}}
 \index{\-\_\-rhs@{\-\_\-rhs}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-rhs}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Base\-Of\-Support\-::\-\_\-rhs}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a274325bb39f10aac06153b82a2541c3b}
-\-Right-\/hand side of the constraints of the bounding box in a preview window of size $N$ and equal to\-: \[ \bar{\mathbf{f}} - \mathbf{B}\xi_k \] \hypertarget{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-step\-Controller@{\-\_\-step\-Controller}}
+\-Right-\/hand side of the constraints of the bounding box in a preview window of size $N$ and equal to\-: \[ \bar{\mathbf{f}} - \mathbf{B}\xi_k \]
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classBaseOfSupport_aa578314a7473867f545b95883beb6c6b}{\-\_\-fbar}, \hyperlink{classBaseOfSupport_a8dd3c63ff193e5722c93307a952178a8}{\-\_\-\-B} 
+\end{DoxySeeAlso}
+\hypertarget{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}{\index{\-Base\-Of\-Support@{\-Base\-Of\-Support}!\-\_\-step\-Controller@{\-\_\-step\-Controller}}
 \index{\-\_\-step\-Controller@{\-\_\-step\-Controller}!BaseOfSupport@{\-Base\-Of\-Support}}
 \subsubsection[{\-\_\-step\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-Step\-Controller}$>$ {\bf \-Base\-Of\-Support\-::\-\_\-step\-Controller}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classBaseOfSupport_a023d28c6900f0e97d9de42ca2c5d94a5}
-\-Pointer to the `step\-Controller` object instantiated by the `walking-\/client`. \-Since it contains all the contact tasks, it was easier to interface to it to requests the current contact state of the robot, i.\-e. contact points locations on the ground.
+\-Pointer to the step\-Controller object instantiated by the `walking-\/client`. \-Since it contains all the contact tasks, it was easier to interface to it to requests the current contact state of the robot, i.\-e. contact points locations on the ground.
 
 \begin{DoxyWarning}{\-Warning}
 \-This is not thread safe yet. \-It might be better to do this in a different way. 
