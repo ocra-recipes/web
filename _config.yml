@@ -48,10 +48,28 @@ baseurl: "/web"
 paginate: 10
 per_page: 10
 paginate_path: "/page:num/"
-markdown: kramdown
+# markdown: kramdown
+markdown: pandoc
+pandoc:
+    skip: false
+    bundle_permalink: ':output_ext/:slug.:output_ext'
+    papersize: 'a5paper'
+    sheetsize: 'a4paper'
+    imposition: true
+    binder: true
+    covers_dir: assets/covers
+    signature: 20
+
+    flags: '--smart'
+    site_flags: '--toc'
+    outputs:
+      latex:
+      pdf: '--latex-engine=xelatex'
+      epub: '--epub-chapter-level=2'
 gems:
   - jekyll-paginate
   - jekyll-gist
+gems: [ 'jekyll-pandoc-multiple-formats' ]
 
 authors:
   ryan:

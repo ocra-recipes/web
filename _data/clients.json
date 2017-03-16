@@ -26,5 +26,14 @@
 		"Author": "Ryan Lober",
 		"tags": ["Difficult","Demo","iCub"]
 	}
+	{
+		"name": "walking-client",
+		"image": "placeholder.jpg",
+		"url": "/walking-client/",
+		"url-source-code": "https://github.com/ocra-recipes/ocra-wbi-plugins/tree/walking-client",
+		"date": "March 2017",
+		"Author": "Jorhabib Eljaik",
+		"tags": ["Difficult","Demo","iCub"]
+	}
 
 ]
