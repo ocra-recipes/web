@@ -16,7 +16,7 @@ The walking problem can be be seen as a compromise between CoM trajectory tracki
 
 $$
 \begin{matrix}
-\displaystyle \min_{\mathcal{X}} & \multicolumn{3}{l}{\mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X}}\\
+\displaystyle \min_{\mathcal{X}} & \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X}\\
 \textrm{s.t.} & \mathbf{A} \mathcal{X} & \leq & \mathbf{f} \\
               & \xi_{k|k} & = & \xi_k \\
               & \xi_{k+j+1|k}          & = & \mathbf{Q} \xi_{k+j|k} + \mathbf{T} \mathcal{\xi}_{k+j+1|k} \\
