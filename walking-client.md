@@ -15,16 +15,16 @@ The following sections can be seen as an addendum to [1]. For more information, 
 The walking problem can be be seen as a compromise between CoM trajectory tracking and balance. By using the CoP distance from the boundaries of the BoS as an indicator of balance performance and CoM tracking error as the one for walking performance plus the addition of suitable constraints with integer and real variables, the walking problem writes:
 
 $$
-\begin{array}{rrclcl}
+\begin{matrix}
 \displaystyle \min_{\mathcal{X}} & \multicolumn{3}{l}{\mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X}}\\
 \textrm{s.t.} & \mathbf{A} \mathcal{X} & \leq & \mathbf{f} \\
-              &\displaystyle \xi_{k|k} & = & \xi_k \\
-              & \xi_{k+j+1|k}          & = & \mathbf{Q} \xi_{k+j|k} + \mathbf{T} \mathcal{X}_{k+j+1|k} \\
+              & \xi_{k|k} & = & \xi_k \\
+              & \xi_{k+j+1|k}          & = & \mathbf{Q} \xi_{k+j|k} + \mathbf{T} \mathcal{\xi}_{k+j+1|k} \\
               & (\mathbf{a}_{k+j|k}, \mathbf{b}_{k+j|k}) & \in & \mathbb{R}^2\times\mathbb{R}^2 \\
               & (\alpha_{k+j|k}, \beta_{k+j|k}) & \in & \{0,1\}^2 \times \{0,1\}^2\\
               & (\delta_{k+j|k}, \gamma_{k+j|k}) & \in & \{0,1\}^2 \times \{0,1\}^2\\
               & \mathbf{u}_{k+j|k} & \in & \mathbb{R}^2
-\end{array}
+\end{matrix}
 $$
 
 
