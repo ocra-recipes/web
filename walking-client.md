@@ -38,7 +38,7 @@ $$
 which represents the formerly described compromise between the walking ($J_{w_k}$) and balance ($J_{b_k}$) performances, i.e.
 
 $$
-J_k &= \omega_b J_{b_k} + \omega_w J_{w_k} + q
+J_k = \omega_b J_{b_k} + \omega_w J_{w_k} + q
 $$
 
 Let's work out a bit more Equation \ref{eq:miqpEquation} before going into the details of the constraints.
@@ -55,12 +55,12 @@ $$
 Where, in the walking performance cost, $\mathbf{H}$ is the vector of predicted CoM outputs in the preview window of size $N$, while $\mathbf{H}^r$ is the vector of CoM state references in the preview window. On the other hand, $\mathbf{P}$ is the vector of predicted CoP outputs and $\mathbf{R}$, the vector of predicted BoS centers.
 
 #### Predicted CoM outputs
-Given the system state $xi$ (more on this in [1] Sections 5.1.2, 5.2) and input $\mathcal{X}$, we can predict the CoM output in a preview window ($\mathbf{H}$) from the state propagation:
+Given the system state $xi$ (more on this in [1] Sections 5.1.2, 5.2) and input $\mathcal{X}$, we can predict the CoM outputs in a preview window ($\mathbf{H}$) from the state propagation:
 
 $$
-\begin{equation}
+\begin{align}
 \xi_{k+j+1|k} & = \mathbf{Q}\xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}\\
-\end{equation}
+\end{align}
 $$
 
 Where
@@ -76,7 +76,7 @@ and the relationship between the system and CoM state, i.e.
 
 $$
 \begin{equation}
-\hat{\mathbf{h}}_{k+j+1|k} = \mathbf{C}_h \xi_{k+j+1|k}\\
+\hat{\mathbf{h}}_{k+j+1|k} = \mathbf{C}_h \xi_{k+j+1|k}
 \end{equation}
 $$
 
