@@ -35,7 +35,7 @@ $$
 J_k = \omega_b\sum_{j=1}^{N} || \mathbf{p}_{k+j|k} - \mathbf{r}_{k+j|k} ||^2 +  \omega_w \sum_{j=1}^{N} ||\mathbf{S}(\hat{\mathbf{h}}_{k+j|k} - \hat{\mathbf{h}}^r_{k+j|k}) ||^2
 $$
 
-which represents the formerly described compromise between the walking ($J_{w_k}$) and balance ($J_{b_k}$) performances, i.e.
+which represents the formerly described compromise between the walking ($$J_{w_k}$$) and balance ($$J_{b_k}$$) performances, i.e.
 
 $$
 J_k = \omega_b J_{b_k} + \omega_w J_{w_k} + q
@@ -52,10 +52,10 @@ $$
 \end{equation}
 $$
 
-Where, in the walking performance cost, $\mathbf{H}$ is the vector of predicted CoM outputs in the preview window of size $N$, while $\mathbf{H}^r$ is the vector of CoM state references in the preview window. On the other hand, $\mathbf{P}$ is the vector of predicted CoP outputs and $\mathbf{R}$, the vector of predicted BoS centers.
+Where, in the walking performance cost, $$\mathbf{H}$$ is the vector of predicted CoM outputs in the preview window of size $$N$$, while $$\mathbf{H}^r$$ is the vector of CoM state references in the preview window. On the other hand, $$\mathbf{P}$$ is the vector of predicted CoP outputs and $$\mathbf{R}$$, the vector of predicted BoS centers.
 
 #### Predicted CoM outputs
-Given the system state $xi$ (more on this in [1] Sections 5.1.2, 5.2) and input $\mathcal{X}$, we can predict the CoM outputs in a preview window ($\mathbf{H}$) from the state propagation:
+Given the system state $$xi$$ (more on this in [1] Sections 5.1.2, 5.2) and input $$\mathcal{X}$$, we can predict the CoM outputs in a preview window ($$\mathbf{H}$$) from the state propagation:
 
 $$
 \begin{align}
