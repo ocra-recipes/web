@@ -48,14 +48,14 @@ The global cost function (without regularization terms) can be written in matrix
 
 $$
 \begin{equation} \label{eq:costFuncMatrix}
-(\mathbf{H}^r - \mathbf{H})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}) + (\mathbf{P}_N - \mathbf{R}_N)^T \mathbf{N}_b (\mathbf{P}_N - \mathbf{R}_N)
+(\mathbf{H}^r - \mathbf{H}_{k,N})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}_{k,N}) + (\mathbf{P}_{k,N} - \mathbf{R}_{k,N})^T \mathbf{N}_b (\mathbf{P}_{k,N} - \mathbf{R}_{k,N})
 \end{equation}
 $$
 
-Where, in the walking performance cost, $$\mathbf{H}$$ is the vector of predicted CoM outputs in the preview window of size $$N$$, while $$\mathbf{H}^r$$ is the vector of CoM state references in the preview window. On the other hand, $$\mathbf{P}$$ is the vector of predicted CoP outputs and $$\mathbf{R}$$, the vector of predicted BoS centers.
+Where, in the walking performance cost, $$\mathbf{H}_{k,N}$$ is the vector of predicted CoM outputs in a preview window of size $$N$$, while $$\mathbf{H}^r$$ is the vector of CoM state references in the same window. On the other hand, $$\mathbf{P}_{k,N}$$ is the vector of predicted CoP outputs and $$\mathbf{R}_{k,N}$$, the vector of predicted BoS centers.
 
 #### Predicted CoM outputs
-Given the system state $$xi$$ (more on this in [1] Sections 5.1.2, 5.2) and input $$\mathcal{X}$$, we can predict the CoM outputs in a preview window ($$\mathbf{H}$$) from the state propagation:
+Given the system state $$\xi$$ (more on this in [1] Sections 5.1.2, 5.2) and input $$\mathcal{X}$$, we can predict the CoM outputs in a preview window ($$\mathbf{H}_{k,N}$$) from the state propagation:
 
 $$
 \begin{align}
@@ -72,12 +72,26 @@ $$
 \end{array}\right]
 $$
 
+$$
+\mathbf{T} = \left[\begin{array}{cc}
+\mathbf{I}_{10\times10} & \mathbf{0}_{10\times2}\\
+\mathbf{0}_{6\times10} & \mathbf{B_h}_{6\times2}
+\end{array}\right]
+$$
+
 and the relationship between the system and CoM state, i.e.
 
 $$
 \begin{equation}
 \hat{\mathbf{h}}_{k+j+1|k} = \mathbf{C}_h \xi_{k+j+1|k}
 \end{equation}
+$$
+
+$$
+\mathbf{T} = \left[\begin{array}{cc}
+\mathbf{I}_{10\times10} & \mathbf{0}_{10\times2}\\
+\mathbf{0}_{6\times10} & \mathbf{B_h}_{6\times2}
+\end{array}\right]
 $$
 
 By iteratively applying the previous system of equations we arrive to the following compact matrix expression:
@@ -106,5 +120,41 @@ $$
 \mathbf{C}_H\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_H\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_H\mathbf{T}
 \end{array}\right]
 $$
+
+We will call matrices like $$\mathbf{P}_H$$ and $$\mathbf{R}_H$$, *preview state* and *preview input* matrices respectively.
+
+###Predicted CoP outputs
+We need to proceed in a similar fashion as before to obtain an expression for the predicted CoP outputs in the preview window. So,
+again, keeping in mind that:
+
+$$
+\mathbf{P}_{k,N} = \left\{ \mathbf{p}_{k+1}|k, \mathbf{p}_{k+2|k}, \dots, \mathbf{p}_{k+N|k} \right\}
+$$
+
+And that in this case:
+
+$$
+\begin{align}
+\xi_{k+j+1|k} & = \mathbf{Q}\xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}\\
+\mathbf{p}_{h+j+1|k} &= \mathbf{C}_P \xi_{k+j+1|k}
+\end{align}
+$$
+
+Where:
+
+$$
+\mathbf{C}_P = \left[
+\begin{array}{ccccc}
+\mathbf{0}_{2\times10} & \mathbf{I}_{2\times2} & \mathbf{0}_{2\times2} & -\frac{c_z}{g}\mathbf{I}_{2\times2}
+\end{array}\right]
+$$
+
+We can then obtain a compact expression for $$\mathbf{P}_{k,N}$$ as:
+
+$$
+\mathbf{P}_{k,N} = \mathbf{P}_P \xi_k + \mathbf{R}_P \mathcal{X}_{k,N}
+$$
+
+Where $$\mathbf{P}_P$$ and $$\mathbf{R}_P$$ have the same structure as $$\mathbf{P}_H$$ and $$\mathbf{R}_H$$ but using $$\mathbf{C}_P$$ instead of $$\mathbf{C}_H$$.
 
 [1] Ibanez A. Ph.D. thesis: http://www.hal.inserm.fr/tel-01308723v2
