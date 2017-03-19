@@ -227,4 +227,5 @@ $$
 \mathbf{d}^T&: -2(\mathbf{H}^r - \mathbf{P}_H\xi_k)^T\mathbf{S}_w\mathbf{R}_H + 2[(\mathbf{P}_P - \mathbf{P}_B)\xi_k]^T\mathbf{N}_b(\mathbf{R}_P - \mathbf{R}_B)
 \end{align}
 $$
+
 [1] Ibanez A. Ph.D. thesis: http://www.hal.inserm.fr/tel-01308723v2
