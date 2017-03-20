@@ -287,7 +287,7 @@ $$
 These constraint have a similar structure, depending either on the the current state only or also on the next system state. Therefore Shape Constraints at time step $i$ can be expressed in a compact form as:
 
 $$
-\begin{equation}
+\begin{equation}\label{eq:shapeCompact}
 \mathbf{A}_{cl}^{S} \xi_i + \mathbf{A}_{cr}^{S}\xi_{i+1} \leq \mathbf{f}_c^S
 \end{equation}
 $$
@@ -353,7 +353,7 @@ $$
 \end{array}\right]
 $$
 
-### Sequentiality Matrices
+#### Sequentiality Matrices
 In Eq. (\ref{eq:sequentiality})
 
 $$
@@ -408,12 +408,12 @@ $$
 These constraint have a similar structure, depending either on the the current state only or also on the next system state. Therefore Admissibility Constraints at time step $i$ can be expressed in a compact form as:
 
 $$
-\begin{equation}
+\begin{equation} \label{eq:admissibilityCompact}
 \mathbf{A}_{cl}^{A} \xi_i + \mathbf{A}_{cr}^{A}\xi_{i+1} \leq \mathbf{f}_c^{A}
 \end{equation}
 $$
 
-### Single And Double Support Alternation Matrices
+#### Single And Double Support Alternation Matrices
 In Eq. (\ref{eq:SDSAlternation})
 
 $$
@@ -445,7 +445,7 @@ $$
 \end{array}\right]
 $$
 
-### Single Support Matrices
+#### Single Support Matrices
 In Eq. (\ref{eq:singleSupport})
 
 $$
@@ -468,7 +468,7 @@ $$
 \end{array}\right]
 $$
 
-### Contact Configuration History Matrices
+#### Contact Configuration History Matrices
 In Eq. (\ref{eq:contactConfigHistory})
 
 $$
@@ -494,7 +494,7 @@ $$
 \end{array}\right]
 $$
 
-### Contact Configuration Enforcement Matrices
+#### Contact Configuration Enforcement Matrices
 In Eq. (\ref{eq:contactConfigEnforcement})
 
 $$
@@ -523,7 +523,34 @@ $$
 \end{array}\right]
 $$
 
-[THIS PART GOES AFTER WRITING ADMISSIBILITY CONSTRAINTS]
-Recalling the preview model (\ref{eq:previewModel}) we can proceed as done for the CoM, CoP and BoS previews in a window of size $N$:
+### Shape and Admissibility Constraints in the Preview Window
+Recalling the preview model (\ref{eq:previewModel}) we can obtain an expression for the constraints matrices in the preview window as done for the CoM, CoP and BoS in previous sections. Thus, stacking inequalities (\ref{eq:shapeCompact}) and (\ref{eq:admissibilityCompact}) by denoting:
+
+$$
+\mathbf{A}_{cl} = \left[ \begin{array}{c}
+\mathbf{A}_{cl}^{S}\\
+\mathbf{A}_{cl}^{A}
+\end{array}\right]
+$$
+
+$$
+\mathbf{A}_{cr} = \left[ \begin{array}{c}
+\mathbf{A}_{cr}^{S}\\
+\mathbf{A}_{cr}^{A}
+\end{array}\right]
+$$
+
+$$
+\mathbf{f}_{c} = \left[ \begin{array}{c}
+\mathbf{f}_{c}^{S}\\
+\mathbf{f}_{c}^{A}
+\end{array}\right]
+$$
+
+We have shape and admissibility constraints at time $i$ in one compact form as:
+
+$$
+\mathbf{A}_{cl}\xi_i + \mathbf{A}_{cr}\xi_{i+1} \leq \mathbf{f}_c
+$$
 
 [1] Ibanez A. Ph.D. thesis: http://www.hal.inserm.fr/tel-01308723v2
