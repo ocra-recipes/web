@@ -272,7 +272,7 @@ $$
 
 $$
 \begin{equation} \label{eq:constancy}
-\mathbf{C}_i^C \xi_i + \mathbf{C}_{ii} \xi_{i+1} \leq \mathbf{d}^C
+\mathbf{C}_i^C \xi_i + \mathbf{C}_{ii}^C \xi_{i+1} \leq \mathbf{d}^C
 \end{equation}
 $$
 
@@ -288,22 +288,19 @@ These constraint have a similar structure, depending either on the the current s
 
 $$
 \begin{equation}
-\mathbf{A}_{cl}^{S} \xi_i + \mathbf{A}_{cr}^{S}\xi_{i+1} \leq \mathbf{f}_c
+\mathbf{A}_{cl}^{S} \xi_i + \mathbf{A}_{cr}^{S}\xi_{i+1} \leq \mathbf{f}_c^S
 \end{equation}
 $$
 
-#### Bounding Constraints:
+#### Bounding Constraints Matrices
 In Eq. (\ref{eq:bounding})
 
 $$
 \begin{equation}
+\mathbf{C}_i =
 \left[\begin{array}{ccccc}
 -1 & 0 & 1 & 0 & 0_{1\times8}\\
  0 &-1 & 0 & 1 & 0_{1\times8}
-\end{array}\right] \xi_i \leq
-\left[\begin{array}{c}
-0\\
-0
 \end{array}\right]
 \end{equation}
 $$
@@ -314,10 +311,10 @@ $$
 \mathbf{d} = \left[\begin{array}{c}
 0\\
 0
-\end{array}\right] 
+\end{array}\right]
 $$
 
-#### Constancy Constraints
+#### Constancy Constraints Matrices
 In Eq. (\ref{eq:constancy})
 
 $$
@@ -356,7 +353,7 @@ $$
 \end{array}\right]
 $$
 
-### Sequentiality
+### Sequentiality Matrices
 In Eq. (\ref{eq:sequentiality})
 
 $$
@@ -370,6 +367,159 @@ $$
 \mathbf{d} = \left[\begin{array}{c}
 1\\
 1
+\end{array}\right]
+$$
+
+### Admissibility Constraints
+These consist at time step $i$ of:
+
+**Single and Double Support Alternation**
+
+$$
+\begin{equation} \label{eq:SDSAlternation}
+\mathbf{C}_i^{SD} \xi_i + \mathbf{C}_{ii}^{SD} \xi_{i+1} \leq \mathbf{d}^{SD}
+\end{equation}
+$$
+
+**Single Support**
+
+$$
+\begin{equation} \label{eq:singleSupport}
+\mathbf{C}_i^{SS} \xi_i \leq \mathbf{d}^{SS}
+\end{equation}
+$$
+
+**Contact Configuration History**
+
+$$
+\begin{equation} \label{eq:contactConfigHistory}
+\mathbf{C}_i^{CH} \xi_i + \mathbf{C}_{ii}^{CH} \xi_{i+1} \leq \mathbf{d}^{CH}
+\end{equation}
+$$
+
+**Contact Configuration Enforcement**
+
+$$
+\begin{equation} \label{eq:contactConfigEnforcement}
+\mathbf{C}_i^{CE} \xi_i \leq \mathbf{d}^{CE}
+\end{equation}
+$$
+
+These constraint have a similar structure, depending either on the the current state only or also on the next system state. Therefore Admissibility Constraints at time step $i$ can be expressed in a compact form as:
+
+$$
+\begin{equation}
+\mathbf{A}_{cl}^{A} \xi_i + \mathbf{A}_{cr}^{A}\xi_{i+1} \leq \mathbf{f}_c^{A}
+\end{equation}
+$$
+
+### Single And Double Support Alternation Matrices
+In Eq. (\ref{eq:SDSAlternation})
+
+$$
+\mathbf{C}_{ii} = \left[\begin{array}{ccccccc}
+0_{1\times4} & 1 & 0 & 1 & 0_{1\times2} & 1 & 0_{1\times6}\\
+0_{1\times4} & 1 & 0 & 1 & 0_{1\times2} &-1 & 0_{1\times6}\\
+0_{1\times4} &-1 & 0 &-1 & 0_{1\times2} & 1 & 0_{1\times6}\\
+0_{1\times4} &-1 & 0 &-1 & 0_{1\times2} &-1 & 0_{1\times6}\\
+\end{array}\right]
+$$
+
+$$
+\mathbf{C}_{i} = \left[\begin{array}{ccc}
+0_{1\times9} & 1 & 0_{1\times6}\\
+0_{1\times9} &-1 & 0_{1\times6}\\
+0_{1\times9} &-1 & 0_{1\times6}\\
+0_{1\times9} & 1 & 0_{1\times6}
+\end{array}\right]
+$$
+
+And
+
+$$
+\mathbf{d} = \left[\begin{array}{c}
+2\\
+0\\
+0\\
+0
+\end{array}\right]
+$$
+
+### Single Support Matrices
+In Eq. (\ref{eq:singleSupport})
+
+$$
+\mathbf{C}_{i} = \left[\begin{array}{ccccccccc}
+ 1 & 0 &-1 & 0 & 0 & 0 & 0 & -s_x & 0_{1\times6}\\
+-1 & 0 & 1 & 0 & 0 & 0 & 0 & -s_x & 0_{1\times6}\\
+ 0 & 1 & 0 &-1 & 0 & 0 & 0 & -s_y & 0_{1\times6}\\
+ 0 &-1 & 0 & 1 & 0 & 0 & 0 & -s_y & 0_{1\times6}\\
+\end{array}\right]
+$$
+
+and
+
+$$
+\mathbf{d} = \left[\begin{array}{c}
+0\\
+0\\
+0\\
+0
+\end{array}\right]
+$$
+
+### Contact Configuration History Matrices
+In Eq. (\ref{eq:contactConfigHistory})
+
+$$
+\mathbf{C}_{ii} = \left[\begin{array}{cccc}
+0_{1\times8} & 1 & 0 & 0_{1\times6}\\
+0_{1\times8} &-1 & 0 & 0_{1\times6}\\
+\end{array}\right]
+$$
+
+$$
+\mathbf{C}_{i} = \left[\begin{array}{cccc}
+0_{1\times8} &-1 & 1 & 0_{1\times6}\\
+0_{1\times8} & 1 & 1 & 0_{1\times6}\\
+\end{array}\right]
+$$
+
+and
+
+$$
+\mathbf{d} = \left[\begin{array}{c}
+1\\
+1
+\end{array}\right]
+$$
+
+### Contact Configuration Enforcement Matrices
+In Eq. (\ref{eq:contactConfigEnforcement})
+
+$$
+\mathbf{C}_{i} = \left[\begin{array}{ccccccc}
+ 0_{1\times4} & -1 & -1 & 0 & 0 & 1 & 0_{1\times7}\\
+ 0_{1\times4} & -1 &  1 & 0 & 0 & 1 & 0_{1\times7}\\
+ 0_{1\times4} &  0 &  0 & 1 &-1 & 1 & 0_{1\times7}\\
+ 0_{1\times4} &  0 &  0 &-1 & 1 & 1 & 0_{1\times7}\\
+ 0_{1\times4} &  1 &  0 & 0 &-1 &-1 & 0_{1\times7}\\
+ 0_{1\times4} & -1 &  0 & 0 & 1 &-1 & 0_{1\times7}\\
+ 0_{1\times4} &  0 & -1 & 1 & 0 &-1 & 0_{1\times7}\\
+ 0_{1\times4} &  0 &  1 &-1 & 0 &-1 & 0_{1\times7}
+\end{array}\right]
+$$
+
+$$
+\mathbf{d} = \left[\begin{array}{c}
+1\\
+1\\
+1\\
+1\\
+0\\
+0\\
+0\\
+0
 \end{array}\right]
 $$
 
