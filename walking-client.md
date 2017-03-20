@@ -54,7 +54,7 @@ $$
 \end{equation}
 $$
 
-Where, in the walking performance cost, $\mathbf{H}_{k,N}$ is the vector of predicted CoM outputs in a preview window of size $N$, while $\mathbf{H}^r$ is the vector of CoM state references in the same window. On the other hand, $\mathbf{P}_{k,N}$ is the vector of predicted CoP outputs and $\mathbf{R}_{k,N}$, the vector of predicted BoS centers.
+Where, in the walking performance cost, $$\mathbf{H}_{k,N}$$ is the vector of predicted CoM outputs in a preview window of size $N$, while $$\mathbf{H}^r$$ is the vector of CoM state references in the same window. On the other hand, $$\mathbf{P}_{k,N}$$ is the vector of predicted CoP outputs and $$\mathbf{R}_{k,N}$$, the vector of predicted BoS centers.
 
 ### Predicted CoM outputs
 Given the system state $\xi$ (more on this in [1] Sections 5.1.2, 5.2) and input $\mathcal{X}$, we can predict the CoM outputs in a preview window ($\mathbf{H}_{k,N}$) from the state propagation:
@@ -98,22 +98,24 @@ $$
 Where:
 
 $$
-\begin{align}
+\begin{equation}
 \mathbf{P}_H = \left[\begin{array}{c}
 \mathbf{C}_H \mathbf{Q} \\
 \vdots\\
 \mathbf{C}_H \mathbf{Q}^N
 \end{array}\right]
-\end{align}
+\end{equation}
 $$
 
 $$
+\begin{equation}
 \mathbf{R}_H = \left[\begin{array}{cccc}
 \mathbf{C}_H\mathbf{T}               &   0                          &  \cdots   &   0 \\
 \mathbf{C}_H\mathbf{Q}\mathbf{T}   &   \mathbf{C}_H\mathbf{T}   &  \cdots   &   0 \\
 \vdots                                 & \vdots                       & \ddots    &  \vdots \\
 \mathbf{C}_H\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_H\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_H\mathbf{T}
 \end{array}\right]
+\end{equation}
 $$
 
 We will call matrices like $\mathbf{P}_H$ and $\mathbf{R}_H$, *preview state* and *preview input* matrices respectively.
@@ -175,13 +177,14 @@ $$
 ### Expansion of the cost function
 By replacing the previous CoM, CoP and BoS predicted outputs in the matrix form of the cost function we get:
 
-For the first part of the cost function $(\mathbf{H}^r - \mathbf{H}_{k,N})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}_{k,N})$ and calling getting rid of subscripts to simplify the writing:
+For the first part of the cost function $$(\mathbf{H}^r - \mathbf{H}_{k,N})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}_{k,N})$$ and getting rid of some subscripts subscripts to simplify the writing:
 
 $$
 \begin{align*}
 &(\mathbf{H}^r - \mathbf{P}_H\xi_k - \mathbf{R}_H\mathcal{X})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{P}_H \xi_k - \mathbf{R}_H \mathcal{X})\\
 &=(\mathbf{H}^r - \mathbf{P}_H\xi_k)^T\mathbf{S}_w(\mathbf{H}^r - \mathbf{P}_H\xi_k) - (\mathbf{H}^r - \mathbf{P}_H\xi_k)^T\mathbf{S}_w\mathbf{R}_H\mathcal{X} - (\mathbf{R}_H\mathcal{X})^T\mathbf{S}_w(\mathbf{H}^r - \mathbf{P}_H\xi_K) + (\mathbf{R}_H \mathcal{X})^T\mathbf{S}_w\mathbf{R}_H\mathcal{X}\\
 &=(\mathbf{H}^r - \mathbf{P}_H\xi_k)^T\mathbf{S}_w(\mathbf{H}^r - \mathbf{P}_H\xi_k) - 2(\mathbf{H}^r - \mathbf{P}_H\xi_k)^T\mathbf{S}_w\mathbf{R}_H\mathcal{X} + (\mathbf{R}_H \mathcal{X})^T\mathbf{S}_w\mathbf{R}_H\mathcal{X}
+\end{align*}
 $$
 
 $$
@@ -192,7 +195,7 @@ $$
 
 The first term in \ref{eq:firstTermCompact} is not a function of $\mathcal{X}$ and therefore won't make part of the final cost function.
 
-Expanding the second part of the original cost function, i.e. $ (\mathbf{P}_{k,N} - \mathbf{R}_{k,N})^T \mathbf{N}_b (\mathbf{P}_{k,N} - \mathbf{R}_{k,N})$
+Expanding the second part of the original cost function, i.e. $$(\mathbf{P}_{k,N} - \mathbf{R}_{k,N})^T \mathbf{N}_b (\mathbf{P}_{k,N} - \mathbf{R}_{k,N})$$
 
 $$
 \begin{align*}
@@ -200,7 +203,7 @@ $$
 &=((\mathbf{P}_P - \mathbf{P}_B)\xi_k + (\mathbf{R}_P - \mathbf{R}_B)\mathcal{X})^T \mathbf{N}_b ((\mathbf{P}_P - \mathbf{P}_B)\xi_k + (\mathbf{R}_P - \mathbf{R}_B)\mathcal{X})\\
 &=[(\mathbf{P}_P - \mathbf{P}_B)\xi_k]^T\mathbf{N}_b(\mathbf{P}_P-\mathbf{P}_B)\xi_k + [(\mathbf{P}_P - \mathbf{P}_B)\xi_k]^T\mathbf{N}_b(\mathbf{R}_P - \mathbf{R}_B)\mathcal{X} + \\
 & \dots[(\mathbf{R}_P-\mathbf{R}_B)\mathcal{X}]^T\mathbf{N}_b(\mathbf{P}_P - \mathbf{P}_B)\xi_k + [(\mathbf{R}_P - \mathbf{R}_B)\mathcal{X}]^T\mathbf{N}_b(\mathbf{R}_P - \mathbf{R}_B)\mathcal{X}
-\end{align}
+\end{align*}
 $$
 
 $$
