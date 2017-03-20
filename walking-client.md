@@ -6,13 +6,13 @@ permalink: /walking-client/
 ---
 
 # The walking-client
-The `walking-client` is an implementation of a predictive approach [1] to preview the duration and placement of coplanar contacts exploiting the OCRA framework and specifically for the iCub humanoid robot. Within a model-predictive control (MPC) framework, the problem is formulated as a *linearly constrained mixed-integer quadratic program* (MIQP) which allows the determination over a preview horizon, of the optimal changes in the base of support (BoS) of the robot with compatible Center of Mass (CoM) behaviour, subject to multiple constraints, while maximising balance and performance of a walking activity.
+The `walking-client` is an implementation of a predictive approach [1] to preview the duration and placement of coplanar feet contacts of the iCub humanoid robot exploiting the OCRA framework. Within a model-predictive control (MPC) framework, the problem is formulated as a *linearly constrained mixed-integer quadratic program* (MIQP) which allows the determination over a preview horizon, of the optimal changes in the base of support (BoS) of the robot with compatible Center of Mass (CoM) behaviour, subject to multiple constraints, while maximising balance and performance of a walking activity.
 
-The following sections can be seen as an addendum to [1] which give a little bit more of detail on the different sections. For more information, refer to the thesis itself.
+> The following sections can be seen as an addendum to [1] which gives a detailed insight of the MIQP formulation. It assumes that the reader has gone through [1] (or at least Chapter 5) and needs more details for understanding the nuances of the client `walking-client`. For more theoretical and complementary information, refer to the thesis itself.
 
 # MIQP form of the walking MPC problem
 
-The walking problem can be be seen as a compromise between CoM trajectory tracking and balance. By using the CoP distance from the boundaries of the BoS as an indicator of balance performance and CoM tracking error as the one for walking performance plus the addition of suitable constraints with integer and real variables, the walking problem writes:
+The walking problem can be be seen as a compromise between CoM trajectory tracking and balance. By using the CoP distance from the boundaries of the BoS as the indicator for balance performance and CoM tracking error as the one for walking performance, plus the addition of suitable constraints with integer and real variables, the walking problem writes:
 
 $$
 \begin{equation} \label{eq:miqpEquation}
@@ -20,7 +20,7 @@ $$
 \displaystyle \min_{\mathcal{X}} & \mathcal{X}^T \mathbf{H}_N \mathcal{X} + \mathbf{d}^T \mathcal{X}\\
 \textrm{s.t.} & \mathbf{A} \mathcal{X} & \leq & \mathbf{f} \\
               & \xi_{k|k} & = & \xi_k \\
-              & \xi_{k+j+1|k}          & = & \mathbf{Q} \xi_{k+j|k} + \mathbf{T} \mathcal{\xi}_{k+j+1|k} \\
+              & \xi_{k+j+1|k}          & = & \mathbf{Q} \xi_{k+j|k} + \mathbf{T} \mathcal{X}_{k+j+1|k} \\
               & (\mathbf{a}_{k+j|k}, \mathbf{b}_{k+j|k}) & \in & \mathbb{R}^2\times\mathbb{R}^2 \\
               & (\alpha_{k+j|k}, \beta_{k+j|k}) & \in & \{0,1\}^2 \times \{0,1\}^2\\
               & (\delta_{k+j|k}, \gamma_{k+j|k}) & \in & \{0,1\}^2 \times \{0,1\}^2\\
@@ -41,7 +41,9 @@ $$
 J_k = \omega_b J_{b_k} + \omega_w J_{w_k} + q
 $$
 
-Let's work out a bit more Equation \ref{eq:miqpEquation} before going into the details of the constraints.
+Where $$q$$ are regularization terms. More details later on.
+
+Let's work out a bit more Equation \ref{eq:miqpEquation} before moving to the details of the constraints.
 
 ## Cost function
 The global cost function (without regularization terms) can be written in matrix form as:
