@@ -127,7 +127,7 @@ We need to proceed in a similar fashion as before to obtain an expression for th
 again, keeping in mind that:
 
 $$
-\begin{equation}\label{eq:copPrediction}
+\begin{equation}
 \mathbf{P}_{k,N} = \left\{ \mathbf{p}_{k+1|k}, \mathbf{p}_{k+2|k}, \dots, \mathbf{p}_{k+N|k} \right\}
 \end{equation}
 $$
@@ -141,8 +141,7 @@ $$
 \end{align}
 $$
 
-Where, assuming a simplified Linear Inverted Pendulum model of the robot and constant
-CoM height $c_z$:
+Where, assuming a simplified Linear Inverted Pendulum model of the robot and constant CoM height $c_z$:
 
 $$
 \mathbf{C}_P = \left[
@@ -154,7 +153,9 @@ $$
 We can thus obtain a compact expression for $\mathbf{P}_{k,N}$ as:
 
 $$
+\begin{equation}\label{eq:copPrediction}
 \mathbf{P}_{k,N} = \mathbf{P}_P \xi_k + \mathbf{R}_P \mathcal{X}_{k,N}
+\end{equation}
 $$
 
 Where $\mathbf{P}_P$ and $\mathbf{R}_P$ have the same structure as $\mathbf{P}_H$ and $\mathbf{R}_H$ but using $\mathbf{C}_P$ instead of $\mathbf{C}_H$.
@@ -187,7 +188,7 @@ $$
 $$
 
 ### Expansion of the cost function
-By replacing the previous CoM (\ref{eq:comPrediction}), CoP (\ref{eq:copPrediction}) and BoS (eq:bosPrediction) predicted outputs in the matrix form of the cost function (\ref{eq:costFuncMatrix}) we get:
+By replacing the previous CoM (\ref{eq:comPrediction}), CoP (\ref{eq:copPrediction}) and BoS (\ref{eq:bosPrediction}) predicted outputs in the matrix form of the cost function (\ref{eq:costFuncMatrix}) we get:
 
 For the first part of the cost function $$(\mathbf{H}^r - \mathbf{H}_{k,N})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}_{k,N})$$ and getting rid of some subscripts to simplify the writing:
 
