@@ -92,7 +92,9 @@ $$
 Then by iteratively applying the previous system of equations, we arrive to the following compact matrix expression:
 
 $$
+\begin{equation}\label{eq:comPrediction}
 \mathbf{H}_{k,N} = \mathbf{P}_H \mathbf{\xi}_k + \mathbf{R}_H \mathcal{X}_{k,N}
+\end{equation}
 $$
 
 Where:
@@ -125,7 +127,9 @@ We need to proceed in a similar fashion as before to obtain an expression for th
 again, keeping in mind that:
 
 $$
+\begin{equation}\label{eq:copPrediction}
 \mathbf{P}_{k,N} = \left\{ \mathbf{p}_{k+1|k}, \mathbf{p}_{k+2|k}, \dots, \mathbf{p}_{k+N|k} \right\}
+\end{equation}
 $$
 
 And that in this case:
@@ -137,7 +141,7 @@ $$
 \end{align}
 $$
 
-Where, assuming a simplified Linear Inverted Pendulum model of the robot and constraints
+Where, assuming a simplified Linear Inverted Pendulum model of the robot and constant
 CoM height $c_z$:
 
 $$
@@ -174,10 +178,18 @@ $$
 \end{array}\right]
 $$
 
-### Expansion of the cost function
-By replacing the previous CoM, CoP and BoS predicted outputs in the matrix form of the cost function we get:
+We can again obtain a compact expression for the predicted BoS outputs:
 
-For the first part of the cost function $$(\mathbf{H}^r - \mathbf{H}_{k,N})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}_{k,N})$$ and getting rid of some subscripts subscripts to simplify the writing:
+$$
+\begin{equation}  \label{eq:bosPrediction}
+\mathbf{R}_{k,N} = \mathbf{P}_B \xi_k + \mathbf{R}_B \mathcal{X}_{k,N}
+\end{equation}
+$$
+
+### Expansion of the cost function
+By replacing the previous CoM (\ref{eq:comPrediction}), CoP (\ref{eq:copPrediction}) and BoS (eq:bosPrediction) predicted outputs in the matrix form of the cost function (\ref{eq:costFuncMatrix}) we get:
+
+For the first part of the cost function $$(\mathbf{H}^r - \mathbf{H}_{k,N})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}_{k,N})$$ and getting rid of some subscripts to simplify the writing:
 
 $$
 \begin{align*}
@@ -212,7 +224,7 @@ $$
 \end{equation}
 $$
 
-Adding up (\ref{eq:firstTermCompact}) and (\ref{eq:secontTermCompact}) (only those terms function of $\mathcal{X}$) we get:
+Adding up (\ref{eq:firstTermCompact}) and (\ref{eq:secontTermCompact}) (only those terms which are function of $\mathcal{X}$) we get:
 
 $$
 \begin{align}
