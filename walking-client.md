@@ -60,7 +60,7 @@ Where, in the walking performance cost, $$\mathbf{H}_{k,N}$$ is the vector of pr
 Given the system state $\xi$ (more on this in [1] Sections 5.1.2, 5.2) and input $\mathcal{X}$, we can predict the CoM outputs in a preview window ($\mathbf{H}_{k,N}$) from the state propagation:
 
 $$
-\begin{align}
+\begin{align}\label{eq:previewModel}
 \xi_{k+j+1|k} & = \mathbf{Q}\xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}\\
 \end{align}
 $$
@@ -248,5 +248,132 @@ $$
 \mathbf{d}^T&: -2(\mathbf{H}^r - \mathbf{P}_H\xi_k)^T\mathbf{S}_w\mathbf{R}_H + 2[(\mathbf{P}_P - \mathbf{P}_B)\xi_k]^T\mathbf{N}_b(\mathbf{R}_P - \mathbf{R}_B)
 \end{align}
 $$
+
+## Constraints
+The constraints of the MIQP problem (\ref{eq:miqpEquation}) **at this moment** contain three types of constraints:
+- Shape constraints
+- Admissibility constraints
+- CoP constraints
+
+All constraints are linear. The following sections do not provide an explanation of what each constraint is, but shows only the corresponding matrix expressions later used in `walking-client`. For further information, refer to [1]-Appendix B.
+
+### Shape Constraints
+These consist at time step $i$ of:
+
+**Bounding**:
+
+$$
+\begin{equation} \label{eq:bounding}
+\mathbf{C}_i^B \xi_i \leq \mathbf{d}^B
+\end{equation}
+$$
+
+**Constancy**:
+
+$$
+\begin{equation} \label{eq:constancy}
+\mathbf{C}_i^C \xi_i + \mathbf{C}_{ii} \xi_{i+1} \leq \mathbf{d}^C
+\end{equation}
+$$
+
+**Sequentiality**:
+
+$$
+\begin{equation} \label{eq:sequentiality}
+\mathbf{C}_i^S \xi_i \leq \mathbf{d}^S
+\end{equation}
+$$
+
+These constraint have a similar structure, depending either on the the current state only or also on the next system state. Therefore Shape Constraints at time step $i$ can be expressed in a compact form as:
+
+$$
+\begin{equation}
+\mathbf{A}_{cl}^{S} \xi_i + \mathbf{A}_{cr}^{S}\xi_{i+1} \leq \mathbf{f}_c
+\end{equation}
+$$
+
+#### Bounding Constraints:
+In Eq. (\ref{eq:bounding})
+
+$$
+\begin{equation}
+\left[\begin{array}{ccccc}
+-1 & 0 & 1 & 0 & 0_{1\times8}\\
+ 0 &-1 & 0 & 1 & 0_{1\times8}
+\end{array}\right] \xi_i \leq
+\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]
+\end{equation}
+$$
+
+and
+
+$$
+\mathbf{d} = \left[\begin{array}{c}
+0\\
+0
+\end{array}\right] 
+$$
+
+#### Constancy Constraints
+In Eq. (\ref{eq:constancy})
+
+$$
+\mathbf{C}_{i} = \left[\begin{array}{ccccc}
+-1 & 0 & 0 & 0 & 0_{1\times12}\\
+ 1 & 0 & 0 & 0 & 0_{1\times12}\\
+ 0 & 0 &-1 & 0 & 0_{1\times12}\\
+ 0 & 0 & 1 & 0 & 0_{1\times12}\\
+ 0 &-1 & 0 & 0 & 0_{1\times12}\\
+ 0 & 1 & 0 & 0 & 0_{1\times12}\\
+ 0 & 0 & 0 &-1 & 0_{1\times12}\\
+ 0 & 0 & 0 & 1 & 0_{1\times12}
+\end{array}\right]
+$$
+
+$$
+\mathbf{C}_{ii} = \left[\begin{array}{ccccc}
+ 1 & 0 & 0 & 0 & -s_x & 0    &  0   & 0    & 0_{1\times8}\\
+-1 & 0 & 0 & 0 & -s_x & 0    &  0   & 0    & 0_{1\times8}\\
+ 0 & 0 & 1 & 0 &    0 & 0    & -s_x & 0    & 0_{1\times8}\\
+ 0 & 0 &-1 & 0 &    0 & 0    & -s_x & 0    & 0_{1\times8}\\
+ 0 & 1 & 0 & 0 &    0 & -s_y &  0   & 0    & 0_{1\times8}\\
+ 0 &-1 & 0 & 0 &    0 & -s_y &  0   & 0    & 0_{1\times8}\\
+ 0 & 0 & 0 & 1 &    0 & 0    &  0   & -s_y & 0_{1\times8}\\
+ 0 & 0 & 0 &-1 &    0 & 0    &  0   & -s_y & 0_{1\times8}
+\end{array}\right]
+$$
+
+And
+
+$$
+\mathbf{d} = \left[\begin{array}{c}
+0\\
+\vdots\\
+0
+\end{array}\right]
+$$
+
+### Sequentiality
+In Eq. (\ref{eq:sequentiality})
+
+$$
+\mathbf{C}_{i} = \left[\begin{array}{cccccc}
+0_{1\times4} & 1 & 0 & 1 & 0 & 0_{1\times8}\\
+0_{1\times4} & 0 & 1 & 0 & 1 & 0_{1\times8}
+\end{array}\right]
+$$
+
+$$
+\mathbf{d} = \left[\begin{array}{c}
+1\\
+1
+\end{array}\right]
+$$
+
+[THIS PART GOES AFTER WRITING ADMISSIBILITY CONSTRAINTS]
+Recalling the preview model (\ref{eq:previewModel}) we can proceed as done for the CoM, CoP and BoS previews in a window of size $N$:
 
 [1] Ibanez A. Ph.D. thesis: http://www.hal.inserm.fr/tel-01308723v2
