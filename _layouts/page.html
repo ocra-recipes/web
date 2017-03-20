@@ -9,3 +9,7 @@ layout: default
     	{{ content }}
     </div>
 </div>
+
+{% if page.mathjax != false %}
+ {% include mathjax.html %}
+{% endif %}
