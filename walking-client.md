@@ -166,7 +166,7 @@ Once more we look for an expression for the predicted BoS outputs in the preview
 $$
 \begin{align}
 \xi_{k+j+1|k} & = \mathbf{Q}\xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}\\
-\mathbf{r}_{h+j+1|k} &= \mathbf{C}_B \xi_{k+j+1|k}
+\mathbf{r}_{k+j+1|k} &= \mathbf{C}_B \xi_{k+j+1|k}
 \end{align}
 $$
 
@@ -190,7 +190,7 @@ $$
 ### Expansion of the cost function
 By replacing the previous CoM (\ref{eq:comPrediction}), CoP (\ref{eq:copPrediction}) and BoS (\ref{eq:bosPrediction}) predicted outputs in the matrix form of the cost function (\ref{eq:costFuncMatrix}) we get:
 
-For the first part of the cost function $$(\mathbf{H}^r - \mathbf{H}_{k,N})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}_{k,N})$$ and getting rid of some subscripts to simplify the writing:
+For the first part of the cost function $$(\mathbf{H}^r - \mathbf{H}_{k,N})^T \mathbf{S}_w(\mathbf{H}^r - \mathbf{H}_{k,N})$$ given the symmetry of some resulting terms and getting rid of some subscripts to simplify the writing:
 
 $$
 \begin{align*}
@@ -206,9 +206,9 @@ $$
 \end{equation}
 $$
 
-The first term in \ref{eq:firstTermCompact} is not a function of $\mathcal{X}$ and therefore won't make part of the final cost function.
+The first term in (\ref{eq:firstTermCompact}) is not a function of $\mathcal{X}$ and therefore won't make part of the final cost function.
 
-Expanding the second part of the original cost function, i.e. $$(\mathbf{P}_{k,N} - \mathbf{R}_{k,N})^T \mathbf{N}_b (\mathbf{P}_{k,N} - \mathbf{R}_{k,N})$$
+Expanding the second part of the original cost function, i.e. $$(\mathbf{P}_{k,N} - \mathbf{R}_{k,N})^T \mathbf{N}_b (\mathbf{P}_{k,N} - \mathbf{R}_{k,N})$$ and again exploiting the symmetry of some resulting terms:
 
 $$
 \begin{align*}
@@ -284,7 +284,7 @@ $$
 \end{equation}
 $$
 
-These constraint have a similar structure, depending either on the the current state only or also on the next system state. Therefore Shape Constraints at time step $i$ can be expressed in a compact form as:
+These constraints have a similar structure, depending either on the the current state only or also on the next system state. Therefore Shape Constraints at time step $i$ can be expressed in a compact form as:
 
 $$
 \begin{equation}\label{eq:shapeCompact}
@@ -405,7 +405,7 @@ $$
 \end{equation}
 $$
 
-These constraint have a similar structure, depending either on the the current state only or also on the next system state. Therefore Admissibility Constraints at time step $i$ can be expressed in a compact form as:
+These constraints have a similar structure, depending either on the the current state only or also on the next system state. Therefore Admissibility Constraints at time step $i$ can be expressed in a compact form as:
 
 $$
 \begin{equation} \label{eq:admissibilityCompact}
@@ -547,10 +547,49 @@ $$
 \end{array}\right]
 $$
 
-We have shape and admissibility constraints at time $i$ in one compact form as:
+We have shape and admissibility constraints at time $i$ in compact form as:
 
 $$
+\begin{equation} \label{eq:shapeAdmissCompact}
 \mathbf{A}_{cl}\xi_i + \mathbf{A}_{cr}\xi_{i+1} \leq \mathbf{f}_c
+\end{equation}
 $$
+
+We need however to write these constraints in the preview window and in terms of the optimization variable $\mathcal{X}$ as $$\mathbf{A}\mathcal{X}\leq\mathbf{f}$$
+
+Thus, by iteratively applying Eq.(\ref{eq:shapeAdmissCompact}) for $i\in[k,N-1]$ we get:
+
+$$
+\begin{equation}
+\mathbf{A} = \left[ \begin{array}{ccccc}
+\mathbf{A}_{cr}\mathbf{Q}^0\mathbf{T} & & & & \\
+\mathbf{A}_{cl}\mathbf{Q}^0\mathbf{T} + \mathbf{A}_{cr}\mathbf{Q}^1 \mathbf{T} & \mathbf{A}_{cr}\mathbf{Q}^0\mathbf{T} & & & \\
+\mathbf{A}_{cl}\mathbf{Q}^1\mathbf{T} + \mathbf{A}_{cr}\mathbf{Q}^2 \mathbf{T} & \mathbf{A}_{cl}\mathbf{Q}^0\mathbf{T} + \mathbf{A}_{cr}\mathbf{Q}^1\mathbf{T} & \mathbf{A}_{cr}\mathbf{Q}^0\mathbf{T} & & \\
+\vdots & \vdots & \vdots & \ddots & \\
+\mathbf{A}_{cl}\mathbf{Q}^{N-2}\mathbf{T} + \mathbf{A}_{cr}\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{A}_{cl}\mathbf{Q}^{N-3}\mathbf{T} + \mathbf{A}_{cr}\mathbf{Q}^{N-2}\mathbf{T} & \dots & & \mathbf{A}_{cr}\mathbf{Q}^0\mathbf{T}
+\end{array}\right]
+\end{equation}
+$$
+
+While:
+
+$$
+\begin{equation}
+\mathbf{f} =
+\left[\begin{array}{c}
+\mathbf{f}_c\\
+\mathbf{f}_c\\
+\vdots\\
+\mathbf{f}_c
+\end{array}\right] -
+\left[\begin{array}{c}
+\mathbf{A}_{cl}\mathbf{Q}^0 + \mathbf{A}_{cr}\mathbf{Q}^1\\
+\mathbf{A}_{cl}\mathbf{Q}^1 + \mathbf{A}_{cr}\mathbf{Q}^2\\
+\vdots\\
+\mathbf{A}_{cl}\mathbf{Q}^{N-1} + \mathbf{A}_{cr}\mathbf{Q}^N
+\end{array}\right] \xi_k
+\end{equation}
+$$
+
 
 [1] Ibanez A. Ph.D. thesis: http://www.hal.inserm.fr/tel-01308723v2
