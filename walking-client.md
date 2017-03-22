@@ -594,7 +594,7 @@ $$
 ### Base of Support Constraints
 In this approach the convex hull is overestimated by its bounding box and defined by the minimum and maximum points as shown in the next image:
 
-![Bounding Box]({{ site.url }}/static/img/boundingBox.svg){:class="img-responsive"}
+![Bounding Box]({{ site.url }}/static/img/bounding-box.svg){:class="img-responsive"}
 
 These constraints write in terms of the CoP $\mathbf{p}$:
 
