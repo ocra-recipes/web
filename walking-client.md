@@ -591,5 +591,77 @@ $$
 \end{equation}
 $$
 
+### Base of Support Constraints
+In this approach the convex hull is overestimated by its bounding box and defined by the minimum and maximum points as shown in the next image:
 
-[1] Ibanez A. Ph.D. thesis: http://www.hal.inserm.fr/tel-01308723v2
+![Bounding Box]({{ site.url }}/static/img/boundingBox.svg){:class="img-responsive"}
+
+These constraints write in terms of the CoP $\mathbf{p}$:
+
+$$
+\begin{equation}
+\left[\begin{array}{cc}
+-1  &  0\\
+1  &  0\\
+0  & -1\\
+0  &  1
+\end{array}\right] \mathbf{p}
+\leq
+\left[\begin{array}{c}
+-x_{\text{min}}\\
+x_{\text{max}}\\
+-y_{\text{min}}\\
+y_{\text{max}}
+\end{array}\right]
+\end{equation}
+$$
+
+or $\mathbf{A}_b\mathbf{p}\leq\mathbf{b}$, and in terms of the system state as:
+
+$$
+\begin{equation} \label{eq:bboxConstraints}
+\mathbf{C}_i \xi \leq \mathbf{f}
+\end{equation}
+$$
+
+Where:
+
+$$
+\begin{equation}
+\mathbf{C}_i=
+\left[\begin{array}{cc}
+\mathbf{0}_{10\times10} & \\
+& \mathbf{A}_b \mathbf{C}_p
+\end{array}\right]
+\end{equation}
+$$
+
+and
+
+$$
+\mathbf{f}=\left[\begin{array}{c}
+\mathbf{0} \\
+\mathbf{b}
+\end{array}\right]
+$$
+
+Then, in a preview window, given preview model (\ref{eq:previewModel}) and iteratively applying Eq.(\ref{eq:bboxConstraints}) we get the following set of constraints:
+
+$$
+\mathbf{A}_{\text{BoS}} \mathcal{X} \leq \mathbf{f}_{\text{BoS}}
+$$
+
+Where:
+
+$$
+\begin{equation}
+\mathbf{A}_{\text{BoS}} = \left[\begin{array}{cccc}
+\mathbf{C}_i\mathbf{T}               &   0                          &  \cdots   &   0 \\
+\mathbf{C}_i\mathbf{Q}\mathbf{T}   &   \mathbf{C}_i\mathbf{T}   &  \cdots   &   0 \\
+\vdots                                 & \vdots                       & \ddots    &  \vdots \\
+\mathbf{C}_i\mathbf{Q}^{N-1}\mathbf{T} & \mathbf{C}_i\mathbf{Q}^{N-2}\mathbf{T} & \cdots & \mathbf{C}_i\mathbf{T}
+\end{array}\right]
+\end{equation}
+$$
+
+[1] Ibanez A. Ph.D. [thesis](http://www.hal.inserm.fr/tel-01308723v2)
