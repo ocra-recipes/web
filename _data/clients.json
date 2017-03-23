@@ -9,12 +9,21 @@
 		"tags": ["Basic"]
 	},
 	{
+		"name": "walking-client",
+		"image": "walking-client-cover.png",
+		"url": "/walking-client/",
+		"url-source-code": "https://github.com/ocra-recipes/ocra-wbi-plugins/tree/walking-client",
+		"date": "March 2017",
+		"Author": "Jorhabib Eljaik",
+		"tags": ["Difficult","Demo","iCub"]
+	},
+	{
 		"name": "stepping-demo",
 		"image": "placeholder.jpg",
 		"url": "/stepping-demo/",
 		"url-source-code": "https://github.com/ocra-recipes/ocra-wbi-plugins/tree/master/ocra-icub-clients/stepping-demo",
 		"date": "May 2016",
-		"Author": "Ryan Lober",
+		"Author": "Ryan Lober","Jorhabib Eljaik"
 		"tags": ["Difficult","Walking","iCub","Demo"]
 	},
 	{
@@ -25,15 +34,5 @@
 		"date": "May 2016",
 		"Author": "Ryan Lober",
 		"tags": ["Difficult","Demo","iCub"]
-	},
-	{
-		"name": "walking-client",
-		"image": "placeholder.jpg",
-		"url": "/walking-client/",
-		"url-source-code": "https://github.com/ocra-recipes/ocra-wbi-plugins/tree/walking-client",
-		"date": "March 2017",
-		"Author": "Jorhabib Eljaik",
-		"tags": ["Difficult","Demo","iCub"]
 	}
-
 ]
