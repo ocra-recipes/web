@@ -11,6 +11,8 @@ permalink: /walking-client/
 # The walking-client
 The `walking-client` is an implementation of a predictive approach [1] to preview the duration and placement of coplanar feet contacts of the iCub humanoid robot exploiting the OCRA framework. Within a model-predictive control (MPC) framework, the problem is formulated as a *linearly constrained mixed-integer quadratic program* (MIQP) which allows the determination over a preview horizon, of the optimal changes in the base of support (BoS) of the robot with compatible Center of Mass (CoM) behaviour, subject to multiple constraints, while maximising balance and performance of a walking activity.
 
+![Block Diagram]({{ site.url }}/static/img/block-diagram.png){:class="img-responsive"}
+
 > The following sections can be seen as an addendum to [1] which gives a detailed insight of the MIQP formulation. It assumes that the reader has gone through [1] (or at least Chapter 5) and needs more details for understanding the nuances of the client `walking-client`. For more theoretical and complementary information, refer to the thesis itself.
 
 # MIQP form of the walking MPC problem
