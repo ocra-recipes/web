@@ -23,7 +23,7 @@
 		"url": "/stepping-demo/",
 		"url-source-code": "https://github.com/ocra-recipes/ocra-wbi-plugins/tree/master/ocra-icub-clients/stepping-demo",
 		"date": "May 2016",
-		"Author": "Ryan Lober","Jorhabib Eljaik"
+		"Author": "Ryan Lober, Jorhabib Eljaik",
 		"tags": ["Difficult","Walking","iCub","Demo"]
 	},
 	{
