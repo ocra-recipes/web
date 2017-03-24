@@ -29,5 +29,9 @@ var searchData=
   ['stddev',['stdDev',['../classModule.html#af66a2dab82208cb2ea25da22fcaaa4a3',1,'Module']]],
   ['stddevused',['stdDevUsed',['../classModule.html#a57060f2788b6dc9906e66432e775e5ac',1,'Module']]],
   ['stepheight',['stepHeight',['../structWalkingParams.html#abfc5b4af75225435731b30bcd882a0ae',1,'WalkingParams::stepHeight()'],['../structsingleStepTestParams.html#a1b6267edaee10af0a7162065d0ba7a20',1,'singleStepTestParams::stepHeight()']]],
-  ['steplength',['stepLength',['../structWalkingParams.html#ad719bbe7ba3ed5ad027d0c42522693d7',1,'WalkingParams::stepLength()'],['../structsingleStepTestParams.html#a17bf92e96d709f6cead23bcdcda88d17',1,'singleStepTestParams::stepLength()']]]
+  ['steplength',['stepLength',['../structWalkingParams.html#ad719bbe7ba3ed5ad027d0c42522693d7',1,'WalkingParams::stepLength()'],['../structsingleStepTestParams.html#a17bf92e96d709f6cead23bcdcda88d17',1,'singleStepTestParams::stepLength()']]],
+  ['sx_5fconstancy',['sx_constancy',['../structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231',1,'MIQPParameters']]],
+  ['sx_5fss',['sx_ss',['../structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9',1,'MIQPParameters']]],
+  ['sy_5fconstancy',['sy_constancy',['../structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38',1,'MIQPParameters']]],
+  ['sy_5fss',['sy_ss',['../structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1',1,'MIQPParameters']]]
 ];

@@ -142,12 +142,12 @@ This is the complete list of members for <a class="el" href="classMIQPController
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#ac2a454e236bdb3a13b72b6930329f231">buildC_P</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082">buildEqualityConstraintsMatrices</a>(const Eigen::VectorXd &amp;x_k, Eigen::MatrixXd &amp;Aeq, Eigen::VectorXd &amp;Beq)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#ab093df4b1c73c02a97609093fd037345">buildH_N</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classMIQPController.html#a3860ad55d43b442069e806764ce48fc4">buildNb</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPController.html#a8b83fba21208a3becff314d26ba45679">buildNb</a>(Eigen::MatrixXd &amp;output, double wb)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a959d9957a931315d3f1cf95ad5c07a65">buildNx</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a9e4f007d1b6b7f68582aebbc09cf0813">buildPreviewInputMatrix</a>(const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#ad9a2e7d2c658937c847097f83d3408e3">buildPreviewStateMatrix</a>(const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;P)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#af492dfbff2e211ff1c1351c2193fe669">buildQ</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classMIQPController.html#a9dfdebb8c769d380617d47b513d1a2b1">buildSw</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classMIQPController.html#a3085bba3c89e6ed0265e8e229590e7f1">buildSw</a>(Eigen::MatrixXd &amp;output, MIQPParameters miqpParams)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a52dc10cbc0941a6e4f4e6ffd462fffce">buildT</a>(Eigen::MatrixXd &amp;output)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#a5fec189a29105d999d3bb2721977945a">MIQPController</a>(MIQPParameters params, ocra::Model::Ptr robotModel, std::shared_ptr&lt; StepController &gt; stepController, const Eigen::MatrixXd &amp;comStateRef)</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classMIQPController.html#aa8fd8452a14d8e7731bf45044e1c7a59">run</a>()</td><td><a class="el" href="classMIQPController.html">MIQPController</a></td><td><code> [virtual]</code></td></tr>
@@ -180,7 +180,7 @@ This is the complete list of members for <a class="el" href="classMIQPController
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Thu Mar 23 2017 23:51:11 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Mar 24 2017 23:51:16 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

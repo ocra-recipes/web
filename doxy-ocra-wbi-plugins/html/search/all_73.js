@@ -17,7 +17,7 @@ var searchData=
   ['segnamefromindex',['segNameFromIndex',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#ad1592df54a2ce8043dc2bc050fd61905',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['segposition',['segPosition',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a47b0a577b990fa7db3bc04a7a8107c31',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['segvelocity',['segVelocity',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6e95ae9d994aa67c9a2fc4021f80bb54',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
-  ['sequentiality',['Sequentiality',['../classSequentiality.html',1,'Sequentiality'],['../classSequentiality.html#a3d8c4d770b1e057ffe207c47f5db6179',1,'Sequentiality::Sequentiality()'],['../structShapeConstraintsStruct.html#ab21948647937089aa8f72ddb8d1536b2',1,'ShapeConstraintsStruct::sequentiality()']]],
+  ['sequentiality',['Sequentiality',['../classSequentiality.html',1,'Sequentiality'],['../structShapeConstraintsStruct.html#ab21948647937089aa8f72ddb8d1536b2',1,'ShapeConstraintsStruct::sequentiality()'],['../classSequentiality.html#a3d8c4d770b1e057ffe207c47f5db6179',1,'Sequentiality::Sequentiality()']]],
   ['sequentiality_2ecpp',['Sequentiality.cpp',['../Sequentiality_8cpp.html',1,'']]],
   ['sequentiality_2eh',['Sequentiality.h',['../Sequentiality_8h.html',1,'']]],
   ['sequentialitystruct',['sequentialityStruct',['../structShapeConstraintsStruct_1_1sequentialityStruct.html',1,'ShapeConstraintsStruct']]],
@@ -36,7 +36,7 @@ var searchData=
   ['shapeconstraintsstruct',['ShapeConstraintsStruct',['../structShapeConstraintsStruct.html',1,'']]],
   ['single_5fstep',['SINGLE_STEP',['../utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa4cf77e5736bd9a94342342d774b2e264',1,'utils.h']]],
   ['singlesteptestparams',['singleStepTestParams',['../structsingleStepTestParams.html',1,'']]],
-  ['singlesupport',['SingleSupport',['../classSingleSupport.html',1,'SingleSupport'],['../structAdmissibilityConstraintsStruct.html#a40fb404909b4fcee9e31e1dbf566a554',1,'AdmissibilityConstraintsStruct::singleSupport()'],['../classSingleSupport.html#af952e77f8d2139224fc0af9b73a6a0d1',1,'SingleSupport::SingleSupport()']]],
+  ['singlesupport',['SingleSupport',['../classSingleSupport.html',1,'SingleSupport'],['../classSingleSupport.html#af952e77f8d2139224fc0af9b73a6a0d1',1,'SingleSupport::SingleSupport()'],['../structAdmissibilityConstraintsStruct.html#a40fb404909b4fcee9e31e1dbf566a554',1,'AdmissibilityConstraintsStruct::singleSupport()']]],
   ['singlesupport',['SingleSupport',['../structAdmissibilityConstraintsStruct_1_1SingleSupport.html',1,'AdmissibilityConstraintsStruct']]],
   ['singlesupport_2ecpp',['SingleSupport.cpp',['../SingleSupport_8cpp.html',1,'']]],
   ['singlesupport_2eh',['SingleSupport.h',['../SingleSupport_8h.html',1,'']]],
@@ -76,5 +76,9 @@ var searchData=
   ['steppingdemoclient_2eh',['SteppingDemoClient.h',['../SteppingDemoClient_8h.html',1,'']]],
   ['stop',['stop',['../classStepController.html#a48224628b92c088a34d9db4a14f75f1a',1,'StepController']]],
   ['string_5fmessage',['STRING_MESSAGE',['../namespaceocra__icub.html#afbd2db66b68005fb7cfac19210caf83fafa982af27b4e13f109d8769472d75217',1,'ocra_icub']]],
-  ['success',['SUCCESS',['../namespaceocra__icub.html#afbd2db66b68005fb7cfac19210caf83fa67c96e3afcb39533f69c97dc5e9734e5',1,'ocra_icub']]]
+  ['success',['SUCCESS',['../namespaceocra__icub.html#afbd2db66b68005fb7cfac19210caf83fa67c96e3afcb39533f69c97dc5e9734e5',1,'ocra_icub']]],
+  ['sx_5fconstancy',['sx_constancy',['../structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231',1,'MIQPParameters']]],
+  ['sx_5fss',['sx_ss',['../structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9',1,'MIQPParameters']]],
+  ['sy_5fconstancy',['sy_constancy',['../structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38',1,'MIQPParameters']]],
+  ['sy_5fss',['sy_ss',['../structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1',1,'MIQPParameters']]]
 ];

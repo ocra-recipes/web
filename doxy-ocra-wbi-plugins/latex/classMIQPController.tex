@@ -54,11 +54,11 @@ void \hyperlink{classMIQPController_a1be33f8ebb313f7ecddd2aa6af4fa62c}{build\-C\
 \item 
 void \hyperlink{classMIQPController_ab093df4b1c73c02a97609093fd037345}{build\-H\-\_\-\-N} (\-Eigen\-::\-Matrix\-Xd \&output)
 \item 
-void \hyperlink{classMIQPController_a3860ad55d43b442069e806764ce48fc4}{build\-Nb} (\-Eigen\-::\-Matrix\-Xd \&output)
+void \hyperlink{classMIQPController_a8b83fba21208a3becff314d26ba45679}{build\-Nb} (\-Eigen\-::\-Matrix\-Xd \&output, double wb)
 \item 
 void \hyperlink{classMIQPController_a959d9957a931315d3f1cf95ad5c07a65}{build\-Nx} (\-Eigen\-::\-Matrix\-Xd \&output)
 \item 
-void \hyperlink{classMIQPController_a9dfdebb8c769d380617d47b513d1a2b1}{build\-Sw} (\-Eigen\-::\-Matrix\-Xd \&output)
+void \hyperlink{classMIQPController_a3085bba3c89e6ed0265e8e229590e7f1}{build\-Sw} (\-Eigen\-::\-Matrix\-Xd \&output, \hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} miqp\-Params)
 \item 
 void \hyperlink{classMIQPController_ad9a2e7d2c658937c847097f83d3408e3}{build\-Preview\-State\-Matrix} (const \-Eigen\-::\-Matrix\-Xd \&\-C, \-Eigen\-::\-Matrix\-Xd \&\-P)
 \item 
@@ -322,17 +322,20 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \mbox{\tt out}  & {\em \-Output} & passed to matrix reference. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classMIQPController_a3860ad55d43b442069e806764ce48fc4}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!build\-Nb@{build\-Nb}}
+\hypertarget{classMIQPController_a8b83fba21208a3becff314d26ba45679}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!build\-Nb@{build\-Nb}}
 \index{build\-Nb@{build\-Nb}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{build\-Nb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Controller\-::build\-Nb} (
 \begin{DoxyParamCaption}
-\item[{\-Eigen\-::\-Matrix\-Xd \&}]{output}
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{output, }
+\item[{double}]{wb}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPController_a3860ad55d43b442069e806764ce48fc4}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPController_a8b83fba21208a3becff314d26ba45679}
 \-Builds matrix $\mathbf{N}_b$.
 
 
 \begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em wb} & \-Weight of the balance performance cost. \\
+\hline
 \mbox{\tt out}  & {\em \-Output} & passed to matrix reference. \\
 \hline
 \end{DoxyParams}
@@ -413,22 +416,25 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{classMIQPController_ac6404f74d6002d6a0ca4bd2d0b41d548}{\-\_\-\-Q} 
 \end{DoxySeeAlso}
-\hypertarget{classMIQPController_a9dfdebb8c769d380617d47b513d1a2b1}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!build\-Sw@{build\-Sw}}
+\hypertarget{classMIQPController_a3085bba3c89e6ed0265e8e229590e7f1}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!build\-Sw@{build\-Sw}}
 \index{build\-Sw@{build\-Sw}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{build\-Sw}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Controller\-::build\-Sw} (
 \begin{DoxyParamCaption}
-\item[{\-Eigen\-::\-Matrix\-Xd \&}]{output}
+\item[{\-Eigen\-::\-Matrix\-Xd \&}]{output, }
+\item[{{\bf \-M\-I\-Q\-P\-Parameters}}]{miqp\-Params}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPController_a9dfdebb8c769d380617d47b513d1a2b1}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMIQPController_a3085bba3c89e6ed0265e8e229590e7f1}
 \-Builds matrix $\mathbf{S}_w$
 
 
 \begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em miqp\-Params} & list of \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} parameters indicating also what kind of \-Co\-M state reference are going to be tracked. \\
+\hline
 \mbox{\tt out}  & {\em \-Output} & passed to matrix reference. \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{\-See also}
-\hyperlink{classMIQPController_ada92fc35065a11b889019f2948c1888d}{\-\_\-\-Sw} 
+\hyperlink{classMIQPController_ada92fc35065a11b889019f2948c1888d}{\-\_\-\-Sw}, \hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} 
 \end{DoxySeeAlso}
 \hypertarget{classMIQPController_a52dc10cbc0941a6e4f4e6ffd462fffce}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!build\-T@{build\-T}}
 \index{build\-T@{build\-T}!MIQPController@{\-M\-I\-Q\-P\-Controller}}

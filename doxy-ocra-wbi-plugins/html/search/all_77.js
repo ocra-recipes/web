@@ -7,6 +7,7 @@ var searchData=
   ['walkingclient_2eh',['WalkingClient.h',['../WalkingClient_8h.html',1,'']]],
   ['walkingparams',['WalkingParams',['../structWalkingParams.html',1,'WalkingParams'],['../classSteppingDemoClient.html#a113c2d838e3db1d18f4843a8828e30d4',1,'SteppingDemoClient::walkingParams()']]],
   ['waypoints',['waypoints',['../classExampleClient.html#acf4657277ecb08168d9a17c208814823',1,'ExampleClient']]],
+  ['wb',['wb',['../structMIQPParameters.html#a6bc828e6060bfd69c3d6353a460de86b',1,'MIQPParameters']]],
   ['wbi',['wbi',['../classIcubControllerServer.html#ae8a89707675adb58bb3006bc085828b7',1,'IcubControllerServer']]],
   ['wbi_5fh_5froot',['wbi_H_root',['../classIcubControllerServer.html#afd983b69c043eedf958e53582b22195a',1,'IcubControllerServer']]],
   ['wbi_5fh_5froot_5fvector',['wbi_H_root_Vector',['../classIcubControllerServer.html#a42f6a8db660da9dbafbc57941b1ee12f',1,'IcubControllerServer']]],
@@ -19,5 +20,6 @@ var searchData=
   ['wbitoocrasegjacobian',['wbiToOcraSegJacobian',['../classocra__icub_1_1OcraWbiConversions.html#a25a64172ebb14db9ddf301880a433964',1,'ocra_icub::OcraWbiConversions']]],
   ['wbitoocratwistvector',['wbiToOcraTwistVector',['../classocra__icub_1_1OcraWbiConversions.html#a37c2aea3bf156928cb90a16655c24cc9',1,'ocra_icub::OcraWbiConversions']]],
   ['writedebugdata',['writeDebugData',['../classThread.html#a9af0e98aa9b1de2f5c7bfa2f6e5001a2',1,'Thread']]],
-  ['writetofile',['writeToFile',['../classMIQPController.html#a014cab392ddec6085df74f2590af4791',1,'MIQPController']]]
+  ['writetofile',['writeToFile',['../classMIQPController.html#a014cab392ddec6085df74f2590af4791',1,'MIQPController']]],
+  ['ww',['ww',['../structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0',1,'MIQPParameters']]]
 ];
