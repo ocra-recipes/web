@@ -50,7 +50,7 @@ $$
 
 Where $q$ are regularization terms. More details later on.
 
-Let's work out a bit more Equation \ref{eq:miqpEquation} before moving to the details of the constraints.
+Let's work out a bit more Equation \ref{eq:miqpEquation} before moving to the details of the regularization terms and constraints.
 
 ## Cost function
 The global cost function (without regularization terms) can be written in matrix form as:
@@ -64,7 +64,7 @@ $$
 Where, in the walking performance cost, $$\mathbf{H}_{k,N}$$ is the vector of predicted CoM outputs in a preview window of size $N$, while $$\mathbf{H}^r$$ is the vector of CoM state references in the same window. On the other hand, $$\mathbf{P}_{k,N}$$ is the vector of predicted CoP outputs and $$\mathbf{R}_{k,N}$$, the vector of predicted BoS centers.
 
 ### Predicted CoM outputs
-Given the system state $\xi$ (more on this in [1] Sections 5.1.2, 5.2) and input $\mathcal{X}$, we can predict the CoM outputs in a preview window ($\mathbf{H}_{k,N}$) from the state propagation:
+Given the system state $$\xi = (\mathbf{a} \; \mathbf{b} \; \mathbf{\alpha} \; \mathbf{\beta} \; \delta \; \gamma \; \mathbf{h} \; \dot{\mathbf{h}} \; \ddot{\mathbf{h}} )^T$$ (more on this in [1] Sections 5.1.2, 5.2) and input $\mathcal{X} = (\mathbf{a} \; \mathbf{b} \; \mathbf{\alpha} \; \mathbf{\beta} \; \delta \; \gamma \; \mathbf{u} )$, we can predict the CoM outputs in a preview window ($\mathbf{H}_{k,N}$) from the state propagation:
 
 $$
 \begin{align}\label{eq:previewModel}
@@ -244,7 +244,9 @@ $$
 Which gives the final expression for the cost function:
 
 $$
+\begin{equation}\label{eq:finalCostFunction}
 J_k = \mathcal{X}^T\mathbf{H}_N\mathcal{X} + \mathbf{d}^T\mathcal{X}
+\end{equation}
 $$
 
 Where:
@@ -268,6 +270,46 @@ A few regularization terms (or secondary objectives) in the cost function (\ref{
 These costs are quadratic and the ones already implemented are described below:
 
 ### CoM Jerk Regularization
+This cost prevents the resulting CoM jerks to be too large and writes:
+
+$$
+\begin{equation}
+J_{u} = \sum_{i=1}^{N} ||u^Tu||^2
+\end{equation}
+$$
+
+Which can be further elaborated in terms of the input vector $\mathcal{X}_{k,N}$ as:
+
+$$
+\begin{align}
+J_{u} &= \sum_{i=1}^{N} ||u_i^Tu_i||^2\\
+&= \sum_{i=1}^{N}||\mathcal{X}^T\mathbf{S}_u^T\mathbf{S}_u\mathcal{X}||^2\\
+&= \mathcal{X}_{k,N}^T
+\left[\begin{array}{ccc}
+\mathbf{S}_{w_u} & & \\
+        & \ddots & \\
+        &        & \mathbf{S}_{w_u}
+\end{array}\right] \mathcal{X}_{k,N}
+\end{align}
+$$
+
+Where:
+
+$$
+\mathbf{S}_u = \left[\begin{array}{cc}
+\mathbf{0}_{15\times15} & \\
+ & 1
+\end{array}\right]
+$$
+
+while:
+
+$$
+\mathbf{S}_{w_u} = \left[\begin{array}{ccc}
+\mathbf{0}_{15\times15} & \\
+ & w_u^2
+\end{array}\right]
+$$
 
 ### Avoid Resting on One Foot
 In order to avoid resting on one foot, the following cost function is added:
@@ -291,7 +333,7 @@ Then, as done in the previous sections for the prediction of CoM, CoP and BoS gi
 $$
 \begin{align}
 \xi_{k+j+1|k} & = \mathbf{Q}\xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}\\
-\mathbf{gamma}_{k+j+1|k} &= \mathbf{S}_{\gamma} \xi_{k+j+1|k}
+\mathbf{\gamma}_{k+j+1|k} &= \mathbf{S}_{\gamma} \xi_{k+j+1|k}
 \end{align}
 $$
 
@@ -316,7 +358,7 @@ $$
 \end{equation}
 $$
 
-Where $\mathbf{P}_{\Gamma}$ and $\mathbf{R}_{\Gamma}$ are similar to (\ref{eq:previewStateMatrix}) and (\ref{eq:previewInputMatrix}) using $\mathbf{S}_{\gamma}$ instead $\mathbf{C}_H$.
+Where $$\mathbf{P}_{\Gamma}$$ and $$\mathbf{R}_{\Gamma}$$ are similar to (\ref{eq:previewStateMatrix}) and (\ref{eq:previewInputMatrix}) using $$\mathbf{S}_{\gamma}$$ instead $$\mathbf{C}_H$$.
 
 By substituting Eq.(\ref{eq:gammaPreview}) in Eq.(\ref{eq:supportPhaseRegCostMatrix}) we get:
 
@@ -329,7 +371,15 @@ J_{\text{DS}}&=(\mathbf{P}_{\Gamma} \xi_{k} + \mathbf{R}_{\Gamma} \mathcal{X}_{k
 \end{align}
 $$
 
+Which in this form can then be added to Eq.(\ref{eq:finalCostFunction}).
+
 ### Stepping Minimization
+**Not implemented yet**
+
+### Tracking of previous BoS Size
+**Not implemented yet**
+
+### Avoiding Excessive Changes in solutions
 **Not implemented yet**
 
 ## Constraints
