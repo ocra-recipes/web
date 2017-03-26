@@ -4,7 +4,7 @@ title:  walking-client
 mathjax: true
 permalink: /walking-client/
 ---
-
+# Table of Contents
 - Outline
 {:toc}
 
@@ -92,7 +92,7 @@ and the relationship between the system and CoM state, i.e.
 
 $$
 \begin{equation}
-\hat{\mathbf{h}}_{k+j+1|k} = \mathbf{C}_h \xi_{k+j+1|k}
+\hat{\mathbf{h}}_{k+j+1|k} = \mathbf{C}_H \xi_{k+j+1|k}
 \end{equation}
 $$
 
