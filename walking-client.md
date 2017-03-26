@@ -281,7 +281,7 @@ $$
 Which can be further elaborated in terms of the input vector $\mathcal{X}_{k,N}$ as:
 
 $$
-\begin{align}
+\begin{align} \label{eq:jerkPreview}
 J_{u} &= \sum_{i=1}^{N} ||u_i^Tu_i||^2\\
 &= \sum_{i=1}^{N}||\mathcal{X}^T\mathbf{S}_u^T\mathbf{S}_u\mathcal{X}||^2\\
 &= \mathcal{X}_{k,N}^T
@@ -297,8 +297,8 @@ Where:
 
 $$
 \mathbf{S}_u = \left[\begin{array}{cc}
-\mathbf{0}_{15\times15} & \\
- & 1
+\mathbf{0}_{10\times10} & \\
+ & \mathbf{I}_{2\times2}
 \end{array}\right]
 $$
 
@@ -306,10 +306,12 @@ while:
 
 $$
 \mathbf{S}_{w_u} = \left[\begin{array}{ccc}
-\mathbf{0}_{15\times15} & \\
- & w_u^2
+\mathbf{0}_{10\times10} & \\
+ & w_u^2\mathbf{I}_{2\times2}
 \end{array}\right]
 $$
+
+Finally, Eq.(\ref{eq:jerkPreview}) can be added to Eq.(\ref{eq:finalCostFunction}).
 
 ### Avoid Resting on One Foot
 In order to avoid resting on one foot, the following cost function is added:
