@@ -43,7 +43,9 @@ $$
 which represents the formerly described compromise between the walking ($J_{w_k}$) and balance ($J_{b_k}$) performances, i.e.
 
 $$
+\begin{equation}\label{eq:costFunction}
 J_k = \omega_b J_{b_k} + \omega_w J_{w_k} + q
+\end{equation}
 $$
 
 Where $q$ are regularization terms. More details later on.
@@ -105,7 +107,7 @@ $$
 Where:
 
 $$
-\begin{equation}
+\begin{equation} \label{eq:previewStateMatrix}
 \mathbf{P}_H = \left[\begin{array}{c}
 \mathbf{C}_H \mathbf{Q} \\
 \vdots\\
@@ -115,7 +117,7 @@ $$
 $$
 
 $$
-\begin{equation}
+\begin{equation} \label{eq:previewInputMatrix}
 \mathbf{R}_H = \left[\begin{array}{cccc}
 \mathbf{C}_H\mathbf{T}               &   0                          &  \cdots   &   0 \\
 \mathbf{C}_H\mathbf{Q}\mathbf{T}   &   \mathbf{C}_H\mathbf{T}   &  \cdots   &   0 \\
@@ -142,7 +144,7 @@ And that in this case:
 $$
 \begin{align}
 \xi_{k+j+1|k} & = \mathbf{Q}\xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}\\
-\mathbf{p}_{h+j+1|k} &= \mathbf{C}_P \xi_{k+j+1|k}
+\mathbf{p}_{k+j+1|k} &= \mathbf{C}_P \xi_{k+j+1|k}
 \end{align}
 $$
 
@@ -253,6 +255,82 @@ $$
 \mathbf{d}^T&: -2(\mathbf{H}^r - \mathbf{P}_H\xi_k)^T\mathbf{S}_w\mathbf{R}_H + 2[(\mathbf{P}_P - \mathbf{P}_B)\xi_k]^T\mathbf{N}_b(\mathbf{R}_P - \mathbf{R}_B)
 \end{align}
 $$
+
+## Regularization Terms
+A few regularization terms (or secondary objectives) in the cost function (\ref{eq:costFunction}) are necessary in order to:
+
+- Minimize resulting CoM jerks.
+- Avoid resting on one foot (or maximize double support), thus preferring DS phases over SS.
+- Minimize stepping.
+- Keep track of the previous BoS size.
+- Avoid excessive changes in solutions from one control step to the next.
+
+These costs are quadratic and the ones already implemented are described below:
+
+### CoM Jerk Regularization
+
+### Avoid Resting on One Foot
+In order to avoid resting on one foot, the following cost function is added:
+
+$$
+\begin{equation} \label{eq:supportPhaseReg}
+J_{\text{DS}} = \sum_{j=1}^{N} || \gamma_j - 1 ||^2
+\end{equation}
+$$
+
+For a preview window of size $N$ in matrix form this writes:
+
+$$
+\begin{equation} \label{eq:supportPhaseRegCostMatrix}
+J_{\text{DS}} = (\mathbf{\Gamma}_{k,N} - \mathbf{1}_{k,N})^T(\mathbf{\Gamma}_{k,N} - \mathbf{1}_{k,N})
+\end{equation}
+$$
+
+Then, as done in the previous sections for the prediction of CoM, CoP and BoS given that:
+
+$$
+\begin{align}
+\xi_{k+j+1|k} & = \mathbf{Q}\xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}\\
+\mathbf{gamma}_{k+j+1|k} &= \mathbf{S}_{\gamma} \xi_{k+j+1|k}
+\end{align}
+$$
+
+Where:
+
+$$
+\begin{align}
+\mathbf{S}_{\gamma}=
+\left[\begin{array}{ccc}
+\mathbf{0}_{9\times9} & & \\
+ & 1 & \\
+ &   & \mathbf{0}_{6\times6}
+\end{array}\right]
+\end{align}
+$$
+
+An expression for $\mathbf{\Gamma_{k,N}}$ can be found:
+
+$$
+\begin{equation}\label{eq:gammaPreview}
+\mathbf{\Gamma}_{k,N} = \mathbf{P}_{\Gamma} \xi_{k} + \mathbf{R}_{\Gamma} \mathcal{X}_{k,N}
+\end{equation}
+$$
+
+Where $\mathbf{P}_{\Gamma}$ and $\mathbf{R}_{\Gamma}$ are similar to (\ref{eq:previewStateMatrix}) and (\ref{eq:previewInputMatrix}) using $\mathbf{S}_{\gamma}$ instead $\mathbf{C}_H$.
+
+By substituting Eq.(\ref{eq:gammaPreview}) in Eq.(\ref{eq:supportPhaseRegCostMatrix}) we get:
+
+$$
+\begin{align}
+J_{\text{DS}}&=(\mathbf{P}_{\Gamma} \xi_{k} + \mathbf{R}_{\Gamma} \mathcal{X}_{k,N} - \mathbf{1}_{k,N})^T(\mathbf{P}_{\Gamma} \xi_{k} + \mathbf{R}_{\Gamma} \mathcal{X}_{k,N} - \mathbf{1}_{k,N})\\
+&= (\mathbf{P}_{\Gamma} \xi_{k} - \mathbf{1}_{k,N})^T(\mathbf{P}_{\Gamma} \xi_{k} - \mathbf{1}_{k,N}) + (\mathbf{P}_{\Gamma} \xi_{k} - \mathbf{1}_{k,N})^T\mathbf{R}_{\Gamma}\mathcal{X}_{k,N} + \dots\\
+&\dots (\mathbf{R}_{\Gamma}\mathcal{X}_{k,N})^T(\mathbf{P}_{\Gamma} \xi_{k} - \mathbf{1}_{k,N}) + (\mathbf{R}_{\Gamma}\mathcal{X}_{k,N})^T(\mathbf{R}_{\Gamma}\mathcal{X}_{k,N}) \\
+&= 2(\mathbf{P}_{\Gamma} \xi_{k} - \mathbf{1}_{k,N})^T\mathbf{R}_{\Gamma}\mathcal{X}_{k,N} + \mathcal{X}^T_{k,N}\mathbf{R}_{\Gamma}^T \mathbf{R}_{\Gamma} \mathcal{X}_{k,N}
+\end{align}
+$$
+
+### Stepping Minimization
+**Not implemented yet**
 
 ## Constraints
 The constraints of the MIQP problem (\ref{eq:miqpEquation}) **at this moment** contain three types of constraints:
