@@ -1,7 +1,7 @@
 var searchData=
 [
   ['n',['N',['../structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c',1,'MIQPParameters']]],
-  ['nb',['nb',['../structZmpPreviewParams.html#abaa39df27b9d8993a940e753b297dcea',1,'ZmpPreviewParams::nb()'],['../classZmpPreviewController.html#a6716ee4c94e6f91e608ee1e29fbc7051',1,'ZmpPreviewController::nb()'],['../classZmpPreviewController.html#abd345d397e99ae01ad4ea80cd9894802',1,'ZmpPreviewController::Nb()']]],
+  ['nb',['Nb',['../classZmpPreviewController.html#abd345d397e99ae01ad4ea80cd9894802',1,'ZmpPreviewController::Nb()'],['../structZmpPreviewParams.html#abaa39df27b9d8993a940e753b297dcea',1,'ZmpPreviewParams::nb()'],['../classZmpPreviewController.html#a6716ee4c94e6f91e608ee1e29fbc7051',1,'ZmpPreviewController::nb()']]],
   ['nbdofs',['nbDofs',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a311221586ff8ca7d778b3c51129f8dd2',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['nbinternaldofs',['nbInternalDofs',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#aa90eceb0093c8efcdb63be8712c3855c',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['nbsegments',['nbSegments',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#aae0928d1a4394598af740ab151e0d7db',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
@@ -14,6 +14,6 @@ var searchData=
   ['nl_5ffull',['nl_full',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#abea2880fe7e4fa2672ce55635ab9ea6c',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['nooutputmode',['noOutputMode',['../classOcraControllerOptions.html#af05db2783f36f469fa535fd4ba5c12b1',1,'OcraControllerOptions']]],
   ['np',['Np',['../structZmpPreviewParams.html#a04f1e9d5d0bd952d09187e3a67cdf33c',1,'ZmpPreviewParams::Np()'],['../classZmpPreviewController.html#a2de373daf73b4c28f4b6387787bd27e2',1,'ZmpPreviewController::Np()']]],
-  ['nu',['Nu',['../classZmpPreviewController.html#ac3e92145988993ede7ce2060b997c8db',1,'ZmpPreviewController::Nu()'],['../structZmpPreviewParams.html#a3be5d92df5593e2a7c5694beaf912dac',1,'ZmpPreviewParams::nu()'],['../classZmpPreviewController.html#ac611f084023404faba1ccfab573cd81d',1,'ZmpPreviewController::nu()']]],
-  ['nw',['Nw',['../classZmpPreviewController.html#a5e85354a1a7c3f2a8e265dbe7367051c',1,'ZmpPreviewController::Nw()'],['../structZmpPreviewParams.html#ae09ca5b74feda7b0af99c07cd7a36c64',1,'ZmpPreviewParams::nw()'],['../classZmpPreviewController.html#a783427b817d77469e1f80426bede5310',1,'ZmpPreviewController::nw()']]]
+  ['nu',['nu',['../structZmpPreviewParams.html#a3be5d92df5593e2a7c5694beaf912dac',1,'ZmpPreviewParams::nu()'],['../classZmpPreviewController.html#ac611f084023404faba1ccfab573cd81d',1,'ZmpPreviewController::nu()'],['../classZmpPreviewController.html#ac3e92145988993ede7ce2060b997c8db',1,'ZmpPreviewController::Nu()']]],
+  ['nw',['nw',['../structZmpPreviewParams.html#ae09ca5b74feda7b0af99c07cd7a36c64',1,'ZmpPreviewParams::nw()'],['../classZmpPreviewController.html#a783427b817d77469e1f80426bede5310',1,'ZmpPreviewController::nw()'],['../classZmpPreviewController.html#a5e85354a1a7c3f2a8e265dbe7367051c',1,'ZmpPreviewController::Nw()']]]
 ];

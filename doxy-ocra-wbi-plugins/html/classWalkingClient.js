@@ -37,6 +37,7 @@ var classWalkingClient =
     [ "_homeDataDir", "classWalkingClient.html#ade3bf018661152fc0404d3973ea30783", null ],
     [ "_isTestRun", "classWalkingClient.html#a4f9c8688537ddd8a487a212fbb279a9b", null ],
     [ "_miqpController", "classWalkingClient.html#a5dd1abe90bf7182766548c93673af2df", null ],
+    [ "_miqpParams", "classWalkingClient.html#a5035091f977f37b7d2df284015242d6c", null ],
     [ "_numberOfTransitions", "classWalkingClient.html#aefb4ed994a32879a526f2bc8c962927f", null ],
     [ "_previousCOM", "classWalkingClient.html#a549751e511e023d5fc73eccd1c185317", null ],
     [ "_previousCOMVel", "classWalkingClient.html#aa0c7669193a8a42ed289c79523580033", null ],
