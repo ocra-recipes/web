@@ -808,4 +808,22 @@ $$
 \end{equation}
 $$
 
+While:
+
+$$
+\begin{equation}
+\mathbf{f}_{\text{BoS}} = \left[\begin{array}{c}
+\mathbf{f}\\
+\vdots\\
+\mathbf{f}
+\end{array}\right] -
+\left[\begin{array}{c}
+\mathbf{C}_i\mathbf{Q}\\
+\mathbf{C}_i\mathbf{Q}^2\\
+\vdots\\
+\mathbf{C}_i\mathbf{Q}^N
+\end{array}\right]\xi_k
+\end{equation}
+$$
+
 [1] Ibanez A. Ph.D. [thesis](http://www.hal.inserm.fr/tel-01308723v2)
