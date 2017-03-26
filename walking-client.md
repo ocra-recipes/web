@@ -96,6 +96,15 @@ $$
 \end{equation}
 $$
 
+Where:
+
+$$
+\mathbf{C}_H = \left[
+\begin{array}{cc}
+\mathbf{0}_{6\times10} & \mathbf{I}_{6\times6}
+\end{array} \right]
+$$
+
 Then by iteratively applying the previous system of equations, we arrive to the following compact matrix expression:
 
 $$
