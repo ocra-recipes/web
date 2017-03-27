@@ -385,7 +385,68 @@ $$
 Which in this form can then be added to Eq.(\ref{eq:finalCostFunction}).
 
 ### Stepping Minimization
-**Not implemented yet**
+These regularization terms aim at the minimization of stepping and writes as:
+
+$$
+J_{\text{step}} = \sum_{i=1}^{N} || \alpha ||^2 + \sum_{i=1}^{N}||\beta||^2
+$$
+
+For a preview window of size $N$ in matrix form this writes:
+
+$$
+\begin{equation}
+J_{\text{step}} = \mathbf{A}_{k,N}^T\mathbf{A}_{k,N} + \mathbf{B}_{k,N}^T\mathbf{B}_{k,N}
+\end{equation}
+$$
+
+Then, given that:
+
+$$
+\begin{align}
+\xi_{k+j+1|k} & = \mathbf{Q}\xi_{k+j|k} + \mathbf{T}\mathcal{X}_{k+j+1|k}\\
+\mathbf{\alpha}_{k+j+1|k} &= \mathbf{S}_{\alpha} \xi_{k+j+1|k}\\
+\beta_{k+j+1|k} &= \mathbf{S}_{\beta} \xi_{k+j+1|k}
+\end{align}
+$$
+
+Where:
+
+$$
+\begin{align}
+\mathbf{S}_{\alpha}&=
+\left[\begin{array}{ccc}
+\mathbf{0}_{4\times4} & & \\
+ & \mathbf{I}_{2\times2} & \\
+ &   & \mathbf{0}_{10\times10}
+\end{array}\right]\\
+\mathbf{S}_{\beta}&=
+\left[\begin{array}{ccc}
+\mathbf{0}_{6\times6} & & \\
+ & \mathbf{I}_{2\times2} & \\
+ &   & \mathbf{0}_{8\times8}
+\end{array}\right]
+\end{align}
+$$
+
+Thus, for the preview window we have:
+
+$$
+\begin{equation}
+\mathbf{A}_{k,N}&=\mathbf{P}_A\xi_k + \mathbf{R}_A\mathcal{X}_{k,N}\\
+\mathbf{B}_{k,N}&=\mathbf{P}_B\xi_k + \mathbf{R}_B\mathcal{X}_{k,N}
+\end{equation}
+$$
+
+Which allows us to write this cost function in terms of the input $\mathcal{X}$
+
+$$
+\begin{align}
+J_{\text{step}} &= \mathbf{A}_{k,N}^T \mathbf{A}_{k,N} + \mathbf{B}_{k,N}^T\mathbf{B}_{k,N}\\
+&= (\mathbf{P}_A\xi_k + \mathbf{R}_A\mathcal{X}_{k,N})^T(\mathbf{P}_A\xi_k + \mathbf{R}_A\mathcal{X}_{k,N}) + \dots\\
+&\dots (\mathbf{P}_B\xi_k + \mathbf{R}_B\mathcal{X}_{k,N})^T(\mathbf{P}_B\xi_k + \mathbf{R}_B\mathcal{X}_{k,N})\\
+&= 2\xi_k^T(\mathbf{P}_A^T\mathbf{R}_A + \mathbf{P}_B^T\mathbf{R}_B)\mathcal{X}_{k,N} + \mathcal{X}_{k,N}^T(\mathbf{R}_A^T\mathbf{R}_A + \mathbf{R}_B^T\mathbf{R}_B)\mathcal{X}
+\end{align}
+$$
 
 ### Tracking of previous BoS Size
 **Not implemented yet**
