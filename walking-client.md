@@ -431,10 +431,10 @@ $$
 Thus, for the preview window we have:
 
 $$
-\begin{equation}
+\begin{align}
 \mathbf{A}_{k,N}&=\mathbf{P}_A\xi_k + \mathbf{R}_A\mathcal{X}_{k,N}\\
 \mathbf{B}_{k,N}&=\mathbf{P}_B\xi_k + \mathbf{R}_B\mathcal{X}_{k,N}
-\end{equation}
+\end{align}
 $$
 
 Which allows us to write this cost function in terms of the input $\mathcal{X}$
