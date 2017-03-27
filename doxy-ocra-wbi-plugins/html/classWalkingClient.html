@@ -123,6 +123,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a3b1217b7fa17f76f162be0e12e419d96">performZMPPreviewTest</a> (<a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a49fb64ddafa81f0a5f29a8c0fc5188bd">performSingleStepTest</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae8f7dc629313df7d362e3edd6f45ae10">composePortName</a> (std::string portName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#acd9cf6d2c9a140f789437882d781d963">findZMPPreviewControllerParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab94cb8266e45f49e51396458df7f8708">findGeneralTestsParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a2a7372e6cad46efd380eb85e7547cf4e">findCOMLinVelConstRefParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ad8eb137c03025ce04cedd4eea58f7a6d">findZMPConstRefParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a48e8e823e0a76a662722e05f6bd803e3">findSingleStepTestParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a6b8f21532c8207ec95b64f6548c3b6b1">findZMPVaryingReferenceParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#accdb497fc22b293095290f3d63d5cf72">findMIQPParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab4148804702e065310a903112bc10162">transformStdVectorToEigenVector</a> (std::vector&lt; Eigen::Vector2d &gt; &amp;fullTraj, int from, int Nc, VectorXd &amp;output)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a70b2375134ae55a041fbf30180ea3a8f">generateZMPStepTrajectoryTEST</a> (double feetSeparation, double period, double duration, double riseTime, double constantReferenceY)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab5bd1eceec03d8b88ffe2b6b07d981c0">generateZMPSingleStepTrajectory</a> (double period, double feetSeparation)</td></tr>
@@ -284,6 +291,125 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Takes all the parameters used by this client from configuration file and parses them through yarp's Resource Finder.</p>
 <p>Details on group [ZMP_CONTROLLER_PARAMS] in walking-client.ini Options are: 0 - ZMP_CONSTANT_REFERENCE 1 - ZMP_VARYING_REFERENCE 2 - COM_LIN_VEL_CONSTANT_REFERENCE Each of these tests are used to evaluate the correct gains to be used at each level of the control loops. These trajectorie will be used during the tests specified through the option 'test' which takes the values "zmpPreview" or "zmpController". When using this client for the first time on a robot, the gains of the comTask in its corresponding taskSet file must be tuned first as well and later those for the <a class="el" href="classZmpController.html" title="Implementes a ZMP controller as a force set point regulator.">ZmpController</a> class. Therefore we recommend executing this client first as a way of testing the "low" level ComTask control in order to find good kp and kd. Do this by setting 'type' to 2. Data will be saved at the location you specify through the option 'homeDataDir'. After having a good COM velocity tracking at the task level, you want to test the tracking of the zmp controller by setting 'type' to 0. A constant zmp reference is given and the controller gains kfx, kfy, kdx and kdy must be tuned accordingly. Finally, the tracking of varying zmp reference can be tested which takes the zmp from left to right, while the robot stands on both feet. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2a7372e6cad46efd380eb85e7547cf4e"></a><!-- doxytag: member="WalkingClient::findCOMLinVelConstRefParams" ref="a2a7372e6cad46efd380eb85e7547cf4e" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#a2a7372e6cad46efd380eb85e7547cf4e">WalkingClient::findCOMLinVelConstRefParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab94cb8266e45f49e51396458df7f8708"></a><!-- doxytag: member="WalkingClient::findGeneralTestsParams" ref="ab94cb8266e45f49e51396458df7f8708" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#ab94cb8266e45f49e51396458df7f8708">WalkingClient::findGeneralTestsParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="accdb497fc22b293095290f3d63d5cf72"></a><!-- doxytag: member="WalkingClient::findMIQPParams" ref="accdb497fc22b293095290f3d63d5cf72" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#accdb497fc22b293095290f3d63d5cf72">WalkingClient::findMIQPParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a48e8e823e0a76a662722e05f6bd803e3"></a><!-- doxytag: member="WalkingClient::findSingleStepTestParams" ref="a48e8e823e0a76a662722e05f6bd803e3" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#a48e8e823e0a76a662722e05f6bd803e3">WalkingClient::findSingleStepTestParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad8eb137c03025ce04cedd4eea58f7a6d"></a><!-- doxytag: member="WalkingClient::findZMPConstRefParams" ref="ad8eb137c03025ce04cedd4eea58f7a6d" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#ad8eb137c03025ce04cedd4eea58f7a6d">WalkingClient::findZMPConstRefParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd9cf6d2c9a140f789437882d781d963"></a><!-- doxytag: member="WalkingClient::findZMPPreviewControllerParams" ref="acd9cf6d2c9a140f789437882d781d963" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#acd9cf6d2c9a140f789437882d781d963">WalkingClient::findZMPPreviewControllerParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b8f21532c8207ec95b64f6548c3b6b1"></a><!-- doxytag: member="WalkingClient::findZMPVaryingReferenceParams" ref="a6b8f21532c8207ec95b64f6548c3b6b1" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#a6b8f21532c8207ec95b64f6548c3b6b1">WalkingClient::findZMPVaryingReferenceParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -466,7 +592,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>Dummy initial COM states reference! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Dummy initial COM states reference! </dd></dl>
 
 </div>
 </div>
@@ -585,7 +711,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Change input to this method to just com acceleration. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Change input to this method to just com acceleration. </dd></dl>
 
 </div>
 </div>
@@ -1391,7 +1517,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classWalkingClient.html">WalkingClient</a>      </li>
 
-    <li class="footer">Generated on Mon Mar 27 2017 17:26:25 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Mar 27 2017 23:53:00 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

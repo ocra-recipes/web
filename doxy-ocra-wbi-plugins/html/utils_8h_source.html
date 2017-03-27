@@ -134,28 +134,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00041"></a><a class="code" href="structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0">00041</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0">ww</a>;
 <a name="l00042"></a>00042     <span class="comment">/* Balance Performance Cost Weight */</span>
 <a name="l00043"></a><a class="code" href="structMIQPParameters.html#a6bc828e6060bfd69c3d6353a460de86b">00043</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a6bc828e6060bfd69c3d6353a460de86b">wb</a>;
-<a name="l00044"></a>00044     <span class="comment">/* X Boundary in Constancy constraints */</span>
-<a name="l00045"></a><a class="code" href="structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231">00045</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231">sx_constancy</a>;
-<a name="l00046"></a>00046     <span class="comment">/* Y Boundary in Constancy constraints */</span>
-<a name="l00047"></a><a class="code" href="structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38">00047</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38">sy_constancy</a>;
-<a name="l00048"></a>00048     <span class="comment">/* X Boundary in Single Support Constraints */</span>
-<a name="l00049"></a><a class="code" href="structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9">00049</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9">sx_ss</a>;
-<a name="l00050"></a>00050     <span class="comment">/* Y Boundary in Single Support Constraints */</span>
-<a name="l00051"></a><a class="code" href="structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1">00051</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1">sy_ss</a>;
-<a name="l00052"></a>00052     <span class="comment">/* CoM State Reference Selection Vector. If your CoM State Reference consists only of forward velocity</span>
-<a name="l00053"></a>00053 <span class="comment">     * then this vector is: [0 0 1 1 0 0] */</span>
-<a name="l00054"></a><a class="code" href="structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f">00054</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f">hx_ref</a>;
-<a name="l00055"></a><a class="code" href="structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996">00055</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996">hy_ref</a>;
-<a name="l00056"></a><a class="code" href="structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e">00056</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e">dhx_ref</a>;
-<a name="l00057"></a><a class="code" href="structMIQPParameters.html#a816bb15b6417ac8387adbaac2f74e198">00057</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a816bb15b6417ac8387adbaac2f74e198">dhy_ref</a>;
-<a name="l00058"></a><a class="code" href="structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52">00058</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52">ddhx_ref</a>;
-<a name="l00059"></a><a class="code" href="structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9">00059</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9">ddhy_ref</a>;
-<a name="l00060"></a>00060 };
-<a name="l00061"></a>00061 
-<a name="l00062"></a><a class="code" href="utils_8h.html#ab0e06eaa253307db2bac3c9b0a9e6b10">00062</a> <span class="preprocessor">#define STATE_VECTOR_SIZE 16</span>
-<a name="l00063"></a><a class="code" href="utils_8h.html#aa2f26540ce870ca91503bb6746a52e69">00063</a> <span class="preprocessor"></span><span class="preprocessor">#define INPUT_VECTOR_SIZE 12</span>
-<a name="l00064"></a>00064 <span class="preprocessor"></span>
-<a name="l00065"></a>00065 <span class="preprocessor">#endif</span>
+<a name="l00044"></a>00044     <span class="comment">/* Jerk regularization Cost Weight */</span>
+<a name="l00045"></a><a class="code" href="structMIQPParameters.html#aed141afdcc25904d53526a5f2c977427">00045</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#aed141afdcc25904d53526a5f2c977427">wu</a>;
+<a name="l00046"></a>00046     <span class="comment">/* X Boundary in Constancy constraints */</span>
+<a name="l00047"></a><a class="code" href="structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231">00047</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231">sx_constancy</a>;
+<a name="l00048"></a>00048     <span class="comment">/* Y Boundary in Constancy constraints */</span>
+<a name="l00049"></a><a class="code" href="structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38">00049</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38">sy_constancy</a>;
+<a name="l00050"></a>00050     <span class="comment">/* X Boundary in Single Support Constraints */</span>
+<a name="l00051"></a><a class="code" href="structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9">00051</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9">sx_ss</a>;
+<a name="l00052"></a>00052     <span class="comment">/* Y Boundary in Single Support Constraints */</span>
+<a name="l00053"></a><a class="code" href="structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1">00053</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1">sy_ss</a>;
+<a name="l00054"></a>00054     <span class="comment">/* CoM State Reference Selection Vector. If your CoM State Reference consists only of forward velocity</span>
+<a name="l00055"></a>00055 <span class="comment">     * then this vector is: [0 0 1 1 0 0] */</span>
+<a name="l00056"></a><a class="code" href="structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f">00056</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f">hx_ref</a>;
+<a name="l00057"></a><a class="code" href="structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996">00057</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996">hy_ref</a>;
+<a name="l00058"></a><a class="code" href="structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e">00058</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e">dhx_ref</a>;
+<a name="l00059"></a><a class="code" href="structMIQPParameters.html#a816bb15b6417ac8387adbaac2f74e198">00059</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a816bb15b6417ac8387adbaac2f74e198">dhy_ref</a>;
+<a name="l00060"></a><a class="code" href="structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52">00060</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52">ddhx_ref</a>;
+<a name="l00061"></a><a class="code" href="structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9">00061</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9">ddhy_ref</a>;
+<a name="l00062"></a>00062     <span class="comment">/* Add Shape Constraints? */</span>
+<a name="l00063"></a><a class="code" href="structMIQPParameters.html#a718ac69205eb5fbb51f58cd59176a3ff">00063</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a718ac69205eb5fbb51f58cd59176a3ff">shapeConstraints</a>;
+<a name="l00064"></a>00064     <span class="comment">/* Add Admissibility Constraints? */</span>
+<a name="l00065"></a><a class="code" href="structMIQPParameters.html#ae8e541722b3e3664ab516676aa1c16be">00065</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#ae8e541722b3e3664ab516676aa1c16be">admissibilityConstraints</a>;
+<a name="l00066"></a>00066     <span class="comment">/* Add CoP Constraints? */</span>
+<a name="l00067"></a><a class="code" href="structMIQPParameters.html#a3a0fd04f9e8767097e44e02a740796bc">00067</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a3a0fd04f9e8767097e44e02a740796bc">copConstraints</a>;
+<a name="l00068"></a>00068     <span class="comment">/* Add walking constraints? */</span>
+<a name="l00069"></a><a class="code" href="structMIQPParameters.html#af7cbaa08836e17417f9f5c170b55f1bc">00069</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#af7cbaa08836e17417f9f5c170b55f1bc">walkingConstraints</a>;
+<a name="l00070"></a>00070     <span class="comment">/* Add regularization terms?*/</span>
+<a name="l00071"></a><a class="code" href="structMIQPParameters.html#a7e5417e18e6797739def8f916c3efc40">00071</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a7e5417e18e6797739def8f916c3efc40">addRegularization</a>;
+<a name="l00072"></a>00072 };
+<a name="l00073"></a>00073 
+<a name="l00074"></a><a class="code" href="utils_8h.html#ab0e06eaa253307db2bac3c9b0a9e6b10">00074</a> <span class="preprocessor">#define STATE_VECTOR_SIZE 16</span>
+<a name="l00075"></a><a class="code" href="utils_8h.html#aa2f26540ce870ca91503bb6746a52e69">00075</a> <span class="preprocessor"></span><span class="preprocessor">#define INPUT_VECTOR_SIZE 12</span>
+<a name="l00076"></a>00076 <span class="preprocessor"></span>
+<a name="l00077"></a>00077 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -176,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="utils_8h.html">utils.h</a>      </li>
 
-    <li class="footer">Generated on Mon Mar 27 2017 17:26:25 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Mar 27 2017 23:53:00 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

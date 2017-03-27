@@ -41,6 +41,20 @@ void \hyperlink{classWalkingClient_a49fb64ddafa81f0a5f29a8c0fc5188bd}{perform\-S
 \item 
 std\-::string \hyperlink{classWalkingClient_ae8f7dc629313df7d362e3edd6f45ae10}{compose\-Port\-Name} (std\-::string port\-Name)
 \item 
+void \hyperlink{classWalkingClient_acd9cf6d2c9a140f789437882d781d963}{find\-Z\-M\-P\-Preview\-Controller\-Params} (yarp\-::os\-::\-Resource\-Finder \&rf)
+\item 
+void \hyperlink{classWalkingClient_ab94cb8266e45f49e51396458df7f8708}{find\-General\-Tests\-Params} (yarp\-::os\-::\-Resource\-Finder \&rf)
+\item 
+void \hyperlink{classWalkingClient_a2a7372e6cad46efd380eb85e7547cf4e}{find\-C\-O\-M\-Lin\-Vel\-Const\-Ref\-Params} (yarp\-::os\-::\-Resource\-Finder \&rf)
+\item 
+void \hyperlink{classWalkingClient_ad8eb137c03025ce04cedd4eea58f7a6d}{find\-Z\-M\-P\-Const\-Ref\-Params} (yarp\-::os\-::\-Resource\-Finder \&rf)
+\item 
+void \hyperlink{classWalkingClient_a48e8e823e0a76a662722e05f6bd803e3}{find\-Single\-Step\-Test\-Params} (yarp\-::os\-::\-Resource\-Finder \&rf)
+\item 
+void \hyperlink{classWalkingClient_a6b8f21532c8207ec95b64f6548c3b6b1}{find\-Z\-M\-P\-Varying\-Reference\-Params} (yarp\-::os\-::\-Resource\-Finder \&rf)
+\item 
+void \hyperlink{classWalkingClient_accdb497fc22b293095290f3d63d5cf72}{find\-M\-I\-Q\-P\-Params} (yarp\-::os\-::\-Resource\-Finder \&rf)
+\item 
 void \hyperlink{classWalkingClient_ab4148804702e065310a903112bc10162}{transform\-Std\-Vector\-To\-Eigen\-Vector} (std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \&full\-Traj, int from, int \-Nc, \-Vector\-Xd \&output)
 \item 
 std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \hyperlink{classWalkingClient_a70b2375134ae55a041fbf30180ea3a8f}{generate\-Z\-M\-P\-Step\-Trajectory\-T\-E\-S\-T} (double feet\-Separation, double period, double duration, double rise\-Time, double constant\-Reference\-Y)
@@ -220,7 +234,56 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 )}}\label{classWalkingClient_adb8f972f34cb39c69c02a7c3cb493b81}
 \-Takes all the parameters used by this client from configuration file and parses them through yarp's \-Resource \-Finder.
 
-\-Details on group \mbox{[}\-Z\-M\-P\-\_\-\-C\-O\-N\-T\-R\-O\-L\-L\-E\-R\-\_\-\-P\-A\-R\-A\-M\-S\mbox{]} in walking-\/client.\-ini \-Options are\-: 0 -\/ \-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E 1 -\/ \-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E 2 -\/ \-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E \-Each of these tests are used to evaluate the correct gains to be used at each level of the control loops. \-These trajectorie will be used during the tests specified through the option 'test' which takes the values \char`\"{}zmp\-Preview\char`\"{} or \char`\"{}zmp\-Controller\char`\"{}. \-When using this client for the first time on a robot, the gains of the com\-Task in its corresponding task\-Set file must be tuned first as well and later those for the \hyperlink{classZmpController}{\-Zmp\-Controller} class. \-Therefore we recommend executing this client first as a way of testing the \char`\"{}low\char`\"{} level \-Com\-Task control in order to find good kp and kd. \-Do this by setting 'type' to 2. \-Data will be saved at the location you specify through the option 'home\-Data\-Dir'. \-After having a good \-C\-O\-M velocity tracking at the task level, you want to test the tracking of the zmp controller by setting 'type' to 0. \-A constant zmp reference is given and the controller gains kfx, kfy, kdx and kdy must be tuned accordingly. \-Finally, the tracking of varying zmp reference can be tested which takes the zmp from left to right, while the robot stands on both feet. \hypertarget{classWalkingClient_ab5bd1eceec03d8b88ffe2b6b07d981c0}{\index{\-Walking\-Client@{\-Walking\-Client}!generate\-Z\-M\-P\-Single\-Step\-Trajectory@{generate\-Z\-M\-P\-Single\-Step\-Trajectory}}
+\-Details on group \mbox{[}\-Z\-M\-P\-\_\-\-C\-O\-N\-T\-R\-O\-L\-L\-E\-R\-\_\-\-P\-A\-R\-A\-M\-S\mbox{]} in walking-\/client.\-ini \-Options are\-: 0 -\/ \-Z\-M\-P\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E 1 -\/ \-Z\-M\-P\-\_\-\-V\-A\-R\-Y\-I\-N\-G\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E 2 -\/ \-C\-O\-M\-\_\-\-L\-I\-N\-\_\-\-V\-E\-L\-\_\-\-C\-O\-N\-S\-T\-A\-N\-T\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E \-Each of these tests are used to evaluate the correct gains to be used at each level of the control loops. \-These trajectorie will be used during the tests specified through the option 'test' which takes the values \char`\"{}zmp\-Preview\char`\"{} or \char`\"{}zmp\-Controller\char`\"{}. \-When using this client for the first time on a robot, the gains of the com\-Task in its corresponding task\-Set file must be tuned first as well and later those for the \hyperlink{classZmpController}{\-Zmp\-Controller} class. \-Therefore we recommend executing this client first as a way of testing the \char`\"{}low\char`\"{} level \-Com\-Task control in order to find good kp and kd. \-Do this by setting 'type' to 2. \-Data will be saved at the location you specify through the option 'home\-Data\-Dir'. \-After having a good \-C\-O\-M velocity tracking at the task level, you want to test the tracking of the zmp controller by setting 'type' to 0. \-A constant zmp reference is given and the controller gains kfx, kfy, kdx and kdy must be tuned accordingly. \-Finally, the tracking of varying zmp reference can be tested which takes the zmp from left to right, while the robot stands on both feet. \hypertarget{classWalkingClient_a2a7372e6cad46efd380eb85e7547cf4e}{\index{\-Walking\-Client@{\-Walking\-Client}!find\-C\-O\-M\-Lin\-Vel\-Const\-Ref\-Params@{find\-C\-O\-M\-Lin\-Vel\-Const\-Ref\-Params}}
+\index{find\-C\-O\-M\-Lin\-Vel\-Const\-Ref\-Params@{find\-C\-O\-M\-Lin\-Vel\-Const\-Ref\-Params}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{find\-C\-O\-M\-Lin\-Vel\-Const\-Ref\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::find\-C\-O\-M\-Lin\-Vel\-Const\-Ref\-Params} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Resource\-Finder \&}]{rf}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_a2a7372e6cad46efd380eb85e7547cf4e}
+\hypertarget{classWalkingClient_ab94cb8266e45f49e51396458df7f8708}{\index{\-Walking\-Client@{\-Walking\-Client}!find\-General\-Tests\-Params@{find\-General\-Tests\-Params}}
+\index{find\-General\-Tests\-Params@{find\-General\-Tests\-Params}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{find\-General\-Tests\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::find\-General\-Tests\-Params} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Resource\-Finder \&}]{rf}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_ab94cb8266e45f49e51396458df7f8708}
+\hypertarget{classWalkingClient_accdb497fc22b293095290f3d63d5cf72}{\index{\-Walking\-Client@{\-Walking\-Client}!find\-M\-I\-Q\-P\-Params@{find\-M\-I\-Q\-P\-Params}}
+\index{find\-M\-I\-Q\-P\-Params@{find\-M\-I\-Q\-P\-Params}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{find\-M\-I\-Q\-P\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::find\-M\-I\-Q\-P\-Params} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Resource\-Finder \&}]{rf}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_accdb497fc22b293095290f3d63d5cf72}
+\hypertarget{classWalkingClient_a48e8e823e0a76a662722e05f6bd803e3}{\index{\-Walking\-Client@{\-Walking\-Client}!find\-Single\-Step\-Test\-Params@{find\-Single\-Step\-Test\-Params}}
+\index{find\-Single\-Step\-Test\-Params@{find\-Single\-Step\-Test\-Params}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{find\-Single\-Step\-Test\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::find\-Single\-Step\-Test\-Params} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Resource\-Finder \&}]{rf}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_a48e8e823e0a76a662722e05f6bd803e3}
+\hypertarget{classWalkingClient_ad8eb137c03025ce04cedd4eea58f7a6d}{\index{\-Walking\-Client@{\-Walking\-Client}!find\-Z\-M\-P\-Const\-Ref\-Params@{find\-Z\-M\-P\-Const\-Ref\-Params}}
+\index{find\-Z\-M\-P\-Const\-Ref\-Params@{find\-Z\-M\-P\-Const\-Ref\-Params}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{find\-Z\-M\-P\-Const\-Ref\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::find\-Z\-M\-P\-Const\-Ref\-Params} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Resource\-Finder \&}]{rf}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_ad8eb137c03025ce04cedd4eea58f7a6d}
+\hypertarget{classWalkingClient_acd9cf6d2c9a140f789437882d781d963}{\index{\-Walking\-Client@{\-Walking\-Client}!find\-Z\-M\-P\-Preview\-Controller\-Params@{find\-Z\-M\-P\-Preview\-Controller\-Params}}
+\index{find\-Z\-M\-P\-Preview\-Controller\-Params@{find\-Z\-M\-P\-Preview\-Controller\-Params}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{find\-Z\-M\-P\-Preview\-Controller\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::find\-Z\-M\-P\-Preview\-Controller\-Params} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Resource\-Finder \&}]{rf}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_acd9cf6d2c9a140f789437882d781d963}
+\hypertarget{classWalkingClient_a6b8f21532c8207ec95b64f6548c3b6b1}{\index{\-Walking\-Client@{\-Walking\-Client}!find\-Z\-M\-P\-Varying\-Reference\-Params@{find\-Z\-M\-P\-Varying\-Reference\-Params}}
+\index{find\-Z\-M\-P\-Varying\-Reference\-Params@{find\-Z\-M\-P\-Varying\-Reference\-Params}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{find\-Z\-M\-P\-Varying\-Reference\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::find\-Z\-M\-P\-Varying\-Reference\-Params} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Resource\-Finder \&}]{rf}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_a6b8f21532c8207ec95b64f6548c3b6b1}
+\hypertarget{classWalkingClient_ab5bd1eceec03d8b88ffe2b6b07d981c0}{\index{\-Walking\-Client@{\-Walking\-Client}!generate\-Z\-M\-P\-Single\-Step\-Trajectory@{generate\-Z\-M\-P\-Single\-Step\-Trajectory}}
 \index{generate\-Z\-M\-P\-Single\-Step\-Trajectory@{generate\-Z\-M\-P\-Single\-Step\-Trajectory}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{generate\-Z\-M\-P\-Single\-Step\-Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ {\bf \-Walking\-Client\-::generate\-Z\-M\-P\-Single\-Step\-Trajectory} (
 \begin{DoxyParamCaption}
@@ -311,7 +374,7 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classWalkingClient_aba6a03fe29a4e947bc6bc0c09a713b2a}
 \begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000012}{\-Todo}]\-Dummy initial \-C\-O\-M states reference! \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000011}{\-Todo}]\-Dummy initial \-C\-O\-M states reference! \end{DoxyRefDesc}
 \hypertarget{classWalkingClient_afd997bb00534c57fe1b0d5f37f207386}{\index{\-Walking\-Client@{\-Walking\-Client}!loop@{loop}}
 \index{loop@{loop}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::loop} (
@@ -380,7 +443,7 @@ $|$ \-Parameter $|$ \-Value $|$ $|$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\-: $|$ \-:-\/
 \hline
 \end{DoxyParams}
 \begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000011}{\-Todo}]\-Change input to this method to just com acceleration. \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000010}{\-Todo}]\-Change input to this method to just com acceleration. \end{DoxyRefDesc}
 \hypertarget{classWalkingClient_aff3fabef11d9c8b747a422f879c26067}{\index{\-Walking\-Client@{\-Walking\-Client}!print\-Help@{print\-Help}}
 \index{print\-Help@{print\-Help}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{print\-Help}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::print\-Help} (

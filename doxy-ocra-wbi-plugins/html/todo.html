@@ -97,35 +97,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><dl class="reflist">
 <dt><a class="anchor" id="_todo000003"></a>Member <a class="el" href="classConstancy.html#ae38922343ad8a98bd4e501e8ada5c83c">Constancy::Constancy</a>  ()</dt>
 <dd>Upper boundaries should be input somehow from configuration file  </dd>
-<dt><a class="anchor" id="_todo000009"></a>Member <a class="el" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">MIQPController::_Sw</a>  </dt>
+<dt><a class="anchor" id="_todo000008"></a>Member <a class="el" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">MIQPController::_Sw</a>  </dt>
 <dd>For the moment this has been hardcoded to take into account only CoM velocity references.  </dd>
-<dt><a class="anchor" id="_todo000008"></a>Member <a class="el" href="classMIQPController.html#aa8fd8452a14d8e7731bf45044e1c7a59">MIQPController::run</a>  ()</dt>
+<dt><a class="anchor" id="_todo000007"></a>Member <a class="el" href="classMIQPController.html#aa8fd8452a14d8e7731bf45044e1c7a59">MIQPController::run</a>  ()</dt>
 <dd><p class="startdd">Watch out! _eigGurobi will add a 1/2. Therefore the 2. Check that this is correct. </p>
 <p class="enddd">The expression for _H_N is missing regularization terms  </p>
 </dd>
-<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">MIQPLinearConstraints::buildShapeAndAdmissibilityInPreviewWindow</a>  ()</dt>
+<dt><a class="anchor" id="_todo000005"></a>Member <a class="el" href="classMIQPLinearConstraints.html#a2f41d99a16293718b94d17ce9ee5b59d">MIQPLinearConstraints::buildShapeAndAdmissibilityInPreviewWindow</a>  ()</dt>
 <dd>When walking constraints are added, matrix _A will be a stack of the two  </dd>
-<dt><a class="anchor" id="_todo000004"></a>Member <a class="el" href="classMIQPLinearConstraints.html#aaa55e8fc7fac6499f60c40e13b0d6605">MIQPLinearConstraints::MIQPLinearConstraints</a>  (std::shared_ptr&lt; StepController &gt; stepController, <a class="el" href="structMIQPParameters.html">MIQPParameters</a> miqpParams, bool addShapeCtrs=true, bool addAdmissibilityCtrs=true, bool addCoPConstraints=false, bool addWalkingCtrs=false)</dt>
-<dd><p class="startdd">Once I add walking constraints this will change to include the rows added by walking constraints </p>
-<p class="enddd">Handle the booleans in a different form. This is sort of ugly.  </p>
-</dd>
-<dt><a class="anchor" id="_todo000007"></a>Member <a class="el" href="classSingleSupport.html#a78e5b7c89b828d718560cec73c0f6218">SingleSupport::buildMatrixCi</a>  ()</dt>
+<dt><a class="anchor" id="_todo000004"></a>Member <a class="el" href="classMIQPLinearConstraints.html#a95076997a625d0e74185924775cdabc5">MIQPLinearConstraints::MIQPLinearConstraints</a>  (std::shared_ptr&lt; StepController &gt; stepController, <a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;miqpParams)</dt>
+<dd>Once I add walking constraints this will change to include the rows added by walking constraints  </dd>
+<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="classSingleSupport.html#a78e5b7c89b828d718560cec73c0f6218">SingleSupport::buildMatrixCi</a>  ()</dt>
 <dd>Bound S must not be hardcoded  </dd>
-<dt><a class="anchor" id="_todo000010"></a>Member <a class="el" href="classStepController.html#a8f061f201c651d920ca02f7daa07adfe">StepController::initialize</a>  ()</dt>
+<dt><a class="anchor" id="_todo000009"></a>Member <a class="el" href="classStepController.html#a8f061f201c651d920ca02f7daa07adfe">StepController::initialize</a>  ()</dt>
 <dd>This max velocity must be compatible with the one specified in the linar constraints  </dd>
 <dt><a class="anchor" id="_todo000002"></a>Member <a class="el" href="classSteppingDemoClient.html#ad8fbc186267a47a73bb77e78199f2b8c">SteppingDemoClient::isBalanced</a>  ()</dt>
 <dd>A more balance-centered criterion should be used for this, ZMP-based for example.  </dd>
 <dt><a class="anchor" id="_todo000001"></a>Class <a class="el" href="classThread.html">Thread</a>  </dt>
 <dd>Remove task sequences. This class sets up an ocra::Model which is constructed from an OcraWbiModel and an ocra::Controller which can be specified as either a WocraController, a GocraController, or a HocraController. The thread is looped at the period specified by the user (defaults to 10ms) and on each loop the Model is updated and the control torques are recalculated. *At the writing of this comment, task sequences are still in use and they too are initialized and updated here. They will be removed eventually.*  </dd>
-<dt><a class="anchor" id="_todo000012"></a>Member <a class="el" href="classWalkingClient.html#aba6a03fe29a4e947bc6bc0c09a713b2a">WalkingClient::initialize</a>  ()</dt>
+<dt><a class="anchor" id="_todo000011"></a>Member <a class="el" href="classWalkingClient.html#aba6a03fe29a4e947bc6bc0c09a713b2a">WalkingClient::initialize</a>  ()</dt>
 <dd>Dummy initial COM states reference!  </dd>
-<dt><a class="anchor" id="_todo000011"></a>Member <a class="el" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">WalkingClient::prepareAndsetDesiredCoMTaskState</a>  (Eigen::VectorXd comState, bool doSet)</dt>
+<dt><a class="anchor" id="_todo000010"></a>Member <a class="el" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">WalkingClient::prepareAndsetDesiredCoMTaskState</a>  (Eigen::VectorXd comState, bool doSet)</dt>
 <dd>Change input to this method to just com acceleration.  </dd>
-<dt><a class="anchor" id="_todo000013"></a>Member <a class="el" href="classZmpController.html#a4c47608f6d62b6b490808816879c01b7">ZmpController::ZmpController</a>  (const int period, std::shared_ptr&lt; ocra::Model &gt; modelPtr, std::shared_ptr&lt; ZmpControllerParams &gt; parameters)</dt>
+<dt><a class="anchor" id="_todo000012"></a>Member <a class="el" href="classZmpController.html#a4c47608f6d62b6b490808816879c01b7">ZmpController::ZmpController</a>  (const int period, std::shared_ptr&lt; ocra::Model &gt; modelPtr, std::shared_ptr&lt; ZmpControllerParams &gt; parameters)</dt>
 <dd>Deprecate this class  </dd>
-<dt><a class="anchor" id="_todo000015"></a>Member <a class="el" href="classZmpPreviewController.html#ac28b93f8e76b4bd00d418f80c330bb67">ZmpPreviewController::buildHh</a>  (Eigen::MatrixXd Ch, Eigen::MatrixXd Bh, Eigen::MatrixXd Ah, const int Nc, const int Np)</dt>
+<dt><a class="anchor" id="_todo000014"></a>Member <a class="el" href="classZmpPreviewController.html#ac28b93f8e76b4bd00d418f80c330bb67">ZmpPreviewController::buildHh</a>  (Eigen::MatrixXd Ch, Eigen::MatrixXd Bh, Eigen::MatrixXd Ah, const int Nc, const int Np)</dt>
 <dd>Check the first for loop of this method. I think this should be Np - 1  </dd>
-<dt><a class="anchor" id="_todo000014"></a>Member <a class="el" href="classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a">ZmpPreviewController::computeOptimalInput</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;zmpRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;comVelRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;hk, Eigen::MatrixBase&lt; Derived &gt; &amp;optimalU)</dt>
+<dt><a class="anchor" id="_todo000013"></a>Member <a class="el" href="classZmpPreviewController.html#aabdafde9ecc41a6d98134e0a01083d8a">ZmpPreviewController::computeOptimalInput</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;zmpRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;comVelRef, const Eigen::MatrixBase&lt; Derived &gt; &amp;hk, Eigen::MatrixBase&lt; Derived &gt; &amp;optimalU)</dt>
 <dd>Remember that the bOptimal I have to use is actually not Weiber's because it doesn't take into account com velocity references.</dd>
 </dl>
 </div></div><!-- contents -->
@@ -147,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Mon Mar 27 2017 17:26:25 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Mar 27 2017 23:53:00 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
