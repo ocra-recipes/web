@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['u_5fx_5fin',['U_X_IN',['../namespaceMIQP.html#a88adf7c800494cf6d751d065e642b45ba691381362928194b77729a46d5c3649f',1,'MIQP']]],
+  ['u_5fy_5fin',['U_Y_IN',['../namespaceMIQP.html#a88adf7c800494cf6d751d065e642b45bafdfffc5d00361320b487c47c36653a92',1,'MIQP']]],
   ['update',['update',['../classBaseOfSupport.html#a1b9919def962e87ba6de27fb744da284',1,'BaseOfSupport']]],
   ['updatebaseofsupportdescriptors',['updateBaseOfSupportDescriptors',['../classMIQP_1_1MIQPState.html#a8dec06cabde0ad186c976c0bc61c4688',1,'MIQP::MIQPState']]],
   ['updateequalityconstraints',['updateEqualityConstraints',['../classMIQPController.html#a4c3f665528fae6c051160456692372ee',1,'MIQPController']]],

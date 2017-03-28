@@ -21,6 +21,7 @@ var searchData=
   ['buildf',['buildf',['../classBaseOfSupport.html#af5bb488bb7004a8b14dd0617c4c27700',1,'BaseOfSupport']]],
   ['buildfbar',['buildfbar',['../classBaseOfSupport.html#abf35dd9826a8aa7f419ca008df21bdb7',1,'BaseOfSupport']]],
   ['buildfcbarshapeadmiss',['buildFcBarShapeAdmiss',['../classMIQPLinearConstraints.html#a5231950d561e42e0d6590a398bec771c',1,'MIQPLinearConstraints']]],
+  ['buildgenericregmat',['buildGenericRegMat',['../classMIQPController.html#ab8b3555a9f64417f2b986784c3ab8bd6',1,'MIQPController']]],
   ['buildgh',['buildGh',['../classZmpPreviewController.html#a877b1d91bdf6767d8be83ef2a67fedde',1,'ZmpPreviewController']]],
   ['buildgp',['buildGp',['../classZmpPreviewController.html#a6b61c5f7bcda6b8df027771a8e43ea8b',1,'ZmpPreviewController']]],
   ['buildh_5fn',['buildH_N',['../classMIQPController.html#ab093df4b1c73c02a97609093fd037345',1,'MIQPController']]],

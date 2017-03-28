@@ -23,6 +23,7 @@ var searchData=
   ['default_5fyarp_5fcontext',['DEFAULT_YARP_CONTEXT',['../ocra-icub-server_2src_2main_8cpp.html#aacf7b13861a4ce37b8dec1979eb6450c',1,'main.cpp']]],
   ['deg_5fto_5frad',['DEG_TO_RAD',['../namespaceocra__icub.html#ab06477ded34ed5514b911a3511b22e3d',1,'ocra_icub']]],
   ['delta',['DELTA',['../namespaceMIQP.html#a437279e763ccbc43c283bfcb0508740bafc299c0c771598c52982ef03b1aebe24',1,'MIQP']]],
+  ['delta_5fin',['DELTA_IN',['../namespaceMIQP.html#a88adf7c800494cf6d751d065e642b45babc1ad81d0468426d13fdf05ff135480f',1,'MIQP']]],
   ['dh_5fx',['DH_X',['../namespaceMIQP.html#a437279e763ccbc43c283bfcb0508740ba236b2a998dab2dfdde29454bf6241ca2',1,'MIQP']]],
   ['dh_5fy',['DH_Y',['../namespaceMIQP.html#a437279e763ccbc43c283bfcb0508740ba90ecfa5c72d59bbf692d367e04ef8bca',1,'MIQP']]],
   ['dhx_5fref',['dhx_ref',['../structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e',1,'MIQPParameters']]],

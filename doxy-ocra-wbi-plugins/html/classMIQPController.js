@@ -10,6 +10,7 @@ var classMIQPController =
     [ "buildC_P", "classMIQPController.html#ac2a454e236bdb3a13b72b6930329f231", null ],
     [ "buildCoMJerkReg", "classMIQPController.html#ac458316007d11e4b592cfb2e227bad69", null ],
     [ "buildEqualityConstraintsMatrices", "classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082", null ],
+    [ "buildGenericRegMat", "classMIQPController.html#ab8b3555a9f64417f2b986784c3ab8bd6", null ],
     [ "buildH_N", "classMIQPController.html#ab093df4b1c73c02a97609093fd037345", null ],
     [ "buildMinimizeSteppingReg", "classMIQPController.html#af721e438de3208adc893abe78551a0cb", null ],
     [ "buildNb", "classMIQPController.html#a8b83fba21208a3becff314d26ba45679", null ],

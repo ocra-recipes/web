@@ -131,6 +131,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ab093df4b1c73c02a97609093fd037345">buildH_N</a> (Eigen::MatrixXd &amp;output)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a8b83fba21208a3becff314d26ba45679">buildNb</a> (Eigen::MatrixXd &amp;output, double wb)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a959d9957a931315d3f1cf95ad5c07a65">buildNx</a> (Eigen::MatrixXd &amp;output)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ab8b3555a9f64417f2b986784c3ab8bd6">buildGenericRegMat</a> (<a class="el" href="namespaceMIQP.html#a88adf7c800494cf6d751d065e642b45b">MIQP::InputVectorIndex</a> whichVariable, double weight, Eigen::MatrixXd &amp;output)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a3085bba3c89e6ed0265e8e229590e7f1">buildSw</a> (Eigen::MatrixXd &amp;output, <a class="el" href="structMIQPParameters.html">MIQPParameters</a> miqpParams)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ad9a2e7d2c658937c847097f83d3408e3">buildPreviewStateMatrix</a> (const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;P)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a9e4f007d1b6b7f68582aebbc09cf0813">buildPreviewInputMatrix</a> (const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R)</td></tr>
@@ -491,6 +492,40 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ab8b3555a9f64417f2b986784c3ab8bd6"></a><!-- doxytag: member="MIQPController::buildGenericRegMat" ref="ab8b3555a9f64417f2b986784c3ab8bd6" args="(MIQP::InputVectorIndex whichVariable, double weight, Eigen::MatrixXd &amp;output)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPController.html#ab8b3555a9f64417f2b986784c3ab8bd6">MIQPController::buildGenericRegMat</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceMIQP.html#a88adf7c800494cf6d751d065e642b45b">MIQP::InputVectorIndex</a>&#160;</td>
+          <td class="paramname"><em>whichVariable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>weight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Builds a generic regularization matrix for a specified variable </p>
 
 </div>
 </div>
@@ -1933,7 +1968,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Tue Mar 28 2017 11:04:08 for ocra-wbi-plugins by
+    <li class="footer">Generated on Tue Mar 28 2017 23:53:42 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
