@@ -283,22 +283,23 @@ This cost prevents the resulting CoM jerks to be too large and writes:
 
 $$
 \begin{equation}
-J_{u} = \sum_{i=1}^{N} ||u^Tu||^2
+J_{u} = \sum_{i=1}^{N} u_i^Tu_i
 \end{equation}
 $$
 
-Which can be further elaborated in terms of the input vector $\mathcal{X}_{k,N}$ as:
+Which can be further elaborated in terms of the input vector $\mathcal{X}$ and optimization variable $\mathcal{X}_{k,N}$ as:
 
 $$
 \begin{align} \label{eq:jerkPreview}
-J_{u} &= \sum_{i=1}^{N} ||u_i^Tu_i||^2\\
-&= \sum_{i=1}^{N}||\mathcal{X}^T\mathbf{S}_u^T\mathbf{S}_u\mathcal{X}||^2\\
+J_{u} &= \sum_{i=1}^{N} u_i^Tu_i\\
+&= \sum_{i=1}^{N}||\mathcal{X}_i^T\mathbf{S}_u^T\mathbf{S}_u\mathcal{X}_i||^2\\
 &= \mathcal{X}_{k,N}^T
 \left[\begin{array}{ccc}
 \mathbf{S}_{w_u} & & \\
         & \ddots & \\
         &        & \mathbf{S}_{w_u}
-\end{array}\right] \mathcal{X}_{k,N}
+\end{array}\right] \mathcal{X}_{k,N}\\
+&= \mathcal{X}_{k,N}^T\mathbf{S}_U\mathcal{X}_{k,N}
 \end{align}
 $$
 
@@ -314,13 +315,10 @@ $$
 while:
 
 $$
-\mathbf{S}_{w_u} = \left[\begin{array}{ccc}
-\mathbf{0}_{10\times10} & \\
- & w_u^2\mathbf{I}_{2\times2}
-\end{array}\right]
+\mathbf{S}_{w_u} = w_u^2 \mathbf{S}_u
 $$
 
-Finally, Eq.(\ref{eq:jerkPreview}) can be added to Eq.(\ref{eq:finalCostFunction}).
+Finally, Eq. (\ref{eq:jerkPreview}) can be added to Eq. (\ref{eq:finalCostFunction}).
 
 ### Avoid Resting on One Foot
 In order to avoid resting on one foot, the following cost function is added:
@@ -371,7 +369,7 @@ $$
 
 Where $$\mathbf{P}_{\Gamma}$$ and $$\mathbf{R}_{\Gamma}$$ are similar to (\ref{eq:previewStateMatrix}) and (\ref{eq:previewInputMatrix}) using $$\mathbf{S}_{\gamma}$$ instead $$\mathbf{C}_H$$.
 
-By substituting Eq.(\ref{eq:gammaPreview}) in Eq.(\ref{eq:supportPhaseRegCostMatrix}) we get:
+By substituting Eq. (\ref{eq:gammaPreview}) in Eq. (\ref{eq:supportPhaseRegCostMatrix}) we get:
 
 $$
 \begin{align}
@@ -382,7 +380,7 @@ J_{\text{DS}}&=(\mathbf{P}_{\Gamma} \xi_{k} + \mathbf{R}_{\Gamma} \mathcal{X}_{k
 \end{align}
 $$
 
-Which in this form can then be added to Eq.(\ref{eq:finalCostFunction}).
+Which in this form can then be added to Eq. (\ref{eq:finalCostFunction}).
 
 ### Stepping Minimization
 These regularization terms aim at the minimization of stepping and writes as:
@@ -762,7 +760,7 @@ $$
 
 We need however to write these constraints in the preview window and in terms of the optimization variable $\mathcal{X}$ as $$\mathbf{A}\mathcal{X}\leq\mathbf{f}$$
 
-Thus, by iteratively applying Eq.(\ref{eq:shapeAdmissCompact}) for $i\in[k,N-1]$ we get:
+Thus, by iteratively applying Eq. (\ref{eq:shapeAdmissCompact}) for $i\in[k,N-1]$ we get:
 
 $$
 \begin{equation}
@@ -850,7 +848,7 @@ $$
 \end{array}\right]
 $$
 
-Then, in a preview window, given preview model (\ref{eq:previewModel}) and iteratively applying Eq.(\ref{eq:bboxConstraints}) we get the following set of constraints:
+Then, in a preview window, given preview model (\ref{eq:previewModel}) and iteratively applying Eq. (\ref{eq:bboxConstraints}) we get the following set of constraints:
 
 $$
 \mathbf{A}_{\text{BoS}} \mathcal{X} \leq \mathbf{f}_{\text{BoS}}
