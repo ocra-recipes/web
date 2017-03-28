@@ -449,10 +449,10 @@ J_{\text{step}} &= \mathbf{A}_{k,N}^T \mathbf{A}_{k,N} + \mathbf{B}_{k,N}^T\math
 $$
 
 ### Tracking of previous BoS Size
-**Not implemented yet**
+**Not implemented yet**{: style="color: red"}
 
 ### Avoiding Excessive Changes in solutions
-**Not implemented yet**
+**Not implemented yet**{: style="color: red"}
 
 ## Constraints
 The constraints of the MIQP problem (\ref{eq:miqpEquation}) **at this moment** contain three types of constraints:
