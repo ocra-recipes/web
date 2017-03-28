@@ -115,6 +115,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_addCoPConstraints
 : <a class="el" href="classMIQPLinearConstraints.html#a8e20d42828c638f41d074153cc0957d8">MIQPLinearConstraints</a>
 </li>
+<li>_addRegularization
+: <a class="el" href="classMIQPController.html#ad64b7131a2a61bf8d3b18aec6ddd677a">MIQPController</a>
+</li>
 <li>_addShapeCtrs
 : <a class="el" href="classMIQPLinearConstraints.html#ae8df8b83e80484853b624f6693ed2725">MIQPLinearConstraints</a>
 </li>
@@ -336,9 +339,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classWalkingClient.html#a5dd1abe90bf7182766548c93673af2df">WalkingClient</a>
 </li>
 <li>_miqpParams
-: <a class="el" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">MIQPController</a>
-, <a class="el" href="classBaseOfSupport.html#a82f86511c236d038f1670dd515e53a8f">BaseOfSupport</a>
+: <a class="el" href="classBaseOfSupport.html#a82f86511c236d038f1670dd515e53a8f">BaseOfSupport</a>
 , <a class="el" href="classMIQPLinearConstraints.html#a22f1b42e65d283a0d748333cc7119a7e">MIQPLinearConstraints</a>
+, <a class="el" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">MIQPController</a>
 , <a class="el" href="classWalkingClient.html#a5035091f977f37b7d2df284015242d6c">WalkingClient</a>
 </li>
 <li>_model
@@ -360,8 +363,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_Nx
 : <a class="el" href="classMIQPController.html#aefaa7a13d0c690dafca85792bdbed4fd">MIQPController</a>
 </li>
+<li>_One_Gamma
+: <a class="el" href="classMIQPController.html#ab3b52f6aa31c58a28e4d2edc287f7795">MIQPController</a>
+</li>
+<li>_P_Alpha
+: <a class="el" href="classMIQPController.html#abd6c6392bc08dd2afa138e88d52cb3a7">MIQPController</a>
+</li>
 <li>_P_B
 : <a class="el" href="classMIQPController.html#a848852d659dff4a566a8dca57819587d">MIQPController</a>
+</li>
+<li>_P_Beta
+: <a class="el" href="classMIQPController.html#a98a9700860258849ba5ab8568f610e2f">MIQPController</a>
+</li>
+<li>_P_Gamma
+: <a class="el" href="classMIQPController.html#a2eb96aa1ababc704065fe301aeb394f7">MIQPController</a>
 </li>
 <li>_P_H
 : <a class="el" href="classMIQPController.html#afb83c4fddc4adba989506ccc9b62ff1e">MIQPController</a>
@@ -399,11 +414,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classMIQPLinearConstraints.html#afecaf6e02135bfba45045fab6cce3511">MIQPLinearConstraints</a>
 , <a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">MIQPController</a>
 </li>
+<li>_R_Alpha
+: <a class="el" href="classMIQPController.html#a700fa811c67f402f1027d4571051ba01">MIQPController</a>
+</li>
 <li>_R_B
 : <a class="el" href="classMIQPController.html#a69fbc25a2e2f2392fe0f92c5811c12dd">MIQPController</a>
 </li>
+<li>_R_Beta
+: <a class="el" href="classMIQPController.html#a4a9008d6bc09776aba999f94b326ba21">MIQPController</a>
+</li>
 <li>_r_foot_coord
 : <a class="el" href="classMIQP_1_1MIQPState.html#a20ef40fafe48e0c80d52ef4da89e95b7">MIQP::MIQPState</a>
+</li>
+<li>_R_Gamma
+: <a class="el" href="classMIQPController.html#aba668abb8294cd636d67ae66e8c00daf">MIQPController</a>
 </li>
 <li>_R_H
 : <a class="el" href="classMIQPController.html#a2207c17eb221166b1bc12fbca976035d">MIQPController</a>
@@ -418,8 +442,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classWalkingClient.html#a9df32e0c73632c5f869e5933e20def71">WalkingClient</a>
 </li>
 <li>_rhs
-: <a class="el" href="classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530">MIQPLinearConstraints</a>
-, <a class="el" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">BaseOfSupport</a>
+: <a class="el" href="classBaseOfSupport.html#a274325bb39f10aac06153b82a2541c3b">BaseOfSupport</a>
+, <a class="el" href="classMIQPLinearConstraints.html#ac8df74075c393100f5bddcb371503530">MIQPLinearConstraints</a>
 </li>
 <li>_rhs_2_eq
 : <a class="el" href="classMIQPController.html#aa8e6df5286125975521b77501e792413">MIQPController</a>
@@ -450,12 +474,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classMIQP_1_1MIQPState.html#ad27b574f93e1b163ff9b01939bd00de3">MIQP::MIQPState</a>
 </li>
 <li>_robotModel
-: <a class="el" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">MIQPController</a>
-, <a class="el" href="classMIQP_1_1MIQPState.html#ab4a5a930c7db84035376864938d8a170">MIQP::MIQPState</a>
+: <a class="el" href="classMIQP_1_1MIQPState.html#ab4a5a930c7db84035376864938d8a170">MIQP::MIQPState</a>
+, <a class="el" href="classMIQPController.html#a03735ecec3242cdfc9bf8a443c561724">MIQPController</a>
 </li>
 <li>_S
 : <a class="el" href="classSingleSupport.html#a5b26007c52ad9b2ed45c6ca4f1aef345">SingleSupport</a>
 , <a class="el" href="classConstancy.html#a7d416426cf6f8e9cd651d10df17c81d5">Constancy</a>
+</li>
+<li>_S_alpha
+: <a class="el" href="classMIQPController.html#af10211a576dde9197e6b6af617d2bc6c">MIQPController</a>
+</li>
+<li>_S_beta
+: <a class="el" href="classMIQPController.html#a4a4ab529231e34b4679e68116a6fbb9d">MIQPController</a>
+</li>
+<li>_S_gamma
+: <a class="el" href="classMIQPController.html#aaac5bbe321ab1e620d6fe602da6c1f59">MIQPController</a>
+</li>
+<li>_S_wu
+: <a class="el" href="classMIQPController.html#a3af5e6941ac9d9896e3ad67830115108">MIQPController</a>
 </li>
 <li>_sequentiality
 : <a class="el" href="classShapeConstraints.html#a0a503cf10835b98ddaa4031a7c63ef42">ShapeConstraints</a>
@@ -479,9 +515,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classMIQPController.html#aeaa4c96afe2d1d975667338e858f4a90">MIQPController</a>
 </li>
 <li>_stepController
-: <a class="el" href="classMIQPLinearConstraints.html#ac1ea7dbfb54c84c9c3e172d36aa42671">MIQPLinearConstraints</a>
+: <a class="el" href="classBaseOfSupport.html#a023d28c6900f0e97d9de42ca2c5d94a5">BaseOfSupport</a>
 , <a class="el" href="classMIQPController.html#a10018469a257136470ad9293fc3fe84a">MIQPController</a>
-, <a class="el" href="classBaseOfSupport.html#a023d28c6900f0e97d9de42ca2c5d94a5">BaseOfSupport</a>
+, <a class="el" href="classMIQPLinearConstraints.html#ac1ea7dbfb54c84c9c3e172d36aa42671">MIQPLinearConstraints</a>
 , <a class="el" href="classWalkingClient.html#aff3d76fc360548d6c0c0ea540a0b7509">WalkingClient</a>
 </li>
 <li>_stopTimeConstComVel
@@ -497,9 +533,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classMIQPController.html#ada92fc35065a11b889019f2948c1888d">MIQPController</a>
 </li>
 <li>_T
-: <a class="el" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">MIQPLinearConstraints</a>
+: <a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">MIQPController</a>
+, <a class="el" href="classMIQPLinearConstraints.html#a5e6d37521f3da248b19ff424526d700a">MIQPLinearConstraints</a>
 , <a class="el" href="classBaseOfSupport.html#a52f07f15e1667eb7876e614dcd817ef1">BaseOfSupport</a>
-, <a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">MIQPController</a>
 </li>
 <li>_testType
 : <a class="el" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">WalkingClient</a>
@@ -520,8 +556,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classMIQPController.html#a1fdfcba2c7b6422ac8d3b0b6095d7546">MIQPController</a>
 </li>
 <li>_xi_k
-: <a class="el" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">MIQPController</a>
-, <a class="el" href="classMIQP_1_1MIQPState.html#aee08863bacb44f7c667cbd566fa6ddcf">MIQP::MIQPState</a>
+: <a class="el" href="classMIQP_1_1MIQPState.html#aee08863bacb44f7c667cbd566fa6ddcf">MIQP::MIQPState</a>
+, <a class="el" href="classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed">MIQPController</a>
 </li>
 <li>_zmpCurPort
 : <a class="el" href="classWalkingClient.html#a546e6830e43d19ba7d8a8e808e28ef53">WalkingClient</a>
@@ -567,7 +603,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Mon Mar 27 2017 17:26:25 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Mar 27 2017 23:53:00 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

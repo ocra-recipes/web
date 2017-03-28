@@ -136,6 +136,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a9e4f007d1b6b7f68582aebbc09cf0813">buildPreviewInputMatrix</a> (const Eigen::MatrixXd &amp;C, Eigen::MatrixXd &amp;R)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a870c7d3c0e5fcfd46f7bb95924007082">buildEqualityConstraintsMatrices</a> (const Eigen::VectorXd &amp;x_k, Eigen::MatrixXd &amp;Aeq, Eigen::VectorXd &amp;Beq)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a4c3f665528fae6c051160456692372ee">updateEqualityConstraints</a> (const Eigen::VectorXd &amp;x_k, Eigen::VectorXd &amp;Beq)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a973c28f80d04db7cdbdced07e1eeda16">buildRegularizationTerms</a> (<a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;miqpParams)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ac458316007d11e4b592cfb2e227bad69">buildCoMJerkReg</a> (<a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;miqpParams)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ad18d82e49c5508dc0239c21a85809131">buildAvoidOneFootRestReg</a> (<a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;miqpParams)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#af721e438de3208adc893abe78551a0cb">buildMinimizeSteppingReg</a> (<a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;miqpParams)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#afce6feca593352323e052b6c993cbf69">setBinaryVariables</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a014cab392ddec6085df74f2590af4791">writeToFile</a> (const double &amp;time, const Eigen::VectorXd &amp;X_kn, std::string &amp;home)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
@@ -145,6 +149,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMIQPParameters.html">MIQPParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a23f6caec48541df0ebe3f91189171ce5">_miqpParams</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ab74859a8dd208f3fc7608391d318d469">_comStateRef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aed2ce53008e32e64e107398d85e75170">_period</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ad64b7131a2a61bf8d3b18aec6ddd677a">_addRegularization</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ac2ec0c5287589fe28f7381ebeaa5f4ef">_linearTermTransObjFunc</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ad3544c00f3515146c1818440905e36cc">_lb</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6">_ub</a></td></tr>
@@ -181,6 +186,17 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classMIQP_1_1MIQPState.html">MIQP::MIQPState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aeaa4c96afe2d1d975667338e858f4a90">_state</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c">_H_N_r</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#af60e2d5a786f4af4fa445dea6ba1b625">_k</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a3af5e6941ac9d9896e3ad67830115108">_S_wu</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aaac5bbe321ab1e620d6fe602da6c1f59">_S_gamma</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a2eb96aa1ababc704065fe301aeb394f7">_P_Gamma</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aba668abb8294cd636d67ae66e8c00daf">_R_Gamma</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ab3b52f6aa31c58a28e4d2edc287f7795">_One_Gamma</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#af10211a576dde9197e6b6af617d2bc6c">_S_alpha</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a4a4ab529231e34b4679e68116a6fbb9d">_S_beta</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#abd6c6392bc08dd2afa138e88d52cb3a7">_P_Alpha</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a700fa811c67f402f1027d4571051ba01">_R_Alpha</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a98a9700860258849ba5ab8568f610e2f">_P_Beta</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a4a9008d6bc09776aba999f94b326ba21">_R_Beta</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5fec189a29105d999d3bb2721977945a"></a><!-- doxytag: member="MIQPController::MIQPController" ref="a5fec189a29105d999d3bb2721977945a" args="(MIQPParameters params, ocra::Model::Ptr robotModel, std::shared_ptr&lt; StepController &gt; stepController, const Eigen::MatrixXd &amp;comStateRef)" -->
@@ -281,6 +297,23 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a388ed1c232c212e171276993b5cb3fec">_Ah</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad18d82e49c5508dc0239c21a85809131"></a><!-- doxytag: member="MIQPController::buildAvoidOneFootRestReg" ref="ad18d82e49c5508dc0239c21a85809131" args="(MIQPParameters &amp;miqpParams)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPController.html#ad18d82e49c5508dc0239c21a85809131">MIQPController::buildAvoidOneFootRestReg</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>miqpParams</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -395,6 +428,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac458316007d11e4b592cfb2e227bad69"></a><!-- doxytag: member="MIQPController::buildCoMJerkReg" ref="ac458316007d11e4b592cfb2e227bad69" args="(MIQPParameters &amp;miqpParams)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPController.html#ac458316007d11e4b592cfb2e227bad69">MIQPController::buildCoMJerkReg</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>miqpParams</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a870c7d3c0e5fcfd46f7bb95924007082"></a><!-- doxytag: member="MIQPController::buildEqualityConstraintsMatrices" ref="a870c7d3c0e5fcfd46f7bb95924007082" args="(const Eigen::VectorXd &amp;x_k, Eigen::MatrixXd &amp;Aeq, Eigen::VectorXd &amp;Beq)" -->
 <div class="memitem">
 <div class="memproto">
@@ -466,6 +516,23 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="af721e438de3208adc893abe78551a0cb"></a><!-- doxytag: member="MIQPController::buildMinimizeSteppingReg" ref="af721e438de3208adc893abe78551a0cb" args="(MIQPParameters &amp;miqpParams)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPController.html#af721e438de3208adc893abe78551a0cb">MIQPController::buildMinimizeSteppingReg</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>miqpParams</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -633,6 +700,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a973c28f80d04db7cdbdced07e1eeda16"></a><!-- doxytag: member="MIQPController::buildRegularizationTerms" ref="a973c28f80d04db7cdbdced07e1eeda16" args="(MIQPParameters &amp;miqpParams)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPController.html#a973c28f80d04db7cdbdced07e1eeda16">MIQPController::buildRegularizationTerms</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMIQPParameters.html">MIQPParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>miqpParams</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Builds regularization terms. For the moment, these include:</p>
+<ul>
+<li>Avoid resting on one foot</li>
+<li>CoM jerk regularization terms </li>
+</ul>
+
+</div>
+</div>
 <a class="anchor" id="a3085bba3c89e6ed0265e8e229590e7f1"></a><!-- doxytag: member="MIQPController::buildSw" ref="a3085bba3c89e6ed0265e8e229590e7f1" args="(Eigen::MatrixXd &amp;output, MIQPParameters miqpParams)" -->
 <div class="memitem">
 <div class="memproto">
@@ -716,7 +805,7 @@ Private Attributes</h2></td></tr>
 <li>Retrieves the solution.</li>
 </ul>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a8320465a1ec80d0cf7ba0d17652feba5">updateStateVector()</a>, <a class="el" href="classMIQPLinearConstraints.html#a27ae3bdf1d4b4bd1e5279607e4b96f1a">MIQPLinearConstraints::updateRHS()</a>, <a class="el" href="classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f">setCOMStateRefInPreviewWindow()</a>, <a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction()</a>, Eigen::GurobiDense::solve() </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd><p class="startdd">Watch out! _eigGurobi will add a 1/2. Therefore the 2. Check that this is correct. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd><p class="startdd">Watch out! _eigGurobi will add a 1/2. Therefore the 2. Check that this is correct. </p>
 <p class="enddd">The expression for _H_N is missing regularization terms </p>
 </dd></dl>
 
@@ -946,6 +1035,20 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ad64b7131a2a61bf8d3b18aec6ddd677a"></a><!-- doxytag: member="MIQPController::_addRegularization" ref="ad64b7131a2a61bf8d3b18aec6ddd677a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classMIQPController.html#ad64b7131a2a61bf8d3b18aec6ddd677a">MIQPController::_addRegularization</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Add regularization terms to cost function? </p>
+
+</div>
+</div>
 <a class="anchor" id="abc22f1db5a2dbcab4006c1b903a19c4e"></a><!-- doxytag: member="MIQPController::_Aeq" ref="abc22f1db5a2dbcab4006c1b903a19c4e" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1331,6 +1434,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab3b52f6aa31c58a28e4d2edc287f7795"></a><!-- doxytag: member="MIQPController::_One_Gamma" ref="ab3b52f6aa31c58a28e4d2edc287f7795" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classMIQPController.html#ab3b52f6aa31c58a28e4d2edc287f7795">MIQPController::_One_Gamma</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abd6c6392bc08dd2afa138e88d52cb3a7"></a><!-- doxytag: member="MIQPController::_P_Alpha" ref="abd6c6392bc08dd2afa138e88d52cb3a7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#abd6c6392bc08dd2afa138e88d52cb3a7">MIQPController::_P_Alpha</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a848852d659dff4a566a8dca57819587d"></a><!-- doxytag: member="MIQPController::_P_B" ref="a848852d659dff4a566a8dca57819587d" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1352,6 +1481,32 @@ Private Attributes</h2></td></tr>
 </p>
 <p>Size: \([2N\times16]\)</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">_C_B</a>, <a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98a9700860258849ba5ab8568f610e2f"></a><!-- doxytag: member="MIQPController::_P_Beta" ref="a98a9700860258849ba5ab8568f610e2f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#a98a9700860258849ba5ab8568f610e2f">MIQPController::_P_Beta</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2eb96aa1ababc704065fe301aeb394f7"></a><!-- doxytag: member="MIQPController::_P_Gamma" ref="a2eb96aa1ababc704065fe301aeb394f7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#a2eb96aa1ababc704065fe301aeb394f7">MIQPController::_P_Gamma</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -1439,6 +1594,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a700fa811c67f402f1027d4571051ba01"></a><!-- doxytag: member="MIQPController::_R_Alpha" ref="a700fa811c67f402f1027d4571051ba01" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#a700fa811c67f402f1027d4571051ba01">MIQPController::_R_Alpha</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a69fbc25a2e2f2392fe0f92c5811c12dd"></a><!-- doxytag: member="MIQPController::_R_B" ref="a69fbc25a2e2f2392fe0f92c5811c12dd" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1460,6 +1628,32 @@ Private Attributes</h2></td></tr>
 </p>
 <p>Size: \([2N\times12N]\)</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a5c6882cb248e9d16513868fea7835d6e">_C_B</a>, <a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a>, <a class="el" href="classMIQPController.html#ac6404f74d6002d6a0ca4bd2d0b41d548">_Q</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a9008d6bc09776aba999f94b326ba21"></a><!-- doxytag: member="MIQPController::_R_Beta" ref="a4a9008d6bc09776aba999f94b326ba21" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#a4a9008d6bc09776aba999f94b326ba21">MIQPController::_R_Beta</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aba668abb8294cd636d67ae66e8c00daf"></a><!-- doxytag: member="MIQPController::_R_Gamma" ref="aba668abb8294cd636d67ae66e8c00daf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#aba668abb8294cd636d67ae66e8c00daf">MIQPController::_R_Gamma</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -1539,6 +1733,58 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af10211a576dde9197e6b6af617d2bc6c"></a><!-- doxytag: member="MIQPController::_S_alpha" ref="af10211a576dde9197e6b6af617d2bc6c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#af10211a576dde9197e6b6af617d2bc6c">MIQPController::_S_alpha</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a4ab529231e34b4679e68116a6fbb9d"></a><!-- doxytag: member="MIQPController::_S_beta" ref="a4a4ab529231e34b4679e68116a6fbb9d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#a4a4ab529231e34b4679e68116a6fbb9d">MIQPController::_S_beta</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaac5bbe321ab1e620d6fe602da6c1f59"></a><!-- doxytag: member="MIQPController::_S_gamma" ref="aaac5bbe321ab1e620d6fe602da6c1f59" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#aaac5bbe321ab1e620d6fe602da6c1f59">MIQPController::_S_gamma</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3af5e6941ac9d9896e3ad67830115108"></a><!-- doxytag: member="MIQPController::_S_wu" ref="a3af5e6941ac9d9896e3ad67830115108" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classMIQPController.html#a3af5e6941ac9d9896e3ad67830115108">MIQPController::_S_wu</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aeaa4c96afe2d1d975667338e858f4a90"></a><!-- doxytag: member="MIQPController::_state" ref="aeaa4c96afe2d1d975667338e858f4a90" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1577,7 +1823,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>\(\mathbf{S_w}\) is a \(6N\times6N\) diagonal weighting selection matrix, defining whether position, velocity and/or acceleration of the CoM are tracked in each of the two horizontal directions.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>For the moment this has been hardcoded to take into account only CoM velocity references. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>For the moment this has been hardcoded to take into account only CoM velocity references. </dd></dl>
 
 </div>
 </div>
@@ -1687,7 +1933,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Mon Mar 27 2017 17:26:25 for ocra-wbi-plugins by
+    <li class="footer">Generated on Mon Mar 27 2017 23:53:00 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -20,7 +20,7 @@ var searchData=
   ['miqpcontroller',['MIQPController',['../classMIQPController.html',1,'MIQPController'],['../classMIQPController.html#a5fec189a29105d999d3bb2721977945a',1,'MIQPController::MIQPController()']]],
   ['miqpcontroller_2ecpp',['MIQPController.cpp',['../MIQPController_8cpp.html',1,'']]],
   ['miqpcontroller_2eh',['MIQPController.h',['../MIQPController_8h.html',1,'']]],
-  ['miqplinearconstraints',['MIQPLinearConstraints',['../classMIQPLinearConstraints.html',1,'MIQPLinearConstraints'],['../classMIQPLinearConstraints.html#aaa55e8fc7fac6499f60c40e13b0d6605',1,'MIQPLinearConstraints::MIQPLinearConstraints()']]],
+  ['miqplinearconstraints',['MIQPLinearConstraints',['../classMIQPLinearConstraints.html',1,'MIQPLinearConstraints'],['../classMIQPLinearConstraints.html#a95076997a625d0e74185924775cdabc5',1,'MIQPLinearConstraints::MIQPLinearConstraints()']]],
   ['miqplinearconstraints_2ecpp',['MIQPLinearConstraints.cpp',['../MIQPLinearConstraints_8cpp.html',1,'']]],
   ['miqplinearconstraints_2eh',['MIQPLinearConstraints.h',['../MIQPLinearConstraints_8h.html',1,'']]],
   ['miqpparameters',['MIQPParameters',['../structMIQPParameters.html',1,'']]],

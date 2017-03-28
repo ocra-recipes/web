@@ -17,7 +17,7 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}{\-M\-I\-Q\-P\-Linear\-Constraints} (std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>$ step\-Controller, \hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} miqp\-Params, bool add\-Shape\-Ctrs=true, bool add\-Admissibility\-Ctrs=true, bool add\-Co\-P\-Constraints=false, bool add\-Walking\-Ctrs=false)
+\hyperlink{classMIQPLinearConstraints_a95076997a625d0e74185924775cdabc5}{\-M\-I\-Q\-P\-Linear\-Constraints} (std\-::shared\-\_\-ptr$<$ \hyperlink{classStepController}{\-Step\-Controller} $>$ step\-Controller, \hyperlink{structMIQPParameters}{\-M\-I\-Q\-P\-Parameters} \&miqp\-Params)
 \item 
 virtual \hyperlink{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints} ()
 \item 
@@ -105,18 +105,14 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
+\hypertarget{classMIQPLinearConstraints_a95076997a625d0e74185924775cdabc5}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{\-M\-I\-Q\-P\-Linear\-Constraints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::\-M\-I\-Q\-P\-Linear\-Constraints} (
 \begin{DoxyParamCaption}
 \item[{std\-::shared\-\_\-ptr$<$ {\bf \-Step\-Controller} $>$}]{step\-Controller, }
-\item[{{\bf \-M\-I\-Q\-P\-Parameters}}]{miqp\-Params, }
-\item[{bool}]{add\-Shape\-Ctrs = {\ttfamily true}, }
-\item[{bool}]{add\-Admissibility\-Ctrs = {\ttfamily true}, }
-\item[{bool}]{add\-Co\-P\-Constraints = {\ttfamily false}, }
-\item[{bool}]{add\-Walking\-Ctrs = {\ttfamily false}}
+\item[{{\bf \-M\-I\-Q\-P\-Parameters} \&}]{miqp\-Params}
 \end{DoxyParamCaption}
-)}}\label{classMIQPLinearConstraints_aaa55e8fc7fac6499f60c40e13b0d6605}
+)}}\label{classMIQPLinearConstraints_a95076997a625d0e74185924775cdabc5}
 \begin{DoxyRefDesc}{\-Todo}
 \item[\hyperlink{todo__todo000004}{\-Todo}]\-Once \-I add walking constraints this will change to include the rows added by walking constraints \end{DoxyRefDesc}
 
@@ -125,17 +121,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \hline
 \mbox{\tt in}  & {\em miqp\-Params} & \-Container of the \hyperlink{namespaceMIQP}{\-M\-I\-Q\-P} parameters. \\
 \hline
-\mbox{\tt in}  & {\em add\-Shape\-Ctrs} & \-Boolean indicating whether shape constraints are added to the problem. \\
-\hline
-\mbox{\tt in}  & {\em add\-Admissibility\-Ctrs} & \-Boolean indicating whether admissibility constraints are added to the problem. \\
-\hline
-\mbox{\tt in}  & {\em add\-Co\-P\-Constraints} & \-Boolean indicating whether \-Co\-P constraints are added to the problem. \\
-\hline
-\mbox{\tt in}  & {\em add\-Walking\-Ctrs} & \-Boolean indicating whether walking constraints are added to the problem.\\
-\hline
 \end{DoxyParams}
-\begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000005}{\-Todo}]\-Handle the booleans in a different form. \-This is sort of ugly. \end{DoxyRefDesc}
 \hypertarget{classMIQPLinearConstraints_a1539d3c8eb2af42daa9bb17dd0f44bd2}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!$\sim$\-M\-I\-Q\-P\-Linear\-Constraints@{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints}}
 \index{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints@{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{$\sim$\-M\-I\-Q\-P\-Linear\-Constraints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::$\sim$\-M\-I\-Q\-P\-Linear\-Constraints} (
@@ -244,7 +230,7 @@ std\-::shared\-\_\-ptr$<$ \hyperlink{classBaseOfSupport}{\-Base\-Of\-Support} $>
 \hyperlink{classMIQPLinearConstraints_ae9b8c02ee58863d05d2aab41e780413e}{build\-A\-Shape\-Admiss()} 
 \end{DoxySeeAlso}
 \begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000006}{\-Todo}]\-When walking constraints are added, matrix \-\_\-\-A will be a stack of the two \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000005}{\-Todo}]\-When walking constraints are added, matrix \-\_\-\-A will be a stack of the two \end{DoxyRefDesc}
 \hypertarget{classMIQPLinearConstraints_ab556e990dcc0b1fcd152f41a8c00e1f6}{\index{\-M\-I\-Q\-P\-Linear\-Constraints@{\-M\-I\-Q\-P\-Linear\-Constraints}!get\-Constraints\-Matrix\-A@{get\-Constraints\-Matrix\-A}}
 \index{get\-Constraints\-Matrix\-A@{get\-Constraints\-Matrix\-A}!MIQPLinearConstraints@{\-M\-I\-Q\-P\-Linear\-Constraints}}
 \subsubsection[{get\-Constraints\-Matrix\-A}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Linear\-Constraints\-::get\-Constraints\-Matrix\-A} (

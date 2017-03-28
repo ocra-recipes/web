@@ -22,6 +22,7 @@ var searchData=
   ['controllerperiod',['controllerPeriod',['../structZmpControllerParams.html#a495732ae992cece73c131d04f9ab0cb2',1,'ZmpControllerParams']]],
   ['controllerstatus',['controllerStatus',['../classThread.html#a913cf23e86cdaefd036b782f7417254d',1,'Thread']]],
   ['controllertype',['controllerType',['../classOcraControllerOptions.html#aa533fe11c53b7fb17105f1edf48e1c0d',1,'OcraControllerOptions']]],
+  ['copconstraints',['copConstraints',['../structMIQPParameters.html#a3a0fd04f9e8767097e44e02a740796bc',1,'MIQPParameters']]],
   ['cp',['Cp',['../classZmpPreviewController.html#a1a63870dcc3d51a26c4adc9c97e650ff',1,'ZmpPreviewController']]],
   ['ctrloptions',['ctrlOptions',['../classThread.html#af96a166364f0c6a680115600b3bd232e',1,'Thread']]],
   ['ctrlserver',['ctrlServer',['../classThread.html#ace1179249de64e545f43dc48529fbbb6',1,'Thread']]],
