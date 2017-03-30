@@ -104,7 +104,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Collaboration diagram for WalkingClient:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classWalkingClient__coll__graph.svg" width="331" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWalkingClient__coll__graph.svg" width="498" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classWalkingClient-members.html">List of all members.</a></p>
@@ -122,6 +123,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae3c259f7615c85ce53a413f6e7ab4b76">performZMPTest</a> (<a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a3b1217b7fa17f76f162be0e12e419d96">performZMPPreviewTest</a> (<a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a49fb64ddafa81f0a5f29a8c0fc5188bd">performSingleStepTest</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#adb2fbd66671321d046cf5e1ca74f5bc1">steppingTest</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae8f7dc629313df7d362e3edd6f45ae10">composePortName</a> (std::string portName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#acd9cf6d2c9a140f789437882d781d963">findZMPPreviewControllerParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab94cb8266e45f49e51396458df7f8708">findGeneralTestsParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
@@ -130,9 +132,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a48e8e823e0a76a662722e05f6bd803e3">findSingleStepTestParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a6b8f21532c8207ec95b64f6548c3b6b1">findZMPVaryingReferenceParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#accdb497fc22b293095290f3d63d5cf72">findMIQPParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#af0f47f61db149b0beabb516f4f244dfc">findSteppingTestParams</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab4148804702e065310a903112bc10162">transformStdVectorToEigenVector</a> (std::vector&lt; Eigen::Vector2d &gt; &amp;fullTraj, int from, int Nc, VectorXd &amp;output)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a70b2375134ae55a041fbf30180ea3a8f">generateZMPStepTrajectoryTEST</a> (double feetSeparation, double period, double duration, double riseTime, double constantReferenceY)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab5bd1eceec03d8b88ffe2b6b07d981c0">generateZMPSingleStepTrajectory</a> (double period, double feetSeparation)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a51ac091a481766030dcedf7327122c19">generateStepPattern</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aebee5b71a15e0b990fb3dad36f335eb5">generateZMPSteppingTrajectory</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab497c47c538b8ac2871ddd706c5e61a9">startSteppinMotherFucker</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">prepareAndsetDesiredCoMTaskState</a> (Eigen::VectorXd comState, bool doSet)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -147,6 +153,15 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#afd997bb00534c57fe1b0d5f37f207386">loop</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#acc23c96509280a29e7331cc1b0fe0576">_stepOrder</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a7bce7b80a798dd4d46dfc93947ea4d31">_stepTargets</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#abddb902c1db56468913945eb8b81c55e">_stepTargetDurations</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aeaed1c4beda89ebe62ba7e3e6c0902dd">_currentlyStepping</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a0006acb41bc17941086f841e7edeb5b3">_waitBeforeNextStep</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a2814e5c3372855c087226778925bafe1">_waitTimeStart</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a7d122ec14817ae7ea6bc5b2aba404950">_currentStepIndex</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a4f76ca724ed725f6f727828e30fcf628">_steppingTrajectory</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsteppingTestParams.html">steppingTestParams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae806c00e966e6d121426288a017aaa7d">_steppingTestParams</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structZmpPreviewParams.html">ZmpPreviewParams</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a9a2cf2d6107ab91fc5bd1d82a3b85a84">_zmpPreviewParams</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classZmpPreviewController.html">ZmpPreviewController</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae570aa07bed9e336eda93f331f3485fb">_zmpPreviewController</a></td></tr>
@@ -362,6 +377,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af0f47f61db149b0beabb516f4f244dfc"></a><!-- doxytag: member="WalkingClient::findSteppingTestParams" ref="af0f47f61db149b0beabb516f4f244dfc" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#af0f47f61db149b0beabb516f4f244dfc">WalkingClient::findSteppingTestParams</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad8eb137c03025ce04cedd4eea58f7a6d"></a><!-- doxytag: member="WalkingClient::findZMPConstRefParams" ref="ad8eb137c03025ce04cedd4eea58f7a6d" args="(yarp::os::ResourceFinder &amp;rf)" -->
 <div class="memitem">
 <div class="memproto">
@@ -413,6 +445,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a51ac091a481766030dcedf7327122c19"></a><!-- doxytag: member="WalkingClient::generateStepPattern" ref="a51ac091a481766030dcedf7327122c19" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#a51ac091a481766030dcedf7327122c19">WalkingClient::generateStepPattern</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Generates a straight line step pattern with step targets, step order, and step durations. Used for testing. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab5bd1eceec03d8b88ffe2b6b07d981c0"></a><!-- doxytag: member="WalkingClient::generateZMPSingleStepTrajectory" ref="ab5bd1eceec03d8b88ffe2b6b07d981c0" args="(double period, double feetSeparation)" -->
 <div class="memitem">
 <div class="memproto">
@@ -437,6 +486,23 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aebee5b71a15e0b990fb3dad36f335eb5"></a><!-- doxytag: member="WalkingClient::generateZMPSteppingTrajectory" ref="aebee5b71a15e0b990fb3dad36f335eb5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Eigen::Vector2d &gt; <a class="el" href="classWalkingClient.html#aebee5b71a15e0b990fb3dad36f335eb5">WalkingClient::generateZMPSteppingTrajectory</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Generates a ZMP trajectory for the STEPPING_TEST. Uses the step pattern generated by <a class="el" href="classWalkingClient.html#a51ac091a481766030dcedf7327122c19">generateStepPattern</a>. </p>
 
 </div>
 </div>
@@ -819,6 +885,40 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab497c47c538b8ac2871ddd706c5e61a9"></a><!-- doxytag: member="WalkingClient::startSteppinMotherFucker" ref="ab497c47c538b8ac2871ddd706c5e61a9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#ab497c47c538b8ac2871ddd706c5e61a9">WalkingClient::startSteppinMotherFucker</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Manages the step switching for the STEPPING_TEST. </p>
+
+</div>
+</div>
+<a class="anchor" id="adb2fbd66671321d046cf5e1ca74f5bc1"></a><!-- doxytag: member="WalkingClient::steppingTest" ref="adb2fbd66671321d046cf5e1ca74f5bc1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#adb2fbd66671321d046cf5e1ca74f5bc1">WalkingClient::steppingTest</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>A test where the robot steps forward in a straight line. Only uses ZMP controller. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab4148804702e065310a903112bc10162"></a><!-- doxytag: member="WalkingClient::transformStdVectorToEigenVector" ref="ab4148804702e065310a903112bc10162" args="(std::vector&lt; Eigen::Vector2d &gt; &amp;fullTraj, int from, int Nc, VectorXd &amp;output)" -->
 <div class="memitem">
 <div class="memproto">
@@ -940,6 +1040,32 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double <a class="el" href="classWalkingClient.html#a7d15e2b9c9ada337280c46d6aadb54f8">WalkingClient::_constantReferenceY</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeaed1c4beda89ebe62ba7e3e6c0902dd"></a><!-- doxytag: member="WalkingClient::_currentlyStepping" ref="aeaed1c4beda89ebe62ba7e3e6c0902dd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classWalkingClient.html#aeaed1c4beda89ebe62ba7e3e6c0902dd">WalkingClient::_currentlyStepping</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7d122ec14817ae7ea6bc5b2aba404950"></a><!-- doxytag: member="WalkingClient::_currentStepIndex" ref="a7d122ec14817ae7ea6bc5b2aba404950" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classWalkingClient.html#a7d122ec14817ae7ea6bc5b2aba404950">WalkingClient::_currentStepIndex</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -1246,6 +1372,71 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acc23c96509280a29e7331cc1b0fe0576"></a><!-- doxytag: member="WalkingClient::_stepOrder" ref="acc23c96509280a29e7331cc1b0fe0576" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a>&gt; <a class="el" href="classWalkingClient.html#acc23c96509280a29e7331cc1b0fe0576">WalkingClient::_stepOrder</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae806c00e966e6d121426288a017aaa7d"></a><!-- doxytag: member="WalkingClient::_steppingTestParams" ref="ae806c00e966e6d121426288a017aaa7d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsteppingTestParams.html">steppingTestParams</a> <a class="el" href="classWalkingClient.html#ae806c00e966e6d121426288a017aaa7d">WalkingClient::_steppingTestParams</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f76ca724ed725f6f727828e30fcf628"></a><!-- doxytag: member="WalkingClient::_steppingTrajectory" ref="a4f76ca724ed725f6f727828e30fcf628" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Eigen::Vector2d&gt; <a class="el" href="classWalkingClient.html#a4f76ca724ed725f6f727828e30fcf628">WalkingClient::_steppingTrajectory</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abddb902c1db56468913945eb8b81c55e"></a><!-- doxytag: member="WalkingClient::_stepTargetDurations" ref="abddb902c1db56468913945eb8b81c55e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classWalkingClient.html#abddb902c1db56468913945eb8b81c55e">WalkingClient::_stepTargetDurations</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7bce7b80a798dd4d46dfc93947ea4d31"></a><!-- doxytag: member="WalkingClient::_stepTargets" ref="a7bce7b80a798dd4d46dfc93947ea4d31" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classWalkingClient.html#a7bce7b80a798dd4d46dfc93947ea4d31">WalkingClient::_stepTargets</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9f19b1a1184cbdbf883cc374c6b6b88f"></a><!-- doxytag: member="WalkingClient::_stopTimeConstComVel" ref="a9f19b1a1184cbdbf883cc374c6b6b88f" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1317,6 +1508,32 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double <a class="el" href="classWalkingClient.html#a144518766ec4eb9eeab230fcb291e20c">WalkingClient::_tTrans</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0006acb41bc17941086f841e7edeb5b3"></a><!-- doxytag: member="WalkingClient::_waitBeforeNextStep" ref="a0006acb41bc17941086f841e7edeb5b3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classWalkingClient.html#a0006acb41bc17941086f841e7edeb5b3">WalkingClient::_waitBeforeNextStep</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2814e5c3372855c087226778925bafe1"></a><!-- doxytag: member="WalkingClient::_waitTimeStart" ref="a2814e5c3372855c087226778925bafe1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classWalkingClient.html#a2814e5c3372855c087226778925bafe1">WalkingClient::_waitTimeStart</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -1517,7 +1734,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classWalkingClient.html">WalkingClient</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 29 2017 23:54:28 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Mar 30 2017 23:55:27 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

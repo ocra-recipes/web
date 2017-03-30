@@ -12,5 +12,6 @@ var searchData=
   ['ssdsalternation',['SSDSAlternation',['../classSSDSAlternation.html',1,'']]],
   ['standingdemoclient',['StandingDemoClient',['../classStandingDemoClient.html',1,'']]],
   ['stepcontroller',['StepController',['../classStepController.html',1,'']]],
-  ['steppingdemoclient',['SteppingDemoClient',['../classSteppingDemoClient.html',1,'']]]
+  ['steppingdemoclient',['SteppingDemoClient',['../classSteppingDemoClient.html',1,'']]],
+  ['steppingtestparams',['steppingTestParams',['../structsteppingTestParams.html',1,'']]]
 ];

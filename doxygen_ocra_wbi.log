@@ -417,6 +417,9 @@ citelist:4: warning: unexpected end of comment while looking for a html descript
   parameter 'output'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h:105: warning: The following parameters of MIQPController::setCOMStateRefInPreviewWindow(unsigned int k, Eigen::VectorXd &comStateRef) are not documented:
   parameter 'k'
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/StepController.h:51: warning: argument 'duration' of command @param is not found in the argument list of StepController::step(FOOT foot, Eigen::Vector3d target, double stepDuration, double stepHeight)
+/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/StepController.h:51: warning: The following parameters of StepController::step(FOOT foot, Eigen::Vector3d target, double stepDuration, double stepHeight) are not documented:
+  parameter 'stepDuration'
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: argument 'ctThreadPtr' of command @param is not found in the argument list of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef)
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-server/include/ocra-icub-server/Thread.h:114: warning: The following parameters of Thread::ControllerRpcServerCallback::ControllerRpcServerCallback(Thread &threadRef) are not documented:
   parameter 'threadRef'
@@ -494,6 +497,7 @@ Generating docs for compound SSDSAlternation...
 Generating docs for compound StandingDemoClient...
 Generating docs for compound StepController...
 Generating docs for compound SteppingDemoClient...
+Generating docs for compound steppingTestParams...
 Generating docs for compound TaskOpsClient...
 Generating docs for compound Thread...
 Generating docs for nested compound Thread::ControllerRpcServerCallback...
@@ -505,8 +509,7 @@ Generating docs for compound ZmpControllerParams...
 Generating docs for compound ZmpPreviewController...
 Generating docs for compound ZmpPreviewParams...
 Generating namespace index...
-Generating docs for namespace MIQP
-Generating docs for compound MIQP::MIQPS/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:202: warning: explicit link request to 'xi' could not be resolved
+Generating docs for name/home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:202: warning: explicit link request to 'xi' could not be resolved
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:182: warning: explicit link request to 'whichFoot' could not be resolved
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:188: warning: explicit link request to 'whichFoot' could not be resolved
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:174: warning: argument 'If' of command @param is not found in the argument list of MIQP::MIQPState::isRobotInSS(FOOT &footInSS)
@@ -516,7 +519,8 @@ Generating docs for compound MIQP::MIQPS/home/travis/build/ocra-recipes/web/ocra
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:153: warning: explicit link request to 'b' could not be resolved
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:156: warning: explicit link request to 'a' could not be resolved
 /home/travis/build/ocra-recipes/web/ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h:156: warning: explicit link request to 'b' could not be resolved
-tate...
+space MIQP
+Generating docs for compound MIQP::MIQPState...
 Generating docs for namespace ocra_icub
 Generating docs for compound ocra_icub::ModelInitializer...
 Generating docs for compound ocra_icub::OcraWbiConversions...
@@ -537,7 +541,36 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-Patching output file 1/1
-symbol cache used 951/65536 hits=54102 misses=951
-lookup cache used 1227/65536 hits=4064 misses=1250
+Generating dot graphs using 29 parallel threads...
+Running dot for graph 1/13
+Running dot for graph 2/13
+Running dot for graph 3/13
+Running dot for graph 4/13
+Running dot for graph 5/13
+Running dot for graph 6/13
+Running dot for graph 7/13
+Running dot for graph 8/13
+Running dot for graph 9/13
+Running dot for graph 10/13
+Running dot for graph 11/13
+Running dot for graph 12/13
+Running dot for graph 13/13
+Patching output file 1/16
+Patching output file 2/16
+Patching output file 3/16
+Patching output file 4/16
+Patching output file 5/16
+Patching output file 6/16
+Patching output file 7/16
+Patching output file 8/16
+Patching output file 9/16
+Patching output file 10/16
+Patching output file 11/16
+Patching output file 12/16
+Patching output file 13/16
+Patching output file 14/16
+Patching output file 15/16
+Patching output file 16/16
+symbol cache used 976/65536 hits=55885 misses=976
+lookup cache used 1258/65536 hits=4165 misses=1282
 finished...

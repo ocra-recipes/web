@@ -41,6 +41,7 @@ var hierarchy =
     [ "StandingDemoClient", "classStandingDemoClient.html", null ],
     [ "StepController", "classStepController.html", null ],
     [ "SteppingDemoClient", "classSteppingDemoClient.html", null ],
+    [ "steppingTestParams", "structsteppingTestParams.html", null ],
     [ "TaskOpsClient", "classTaskOpsClient.html", null ],
     [ "Thread", "classThread.html", null ],
     [ "WalkingClient", "classWalkingClient.html", null ],

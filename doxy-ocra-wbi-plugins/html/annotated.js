@@ -40,6 +40,7 @@ var annotated =
     [ "StandingDemoClient", "classStandingDemoClient.html", "classStandingDemoClient" ],
     [ "StepController", "classStepController.html", "classStepController" ],
     [ "SteppingDemoClient", "classSteppingDemoClient.html", "classSteppingDemoClient" ],
+    [ "steppingTestParams", "structsteppingTestParams.html", "structsteppingTestParams" ],
     [ "TaskOpsClient", "classTaskOpsClient.html", "classTaskOpsClient" ],
     [ "Thread", "classThread.html", "classThread" ],
     [ "WalkingClient", "classWalkingClient.html", "classWalkingClient" ],

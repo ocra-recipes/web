@@ -20,8 +20,11 @@ var searchData=
   ['wbitoocramassmatrix',['wbiToOcraMassMatrix',['../classocra__icub_1_1OcraWbiConversions.html#abaa2b7a9069b60cfb36cb21e89b98177',1,'ocra_icub::OcraWbiConversions']]],
   ['wbitoocrasegjacobian',['wbiToOcraSegJacobian',['../classocra__icub_1_1OcraWbiConversions.html#a25a64172ebb14db9ddf301880a433964',1,'ocra_icub::OcraWbiConversions']]],
   ['wbitoocratwistvector',['wbiToOcraTwistVector',['../classocra__icub_1_1OcraWbiConversions.html#a37c2aea3bf156928cb90a16655c24cc9',1,'ocra_icub::OcraWbiConversions']]],
+  ['wdelta',['wdelta',['../structMIQPParameters.html#ac13ff21321154d5cebba21855ac8357f',1,'MIQPParameters']]],
   ['writedebugdata',['writeDebugData',['../classThread.html#a9af0e98aa9b1de2f5c7bfa2f6e5001a2',1,'Thread']]],
   ['writetofile',['writeToFile',['../classMIQPController.html#a014cab392ddec6085df74f2590af4791',1,'MIQPController']]],
+  ['wss',['wss',['../structMIQPParameters.html#a317395e51ff98506316b9a63cf03d48f',1,'MIQPParameters']]],
+  ['wstep',['wstep',['../structMIQPParameters.html#a284df9b565513a826e92098f0a23f5cc',1,'MIQPParameters']]],
   ['wu',['wu',['../structMIQPParameters.html#aed141afdcc25904d53526a5f2c977427',1,'MIQPParameters']]],
   ['ww',['ww',['../structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0',1,'MIQPParameters']]]
 ];

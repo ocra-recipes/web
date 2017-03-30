@@ -16,7 +16,7 @@ var searchData=
   ['rightfoottarget',['rightFootTarget',['../classSteppingDemoClient.html#abfe6635a0ad50fa4baa6fa10b8c56d9e',1,'SteppingDemoClient']]],
   ['rightlegcontacttask',['rightLegContactTask',['../classStandingDemoClient.html#ad53b834a0927d48917f5b6e830feb0f8',1,'StandingDemoClient']]],
   ['risetime',['riseTime',['../structsingleStepTestParams.html#ac57481df42dfcc5b6414bba37a6872e7',1,'singleStepTestParams']]],
-  ['robot',['robot',['../classocra__icub_1_1OcraWbiModel.html#ae377f000580656227fa9ef69f2f2e71d',1,'ocra_icub::OcraWbiModel']]],
+  ['robot',['robot',['../structMIQPParameters.html#af2f4673b548e119f30a7e90baac268f5',1,'MIQPParameters::robot()'],['../classocra__icub_1_1OcraWbiModel.html#ae377f000580656227fa9ef69f2f2e71d',1,'ocra_icub::OcraWbiModel::robot()']]],
   ['robotinterface',['robotInterface',['../classModule.html#a0d3efedabcef6ec0db88011ccc2e7205',1,'Module::robotInterface()'],['../classocra__icub_1_1ModelInitializer.html#a86b4917ca6ebc3ec9239a4c417cb6b2a',1,'ocra_icub::ModelInitializer::robotInterface()']]],
   ['robotname',['robotName',['../classIcubControllerServer.html#a041d6687258c36677914b1d15f18e153',1,'IcubControllerServer::robotName()'],['../classOcraControllerOptions.html#a897948011f23b08ba20e1707033458d4',1,'OcraControllerOptions::robotName()'],['../classocra__icub_1_1ModelInitializer.html#aef3121c44b93b22cf24c4ccbbc477128',1,'ocra_icub::ModelInitializer::robotName()']]],
   ['rootframevelocity',['rootFrameVelocity',['../classIcubControllerServer.html#a032c035880f8ec2b77ef14521be6e75a',1,'IcubControllerServer']]],

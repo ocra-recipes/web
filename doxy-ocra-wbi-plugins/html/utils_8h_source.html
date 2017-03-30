@@ -107,67 +107,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00014"></a><a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa648ff770c850b8352c3306c1659e8157">00014</a>     <a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa648ff770c850b8352c3306c1659e8157">ZMP_CONSTANT_REFERENCE</a>=0, <span class="comment">/*Constant zmp reference (step setpoint). Can be specified through config file with value 0.*/</span>
 <a name="l00015"></a><a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa97cb99b5fec95c1f2945d3b33455b139">00015</a>     <a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa97cb99b5fec95c1f2945d3b33455b139">ZMP_VARYING_REFERENCE</a>, <span class="comment">/*Sinusoidal zmp reference. The parameters can be specified through config file with value 1.*/</span>
 <a name="l00016"></a><a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaad20e2ca429f4e3ba50e1de174c92af60">00016</a>     <a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaad20e2ca429f4e3ba50e1de174c92af60">COM_LIN_VEL_CONSTANT_REFERENCE</a>, <span class="comment">/*Constant COM linear velocity. The zmp controller does nothing. Used to tuned the com task level gains.*/</span>
-<a name="l00017"></a><a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa4cf77e5736bd9a94342342d774b2e264">00017</a>     <a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa4cf77e5736bd9a94342342d774b2e264">SINGLE_STEP</a> <span class="comment">/* Performs one single step with the right foot using also the zmp preview controller */</span>
-<a name="l00018"></a>00018 };
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="structsingleStepTestParams.html">00020</a> <span class="keyword">struct </span><a class="code" href="structsingleStepTestParams.html">singleStepTestParams</a> {
-<a name="l00021"></a><a class="code" href="structsingleStepTestParams.html#a64dfd6827254af3491d5ef777a365106">00021</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a64dfd6827254af3491d5ef777a365106">totalDuration</a>;
-<a name="l00022"></a><a class="code" href="structsingleStepTestParams.html#a48f06adc433c0802b26a393afa66624e">00022</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a48f06adc433c0802b26a393afa66624e">offset</a>;
-<a name="l00023"></a><a class="code" href="structsingleStepTestParams.html#a4e63c961cc10a9191f634ea6f7d9d34c">00023</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a4e63c961cc10a9191f634ea6f7d9d34c">SSduration</a>;
-<a name="l00024"></a><a class="code" href="structsingleStepTestParams.html#ac57481df42dfcc5b6414bba37a6872e7">00024</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#ac57481df42dfcc5b6414bba37a6872e7">riseTime</a>;
-<a name="l00025"></a><a class="code" href="structsingleStepTestParams.html#a17bf92e96d709f6cead23bcdcda88d17">00025</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a17bf92e96d709f6cead23bcdcda88d17">stepLength</a>;
-<a name="l00026"></a><a class="code" href="structsingleStepTestParams.html#a1b6267edaee10af0a7162065d0ba7a20">00026</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a1b6267edaee10af0a7162065d0ba7a20">stepHeight</a>;
-<a name="l00027"></a>00027 };
-<a name="l00028"></a>00028 
-<a name="l00029"></a><a class="code" href="structMIQPParameters.html">00029</a> <span class="keyword">struct </span><a class="code" href="structMIQPParameters.html">MIQPParameters</a> {
-<a name="l00030"></a>00030     <span class="comment">/* Size of preview window */</span>
-<a name="l00031"></a><a class="code" href="structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c">00031</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c">N</a>;
-<a name="l00032"></a>00032     <span class="comment">/* Constant com height */</span>
-<a name="l00033"></a><a class="code" href="structMIQPParameters.html#ab8158e2bf119d70c9856b6a277e3c42a">00033</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#ab8158e2bf119d70c9856b6a277e3c42a">cz</a>;
-<a name="l00034"></a>00034     <span class="comment">/* Gavity acceleration */</span>
-<a name="l00035"></a><a class="code" href="structMIQPParameters.html#a31eca71d200b5b1468bd60b3266d0688">00035</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a31eca71d200b5b1468bd60b3266d0688">g</a>;
-<a name="l00036"></a>00036     <span class="comment">/* Thread period */</span>
-<a name="l00037"></a><a class="code" href="structMIQPParameters.html#ab4fca30503423e047dc55d27f0c9f3c9">00037</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structMIQPParameters.html#ab4fca30503423e047dc55d27f0c9f3c9">dt</a>;
-<a name="l00038"></a>00038     <span class="comment">/* Home directory where logged data will be saved */</span>
-<a name="l00039"></a><a class="code" href="structMIQPParameters.html#a351843e2933021d2ed3abb00a9d001ff">00039</a>     std::string <a class="code" href="structMIQPParameters.html#a351843e2933021d2ed3abb00a9d001ff">home</a>;
-<a name="l00040"></a>00040     <span class="comment">/* Walking Performance Cost Weight */</span>
-<a name="l00041"></a><a class="code" href="structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0">00041</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0">ww</a>;
-<a name="l00042"></a>00042     <span class="comment">/* Balance Performance Cost Weight */</span>
-<a name="l00043"></a><a class="code" href="structMIQPParameters.html#a6bc828e6060bfd69c3d6353a460de86b">00043</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a6bc828e6060bfd69c3d6353a460de86b">wb</a>;
-<a name="l00044"></a>00044     <span class="comment">/* Jerk regularization Cost Weight */</span>
-<a name="l00045"></a><a class="code" href="structMIQPParameters.html#aed141afdcc25904d53526a5f2c977427">00045</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#aed141afdcc25904d53526a5f2c977427">wu</a>;
-<a name="l00046"></a>00046     <span class="comment">/* X Boundary in Constancy constraints */</span>
-<a name="l00047"></a><a class="code" href="structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231">00047</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231">sx_constancy</a>;
-<a name="l00048"></a>00048     <span class="comment">/* Y Boundary in Constancy constraints */</span>
-<a name="l00049"></a><a class="code" href="structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38">00049</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38">sy_constancy</a>;
-<a name="l00050"></a>00050     <span class="comment">/* X Boundary in Single Support Constraints */</span>
-<a name="l00051"></a><a class="code" href="structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9">00051</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9">sx_ss</a>;
-<a name="l00052"></a>00052     <span class="comment">/* Y Boundary in Single Support Constraints */</span>
-<a name="l00053"></a><a class="code" href="structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1">00053</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1">sy_ss</a>;
-<a name="l00054"></a>00054     <span class="comment">/* CoM State Reference Selection Vector. If your CoM State Reference consists only of forward velocity</span>
-<a name="l00055"></a>00055 <span class="comment">     * then this vector is: [0 0 1 1 0 0] */</span>
-<a name="l00056"></a><a class="code" href="structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f">00056</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f">hx_ref</a>;
-<a name="l00057"></a><a class="code" href="structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996">00057</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996">hy_ref</a>;
-<a name="l00058"></a><a class="code" href="structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e">00058</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e">dhx_ref</a>;
-<a name="l00059"></a><a class="code" href="structMIQPParameters.html#a816bb15b6417ac8387adbaac2f74e198">00059</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a816bb15b6417ac8387adbaac2f74e198">dhy_ref</a>;
-<a name="l00060"></a><a class="code" href="structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52">00060</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52">ddhx_ref</a>;
-<a name="l00061"></a><a class="code" href="structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9">00061</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9">ddhy_ref</a>;
-<a name="l00062"></a>00062     <span class="comment">/* Add Shape Constraints? */</span>
-<a name="l00063"></a><a class="code" href="structMIQPParameters.html#a718ac69205eb5fbb51f58cd59176a3ff">00063</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a718ac69205eb5fbb51f58cd59176a3ff">shapeConstraints</a>;
-<a name="l00064"></a>00064     <span class="comment">/* Add Admissibility Constraints? */</span>
-<a name="l00065"></a><a class="code" href="structMIQPParameters.html#ae8e541722b3e3664ab516676aa1c16be">00065</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#ae8e541722b3e3664ab516676aa1c16be">admissibilityConstraints</a>;
-<a name="l00066"></a>00066     <span class="comment">/* Add CoP Constraints? */</span>
-<a name="l00067"></a><a class="code" href="structMIQPParameters.html#a3a0fd04f9e8767097e44e02a740796bc">00067</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a3a0fd04f9e8767097e44e02a740796bc">copConstraints</a>;
-<a name="l00068"></a>00068     <span class="comment">/* Add walking constraints? */</span>
-<a name="l00069"></a><a class="code" href="structMIQPParameters.html#af7cbaa08836e17417f9f5c170b55f1bc">00069</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#af7cbaa08836e17417f9f5c170b55f1bc">walkingConstraints</a>;
-<a name="l00070"></a>00070     <span class="comment">/* Add regularization terms?*/</span>
-<a name="l00071"></a><a class="code" href="structMIQPParameters.html#a7e5417e18e6797739def8f916c3efc40">00071</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a7e5417e18e6797739def8f916c3efc40">addRegularization</a>;
-<a name="l00072"></a>00072 };
-<a name="l00073"></a>00073 
-<a name="l00074"></a><a class="code" href="utils_8h.html#ab0e06eaa253307db2bac3c9b0a9e6b10">00074</a> <span class="preprocessor">#define STATE_VECTOR_SIZE 16</span>
-<a name="l00075"></a><a class="code" href="utils_8h.html#aa2f26540ce870ca91503bb6746a52e69">00075</a> <span class="preprocessor"></span><span class="preprocessor">#define INPUT_VECTOR_SIZE 12</span>
-<a name="l00076"></a>00076 <span class="preprocessor"></span>
-<a name="l00077"></a>00077 <span class="preprocessor">#endif</span>
+<a name="l00017"></a><a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa4cf77e5736bd9a94342342d774b2e264">00017</a>     <a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa4cf77e5736bd9a94342342d774b2e264">SINGLE_STEP</a>, <span class="comment">/* Performs one single step with the right foot using also the zmp preview controller */</span>
+<a name="l00018"></a><a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa756fb39c1ccfe2b4598de12825522f93">00018</a>     <a class="code" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa756fb39c1ccfe2b4598de12825522f93">STEPPING_TEST</a> <span class="comment">/* Performs one single step with the right foot using also the zmp preview controller */</span>
+<a name="l00019"></a>00019 };
+<a name="l00020"></a>00020 
+<a name="l00021"></a><a class="code" href="structsingleStepTestParams.html">00021</a> <span class="keyword">struct </span><a class="code" href="structsingleStepTestParams.html">singleStepTestParams</a> {
+<a name="l00022"></a><a class="code" href="structsingleStepTestParams.html#a64dfd6827254af3491d5ef777a365106">00022</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a64dfd6827254af3491d5ef777a365106">totalDuration</a>;
+<a name="l00023"></a><a class="code" href="structsingleStepTestParams.html#a48f06adc433c0802b26a393afa66624e">00023</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a48f06adc433c0802b26a393afa66624e">offset</a>;
+<a name="l00024"></a><a class="code" href="structsingleStepTestParams.html#a4e63c961cc10a9191f634ea6f7d9d34c">00024</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a4e63c961cc10a9191f634ea6f7d9d34c">SSduration</a>;
+<a name="l00025"></a><a class="code" href="structsingleStepTestParams.html#ac57481df42dfcc5b6414bba37a6872e7">00025</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#ac57481df42dfcc5b6414bba37a6872e7">riseTime</a>;
+<a name="l00026"></a><a class="code" href="structsingleStepTestParams.html#a17bf92e96d709f6cead23bcdcda88d17">00026</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a17bf92e96d709f6cead23bcdcda88d17">stepLength</a>;
+<a name="l00027"></a><a class="code" href="structsingleStepTestParams.html#a1b6267edaee10af0a7162065d0ba7a20">00027</a>     <span class="keywordtype">double</span> <a class="code" href="structsingleStepTestParams.html#a1b6267edaee10af0a7162065d0ba7a20">stepHeight</a>;
+<a name="l00028"></a>00028 };
+<a name="l00029"></a>00029 
+<a name="l00030"></a><a class="code" href="structsteppingTestParams.html">00030</a> <span class="keyword">struct </span><a class="code" href="structsteppingTestParams.html">steppingTestParams</a> {
+<a name="l00031"></a><a class="code" href="structsteppingTestParams.html#aa3a8b8b10e589919331ac9123d9276dc">00031</a>     <span class="keywordtype">int</span>    <a class="code" href="structsteppingTestParams.html#aa3a8b8b10e589919331ac9123d9276dc">nSteps</a>;
+<a name="l00032"></a><a class="code" href="structsteppingTestParams.html#ab713c909b480eb82d614340836639fa4">00032</a>     <span class="keywordtype">double</span> <a class="code" href="structsteppingTestParams.html#ab713c909b480eb82d614340836639fa4">stepDuration</a>;
+<a name="l00033"></a><a class="code" href="structsteppingTestParams.html#aa20658768b31d91b09d9225d0fbf0df2">00033</a>     <span class="keywordtype">double</span> <a class="code" href="structsteppingTestParams.html#aa20658768b31d91b09d9225d0fbf0df2">stepLength</a>;
+<a name="l00034"></a><a class="code" href="structsteppingTestParams.html#aa40d952e16a8c4ea0c48983fbc3b95b2">00034</a>     <span class="keywordtype">double</span> <a class="code" href="structsteppingTestParams.html#aa40d952e16a8c4ea0c48983fbc3b95b2">stepHeight</a>;
+<a name="l00035"></a>00035 };
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="structMIQPParameters.html">00037</a> <span class="keyword">struct </span><a class="code" href="structMIQPParameters.html">MIQPParameters</a> {
+<a name="l00038"></a>00038     <span class="comment">/* Size of preview window */</span>
+<a name="l00039"></a><a class="code" href="structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c">00039</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c">N</a>;
+<a name="l00040"></a>00040     <span class="comment">/* Constant com height */</span>
+<a name="l00041"></a><a class="code" href="structMIQPParameters.html#ab8158e2bf119d70c9856b6a277e3c42a">00041</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#ab8158e2bf119d70c9856b6a277e3c42a">cz</a>;
+<a name="l00042"></a>00042     <span class="comment">/* Gavity acceleration */</span>
+<a name="l00043"></a><a class="code" href="structMIQPParameters.html#a31eca71d200b5b1468bd60b3266d0688">00043</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a31eca71d200b5b1468bd60b3266d0688">g</a>;
+<a name="l00044"></a>00044     <span class="comment">/* Thread period */</span>
+<a name="l00045"></a><a class="code" href="structMIQPParameters.html#ab4fca30503423e047dc55d27f0c9f3c9">00045</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structMIQPParameters.html#ab4fca30503423e047dc55d27f0c9f3c9">dt</a>;
+<a name="l00046"></a>00046     <span class="comment">/* Home directory where logged data will be saved */</span>
+<a name="l00047"></a><a class="code" href="structMIQPParameters.html#a351843e2933021d2ed3abb00a9d001ff">00047</a>     std::string <a class="code" href="structMIQPParameters.html#a351843e2933021d2ed3abb00a9d001ff">home</a>;
+<a name="l00048"></a>00048     <span class="comment">/* Walking Performance Cost Weight */</span>
+<a name="l00049"></a><a class="code" href="structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0">00049</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0">ww</a>;
+<a name="l00050"></a>00050     <span class="comment">/* Balance Performance Cost Weight */</span>
+<a name="l00051"></a><a class="code" href="structMIQPParameters.html#a6bc828e6060bfd69c3d6353a460de86b">00051</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a6bc828e6060bfd69c3d6353a460de86b">wb</a>;
+<a name="l00052"></a>00052     <span class="comment">/* Jerk regularization Cost Weight */</span>
+<a name="l00053"></a><a class="code" href="structMIQPParameters.html#aed141afdcc25904d53526a5f2c977427">00053</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#aed141afdcc25904d53526a5f2c977427">wu</a>;
+<a name="l00054"></a>00054     <span class="comment">/* Regularization weight to avoid resting on one foot */</span>
+<a name="l00055"></a><a class="code" href="structMIQPParameters.html#a317395e51ff98506316b9a63cf03d48f">00055</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a317395e51ff98506316b9a63cf03d48f">wss</a>;
+<a name="l00056"></a>00056     <span class="comment">/* Regularization weight to minimize stepping */</span>
+<a name="l00057"></a><a class="code" href="structMIQPParameters.html#a284df9b565513a826e92098f0a23f5cc">00057</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a284df9b565513a826e92098f0a23f5cc">wstep</a>;
+<a name="l00058"></a>00058     <span class="comment">/* Regularization weight on delta*/</span>
+<a name="l00059"></a><a class="code" href="structMIQPParameters.html#ac13ff21321154d5cebba21855ac8357f">00059</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#ac13ff21321154d5cebba21855ac8357f">wdelta</a>;
+<a name="l00060"></a>00060     <span class="comment">/* X Boundary in Constancy constraints */</span>
+<a name="l00061"></a><a class="code" href="structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231">00061</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231">sx_constancy</a>;
+<a name="l00062"></a>00062     <span class="comment">/* Y Boundary in Constancy constraints */</span>
+<a name="l00063"></a><a class="code" href="structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38">00063</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a1dd5e07b3f05ddf30ecbe878caf4de38">sy_constancy</a>;
+<a name="l00064"></a>00064     <span class="comment">/* X Boundary in Single Support Constraints */</span>
+<a name="l00065"></a><a class="code" href="structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9">00065</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9">sx_ss</a>;
+<a name="l00066"></a>00066     <span class="comment">/* Y Boundary in Single Support Constraints */</span>
+<a name="l00067"></a><a class="code" href="structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1">00067</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1">sy_ss</a>;
+<a name="l00068"></a>00068     <span class="comment">/* CoM State Reference Selection Vector. If your CoM State Reference consists only of forward velocity</span>
+<a name="l00069"></a>00069 <span class="comment">     * then this vector is: [0 0 1 1 0 0] */</span>
+<a name="l00070"></a><a class="code" href="structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f">00070</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f">hx_ref</a>;
+<a name="l00071"></a><a class="code" href="structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996">00071</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996">hy_ref</a>;
+<a name="l00072"></a><a class="code" href="structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e">00072</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e">dhx_ref</a>;
+<a name="l00073"></a><a class="code" href="structMIQPParameters.html#a816bb15b6417ac8387adbaac2f74e198">00073</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a816bb15b6417ac8387adbaac2f74e198">dhy_ref</a>;
+<a name="l00074"></a><a class="code" href="structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52">00074</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52">ddhx_ref</a>;
+<a name="l00075"></a><a class="code" href="structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9">00075</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9">ddhy_ref</a>;
+<a name="l00076"></a>00076     <span class="comment">/* Add Shape Constraints? */</span>
+<a name="l00077"></a><a class="code" href="structMIQPParameters.html#a718ac69205eb5fbb51f58cd59176a3ff">00077</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a718ac69205eb5fbb51f58cd59176a3ff">shapeConstraints</a>;
+<a name="l00078"></a>00078     <span class="comment">/* Add Admissibility Constraints? */</span>
+<a name="l00079"></a><a class="code" href="structMIQPParameters.html#ae8e541722b3e3664ab516676aa1c16be">00079</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#ae8e541722b3e3664ab516676aa1c16be">admissibilityConstraints</a>;
+<a name="l00080"></a>00080     <span class="comment">/* Add CoP Constraints? */</span>
+<a name="l00081"></a><a class="code" href="structMIQPParameters.html#a3a0fd04f9e8767097e44e02a740796bc">00081</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a3a0fd04f9e8767097e44e02a740796bc">copConstraints</a>;
+<a name="l00082"></a>00082     <span class="comment">/* Add walking constraints? */</span>
+<a name="l00083"></a><a class="code" href="structMIQPParameters.html#af7cbaa08836e17417f9f5c170b55f1bc">00083</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#af7cbaa08836e17417f9f5c170b55f1bc">walkingConstraints</a>;
+<a name="l00084"></a>00084     <span class="comment">/* Add regularization terms?*/</span>
+<a name="l00085"></a><a class="code" href="structMIQPParameters.html#a7e5417e18e6797739def8f916c3efc40">00085</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a7e5417e18e6797739def8f916c3efc40">addRegularization</a>;
+<a name="l00086"></a>00086     <span class="comment">/* robot name */</span>
+<a name="l00087"></a><a class="code" href="structMIQPParameters.html#af2f4673b548e119f30a7e90baac268f5">00087</a>     std::string <a class="code" href="structMIQPParameters.html#af2f4673b548e119f30a7e90baac268f5">robot</a>;
+<a name="l00088"></a>00088 };
+<a name="l00089"></a>00089 
+<a name="l00090"></a><a class="code" href="utils_8h.html#ab0e06eaa253307db2bac3c9b0a9e6b10">00090</a> <span class="preprocessor">#define STATE_VECTOR_SIZE 16</span>
+<a name="l00091"></a><a class="code" href="utils_8h.html#aa2f26540ce870ca91503bb6746a52e69">00091</a> <span class="preprocessor"></span><span class="preprocessor">#define INPUT_VECTOR_SIZE 12</span>
+<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00093"></a>00093 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -188,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="utils_8h.html">utils.h</a>      </li>
 
-    <li class="footer">Generated on Wed Mar 29 2017 23:54:28 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Mar 30 2017 23:55:27 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

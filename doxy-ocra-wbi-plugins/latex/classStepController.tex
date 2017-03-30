@@ -20,6 +20,10 @@ void \hyperlink{classStepController_a6184693a199603c945250a58ceb8d9a2}{activate\
 \item 
 bool \hyperlink{classStepController_a1bfcb66d504440f0cc7383ad688dad5c}{do\-Step\-With\-Max\-Velocity} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot, \-Eigen\-::\-Vector3d \hyperlink{classStepController_a588d5b149eb4a6877e89ecff37d0f91d}{target}, double step\-Height)
 \item 
+void \hyperlink{classStepController_ab8ca9c17211622c4902ce8adc89f9ca5}{step} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot, \-Eigen\-::\-Vector3d \hyperlink{classStepController_a588d5b149eb4a6877e89ecff37d0f91d}{target}, double step\-Duration, double step\-Height)
+\item 
+bool \hyperlink{classStepController_ac8e210ab8acf9c7b91bce3396fff20c8}{is\-Step\-Finished} (\hyperlink{utils_8h_a4b6a8e135f90bd56e5a57a60efb42529}{\-F\-O\-O\-T} foot)
+\item 
 \-Eigen\-::\-Vector3d \hyperlink{classStepController_aa168e028dc086859400e1c93c0becdd2}{get\-Left\-Foot\-Position} ()
 \item 
 \-Eigen\-::\-Vector3d \hyperlink{classStepController_aaa7e389226a30582be8c8a724661a921}{get\-Right\-Foot\-Position} ()
@@ -207,6 +211,20 @@ int \hyperlink{classStepController_a8b98494b6b9d13b41c6838d127078085}{\-\_\-peri
 )}}\label{classStepController_a8f061f201c651d920ca02f7daa07adfe}
 \begin{DoxyRefDesc}{\-Todo}
 \item[\hyperlink{todo__todo000009}{\-Todo}]\-This max velocity must be compatible with the one specified in the linar constraints \end{DoxyRefDesc}
+\hypertarget{classStepController_ac8e210ab8acf9c7b91bce3396fff20c8}{\index{\-Step\-Controller@{\-Step\-Controller}!is\-Step\-Finished@{is\-Step\-Finished}}
+\index{is\-Step\-Finished@{is\-Step\-Finished}!StepController@{\-Step\-Controller}}
+\subsubsection[{is\-Step\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Step\-Controller\-::is\-Step\-Finished} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{foot}
+\end{DoxyParamCaption}
+)}}\label{classStepController_ac8e210ab8acf9c7b91bce3396fff20c8}
+\-Checks if the step has reached it's target locations and if this is true then re-\/activates the foot contacts.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T (whichever is stepping currently) \\
+\hline
+\end{DoxyParams}
 \hypertarget{classStepController_a9e2415755548f47301277feb7a376270}{\index{\-Step\-Controller@{\-Step\-Controller}!is\-Trajectory\-Finished@{is\-Trajectory\-Finished}}
 \index{is\-Trajectory\-Finished@{is\-Trajectory\-Finished}!StepController@{\-Step\-Controller}}
 \subsubsection[{is\-Trajectory\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Step\-Controller\-::is\-Trajectory\-Finished} (
@@ -214,6 +232,29 @@ int \hyperlink{classStepController_a8b98494b6b9d13b41c6838d127078085}{\-\_\-peri
 \item[{{\bf \-F\-O\-O\-T}}]{foot}
 \end{DoxyParamCaption}
 )}}\label{classStepController_a9e2415755548f47301277feb7a376270}
+\hypertarget{classStepController_ab8ca9c17211622c4902ce8adc89f9ca5}{\index{\-Step\-Controller@{\-Step\-Controller}!step@{step}}
+\index{step@{step}!StepController@{\-Step\-Controller}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Step\-Controller\-::step} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-F\-O\-O\-T}}]{foot, }
+\item[{\-Eigen\-::\-Vector3d}]{target, }
+\item[{double}]{step\-Duration, }
+\item[{double}]{step\-Height}
+\end{DoxyParamCaption}
+)}}\label{classStepController_ab8ca9c17211622c4902ce8adc89f9ca5}
+\-Make a step with foot with a specific duration with a specific height.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em foot} & \-L\-E\-F\-T\-\_\-\-F\-O\-O\-T or \-R\-I\-G\-H\-T\-\_\-\-F\-O\-O\-T. \\
+\hline
+{\em target} & x,y,z location of where the foot should land. \\
+\hline
+{\em duration} & \-How long the step should take. \\
+\hline
+{\em step\-Height} & \-How high the foot should lift. \\
+\hline
+\end{DoxyParams}
 \hypertarget{classStepController_a48224628b92c088a34d9db4a14f75f1a}{\index{\-Step\-Controller@{\-Step\-Controller}!stop@{stop}}
 \index{stop@{stop}!StepController@{\-Step\-Controller}}
 \subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Step\-Controller\-::stop} (

@@ -9,5 +9,6 @@ var searchData=
   ['isbalanced',['isBalanced',['../classSteppingDemoClient.html#ad8fbc186267a47a73bb77e78199f2b8c',1,'SteppingDemoClient']]],
   ['isfootincontact',['isFootInContact',['../classSteppingDemoClient.html#aeeaa9fac47e3e5a141647b07fa2feaa3',1,'SteppingDemoClient::isFootInContact()'],['../classMIQP_1_1MIQPState.html#abc509a2d35f1d97a9ebcd1352943dadc',1,'MIQP::MIQPState::isFootInContact()']]],
   ['isrobotinss',['isRobotInSS',['../classMIQP_1_1MIQPState.html#ac098f6c3e6b585c45a5dc24d455f15c2',1,'MIQP::MIQPState']]],
+  ['isstepfinished',['isStepFinished',['../classStepController.html#ac8e210ab8acf9c7b91bce3396fff20c8',1,'StepController']]],
   ['istrajectoryfinished',['isTrajectoryFinished',['../classStepController.html#a9e2415755548f47301277feb7a376270',1,'StepController']]]
 ];

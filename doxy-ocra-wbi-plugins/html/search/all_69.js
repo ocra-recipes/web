@@ -22,5 +22,6 @@ var searchData=
   ['ismovingcom',['isMovingCoM',['../classSteppingDemoClient.html#ad7e3950d053af7c1aca33b3e7c3b20c5',1,'SteppingDemoClient']]],
   ['ispausing',['isPausing',['../classSteppingDemoClient.html#a29e7765300c7d2e2d5108025fbdcbc2c',1,'SteppingDemoClient']]],
   ['isrobotinss',['isRobotInSS',['../classMIQP_1_1MIQPState.html#ac098f6c3e6b585c45a5dc24d455f15c2',1,'MIQP::MIQPState']]],
+  ['isstepfinished',['isStepFinished',['../classStepController.html#ac8e210ab8acf9c7b91bce3396fff20c8',1,'StepController']]],
   ['istrajectoryfinished',['isTrajectoryFinished',['../classStepController.html#a9e2415755548f47301277feb7a376270',1,'StepController']]]
 ];

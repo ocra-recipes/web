@@ -14,6 +14,7 @@ var structMIQPParameters =
     [ "hx_ref", "structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f", null ],
     [ "hy_ref", "structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996", null ],
     [ "N", "structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c", null ],
+    [ "robot", "structMIQPParameters.html#af2f4673b548e119f30a7e90baac268f5", null ],
     [ "shapeConstraints", "structMIQPParameters.html#a718ac69205eb5fbb51f58cd59176a3ff", null ],
     [ "sx_constancy", "structMIQPParameters.html#ae7f08901a6a4bd6850cf232496d1c231", null ],
     [ "sx_ss", "structMIQPParameters.html#af8a016a12ecffd0751307c7d869472e9", null ],
@@ -21,6 +22,9 @@ var structMIQPParameters =
     [ "sy_ss", "structMIQPParameters.html#a3c473019e93f8191f288edfe6999f4c1", null ],
     [ "walkingConstraints", "structMIQPParameters.html#af7cbaa08836e17417f9f5c170b55f1bc", null ],
     [ "wb", "structMIQPParameters.html#a6bc828e6060bfd69c3d6353a460de86b", null ],
+    [ "wdelta", "structMIQPParameters.html#ac13ff21321154d5cebba21855ac8357f", null ],
+    [ "wss", "structMIQPParameters.html#a317395e51ff98506316b9a63cf03d48f", null ],
+    [ "wstep", "structMIQPParameters.html#a284df9b565513a826e92098f0a23f5cc", null ],
     [ "wu", "structMIQPParameters.html#aed141afdcc25904d53526a5f2c977427", null ],
     [ "ww", "structMIQPParameters.html#a7223a1cda1e4565d18729f1e7bba87e0", null ]
 ];

@@ -1,6 +1,6 @@
 var classMIQP_1_1MIQPState =
 [
-    [ "MIQPState", "classMIQP_1_1MIQPState.html#aaaf6b0ca121e6a74b61605634dbb5fc3", null ],
+    [ "MIQPState", "classMIQP_1_1MIQPState.html#a85031fb1a8bca02c253f8669aba70f09", null ],
     [ "~MIQPState", "classMIQP_1_1MIQPState.html#a1f2f14c183d11b3a1e323b59fe47020b", null ],
     [ "getFullState", "classMIQP_1_1MIQPState.html#ae1d43385c4b25dced6952ffdfbf5043a", null ],
     [ "getLeftFootPosition", "classMIQP_1_1MIQPState.html#a7a6c0d1fc5b3fb66d321867f9618e013", null ],
