@@ -13,6 +13,7 @@ var structMIQPParameters =
     [ "home", "structMIQPParameters.html#a351843e2933021d2ed3abb00a9d001ff", null ],
     [ "hx_ref", "structMIQPParameters.html#a0346212871459ae33b79af6f9af49d5f", null ],
     [ "hy_ref", "structMIQPParameters.html#a09fe82db83af3f8ab0e891968daa7996", null ],
+    [ "marginCoPBounds", "structMIQPParameters.html#a5befafbd8312ce18fc57bf32ccb6a16c", null ],
     [ "N", "structMIQPParameters.html#a7545bc29708292cbfca22b0446180f7c", null ],
     [ "robot", "structMIQPParameters.html#af2f4673b548e119f30a7e90baac268f5", null ],
     [ "shapeConstraints", "structMIQPParameters.html#a718ac69205eb5fbb51f58cd59176a3ff", null ],

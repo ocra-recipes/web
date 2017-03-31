@@ -4,6 +4,7 @@ var searchData=
   ['m_5ffull',['M_full',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#af57ebe4c5c15477a9592dd91a5c96f12',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['m_5ffull_5frm',['M_full_rm',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6ed8d69d83b0321920c0f79cf8e58bde',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['maintainfinalposture',['maintainFinalPosture',['../classOcraControllerOptions.html#ae7b16a5b8264abd18ee8761eb1091ccf',1,'OcraControllerOptions']]],
+  ['margincopbounds',['marginCoPBounds',['../structMIQPParameters.html#a5befafbd8312ce18fc57bf32ccb6a16c',1,'MIQPParameters']]],
   ['maxacc',['maxAcc',['../classStandingDemoClient.html#abc06fc0343cbca7a3faac4dbb1eaa842',1,'StandingDemoClient']]],
   ['maxtorques',['maxTorques',['../classThread.html#af28a4fcbbcbf77c42237c0be75a25a54',1,'Thread']]],
   ['maxvel',['maxVel',['../classStandingDemoClient.html#a638e427aef4c4dc6fa38081ab5f9f405',1,'StandingDemoClient']]],

@@ -9,6 +9,7 @@ var searchData=
   ['main_2ecpp',['main.cpp',['../ocra-icub-clients_2walking-client_2src_2main_8cpp.html',1,'']]],
   ['main_2ecpp',['main.cpp',['../ocra-icub-clients_2sitting-demo_2src_2main_8cpp.html',1,'']]],
   ['maintainfinalposture',['maintainFinalPosture',['../classOcraControllerOptions.html#ae7b16a5b8264abd18ee8761eb1091ccf',1,'OcraControllerOptions']]],
+  ['margincopbounds',['marginCoPBounds',['../structMIQPParameters.html#a5befafbd8312ce18fc57bf32ccb6a16c',1,'MIQPParameters']]],
   ['matrixxdrm',['MatrixXdRm',['../namespaceocra__icub.html#aa5e36a19ed031c28ca83c207bd7dd83f',1,'ocra_icub']]],
   ['maxacc',['maxAcc',['../classStandingDemoClient.html#abc06fc0343cbca7a3faac4dbb1eaa842',1,'StandingDemoClient']]],
   ['maxtorques',['maxTorques',['../classThread.html#af28a4fcbbcbf77c42237c0be75a25a54',1,'Thread']]],

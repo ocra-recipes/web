@@ -178,12 +178,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00085"></a><a class="code" href="structMIQPParameters.html#a7e5417e18e6797739def8f916c3efc40">00085</a>     <span class="keywordtype">bool</span> <a class="code" href="structMIQPParameters.html#a7e5417e18e6797739def8f916c3efc40">addRegularization</a>;
 <a name="l00086"></a>00086     <span class="comment">/* robot name */</span>
 <a name="l00087"></a><a class="code" href="structMIQPParameters.html#af2f4673b548e119f30a7e90baac268f5">00087</a>     std::string <a class="code" href="structMIQPParameters.html#af2f4673b548e119f30a7e90baac268f5">robot</a>;
-<a name="l00088"></a>00088 };
-<a name="l00089"></a>00089 
-<a name="l00090"></a><a class="code" href="utils_8h.html#ab0e06eaa253307db2bac3c9b0a9e6b10">00090</a> <span class="preprocessor">#define STATE_VECTOR_SIZE 16</span>
-<a name="l00091"></a><a class="code" href="utils_8h.html#aa2f26540ce870ca91503bb6746a52e69">00091</a> <span class="preprocessor"></span><span class="preprocessor">#define INPUT_VECTOR_SIZE 12</span>
-<a name="l00092"></a>00092 <span class="preprocessor"></span>
-<a name="l00093"></a>00093 <span class="preprocessor">#endif</span>
+<a name="l00088"></a>00088     <span class="comment">/* Distance from actual CoP boundaries */</span>
+<a name="l00089"></a><a class="code" href="structMIQPParameters.html#a5befafbd8312ce18fc57bf32ccb6a16c">00089</a>     <span class="keywordtype">double</span> <a class="code" href="structMIQPParameters.html#a5befafbd8312ce18fc57bf32ccb6a16c">marginCoPBounds</a>;
+<a name="l00090"></a>00090 };
+<a name="l00091"></a>00091 
+<a name="l00092"></a><a class="code" href="utils_8h.html#ab0e06eaa253307db2bac3c9b0a9e6b10">00092</a> <span class="preprocessor">#define STATE_VECTOR_SIZE 16</span>
+<a name="l00093"></a><a class="code" href="utils_8h.html#aa2f26540ce870ca91503bb6746a52e69">00093</a> <span class="preprocessor"></span><span class="preprocessor">#define INPUT_VECTOR_SIZE 12</span>
+<a name="l00094"></a>00094 <span class="preprocessor"></span>
+<a name="l00095"></a>00095 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -204,7 +206,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="utils_8h.html">utils.h</a>      </li>
 
-    <li class="footer">Generated on Thu Mar 30 2017 23:55:27 for ocra-wbi-plugins by
+    <li class="footer">Generated on Fri Mar 31 2017 23:56:47 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
