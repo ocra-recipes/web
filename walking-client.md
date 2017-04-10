@@ -292,7 +292,7 @@ Which can be further elaborated in terms of the input vector $\mathcal{X}$ and o
 $$
 \begin{align} \label{eq:jerkPreview}
 J_{u} &= \sum_{i=1}^{N} u_i^Tu_i\\
-&= \sum_{i=1}^{N}||\mathcal{X}_i^T\mathbf{S}_u^T\mathbf{S}_u\mathcal{X}_i||^2\\
+&= \sum_{i=1}^{N}\mathcal{X}_i^T\mathbf{S}_u^T\mathbf{S}_u\mathcal{X}_i\\
 &= \mathcal{X}_{k,N}^T
 \left[\begin{array}{ccc}
 \mathbf{S}_{w_u} & & \\
@@ -884,5 +884,48 @@ $$
 \end{array}\right]\xi_k
 \end{equation}
 $$
+
+# Testing the MIQP controller
+The simplest test that can be done with the MIQP controller is to provide a CoM velocity reference that would move the robot either left or right on one foot, having at least:
+- Shape and Admissibility constraints
+- CoP constraints.
+- Regularization terms for the CoM jerk, avoiding resting on one foot, stepping minimization and some "dummy" regularization on the norm of $\delta$. Then by looking at the solution in the very first **preview window** we should get something as the following plot:
+
+![Bounding Box]({{ site.url }}/static/img/solAnnotated.png){:class="img-responsive"}
+
+Most of the important annotations/observations have been put in the image above, where the following parameters in `walking-client.ini` have been used:
+
+```
+[MIQP_CONTROLLER_PARAMS]
+robot icubGazeboSim
+dCoMxRef 0.0
+dCoMyRef 0.09
+N 15
+wb 1
+ww 3
+wu 0.3
+wss 0.001
+wstep 0.01
+wdelta 0.0001
+g 9.8
+dt 100
+dtThread 100
+sx_constancy 0.3
+sy_constancy 0.3
+sx_ss 0.3
+sy_ss 0.3
+hx_ref 0.0
+hy_ref 0.0
+dhx_ref 1.0
+dhy_ref 1.0
+ddhx_ref 0.0
+ddhy_ref 0.0
+marginCoPBounds 0.008
+shapeConstraints true
+admissibilityConstraints true
+copConstraints true
+walkingConstraints false
+addRegularization true
+```
 
 [1] Ibanez A. Ph.D. [thesis](http://www.hal.inserm.fr/tel-01308723v2)
