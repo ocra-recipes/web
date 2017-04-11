@@ -36,7 +36,7 @@ var searchData=
   ['shapeconstraintsstruct',['ShapeConstraintsStruct',['../structShapeConstraintsStruct.html',1,'']]],
   ['single_5fstep',['SINGLE_STEP',['../utils_8h.html#afc01479a47f5a87462a54b6a9e11fffaa4cf77e5736bd9a94342342d774b2e264',1,'utils.h']]],
   ['singlesteptestparams',['singleStepTestParams',['../structsingleStepTestParams.html',1,'']]],
-  ['singlesupport',['SingleSupport',['../classSingleSupport.html',1,'SingleSupport'],['../structAdmissibilityConstraintsStruct.html#a40fb404909b4fcee9e31e1dbf566a554',1,'AdmissibilityConstraintsStruct::singleSupport()'],['../classSingleSupport.html#af952e77f8d2139224fc0af9b73a6a0d1',1,'SingleSupport::SingleSupport()']]],
+  ['singlesupport',['SingleSupport',['../classSingleSupport.html',1,'SingleSupport'],['../classSingleSupport.html#af952e77f8d2139224fc0af9b73a6a0d1',1,'SingleSupport::SingleSupport()'],['../structAdmissibilityConstraintsStruct.html#a40fb404909b4fcee9e31e1dbf566a554',1,'AdmissibilityConstraintsStruct::singleSupport()']]],
   ['singlesupport',['SingleSupport',['../structAdmissibilityConstraintsStruct_1_1SingleSupport.html',1,'AdmissibilityConstraintsStruct']]],
   ['singlesupport_2ecpp',['SingleSupport.cpp',['../SingleSupport_8cpp.html',1,'']]],
   ['singlesupport_2eh',['SingleSupport.h',['../SingleSupport_8h.html',1,'']]],

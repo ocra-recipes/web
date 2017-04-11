@@ -4,6 +4,8 @@ var structMIQPParameters =
     [ "admissibilityConstraints", "structMIQPParameters.html#ae8e541722b3e3664ab516676aa1c16be", null ],
     [ "copConstraints", "structMIQPParameters.html#a3a0fd04f9e8767097e44e02a740796bc", null ],
     [ "cz", "structMIQPParameters.html#ab8158e2bf119d70c9856b6a277e3c42a", null ],
+    [ "dCoMxRef", "structMIQPParameters.html#adcf11681372ec3391e6a787a41311de6", null ],
+    [ "dCoMyRef", "structMIQPParameters.html#aa46f73654acd8d31215690a6782f7d21", null ],
     [ "ddhx_ref", "structMIQPParameters.html#a71dab92bc2eebbdf5e2d592c092e7f52", null ],
     [ "ddhy_ref", "structMIQPParameters.html#a996553605ecfefa749bde01bc4e7b2a9", null ],
     [ "dhx_ref", "structMIQPParameters.html#a97a8deb8aeda727c99dc501b4516a24e", null ],
