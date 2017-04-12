@@ -46,7 +46,7 @@ var searchData=
   ['getmodel',['getModel',['../classocra__icub_1_1ModelInitializer.html#aa8fbe9e7f20a2b4a29b6fce403c500c8',1,'ocra_icub::ModelInitializer']]],
   ['getnominalposture',['getNominalPosture',['../namespaceocra__icub.html#a07ffe33877389b6b111944e8a666e221',1,'ocra_icub::getNominalPosture()'],['../Utilities_8cpp.html#a666768e3a20bb81b9df67e3814a783bb',1,'getNominalPosture():&#160;Utilities.cpp']]],
   ['getnonlinearterms',['getNonLinearTerms',['../classocra__icub_1_1OcraWbiModel.html#a8cf1d870edf8c069cb1b196e0cab1f67',1,'ocra_icub::OcraWbiModel']]],
-  ['getrhs',['getRHS',['../classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a',1,'MIQPLinearConstraints::getRHS()'],['../classBaseOfSupport.html#a66c01d9333eb29e5847c01b5b5a51380',1,'BaseOfSupport::getrhs()']]],
+  ['getrhs',['getrhs',['../classBaseOfSupport.html#a66c01d9333eb29e5847c01b5b5a51380',1,'BaseOfSupport::getrhs()'],['../classMIQPLinearConstraints.html#abf2bd3e8f0dfa5b919efa1b90b56232a',1,'MIQPLinearConstraints::getRHS()']]],
   ['getrightfootposition',['getRightFootPosition',['../classSteppingDemoClient.html#ae9c0d72756c109f49c269a7e1b06454a',1,'SteppingDemoClient::getRightFootPosition()'],['../classMIQP_1_1MIQPState.html#afd73d24a2c94e32686160874c66b6b55',1,'MIQP::MIQPState::getRightFootPosition()'],['../classStepController.html#aaa7e389226a30582be8c8a724661a921',1,'StepController::getRightFootPosition()'],['../classZmpController.html#a815cd495f657cbd93c25610d24982e8c',1,'ZmpController::getRightFootPosition()']]],
   ['getrobotstate',['getRobotState',['../classIcubControllerServer.html#ac068c7930f342bb0cb0969d0d04267cf',1,'IcubControllerServer']]],
   ['getsegmentcom',['getSegmentCoM',['../classocra__icub_1_1OcraWbiModel.html#a2e2dc6611ff436dcd09ba979197e712d',1,'ocra_icub::OcraWbiModel']]],
@@ -60,6 +60,7 @@ var searchData=
   ['getsegmentmomentsofinertia',['getSegmentMomentsOfInertia',['../classocra__icub_1_1OcraWbiModel.html#a383b0fc03ffb220899aba6b25fcb6272',1,'ocra_icub::OcraWbiModel']]],
   ['getsegmentposition',['getSegmentPosition',['../classocra__icub_1_1OcraWbiModel.html#ad6b33c312d04c4bba05e0df67d8bae06',1,'ocra_icub::OcraWbiModel']]],
   ['getsegmentvelocity',['getSegmentVelocity',['../classocra__icub_1_1OcraWbiModel.html#a273d90e5ad6d3c1e849b996b1cfc1860',1,'ocra_icub::OcraWbiModel']]],
+  ['getsolution',['getSolution',['../classMIQPController.html#a96e30b0c6f47973ec1dd3cf745083f71',1,'MIQPController']]],
   ['gettotalnumberofconstraints',['getTotalNumberOfConstraints',['../classMIQPLinearConstraints.html#a656681ab464709b025e4522df3458fa1',1,'MIQPLinearConstraints']]],
   ['getuniquewbiname',['getUniqueWbiName',['../classocra__icub_1_1ModelInitializer.html#a086ea4822765ab6daff59fae1db0bd11',1,'ocra_icub::ModelInitializer']]]
 ];

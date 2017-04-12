@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
@@ -116,6 +117,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a43faa045ed47859b04f39e99805888c1">threadRelease</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#aa8fd8452a14d8e7731bf45044e1c7a59">run</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f">setCOMStateRefInPreviewWindow</a> (unsigned int k, Eigen::VectorXd &amp;comStateRef)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a96e30b0c6f47973ec1dd3cf745083f71">getSolution</a> (Eigen::VectorXd &amp;X_kn)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">yarp::os::Semaphore&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#ae9a603043a180264edabf45320d530ca">semaphore</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f">setLinearPartObjectiveFunction</a> ()</td></tr>
@@ -815,6 +820,23 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classMIQPController.html#a1143455ae85d0e221578dbe5d659af1d">_T</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a96e30b0c6f47973ec1dd3cf745083f71"></a><!-- doxytag: member="MIQPController::getSolution" ref="a96e30b0c6f47973ec1dd3cf745083f71" args="(Eigen::VectorXd &amp;X_kn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMIQPController.html#a96e30b0c6f47973ec1dd3cf745083f71">MIQPController::getSolution</a> </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>X_kn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -1944,6 +1966,20 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae9a603043a180264edabf45320d530ca"></a><!-- doxytag: member="MIQPController::semaphore" ref="ae9a603043a180264edabf45320d530ca" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">yarp::os::Semaphore <a class="el" href="classMIQPController.html#ae9a603043a180264edabf45320d530ca">MIQPController::semaphore</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Semaphore protecting the isInitialized variable. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/<a class="el" href="MIQPController_8h_source.html">MIQPController.h</a></li>
 <li>ocra-wbi-plugins/ocra-icub-clients/walking-client/src/<a class="el" href="MIQPController_8cpp.html">MIQPController.cpp</a></li>
@@ -1968,7 +2004,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classMIQPController.html">MIQPController</a>      </li>
 
-    <li class="footer">Generated on Tue Apr 11 2017 00:00:48 for ocra-wbi-plugins by
+    <li class="footer">Generated on Wed Apr 12 2017 00:01:24 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

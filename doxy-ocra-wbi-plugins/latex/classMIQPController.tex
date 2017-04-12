@@ -28,6 +28,13 @@ virtual void \hyperlink{classMIQPController_a43faa045ed47859b04f39e99805888c1}{t
 virtual void \hyperlink{classMIQPController_aa8fd8452a14d8e7731bf45044e1c7a59}{run} ()
 \item 
 void \hyperlink{classMIQPController_a69b193f0aab0fa0d0ec439b4d1b2a65f}{set\-C\-O\-M\-State\-Ref\-In\-Preview\-Window} (unsigned int k, \-Eigen\-::\-Vector\-Xd \&com\-State\-Ref)
+\item 
+void \hyperlink{classMIQPController_a96e30b0c6f47973ec1dd3cf745083f71}{get\-Solution} (\-Eigen\-::\-Vector\-Xd \&\-X\-\_\-kn)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+yarp\-::os\-::\-Semaphore \hyperlink{classMIQPController_ae9a603043a180264edabf45320d530ca}{semaphore}
 \end{DoxyCompactItemize}
 \subsection*{\-Protected \-Member \-Functions}
 \begin{DoxyCompactItemize}
@@ -528,6 +535,13 @@ unsigned int \hyperlink{classMIQPController_af60e2d5a786f4af4fa445dea6ba1b625}{\
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{classMIQPController_a1143455ae85d0e221578dbe5d659af1d}{\-\_\-\-T} 
 \end{DoxySeeAlso}
+\hypertarget{classMIQPController_a96e30b0c6f47973ec1dd3cf745083f71}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!get\-Solution@{get\-Solution}}
+\index{get\-Solution@{get\-Solution}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
+\subsubsection[{get\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Controller\-::get\-Solution} (
+\begin{DoxyParamCaption}
+\item[{\-Eigen\-::\-Vector\-Xd \&}]{\-X\-\_\-kn}
+\end{DoxyParamCaption}
+)}}\label{classMIQPController_a96e30b0c6f47973ec1dd3cf745083f71}
 \hypertarget{classMIQPController_aa8fd8452a14d8e7731bf45044e1c7a59}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!run@{run}}
 \index{run@{run}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
 \subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-I\-Q\-P\-Controller\-::run} (
@@ -996,7 +1010,10 @@ $\mathbf{S_w}$ is a $6N\times6N$ diagonal weighting selection matrix, defining w
 
 \[ \begin{array}{ccccccccc} [\mathbf{a} & \mathbf{b} & \mathbf{\alpha} & \mathbf{\beta} & \delta & \gamma & \mathbf{h} & \dot{\mathbf{h}} & \ddot{\mathbf{h}}] \end{array} \]
 
-\-Where $\mathbf{a} \in \mathbb{R}^2$ are the upper bounds of the base of support (\-Bo\-S), $b \in \mathbb{R}^2$ are the lower bounds, $\mathbf{\alpha} \in \mathbb{R}^2$ the rising edges of $\mathbf{a}$, $\mathbf{\beta} \in \mathbb{R}^2$ are the falling edges of $\mathbf{b}$, $\delta$ indicates the potential change from double support to single support, while $\gamma$ indicates whether the robot is in single support (\-S\-S) or double support (\-D\-S). $\mathbf{h}, \dot{\mathbf{h}}, \ddot{\mathbf{h}}$ 
+\-Where $\mathbf{a} \in \mathbb{R}^2$ are the upper bounds of the base of support (\-Bo\-S), $b \in \mathbb{R}^2$ are the lower bounds, $\mathbf{\alpha} \in \mathbb{R}^2$ the rising edges of $\mathbf{a}$, $\mathbf{\beta} \in \mathbb{R}^2$ are the falling edges of $\mathbf{b}$, $\delta$ indicates the potential change from double support to single support, while $\gamma$ indicates whether the robot is in single support (\-S\-S) or double support (\-D\-S). $\mathbf{h}, \dot{\mathbf{h}}, \ddot{\mathbf{h}}$ \hypertarget{classMIQPController_ae9a603043a180264edabf45320d530ca}{\index{\-M\-I\-Q\-P\-Controller@{\-M\-I\-Q\-P\-Controller}!semaphore@{semaphore}}
+\index{semaphore@{semaphore}!MIQPController@{\-M\-I\-Q\-P\-Controller}}
+\subsubsection[{semaphore}]{\setlength{\rightskip}{0pt plus 5cm}yarp\-::os\-::\-Semaphore {\bf \-M\-I\-Q\-P\-Controller\-::semaphore}}}\label{classMIQPController_ae9a603043a180264edabf45320d530ca}
+\-Semaphore protecting the is\-Initialized variable. 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

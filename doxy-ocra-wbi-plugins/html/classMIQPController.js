@@ -21,6 +21,7 @@ var classMIQPController =
     [ "buildRegularizationTerms", "classMIQPController.html#a973c28f80d04db7cdbdced07e1eeda16", null ],
     [ "buildSw", "classMIQPController.html#a3085bba3c89e6ed0265e8e229590e7f1", null ],
     [ "buildT", "classMIQPController.html#a52dc10cbc0941a6e4f4e6ffd462fffce", null ],
+    [ "getSolution", "classMIQPController.html#a96e30b0c6f47973ec1dd3cf745083f71", null ],
     [ "run", "classMIQPController.html#aa8fd8452a14d8e7731bf45044e1c7a59", null ],
     [ "setBinaryVariables", "classMIQPController.html#afce6feca593352323e052b6c993cbf69", null ],
     [ "setCOMStateRefInPreviewWindow", "classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f", null ],
@@ -82,5 +83,6 @@ var classMIQPController =
     [ "_ub", "classMIQPController.html#aa8407451ad8b20c814b12fef631f43f6", null ],
     [ "_variablesNames", "classMIQPController.html#a2c3ddd93fd843a3a4650314b47436be7", null ],
     [ "_X_kn", "classMIQPController.html#a1fdfcba2c7b6422ac8d3b0b6095d7546", null ],
-    [ "_xi_k", "classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed", null ]
+    [ "_xi_k", "classMIQPController.html#ad1c63725dab2ce84382fcb0b071325ed", null ],
+    [ "semaphore", "classMIQPController.html#ae9a603043a180264edabf45320d530ca", null ]
 ];
