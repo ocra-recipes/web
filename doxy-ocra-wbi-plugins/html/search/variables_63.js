@@ -11,7 +11,8 @@ var searchData=
   ['ch',['Ch',['../classZmpPreviewController.html#a2093754713ffb2a7adcd1310c73bf775',1,'ZmpPreviewController']]],
   ['com_5ftrajthread',['com_TrajThread',['../classSteppingDemoClient.html#a9f3d1cdc49cc26a10f9b8fb0d0c68cab',1,'SteppingDemoClient']]],
   ['comhome',['comHome',['../classSteppingDemoClient.html#aa018c1f2734d63f962be512461c9e010',1,'SteppingDemoClient']]],
-  ['comtrajthread',['comTrajThread',['../classStandingDemoClient.html#a223aa634ceba696716779461ec1d3f63',1,'StandingDemoClient']]],
+  ['comtask',['comTask',['../classSittingDemoClient.html#aa843c7358b6c9525d4d0cd6f3db27878',1,'SittingDemoClient']]],
+  ['comtrajthread',['comTrajThread',['../classSittingDemoClient.html#a91f2f57bfaeb3a43247836823401b71d',1,'SittingDemoClient::comTrajThread()'],['../classStandingDemoClient.html#a223aa634ceba696716779461ec1d3f63',1,'StandingDemoClient::comTrajThread()']]],
   ['comvelrefinpreviewwindow',['comVelRefInPreviewWindow',['../classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5',1,'WalkingClient']]],
   ['constancy',['constancy',['../structShapeConstraintsStruct.html#ab0dfcbbac3869f0464e81facc50a0950',1,'ShapeConstraintsStruct']]],
   ['contactconfigurationenforcement',['contactConfigurationEnforcement',['../structAdmissibilityConstraintsStruct.html#af002ab19787c812e98ed8fbff1f1cae5',1,'AdmissibilityConstraintsStruct']]],
@@ -27,6 +28,7 @@ var searchData=
   ['ctrloptions',['ctrlOptions',['../classThread.html#af96a166364f0c6a680115600b3bd232e',1,'Thread']]],
   ['ctrlserver',['ctrlServer',['../classThread.html#ace1179249de64e545f43dc48529fbbb6',1,'Thread']]],
   ['ctrlthread',['ctrlThread',['../classModule.html#a39346aa2e2a00801e07f4c127ff004ba',1,'Module']]],
+  ['currentdesiredposition',['currentDesiredPosition',['../classSittingDemoClient.html#a026778b7ccf56bc9674ef84f8700f66e',1,'SittingDemoClient']]],
   ['currentphase',['currentPhase',['../classSteppingDemoClient.html#afe0aa2a02ea8117d644bf5444a03ac62',1,'SteppingDemoClient']]],
   ['currenttime',['currentTime',['../classSteppingDemoClient.html#a1bb7d42cf09778349ae1ecd31d2ac116',1,'SteppingDemoClient']]],
   ['cz',['cz',['../structMIQPParameters.html#ab8158e2bf119d70c9856b6a277e3c42a',1,'MIQPParameters::cz()'],['../structZmpControllerParams.html#ad9ebbe3027001ce1600a8ac556061f7e',1,'ZmpControllerParams::cz()'],['../structZmpPreviewParams.html#a4bddbdd99f911c9dddfcb2445da1b7dc',1,'ZmpPreviewParams::cz()'],['../classZmpPreviewController.html#a3a317d26cc1bbaf8811491724fdd1def',1,'ZmpPreviewController::cz()']]]

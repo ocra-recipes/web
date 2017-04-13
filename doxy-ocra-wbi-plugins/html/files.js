@@ -18,6 +18,7 @@ var files =
     [ "ocra-wbi-plugins/ocra-icub-clients/task-operations-demo/src/TaskOpsClient.cpp", "TaskOpsClient_8cpp.html", null ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/BaseOfSupport.h", "BaseOfSupport_8h.html", "BaseOfSupport_8h" ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/constraintsStructs.h", "constraintsStructs_8h.html", "constraintsStructs_8h" ],
+    [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/Interpolator.h", "Interpolator_8h.html", "Interpolator_8h" ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPController.h", "MIQPController_8h.html", "MIQPController_8h" ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/MIQPState.h", "MIQPState_8h.html", "MIQPState_8h" ],
     [ "ocra-wbi-plugins/ocra-icub-clients/walking-client/include/walking-client/StepController.h", "StepController_8h.html", null ],

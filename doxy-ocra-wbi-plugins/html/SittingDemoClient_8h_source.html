@@ -109,18 +109,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013 <span class="keyword">public</span>:
 <a name="l00014"></a>00014     <a class="code" href="classSittingDemoClient.html#aedcb6c4ad7b4fa19f1b188e700c0a079">SittingDemoClient</a> (std::shared_ptr&lt;ocra::Model&gt; modelPtr, <span class="keyword">const</span> <span class="keywordtype">int</span> loopPeriod);
 <a name="l00015"></a>00015     <span class="keyword">virtual</span> <a class="code" href="classSittingDemoClient.html#a0fb7ded5e44b2b60d7f89c22386154b7">~SittingDemoClient</a> ();
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keyword">protected</span>:
-<a name="l00018"></a>00018     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSittingDemoClient.html#aff04405d690f2ae8abbd05ea4b55b64d">initialize</a>();
-<a name="l00019"></a>00019     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classSittingDemoClient.html#a18d30d70a9b17e8f64f87f5cb01b746e">release</a>();
-<a name="l00020"></a>00020     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classSittingDemoClient.html#ad08cf3328c8a4f22a1677b5ad67de645">loop</a>();
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022 <span class="keyword">private</span>:
-<a name="l00023"></a><a class="code" href="classSittingDemoClient.html#a1d5616269e9a673022542bb86f380bfd">00023</a>     ocra_recipes::TrajectoryThread::Ptr <a class="code" href="classSittingDemoClient.html#a1d5616269e9a673022542bb86f380bfd">rootTrajThread</a>;
-<a name="l00024"></a>00024 };
+<a name="l00016"></a>00016     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSittingDemoClient.html#ac5c38beccb24fdc5d6aa0104111e4dfe">configure</a>(yarp::os::ResourceFinder &amp;rf);
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">protected</span>:
+<a name="l00020"></a>00020     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSittingDemoClient.html#aff04405d690f2ae8abbd05ea4b55b64d">initialize</a>();
+<a name="l00021"></a>00021     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classSittingDemoClient.html#a18d30d70a9b17e8f64f87f5cb01b746e">release</a>();
+<a name="l00022"></a>00022     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classSittingDemoClient.html#ad08cf3328c8a4f22a1677b5ad67de645">loop</a>();
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="keyword">private</span>:
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027 <span class="preprocessor">#endif // TEST_CLIENT_H</span>
+<a name="l00026"></a>00026     <span class="keywordtype">void</span> <a class="code" href="classSittingDemoClient.html#a726a1a1fa46624190532342233a6cdf4">moveCom</a>();
+<a name="l00027"></a><a class="code" href="classSittingDemoClient.html#a305448a4a64c8ff7ae1095a33049a23f">00027</a>     std::string <a class="code" href="classSittingDemoClient.html#a305448a4a64c8ff7ae1095a33049a23f">taskName</a>;
+<a name="l00028"></a><a class="code" href="classSittingDemoClient.html#aa843c7358b6c9525d4d0cd6f3db27878">00028</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classSittingDemoClient.html#aa843c7358b6c9525d4d0cd6f3db27878">comTask</a>;
+<a name="l00029"></a><a class="code" href="classSittingDemoClient.html#a91f2f57bfaeb3a43247836823401b71d">00029</a>     ocra_recipes::TrajectoryThread::Ptr <a class="code" href="classSittingDemoClient.html#a91f2f57bfaeb3a43247836823401b71d">comTrajThread</a>;
+<a name="l00030"></a><a class="code" href="classSittingDemoClient.html#a9d9147b68eb482079b9ebdd24eadc3a2">00030</a>     <span class="keywordtype">double</span> <a class="code" href="classSittingDemoClient.html#ad3056b59c1c427cff70713799dda7734">xDisp</a>, <a class="code" href="classSittingDemoClient.html#aa1a0d99f0413afe5e306eb066d3102f6">yDisp</a>, <a class="code" href="classSittingDemoClient.html#a9d9147b68eb482079b9ebdd24eadc3a2">zDisp</a>;
+<a name="l00031"></a><a class="code" href="classSittingDemoClient.html#a026778b7ccf56bc9674ef84f8700f66e">00031</a>     Eigen::Vector3d <a class="code" href="classSittingDemoClient.html#a026778b7ccf56bc9674ef84f8700f66e">currentDesiredPosition</a>;
+<a name="l00032"></a><a class="code" href="classSittingDemoClient.html#a02111e627bb202646b99c5d1643cf42b">00032</a>     Eigen::MatrixXd <a class="code" href="classSittingDemoClient.html#a02111e627bb202646b99c5d1643cf42b">Kp</a>, <a class="code" href="classSittingDemoClient.html#a66a12899f7f64dbfa1c1dc5dc641a1b0">Kd</a>;
+<a name="l00033"></a>00033 };
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="preprocessor">#endif // TEST_CLIENT_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -141,7 +150,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="SittingDemoClient_8h.html">SittingDemoClient.h</a>      </li>
 
-    <li class="footer">Generated on Wed Apr 12 2017 00:01:24 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Apr 13 2017 00:01:50 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

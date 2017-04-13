@@ -23,5 +23,5 @@ var searchData=
   ['printalldata',['printAllData',['../classocra__icub_1_1OcraWbiModel.html#a309b3554c4eefda46c05b766476f40fb',1,'ocra_icub::OcraWbiModel']]],
   ['printhelp',['printHelp',['../classModule.html#a861f70d79b8f36dccf5daae182763bd8',1,'Module::printHelp()'],['../classStandingDemoClient.html#ae1f321428f6b67b2f8bf7e1e7a1cd3d4',1,'StandingDemoClient::printHelp()'],['../classWalkingClient.html#aff3fabef11d9c8b747a422f879c26067',1,'WalkingClient::printHelp()']]],
   ['publish3dquantity',['publish3dQuantity',['../classWalkingClient.html#ae6d6c046a9a3e51771afe8b4c105b412',1,'WalkingClient']]],
-  ['putanklesintoidle',['putAnklesIntoIdle',['../classThread.html#a49b65da88eb521ff53ef94d6ec8da7ab',1,'Thread']]]
+  ['putanklesintoidle',['putAnklesIntoIdle',['../classThread.html#a4b79627dd26cfff3873f2805f49f2873',1,'Thread']]]
 ];

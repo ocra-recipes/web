@@ -1,8 +1,10 @@
 var searchData=
 [
+  ['sendtorquereferencetodebugjoint',['sendTorqueReferenceToDebugJoint',['../classThread.html#abb40b80d01d71d1aea1f787f7a1a2511',1,'Thread']]],
   ['sequentiality',['Sequentiality',['../classSequentiality.html#a3d8c4d770b1e057ffe207c47f5db6179',1,'Sequentiality']]],
   ['setbinaryvariables',['setBinaryVariables',['../classMIQPController.html#afce6feca593352323e052b6c993cbf69',1,'MIQPController']]],
   ['setcomstaterefinpreviewwindow',['setCOMStateRefInPreviewWindow',['../classMIQPController.html#a69b193f0aab0fa0d0ec439b4d1b2a65f',1,'MIQPController']]],
+  ['setdebugjointtotorquemode',['setDebugJointToTorqueMode',['../classThread.html#acc470c4c98aac74a1b550a4afacb322f',1,'Thread']]],
   ['setdownfoot',['setDownFoot',['../classSteppingDemoClient.html#a930123dad5658ea8a3bb5f23cb4cb369',1,'SteppingDemoClient']]],
   ['setlinearpartobjectivefunction',['setLinearPartObjectiveFunction',['../classMIQPController.html#a2d882a4cd9e9832d8b9b2ad73111be0f',1,'MIQPController']]],
   ['setlowerandupperbounds',['setLowerAndUpperBounds',['../classMIQPController.html#a2caf42a5b5dcd63d67de57cfbb93c653',1,'MIQPController']]],

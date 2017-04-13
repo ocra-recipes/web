@@ -5,5 +5,6 @@ var searchData=
   ['miqplinearconstraints',['MIQPLinearConstraints',['../classMIQPLinearConstraints.html#a95076997a625d0e74185924775cdabc5',1,'MIQPLinearConstraints']]],
   ['miqpstate',['MIQPState',['../classMIQP_1_1MIQPState.html#a85031fb1a8bca02c253f8669aba70f09',1,'MIQP::MIQPState']]],
   ['modelinitializer',['ModelInitializer',['../classocra__icub_1_1ModelInitializer.html#a14a314ebc05e38e472607b76951d31cc',1,'ocra_icub::ModelInitializer']]],
-  ['module',['Module',['../classModule.html#a5a240a8a9ab1813b17bcb810b24ceaea',1,'Module']]]
+  ['module',['Module',['../classModule.html#a5a240a8a9ab1813b17bcb810b24ceaea',1,'Module']]],
+  ['movecom',['moveCom',['../classSittingDemoClient.html#a726a1a1fa46624190532342233a6cdf4',1,'SittingDemoClient']]]
 ];

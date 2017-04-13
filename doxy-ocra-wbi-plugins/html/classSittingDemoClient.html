@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">SittingDemoClient Class Reference</div>  </div>
@@ -107,14 +108,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#aedcb6c4ad7b4fa19f1b188e700c0a079">SittingDemoClient</a> (std::shared_ptr&lt; ocra::Model &gt; modelPtr, const int loopPeriod)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a0fb7ded5e44b2b60d7f89c22386154b7">~SittingDemoClient</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#ac5c38beccb24fdc5d6aa0104111e4dfe">configure</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#aff04405d690f2ae8abbd05ea4b55b64d">initialize</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a18d30d70a9b17e8f64f87f5cb01b746e">release</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#ad08cf3328c8a4f22a1677b5ad67de645">loop</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a726a1a1fa46624190532342233a6cdf4">moveCom</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">ocra_recipes::TrajectoryThread::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a1d5616269e9a673022542bb86f380bfd">rootTrajThread</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a305448a4a64c8ff7ae1095a33049a23f">taskName</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ocra_recipes::TaskConnection::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#aa843c7358b6c9525d4d0cd6f3db27878">comTask</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ocra_recipes::TrajectoryThread::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a91f2f57bfaeb3a43247836823401b71d">comTrajThread</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#ad3056b59c1c427cff70713799dda7734">xDisp</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#aa1a0d99f0413afe5e306eb066d3102f6">yDisp</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a9d9147b68eb482079b9ebdd24eadc3a2">zDisp</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a026778b7ccf56bc9674ef84f8700f66e">currentDesiredPosition</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a02111e627bb202646b99c5d1643cf42b">Kp</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSittingDemoClient.html#a66a12899f7f64dbfa1c1dc5dc641a1b0">Kd</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aedcb6c4ad7b4fa19f1b188e700c0a079"></a><!-- doxytag: member="SittingDemoClient::SittingDemoClient" ref="aedcb6c4ad7b4fa19f1b188e700c0a079" args="(std::shared_ptr&lt; ocra::Model &gt; modelPtr, const int loopPeriod)" -->
@@ -161,6 +174,23 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac5c38beccb24fdc5d6aa0104111e4dfe"></a><!-- doxytag: member="SittingDemoClient::configure" ref="ac5c38beccb24fdc5d6aa0104111e4dfe" args="(yarp::os::ResourceFinder &amp;rf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classSittingDemoClient.html#ac5c38beccb24fdc5d6aa0104111e4dfe">SittingDemoClient::configure</a> </td>
+          <td>(</td>
+          <td class="paramtype">yarp::os::ResourceFinder &amp;&#160;</td>
+          <td class="paramname"><em>rf</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aff04405d690f2ae8abbd05ea4b55b64d"></a><!-- doxytag: member="SittingDemoClient::initialize" ref="aff04405d690f2ae8abbd05ea4b55b64d" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -193,6 +223,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a726a1a1fa46624190532342233a6cdf4"></a><!-- doxytag: member="SittingDemoClient::moveCom" ref="a726a1a1fa46624190532342233a6cdf4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSittingDemoClient.html#a726a1a1fa46624190532342233a6cdf4">SittingDemoClient::moveCom</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a18d30d70a9b17e8f64f87f5cb01b746e"></a><!-- doxytag: member="SittingDemoClient::release" ref="a18d30d70a9b17e8f64f87f5cb01b746e" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -210,12 +256,116 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a1d5616269e9a673022542bb86f380bfd"></a><!-- doxytag: member="SittingDemoClient::rootTrajThread" ref="a1d5616269e9a673022542bb86f380bfd" args="" -->
+<a class="anchor" id="aa843c7358b6c9525d4d0cd6f3db27878"></a><!-- doxytag: member="SittingDemoClient::comTask" ref="aa843c7358b6c9525d4d0cd6f3db27878" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ocra_recipes::TrajectoryThread::Ptr <a class="el" href="classSittingDemoClient.html#a1d5616269e9a673022542bb86f380bfd">SittingDemoClient::rootTrajThread</a><code> [private]</code></td>
+          <td class="memname">ocra_recipes::TaskConnection::Ptr <a class="el" href="classSittingDemoClient.html#aa843c7358b6c9525d4d0cd6f3db27878">SittingDemoClient::comTask</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91f2f57bfaeb3a43247836823401b71d"></a><!-- doxytag: member="SittingDemoClient::comTrajThread" ref="a91f2f57bfaeb3a43247836823401b71d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ocra_recipes::TrajectoryThread::Ptr <a class="el" href="classSittingDemoClient.html#a91f2f57bfaeb3a43247836823401b71d">SittingDemoClient::comTrajThread</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a026778b7ccf56bc9674ef84f8700f66e"></a><!-- doxytag: member="SittingDemoClient::currentDesiredPosition" ref="a026778b7ccf56bc9674ef84f8700f66e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d <a class="el" href="classSittingDemoClient.html#a026778b7ccf56bc9674ef84f8700f66e">SittingDemoClient::currentDesiredPosition</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a66a12899f7f64dbfa1c1dc5dc641a1b0"></a><!-- doxytag: member="SittingDemoClient::Kd" ref="a66a12899f7f64dbfa1c1dc5dc641a1b0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classSittingDemoClient.html#a66a12899f7f64dbfa1c1dc5dc641a1b0">SittingDemoClient::Kd</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a02111e627bb202646b99c5d1643cf42b"></a><!-- doxytag: member="SittingDemoClient::Kp" ref="a02111e627bb202646b99c5d1643cf42b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd <a class="el" href="classSittingDemoClient.html#a02111e627bb202646b99c5d1643cf42b">SittingDemoClient::Kp</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a305448a4a64c8ff7ae1095a33049a23f"></a><!-- doxytag: member="SittingDemoClient::taskName" ref="a305448a4a64c8ff7ae1095a33049a23f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classSittingDemoClient.html#a305448a4a64c8ff7ae1095a33049a23f">SittingDemoClient::taskName</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad3056b59c1c427cff70713799dda7734"></a><!-- doxytag: member="SittingDemoClient::xDisp" ref="ad3056b59c1c427cff70713799dda7734" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classSittingDemoClient.html#ad3056b59c1c427cff70713799dda7734">SittingDemoClient::xDisp</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa1a0d99f0413afe5e306eb066d3102f6"></a><!-- doxytag: member="SittingDemoClient::yDisp" ref="aa1a0d99f0413afe5e306eb066d3102f6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classSittingDemoClient.html#aa1a0d99f0413afe5e306eb066d3102f6">SittingDemoClient::yDisp</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9d9147b68eb482079b9ebdd24eadc3a2"></a><!-- doxytag: member="SittingDemoClient::zDisp" ref="a9d9147b68eb482079b9ebdd24eadc3a2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classSittingDemoClient.html#a9d9147b68eb482079b9ebdd24eadc3a2">SittingDemoClient::zDisp</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -247,7 +397,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classSittingDemoClient.html">SittingDemoClient</a>      </li>
 
-    <li class="footer">Generated on Wed Apr 12 2017 00:01:24 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Apr 13 2017 00:01:50 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

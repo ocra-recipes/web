@@ -4,6 +4,7 @@ var classOcraControllerOptions =
     [ "~OcraControllerOptions", "classOcraControllerOptions.html#a22f514e92ccf91cc362c48a6c340ac19", null ],
     [ "controllerType", "classOcraControllerOptions.html#aa533fe11c53b7fb17105f1edf48e1c0d", null ],
     [ "idleAnkles", "classOcraControllerOptions.html#a34c0a162302f4f2c462d9ce4818292d5", null ],
+    [ "idleAnkleTime", "classOcraControllerOptions.html#af09053d38fbafe448a35804ea86d27aa", null ],
     [ "isFloatingBase", "classOcraControllerOptions.html#a1edf322553d88c1ac2bf8947e9d942d7", null ],
     [ "maintainFinalPosture", "classOcraControllerOptions.html#ae7b16a5b8264abd18ee8761eb1091ccf", null ],
     [ "noOutputMode", "classOcraControllerOptions.html#af05db2783f36f469fa535fd4ba5c12b1", null ],
@@ -17,5 +18,8 @@ var classOcraControllerOptions =
     [ "urdfModelPath", "classOcraControllerOptions.html#a697196e6267b2a519dd0bcc2bc03ab73", null ],
     [ "useOdometry", "classOcraControllerOptions.html#a335f09b446b6d10e2a8e6eb453391d9e", null ],
     [ "wbiConfigFilePath", "classOcraControllerOptions.html#af3a98210531cf667c2838e45b470a66e", null ],
+    [ "wDdq", "classOcraControllerOptions.html#aab63ca12dec23284464b978c4e3e1c62", null ],
+    [ "wFc", "classOcraControllerOptions.html#a96706a52ac56f2598d03e80c9c778ce7", null ],
+    [ "wTau", "classOcraControllerOptions.html#ada37aedbe3639334803637b55c650bc0", null ],
     [ "yarpWbiOptions", "classOcraControllerOptions.html#ac3965bdcce6cb2ce3e4a335f855acd63", null ]
 ];

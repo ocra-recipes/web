@@ -132,7 +132,9 @@ Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#ae21029d250ac7c720f2411eab71a9414">parseIncomingMessage</a> (yarp::os::Bottle &amp;input, yarp::os::Bottle &amp;reply)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a6ce5ef9684cb2793be85e7402ad672f0">parseDebugMessage</a> (yarp::os::Bottle &amp;input, yarp::os::Bottle &amp;reply)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a9af0e98aa9b1de2f5c7bfa2f6e5001a2">writeDebugData</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a49b65da88eb521ff53ef94d6ec8da7ab">putAnklesIntoIdle</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a4b79627dd26cfff3873f2805f49f2873">putAnklesIntoIdle</a> (double idleTime)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#abb40b80d01d71d1aea1f787f7a1a2511">sendTorqueReferenceToDebugJoint</a> (int idx)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#acc470c4c98aac74a1b550a4afacb322f">setDebugJointToTorqueMode</a> (int idx)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">ocra::Model::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a1dcef9aedc1a707e6f04d5fb6e4a0b13">model</a></td></tr>
@@ -155,6 +157,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">DebugRpcServerCallback::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a42833af67d5280e6946a31a03737e017">debugRpcCallback</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#aa9cbe8744e51571a17fa726d8d16a0c6">measuredTorques</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#aba345996b91a57d9e1f2dd15c7c75e08">debuggingAllJoints</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a20581ff7f2cfb2efe1fbc2aa703438a4">userHasSetDebugIndex</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Displacementd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a304e7ee40ec0ceec2fc7ca80353ab478">l_foot_disp_inverse</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">iDynTree::SimpleLeggedOdometry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a23a41c6ccd1df898084112cfd46120f3">odometry</a></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
@@ -290,14 +293,15 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a49b65da88eb521ff53ef94d6ec8da7ab"></a><!-- doxytag: member="Thread::putAnklesIntoIdle" ref="a49b65da88eb521ff53ef94d6ec8da7ab" args="()" -->
+<a class="anchor" id="a4b79627dd26cfff3873f2805f49f2873"></a><!-- doxytag: member="Thread::putAnklesIntoIdle" ref="a4b79627dd26cfff3873f2805f49f2873" args="(double idleTime)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classThread.html#a49b65da88eb521ff53ef94d6ec8da7ab">Thread::putAnklesIntoIdle</a> </td>
+          <td class="memname">void <a class="el" href="classThread.html#a4b79627dd26cfff3873f2805f49f2873">Thread::putAnklesIntoIdle</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>idleTime</em></td><td>)</td>
           <td><code> [private]</code></td>
         </tr>
       </table>
@@ -315,6 +319,40 @@ Static Private Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abb40b80d01d71d1aea1f787f7a1a2511"></a><!-- doxytag: member="Thread::sendTorqueReferenceToDebugJoint" ref="abb40b80d01d71d1aea1f787f7a1a2511" args="(int idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classThread.html#abb40b80d01d71d1aea1f787f7a1a2511">Thread::sendTorqueReferenceToDebugJoint</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc470c4c98aac74a1b550a4afacb322f"></a><!-- doxytag: member="Thread::setDebugJointToTorqueMode" ref="acc470c4c98aac74a1b550a4afacb322f" args="(int idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classThread.html#acc470c4c98aac74a1b550a4afacb322f">Thread::setDebugJointToTorqueMode</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -670,6 +708,19 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a20581ff7f2cfb2efe1fbc2aa703438a4"></a><!-- doxytag: member="Thread::userHasSetDebugIndex" ref="a20581ff7f2cfb2efe1fbc2aa703438a4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classThread.html#a20581ff7f2cfb2efe1fbc2aa703438a4">Thread::userHasSetDebugIndex</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aa3f4bbc2dca15c247a13de1bdbc4f7a3"></a><!-- doxytag: member="Thread::yarpWbi" ref="aa3f4bbc2dca15c247a13de1bdbc4f7a3" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -708,7 +759,7 @@ Static Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classThread.html">Thread</a>      </li>
 
-    <li class="footer">Generated on Wed Apr 12 2017 00:01:24 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Apr 13 2017 00:01:50 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

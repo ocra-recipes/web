@@ -11,6 +11,8 @@
 \hyperlink{classSittingDemoClient_aedcb6c4ad7b4fa19f1b188e700c0a079}{\-Sitting\-Demo\-Client} (std\-::shared\-\_\-ptr$<$ ocra\-::\-Model $>$ model\-Ptr, const int loop\-Period)
 \item 
 virtual \hyperlink{classSittingDemoClient_a0fb7ded5e44b2b60d7f89c22386154b7}{$\sim$\-Sitting\-Demo\-Client} ()
+\item 
+virtual bool \hyperlink{classSittingDemoClient_ac5c38beccb24fdc5d6aa0104111e4dfe}{configure} (yarp\-::os\-::\-Resource\-Finder \&rf)
 \end{DoxyCompactItemize}
 \subsection*{\-Protected \-Member \-Functions}
 \begin{DoxyCompactItemize}
@@ -21,10 +23,31 @@ virtual void \hyperlink{classSittingDemoClient_a18d30d70a9b17e8f64f87f5cb01b746e
 \item 
 virtual void \hyperlink{classSittingDemoClient_ad08cf3328c8a4f22a1677b5ad67de645}{loop} ()
 \end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSittingDemoClient_a726a1a1fa46624190532342233a6cdf4}{move\-Com} ()
+\end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
 \item 
-ocra\-\_\-recipes\-::\-Trajectory\-Thread\-::\-Ptr \hyperlink{classSittingDemoClient_a1d5616269e9a673022542bb86f380bfd}{root\-Traj\-Thread}
+std\-::string \hyperlink{classSittingDemoClient_a305448a4a64c8ff7ae1095a33049a23f}{task\-Name}
+\item 
+ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr \hyperlink{classSittingDemoClient_aa843c7358b6c9525d4d0cd6f3db27878}{com\-Task}
+\item 
+ocra\-\_\-recipes\-::\-Trajectory\-Thread\-::\-Ptr \hyperlink{classSittingDemoClient_a91f2f57bfaeb3a43247836823401b71d}{com\-Traj\-Thread}
+\item 
+double \hyperlink{classSittingDemoClient_ad3056b59c1c427cff70713799dda7734}{x\-Disp}
+\item 
+double \hyperlink{classSittingDemoClient_aa1a0d99f0413afe5e306eb066d3102f6}{y\-Disp}
+\item 
+double \hyperlink{classSittingDemoClient_a9d9147b68eb482079b9ebdd24eadc3a2}{z\-Disp}
+\item 
+\-Eigen\-::\-Vector3d \hyperlink{classSittingDemoClient_a026778b7ccf56bc9674ef84f8700f66e}{current\-Desired\-Position}
+\item 
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classSittingDemoClient_a02111e627bb202646b99c5d1643cf42b}{\-Kp}
+\item 
+\-Eigen\-::\-Matrix\-Xd \hyperlink{classSittingDemoClient_a66a12899f7f64dbfa1c1dc5dc641a1b0}{\-Kd}
 \end{DoxyCompactItemize}
 
 
@@ -47,6 +70,13 @@ ocra\-\_\-recipes\-::\-Trajectory\-Thread\-::\-Ptr \hyperlink{classSittingDemoCl
 
 
 \subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSittingDemoClient_ac5c38beccb24fdc5d6aa0104111e4dfe}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!configure@{configure}}
+\index{configure@{configure}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{configure}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sitting\-Demo\-Client\-::configure} (
+\begin{DoxyParamCaption}
+\item[{yarp\-::os\-::\-Resource\-Finder \&}]{rf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSittingDemoClient_ac5c38beccb24fdc5d6aa0104111e4dfe}
 \hypertarget{classSittingDemoClient_aff04405d690f2ae8abbd05ea4b55b64d}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!initialize@{initialize}}
 \index{initialize@{initialize}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
 \subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sitting\-Demo\-Client\-::initialize} (
@@ -61,6 +91,13 @@ ocra\-\_\-recipes\-::\-Trajectory\-Thread\-::\-Ptr \hyperlink{classSittingDemoCl
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classSittingDemoClient_ad08cf3328c8a4f22a1677b5ad67de645}
+\hypertarget{classSittingDemoClient_a726a1a1fa46624190532342233a6cdf4}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!move\-Com@{move\-Com}}
+\index{move\-Com@{move\-Com}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{move\-Com}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sitting\-Demo\-Client\-::move\-Com} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_a726a1a1fa46624190532342233a6cdf4}
 \hypertarget{classSittingDemoClient_a18d30d70a9b17e8f64f87f5cb01b746e}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!release@{release}}
 \index{release@{release}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
 \subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sitting\-Demo\-Client\-::release} (
@@ -71,9 +108,33 @@ ocra\-\_\-recipes\-::\-Trajectory\-Thread\-::\-Ptr \hyperlink{classSittingDemoCl
 
 
 \subsection{\-Member \-Data \-Documentation}
-\hypertarget{classSittingDemoClient_a1d5616269e9a673022542bb86f380bfd}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!root\-Traj\-Thread@{root\-Traj\-Thread}}
-\index{root\-Traj\-Thread@{root\-Traj\-Thread}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
-\subsubsection[{root\-Traj\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Trajectory\-Thread\-::\-Ptr {\bf \-Sitting\-Demo\-Client\-::root\-Traj\-Thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_a1d5616269e9a673022542bb86f380bfd}
+\hypertarget{classSittingDemoClient_aa843c7358b6c9525d4d0cd6f3db27878}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!com\-Task@{com\-Task}}
+\index{com\-Task@{com\-Task}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{com\-Task}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Task\-Connection\-::\-Ptr {\bf \-Sitting\-Demo\-Client\-::com\-Task}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_aa843c7358b6c9525d4d0cd6f3db27878}
+\hypertarget{classSittingDemoClient_a91f2f57bfaeb3a43247836823401b71d}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!com\-Traj\-Thread@{com\-Traj\-Thread}}
+\index{com\-Traj\-Thread@{com\-Traj\-Thread}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{com\-Traj\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}ocra\-\_\-recipes\-::\-Trajectory\-Thread\-::\-Ptr {\bf \-Sitting\-Demo\-Client\-::com\-Traj\-Thread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_a91f2f57bfaeb3a43247836823401b71d}
+\hypertarget{classSittingDemoClient_a026778b7ccf56bc9674ef84f8700f66e}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!current\-Desired\-Position@{current\-Desired\-Position}}
+\index{current\-Desired\-Position@{current\-Desired\-Position}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{current\-Desired\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector3d {\bf \-Sitting\-Demo\-Client\-::current\-Desired\-Position}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_a026778b7ccf56bc9674ef84f8700f66e}
+\hypertarget{classSittingDemoClient_a66a12899f7f64dbfa1c1dc5dc641a1b0}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!\-Kd@{\-Kd}}
+\index{\-Kd@{\-Kd}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{\-Kd}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Sitting\-Demo\-Client\-::\-Kd}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_a66a12899f7f64dbfa1c1dc5dc641a1b0}
+\hypertarget{classSittingDemoClient_a02111e627bb202646b99c5d1643cf42b}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!\-Kp@{\-Kp}}
+\index{\-Kp@{\-Kp}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{\-Kp}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Matrix\-Xd {\bf \-Sitting\-Demo\-Client\-::\-Kp}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_a02111e627bb202646b99c5d1643cf42b}
+\hypertarget{classSittingDemoClient_a305448a4a64c8ff7ae1095a33049a23f}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!task\-Name@{task\-Name}}
+\index{task\-Name@{task\-Name}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{task\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-Sitting\-Demo\-Client\-::task\-Name}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_a305448a4a64c8ff7ae1095a33049a23f}
+\hypertarget{classSittingDemoClient_ad3056b59c1c427cff70713799dda7734}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!x\-Disp@{x\-Disp}}
+\index{x\-Disp@{x\-Disp}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{x\-Disp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Sitting\-Demo\-Client\-::x\-Disp}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_ad3056b59c1c427cff70713799dda7734}
+\hypertarget{classSittingDemoClient_aa1a0d99f0413afe5e306eb066d3102f6}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!y\-Disp@{y\-Disp}}
+\index{y\-Disp@{y\-Disp}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{y\-Disp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Sitting\-Demo\-Client\-::y\-Disp}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_aa1a0d99f0413afe5e306eb066d3102f6}
+\hypertarget{classSittingDemoClient_a9d9147b68eb482079b9ebdd24eadc3a2}{\index{\-Sitting\-Demo\-Client@{\-Sitting\-Demo\-Client}!z\-Disp@{z\-Disp}}
+\index{z\-Disp@{z\-Disp}!SittingDemoClient@{\-Sitting\-Demo\-Client}}
+\subsubsection[{z\-Disp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Sitting\-Demo\-Client\-::z\-Disp}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classSittingDemoClient_a9d9147b68eb482079b9ebdd24eadc3a2}
 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

@@ -5,8 +5,10 @@ var classThread =
     [ "convertStringToOcraIcubMessage", "classThread.html#a2c64d83df66f7168d34993b76a179dde", null ],
     [ "parseDebugMessage", "classThread.html#a6ce5ef9684cb2793be85e7402ad672f0", null ],
     [ "parseIncomingMessage", "classThread.html#ae21029d250ac7c720f2411eab71a9414", null ],
-    [ "putAnklesIntoIdle", "classThread.html#a49b65da88eb521ff53ef94d6ec8da7ab", null ],
+    [ "putAnklesIntoIdle", "classThread.html#a4b79627dd26cfff3873f2805f49f2873", null ],
     [ "run", "classThread.html#ad9373d8d725c46717dfce3130018fe3a", null ],
+    [ "sendTorqueReferenceToDebugJoint", "classThread.html#abb40b80d01d71d1aea1f787f7a1a2511", null ],
+    [ "setDebugJointToTorqueMode", "classThread.html#acc470c4c98aac74a1b550a4afacb322f", null ],
     [ "threadInit", "classThread.html#a1e840470cd71d7bfb2430d24169e3dce", null ],
     [ "threadRelease", "classThread.html#aa2856c7d45670f45d66bcb319255defe", null ],
     [ "writeDebugData", "classThread.html#a9af0e98aa9b1de2f5c7bfa2f6e5001a2", null ],
@@ -32,5 +34,6 @@ var classThread =
     [ "TORQUE_MAX", "classThread.html#a5e864394c4bd0fbdf3cba7f6f825e17d", null ],
     [ "TORQUE_MIN", "classThread.html#ad44e5fbda8070c252ea71823a4b9a6db", null ],
     [ "torques", "classThread.html#a3238993799b36af06f3858a3f65dcf1e", null ],
+    [ "userHasSetDebugIndex", "classThread.html#a20581ff7f2cfb2efe1fbc2aa703438a4", null ],
     [ "yarpWbi", "classThread.html#aa3f4bbc2dca15c247a13de1bdbc4f7a3", null ]
 ];

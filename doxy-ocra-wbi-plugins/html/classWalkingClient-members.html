@@ -118,6 +118,7 @@ This is the complete list of members for <a class="el" href="classWalkingClient.
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a5dd1abe90bf7182766548c93673af2df">_miqpController</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a5035091f977f37b7d2df284015242d6c">_miqpParams</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#aefb4ed994a32879a526f2bc8c962927f">_numberOfTransitions</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a6dc3e018cfeeea3407a3326fb2445d17">_period</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a549751e511e023d5fc73eccd1c185317">_previousCOM</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#aa0c7669193a8a42ed289c79523580033">_previousCOMVel</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a1c3fb4d182e33d6d9386e9bb05aa4ae8">_rawLeftFootWrench</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
@@ -135,6 +136,7 @@ This is the complete list of members for <a class="el" href="classWalkingClient.
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a9f19b1a1184cbdbf883cc374c6b6b88f">_stopTimeConstComVel</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a58b08317f6d8b825a21e1db8c7f0ff32">_stopTimeConstZmp</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a2ed3837afa0c366f1cdef16b2a99b761">_stopTimeVaryingZmp</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a6f3b88aea634bc46550593df837e6610">_t_kn</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">_testType</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#aa6b3bf5c2ed923a7a33a9ed461713d98">_trajectoryDurationConstZmp</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a144518766ec4eb9eeab230fcb291e20c">_tTrans</a></td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [private]</code></td></tr>
@@ -177,7 +179,7 @@ This is the complete list of members for <a class="el" href="classWalkingClient.
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">prepareAndsetDesiredCoMTaskState</a>(Eigen::VectorXd comState, bool doSet)</td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#aff3fabef11d9c8b747a422f879c26067">printHelp</a>()</td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#ae6d6c046a9a3e51771afe8b4c105b412">publish3dQuantity</a>(yarp::os::BufferedPort&lt; yarp::os::Bottle &gt; &amp;port, Eigen::Vector3d &amp;value)</td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a77e764f397231fe311a7a0f0d91a9b65">queryMIQPSolution</a>(const int miqpPeriod, const int miqpPreviewPeriod, const int clientPeriod, Eigen::VectorXd &amp;preview)</td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a06a0f21c6a921687f69f37f622338226">queryMIQPSolution</a>(const int miqpPeriod, const int miqpPreviewPeriod, const int clientPeriod, Eigen::VectorXd &amp;preview, Eigen::VectorXd &amp;tPreview)</td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a03ea2313c954a97aeb4d5b614f3e6caa">readFootWrench</a>(FOOT whichFoot, Eigen::VectorXd &amp;rawWrench)</td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#a3b36da9d7649865a13c9318dd73ebc7e">release</a>()</td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classWalkingClient.html#ab497c47c538b8ac2871ddd706c5e61a9">startSteppinMotherFucker</a>()</td><td><a class="el" href="classWalkingClient.html">WalkingClient</a></td><td></td></tr>
@@ -205,7 +207,7 @@ This is the complete list of members for <a class="el" href="classWalkingClient.
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Wed Apr 12 2017 00:01:24 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Apr 13 2017 00:01:50 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

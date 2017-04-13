@@ -1,0 +1,58 @@
+\hypertarget{Interpolator_8h}{\section{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Interpolator.h \-File \-Reference}
+\label{Interpolator_8h}\index{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Interpolator.\-h@{ocra-\/wbi-\/plugins/ocra-\/icub-\/clients/walking-\/client/include/walking-\/client/\-Interpolator.\-h}}
+}
+{\ttfamily \#include $<$\-Eigen/\-Dense$>$}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+\-Include dependency graph for \-Interpolator.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Interpolator_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Interpolator_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class indep\-Var\-Type , class dep\-Var\-Type $>$ }\\void \hyperlink{Interpolator_8h_ac3e08699a15ac93f7dba5cfd6b1e498b}{linear\-Interpolation} (const indep\-Var\-Type \&x\-Start, const indep\-Var\-Type \&x\-End, const dep\-Var\-Type \&y\-Start, const dep\-Var\-Type \&y\-End, const indep\-Var\-Type \&dx, std\-::vector$<$ indep\-Var\-Type $>$ \&x\-Interp, std\-::vector$<$ dep\-Var\-Type $>$ \&y\-Interp, bool overwrite=true, bool ignore\-Start=false)
+\item 
+{\footnotesize template$<$class indep\-Var\-Type , class dep\-Var\-Type $>$ }\\void \hyperlink{Interpolator_8h_a3aedfc1e12c594c3229c00b0b73baadd}{linear\-Interpolation} (const std\-::vector$<$ indep\-Var\-Type $>$ \&x\-Vec, const std\-::vector$<$ dep\-Var\-Type $>$ \&y\-Vec, const indep\-Var\-Type \&dx, std\-::vector$<$ indep\-Var\-Type $>$ \&x\-Interp, std\-::vector$<$ dep\-Var\-Type $>$ \&y\-Interp)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{Interpolator_8h_ac3e08699a15ac93f7dba5cfd6b1e498b}{\index{\-Interpolator.\-h@{\-Interpolator.\-h}!linear\-Interpolation@{linear\-Interpolation}}
+\index{linear\-Interpolation@{linear\-Interpolation}!Interpolator.h@{\-Interpolator.\-h}}
+\subsubsection[{linear\-Interpolation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class indep\-Var\-Type , class dep\-Var\-Type $>$ void {\bf linear\-Interpolation} (
+\begin{DoxyParamCaption}
+\item[{const indep\-Var\-Type \&}]{x\-Start, }
+\item[{const indep\-Var\-Type \&}]{x\-End, }
+\item[{const dep\-Var\-Type \&}]{y\-Start, }
+\item[{const dep\-Var\-Type \&}]{y\-End, }
+\item[{const indep\-Var\-Type \&}]{dx, }
+\item[{std\-::vector$<$ indep\-Var\-Type $>$ \&}]{x\-Interp, }
+\item[{std\-::vector$<$ dep\-Var\-Type $>$ \&}]{y\-Interp, }
+\item[{bool}]{overwrite = {\ttfamily true}, }
+\item[{bool}]{ignore\-Start = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{Interpolator_8h_ac3e08699a15ac93f7dba5cfd6b1e498b}
+\hypertarget{Interpolator_8h_a3aedfc1e12c594c3229c00b0b73baadd}{\index{\-Interpolator.\-h@{\-Interpolator.\-h}!linear\-Interpolation@{linear\-Interpolation}}
+\index{linear\-Interpolation@{linear\-Interpolation}!Interpolator.h@{\-Interpolator.\-h}}
+\subsubsection[{linear\-Interpolation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class indep\-Var\-Type , class dep\-Var\-Type $>$ void {\bf linear\-Interpolation} (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ indep\-Var\-Type $>$ \&}]{x\-Vec, }
+\item[{const std\-::vector$<$ dep\-Var\-Type $>$ \&}]{y\-Vec, }
+\item[{const indep\-Var\-Type \&}]{dx, }
+\item[{std\-::vector$<$ indep\-Var\-Type $>$ \&}]{x\-Interp, }
+\item[{std\-::vector$<$ dep\-Var\-Type $>$ \&}]{y\-Interp}
+\end{DoxyParamCaption}
+)}}\label{Interpolator_8h_a3aedfc1e12c594c3229c00b0b73baadd}

@@ -115,16 +115,19 @@ This is the complete list of members for <a class="el" href="classThread.html">T
   <tr class="memlist"><td><a class="el" href="classThread.html#a23a41c6ccd1df898084112cfd46120f3">odometry</a></td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#a6ce5ef9684cb2793be85e7402ad672f0">parseDebugMessage</a>(yarp::os::Bottle &amp;input, yarp::os::Bottle &amp;reply)</td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#ae21029d250ac7c720f2411eab71a9414">parseIncomingMessage</a>(yarp::os::Bottle &amp;input, yarp::os::Bottle &amp;reply)</td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classThread.html#a49b65da88eb521ff53ef94d6ec8da7ab">putAnklesIntoIdle</a>()</td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classThread.html#a4b79627dd26cfff3873f2805f49f2873">putAnklesIntoIdle</a>(double idleTime)</td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#a602de8d12886c9c57b5420c83804a38b">rpcServerCallback</a></td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#adbec1b4f2c8fc40641df6f118e93fd25">rpcServerPort</a></td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#ad9373d8d725c46717dfce3130018fe3a">run</a>()</td><td><a class="el" href="classThread.html">Thread</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classThread.html#abb40b80d01d71d1aea1f787f7a1a2511">sendTorqueReferenceToDebugJoint</a>(int idx)</td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classThread.html#acc470c4c98aac74a1b550a4afacb322f">setDebugJointToTorqueMode</a>(int idx)</td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#a7494a3cf676527432ee724d59ed9ee8f">Thread</a>(OcraControllerOptions &amp;controller_options, std::shared_ptr&lt; wbi::wholeBodyInterface &gt; wbi)</td><td><a class="el" href="classThread.html">Thread</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#a1e840470cd71d7bfb2430d24169e3dce">threadInit</a>()</td><td><a class="el" href="classThread.html">Thread</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#aa2856c7d45670f45d66bcb319255defe">threadRelease</a>()</td><td><a class="el" href="classThread.html">Thread</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#a5e864394c4bd0fbdf3cba7f6f825e17d">TORQUE_MAX</a></td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private, static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#ad44e5fbda8070c252ea71823a4b9a6db">TORQUE_MIN</a></td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private, static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#a3238993799b36af06f3858a3f65dcf1e">torques</a></td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classThread.html#a20581ff7f2cfb2efe1fbc2aa703438a4">userHasSetDebugIndex</a></td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#a9af0e98aa9b1de2f5c7bfa2f6e5001a2">writeDebugData</a>()</td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#aa3f4bbc2dca15c247a13de1bdbc4f7a3">yarpWbi</a></td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classThread.html#a37d9edd3a1a776cbc27dedff949c9726">~Thread</a>()</td><td><a class="el" href="classThread.html">Thread</a></td><td><code> [virtual]</code></td></tr>
@@ -147,7 +150,7 @@ This is the complete list of members for <a class="el" href="classThread.html">T
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Wed Apr 12 2017 00:01:24 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Apr 13 2017 00:01:50 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

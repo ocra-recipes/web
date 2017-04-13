@@ -50,7 +50,11 @@ void \hyperlink{classThread_a6ce5ef9684cb2793be85e7402ad672f0}{parse\-Debug\-Mes
 \item 
 void \hyperlink{classThread_a9af0e98aa9b1de2f5c7bfa2f6e5001a2}{write\-Debug\-Data} ()
 \item 
-void \hyperlink{classThread_a49b65da88eb521ff53ef94d6ec8da7ab}{put\-Ankles\-Into\-Idle} ()
+void \hyperlink{classThread_a4b79627dd26cfff3873f2805f49f2873}{put\-Ankles\-Into\-Idle} (double idle\-Time)
+\item 
+void \hyperlink{classThread_abb40b80d01d71d1aea1f787f7a1a2511}{send\-Torque\-Reference\-To\-Debug\-Joint} (int idx)
+\item 
+bool \hyperlink{classThread_acc470c4c98aac74a1b550a4afacb322f}{set\-Debug\-Joint\-To\-Torque\-Mode} (int idx)
 \end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
@@ -92,6 +96,8 @@ yarp\-::os\-::\-Port \hyperlink{classThread_a9bd7f6aebc0be4709f32f95aa32f1add}{d
 \-Eigen\-::\-Vector\-Xd \hyperlink{classThread_aa9cbe8744e51571a17fa726d8d16a0c6}{measured\-Torques}
 \item 
 bool \hyperlink{classThread_aba345996b91a57d9e1f2dd15c7c75e08}{debugging\-All\-Joints}
+\item 
+bool \hyperlink{classThread_a20581ff7f2cfb2efe1fbc2aa703438a4}{user\-Has\-Set\-Debug\-Index}
 \item 
 \-Eigen\-::\-Displacementd \hyperlink{classThread_a304e7ee40ec0ceec2fc7ca80353ab478}{l\-\_\-foot\-\_\-disp\-\_\-inverse}
 \item 
@@ -164,13 +170,13 @@ static const int \hyperlink{classThread_a5e864394c4bd0fbdf3cba7f6f825e17d}{\-T\-
 \item[{yarp\-::os\-::\-Bottle \&}]{reply}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_ae21029d250ac7c720f2411eab71a9414}
-\hypertarget{classThread_a49b65da88eb521ff53ef94d6ec8da7ab}{\index{\-Thread@{\-Thread}!put\-Ankles\-Into\-Idle@{put\-Ankles\-Into\-Idle}}
+\hypertarget{classThread_a4b79627dd26cfff3873f2805f49f2873}{\index{\-Thread@{\-Thread}!put\-Ankles\-Into\-Idle@{put\-Ankles\-Into\-Idle}}
 \index{put\-Ankles\-Into\-Idle@{put\-Ankles\-Into\-Idle}!Thread@{\-Thread}}
 \subsubsection[{put\-Ankles\-Into\-Idle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::put\-Ankles\-Into\-Idle} (
 \begin{DoxyParamCaption}
-{}
+\item[{double}]{idle\-Time}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a49b65da88eb521ff53ef94d6ec8da7ab}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a4b79627dd26cfff3873f2805f49f2873}
 \hypertarget{classThread_ad9373d8d725c46717dfce3130018fe3a}{\index{\-Thread@{\-Thread}!run@{run}}
 \index{run@{run}!Thread@{\-Thread}}
 \subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::run} (
@@ -178,6 +184,20 @@ static const int \hyperlink{classThread_a5e864394c4bd0fbdf3cba7f6f825e17d}{\-T\-
 {}
 \end{DoxyParamCaption}
 )}}\label{classThread_ad9373d8d725c46717dfce3130018fe3a}
+\hypertarget{classThread_abb40b80d01d71d1aea1f787f7a1a2511}{\index{\-Thread@{\-Thread}!send\-Torque\-Reference\-To\-Debug\-Joint@{send\-Torque\-Reference\-To\-Debug\-Joint}}
+\index{send\-Torque\-Reference\-To\-Debug\-Joint@{send\-Torque\-Reference\-To\-Debug\-Joint}!Thread@{\-Thread}}
+\subsubsection[{send\-Torque\-Reference\-To\-Debug\-Joint}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Thread\-::send\-Torque\-Reference\-To\-Debug\-Joint} (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_abb40b80d01d71d1aea1f787f7a1a2511}
+\hypertarget{classThread_acc470c4c98aac74a1b550a4afacb322f}{\index{\-Thread@{\-Thread}!set\-Debug\-Joint\-To\-Torque\-Mode@{set\-Debug\-Joint\-To\-Torque\-Mode}}
+\index{set\-Debug\-Joint\-To\-Torque\-Mode@{set\-Debug\-Joint\-To\-Torque\-Mode}!Thread@{\-Thread}}
+\subsubsection[{set\-Debug\-Joint\-To\-Torque\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Thread\-::set\-Debug\-Joint\-To\-Torque\-Mode} (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_acc470c4c98aac74a1b550a4afacb322f}
 \hypertarget{classThread_a1e840470cd71d7bfb2430d24169e3dce}{\index{\-Thread@{\-Thread}!thread\-Init@{thread\-Init}}
 \index{thread\-Init@{thread\-Init}!Thread@{\-Thread}}
 \subsubsection[{thread\-Init}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Thread\-::thread\-Init} (
@@ -268,7 +288,10 @@ static const int \hyperlink{classThread_a5e864394c4bd0fbdf3cba7f6f825e17d}{\-T\-
 \-Minimum possible actuator torques \hypertarget{classThread_a3238993799b36af06f3858a3f65dcf1e}{\index{\-Thread@{\-Thread}!torques@{torques}}
 \index{torques@{torques}!Thread@{\-Thread}}
 \subsubsection[{torques}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Thread\-::torques}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a3238993799b36af06f3858a3f65dcf1e}
-\-The torques calculated at each \hyperlink{classThread_ad9373d8d725c46717dfce3130018fe3a}{run()} loop. \hypertarget{classThread_aa3f4bbc2dca15c247a13de1bdbc4f7a3}{\index{\-Thread@{\-Thread}!yarp\-Wbi@{yarp\-Wbi}}
+\-The torques calculated at each \hyperlink{classThread_ad9373d8d725c46717dfce3130018fe3a}{run()} loop. \hypertarget{classThread_a20581ff7f2cfb2efe1fbc2aa703438a4}{\index{\-Thread@{\-Thread}!user\-Has\-Set\-Debug\-Index@{user\-Has\-Set\-Debug\-Index}}
+\index{user\-Has\-Set\-Debug\-Index@{user\-Has\-Set\-Debug\-Index}!Thread@{\-Thread}}
+\subsubsection[{user\-Has\-Set\-Debug\-Index}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Thread\-::user\-Has\-Set\-Debug\-Index}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_a20581ff7f2cfb2efe1fbc2aa703438a4}
+\hypertarget{classThread_aa3f4bbc2dca15c247a13de1bdbc4f7a3}{\index{\-Thread@{\-Thread}!yarp\-Wbi@{yarp\-Wbi}}
 \index{yarp\-Wbi@{yarp\-Wbi}!Thread@{\-Thread}}
 \subsubsection[{yarp\-Wbi}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$wbi\-::whole\-Body\-Interface$>$ {\bf \-Thread\-::yarp\-Wbi}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classThread_aa3f4bbc2dca15c247a13de1bdbc4f7a3}
 \-The \-W\-B\-I used to talk to the robot. 

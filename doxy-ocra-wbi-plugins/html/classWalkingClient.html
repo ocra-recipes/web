@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a1dbc0308f844aea6542750104fddf8e2">~WalkingClient</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#adb8f972f34cb39c69c02a7c3cb493b81">configure</a> (yarp::os::ResourceFinder &amp;rf)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aff3fabef11d9c8b747a422f879c26067">printHelp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a77e764f397231fe311a7a0f0d91a9b65">queryMIQPSolution</a> (const int miqpPeriod, const int miqpPreviewPeriod, const int clientPeriod, Eigen::VectorXd &amp;preview)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a06a0f21c6a921687f69f37f622338226">queryMIQPSolution</a> (const int miqpPeriod, const int miqpPreviewPeriod, const int clientPeriod, Eigen::VectorXd &amp;preview, Eigen::VectorXd &amp;tPreview)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a03ea2313c954a97aeb4d5b614f3e6caa">readFootWrench</a> (<a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> whichFoot, Eigen::VectorXd &amp;rawWrench)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a3185a8ede8bf8b1227f7dd540ba87e3c">generateZMPTrajectoryTEST</a> (const double tTrans, const double feetSeparation, const double timeStep, const int amplitudeFraction, const int N)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a87e70046251149b4b7aff1dc57b3dcc4">getFeetSeparation</a> (Eigen::Vector3d &amp;sep)</td></tr>
@@ -180,6 +180,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aa0c7669193a8a42ed289c79523580033">_previousCOMVel</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aff02b341d5e1f500dc9a849337319a8d">_clientName</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a67461634d7e8cb0234400b34fd2865e7">_robot</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a6dc3e018cfeeea3407a3326fb2445d17">_period</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a4f9c8688537ddd8a487a212fbb279a9b">_isTestRun</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a35c00feb4e7dfa532e43241e855fec89">_testType</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a14576258d7fed1b36919145f1b56d74c">_zmpTestType</a></td></tr>
@@ -221,6 +222,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5">comVelRefInPreviewWindow</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a0e5aee88e377029d79f57e778c583f18">optimalU</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab56a64a3f08320bb1b92671c6612f7b9">_X_kn</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a6f3b88aea634bc46550593df837e6610">_t_kn</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6c9002a44a54814c4b482739824e39aa"></a><!-- doxytag: member="WalkingClient::WalkingClient" ref="a6c9002a44a54814c4b482739824e39aa" args="(std::shared_ptr&lt; ocra::Model &gt; modelPtr, const int loopPeriod)" -->
@@ -835,12 +837,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a77e764f397231fe311a7a0f0d91a9b65"></a><!-- doxytag: member="WalkingClient::queryMIQPSolution" ref="a77e764f397231fe311a7a0f0d91a9b65" args="(const int miqpPeriod, const int miqpPreviewPeriod, const int clientPeriod, Eigen::VectorXd &amp;preview)" -->
+<a class="anchor" id="a06a0f21c6a921687f69f37f622338226"></a><!-- doxytag: member="WalkingClient::queryMIQPSolution" ref="a06a0f21c6a921687f69f37f622338226" args="(const int miqpPeriod, const int miqpPreviewPeriod, const int clientPeriod, Eigen::VectorXd &amp;preview, Eigen::VectorXd &amp;tPreview)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classWalkingClient.html#a77e764f397231fe311a7a0f0d91a9b65">WalkingClient::queryMIQPSolution</a> </td>
+          <td class="memname">bool <a class="el" href="classWalkingClient.html#a06a0f21c6a921687f69f37f622338226">WalkingClient::queryMIQPSolution</a> </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>miqpPeriod</em>, </td>
@@ -861,7 +863,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>preview</em>&#160;</td>
+          <td class="paramname"><em>preview</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>tPreview</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -878,6 +886,7 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramdir"></td><td class="paramname">miqpPreviewPeriod</td><td>Period used to discretize the <a class="el" href="namespaceMIQP.html">MIQP</a> </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">clientPeriod</td><td>Period of the current client thread. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">Preview</td><td>solution from the <a class="el" href="namespaceMIQP.html">MIQP</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tPreview</td><td>time vector in preview used by the client </td></tr>
   </table>
   </dd>
 </dl>
@@ -1320,6 +1329,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6dc3e018cfeeea3407a3326fb2445d17"></a><!-- doxytag: member="WalkingClient::_period" ref="a6dc3e018cfeeea3407a3326fb2445d17" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classWalkingClient.html#a6dc3e018cfeeea3407a3326fb2445d17">WalkingClient::_period</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a549751e511e023d5fc73eccd1c185317"></a><!-- doxytag: member="WalkingClient::_previousCOM" ref="a549751e511e023d5fc73eccd1c185317" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1534,6 +1556,19 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double <a class="el" href="classWalkingClient.html#a2ed3837afa0c366f1cdef16b2a99b761">WalkingClient::_stopTimeVaryingZmp</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6f3b88aea634bc46550593df837e6610"></a><!-- doxytag: member="WalkingClient::_t_kn" ref="a6f3b88aea634bc46550593df837e6610" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classWalkingClient.html#a6f3b88aea634bc46550593df837e6610">WalkingClient::_t_kn</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -1812,7 +1847,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classWalkingClient.html">WalkingClient</a>      </li>
 
-    <li class="footer">Generated on Wed Apr 12 2017 00:01:24 for ocra-wbi-plugins by
+    <li class="footer">Generated on Thu Apr 13 2017 00:01:50 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
