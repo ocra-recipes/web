@@ -46,11 +46,13 @@ var searchData=
   ['dosegmentname',['doSegmentName',['../classocra__icub_1_1OcraWbiModel.html#adfe5a0f1fb82248f8cbf309f88a95e6c',1,'ocra_icub::OcraWbiModel']]],
   ['dosetfreeflyerposition',['doSetFreeFlyerPosition',['../classocra__icub_1_1OcraWbiModel.html#aa2bb481dc7fdb55c363ac1a404a807e5',1,'ocra_icub::OcraWbiModel']]],
   ['dosetfreeflyervelocity',['doSetFreeFlyerVelocity',['../classocra__icub_1_1OcraWbiModel.html#af740a36f6cc2899dcd6f3507b9703c7f',1,'ocra_icub::OcraWbiModel']]],
+  ['dosetjointaccelerations',['doSetJointAccelerations',['../classocra__icub_1_1OcraWbiModel.html#abbf82fedd5a856983dbf6c444dda33d9',1,'ocra_icub::OcraWbiModel']]],
   ['dosetjointpositions',['doSetJointPositions',['../classocra__icub_1_1OcraWbiModel.html#a64d40044dff11a6302992d52f1dbde0d',1,'ocra_icub::OcraWbiModel']]],
   ['dosetjointvelocities',['doSetJointVelocities',['../classocra__icub_1_1OcraWbiModel.html#a26a758c5ecb02601c066bdfffe5db194',1,'ocra_icub::OcraWbiModel']]],
   ['dosetstate',['doSetState',['../classocra__icub_1_1OcraWbiModel.html#a8639b19a514624953e5e58dbde1c8227',1,'ocra_icub::OcraWbiModel::doSetState(const Eigen::VectorXd &amp;q, const Eigen::VectorXd &amp;q_dot)'],['../classocra__icub_1_1OcraWbiModel.html#a411c844cbde565ed54a224e39a2e65c1',1,'ocra_icub::OcraWbiModel::doSetState(const Eigen::Displacementd &amp;H_root, const Eigen::VectorXd &amp;q, const Eigen::Twistd &amp;T_root, const Eigen::VectorXd &amp;q_dot)']]],
   ['dostepwithmaxvelocity',['doStepWithMaxVelocity',['../classStepController.html#a1bfcb66d504440f0cc7383ad688dad5c',1,'StepController']]],
   ['dq',['dq',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6584a086fe050dab90cd4f0a0e7e970d',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['dqprevious',['dqPrevious',['../classocra__icub_1_1OcraWbiModel.html#a81cbe15f478202b6327343395e10637b',1,'ocra_icub::OcraWbiModel']]],
   ['dt',['dt',['../structMIQPParameters.html#ab4fca30503423e047dc55d27f0c9f3c9',1,'MIQPParameters::dt()'],['../classZmpPreviewController.html#abf1a3ec8d1698afab1c20bba32b5a724',1,'ZmpPreviewController::dt()']]],
   ['dtthread',['dtThread',['../structMIQPParameters.html#a7f5403de83b908d6ce34ce41a1327d62',1,'MIQPParameters']]]
 ];

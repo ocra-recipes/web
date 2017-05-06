@@ -11,7 +11,7 @@ var classIcubControllerServer =
     [ "rootFrameVelocityPivLU", "classIcubControllerServer.html#a27211ecba9fc8618733bcaea9ff7d140", null ],
     [ "rootFrameVelocityPivLU", "classIcubControllerServer.html#a82650f373c3c2c52a91cc744c67b0dcf", null ],
     [ "velocityError", "classIcubControllerServer.html#aaedff28c5d9ac9a7cdbc24c9e0cbc5b3", null ],
-    [ "ALL_JOINTS", "classIcubControllerServer.html#aa977ca558c184e4331121522cc58d2e7", null ],
+    [ "ALL_JOINTS", "classIcubControllerServer.html#a8d077d5e0d0fe0107e6f4f151bd03f2c", null ],
     [ "isFloatingBase", "classIcubControllerServer.html#aebc2019921c3eabb53c01012fbd2355a", null ],
     [ "nDoF", "classIcubControllerServer.html#ab5fb1f18775cfe3036894c73dc21ebcf", null ],
     [ "odometry", "classIcubControllerServer.html#ad0484106ab9d7fd42e2bd682338871c7", null ],

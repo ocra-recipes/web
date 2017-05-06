@@ -119,44 +119,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00059"></a>00059     <span class="keywordtype">void</span> <a class="code" href="classStepController.html#ab8ca9c17211622c4902ce8adc89f9ca5">step</a>(<a class="code" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot, Eigen::Vector3d target, <span class="keywordtype">double</span> stepDuration, <span class="keywordtype">double</span> stepHeight);
 <a name="l00060"></a>00060 
 <a name="l00066"></a>00066     <span class="keywordtype">bool</span> <a class="code" href="classStepController.html#ac8e210ab8acf9c7b91bce3396fff20c8">isStepFinished</a>(<a class="code" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot);
-<a name="l00067"></a>00067 
-<a name="l00073"></a>00073     Eigen::Vector3d <a class="code" href="classStepController.html#aa168e028dc086859400e1c93c0becdd2">getLeftFootPosition</a>();
-<a name="l00074"></a>00074 
-<a name="l00080"></a>00080     Eigen::Vector3d <a class="code" href="classStepController.html#aaa7e389226a30582be8c8a724661a921">getRightFootPosition</a>();
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082     <span class="keywordtype">void</span> <a class="code" href="classStepController.html#a0dcf2ec0d0fdf1fd9d86878fffd4e5ad">computeMidPoint</a>(<a class="code" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot, Eigen::Vector3d target, <span class="keywordtype">double</span> stepHeight, Eigen::Vector3d &amp; midPoint);
+<a name="l00067"></a>00067     
+<a name="l00068"></a>00068     <span class="keywordtype">double</span> <a class="code" href="classStepController.html#a07a961e8c82124d7e88416a3dcab8056">getFootTrajError</a>(<a class="code" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot, <span class="keywordtype">double</span> &amp;error);
+<a name="l00069"></a>00069     
+<a name="l00075"></a>00075     Eigen::Vector3d <a class="code" href="classStepController.html#aa168e028dc086859400e1c93c0becdd2">getLeftFootPosition</a>();
+<a name="l00076"></a>00076 
+<a name="l00082"></a>00082     Eigen::Vector3d <a class="code" href="classStepController.html#aaa7e389226a30582be8c8a724661a921">getRightFootPosition</a>();
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085     <span class="keywordtype">void</span> <a class="code" href="classStepController.html#a16b1f62737f1287b7f33b216871d1ba8">doComputeMidPoint</a>(Eigen::Vector3d currentFootPosition, Eigen::Vector3d target, <span class="keywordtype">double</span> stepHeight, Eigen::Vector3d &amp; midPoint);
+<a name="l00084"></a>00084     <span class="keywordtype">void</span> <a class="code" href="classStepController.html#a0dcf2ec0d0fdf1fd9d86878fffd4e5ad">computeMidPoint</a>(<a class="code" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot, Eigen::Vector3d target, <span class="keywordtype">double</span> stepHeight, Eigen::Vector3d &amp; midPoint);
+<a name="l00085"></a>00085 
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087     <span class="keywordtype">bool</span> <a class="code" href="classStepController.html#a9e2415755548f47301277feb7a376270">isTrajectoryFinished</a>(<a class="code" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot);
+<a name="l00087"></a>00087     <span class="keywordtype">void</span> <a class="code" href="classStepController.html#a16b1f62737f1287b7f33b216871d1ba8">doComputeMidPoint</a>(Eigen::Vector3d currentFootPosition, Eigen::Vector3d target, <span class="keywordtype">double</span> stepHeight, Eigen::Vector3d &amp; midPoint);
 <a name="l00088"></a>00088 
-<a name="l00093"></a>00093     <span class="keywordtype">void</span> <a class="code" href="classStepController.html#a48224628b92c088a34d9db4a14f75f1a">stop</a>();
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095 
-<a name="l00101"></a>00101     Eigen::MatrixXd <a class="code" href="classStepController.html#afb77002292921660ef4a44657d6566f1">getContact2DCoordinates</a>();
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104 <span class="keyword">private</span>:
-<a name="l00105"></a><a class="code" href="classStepController.html#aabeb4837b7b6cf691cb9de57c6ea8800">00105</a>     std::vector&lt;ocra_recipes::TaskConnection::Ptr&gt; <a class="code" href="classStepController.html#aabeb4837b7b6cf691cb9de57c6ea8800">_contactsCollection</a>;
-<a name="l00106"></a><a class="code" href="classStepController.html#ad778378c6e6ac12d972cc8c5a986dcf9">00106</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#ad778378c6e6ac12d972cc8c5a986dcf9">_LeftFootContact_BackLeft</a>;
-<a name="l00107"></a><a class="code" href="classStepController.html#a74e19501ce4f336bb4c26beebe3d39e2">00107</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a74e19501ce4f336bb4c26beebe3d39e2">_LeftFootContact_FrontLeft</a>;
-<a name="l00108"></a><a class="code" href="classStepController.html#a9c733b7ab0ce610c84158f7d1de60267">00108</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a9c733b7ab0ce610c84158f7d1de60267">_LeftFootContact_BackRight</a>;
-<a name="l00109"></a><a class="code" href="classStepController.html#a1a4e831d573ab9e0f25680da7d065a77">00109</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a1a4e831d573ab9e0f25680da7d065a77">_LeftFootContact_FrontRight</a>;
-<a name="l00110"></a><a class="code" href="classStepController.html#a57947ee8824b3cb3ee34e936431588df">00110</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a57947ee8824b3cb3ee34e936431588df">_RightFootContact_BackLeft</a>;
-<a name="l00111"></a><a class="code" href="classStepController.html#a0e1c5ce837e4811214a97c42edc66721">00111</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a0e1c5ce837e4811214a97c42edc66721">_RightFootContact_FrontLeft</a>;
-<a name="l00112"></a><a class="code" href="classStepController.html#ac999bb1e7b4b005da35093345c0cb4de">00112</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#ac999bb1e7b4b005da35093345c0cb4de">_RightFootContact_BackRight</a>;
-<a name="l00113"></a><a class="code" href="classStepController.html#a9f06562625b657c280dc688bcad421be">00113</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a9f06562625b657c280dc688bcad421be">_RightFootContact_FrontRight</a>;
-<a name="l00114"></a><a class="code" href="classStepController.html#adc2b0bf2d3c302c54d659d44cb34ba3e">00114</a>     std::shared_ptr&lt;ocra_recipes::TrajectoryThread&gt; <a class="code" href="classStepController.html#adc2b0bf2d3c302c54d659d44cb34ba3e">_leftFoot_TrajThread</a>;
-<a name="l00115"></a><a class="code" href="classStepController.html#a37b943ed8733490d028687997944e478">00115</a>     std::shared_ptr&lt;ocra_recipes::TrajectoryThread&gt; <a class="code" href="classStepController.html#a37b943ed8733490d028687997944e478">_rightFoot_TrajThread</a>;
-<a name="l00116"></a><a class="code" href="classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d">00116</a>     Eigen::Vector3d <a class="code" href="classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d">target</a>;
-<a name="l00117"></a><a class="code" href="classStepController.html#a6bc27bbd20adf3bc0a1b010a14dece95">00117</a>     Eigen::Vector3d <a class="code" href="classStepController.html#a6bc27bbd20adf3bc0a1b010a14dece95">_leftFootPosition</a>;
-<a name="l00118"></a><a class="code" href="classStepController.html#a064d9f5406f9221e4351617a177c1cef">00118</a>     Eigen::Vector3d <a class="code" href="classStepController.html#a064d9f5406f9221e4351617a177c1cef">_rightFootPosition</a>;
-<a name="l00119"></a><a class="code" href="classStepController.html#aa07914c0186c24fd4fc02612d0ee6332">00119</a>     ocra::Model::Ptr <a class="code" href="classStepController.html#aa07914c0186c24fd4fc02612d0ee6332">_model</a>;
-<a name="l00120"></a><a class="code" href="classStepController.html#a8b98494b6b9d13b41c6838d127078085">00120</a>     <span class="keywordtype">int</span> <a class="code" href="classStepController.html#a8b98494b6b9d13b41c6838d127078085">_period</a>;
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 };
-<a name="l00123"></a>00123 <span class="preprocessor">#endif</span>
+<a name="l00089"></a>00089     <span class="keywordtype">bool</span> <a class="code" href="classStepController.html#a9e2415755548f47301277feb7a376270">isTrajectoryFinished</a>(<a class="code" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot);
+<a name="l00090"></a>00090 
+<a name="l00095"></a>00095     <span class="keywordtype">void</span> <a class="code" href="classStepController.html#a48224628b92c088a34d9db4a14f75f1a">stop</a>();
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 
+<a name="l00103"></a>00103     Eigen::MatrixXd <a class="code" href="classStepController.html#afb77002292921660ef4a44657d6566f1">getContact2DCoordinates</a>();
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 <span class="keyword">private</span>:
+<a name="l00107"></a><a class="code" href="classStepController.html#aabeb4837b7b6cf691cb9de57c6ea8800">00107</a>     std::vector&lt;ocra_recipes::TaskConnection::Ptr&gt; <a class="code" href="classStepController.html#aabeb4837b7b6cf691cb9de57c6ea8800">_contactsCollection</a>;
+<a name="l00108"></a><a class="code" href="classStepController.html#ad778378c6e6ac12d972cc8c5a986dcf9">00108</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#ad778378c6e6ac12d972cc8c5a986dcf9">_LeftFootContact_BackLeft</a>;
+<a name="l00109"></a><a class="code" href="classStepController.html#a74e19501ce4f336bb4c26beebe3d39e2">00109</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a74e19501ce4f336bb4c26beebe3d39e2">_LeftFootContact_FrontLeft</a>;
+<a name="l00110"></a><a class="code" href="classStepController.html#a9c733b7ab0ce610c84158f7d1de60267">00110</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a9c733b7ab0ce610c84158f7d1de60267">_LeftFootContact_BackRight</a>;
+<a name="l00111"></a><a class="code" href="classStepController.html#a1a4e831d573ab9e0f25680da7d065a77">00111</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a1a4e831d573ab9e0f25680da7d065a77">_LeftFootContact_FrontRight</a>;
+<a name="l00112"></a><a class="code" href="classStepController.html#a57947ee8824b3cb3ee34e936431588df">00112</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a57947ee8824b3cb3ee34e936431588df">_RightFootContact_BackLeft</a>;
+<a name="l00113"></a><a class="code" href="classStepController.html#a0e1c5ce837e4811214a97c42edc66721">00113</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a0e1c5ce837e4811214a97c42edc66721">_RightFootContact_FrontLeft</a>;
+<a name="l00114"></a><a class="code" href="classStepController.html#ac999bb1e7b4b005da35093345c0cb4de">00114</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#ac999bb1e7b4b005da35093345c0cb4de">_RightFootContact_BackRight</a>;
+<a name="l00115"></a><a class="code" href="classStepController.html#a9f06562625b657c280dc688bcad421be">00115</a>     ocra_recipes::TaskConnection::Ptr <a class="code" href="classStepController.html#a9f06562625b657c280dc688bcad421be">_RightFootContact_FrontRight</a>;
+<a name="l00116"></a><a class="code" href="classStepController.html#adc2b0bf2d3c302c54d659d44cb34ba3e">00116</a>     std::shared_ptr&lt;ocra_recipes::TrajectoryThread&gt; <a class="code" href="classStepController.html#adc2b0bf2d3c302c54d659d44cb34ba3e">_leftFoot_TrajThread</a>;
+<a name="l00117"></a><a class="code" href="classStepController.html#a37b943ed8733490d028687997944e478">00117</a>     std::shared_ptr&lt;ocra_recipes::TrajectoryThread&gt; <a class="code" href="classStepController.html#a37b943ed8733490d028687997944e478">_rightFoot_TrajThread</a>;
+<a name="l00118"></a><a class="code" href="classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d">00118</a>     Eigen::Vector3d <a class="code" href="classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d">target</a>;
+<a name="l00119"></a><a class="code" href="classStepController.html#a6bc27bbd20adf3bc0a1b010a14dece95">00119</a>     Eigen::Vector3d <a class="code" href="classStepController.html#a6bc27bbd20adf3bc0a1b010a14dece95">_leftFootPosition</a>;
+<a name="l00120"></a><a class="code" href="classStepController.html#a064d9f5406f9221e4351617a177c1cef">00120</a>     Eigen::Vector3d <a class="code" href="classStepController.html#a064d9f5406f9221e4351617a177c1cef">_rightFootPosition</a>;
+<a name="l00121"></a><a class="code" href="classStepController.html#aa07914c0186c24fd4fc02612d0ee6332">00121</a>     ocra::Model::Ptr <a class="code" href="classStepController.html#aa07914c0186c24fd4fc02612d0ee6332">_model</a>;
+<a name="l00122"></a><a class="code" href="classStepController.html#a8b98494b6b9d13b41c6838d127078085">00122</a>     <span class="keywordtype">int</span> <a class="code" href="classStepController.html#a8b98494b6b9d13b41c6838d127078085">_period</a>;
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 };
+<a name="l00125"></a>00125 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -177,7 +179,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="StepController_8h.html">StepController.h</a>      </li>
 
-    <li class="footer">Generated on Fri May 5 2017 00:10:19 for ocra-wbi-plugins by
+    <li class="footer">Generated on Sat May 6 2017 00:10:54 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

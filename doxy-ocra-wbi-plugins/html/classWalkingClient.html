@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae6d6c046a9a3e51771afe8b4c105b412">publish3dQuantity</a> (yarp::os::BufferedPort&lt; yarp::os::Bottle &gt; &amp;port, Eigen::Vector3d &amp;value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae3c259f7615c85ce53a413f6e7ab4b76">performZMPTest</a> (<a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a3b1217b7fa17f76f162be0e12e419d96">performZMPPreviewTest</a> (<a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a02b25446423fa7457a20dce6fe224534">performZMPPreviewTestIntCoM</a> (<a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a> type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a4f14aa5a6f0219f80fba6573889b8bb7">performMIQPTest</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a49fb64ddafa81f0a5f29a8c0fc5188bd">performSingleStepTest</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#adb2fbd66671321d046cf5e1ca74f5bc1">steppingTest</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ae8f7dc629313df7d362e3edd6f45ae10">composePortName</a> (std::string portName)</td></tr>
@@ -138,7 +140,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab5bd1eceec03d8b88ffe2b6b07d981c0">generateZMPSingleStepTrajectory</a> (double period, double feetSeparation)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a51ac091a481766030dcedf7327122c19">generateStepPattern</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aebee5b71a15e0b990fb3dad36f335eb5">generateZMPSteppingTrajectory</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab497c47c538b8ac2871ddd706c5e61a9">startSteppinMotherFucker</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aa1e8544a58d084c70c7e8a4a9c247de5">startSteppinMotherFucker</a> (int &amp;stepTrigger, double &amp;error)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#aad39a3836319f9b7258d8eb129776b47">prepareAndsetDesiredCoMTaskState</a> (Eigen::VectorXd comState, bool doSet)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -216,7 +218,7 @@ Private Attributes</h2></td></tr>
 &lt; yarp::os::Bottle &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a692d95b3e76a396d107b0c29a3d591f1">_ddcomCurrent</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">yarp::os::BufferedPort<br class="typebreak"/>
 &lt; yarp::os::Bottle &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a41b7320607812418af496b8b2c30204f">_ddcomFromZMP</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#abc3c504305c00a27e9fd38a8bf08ecda">_hkkPrevious</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#a3797b54c4f53a2a5c36fe34ef4ce24aa">_hkkPrevious</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab645ecb2d55e28b57a64ca48ee638b1e">_firstLoop</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#af28b3cd3b1202f83e193b098572fbdd3">zmpRefInPreviewWindow</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWalkingClient.html#ab3b1defedb6d79b5b6eaadd52bbad9f5">comVelRefInPreviewWindow</a></td></tr>
@@ -682,6 +684,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4f14aa5a6f0219f80fba6573889b8bb7"></a><!-- doxytag: member="WalkingClient::performMIQPTest" ref="a4f14aa5a6f0219f80fba6573889b8bb7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#a4f14aa5a6f0219f80fba6573889b8bb7">WalkingClient::performMIQPTest</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a49fb64ddafa81f0a5f29a8c0fc5188bd"></a><!-- doxytag: member="WalkingClient::performSingleStepTest" ref="a49fb64ddafa81f0a5f29a8c0fc5188bd" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -721,6 +739,23 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02b25446423fa7457a20dce6fe224534"></a><!-- doxytag: member="WalkingClient::performZMPPreviewTestIntCoM" ref="a02b25446423fa7457a20dce6fe224534" args="(ZmpTestType type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#a02b25446423fa7457a20dce6fe224534">WalkingClient::performZMPPreviewTestIntCoM</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="utils_8h.html#afc01479a47f5a87462a54b6a9e11fffa">ZmpTestType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -946,15 +981,26 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab497c47c538b8ac2871ddd706c5e61a9"></a><!-- doxytag: member="WalkingClient::startSteppinMotherFucker" ref="ab497c47c538b8ac2871ddd706c5e61a9" args="()" -->
+<a class="anchor" id="aa1e8544a58d084c70c7e8a4a9c247de5"></a><!-- doxytag: member="WalkingClient::startSteppinMotherFucker" ref="aa1e8544a58d084c70c7e8a4a9c247de5" args="(int &amp;stepTrigger, double &amp;error)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classWalkingClient.html#ab497c47c538b8ac2871ddd706c5e61a9">WalkingClient::startSteppinMotherFucker</a> </td>
+          <td class="memname">void <a class="el" href="classWalkingClient.html#aa1e8544a58d084c70c7e8a4a9c247de5">WalkingClient::startSteppinMotherFucker</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>stepTrigger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -1238,12 +1284,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abc3c504305c00a27e9fd38a8bf08ecda"></a><!-- doxytag: member="WalkingClient::_hkkPrevious" ref="abc3c504305c00a27e9fd38a8bf08ecda" args="" -->
+<a class="anchor" id="a3797b54c4f53a2a5c36fe34ef4ce24aa"></a><!-- doxytag: member="WalkingClient::_hkkPrevious" ref="a3797b54c4f53a2a5c36fe34ef4ce24aa" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">VectorXd <a class="el" href="classWalkingClient.html#abc3c504305c00a27e9fd38a8bf08ecda">WalkingClient::_hkkPrevious</a><code> [private]</code></td>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classWalkingClient.html#a3797b54c4f53a2a5c36fe34ef4ce24aa">WalkingClient::_hkkPrevious</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -1847,7 +1893,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classWalkingClient.html">WalkingClient</a>      </li>
 
-    <li class="footer">Generated on Fri May 5 2017 00:10:20 for ocra-wbi-plugins by
+    <li class="footer">Generated on Sat May 6 2017 00:10:54 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

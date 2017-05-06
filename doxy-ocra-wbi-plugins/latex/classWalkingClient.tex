@@ -39,6 +39,10 @@ void \hyperlink{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{perform\-Z
 \item 
 void \hyperlink{classWalkingClient_a3b1217b7fa17f76f162be0e12e419d96}{perform\-Z\-M\-P\-Preview\-Test} (\hyperlink{utils_8h_afc01479a47f5a87462a54b6a9e11fffa}{\-Zmp\-Test\-Type} type)
 \item 
+void \hyperlink{classWalkingClient_a02b25446423fa7457a20dce6fe224534}{perform\-Z\-M\-P\-Preview\-Test\-Int\-Co\-M} (\hyperlink{utils_8h_afc01479a47f5a87462a54b6a9e11fffa}{\-Zmp\-Test\-Type} type)
+\item 
+void \hyperlink{classWalkingClient_a4f14aa5a6f0219f80fba6573889b8bb7}{perform\-M\-I\-Q\-P\-Test} ()
+\item 
 void \hyperlink{classWalkingClient_a49fb64ddafa81f0a5f29a8c0fc5188bd}{perform\-Single\-Step\-Test} ()
 \item 
 void \hyperlink{classWalkingClient_adb2fbd66671321d046cf5e1ca74f5bc1}{stepping\-Test} ()
@@ -71,7 +75,7 @@ void \hyperlink{classWalkingClient_a51ac091a481766030dcedf7327122c19}{generate\-
 \item 
 std\-::vector$<$ \-Eigen\-::\-Vector2d $>$ \hyperlink{classWalkingClient_aebee5b71a15e0b990fb3dad36f335eb5}{generate\-Z\-M\-P\-Stepping\-Trajectory} ()
 \item 
-void \hyperlink{classWalkingClient_ab497c47c538b8ac2871ddd706c5e61a9}{start\-Steppin\-Mother\-Fucker} ()
+void \hyperlink{classWalkingClient_aa1e8544a58d084c70c7e8a4a9c247de5}{start\-Steppin\-Mother\-Fucker} (int \&step\-Trigger, double \&error)
 \item 
 void \hyperlink{classWalkingClient_aad39a3836319f9b7258d8eb129776b47}{prepare\-Andset\-Desired\-Co\-M\-Task\-State} (\-Eigen\-::\-Vector\-Xd com\-State, bool do\-Set)
 \end{DoxyCompactItemize}
@@ -211,7 +215,7 @@ $<$ yarp\-::os\-::\-Bottle $>$ \hyperlink{classWalkingClient_a692d95b3e76a396d10
 yarp\-::os\-::\-Buffered\-Port\*
 $<$ yarp\-::os\-::\-Bottle $>$ \hyperlink{classWalkingClient_a41b7320607812418af496b8b2c30204f}{\-\_\-ddcom\-From\-Z\-M\-P}
 \item 
-\-Vector\-Xd \hyperlink{classWalkingClient_abc3c504305c00a27e9fd38a8bf08ecda}{\-\_\-hkk\-Previous}
+\-Eigen\-::\-Vector\-Xd \hyperlink{classWalkingClient_a3797b54c4f53a2a5c36fe34ef4ce24aa}{\-\_\-hkk\-Previous}
 \item 
 bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-first\-Loop}
 \item 
@@ -441,6 +445,13 @@ bool \hyperlink{classWalkingClient_ab645ecb2d55e28b57a64ca48ee638b1e}{\-\_\-firs
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classWalkingClient_afd997bb00534c57fe1b0d5f37f207386}
+\hypertarget{classWalkingClient_a4f14aa5a6f0219f80fba6573889b8bb7}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-M\-I\-Q\-P\-Test@{perform\-M\-I\-Q\-P\-Test}}
+\index{perform\-M\-I\-Q\-P\-Test@{perform\-M\-I\-Q\-P\-Test}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{perform\-M\-I\-Q\-P\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::perform\-M\-I\-Q\-P\-Test} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_a4f14aa5a6f0219f80fba6573889b8bb7}
 \hypertarget{classWalkingClient_a49fb64ddafa81f0a5f29a8c0fc5188bd}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Single\-Step\-Test@{perform\-Single\-Step\-Test}}
 \index{perform\-Single\-Step\-Test@{perform\-Single\-Step\-Test}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{perform\-Single\-Step\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::perform\-Single\-Step\-Test} (
@@ -467,6 +478,13 @@ $|$ \-Parameter $|$ \-Value $|$ $|$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\-: $|$ \-:-\/
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{utils_8h_afc01479a47f5a87462a54b6a9e11fffa}{\-Zmp\-Test\-Type}. 
 \end{DoxySeeAlso}
+\hypertarget{classWalkingClient_a02b25446423fa7457a20dce6fe224534}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Z\-M\-P\-Preview\-Test\-Int\-Co\-M@{perform\-Z\-M\-P\-Preview\-Test\-Int\-Co\-M}}
+\index{perform\-Z\-M\-P\-Preview\-Test\-Int\-Co\-M@{perform\-Z\-M\-P\-Preview\-Test\-Int\-Co\-M}!WalkingClient@{\-Walking\-Client}}
+\subsubsection[{perform\-Z\-M\-P\-Preview\-Test\-Int\-Co\-M}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::perform\-Z\-M\-P\-Preview\-Test\-Int\-Co\-M} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Zmp\-Test\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{classWalkingClient_a02b25446423fa7457a20dce6fe224534}
 \hypertarget{classWalkingClient_ae3c259f7615c85ce53a413f6e7ab4b76}{\index{\-Walking\-Client@{\-Walking\-Client}!perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}}
 \index{perform\-Z\-M\-P\-Test@{perform\-Z\-M\-P\-Test}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{perform\-Z\-M\-P\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::perform\-Z\-M\-P\-Test} (
@@ -584,13 +602,14 @@ $|$ \-Parameter $|$ \-Value $|$ $|$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\-: $|$ \-:-\/
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classWalkingClient_a3b36da9d7649865a13c9318dd73ebc7e}
-\hypertarget{classWalkingClient_ab497c47c538b8ac2871ddd706c5e61a9}{\index{\-Walking\-Client@{\-Walking\-Client}!start\-Steppin\-Mother\-Fucker@{start\-Steppin\-Mother\-Fucker}}
+\hypertarget{classWalkingClient_aa1e8544a58d084c70c7e8a4a9c247de5}{\index{\-Walking\-Client@{\-Walking\-Client}!start\-Steppin\-Mother\-Fucker@{start\-Steppin\-Mother\-Fucker}}
 \index{start\-Steppin\-Mother\-Fucker@{start\-Steppin\-Mother\-Fucker}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{start\-Steppin\-Mother\-Fucker}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::start\-Steppin\-Mother\-Fucker} (
 \begin{DoxyParamCaption}
-{}
+\item[{int \&}]{step\-Trigger, }
+\item[{double \&}]{error}
 \end{DoxyParamCaption}
-)}}\label{classWalkingClient_ab497c47c538b8ac2871ddd706c5e61a9}
+)}}\label{classWalkingClient_aa1e8544a58d084c70c7e8a4a9c247de5}
 \-Manages the step switching for the \-S\-T\-E\-P\-P\-I\-N\-G\-\_\-\-T\-E\-S\-T. \hypertarget{classWalkingClient_adb2fbd66671321d046cf5e1ca74f5bc1}{\index{\-Walking\-Client@{\-Walking\-Client}!stepping\-Test@{stepping\-Test}}
 \index{stepping\-Test@{stepping\-Test}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{stepping\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Walking\-Client\-::stepping\-Test} (
@@ -672,9 +691,9 @@ $|$ \-Parameter $|$ \-Value $|$ $|$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\-: $|$ \-:-\/
 \hypertarget{classWalkingClient_aa784eac1247f0d858e2364e0c2bc25b2}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-global\-Z\-M\-P@{\-\_\-global\-Z\-M\-P}}
 \index{\-\_\-global\-Z\-M\-P@{\-\_\-global\-Z\-M\-P}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{\-\_\-global\-Z\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector2d {\bf \-Walking\-Client\-::\-\_\-global\-Z\-M\-P}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_aa784eac1247f0d858e2364e0c2bc25b2}
-\hypertarget{classWalkingClient_abc3c504305c00a27e9fd38a8bf08ecda}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-hkk\-Previous@{\-\_\-hkk\-Previous}}
+\hypertarget{classWalkingClient_a3797b54c4f53a2a5c36fe34ef4ce24aa}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-hkk\-Previous@{\-\_\-hkk\-Previous}}
 \index{\-\_\-hkk\-Previous@{\-\_\-hkk\-Previous}!WalkingClient@{\-Walking\-Client}}
-\subsubsection[{\-\_\-hkk\-Previous}]{\setlength{\rightskip}{0pt plus 5cm}\-Vector\-Xd {\bf \-Walking\-Client\-::\-\_\-hkk\-Previous}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_abc3c504305c00a27e9fd38a8bf08ecda}
+\subsubsection[{\-\_\-hkk\-Previous}]{\setlength{\rightskip}{0pt plus 5cm}\-Eigen\-::\-Vector\-Xd {\bf \-Walking\-Client\-::\-\_\-hkk\-Previous}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_a3797b54c4f53a2a5c36fe34ef4ce24aa}
 \hypertarget{classWalkingClient_ade3bf018661152fc0404d3973ea30783}{\index{\-Walking\-Client@{\-Walking\-Client}!\-\_\-home\-Data\-Dir@{\-\_\-home\-Data\-Dir}}
 \index{\-\_\-home\-Data\-Dir@{\-\_\-home\-Data\-Dir}!WalkingClient@{\-Walking\-Client}}
 \subsubsection[{\-\_\-home\-Data\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-Walking\-Client\-::\-\_\-home\-Data\-Dir}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classWalkingClient_ade3bf018661152fc0404d3973ea30783}

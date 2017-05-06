@@ -132,6 +132,8 @@ Eigen::Displacementd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a57742157dce7e3526a388be7d11321d3">getGravityTerms</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a7f52d830940df32916f46b905d985505">getMass</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a3af6973d940c01a80085d65841bb27a8">getCoMPosition</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#afe1b4f03c2163bd1fcf7be5f9b59f319">updateCoMPosition</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a67ac0007da800a0f096fbd4e4908ecb8">updateCoMVelocity</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#af7f16945aafd4881f1cfd94498a78ebf">getCoMVelocity</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a7e5f552f463bf58b1c9828575c78ee90">getCoMAcceleration</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a0985fe02b87fa9bcf90439163c622a71">getCoMJdotQdot</a> () const </td></tr>
@@ -167,6 +169,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a411c844cbde565ed54a224e39a2e65c1">doSetState</a> (const Eigen::Displacementd &amp;H_root, const Eigen::VectorXd &amp;q, const Eigen::Twistd &amp;T_root, const Eigen::VectorXd &amp;q_dot)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a64d40044dff11a6302992d52f1dbde0d">doSetJointPositions</a> (const Eigen::VectorXd &amp;q)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a26a758c5ecb02601c066bdfffe5db194">doSetJointVelocities</a> (const Eigen::VectorXd &amp;dq)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#abbf82fedd5a856983dbf6c444dda33d9">doSetJointAccelerations</a> (const Eigen::VectorXd &amp;ddq)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#aa2bb481dc7fdb55c363ac1a404a807e5">doSetFreeFlyerPosition</a> (const Eigen::Displacementd &amp;Hroot)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#af740a36f6cc2899dcd6f3507b9703c7f">doSetFreeFlyerVelocity</a> (const Eigen::Twistd &amp;Troot)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#ad6a498c6c66d6145b99e91bc631efb77">doGetSegmentIndex</a> (const std::string &amp;name) const </td></tr>
@@ -182,6 +185,8 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="structOcraWbiModel_1_1OcraWbiModel__pimpl.html">OcraWbiModel_pimpl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#ab649cb769ca4edd345b3c09c43a69bde">owm_pimpl</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">yarp::os::Log&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a047fe9f9a96794af218ea844f09cd402">yLog</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#a81cbe15f478202b6327343395e10637b">dqPrevious</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">yarp::os::Mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classocra__icub_1_1OcraWbiModel.html#ae843ccb96192d22e61438ecd1bb0e29d">mutex</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a57a4f0f140f56d7ec0a00b31e16f9673"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::OcraWbiModel" ref="a57a4f0f140f56d7ec0a00b31e16f9673" args="(const std::string &amp;robotName, const int robotNumDOF, std::shared_ptr&lt; wbi::wholeBodyInterface &gt; wbi, const bool freeRoot)" -->
@@ -368,6 +373,23 @@ Private Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const Eigen::Twistd &amp;&#160;</td>
           <td class="paramname"><em>Troot</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abbf82fedd5a856983dbf6c444dda33d9"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::doSetJointAccelerations" ref="abbf82fedd5a856983dbf6c444dda33d9" args="(const Eigen::VectorXd &amp;ddq)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classocra__icub_1_1OcraWbiModel.html#abbf82fedd5a856983dbf6c444dda33d9">OcraWbiModel::doSetJointAccelerations</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>ddq</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
@@ -1141,7 +1163,65 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afe1b4f03c2163bd1fcf7be5f9b59f319"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::updateCoMPosition" ref="afe1b4f03c2163bd1fcf7be5f9b59f319" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classocra__icub_1_1OcraWbiModel.html#afe1b4f03c2163bd1fcf7be5f9b59f319">OcraWbiModel::updateCoMPosition</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a67ac0007da800a0f096fbd4e4908ecb8"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::updateCoMVelocity" ref="a67ac0007da800a0f096fbd4e4908ecb8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classocra__icub_1_1OcraWbiModel.html#a67ac0007da800a0f096fbd4e4908ecb8">OcraWbiModel::updateCoMVelocity</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a81cbe15f478202b6327343395e10637b"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::dqPrevious" ref="a81cbe15f478202b6327343395e10637b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd <a class="el" href="classocra__icub_1_1OcraWbiModel.html#a81cbe15f478202b6327343395e10637b">ocra_icub::OcraWbiModel::dqPrevious</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae843ccb96192d22e61438ecd1bb0e29d"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::mutex" ref="ae843ccb96192d22e61438ecd1bb0e29d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">yarp::os::Mutex <a class="el" href="classocra__icub_1_1OcraWbiModel.html#ae843ccb96192d22e61438ecd1bb0e29d">ocra_icub::OcraWbiModel::mutex</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab649cb769ca4edd345b3c09c43a69bde"></a><!-- doxytag: member="ocra_icub::OcraWbiModel::owm_pimpl" ref="ab649cb769ca4edd345b3c09c43a69bde" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1206,7 +1286,7 @@ Private Attributes</h2></td></tr>
       <li class="navelem"><a class="el" href="namespaceocra__icub.html">ocra_icub</a>      </li>
       <li class="navelem"><a class="el" href="classocra__icub_1_1OcraWbiModel.html">OcraWbiModel</a>      </li>
 
-    <li class="footer">Generated on Fri May 5 2017 00:10:20 for ocra-wbi-plugins by
+    <li class="footer">Generated on Sat May 6 2017 00:10:54 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

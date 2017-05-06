@@ -13,6 +13,7 @@ var searchData=
   ['dosegmentname',['doSegmentName',['../classocra__icub_1_1OcraWbiModel.html#adfe5a0f1fb82248f8cbf309f88a95e6c',1,'ocra_icub::OcraWbiModel']]],
   ['dosetfreeflyerposition',['doSetFreeFlyerPosition',['../classocra__icub_1_1OcraWbiModel.html#aa2bb481dc7fdb55c363ac1a404a807e5',1,'ocra_icub::OcraWbiModel']]],
   ['dosetfreeflyervelocity',['doSetFreeFlyerVelocity',['../classocra__icub_1_1OcraWbiModel.html#af740a36f6cc2899dcd6f3507b9703c7f',1,'ocra_icub::OcraWbiModel']]],
+  ['dosetjointaccelerations',['doSetJointAccelerations',['../classocra__icub_1_1OcraWbiModel.html#abbf82fedd5a856983dbf6c444dda33d9',1,'ocra_icub::OcraWbiModel']]],
   ['dosetjointpositions',['doSetJointPositions',['../classocra__icub_1_1OcraWbiModel.html#a64d40044dff11a6302992d52f1dbde0d',1,'ocra_icub::OcraWbiModel']]],
   ['dosetjointvelocities',['doSetJointVelocities',['../classocra__icub_1_1OcraWbiModel.html#a26a758c5ecb02601c066bdfffe5db194',1,'ocra_icub::OcraWbiModel']]],
   ['dosetstate',['doSetState',['../classocra__icub_1_1OcraWbiModel.html#a8639b19a514624953e5e58dbde1c8227',1,'ocra_icub::OcraWbiModel::doSetState(const Eigen::VectorXd &amp;q, const Eigen::VectorXd &amp;q_dot)'],['../classocra__icub_1_1OcraWbiModel.html#a411c844cbde565ed54a224e39a2e65c1',1,'ocra_icub::OcraWbiModel::doSetState(const Eigen::Displacementd &amp;H_root, const Eigen::VectorXd &amp;q, const Eigen::Twistd &amp;T_root, const Eigen::VectorXd &amp;q_dot)']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m',['M',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a56b6cb4adf9dead06b4d09fe38daa26e',1,'ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::M()'],['../structZmpControllerParams.html#a09a7a86043a6b356478105f00ad84049',1,'ZmpControllerParams::m()']]],
+  ['m',['m',['../structZmpControllerParams.html#a09a7a86043a6b356478105f00ad84049',1,'ZmpControllerParams::m()'],['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a56b6cb4adf9dead06b4d09fe38daa26e',1,'ocra_icub::OcraWbiModel::OcraWbiModel_pimpl::M()']]],
   ['m_5ffull',['M_full',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#af57ebe4c5c15477a9592dd91a5c96f12',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['m_5ffull_5frm',['M_full_rm',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6ed8d69d83b0321920c0f79cf8e58bde',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['main',['main',['../ocra-icub-server_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../example-client_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;example-client.cpp'],['../ocra-icub-clients_2sitting-demo_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../ocra-icub-clients_2standing-demo_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../stepping-demo_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;stepping-demo.cpp'],['../task-operations-demo_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;task-operations-demo.cpp'],['../ocra-icub-clients_2walking-client_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
@@ -31,8 +31,8 @@ var searchData=
   ['miqpstate_2eh',['MIQPState.h',['../MIQPState_8h.html',1,'']]],
   ['model',['model',['../classThread.html#a1dcef9aedc1a707e6f04d5fb6e4a0b13',1,'Thread::model()'],['../classocra__icub_1_1ModelInitializer.html#ab7fb1fe2773837be8b3b41b75ef8f9d6',1,'ocra_icub::ModelInitializer::model()']]],
   ['model_5finitializer_5fcount',['MODEL_INITIALIZER_COUNT',['../classocra__icub_1_1ModelInitializer.html#a8ec0a5af61b4a972ea22b71a5d3511eb',1,'ocra_icub::ModelInitializer']]],
-  ['modelinitializer',['ModelInitializer',['../classocra__icub_1_1ModelInitializer.html',1,'ocra_icub']]],
   ['modelinitializer',['ModelInitializer',['../classocra__icub_1_1ModelInitializer.html#a14a314ebc05e38e472607b76951d31cc',1,'ocra_icub::ModelInitializer']]],
+  ['modelinitializer',['ModelInitializer',['../classocra__icub_1_1ModelInitializer.html',1,'ocra_icub']]],
   ['modelinitializer_2ecpp',['ModelInitializer.cpp',['../ModelInitializer_8cpp.html',1,'']]],
   ['modelinitializer_2eh',['ModelInitializer.h',['../ModelInitializer_8h.html',1,'']]],
   ['modinitnumber',['modInitNumber',['../classocra__icub_1_1ModelInitializer.html#ab63cc70107cab38cc01a87d7a5465d85',1,'ocra_icub::ModelInitializer']]],
@@ -44,5 +44,6 @@ var searchData=
   ['move_5fto_5fdouble_5fsupport',['MOVE_TO_DOUBLE_SUPPORT',['../SteppingDemoClient_8h.html#af2a8507bf21c3ce9b0e67a23381251c6a362d8557e44bcc19f6b4d9096bb54401',1,'SteppingDemoClient.h']]],
   ['move_5fto_5fleft_5fsupport',['MOVE_TO_LEFT_SUPPORT',['../SteppingDemoClient_8h.html#af2a8507bf21c3ce9b0e67a23381251c6afe7fc4a2f5d6778bbb96f412be37d63c',1,'SteppingDemoClient.h']]],
   ['move_5fto_5fright_5fsupport',['MOVE_TO_RIGHT_SUPPORT',['../SteppingDemoClient_8h.html#af2a8507bf21c3ce9b0e67a23381251c6a3b4335037acf972dd5d60348ca20d394',1,'SteppingDemoClient.h']]],
-  ['movecom',['moveCom',['../classSittingDemoClient.html#a726a1a1fa46624190532342233a6cdf4',1,'SittingDemoClient']]]
+  ['movecom',['moveCom',['../classSittingDemoClient.html#a726a1a1fa46624190532342233a6cdf4',1,'SittingDemoClient']]],
+  ['mutex',['mutex',['../classocra__icub_1_1OcraWbiModel.html#ae843ccb96192d22e61438ecd1bb0e29d',1,'ocra_icub::OcraWbiModel']]]
 ];

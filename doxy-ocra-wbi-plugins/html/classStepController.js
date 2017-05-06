@@ -8,6 +8,7 @@ var classStepController =
     [ "doComputeMidPoint", "classStepController.html#a16b1f62737f1287b7f33b216871d1ba8", null ],
     [ "doStepWithMaxVelocity", "classStepController.html#a1bfcb66d504440f0cc7383ad688dad5c", null ],
     [ "getContact2DCoordinates", "classStepController.html#afb77002292921660ef4a44657d6566f1", null ],
+    [ "getFootTrajError", "classStepController.html#a07a961e8c82124d7e88416a3dcab8056", null ],
     [ "getLeftFootPosition", "classStepController.html#aa168e028dc086859400e1c93c0becdd2", null ],
     [ "getRightFootPosition", "classStepController.html#aaa7e389226a30582be8c8a724661a921", null ],
     [ "initialize", "classStepController.html#a8f061f201c651d920ca02f7daa07adfe", null ],

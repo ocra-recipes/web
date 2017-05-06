@@ -26,6 +26,7 @@ var searchData=
   ['djroot',['dJroot',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#afaba1181f7d08272208e372e2e23106c',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
   ['done',['done',['../classExampleClient.html#acd2cf0f0479ff8bbf5b64924d83beb60',1,'ExampleClient']]],
   ['dq',['dq',['../structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a6584a086fe050dab90cd4f0a0e7e970d',1,'OcraWbiModel::OcraWbiModel_pimpl']]],
+  ['dqprevious',['dqPrevious',['../classocra__icub_1_1OcraWbiModel.html#a81cbe15f478202b6327343395e10637b',1,'ocra_icub::OcraWbiModel']]],
   ['dt',['dt',['../structMIQPParameters.html#ab4fca30503423e047dc55d27f0c9f3c9',1,'MIQPParameters::dt()'],['../classZmpPreviewController.html#abf1a3ec8d1698afab1c20bba32b5a724',1,'ZmpPreviewController::dt()']]],
   ['dtthread',['dtThread',['../structMIQPParameters.html#a7f5403de83b908d6ce34ce41a1327d62',1,'MIQPParameters']]]
 ];

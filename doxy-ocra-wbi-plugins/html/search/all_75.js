@@ -4,6 +4,8 @@ var searchData=
   ['u_5fy_5fin',['U_Y_IN',['../namespaceMIQP.html#a88adf7c800494cf6d751d065e642b45bafdfffc5d00361320b487c47c36653a92',1,'MIQP']]],
   ['update',['update',['../classBaseOfSupport.html#a1b9919def962e87ba6de27fb744da284',1,'BaseOfSupport']]],
   ['updatebaseofsupportdescriptors',['updateBaseOfSupportDescriptors',['../classMIQP_1_1MIQPState.html#a8dec06cabde0ad186c976c0bc61c4688',1,'MIQP::MIQPState']]],
+  ['updatecomposition',['updateCoMPosition',['../classocra__icub_1_1OcraWbiModel.html#afe1b4f03c2163bd1fcf7be5f9b59f319',1,'ocra_icub::OcraWbiModel']]],
+  ['updatecomvelocity',['updateCoMVelocity',['../classocra__icub_1_1OcraWbiModel.html#a67ac0007da800a0f096fbd4e4908ecb8',1,'ocra_icub::OcraWbiModel']]],
   ['updateequalityconstraints',['updateEqualityConstraints',['../classMIQPController.html#a4c3f665528fae6c051160456692372ee',1,'MIQPController']]],
   ['updatehorizontalcomstate',['updateHorizontalCoMState',['../classMIQP_1_1MIQPState.html#a91a2e7b0415bf56fdb26625eacf106ef',1,'MIQP::MIQPState']]],
   ['updatemodule',['updateModule',['../classModule.html#a1b1c4963512941537cef766217329a8a',1,'Module']]],

@@ -58,5 +58,6 @@ var structOcraWbiModel_1_1OcraWbiModel__pimpl =
     [ "Troot_wbi", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#acd5e52a21301d36f453dd9a43fc6f50b", null ],
     [ "upperLimits", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a632b9a37d054a1dc6fcf6403e52e62e7", null ],
     [ "vel_com", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a96c3cdb51b2a2b69c0738605c30e1b2e", null ],
-    [ "vel_com_angular", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a696d73e62837978589a2730c8feb325c", null ]
+    [ "vel_com_angular", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a696d73e62837978589a2730c8feb325c", null ],
+    [ "vel_com_old", "structOcraWbiModel_1_1OcraWbiModel__pimpl.html#a374d6086cdcd96ee792ca62288adb178", null ]
 ];

@@ -15,7 +15,7 @@ var searchData=
   ['sittingdemoclient',['SittingDemoClient',['../classSittingDemoClient.html#aedcb6c4ad7b4fa19f1b188e700c0a079',1,'SittingDemoClient']]],
   ['ssdsalternation',['SSDSAlternation',['../classSSDSAlternation.html#a4f163d6400aac19c61c47d7ce0bdd7fd',1,'SSDSAlternation']]],
   ['standingdemoclient',['StandingDemoClient',['../classStandingDemoClient.html#a7fc81439cf274825e81f243fab4ee94a',1,'StandingDemoClient']]],
-  ['startsteppinmotherfucker',['startSteppinMotherFucker',['../classWalkingClient.html#ab497c47c538b8ac2871ddd706c5e61a9',1,'WalkingClient']]],
+  ['startsteppinmotherfucker',['startSteppinMotherFucker',['../classWalkingClient.html#aa1e8544a58d084c70c7e8a4a9c247de5',1,'WalkingClient']]],
   ['statemachinewithoutpauseindoublesupport',['stateMachineWithoutPauseInDoubleSupport',['../classSteppingDemoClient.html#a256284578a6b9818a8f726451d2fb2c4',1,'SteppingDemoClient']]],
   ['statemachinewithpauseindoublesupport',['stateMachineWithPauseInDoubleSupport',['../classSteppingDemoClient.html#a346a8fd10641897532a26f598db7799d',1,'SteppingDemoClient']]],
   ['staticwalkingloop',['staticWalkingLoop',['../classSteppingDemoClient.html#a0f6b689c5f032351484b03e71a3530e1',1,'SteppingDemoClient']]],

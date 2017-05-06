@@ -10,6 +10,7 @@ var classocra__icub_1_1OcraWbiModel =
     [ "doSegmentName", "classocra__icub_1_1OcraWbiModel.html#adfe5a0f1fb82248f8cbf309f88a95e6c", null ],
     [ "doSetFreeFlyerPosition", "classocra__icub_1_1OcraWbiModel.html#aa2bb481dc7fdb55c363ac1a404a807e5", null ],
     [ "doSetFreeFlyerVelocity", "classocra__icub_1_1OcraWbiModel.html#af740a36f6cc2899dcd6f3507b9703c7f", null ],
+    [ "doSetJointAccelerations", "classocra__icub_1_1OcraWbiModel.html#abbf82fedd5a856983dbf6c444dda33d9", null ],
     [ "doSetJointPositions", "classocra__icub_1_1OcraWbiModel.html#a64d40044dff11a6302992d52f1dbde0d", null ],
     [ "doSetJointVelocities", "classocra__icub_1_1OcraWbiModel.html#a26a758c5ecb02601c066bdfffe5db194", null ],
     [ "doSetState", "classocra__icub_1_1OcraWbiModel.html#a8639b19a514624953e5e58dbde1c8227", null ],
@@ -54,6 +55,10 @@ var classocra__icub_1_1OcraWbiModel =
     [ "getSegmentVelocity", "classocra__icub_1_1OcraWbiModel.html#a273d90e5ad6d3c1e849b996b1cfc1860", null ],
     [ "nbSegments", "classocra__icub_1_1OcraWbiModel.html#adf952842e3c031a5000ee37c51fe9b77", null ],
     [ "printAllData", "classocra__icub_1_1OcraWbiModel.html#a309b3554c4eefda46c05b766476f40fb", null ],
+    [ "updateCoMPosition", "classocra__icub_1_1OcraWbiModel.html#afe1b4f03c2163bd1fcf7be5f9b59f319", null ],
+    [ "updateCoMVelocity", "classocra__icub_1_1OcraWbiModel.html#a67ac0007da800a0f096fbd4e4908ecb8", null ],
+    [ "dqPrevious", "classocra__icub_1_1OcraWbiModel.html#a81cbe15f478202b6327343395e10637b", null ],
+    [ "mutex", "classocra__icub_1_1OcraWbiModel.html#ae843ccb96192d22e61438ecd1bb0e29d", null ],
     [ "owm_pimpl", "classocra__icub_1_1OcraWbiModel.html#ab649cb769ca4edd345b3c09c43a69bde", null ],
     [ "robot", "classocra__icub_1_1OcraWbiModel.html#ae377f000580656227fa9ef69f2f2e71d", null ],
     [ "yLog", "classocra__icub_1_1OcraWbiModel.html#a047fe9f9a96794af218ea844f09cd402", null ]

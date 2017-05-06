@@ -112,6 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#a1bfcb66d504440f0cc7383ad688dad5c">doStepWithMaxVelocity</a> (<a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot, Eigen::Vector3d <a class="el" href="classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d">target</a>, double stepHeight)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#ab8ca9c17211622c4902ce8adc89f9ca5">step</a> (<a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot, Eigen::Vector3d <a class="el" href="classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d">target</a>, double stepDuration, double stepHeight)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#ac8e210ab8acf9c7b91bce3396fff20c8">isStepFinished</a> (<a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#a07a961e8c82124d7e88416a3dcab8056">getFootTrajError</a> (<a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot, double &amp;error)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#aa168e028dc086859400e1c93c0becdd2">getLeftFootPosition</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#aaa7e389226a30582be8c8a724661a921">getRightFootPosition</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepController.html#a0dcf2ec0d0fdf1fd9d86878fffd4e5ad">computeMidPoint</a> (<a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a> foot, Eigen::Vector3d <a class="el" href="classStepController.html#a588d5b149eb4a6877e89ecff37d0f91d">target</a>, double stepHeight, Eigen::Vector3d &amp;midPoint)</td></tr>
@@ -364,6 +365,33 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Returns the 2D coordinates of the contacts defined at the task level.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Matrix of 2D coordinates of the contact points defined at task level. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a07a961e8c82124d7e88416a3dcab8056"></a><!-- doxytag: member="StepController::getFootTrajError" ref="a07a961e8c82124d7e88416a3dcab8056" args="(FOOT foot, double &amp;error)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classStepController.html#a07a961e8c82124d7e88416a3dcab8056">StepController::getFootTrajError</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="utils_8h.html#a4b6a8e135f90bd56e5a57a60efb42529">FOOT</a>&#160;</td>
+          <td class="paramname"><em>foot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -760,7 +788,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classStepController.html">StepController</a>      </li>
 
-    <li class="footer">Generated on Fri May 5 2017 00:10:20 for ocra-wbi-plugins by
+    <li class="footer">Generated on Sat May 6 2017 00:10:54 for ocra-wbi-plugins by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

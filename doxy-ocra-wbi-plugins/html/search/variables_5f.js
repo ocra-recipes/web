@@ -66,7 +66,7 @@ var searchData=
   ['_5fh_5fn',['_H_N',['../classMIQPController.html#ab4b99d844add54fa7ad6ca6b80cab089',1,'MIQPController']]],
   ['_5fh_5fn_5fr',['_H_N_r',['../classMIQPController.html#a03c53b7f316d43dfe1aa60eba628819c',1,'MIQPController']]],
   ['_5fhk',['_hk',['../classMIQP_1_1MIQPState.html#a1fa7e57c280b3cf451275fb9c617182b',1,'MIQP::MIQPState']]],
-  ['_5fhkkprevious',['_hkkPrevious',['../classWalkingClient.html#abc3c504305c00a27e9fd38a8bf08ecda',1,'WalkingClient']]],
+  ['_5fhkkprevious',['_hkkPrevious',['../classWalkingClient.html#a3797b54c4f53a2a5c36fe34ef4ce24aa',1,'WalkingClient']]],
   ['_5fhomedatadir',['_homeDataDir',['../classWalkingClient.html#ade3bf018661152fc0404d3973ea30783',1,'WalkingClient']]],
   ['_5fistestrun',['_isTestRun',['../classWalkingClient.html#a4f9c8688537ddd8a487a212fbb279a9b',1,'WalkingClient']]],
   ['_5fk',['_k',['../classMIQPController.html#af60e2d5a786f4af4fa445dea6ba1b625',1,'MIQPController::_k()'],['../classWalkingClient.html#a8156c60725f7bda3de34ef0aae15bd16',1,'WalkingClient::_k()']]],
