@@ -1,0 +1,285 @@
+\hypertarget{namespaceQuadProgPP}{}\section{Quad\+Prog\+PP Namespace Reference}
+\label{namespaceQuadProgPP}\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{namespaceQuadProgPP_a3660acf00652641e6b81b5106a44efbd}{solve\+\_\+quadprog} (const Eigen\+::\+Matrix\+Xd \&\+\_\+G, const Eigen\+::\+Vector\+Xd \&g0, const Eigen\+::\+Matrix\+Xd \&\+\_\+\+CE, const Eigen\+::\+Vector\+Xd \&ce0, const Eigen\+::\+Matrix\+Xd \&\+\_\+\+CI, const Eigen\+::\+Vector\+Xd \&ci0, Eigen\+::\+Vector\+Xd \&x)
+\item 
+void \hyperlink{namespaceQuadProgPP_aae5048e1bbd76bcc500c30288d1e3ee0}{compute\+\_\+d} (Eigen\+::\+Vector\+Xd \&d, const Eigen\+::\+Matrix\+Xd \&J, const Eigen\+::\+Vector\+Xd \&np)
+\item 
+void \hyperlink{namespaceQuadProgPP_ad1f10b211fb5b81828c9a8bb252ba732}{update\+\_\+z} (Eigen\+::\+Vector\+Xd \&z, const Eigen\+::\+Matrix\+Xd \&J, const Eigen\+::\+Vector\+Xd \&d, int iq)
+\item 
+void \hyperlink{namespaceQuadProgPP_a633fa931fb0b0d4cc2ba0dcb00cbf4b7}{update\+\_\+r} (const Eigen\+::\+Matrix\+Xd \&R, Eigen\+::\+Vector\+Xd \&r, const Eigen\+::\+Vector\+Xd \&d, int iq)
+\item 
+bool \hyperlink{namespaceQuadProgPP_a4096d7195aed4c795b80e5d923b43dc7}{add\+\_\+constraint} (Eigen\+::\+Matrix\+Xd \&R, Eigen\+::\+Matrix\+Xd \&J, Eigen\+::\+Vector\+Xd \&d, int \&iq, double \&rnorm)
+\item 
+void \hyperlink{namespaceQuadProgPP_aaec5402f2870ee1139e84ab41ef8a3e5}{delete\+\_\+constraint} (Eigen\+::\+Matrix\+Xd \&R, Eigen\+::\+Matrix\+Xd \&J, Eigen\+::\+Vector\+Xi \&A, Eigen\+::\+Vector\+Xd \&u, int n, int p, int \&iq, int l)
+\item 
+void \hyperlink{namespaceQuadProgPP_a4ef0115d81bd8076cbc5d7d7ca98f0d6}{cholesky\+\_\+decomposition} (Eigen\+::\+Matrix\+Xd \&A)
+\item 
+void \hyperlink{namespaceQuadProgPP_a63f00d297d24480490a750330a81e7ca}{cholesky\+\_\+solve} (const Eigen\+::\+Matrix\+Xd \&L, Eigen\+::\+Vector\+Xd \&x, const Eigen\+::\+Vector\+Xd \&b)
+\item 
+void \hyperlink{namespaceQuadProgPP_acabfedbcb7167f67f0bc97d5528589ee}{forward\+\_\+elimination} (const Eigen\+::\+Matrix\+Xd \&L, Eigen\+::\+Vector\+Xd \&y, const Eigen\+::\+Vector\+Xd \&b)
+\item 
+void \hyperlink{namespaceQuadProgPP_a2ff18ea1c11c56ab14a9e9db30a35e60}{backward\+\_\+elimination} (const Eigen\+::\+Matrix\+Xd \&U, Eigen\+::\+Vector\+Xd \&x, const Eigen\+::\+Vector\+Xd \&y)
+\item 
+double \hyperlink{namespaceQuadProgPP_ad183104d932d3764cc3223e89591c347}{scalar\+\_\+product} (const Eigen\+::\+Vector\+Xd \&x, const Eigen\+::\+Vector\+Xd \&y)
+\item 
+double \hyperlink{namespaceQuadProgPP_a02250c1dfa52b656b38147eeb1b3df48}{distance} (double a, double b)
+\item 
+void \hyperlink{namespaceQuadProgPP_affeed53f80844aaf2be84ac637cfd212}{print\+\_\+matrix} (const char $\ast$name, const Eigen\+::\+Matrix\+Xd \&A, int n=-\/1, int m=-\/1)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceQuadProgPP_a5a7e0a2f22b7bf72667010d6cff1dac2}{print\+\_\+vector} (const char $\ast$name, const Eigen\+::\+Matrix$<$ T, Eigen\+::\+Dynamic, 1 $>$ \&v, int n=-\/1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!add\+\_\+constraint@{add\+\_\+constraint}}
+\index{add\+\_\+constraint@{add\+\_\+constraint}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{add\+\_\+constraint(\+Eigen\+::\+Matrix\+Xd \&\+R, Eigen\+::\+Matrix\+Xd \&\+J, Eigen\+::\+Vector\+Xd \&d, int \&iq, double \&rnorm)}{add_constraint(Eigen::MatrixXd &R, Eigen::MatrixXd &J, Eigen::VectorXd &d, int &iq, double &rnorm)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Quad\+Prog\+P\+P\+::add\+\_\+constraint (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix\+Xd \&}]{R, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{J, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{d, }
+\item[{int \&}]{iq, }
+\item[{double \&}]{rnorm}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceQuadProgPP_a4096d7195aed4c795b80e5d923b43dc7}{}\label{namespaceQuadProgPP_a4096d7195aed4c795b80e5d923b43dc7}
+
+
+Definition at line 566 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!backward\+\_\+elimination@{backward\+\_\+elimination}}
+\index{backward\+\_\+elimination@{backward\+\_\+elimination}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{backward\+\_\+elimination(const Eigen\+::\+Matrix\+Xd \&\+U, Eigen\+::\+Vector\+Xd \&x, const Eigen\+::\+Vector\+Xd \&y)}{backward_elimination(const Eigen::MatrixXd &U, Eigen::VectorXd &x, const Eigen::VectorXd &y)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::backward\+\_\+elimination (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{U, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{x, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceQuadProgPP_a2ff18ea1c11c56ab14a9e9db30a35e60}{}\label{namespaceQuadProgPP_a2ff18ea1c11c56ab14a9e9db30a35e60}
+
+
+Definition at line 804 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!cholesky\+\_\+decomposition@{cholesky\+\_\+decomposition}}
+\index{cholesky\+\_\+decomposition@{cholesky\+\_\+decomposition}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{cholesky\+\_\+decomposition(\+Eigen\+::\+Matrix\+Xd \&\+A)}{cholesky_decomposition(Eigen::MatrixXd &A)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::cholesky\+\_\+decomposition (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix\+Xd \&}]{A}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceQuadProgPP_a4ef0115d81bd8076cbc5d7d7ca98f0d6}{}\label{namespaceQuadProgPP_a4ef0115d81bd8076cbc5d7d7ca98f0d6}
+
+
+Definition at line 745 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!cholesky\+\_\+solve@{cholesky\+\_\+solve}}
+\index{cholesky\+\_\+solve@{cholesky\+\_\+solve}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{cholesky\+\_\+solve(const Eigen\+::\+Matrix\+Xd \&\+L, Eigen\+::\+Vector\+Xd \&x, const Eigen\+::\+Vector\+Xd \&b)}{cholesky_solve(const Eigen::MatrixXd &L, Eigen::VectorXd &x, const Eigen::VectorXd &b)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::cholesky\+\_\+solve (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{L, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{x, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceQuadProgPP_a63f00d297d24480490a750330a81e7ca}{}\label{namespaceQuadProgPP_a63f00d297d24480490a750330a81e7ca}
+
+
+Definition at line 778 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!compute\+\_\+d@{compute\+\_\+d}}
+\index{compute\+\_\+d@{compute\+\_\+d}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{compute\+\_\+d(\+Eigen\+::\+Vector\+Xd \&d, const Eigen\+::\+Matrix\+Xd \&\+J, const Eigen\+::\+Vector\+Xd \&np)}{compute_d(Eigen::VectorXd &d, const Eigen::MatrixXd &J, const Eigen::VectorXd &np)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::compute\+\_\+d (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{d, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{J, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{np}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceQuadProgPP_aae5048e1bbd76bcc500c30288d1e3ee0}{}\label{namespaceQuadProgPP_aae5048e1bbd76bcc500c30288d1e3ee0}
+
+
+Definition at line 523 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!delete\+\_\+constraint@{delete\+\_\+constraint}}
+\index{delete\+\_\+constraint@{delete\+\_\+constraint}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{delete\+\_\+constraint(\+Eigen\+::\+Matrix\+Xd \&\+R, Eigen\+::\+Matrix\+Xd \&\+J, Eigen\+::\+Vector\+Xi \&\+A, Eigen\+::\+Vector\+Xd \&u, int n, int p, int \&iq, int l)}{delete_constraint(Eigen::MatrixXd &R, Eigen::MatrixXd &J, Eigen::VectorXi &A, Eigen::VectorXd &u, int n, int p, int &iq, int l)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::delete\+\_\+constraint (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix\+Xd \&}]{R, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{J, }
+\item[{Eigen\+::\+Vector\+Xi \&}]{A, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{u, }
+\item[{int}]{n, }
+\item[{int}]{p, }
+\item[{int \&}]{iq, }
+\item[{int}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceQuadProgPP_aaec5402f2870ee1139e84ab41ef8a3e5}{}\label{namespaceQuadProgPP_aaec5402f2870ee1139e84ab41ef8a3e5}
+
+
+Definition at line 637 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!distance@{distance}}
+\index{distance@{distance}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{distance(double a, double b)}{distance(double a, double b)}}]{\setlength{\rightskip}{0pt plus 5cm}double Quad\+Prog\+P\+P\+::distance (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceQuadProgPP_a02250c1dfa52b656b38147eeb1b3df48}{}\label{namespaceQuadProgPP_a02250c1dfa52b656b38147eeb1b3df48}
+
+
+Definition at line 714 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!forward\+\_\+elimination@{forward\+\_\+elimination}}
+\index{forward\+\_\+elimination@{forward\+\_\+elimination}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{forward\+\_\+elimination(const Eigen\+::\+Matrix\+Xd \&\+L, Eigen\+::\+Vector\+Xd \&y, const Eigen\+::\+Vector\+Xd \&b)}{forward_elimination(const Eigen::MatrixXd &L, Eigen::VectorXd &y, const Eigen::VectorXd &b)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::forward\+\_\+elimination (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{L, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{y, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceQuadProgPP_acabfedbcb7167f67f0bc97d5528589ee}{}\label{namespaceQuadProgPP_acabfedbcb7167f67f0bc97d5528589ee}
+
+
+Definition at line 790 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!print\+\_\+matrix@{print\+\_\+matrix}}
+\index{print\+\_\+matrix@{print\+\_\+matrix}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{print\+\_\+matrix(const char $\ast$name, const Eigen\+::\+Matrix\+Xd \&\+A, int n=-\/1, int m=-\/1)}{print_matrix(const char *name, const Eigen::MatrixXd &A, int n=-1, int m=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::print\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{A, }
+\item[{int}]{n = {\ttfamily -\/1}, }
+\item[{int}]{m = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceQuadProgPP_affeed53f80844aaf2be84ac637cfd212}{}\label{namespaceQuadProgPP_affeed53f80844aaf2be84ac637cfd212}
+
+
+Definition at line 818 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!print\+\_\+vector@{print\+\_\+vector}}
+\index{print\+\_\+vector@{print\+\_\+vector}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{print\+\_\+vector(const char $\ast$name, const Eigen\+::\+Matrix$<$ T, Eigen\+::\+Dynamic, 1 $>$ \&v, int n=-\/1)}{print_vector(const char *name, const Eigen::Matrix< T, Eigen::Dynamic, 1 > &v, int n=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Quad\+Prog\+P\+P\+::print\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const Eigen\+::\+Matrix$<$ T, Eigen\+::\+Dynamic, 1 $>$ \&}]{v, }
+\item[{int}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceQuadProgPP_a5a7e0a2f22b7bf72667010d6cff1dac2}{}\label{namespaceQuadProgPP_a5a7e0a2f22b7bf72667010d6cff1dac2}
+
+
+Definition at line 842 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!scalar\+\_\+product@{scalar\+\_\+product}}
+\index{scalar\+\_\+product@{scalar\+\_\+product}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{scalar\+\_\+product(const Eigen\+::\+Vector\+Xd \&x, const Eigen\+::\+Vector\+Xd \&y)}{scalar_product(const Eigen::VectorXd &x, const Eigen::VectorXd &y)}}]{\setlength{\rightskip}{0pt plus 5cm}double Quad\+Prog\+P\+P\+::scalar\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{x, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceQuadProgPP_ad183104d932d3764cc3223e89591c347}{}\label{namespaceQuadProgPP_ad183104d932d3764cc3223e89591c347}
+
+
+Definition at line 734 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!solve\+\_\+quadprog@{solve\+\_\+quadprog}}
+\index{solve\+\_\+quadprog@{solve\+\_\+quadprog}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{solve\+\_\+quadprog(const Eigen\+::\+Matrix\+Xd \&\+\_\+\+G, const Eigen\+::\+Vector\+Xd \&g0, const Eigen\+::\+Matrix\+Xd \&\+\_\+\+C\+E, const Eigen\+::\+Vector\+Xd \&ce0, const Eigen\+::\+Matrix\+Xd \&\+\_\+\+C\+I, const Eigen\+::\+Vector\+Xd \&ci0, Eigen\+::\+Vector\+Xd \&x)}{solve_quadprog(const Eigen::MatrixXd &_G, const Eigen::VectorXd &g0, const Eigen::MatrixXd &_CE, const Eigen::VectorXd &ce0, const Eigen::MatrixXd &_CI, const Eigen::VectorXd &ci0, Eigen::VectorXd &x)}}]{\setlength{\rightskip}{0pt plus 5cm}double Quad\+Prog\+P\+P\+::solve\+\_\+quadprog (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{\+\_\+G, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{g0, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{\+\_\+\+CE, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ce0, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{\+\_\+\+CI, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ci0, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceQuadProgPP_a3660acf00652641e6b81b5106a44efbd}{}\label{namespaceQuadProgPP_a3660acf00652641e6b81b5106a44efbd}
+The quadprog\+\_\+solve() function implements the algorithm of Goldfarb and Idnani for the solution of a (convex) Quadratic Programming problem by means of an active-\/set dual method.
+
+The quadratic problem with $n$ variables and $m$ constraints is\+:
+
+\begin{align*} \argmin{\x} &: \; \frac{1}{2} \x\tp G \x + \vec{g}_0\tp \x \\ & CE\tp \x + \vec{ce}_0 = \vec{0} \\ & CI\tp \x + \vec{ci}_0 \geq \vec{0} \end{align*}
+
+The matrix and vectors dimensions are as follows\+:
+
+$G$\+: $n \times n$
+
+$\vec{g}_0$\+: $n$
+
+$CE$\+: $n \times p$
+
+$\vec{ce}_0$\+: $p$
+
+$CI$\+: $n \times m$
+
+$\vec{ci}_0$\+: $m$
+
+$x$\+: $n$
+
+The function will return the cost of the solution written in the $x$ vector or std\+::numeric\+\_\+limits\+::infinity() if the problem is infeasible. In the latter case the value of the $x$ vector is not correct.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+G} & n x n Symmetric positive definite matrix. \\
+\hline
+{\em g0} & Vector of size n, where n is the number of variables. \\
+\hline
+{\em \+\_\+\+CE} & Matrix of size n x p, where p is the number of equalities. \\
+\hline
+{\em ce0} & Vector of size p. \\
+\hline
+{\em \+\_\+\+CI} & Matrix of size n x m, where m is the number of inequalities. \\
+\hline
+{\em ci0} & Vector of size m. \\
+\hline
+{\em x} & Problem variables of size n. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Pay attention in setting up the vectors $\vec{ce}_0$ and $\vec{ci}_0$. If the constraints of your problem are specified in the form $A^T x = b$ and $C^T x \geq d$, then you should set $\vec{ce}_0 = -b$ and $\vec{ci}_0 = -d$. Also the matrix $G$ is modified within the function since it is used to compute the $G = L^T L$ cholesky factorization for further computations inside the function. If you need the original matrix $G$ you should make a copy of it and pass the copy to the function. {\bfseries [goldfarb1983numerically]}
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+cost of the solution written in the x vector or std\+::numeric\+\_\+limits\+::infinity() if the problem is infeasible. In the latter case the value of the $ x $ vector is not correct.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Luca Di Gaspero, D\+I\+E\+GM -\/ University of Udine, Italy. 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Lesser General Public License. 
+
+2007-\/2009 Luca Di Gaspero. 
+
+2007-\/2009 Luca Di Gaspero. 
+\end{DoxyCopyright}
+
+
+Definition at line 75 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!update\+\_\+r@{update\+\_\+r}}
+\index{update\+\_\+r@{update\+\_\+r}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{update\+\_\+r(const Eigen\+::\+Matrix\+Xd \&\+R, Eigen\+::\+Vector\+Xd \&r, const Eigen\+::\+Vector\+Xd \&d, int iq)}{update_r(const Eigen::MatrixXd &R, Eigen::VectorXd &r, const Eigen::VectorXd &d, int iq)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::update\+\_\+r (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{R, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{r, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{d, }
+\item[{int}]{iq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceQuadProgPP_a633fa931fb0b0d4cc2ba0dcb00cbf4b7}{}\label{namespaceQuadProgPP_a633fa931fb0b0d4cc2ba0dcb00cbf4b7}
+
+
+Definition at line 551 of file Quad\+Prog++.\+cpp.
+
+\index{Quad\+Prog\+PP@{Quad\+Prog\+PP}!update\+\_\+z@{update\+\_\+z}}
+\index{update\+\_\+z@{update\+\_\+z}!Quad\+Prog\+PP@{Quad\+Prog\+PP}}
+\subsubsection[{\texorpdfstring{update\+\_\+z(\+Eigen\+::\+Vector\+Xd \&z, const Eigen\+::\+Matrix\+Xd \&\+J, const Eigen\+::\+Vector\+Xd \&d, int iq)}{update_z(Eigen::VectorXd &z, const Eigen::MatrixXd &J, const Eigen::VectorXd &d, int iq)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quad\+Prog\+P\+P\+::update\+\_\+z (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{z, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{J, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{d, }
+\item[{int}]{iq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceQuadProgPP_ad1f10b211fb5b81828c9a8bb252ba732}{}\label{namespaceQuadProgPP_ad1f10b211fb5b81828c9a8bb252ba732}
+
+
+Definition at line 538 of file Quad\+Prog++.\+cpp.
+

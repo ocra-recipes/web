@@ -1,0 +1,350 @@
+\hypertarget{classocra_1_1NewtonSolver}{}\section{ocra\+:\+:Newton\+Solver Class Reference}
+\label{classocra_1_1NewtonSolver}\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+
+
+Newton\+Solver class.  
+
+
+
+
+{\ttfamily \#include $<$Newton\+Solver.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Newton\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d0b/classocra_1_1NewtonSolver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Newton\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d73/classocra_1_1NewtonSolver__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structocra_1_1NewtonSolver_1_1eNewtonInfo}{e\+Newton\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Map$<$ Matrix\+Xd $>$ \hyperlink{classocra_1_1NewtonSolver_a53e3463c336170efa3819d725c9b16e3}{Matrix\+Map}
+\item 
+typedef Eigen\+::\+Map$<$ Vector\+Xd $>$ \hyperlink{classocra_1_1NewtonSolver_aad21c090baadce638c9613f4b9d1d5c4}{Vector\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1NewtonSolver_ab66a0ba4ef83a14fd2c7b39c2bae78b9}{Newton\+Solver} (bool full\+Newton=true)
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_ade438475c7a8ffdc2bb60097639b8e27}{set\+Adaptative\+Alpha} (bool adapt)
+\item 
+bool \hyperlink{classocra_1_1NewtonSolver_a0d68afaf41cfb76dd495ed75b3fc988f}{get\+Adaptative\+Alpha} () const 
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_ac128bd9e9d7c05ae3e91bddb362e7165}{set\+Epsilon} (double eps)
+\item 
+double \hyperlink{classocra_1_1NewtonSolver_ab5c33ed905e408b70502fbbe0e0f600d}{get\+Epsilon} () const 
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_a7bea41cafca30faf5dca35a7e3bd8a2e}{set\+Max\+Iter} (int max\+Iter)
+\item 
+int \hyperlink{classocra_1_1NewtonSolver_a6d013949516a9398849ccaf5ce95b9af}{get\+Max\+Iter} () const 
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_a4fc7eba127f6975a0e8947f39d24629a}{set\+\_\+x0} (const Vector\+Xd \&x0)
+\item 
+const Vector\+Xd \& \hyperlink{classocra_1_1NewtonSolver_a16404658d85944f02429427107acbc04}{get\+\_\+x0} () const 
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_a92d33f1dfe684de2051d0389816cf9a5}{print\+Values\+At\+Solution} ()
+\item 
+std\+::string \hyperlink{classocra_1_1NewtonSolver_a3d498cc7771cf3cf733552a35fd77006}{to\+String} ()
+\end{DoxyCompactItemize}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_a312cf17ad5b175d29a0fd7424449d630}{add\+Objective} (\hyperlink{namespaceocra_a37a91885f4fa5c523d22cb15d5673062}{Generic\+Objective} \&obj)
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_a0f2c1366ef076469735020c20f759dd6}{remove\+Objective} (\hyperlink{classocra_1_1Function}{Function} \&obj)
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_a99308db30e18ed33f7797c308e03ff92}{remove\+Objective} (\hyperlink{namespaceocra_a37a91885f4fa5c523d22cb15d5673062}{Generic\+Objective} \&obj)
+\end{DoxyCompactItemize}
+
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_af717009e42a86f10a793f172883cc93d}{do\+Prepare} ()
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_ac49e1e33eb86cb15ac505e638c2fccb9}{do\+Solve} ()
+\item 
+void \hyperlink{classocra_1_1NewtonSolver_ae356c90b0931d0cf3571039e52647ef4}{do\+Conclude} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Newton\+Solver class. 
+
+\begin{DoxyWarning}{Warning}
+None
+\end{DoxyWarning}
+This class implements a Newton Method to optimize a weighted sum of squared functions\+: $ \mbox{min.} \dfrac{1}{2} \sum_i{ w_i \left\| f_i \right\|^2_2} $ The functions $ f_i $ must provide their jacobian. Additionnaly if they can provides their hessian, it will be used for a complete Newton Method, unless the user choosed to use a quasi-\/\+Newton approach. If a function can\textquotesingle{}t produce its hessian, or a quasi Newton method is asked, the hessian will be approximated by $ J_i^t J_i $ with $ J_i $ the jacobian matrix of $ f_i $.
+
+The solver is taking itself the squared norm of each function, so that the ocra \hyperlink{classocra_1_1Objective}{Objective} instance has to contain $ f_i $, not $|$ f\+\_\+i $|$$^\wedge$2\+\_\+2.
+
+Let us define $ F(x) = \dfrac{1}{2} \sum_i{ w_i \left\| f_i(x) \right\|^2_2} $, and $ H(x)=\frac{\partial^2 F}{\partial x^2}(x)$. Starting from an initial guess $ x_0 $, the algorithm performs iterations $ x_{n+1} = x_n - \alpha H(x_n)^{-1} \nabla F(x_n) $ until the residual $ \left\|x_{n+1} - x_n\right\|_2$ is smaller than $ \epsilon $ or the maximal number of iterations has been reached.
+
+The following parameters and options can be changed by the user\+:
+\begin{DoxyItemize}
+\item $ \alpha $ is by default adaptative, using a heuristic. $ \alpha $ can be chosen to be constant and equal to 1,
+\item $ \epsilon $ can be changed,
+\item the maximal number of iterations {\itshape max\+Iter},
+\item the initial guess $ x_0 $.
+\end{DoxyItemize}
+
+In case the initial guess has not the good size, or was not initialized, the algorithm starts from $ x_0=0 $. In case the solver is called repeatedly and the user does not provide an initial guess, the last $ x_n $ of the previous run is used (unless the problem changed its size, in which case 0 will be used). 
+
+Definition at line 51 of file Newton\+Solver.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!Matrix\+Map@{Matrix\+Map}}
+\index{Matrix\+Map@{Matrix\+Map}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{Matrix\+Map}{MatrixMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Eigen\+::\+Map$<$Matrix\+Xd$>$ {\bf ocra\+::\+Newton\+Solver\+::\+Matrix\+Map}}\hypertarget{classocra_1_1NewtonSolver_a53e3463c336170efa3819d725c9b16e3}{}\label{classocra_1_1NewtonSolver_a53e3463c336170efa3819d725c9b16e3}
+
+
+Definition at line 55 of file Newton\+Solver.\+h.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!Vector\+Map@{Vector\+Map}}
+\index{Vector\+Map@{Vector\+Map}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{Vector\+Map}{VectorMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Eigen\+::\+Map$<$Vector\+Xd$>$ {\bf ocra\+::\+Newton\+Solver\+::\+Vector\+Map}}\hypertarget{classocra_1_1NewtonSolver_aad21c090baadce638c9613f4b9d1d5c4}{}\label{classocra_1_1NewtonSolver_aad21c090baadce638c9613f4b9d1d5c4}
+
+
+Definition at line 56 of file Newton\+Solver.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!Newton\+Solver@{Newton\+Solver}}
+\index{Newton\+Solver@{Newton\+Solver}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{Newton\+Solver(bool full\+Newton=true)}{NewtonSolver(bool fullNewton=true)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Newton\+Solver\+::\+Newton\+Solver (
+\begin{DoxyParamCaption}
+\item[{bool}]{full\+Newton = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1NewtonSolver_ab66a0ba4ef83a14fd2c7b39c2bae78b9}{}\label{classocra_1_1NewtonSolver_ab66a0ba4ef83a14fd2c7b39c2bae78b9}
+
+
+Definition at line 6 of file Newton\+Solver.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!add\+Objective@{add\+Objective}}
+\index{add\+Objective@{add\+Objective}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{add\+Objective(\+Generic\+Objective \&obj)}{addObjective(GenericObjective &obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::add\+Objective (
+\begin{DoxyParamCaption}
+\item[{{\bf Generic\+Objective} \&}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1NewtonSolver_a312cf17ad5b175d29a0fd7424449d630}{}\label{classocra_1_1NewtonSolver_a312cf17ad5b175d29a0fd7424449d630}
+Add/remove an objective. Will throw a runtime\+\_\+error in case {\itshape obj} already exist and is added again, or if one tries to remove {\itshape obj} and {\itshape obj} does not appear in the problem. 
+
+Definition at line 64 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!do\+Conclude@{do\+Conclude}}
+\index{do\+Conclude@{do\+Conclude}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{do\+Conclude()}{doConclude()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::do\+Conclude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1NewtonSolver_ae356c90b0931d0cf3571039e52647ef4}{}\label{classocra_1_1NewtonSolver_ae356c90b0931d0cf3571039e52647ef4}
+
+
+Implements \hyperlink{classocra_1_1Solver_ac9d2d41d544b57a75e0d03db073d646e}{ocra\+::\+Solver}.
+
+
+
+Definition at line 131 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!do\+Prepare@{do\+Prepare}}
+\index{do\+Prepare@{do\+Prepare}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{do\+Prepare()}{doPrepare()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::do\+Prepare (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1NewtonSolver_af717009e42a86f10a793f172883cc93d}{}\label{classocra_1_1NewtonSolver_af717009e42a86f10a793f172883cc93d}
+
+
+Implements \hyperlink{classocra_1_1Solver_a9ab90e87025e3da7239141c48d28ab4a}{ocra\+::\+Solver}.
+
+
+
+Definition at line 101 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!do\+Solve@{do\+Solve}}
+\index{do\+Solve@{do\+Solve}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{do\+Solve()}{doSolve()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::do\+Solve (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1NewtonSolver_ac49e1e33eb86cb15ac505e638c2fccb9}{}\label{classocra_1_1NewtonSolver_ac49e1e33eb86cb15ac505e638c2fccb9}
+
+
+Implements \hyperlink{classocra_1_1Solver_ace2d7cfe741611de6dc87a0de7e7f3a9}{ocra\+::\+Solver}.
+
+
+
+Definition at line 116 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!get\+\_\+x0@{get\+\_\+x0}}
+\index{get\+\_\+x0@{get\+\_\+x0}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{get\+\_\+x0() const }{get_x0() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Newton\+Solver\+::get\+\_\+x0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1NewtonSolver_a16404658d85944f02429427107acbc04}{}\label{classocra_1_1NewtonSolver_a16404658d85944f02429427107acbc04}
+
+
+Definition at line 59 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!get\+Adaptative\+Alpha@{get\+Adaptative\+Alpha}}
+\index{get\+Adaptative\+Alpha@{get\+Adaptative\+Alpha}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{get\+Adaptative\+Alpha() const }{getAdaptativeAlpha() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Newton\+Solver\+::get\+Adaptative\+Alpha (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1NewtonSolver_a0d68afaf41cfb76dd495ed75b3fc988f}{}\label{classocra_1_1NewtonSolver_a0d68afaf41cfb76dd495ed75b3fc988f}
+
+
+Definition at line 27 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!get\+Epsilon@{get\+Epsilon}}
+\index{get\+Epsilon@{get\+Epsilon}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{get\+Epsilon() const }{getEpsilon() const }}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Newton\+Solver\+::get\+Epsilon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1NewtonSolver_ab5c33ed905e408b70502fbbe0e0f600d}{}\label{classocra_1_1NewtonSolver_ab5c33ed905e408b70502fbbe0e0f600d}
+
+
+Definition at line 38 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!get\+Max\+Iter@{get\+Max\+Iter}}
+\index{get\+Max\+Iter@{get\+Max\+Iter}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{get\+Max\+Iter() const }{getMaxIter() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Newton\+Solver\+::get\+Max\+Iter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1NewtonSolver_a6d013949516a9398849ccaf5ce95b9af}{}\label{classocra_1_1NewtonSolver_a6d013949516a9398849ccaf5ce95b9af}
+
+
+Definition at line 49 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!print\+Values\+At\+Solution@{print\+Values\+At\+Solution}}
+\index{print\+Values\+At\+Solution@{print\+Values\+At\+Solution}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{print\+Values\+At\+Solution()}{printValuesAtSolution()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::print\+Values\+At\+Solution (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1NewtonSolver_a92d33f1dfe684de2051d0389816cf9a5}{}\label{classocra_1_1NewtonSolver_a92d33f1dfe684de2051d0389816cf9a5}
+
+
+Implements \hyperlink{classocra_1_1Solver_ab1903098e25c16a9f92c36d37967e8fa}{ocra\+::\+Solver}.
+
+
+
+Definition at line 89 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!remove\+Objective@{remove\+Objective}}
+\index{remove\+Objective@{remove\+Objective}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{remove\+Objective(\+Function \&obj)}{removeObjective(Function &obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::remove\+Objective (
+\begin{DoxyParamCaption}
+\item[{{\bf Function} \&}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1NewtonSolver_a0f2c1366ef076469735020c20f759dd6}{}\label{classocra_1_1NewtonSolver_a0f2c1366ef076469735020c20f759dd6}
+
+
+Definition at line 71 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!remove\+Objective@{remove\+Objective}}
+\index{remove\+Objective@{remove\+Objective}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{remove\+Objective(\+Generic\+Objective \&obj)}{removeObjective(GenericObjective &obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::remove\+Objective (
+\begin{DoxyParamCaption}
+\item[{{\bf Generic\+Objective} \&}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1NewtonSolver_a99308db30e18ed33f7797c308e03ff92}{}\label{classocra_1_1NewtonSolver_a99308db30e18ed33f7797c308e03ff92}
+
+
+Definition at line 83 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!set\+\_\+x0@{set\+\_\+x0}}
+\index{set\+\_\+x0@{set\+\_\+x0}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{set\+\_\+x0(const Vector\+Xd \&x0)}{set_x0(const VectorXd &x0)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::set\+\_\+x0 (
+\begin{DoxyParamCaption}
+\item[{const Vector\+Xd \&}]{x0}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1NewtonSolver_a4fc7eba127f6975a0e8947f39d24629a}{}\label{classocra_1_1NewtonSolver_a4fc7eba127f6975a0e8947f39d24629a}
+
+
+Definition at line 54 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!set\+Adaptative\+Alpha@{set\+Adaptative\+Alpha}}
+\index{set\+Adaptative\+Alpha@{set\+Adaptative\+Alpha}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Adaptative\+Alpha(bool adapt)}{setAdaptativeAlpha(bool adapt)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::set\+Adaptative\+Alpha (
+\begin{DoxyParamCaption}
+\item[{bool}]{adapt}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1NewtonSolver_ade438475c7a8ffdc2bb60097639b8e27}{}\label{classocra_1_1NewtonSolver_ade438475c7a8ffdc2bb60097639b8e27}
+
+
+Definition at line 22 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!set\+Epsilon@{set\+Epsilon}}
+\index{set\+Epsilon@{set\+Epsilon}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Epsilon(double eps)}{setEpsilon(double eps)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::set\+Epsilon (
+\begin{DoxyParamCaption}
+\item[{double}]{eps}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1NewtonSolver_ac128bd9e9d7c05ae3e91bddb362e7165}{}\label{classocra_1_1NewtonSolver_ac128bd9e9d7c05ae3e91bddb362e7165}
+
+
+Definition at line 32 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!set\+Max\+Iter@{set\+Max\+Iter}}
+\index{set\+Max\+Iter@{set\+Max\+Iter}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Max\+Iter(int max\+Iter)}{setMaxIter(int maxIter)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Newton\+Solver\+::set\+Max\+Iter (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+Iter}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1NewtonSolver_a7bea41cafca30faf5dca35a7e3bd8a2e}{}\label{classocra_1_1NewtonSolver_a7bea41cafca30faf5dca35a7e3bd8a2e}
+
+
+Definition at line 43 of file Newton\+Solver.\+cpp.
+
+\index{ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!ocra\+::\+Newton\+Solver@{ocra\+::\+Newton\+Solver}}
+\subsubsection[{\texorpdfstring{to\+String()}{toString()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ocra\+::\+Newton\+Solver\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1NewtonSolver_a3d498cc7771cf3cf733552a35fd77006}{}\label{classocra_1_1NewtonSolver_a3d498cc7771cf3cf733552a35fd77006}
+Returns the state of the solver (e.\+g. matrices) as a string. 
+
+Implements \hyperlink{classocra_1_1Solver_ab3783d1c208500bfb1daa3e1abf34146}{ocra\+::\+Solver}.
+
+
+
+Definition at line 96 of file Newton\+Solver.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{NewtonSolver_8h}{Newton\+Solver.\+h}\item 
+\hyperlink{NewtonSolver_8cpp}{Newton\+Solver.\+cpp}\end{DoxyCompactItemize}

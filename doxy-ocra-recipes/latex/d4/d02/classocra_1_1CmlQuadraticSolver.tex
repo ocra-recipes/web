@@ -1,0 +1,353 @@
+\hypertarget{classocra_1_1CmlQuadraticSolver}{}\section{ocra\+:\+:Cml\+Quadratic\+Solver Class Reference}
+\label{classocra_1_1CmlQuadraticSolver}\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+
+
+Cml\+Quadratic\+Solver class.  
+
+
+
+
+{\ttfamily \#include $<$Cml\+Quadratic\+Solver.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Cml\+Quadratic\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d05/classocra_1_1CmlQuadraticSolver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Cml\+Quadratic\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d29/classocra_1_1CmlQuadraticSolver__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3df}{e\+Cml\+Q\+P\+Solver\+Type} \{ \hyperlink{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3dfac7ab4857986d549d2c7ac2f4e7d834cc}{C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+L\+E\+M\+KE}, 
+\hyperlink{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3dfa53afe853cc16e5023a4618d57cb082f1}{C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+G\+A\+U\+S\+S\+\_\+\+S\+E\+I\+D\+EL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1CmlQuadraticSolver_a4ef339a5d511aff62bf4f6669fa894b8}{Cml\+Quadratic\+Solver} (int type=xde\+::cml\+Q\+P\+Solver\+::\+L\+E\+M\+K\+E\+\_\+\+S\+O\+L\+V\+ER)
+\item 
+void \hyperlink{classocra_1_1CmlQuadraticSolver_a6c508788b75053d2bbcc7a3fee4ba26e}{set\+Tolerance} (double epsilon)
+\item 
+void \hyperlink{classocra_1_1CmlQuadraticSolver_a47a17923b7fdf4d8137fb41e240831d6}{set\+Max\+Iteration} (cfl\+\_\+size\+\_\+t max\+Iter)
+\item 
+cfl\+\_\+size\+\_\+t \hyperlink{classocra_1_1CmlQuadraticSolver_af098f007e13472efa4e713d5a98fbbbf}{get\+Max\+Iteration} (void) const 
+\item 
+virtual const std\+::string \& \hyperlink{classocra_1_1CmlQuadraticSolver_ae7e5950566f3c121e3f5d9ba7051b566}{get\+More\+Info} (void) const 
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_afea0aeb47c39f7fb8b3ce068f3d09885}{add\+Linear\+Equality\+Constraint} (\hyperlink{namespaceocra_ae8b87cf4099be3efc3b410019ad2046e}{Linear\+Constraint} $\ast$constraint)
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_a5bbf7066fb72a418a174aece3ac65bf5}{add\+Linear\+Inequality\+Constraint} (\hyperlink{namespaceocra_ae8b87cf4099be3efc3b410019ad2046e}{Linear\+Constraint} $\ast$constraint)
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_a570e7be65f21d67e41a0f030d5134e4e}{remove\+Constraint} (\hyperlink{namespaceocra_ae8b87cf4099be3efc3b410019ad2046e}{Linear\+Constraint} $\ast$constraint)
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_ad286753e3e35fa17f4aef9f8a75bd5b1}{set\+Objective} (\hyperlink{classocra_1_1QuadraticFunction}{Quadratic\+Function} $\ast$obj, \hyperlink{namespaceocra_af4478308ca113669e67d72f9a3050469}{real} weight=1.)
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_a531381b1498b0ad4e460e5a2a75da9b4}{add\+Objective} (\hyperlink{classocra_1_1QuadraticFunction}{Quadratic\+Function} $\ast$obj, \hyperlink{namespaceocra_af4478308ca113669e67d72f9a3050469}{real} weight=1.)
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_a83d20013d6a9ff7c5855ee0ff2391190}{remove\+Objective} (\hyperlink{classocra_1_1QuadraticFunction}{Quadratic\+Function} $\ast$obj)
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_aed7554d599282ef5e8a7567b73b822b8}{print\+Values\+At\+Solution} (void)
+\item 
+bool \hyperlink{classocra_1_1CmlQuadraticSolver_a8077e7d9f2017f0f176324bb04cb5cd1}{check\+Constraints} (void)
+\item 
+virtual const Matrix\+Base \& \hyperlink{classocra_1_1CmlQuadraticSolver_afe5745b7cf19ebdfb03e389f3c7caf26}{getP} (void) const 
+\item 
+virtual const Matrix\+Base \& \hyperlink{classocra_1_1CmlQuadraticSolver_a897fe8f7810902839a21c3e0554955fc}{getA} (void) const 
+\item 
+virtual const Matrix\+Base \& \hyperlink{classocra_1_1CmlQuadraticSolver_a6d1565f39c221b87c96c5c45fc774f92}{getC} (void) const 
+\item 
+virtual const Vector\+Base \& \hyperlink{classocra_1_1CmlQuadraticSolver_a935b30cf759681642080816e0fafc46a}{getq} (void) const 
+\item 
+virtual const Vector\+Base \& \hyperlink{classocra_1_1CmlQuadraticSolver_a45a92a144756ac27d42df71c35cee6e2}{getb} (void) const 
+\item 
+virtual const Vector\+Base \& \hyperlink{classocra_1_1CmlQuadraticSolver_a019b100ad90b354172fe34ee9348de72}{getd} (void) const 
+\item 
+virtual const Vector\+Base \& \hyperlink{classocra_1_1CmlQuadraticSolver_abdc334ef769b905f3f11c334c908bd11}{getu} (void) const 
+\item 
+virtual const Vector\+Base \& \hyperlink{classocra_1_1CmlQuadraticSolver_a70598f6938791a748c600fd853553489}{getl} (void) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const Solver\+::\+Result \& \hyperlink{classocra_1_1CmlQuadraticSolver_aac5943e307225837253c470a931640ec}{do\+Solve} (void)
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_a6139c2cd572e403badc0451bf0ea9d90}{do\+Prepare} (void)
+\item 
+virtual void \hyperlink{classocra_1_1CmlQuadraticSolver_a2c2240bd0bcee4f0cd57030ed08baabd}{recompute\+Variable} (void)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Cml\+Quadratic\+Solver class. 
+
+\begin{DoxyWarning}{Warning}
+None
+\end{DoxyWarning}
+Wrapping of the QP solver from cml 
+
+Definition at line 37 of file Cml\+Quadratic\+Solver.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!e\+Cml\+Q\+P\+Solver\+Type@{e\+Cml\+Q\+P\+Solver\+Type}}
+\index{e\+Cml\+Q\+P\+Solver\+Type@{e\+Cml\+Q\+P\+Solver\+Type}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{e\+Cml\+Q\+P\+Solver\+Type}{eCmlQPSolverType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ocra\+::\+Cml\+Quadratic\+Solver\+::e\+Cml\+Q\+P\+Solver\+Type}}\hypertarget{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3df}{}\label{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3df}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+L\+E\+M\+KE@{C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+L\+E\+M\+KE}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+L\+E\+M\+KE@{C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+L\+E\+M\+KE}}\item[{\em 
+C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+L\+E\+M\+KE\hypertarget{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3dfac7ab4857986d549d2c7ac2f4e7d834cc}{}\label{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3dfac7ab4857986d549d2c7ac2f4e7d834cc}
+}]\index{C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+G\+A\+U\+S\+S\+\_\+\+S\+E\+I\+D\+EL@{C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+G\+A\+U\+S\+S\+\_\+\+S\+E\+I\+D\+EL}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+G\+A\+U\+S\+S\+\_\+\+S\+E\+I\+D\+EL@{C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+G\+A\+U\+S\+S\+\_\+\+S\+E\+I\+D\+EL}}\item[{\em 
+C\+M\+L\+Q\+P\+S\+O\+L\+V\+E\+R\+\_\+\+G\+A\+U\+S\+S\+\_\+\+S\+E\+I\+D\+EL\hypertarget{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3dfa53afe853cc16e5023a4618d57cb082f1}{}\label{classocra_1_1CmlQuadraticSolver_a6d54dc2e4dac085099b002c88cb6d3dfa53afe853cc16e5023a4618d57cb082f1}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 41 of file Cml\+Quadratic\+Solver.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!Cml\+Quadratic\+Solver@{Cml\+Quadratic\+Solver}}
+\index{Cml\+Quadratic\+Solver@{Cml\+Quadratic\+Solver}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{Cml\+Quadratic\+Solver(int type=xde\+::cml\+Q\+P\+Solver\+::\+L\+E\+M\+K\+E\+\_\+\+S\+O\+L\+V\+E\+R)}{CmlQuadraticSolver(int type=xde::cmlQPSolver::LEMKE_SOLVER)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Cml\+Quadratic\+Solver\+::\+Cml\+Quadratic\+Solver (
+\begin{DoxyParamCaption}
+\item[{int}]{type = {\ttfamily xde\+:\+:cmlQPSolver\+:\+:LEMKE\+\_\+SOLVER}}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1CmlQuadraticSolver_a4ef339a5d511aff62bf4f6669fa894b8}{}\label{classocra_1_1CmlQuadraticSolver_a4ef339a5d511aff62bf4f6669fa894b8}
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!add\+Linear\+Equality\+Constraint@{add\+Linear\+Equality\+Constraint}}
+\index{add\+Linear\+Equality\+Constraint@{add\+Linear\+Equality\+Constraint}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{add\+Linear\+Equality\+Constraint(\+Linear\+Constraint $\ast$constraint)}{addLinearEqualityConstraint(LinearConstraint *constraint)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::add\+Linear\+Equality\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Constraint} $\ast$}]{constraint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_afea0aeb47c39f7fb8b3ce068f3d09885}{}\label{classocra_1_1CmlQuadraticSolver_afea0aeb47c39f7fb8b3ce068f3d09885}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!add\+Linear\+Inequality\+Constraint@{add\+Linear\+Inequality\+Constraint}}
+\index{add\+Linear\+Inequality\+Constraint@{add\+Linear\+Inequality\+Constraint}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{add\+Linear\+Inequality\+Constraint(\+Linear\+Constraint $\ast$constraint)}{addLinearInequalityConstraint(LinearConstraint *constraint)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::add\+Linear\+Inequality\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Constraint} $\ast$}]{constraint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a5bbf7066fb72a418a174aece3ac65bf5}{}\label{classocra_1_1CmlQuadraticSolver_a5bbf7066fb72a418a174aece3ac65bf5}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!add\+Objective@{add\+Objective}}
+\index{add\+Objective@{add\+Objective}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{add\+Objective(\+Quadratic\+Function $\ast$obj, real weight=1.)}{addObjective(QuadraticFunction *obj, real weight=1.)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::add\+Objective (
+\begin{DoxyParamCaption}
+\item[{{\bf Quadratic\+Function} $\ast$}]{obj, }
+\item[{{\bf real}}]{weight = {\ttfamily 1.}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a531381b1498b0ad4e460e5a2a75da9b4}{}\label{classocra_1_1CmlQuadraticSolver_a531381b1498b0ad4e460e5a2a75da9b4}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!check\+Constraints@{check\+Constraints}}
+\index{check\+Constraints@{check\+Constraints}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{check\+Constraints(void)}{checkConstraints(void)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Cml\+Quadratic\+Solver\+::check\+Constraints (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1CmlQuadraticSolver_a8077e7d9f2017f0f176324bb04cb5cd1}{}\label{classocra_1_1CmlQuadraticSolver_a8077e7d9f2017f0f176324bb04cb5cd1}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!do\+Prepare@{do\+Prepare}}
+\index{do\+Prepare@{do\+Prepare}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{do\+Prepare(void)}{doPrepare(void)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::do\+Prepare (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a6139c2cd572e403badc0451bf0ea9d90}{}\label{classocra_1_1CmlQuadraticSolver_a6139c2cd572e403badc0451bf0ea9d90}
+
+
+Implements \hyperlink{classocra_1_1Solver_a9ab90e87025e3da7239141c48d28ab4a}{ocra\+::\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!do\+Solve@{do\+Solve}}
+\index{do\+Solve@{do\+Solve}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{do\+Solve(void)}{doSolve(void)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Solver\+::\+Result\& ocra\+::\+Cml\+Quadratic\+Solver\+::do\+Solve (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_aac5943e307225837253c470a931640ec}{}\label{classocra_1_1CmlQuadraticSolver_aac5943e307225837253c470a931640ec}
+
+
+Implements \hyperlink{classocra_1_1Solver_ace2d7cfe741611de6dc87a0de7e7f3a9}{ocra\+::\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!getA@{getA}}
+\index{getA@{getA}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{get\+A(void) const }{getA(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Matrix\+Base\& ocra\+::\+Cml\+Quadratic\+Solver\+::getA (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a897fe8f7810902839a21c3e0554955fc}{}\label{classocra_1_1CmlQuadraticSolver_a897fe8f7810902839a21c3e0554955fc}
+
+
+Implements \hyperlink{classocra_1_1QuadraticSolver_aa3904e85d74c7c88c3605a082741b8cd}{ocra\+::\+Quadratic\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!getb@{getb}}
+\index{getb@{getb}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{getb(void) const }{getb(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Vector\+Base\& ocra\+::\+Cml\+Quadratic\+Solver\+::getb (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a45a92a144756ac27d42df71c35cee6e2}{}\label{classocra_1_1CmlQuadraticSolver_a45a92a144756ac27d42df71c35cee6e2}
+
+
+Implements \hyperlink{classocra_1_1QuadraticSolver_ac051c6a779ce6a6e6e6657cfd3e1f65f}{ocra\+::\+Quadratic\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!getC@{getC}}
+\index{getC@{getC}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{get\+C(void) const }{getC(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Matrix\+Base\& ocra\+::\+Cml\+Quadratic\+Solver\+::getC (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a6d1565f39c221b87c96c5c45fc774f92}{}\label{classocra_1_1CmlQuadraticSolver_a6d1565f39c221b87c96c5c45fc774f92}
+
+
+Implements \hyperlink{classocra_1_1QuadraticSolver_a0babcde3ffe8770131b5f842da01c49c}{ocra\+::\+Quadratic\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!getd@{getd}}
+\index{getd@{getd}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{getd(void) const }{getd(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Vector\+Base\& ocra\+::\+Cml\+Quadratic\+Solver\+::getd (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a019b100ad90b354172fe34ee9348de72}{}\label{classocra_1_1CmlQuadraticSolver_a019b100ad90b354172fe34ee9348de72}
+
+
+Implements \hyperlink{classocra_1_1QuadraticSolver_a7f15d5d3c28feac3204542c885d68586}{ocra\+::\+Quadratic\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!getl@{getl}}
+\index{getl@{getl}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{getl(void) const }{getl(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Vector\+Base\& ocra\+::\+Cml\+Quadratic\+Solver\+::getl (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a70598f6938791a748c600fd853553489}{}\label{classocra_1_1CmlQuadraticSolver_a70598f6938791a748c600fd853553489}
+
+
+Implements \hyperlink{classocra_1_1QuadraticSolver_a13e3a471615ca667daadf490dedc18eb}{ocra\+::\+Quadratic\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!get\+Max\+Iteration@{get\+Max\+Iteration}}
+\index{get\+Max\+Iteration@{get\+Max\+Iteration}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{get\+Max\+Iteration(void) const }{getMaxIteration(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}cfl\+\_\+size\+\_\+t ocra\+::\+Cml\+Quadratic\+Solver\+::get\+Max\+Iteration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1CmlQuadraticSolver_af098f007e13472efa4e713d5a98fbbbf}{}\label{classocra_1_1CmlQuadraticSolver_af098f007e13472efa4e713d5a98fbbbf}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!get\+More\+Info@{get\+More\+Info}}
+\index{get\+More\+Info@{get\+More\+Info}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{get\+More\+Info(void) const }{getMoreInfo(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const std\+::string\& ocra\+::\+Cml\+Quadratic\+Solver\+::get\+More\+Info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_ae7e5950566f3c121e3f5d9ba7051b566}{}\label{classocra_1_1CmlQuadraticSolver_ae7e5950566f3c121e3f5d9ba7051b566}
+
+
+Reimplemented from \hyperlink{classocra_1_1Solver_a8d3ac613fc5ccc0919b8caee9b30a2f8}{ocra\+::\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!getP@{getP}}
+\index{getP@{getP}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{get\+P(void) const }{getP(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Matrix\+Base\& ocra\+::\+Cml\+Quadratic\+Solver\+::getP (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_afe5745b7cf19ebdfb03e389f3c7caf26}{}\label{classocra_1_1CmlQuadraticSolver_afe5745b7cf19ebdfb03e389f3c7caf26}
+
+
+Implements \hyperlink{classocra_1_1QuadraticSolver_a4dcc2768227c21262571d19c0d494935}{ocra\+::\+Quadratic\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!getq@{getq}}
+\index{getq@{getq}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{getq(void) const }{getq(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Vector\+Base\& ocra\+::\+Cml\+Quadratic\+Solver\+::getq (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a935b30cf759681642080816e0fafc46a}{}\label{classocra_1_1CmlQuadraticSolver_a935b30cf759681642080816e0fafc46a}
+
+
+Implements \hyperlink{classocra_1_1QuadraticSolver_a2a907a3fc7c60a7bf9e6a3403c544dcc}{ocra\+::\+Quadratic\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!getu@{getu}}
+\index{getu@{getu}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{getu(void) const }{getu(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Vector\+Base\& ocra\+::\+Cml\+Quadratic\+Solver\+::getu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_abdc334ef769b905f3f11c334c908bd11}{}\label{classocra_1_1CmlQuadraticSolver_abdc334ef769b905f3f11c334c908bd11}
+
+
+Implements \hyperlink{classocra_1_1QuadraticSolver_a6d5040842f155042064a33939aa60385}{ocra\+::\+Quadratic\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!print\+Values\+At\+Solution@{print\+Values\+At\+Solution}}
+\index{print\+Values\+At\+Solution@{print\+Values\+At\+Solution}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{print\+Values\+At\+Solution(void)}{printValuesAtSolution(void)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::print\+Values\+At\+Solution (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_aed7554d599282ef5e8a7567b73b822b8}{}\label{classocra_1_1CmlQuadraticSolver_aed7554d599282ef5e8a7567b73b822b8}
+
+
+Implements \hyperlink{classocra_1_1Solver_ab1903098e25c16a9f92c36d37967e8fa}{ocra\+::\+Solver}.
+
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!recompute\+Variable@{recompute\+Variable}}
+\index{recompute\+Variable@{recompute\+Variable}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{recompute\+Variable(void)}{recomputeVariable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::recompute\+Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a2c2240bd0bcee4f0cd57030ed08baabd}{}\label{classocra_1_1CmlQuadraticSolver_a2c2240bd0bcee4f0cd57030ed08baabd}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!remove\+Constraint@{remove\+Constraint}}
+\index{remove\+Constraint@{remove\+Constraint}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{remove\+Constraint(\+Linear\+Constraint $\ast$constraint)}{removeConstraint(LinearConstraint *constraint)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::remove\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Constraint} $\ast$}]{constraint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a570e7be65f21d67e41a0f030d5134e4e}{}\label{classocra_1_1CmlQuadraticSolver_a570e7be65f21d67e41a0f030d5134e4e}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!remove\+Objective@{remove\+Objective}}
+\index{remove\+Objective@{remove\+Objective}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{remove\+Objective(\+Quadratic\+Function $\ast$obj)}{removeObjective(QuadraticFunction *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::remove\+Objective (
+\begin{DoxyParamCaption}
+\item[{{\bf Quadratic\+Function} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_a83d20013d6a9ff7c5855ee0ff2391190}{}\label{classocra_1_1CmlQuadraticSolver_a83d20013d6a9ff7c5855ee0ff2391190}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!set\+Max\+Iteration@{set\+Max\+Iteration}}
+\index{set\+Max\+Iteration@{set\+Max\+Iteration}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Max\+Iteration(cfl\+\_\+size\+\_\+t max\+Iter)}{setMaxIteration(cfl_size_t maxIter)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Cml\+Quadratic\+Solver\+::set\+Max\+Iteration (
+\begin{DoxyParamCaption}
+\item[{cfl\+\_\+size\+\_\+t}]{max\+Iter}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1CmlQuadraticSolver_a47a17923b7fdf4d8137fb41e240831d6}{}\label{classocra_1_1CmlQuadraticSolver_a47a17923b7fdf4d8137fb41e240831d6}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!set\+Objective@{set\+Objective}}
+\index{set\+Objective@{set\+Objective}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Objective(\+Quadratic\+Function $\ast$obj, real weight=1.)}{setObjective(QuadraticFunction *obj, real weight=1.)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Cml\+Quadratic\+Solver\+::set\+Objective (
+\begin{DoxyParamCaption}
+\item[{{\bf Quadratic\+Function} $\ast$}]{obj, }
+\item[{{\bf real}}]{weight = {\ttfamily 1.}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1CmlQuadraticSolver_ad286753e3e35fa17f4aef9f8a75bd5b1}{}\label{classocra_1_1CmlQuadraticSolver_ad286753e3e35fa17f4aef9f8a75bd5b1}
+\index{ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}!set\+Tolerance@{set\+Tolerance}}
+\index{set\+Tolerance@{set\+Tolerance}!ocra\+::\+Cml\+Quadratic\+Solver@{ocra\+::\+Cml\+Quadratic\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Tolerance(double epsilon)}{setTolerance(double epsilon)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Cml\+Quadratic\+Solver\+::set\+Tolerance (
+\begin{DoxyParamCaption}
+\item[{double}]{epsilon}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1CmlQuadraticSolver_a6c508788b75053d2bbcc7a3fee4ba26e}{}\label{classocra_1_1CmlQuadraticSolver_a6c508788b75053d2bbcc7a3fee4ba26e}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{CmlQuadraticSolver_8h}{Cml\+Quadratic\+Solver.\+h}\end{DoxyCompactItemize}

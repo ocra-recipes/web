@@ -1,0 +1,5 @@
+<map id="ocra::Observer" name="ocra::Observer">
+<area shape="rect" id="node2" href="$d4/dee/classocra_1_1ObserverBase.html" title="ocra::ObserverBase\l\&lt; EVT_RESIZE \&gt;" alt="" coords="62,5,201,47"/>
+<area shape="rect" id="node3" href="$d4/dee/classocra_1_1ObserverBase.html" title="ocra::ObserverBase\l\&lt; EVT_CHANGE_DEPENDENCIES \&gt;" alt="" coords="5,71,257,112"/>
+<area shape="rect" id="node4" href="$d4/dee/classocra_1_1ObserverBase.html" title="ocra::ObserverBase\l\&lt; EVT_CHANGE_VALUE \&gt;" alt="" coords="37,136,225,177"/>
+</map>

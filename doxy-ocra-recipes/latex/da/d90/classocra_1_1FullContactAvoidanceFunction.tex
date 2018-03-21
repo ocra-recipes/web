@@ -1,0 +1,145 @@
+\hypertarget{classocra_1_1FullContactAvoidanceFunction}{}\section{ocra\+:\+:Full\+Contact\+Avoidance\+Function Class Reference}
+\label{classocra_1_1FullContactAvoidanceFunction}\index{ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}}
+
+
+Create a linear function that represents the contact avoidance function for the full formalism.  
+
+
+
+
+{\ttfamily \#include $<$Contact\+Avoidance\+Constraint.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Full\+Contact\+Avoidance\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d7e/classocra_1_1FullContactAvoidanceFunction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Full\+Contact\+Avoidance\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbd/classocra_1_1FullContactAvoidanceFunction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classocra_1_1LinearFunction}{Linear\+Function} \hyperlink{classocra_1_1FullContactAvoidanceFunction_a9b59cb139be82095188084893d70b996}{function\+Type\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1FullContactAvoidanceFunction_aa1632bec7158003ab2da17f71aa134e0}{Full\+Contact\+Avoidance\+Function} (const \hyperlink{classocra_1_1Model}{Model} \&model)
+\item 
+\hyperlink{classocra_1_1FullContactAvoidanceFunction_abf414a050f3b16c4a095049937335c96}{$\sim$\+Full\+Contact\+Avoidance\+Function} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classocra_1_1FullContactAvoidanceFunction_a3c2af64d4975ee6f0c148dc41eb334d8}{update\+Jacobian} () const 
+\item 
+virtual void \hyperlink{classocra_1_1FullContactAvoidanceFunction_a24ce7af1eec493b992566ee36c0abd2e}{updateb} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Create a linear function that represents the contact avoidance function for the full formalism. 
+
+See w\+Contact\+Avoidance\+Function for more information. 
+
+Definition at line 124 of file Contact\+Avoidance\+Constraint.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}!function\+Type\+\_\+t@{function\+Type\+\_\+t}}
+\index{function\+Type\+\_\+t@{function\+Type\+\_\+t}!ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}}
+\subsubsection[{\texorpdfstring{function\+Type\+\_\+t}{functionType_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Linear\+Function} {\bf ocra\+::\+Full\+Contact\+Avoidance\+Function\+::function\+Type\+\_\+t}}\hypertarget{classocra_1_1FullContactAvoidanceFunction_a9b59cb139be82095188084893d70b996}{}\label{classocra_1_1FullContactAvoidanceFunction_a9b59cb139be82095188084893d70b996}
+
+
+Definition at line 127 of file Contact\+Avoidance\+Constraint.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}!Full\+Contact\+Avoidance\+Function@{Full\+Contact\+Avoidance\+Function}}
+\index{Full\+Contact\+Avoidance\+Function@{Full\+Contact\+Avoidance\+Function}!ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}}
+\subsubsection[{\texorpdfstring{Full\+Contact\+Avoidance\+Function(const Model \&model)}{FullContactAvoidanceFunction(const Model &model)}}]{\setlength{\rightskip}{0pt plus 5cm}Full\+Contact\+Avoidance\+Function\+::\+Full\+Contact\+Avoidance\+Function (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model} \&}]{model}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FullContactAvoidanceFunction_aa1632bec7158003ab2da17f71aa134e0}{}\label{classocra_1_1FullContactAvoidanceFunction_aa1632bec7158003ab2da17f71aa134e0}
+Initialize a contact avoidance function designed for the full formalism.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The \hyperlink{classocra_1_1Model}{Model} on which we will update the dynamic parameters \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 197 of file Contact\+Avoidance\+Constraint.\+cpp.
+
+\index{ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}!````~Full\+Contact\+Avoidance\+Function@{$\sim$\+Full\+Contact\+Avoidance\+Function}}
+\index{````~Full\+Contact\+Avoidance\+Function@{$\sim$\+Full\+Contact\+Avoidance\+Function}!ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}}
+\subsubsection[{\texorpdfstring{$\sim$\+Full\+Contact\+Avoidance\+Function()}{~FullContactAvoidanceFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}Full\+Contact\+Avoidance\+Function\+::$\sim$\+Full\+Contact\+Avoidance\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FullContactAvoidanceFunction_abf414a050f3b16c4a095049937335c96}{}\label{classocra_1_1FullContactAvoidanceFunction_abf414a050f3b16c4a095049937335c96}
+Destructor 
+
+Definition at line 210 of file Contact\+Avoidance\+Constraint.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}!updateb@{updateb}}
+\index{updateb@{updateb}!ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}}
+\subsubsection[{\texorpdfstring{updateb() const }{updateb() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Full\+Contact\+Avoidance\+Function\+::updateb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1FullContactAvoidanceFunction_a24ce7af1eec493b992566ee36c0abd2e}{}\label{classocra_1_1FullContactAvoidanceFunction_a24ce7af1eec493b992566ee36c0abd2e}
+Update the vector $ \b $ for the linear function.
+
+It calls \hyperlink{classocra_1_1ContactAvoidanceFunction_a726154874ea2841eedbb115474e71014}{compute\+Fullb(const Eigen\+::\+Vector\+Xd\&, const Eigen\+::\+Vector\+Xd\&, const Eigen\+::\+Vector\+Xd\&, Eigen\+::\+Vector\+Xd\&) const}. 
+
+Reimplemented from \hyperlink{classocra_1_1ContactAvoidanceFunction_a855a318b47bb7ac163cc482ba24fe6f9}{ocra\+::\+Contact\+Avoidance\+Function}.
+
+
+
+Definition at line 228 of file Contact\+Avoidance\+Constraint.\+cpp.
+
+\index{ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}!update\+Jacobian@{update\+Jacobian}}
+\index{update\+Jacobian@{update\+Jacobian}!ocra\+::\+Full\+Contact\+Avoidance\+Function@{ocra\+::\+Full\+Contact\+Avoidance\+Function}}
+\subsubsection[{\texorpdfstring{update\+Jacobian() const }{updateJacobian() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Full\+Contact\+Avoidance\+Function\+::update\+Jacobian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1FullContactAvoidanceFunction_a3c2af64d4975ee6f0c148dc41eb334d8}{}\label{classocra_1_1FullContactAvoidanceFunction_a3c2af64d4975ee6f0c148dc41eb334d8}
+Update the Jacobian matrix $ \A $ for the linear function.
+
+It calls \hyperlink{classocra_1_1ContactAvoidanceFunction_a8a9b3979fd9fde89c2bc7c9fc72dd8b8}{compute\+Full\+Jacobian(const Eigen\+::\+Matrix\+Xd\&, Eigen\+::\+Matrix\+Xd\&) const}. 
+
+Reimplemented from \hyperlink{classocra_1_1ContactAvoidanceFunction_a1351367f60f935b7178d1d2e752293bc}{ocra\+::\+Contact\+Avoidance\+Function}.
+
+
+
+Definition at line 219 of file Contact\+Avoidance\+Constraint.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ContactAvoidanceConstraint_8h}{Contact\+Avoidance\+Constraint.\+h}\item 
+\hyperlink{ContactAvoidanceConstraint_8cpp}{Contact\+Avoidance\+Constraint.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,211 @@
+\hypertarget{classocra_1_1TorqueLimitFunction}{}\section{ocra\+:\+:Torque\+Limit\+Function Class Reference}
+\label{classocra_1_1TorqueLimitFunction}\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+
+
+Create a linear function that represents the torque limit function.  
+
+
+
+
+{\ttfamily \#include $<$Torque\+Limit\+Constraint.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Torque\+Limit\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d0c/classocra_1_1TorqueLimitFunction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Torque\+Limit\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/df1/classocra_1_1TorqueLimitFunction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classocra_1_1LinearFunction}{Linear\+Function} \hyperlink{classocra_1_1TorqueLimitFunction_a0c9d97d4e11ee173ae359698d6c95b25}{function\+Type\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1TorqueLimitFunction_a3ca04338256c4a0bf484f29dc7aeb06d}{Torque\+Limit\+Function} (const \hyperlink{classocra_1_1Model}{Model} \&model)
+\item 
+\hyperlink{classocra_1_1TorqueLimitFunction_a810eb8dd094bb809859a6adf9c6c4a18}{$\sim$\+Torque\+Limit\+Function} ()
+\item 
+void \hyperlink{classocra_1_1TorqueLimitFunction_a038250b745913584724401ea719177a5}{set\+Torque\+Limits} (const Eigen\+::\+Vector\+Xd \&torque\+Limits)
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1TorqueLimitFunction_ad31fa43f33245bbd17f5875d882e4a6d}{get\+Torque\+Limits} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classocra_1_1TorqueLimitFunction_a05595b1a380ee3a69afdf5cb472468a9}{update\+Jacobian} () const 
+\item 
+void \hyperlink{classocra_1_1TorqueLimitFunction_a211707ede54d78fbdef43a23aa4dfbef}{updateb} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classocra_1_1TorqueLimitFunction_a929154bb1273971f123d12ce810fd375}{\+\_\+torque\+Limits}
+\item 
+int \hyperlink{classocra_1_1TorqueLimitFunction_ae7eed81decd37aa8bb6baeb47c5fb4d0}{\+\_\+torque\+Dim}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Create a linear function that represents the torque limit function. 
+
+The torque limit inequality is\+: \[ - \torque_{max} < \torque < \torque_{max} \]
+
+It returns an equation of the form\+:
+
+\begin{align*} \A \x + \b &> \vec{0} & &\Leftrightarrow & \begin{bmatrix} - \Id{} \\ \Id{} \end{bmatrix} . \torque + \begin{bmatrix} \torque_{max} \\ \torque_{max} \end{bmatrix} &> \vec{0} \end{align*} 
+
+Definition at line 39 of file Torque\+Limit\+Constraint.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!function\+Type\+\_\+t@{function\+Type\+\_\+t}}
+\index{function\+Type\+\_\+t@{function\+Type\+\_\+t}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{function\+Type\+\_\+t}{functionType_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Linear\+Function} {\bf ocra\+::\+Torque\+Limit\+Function\+::function\+Type\+\_\+t}}\hypertarget{classocra_1_1TorqueLimitFunction_a0c9d97d4e11ee173ae359698d6c95b25}{}\label{classocra_1_1TorqueLimitFunction_a0c9d97d4e11ee173ae359698d6c95b25}
+
+
+Definition at line 42 of file Torque\+Limit\+Constraint.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!Torque\+Limit\+Function@{Torque\+Limit\+Function}}
+\index{Torque\+Limit\+Function@{Torque\+Limit\+Function}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{Torque\+Limit\+Function(const Model \&model)}{TorqueLimitFunction(const Model &model)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Torque\+Limit\+Function\+::\+Torque\+Limit\+Function (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model} \&}]{model}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1TorqueLimitFunction_a3ca04338256c4a0bf484f29dc7aeb06d}{}\label{classocra_1_1TorqueLimitFunction_a3ca04338256c4a0bf484f29dc7aeb06d}
+Initialize a torque limit inequality function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The \hyperlink{classocra_1_1Model}{Model} on which we will get the dynamic parameters\\
+\hline
+\end{DoxyParams}
+It initializes the Jacobian of the linear function, $ \A $ which is constant. 
+
+Definition at line 24 of file Torque\+Limit\+Constraint.\+cpp.
+
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!````~Torque\+Limit\+Function@{$\sim$\+Torque\+Limit\+Function}}
+\index{````~Torque\+Limit\+Function@{$\sim$\+Torque\+Limit\+Function}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{$\sim$\+Torque\+Limit\+Function()}{~TorqueLimitFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Torque\+Limit\+Function\+::$\sim$\+Torque\+Limit\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1TorqueLimitFunction_a810eb8dd094bb809859a6adf9c6c4a18}{}\label{classocra_1_1TorqueLimitFunction_a810eb8dd094bb809859a6adf9c6c4a18}
+Destructor 
+
+Definition at line 58 of file Torque\+Limit\+Constraint.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!get\+Torque\+Limits@{get\+Torque\+Limits}}
+\index{get\+Torque\+Limits@{get\+Torque\+Limits}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{get\+Torque\+Limits() const }{getTorqueLimits() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd \& ocra\+::\+Torque\+Limit\+Function\+::get\+Torque\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1TorqueLimitFunction_ad31fa43f33245bbd17f5875d882e4a6d}{}\label{classocra_1_1TorqueLimitFunction_ad31fa43f33245bbd17f5875d882e4a6d}
+Get the torque limit.
+
+\begin{DoxyReturn}{Returns}
+The torque limit $ \torque_{max} $ 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Torque\+Limit\+Constraint.\+cpp.
+
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!set\+Torque\+Limits@{set\+Torque\+Limits}}
+\index{set\+Torque\+Limits@{set\+Torque\+Limits}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{set\+Torque\+Limits(const Eigen\+::\+Vector\+Xd \&torque\+Limits)}{setTorqueLimits(const Eigen::VectorXd &torqueLimits)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Torque\+Limit\+Function\+::set\+Torque\+Limits (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{torque\+Limits}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1TorqueLimitFunction_a038250b745913584724401ea719177a5}{}\label{classocra_1_1TorqueLimitFunction_a038250b745913584724401ea719177a5}
+Set the torque limit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em torque\+Limits} & The torque limit $ \torque_{max} $ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file Torque\+Limit\+Constraint.\+cpp.
+
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!updateb@{updateb}}
+\index{updateb@{updateb}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{updateb() const }{updateb() const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Torque\+Limit\+Function\+::updateb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1TorqueLimitFunction_a211707ede54d78fbdef43a23aa4dfbef}{}\label{classocra_1_1TorqueLimitFunction_a211707ede54d78fbdef43a23aa4dfbef}
+Update the vector ( $ \b $) in the function.
+
+It computes $ \b = \begin{bmatrix} \torque_{max} \\ \torque_{max} \end{bmatrix} $ . 
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_a9857f074ea269801ce6f595b69593b32}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 76 of file Torque\+Limit\+Constraint.\+cpp.
+
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!update\+Jacobian@{update\+Jacobian}}
+\index{update\+Jacobian@{update\+Jacobian}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{update\+Jacobian() const }{updateJacobian() const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Torque\+Limit\+Function\+::update\+Jacobian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1TorqueLimitFunction_a05595b1a380ee3a69afdf5cb472468a9}{}\label{classocra_1_1TorqueLimitFunction_a05595b1a380ee3a69afdf5cb472468a9}
+Update the Jacobian matrix ( $ \A $) in the function.
+
+Nothing to do. 
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_a544c87a4f02b4d80ae70e53b80c74461}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 67 of file Torque\+Limit\+Constraint.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!\+\_\+torque\+Dim@{\+\_\+torque\+Dim}}
+\index{\+\_\+torque\+Dim@{\+\_\+torque\+Dim}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{\+\_\+torque\+Dim}{_torqueDim}}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Torque\+Limit\+Function\+::\+\_\+torque\+Dim\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1TorqueLimitFunction_ae7eed81decd37aa8bb6baeb47c5fb4d0}{}\label{classocra_1_1TorqueLimitFunction_ae7eed81decd37aa8bb6baeb47c5fb4d0}
+
+
+Definition at line 55 of file Torque\+Limit\+Constraint.\+h.
+
+\index{ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}!\+\_\+torque\+Limits@{\+\_\+torque\+Limits}}
+\index{\+\_\+torque\+Limits@{\+\_\+torque\+Limits}!ocra\+::\+Torque\+Limit\+Function@{ocra\+::\+Torque\+Limit\+Function}}
+\subsubsection[{\texorpdfstring{\+\_\+torque\+Limits}{_torqueLimits}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd ocra\+::\+Torque\+Limit\+Function\+::\+\_\+torque\+Limits\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1TorqueLimitFunction_a929154bb1273971f123d12ce810fd375}{}\label{classocra_1_1TorqueLimitFunction_a929154bb1273971f123d12ce810fd375}
+
+
+Definition at line 54 of file Torque\+Limit\+Constraint.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TorqueLimitConstraint_8h}{Torque\+Limit\+Constraint.\+h}\item 
+\hyperlink{TorqueLimitConstraint_8cpp}{Torque\+Limit\+Constraint.\+cpp}\end{DoxyCompactItemize}

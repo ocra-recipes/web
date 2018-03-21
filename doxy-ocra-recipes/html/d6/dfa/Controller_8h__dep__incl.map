@@ -1,0 +1,42 @@
+<map id="Controller.h" name="Controller.h">
+<area shape="rect" id="node2" href="$d2/d16/ContactSet_8h.html" title="Factory classes and functions to build sets of contact frames. " alt="" coords="167,80,266,107"/>
+<area shape="rect" id="node5" href="$d1/d7b/TaskConstructionManager_8h.html" title="TaskConstructionManager.h" alt="" coords="2843,80,3030,107"/>
+<area shape="rect" id="node11" href="$da/d7c/ControllerServer_8h.html" title="ControllerServer.h" alt="" coords="3148,229,3275,256"/>
+<area shape="rect" id="node13" href="$d2/d6c/ServerCommunications_8h.html" title="ServerCommunications.h" alt="" coords="2975,155,3144,181"/>
+<area shape="rect" id="node15" href="$dd/da6/Controller_8cpp.html" title="Controller.cpp" alt="" coords="3649,80,3752,107"/>
+<area shape="rect" id="node16" href="$db/dc6/WocraController_8h.html" title="Define the LQP&#45;based controller developped during my PhD thesis with ocra framework. " alt="" coords="3115,80,3241,107"/>
+<area shape="rect" id="node18" href="$d9/de9/GHCJTController_8h.html" title="Define the Generalized Hierarchical Controller based on Jacobian transpose (GHCJT) in quasi&#45;static ca..." alt="" coords="1132,80,1267,107"/>
+<area shape="rect" id="node40" href="$d7/d34/HocraController_8h.html" title="HocraController.h" alt="" coords="3336,80,3460,107"/>
+<area shape="rect" id="node3" href="$d7/dce/ContactSet_8cpp.html" title="ContactSet.cpp" alt="" coords="5,155,119,181"/>
+<area shape="rect" id="node4" href="$d0/d71/GHCJTController_8cpp.html" title="Implement the quasi&#45;static Generalized Hierarchical Control based on Jacobian Transpose (GHCJT)..." alt="" coords="143,155,291,181"/>
+<area shape="rect" id="node6" href="$dd/d25/TaskConstructionManager_8cpp.html" title="TaskConstructionManager.cpp" alt="" coords="2699,155,2899,181"/>
+<area shape="rect" id="node7" href="$db/d9a/ControllerClient_8h.html" title="ControllerClient.h" alt="" coords="2553,155,2675,181"/>
+<area shape="rect" id="node8" href="$d8/d80/ClientManager_8h.html" title="Module class for the controller Client. " alt="" coords="2746,229,2863,256"/>
+<area shape="rect" id="node10" href="$d2/d77/ControllerClient_8cpp.html" title="ControllerClient.cpp" alt="" coords="2584,229,2721,256"/>
+<area shape="rect" id="node9" href="$d9/d36/ClientManager_8cpp.html" title="ClientManager.cpp" alt="" coords="2739,311,2870,338"/>
+<area shape="rect" id="node12" href="$d5/dd2/ControllerServer_8cpp.html" title="ControllerServer.cpp" alt="" coords="3141,311,3282,338"/>
+<area shape="rect" id="node14" href="$dc/dac/ServerCommunications_8cpp.html" title="ServerCommunications.cpp" alt="" coords="2941,229,3124,256"/>
+<area shape="rect" id="node17" href="$d2/def/WocraController_8cpp.html" title="Implement the LQP&#45;based controller developped during my PhD thesis with ocra framework. " alt="" coords="3219,155,3361,181"/>
+<area shape="rect" id="node19" href="$df/d0a/main_8cpp.html" title="main.cpp" alt="" coords="314,155,389,181"/>
+<area shape="rect" id="node20" href="$db/d31/gOcraTaskManagerBase_8h.html" title="gOcraTaskManagerBase.h" alt="" coords="1337,155,1515,181"/>
+<area shape="rect" id="node22" href="$de/d9f/gOcraTaskManagerCollectionBase_8cpp.html" title="gOcraTaskManagerCollection\lBase.cpp" alt="" coords="830,393,1025,435"/>
+<area shape="rect" id="node23" href="$de/dda/gOcraCoMTaskManager_8h.html" title="gOcraCoMTaskManager.h" alt="" coords="437,229,612,256"/>
+<area shape="rect" id="node25" href="$d0/d8c/gOcraContactSetTaskManager_8h.html" title="gOcraContactSetTaskManager.h" alt="" coords="637,229,850,256"/>
+<area shape="rect" id="node27" href="$dc/db6/gOcraContactTaskManager_8h.html" title="gOcraContactTaskManager.h" alt="" coords="875,229,1068,256"/>
+<area shape="rect" id="node29" href="$d0/dd7/gOcraFullPostureTaskManager_8h.html" title="gOcraFullPostureTaskManager.h" alt="" coords="1093,229,1306,256"/>
+<area shape="rect" id="node31" href="$dd/dc3/gOcraPartialPostureTaskManager_8h.html" title="gOcraPartialPostureTaskManager.h" alt="" coords="1597,229,1826,256"/>
+<area shape="rect" id="node33" href="$d8/de2/gOcraSegCartesianTaskManager_8h.html" title="gOcraSegCartesianTaskManager.h" alt="" coords="1850,229,2077,256"/>
+<area shape="rect" id="node35" href="$d7/d74/gOcraSegOrientationTaskManager_8h.html" title="gOcraSegOrientationTaskManager.h" alt="" coords="2101,229,2335,256"/>
+<area shape="rect" id="node37" href="$d2/db2/gOcraSegPoseTaskManager_8h.html" title="gOcraSegPoseTaskManager.h" alt="" coords="2359,229,2559,256"/>
+<area shape="rect" id="node21" href="$d4/d79/gOcraTaskManagerCollectionBase_8h.html" title="gOcraTaskManagerCollection\lBase.h" alt="" coords="1371,304,1566,345"/>
+<area shape="rect" id="node39" href="$d6/d1f/gOcraTaskManagerBase_8cpp.html" title="gOcraTaskManagerBase.cpp" alt="" coords="1331,229,1521,256"/>
+<area shape="rect" id="node24" href="$d4/d34/gOcraCoMTaskManager_8cpp.html" title="gOcraCoMTaskManager.cpp" alt="" coords="425,311,614,338"/>
+<area shape="rect" id="node26" href="$d9/d71/gOcraContactSetTaskManager_8cpp.html" title="gOcraContactSetTaskManager.cpp" alt="" coords="638,311,865,338"/>
+<area shape="rect" id="node28" href="$da/d9a/gOcraContactTaskManager_8cpp.html" title="gOcraContactTaskManager.cpp" alt="" coords="889,311,1096,338"/>
+<area shape="rect" id="node30" href="$d3/df6/gOcraFullPostureTaskManager_8cpp.html" title="gOcraFullPostureTaskManager.cpp" alt="" coords="1121,311,1347,338"/>
+<area shape="rect" id="node32" href="$dd/dcc/gOcraPartialPostureTaskManager_8cpp.html" title="gOcraPartialPostureTaskManager.cpp" alt="" coords="1590,311,1833,338"/>
+<area shape="rect" id="node34" href="$dd/d9e/gOcraSegCartesianTaskManager_8cpp.html" title="gOcraSegCartesianTaskManager.cpp" alt="" coords="1857,311,2097,338"/>
+<area shape="rect" id="node36" href="$d8/dfe/gOcraSegOrientationTaskManager_8cpp.html" title="gOcraSegOrientationTaskManager.cpp" alt="" coords="2121,311,2368,338"/>
+<area shape="rect" id="node38" href="$de/d48/gOcraSegPoseTaskManager_8cpp.html" title="gOcraSegPoseTaskManager.cpp" alt="" coords="2392,311,2607,338"/>
+<area shape="rect" id="node41" href="$d9/d62/HocraController_8cpp.html" title="HocraController.cpp" alt="" coords="3435,155,3574,181"/>
+</map>

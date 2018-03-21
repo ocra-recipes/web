@@ -1,0 +1,106 @@
+\hypertarget{Trajectory_8h}{}\section{Trajectory.\+h File Reference}
+\label{Trajectory_8h}\index{Trajectory.\+h@{Trajectory.\+h}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\\*
+{\ttfamily \#include $<$Eigen/\+Lgsm$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$ocra/util/\+Macros.\+h$>$}\\*
+{\ttfamily \#include $<$ocra/util/\+Errors\+Helper.\+h$>$}\\*
+Include dependency graph for Trajectory.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d27/Trajectory_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/de1/Trajectory_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classocra_1_1Trajectory}{ocra\+::\+Trajectory}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceocra}{ocra}
+\begin{DoxyCompactList}\small\item\em Optimization-\/based Robot \hyperlink{classocra_1_1Controller}{Controller} namespace. a library of classes to write and solve optimization problems dedicated to the control of multi-\/body systems. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Trajectory_8h_a9e3ac52353d93ad35f3d98ac757e43bc}{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+D\+IM}~3
+\item 
+\#define \hyperlink{Trajectory_8h_a111590ca7fd2af49aa6c0b2d3a1156bd}{Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+IM}~4
+\item 
+\#define \hyperlink{Trajectory_8h_a5b27758155b771d90c6b979a1c1c9085}{P\+O\+S\+\_\+\+I\+N\+D\+EX}~0
+\item 
+\#define \hyperlink{Trajectory_8h_ad20dc827e4f66e02e1e5bbc4c5691ced}{V\+E\+L\+\_\+\+I\+N\+D\+EX}~1
+\item 
+\#define \hyperlink{Trajectory_8h_acb84477ddc0f70370b2c11554f950c09}{A\+C\+C\+\_\+\+I\+N\+D\+EX}~2
+\item 
+\#define \hyperlink{Trajectory_8h_a0de99e9c85bead2fc42c7aad8cd41af9}{T\+R\+A\+J\+\_\+\+D\+IM}~3
+\item 
+\#define \hyperlink{Trajectory_8h_ad16f0a65d88bba9d2a2c414b2b38701e}{T\+A\+U\+\_\+\+M\+AX}~1.\+0l
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Trajectory.\+h@{Trajectory.\+h}!A\+C\+C\+\_\+\+I\+N\+D\+EX@{A\+C\+C\+\_\+\+I\+N\+D\+EX}}
+\index{A\+C\+C\+\_\+\+I\+N\+D\+EX@{A\+C\+C\+\_\+\+I\+N\+D\+EX}!Trajectory.\+h@{Trajectory.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+I\+N\+D\+EX}{ACC_INDEX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+I\+N\+D\+EX~2}\hypertarget{Trajectory_8h_acb84477ddc0f70370b2c11554f950c09}{}\label{Trajectory_8h_acb84477ddc0f70370b2c11554f950c09}
+
+
+Definition at line 22 of file Trajectory.\+h.
+
+\index{Trajectory.\+h@{Trajectory.\+h}!P\+O\+S\+\_\+\+I\+N\+D\+EX@{P\+O\+S\+\_\+\+I\+N\+D\+EX}}
+\index{P\+O\+S\+\_\+\+I\+N\+D\+EX@{P\+O\+S\+\_\+\+I\+N\+D\+EX}!Trajectory.\+h@{Trajectory.\+h}}
+\subsubsection[{\texorpdfstring{P\+O\+S\+\_\+\+I\+N\+D\+EX}{POS_INDEX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+S\+\_\+\+I\+N\+D\+EX~0}\hypertarget{Trajectory_8h_a5b27758155b771d90c6b979a1c1c9085}{}\label{Trajectory_8h_a5b27758155b771d90c6b979a1c1c9085}
+
+
+Definition at line 20 of file Trajectory.\+h.
+
+\index{Trajectory.\+h@{Trajectory.\+h}!Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+IM@{Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+IM}}
+\index{Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+IM@{Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+IM}!Trajectory.\+h@{Trajectory.\+h}}
+\subsubsection[{\texorpdfstring{Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+IM}{QUATERNION_DIM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+IM~4}\hypertarget{Trajectory_8h_a111590ca7fd2af49aa6c0b2d3a1156bd}{}\label{Trajectory_8h_a111590ca7fd2af49aa6c0b2d3a1156bd}
+
+
+Definition at line 19 of file Trajectory.\+h.
+
+\index{Trajectory.\+h@{Trajectory.\+h}!T\+A\+U\+\_\+\+M\+AX@{T\+A\+U\+\_\+\+M\+AX}}
+\index{T\+A\+U\+\_\+\+M\+AX@{T\+A\+U\+\_\+\+M\+AX}!Trajectory.\+h@{Trajectory.\+h}}
+\subsubsection[{\texorpdfstring{T\+A\+U\+\_\+\+M\+AX}{TAU_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+A\+U\+\_\+\+M\+AX~1.\+0l}\hypertarget{Trajectory_8h_ad16f0a65d88bba9d2a2c414b2b38701e}{}\label{Trajectory_8h_ad16f0a65d88bba9d2a2c414b2b38701e}
+
+
+Definition at line 26 of file Trajectory.\+h.
+
+\index{Trajectory.\+h@{Trajectory.\+h}!T\+R\+A\+J\+\_\+\+D\+IM@{T\+R\+A\+J\+\_\+\+D\+IM}}
+\index{T\+R\+A\+J\+\_\+\+D\+IM@{T\+R\+A\+J\+\_\+\+D\+IM}!Trajectory.\+h@{Trajectory.\+h}}
+\subsubsection[{\texorpdfstring{T\+R\+A\+J\+\_\+\+D\+IM}{TRAJ_DIM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+A\+J\+\_\+\+D\+IM~3}\hypertarget{Trajectory_8h_a0de99e9c85bead2fc42c7aad8cd41af9}{}\label{Trajectory_8h_a0de99e9c85bead2fc42c7aad8cd41af9}
+
+
+Definition at line 24 of file Trajectory.\+h.
+
+\index{Trajectory.\+h@{Trajectory.\+h}!T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+D\+IM@{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+D\+IM}}
+\index{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+D\+IM@{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+D\+IM}!Trajectory.\+h@{Trajectory.\+h}}
+\subsubsection[{\texorpdfstring{T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+D\+IM}{TRANSLATION_DIM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+A\+N\+S\+L\+A\+T\+I\+O\+N\+\_\+\+D\+IM~3}\hypertarget{Trajectory_8h_a9e3ac52353d93ad35f3d98ac757e43bc}{}\label{Trajectory_8h_a9e3ac52353d93ad35f3d98ac757e43bc}
+
+
+Definition at line 18 of file Trajectory.\+h.
+
+\index{Trajectory.\+h@{Trajectory.\+h}!V\+E\+L\+\_\+\+I\+N\+D\+EX@{V\+E\+L\+\_\+\+I\+N\+D\+EX}}
+\index{V\+E\+L\+\_\+\+I\+N\+D\+EX@{V\+E\+L\+\_\+\+I\+N\+D\+EX}!Trajectory.\+h@{Trajectory.\+h}}
+\subsubsection[{\texorpdfstring{V\+E\+L\+\_\+\+I\+N\+D\+EX}{VEL_INDEX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+L\+\_\+\+I\+N\+D\+EX~1}\hypertarget{Trajectory_8h_ad20dc827e4f66e02e1e5bbc4c5691ced}{}\label{Trajectory_8h_ad20dc827e4f66e02e1e5bbc4c5691ced}
+
+
+Definition at line 21 of file Trajectory.\+h.
+

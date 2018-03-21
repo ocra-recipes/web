@@ -1,0 +1,24 @@
+<map id="SolverUtilities.h" name="SolverUtilities.h">
+<area shape="rect" id="node2" href="$d5/d55/MathTypes_8h.html" title="Declaration file of the OptimizationVariable class. " alt="" coords="31,639,179,666"/>
+<area shape="rect" id="node5" href="$d7/d90/Variable_8h.html" title="Declaration file of the Variable class. " alt="" coords="479,475,624,502"/>
+<area shape="rect" id="node27" href="$d3/dcf/Constraint_8h.html" title="Declaration file of the Constraint class. " alt="" coords="772,80,931,107"/>
+<area shape="rect" id="node42" href="$da/dc1/uncompress_8h.html" title="ocra/optim/uncompress.h" alt="" coords="147,319,316,345"/>
+<area shape="rect" id="node44" href="$dd/d88/SolverUtilities_8hxx.html" title="SolverUtilities.hxx" alt="" coords="1746,80,1874,107"/>
+<area shape="rect" id="node6" href="$d8/ddc/ObserverSubject_8h.html" title="Declaration file of the Observer, Subject and ObserverSubject classes. " alt="" coords="1655,557,1850,584"/>
+<area shape="rect" id="node17" href="$d1/de6/Composite_8h.html" title="Utility classes and functions to implement the Composite design pattern. " alt="" coords="853,557,1015,584"/>
+<area shape="rect" id="node7" href="$df/d67/ObserverSubjectBase_8h.html" title="Declaration file of the Observer and Subject base classes. " alt="" coords="1979,632,2163,673"/>
+<area shape="rect" id="node15" href="$db/ddf/ocra__events_8h.html" title="ocra/optim/ocra_events.h" alt="" coords="1785,639,1955,666"/>
+<area shape="rect" id="node18" href="$de/df3/ocra__assert_8h.html" title="ocra/optim/ocra_assert.h" alt="" coords="1157,639,1324,666"/>
+<area shape="rect" id="node28" href="$df/df5/Function_8h.html" title="Declaration file of the Function class. " alt="" coords="1121,393,1269,420"/>
+<area shape="rect" id="node35" href="$df/d55/FunctionInterfaceMapping_8h.html" title="Declaration file of the FunctionInterfaceMapping struct. " alt="" coords="1172,229,1360,271"/>
+<area shape="rect" id="node36" href="$df/d0a/Macros_8h.html" title="ocra/util/Macros.h" alt="" coords="301,393,428,420"/>
+<area shape="rect" id="node38" href="$dc/d8a/LinearFunction_8h.html" title="Declaration file of the LinearFunction class. " alt="" coords="564,319,747,345"/>
+<area shape="rect" id="node39" href="$de/d69/BoundFunction_8h.html" title="Declaration file of the BoundFunction class. " alt="" coords="759,155,944,181"/>
+<area shape="rect" id="node40" href="$dc/d6f/DiagonalLinearFunction_8h.html" title="Declaration file of the DiagonalLinearFunction class. " alt="" coords="702,229,875,271"/>
+<area shape="rect" id="node41" href="$de/d7a/IdentityFunction_8h.html" title="Declaration file of the IdentityFunction class. " alt="" coords="544,155,735,181"/>
+<area shape="rect" id="node29" href="$de/d94/IFunction_8h.html" title="Declaration file of the IFunction interface. " alt="" coords="1262,557,1414,584"/>
+<area shape="rect" id="node31" href="$d9/d54/IFunctionProperties_8h.html" title="ocra/optim/IFunctionProperties.h" alt="" coords="1090,475,1301,502"/>
+<area shape="rect" id="node32" href="$db/d47/AbilitySet_8h.html" title="ocra/optim/AbilitySet.h" alt="" coords="1375,475,1530,502"/>
+<area shape="rect" id="node33" href="$d1/d87/CoupledInputOutputSize_8h.html" title="ocra/optim/CoupledInputOutput\lSize.h" alt="" coords="863,468,1066,509"/>
+<area shape="rect" id="node34" href="$df/d97/NamedInstance_8h.html" title="ocra/optim/NamedInstance.h" alt="" coords="648,475,839,502"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="ocra::Feature" name="ocra::Feature">
+<area shape="rect" id="node4" href="$d3/dd9/classocra_1_1ContactConstraintFeature.html" title="Used to build contact constraint tasks (null acceleration). " alt="" coords="347,5,552,32"/>
+<area shape="rect" id="node5" href="$dd/dda/classocra_1_1DisplacementFeature.html" title="Used to build position/orientation tasks. " alt="" coords="360,56,539,83"/>
+<area shape="rect" id="node6" href="$d4/d65/classocra_1_1FullStateFeature.html" title="Used to build tasks in the manikin configuration space. " alt="" coords="374,107,525,133"/>
+<area shape="rect" id="node7" href="$d0/d2e/classocra_1_1OrientationFeature.html" title="Used to build orientation tasks. " alt="" coords="368,157,531,184"/>
+<area shape="rect" id="node8" href="$dc/daf/classocra_1_1PartialStateFeature.html" title="Used to build tasks in a partial configuration space. " alt="" coords="366,208,533,235"/>
+<area shape="rect" id="node9" href="$d4/d58/classocra_1_1PointContactFeature.html" title="Used to build point contact tasks. " alt="" coords="362,259,537,285"/>
+<area shape="rect" id="node10" href="$d7/d01/classocra_1_1PositionFeature.html" title="Used to build positioning tasks. " alt="" coords="376,309,523,336"/>
+<area shape="rect" id="node2" href="$db/de3/classocra_1_1NamedInstance.html" title="ocra::NamedInstance" alt="" coords="5,132,152,159"/>
+</map>

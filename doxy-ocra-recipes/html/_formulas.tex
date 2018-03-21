@@ -1,0 +1,516 @@
+\documentclass{article}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{latexcustomcommands}
+\pagestyle{empty}
+\begin{document}
+$ \vec{0} < \vec{d}_{oa} $
+\pagebreak
+
+$ \vec{d}_{oa} $
+\pagebreak
+
+\begin{align*} \vec{d}_{oa} - \vec{m} &> \vec{d}_{oa}(h) \quad \text{at instant h} \\ \vec{d}_{oa} - \vec{m} &> \dot{\vec{d}}_{oa} h + \ddot{\vec{d}}_{oa} \frac{h^2}{2} \\ \vec{d}_{oa} - \vec{m} &> \dot{\vec{d}}_{oa} h + \left( \J_{oa} \ddq + \dJ_{oa} \dq \right) \frac{h^2}{2} \end{align*}
+\pagebreak
+
+$ \vec{m} $
+\pagebreak
+
+\begin{align*} \A \x + \b &> \vec{0} & &\Leftrightarrow & \begin{bmatrix} - \J_{oa} \end{bmatrix} \ddq + \begin{bmatrix} - \dJ_{oa} \dq + 2 \left( \vec{d}_{oa} - \vec{m} - \dot{\vec{d}}_{oa} h \right) / h^2 \end{bmatrix} & > \vec{0} \end{align*}
+\pagebreak
+
+\begin{align*} t_{max} &= 2*(\vec{d}_{oa} - \vec{m}) / \dot{\vec{d}}_{oa} & & \text{(element-wise operations)} \end{align*}
+\pagebreak
+
+$ i $
+\pagebreak
+
+$ 0 < t_{max}[i] < h$
+\pagebreak
+
+\begin{align*} \ddot{\vec{d}}_{max}[i] &= \frac{ \dot{\vec{d}}_{oa}[i]^2 }{ 2( \vec{d}_{oa}[i] - \vec{m}[i] ) } & & \Rightarrow & \begin{bmatrix} - \J_{oa} \end{bmatrix} [i] \ddq + \ddot{\vec{d}}_{max}[i] > 0 \end{align*}
+\pagebreak
+
+\[ \M \ddq + \n + \g = S \torque - \J_c\tp \force_c \]
+\pagebreak
+
+$ \x = \begin{bmatrix} \ddq\tp & \torque\tp & \force_c\tp\end{bmatrix}\tp $
+\pagebreak
+
+\begin{align*} \A \x + \b &= \vec{0} & &\Leftrightarrow & \begin{bmatrix} \M & -S & \J_c\tp \end{bmatrix} . \begin{bmatrix} \ddq \\ \torque \\ \force_c\end{bmatrix} + [ \n + \g ] = \vec{0} \end{align*}
+\pagebreak
+
+$ \q_{min} < \q < \q{max} $
+\pagebreak
+
+$ \ddq $
+\pagebreak
+
+\begin{align*} \q_{min} < \q + \dq h + \ddq \frac{h^2}{2} < \q_{max} \end{align*}
+\pagebreak
+
+\begin{align*} A \x + \b &> \vec{0} & &\Leftrightarrow & \begin{bmatrix} - \Id{} \\ \Id{} \end{bmatrix} \ddq + 2 \begin{bmatrix} \q_{max} - \q + \dq h \\ \q_{min} - \q + \dq h \end{bmatrix} / h^2 &> \vec{0} \end{align*}
+\pagebreak
+
+\begin{align*} t_{max} &= - 2 ( \q - \q_{max} ) / \dq & &\text{(element-wise operations)} \\ t_{min} &= - 2 ( \q - \q_{min} ) / \dq \end{align*}
+\pagebreak
+
+\begin{align*} \ddq_{max}[i] &= \frac{ \dq[i]^2 }{ 2(\q[i] - \q_{max}[i] ) } & & \Rightarrow & \ddq [i] + \ddq_{max}[i] > 0 \end{align*}
+\pagebreak
+
+$ 0 < t_{min}[i] < h $
+\pagebreak
+
+\begin{align*} \ddq_{min}[i] &= \frac{ \dq[i]^2 }{ 2(\q[i] - \q_{min}[i] ) } & & \Rightarrow & \ddq [i] + \ddq_{min}[i] > 0 \end{align*}
+\pagebreak
+
+$ M\dot{T} + N + G = L tau - J_c^T f $
+\pagebreak
+
+$2\sqrt(k_p)$
+\pagebreak
+
+\[ - \torque_{max} < \torque < \torque_{max} \]
+\pagebreak
+
+\begin{align*} \A \x + \b &> \vec{0} & &\Leftrightarrow & \begin{bmatrix} - \Id{} \\ \Id{} \end{bmatrix} . \torque + \begin{bmatrix} \torque_{max} \\ \torque_{max} \end{bmatrix} &> \vec{0} \end{align*}
+\pagebreak
+
+$ x<x^+ $
+\pagebreak
+
+$ x>x^- $
+\pagebreak
+
+$ f $
+\pagebreak
+
+$ x \in R^n $
+\pagebreak
+
+$ t $
+\pagebreak
+
+$ l \le f(x,t) \le u $
+\pagebreak
+
+$ l $
+\pagebreak
+
+$ u $
+\pagebreak
+
+$ m $
+\pagebreak
+
+$ \left(R\cup\left\{-\infty,+\infty\right\}\right)^m $
+\pagebreak
+
+$ l \le u $
+\pagebreak
+
+$ l = u = b $
+\pagebreak
+
+$ l = -\infty $
+\pagebreak
+
+$ u = +\infty $
+\pagebreak
+
+$ f(x,t) = 0 $
+\pagebreak
+
+$ f(x,t) \le 0 $
+\pagebreak
+
+$ f(x,t) = b $
+\pagebreak
+
+$ f(x,t) \le u $
+\pagebreak
+
+$ f(x,t) \ge 0 $
+\pagebreak
+
+$ f(x,t) \ge l $
+\pagebreak
+
+$ f(x,t) = u $
+\pagebreak
+
+$ Dx+b $
+\pagebreak
+
+$ D=diag(d) $
+\pagebreak
+
+$ d $
+\pagebreak
+
+$ f_A $
+\pagebreak
+
+$x$
+\pagebreak
+
+$R^n$
+\pagebreak
+
+$ f_A : R^n \times R \rightarrow R^m $
+\pagebreak
+
+$ f_A(x,t) = (f_{1_A}(x,t), \cdots, f_{m_A}(x,t))^T $
+\pagebreak
+
+$ \frac{\partial^2 f}{\partial t \partial x}$
+\pagebreak
+
+$ \frac{\partial f_i}{\partial x}$
+\pagebreak
+
+$ \left(x(t),t\right) $
+\pagebreak
+
+$ f: R^n \times R \rightarrow R^m $
+\pagebreak
+
+$ f(x,t) $
+\pagebreak
+
+$ \frac{\partial^2 f}{\partial t \partial x}(x,t) $
+\pagebreak
+
+$ f(x,t) = g(x)+h(t)$
+\pagebreak
+
+$ \left\|f_t\right\| - \mu f_n $
+\pagebreak
+
+$ Af+b \le 0 $
+\pagebreak
+
+$ x $
+\pagebreak
+
+$ \frac{\partial f}{\partial x} \dot{x} + L(f(x)) $
+\pagebreak
+
+$ L $
+\pagebreak
+
+$ L(y) = \Lambda y $
+\pagebreak
+
+$ \Lambda $
+\pagebreak
+
+$ \mbox{min.} \dfrac{1}{2} \sum_i{ w_i \left\| f_i \right\|^2_2} $
+\pagebreak
+
+$ f_i $
+\pagebreak
+
+$ J_i^t J_i $
+\pagebreak
+
+$ J_i $
+\pagebreak
+
+$ F(x) = \dfrac{1}{2} \sum_i{ w_i \left\| f_i(x) \right\|^2_2} $
+\pagebreak
+
+$ H(x)=\frac{\partial^2 F}{\partial x^2}(x)$
+\pagebreak
+
+$ x_0 $
+\pagebreak
+
+$ x_{n+1} = x_n - \alpha H(x_n)^{-1} \nabla F(x_n) $
+\pagebreak
+
+$ \left\|x_{n+1} - x_n\right\|_2$
+\pagebreak
+
+$ \epsilon $
+\pagebreak
+
+$ \alpha $
+\pagebreak
+
+$ x_0=0 $
+\pagebreak
+
+$ x_n $
+\pagebreak
+
+$ \alpha f(x,t) $
+\pagebreak
+
+$ alpha $
+\pagebreak
+
+\begin{align*} \argmin{\x} &: \; \frac{1}{2} \x\tp G \x + \vec{g}_0\tp \x \\ & CE \x + \vec{ce}_0 = \vec{0} \\ & CI \x + \vec{ci}_0 \geq \vec{0} \end{align*}
+\pagebreak
+
+\begin{align*} \argmin{\x} &: \; \frac{1}{2} \x\tp P \x + \vec{q}\tp \x \\ & \A \x + \b \geqq \vec{0} \\ & \x_{min} \leq \x \leq \x_{max} \end{align*}
+\pagebreak
+
+\begin{align*} \A \x + \b &\geqq \vec{0} & &\Leftrightarrow &\begin{bmatrix} CE \\ CI \end{bmatrix} \x + \begin{bmatrix} \vec{ce}_0 \\ \vec{ci}_0 \end{bmatrix} & \quad \begin{matrix} = \\ \geq \end{matrix} \quad \begin{bmatrix} \vec{0} \\ \vec{0} \end{bmatrix} \end{align*}
+\pagebreak
+
+$n$
+\pagebreak
+
+$m$
+\pagebreak
+
+\begin{align*} \argmin{\x} &: \; \frac{1}{2} \x\tp G \x + \vec{g}_0\tp \x \\ & CE\tp \x + \vec{ce}_0 = \vec{0} \\ & CI\tp \x + \vec{ci}_0 \geq \vec{0} \end{align*}
+\pagebreak
+
+$G$
+\pagebreak
+
+$n \times n$
+\pagebreak
+
+$\vec{g}_0$
+\pagebreak
+
+$CE$
+\pagebreak
+
+$n \times p$
+\pagebreak
+
+$\vec{ce}_0$
+\pagebreak
+
+$p$
+\pagebreak
+
+$CI$
+\pagebreak
+
+$n \times m$
+\pagebreak
+
+$\vec{ci}_0$
+\pagebreak
+
+$A^T x = b$
+\pagebreak
+
+$C^T x \geq d$
+\pagebreak
+
+$\vec{ce}_0 = -b$
+\pagebreak
+
+$\vec{ci}_0 = -d$
+\pagebreak
+
+$G = L^T L$
+\pagebreak
+
+$ P_i $
+\pagebreak
+
+$ q_i $
+\pagebreak
+
+$ r_i $
+\pagebreak
+
+$ \x = [ \ddq \; \torque \; \force_c ] $
+\pagebreak
+
+$ \x = [ \torque \; \force_c ] $
+\pagebreak
+
+$ h $
+\pagebreak
+
+$ = \dJ_{Obst} \dq $
+\pagebreak
+
+$ \A $
+\pagebreak
+
+$ \b $
+\pagebreak
+
+$ \A = \begin{bmatrix} \M & -S & \J_c\tp \end{bmatrix} $
+\pagebreak
+
+$ \M $
+\pagebreak
+
+$ \J_c $
+\pagebreak
+
+$ S $
+\pagebreak
+
+$ \b = \n + \g $
+\pagebreak
+
+$ \A = \begin{bmatrix} 0 & -S & 0 \end{bmatrix} $
+\pagebreak
+
+$ \torque $
+\pagebreak
+
+$ \force_c $
+\pagebreak
+
+$ \q_{min}, \q_{max} $
+\pagebreak
+
+$ \q_{min} $
+\pagebreak
+
+$ \q_{max} $
+\pagebreak
+
+$ \q_{min}[i], \q_{max}[i] $
+\pagebreak
+
+$ \q_{min}[i] $
+\pagebreak
+
+$ \q_{max}[i] $
+\pagebreak
+
+$ \vec{a}^{des} = - \left( \vec{a}_{ref} + K_p (\vec{p}^{des} - \vec{p}) + K_d (\vec{v}^{des} - \vec{v}) \right) $
+\pagebreak
+
+\begin{align*} \A &= J_{task} . \left( \M^{-1} \J_{\tav}\tp \right) & \b &= \vec{a}^{des} - \left( J_{task} \M^{-1} ( \g - \n) \right) \end{align*}
+\pagebreak
+
+\begin{align*} \A &= J_{task} & \b &= \vec{a}^{des} \end{align*}
+\pagebreak
+
+$ \b = \begin{bmatrix} \torque_{max} \\ \torque_{max} \end{bmatrix} $
+\pagebreak
+
+$ \torque_{max} $
+\pagebreak
+
+$ T_0 $
+\pagebreak
+
+$ \A = U . S . V\tp $
+\pagebreak
+
+$ r $
+\pagebreak
+
+\begin{align*} \A_r &= S[0:r, :] V[:, 0:r] \tp & & & \b_r &= U[:, 0:r] \tp \b \end{align*}
+\pagebreak
+
+$ R^3 \rightarrow R $
+\pagebreak
+
+$ f(x,y,z) = 3x^2y+2\frac{\sqrt{z}}{x}$
+\pagebreak
+
+$ f: R^n \rightarrow R $
+\pagebreak
+
+$ f(x) = \left(\prod_{i=1}^n x_i\right)^(1/n) $
+\pagebreak
+
+$ f_A:R^3 \rightarrow R $
+\pagebreak
+
+$ A = \left(t_0, x_0, \dot{x}_0, \ddot{x}_0, y_0, \dot{y}_0, \ddot{y}_0, z_0, \dot{z}_0, \ddot{z}_0 \right) $
+\pagebreak
+
+$ f_A(u_x,u_y,u_z) = \left(\begin{array}{c c c} x_0 & \dot{x}_0 & \ddot{x}_0 \\ y_0 & \dot{y}_0 & \ddot{y}_0 \\ z_0 & \dot{z}_0 & \ddot{z}_0 \end{array}\right) \left(\begin{array}{c} 1 \\ (t-t_0) \\ (t-t_0)^2/2 \end{array}\right) + \frac{(t-t_0)^3}{6} \left(\begin{array}{c} u_x \\ u_y \\ u_z \end{array}\right) $
+\pagebreak
+
+$ f(x,y,z) = 3x^2y+2\frac{z}{x}$
+\pagebreak
+
+$J(x,y,z) = \begin{array}{lcr} 6xy - 2 \frac{\sqrt{z}}{x^2} & 3x^2 & \frac{1}{x \sqrt{z}} \end{array} $
+\pagebreak
+
+$ H(x,y,z) = \left(\begin{array}{lcr} 6y + 4\frac{\sqrt{z}}{x^3} & 6x & -\frac{1}{x^2 \sqrt{z}} \\ 6x & 0 & 0 \\ -\frac{1}{x^2 \sqrt{z}} & 0 & -\frac{1}{2xz \sqrt{z}} \end{array}\right) $
+\pagebreak
+
+\begin{align*} \underset{\x}{\text{min}} &\; \frac{1}{2} \left( \x\tp P \x + \q\tp\x + r \right) \\ s.t. &:\; \G\x \leq h \\ &\; A\x = \b \end{align*}
+\pagebreak
+
+$ P $
+\pagebreak
+
+$ q $
+\pagebreak
+
+$ G $
+\pagebreak
+
+$ A $
+\pagebreak
+
+$ b $
+\pagebreak
+
+$ \tau $
+\pagebreak
+
+$ \left[ \ddq \tp \; f_c \tp \; \tau \tp \right] \tp $
+\pagebreak
+
+$ \X = [\ddq\tp \av] $
+\pagebreak
+
+$ \av $
+\pagebreak
+
+$ n $
+\pagebreak
+
+$ (T_i(\q, \dq, \X), \omega_i) \; i \in [1...n] $
+\pagebreak
+
+$ 0 < \omega_0 << 1 $
+\pagebreak
+
+$\X_i^*$
+\pagebreak
+
+\begin{align*} \underset{\X}{\text{min}} &\; \frac{1}{2} \left( \sum_{i=1}^{n} (\omega_i^2 T_i (\q, \dq, \X)) + \omega_0^2 T_0(\q, \dq, \X) \right) \\ s.t.: &\; G \X \leq \h \\ &\; \A \X = \b \end{align*}
+\pagebreak
+
+$ \ddq, \torque, \force_c $
+\pagebreak
+
+$ [ \ddq, \torque, \force_c ] $
+\pagebreak
+
+$ [ \torque, \force_c ] $
+\pagebreak
+
+$ [ \torque \; \force_c ] $
+\pagebreak
+
+$ [ \ddq \; \torque \; \force_c ] $
+\pagebreak
+
+$ \mu $
+\pagebreak
+
+$ \Vert \force_t \Vert < \mu \force_n $
+\pagebreak
+
+$ x = [ \ddq \; \tau \; \force_c ] $
+\pagebreak
+
+$ x = [ \tau \; \force_c ] $
+\pagebreak
+
+\end{document}

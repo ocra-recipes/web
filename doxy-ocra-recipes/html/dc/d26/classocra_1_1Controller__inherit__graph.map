@@ -1,0 +1,6 @@
+<map id="ocra::Controller" name="ocra::Controller">
+<area shape="rect" id="node4" href="$d6/dbf/classgocra_1_1GHCJTController.html" title="gOcra Controller based on LQP solver for the ocra framework. " alt="" coords="5,155,168,181"/>
+<area shape="rect" id="node5" href="$d1/d6a/classhocra_1_1HocraController.html" title="Hocra Controller based on LQP solver for the ocra framework. " alt="" coords="193,155,346,181"/>
+<area shape="rect" id="node6" href="$db/d14/classwocra_1_1WocraController.html" title="Wocra Controller based on LQP solver for the ocra framework. " alt="" coords="370,155,529,181"/>
+<area shape="rect" id="node2" href="$db/de3/classocra_1_1NamedInstance.html" title="ocra::NamedInstance" alt="" coords="124,5,271,32"/>
+</map>

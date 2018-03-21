@@ -1,0 +1,253 @@
+\hypertarget{classocra_1_1FSQPConstraintManager}{}\section{ocra\+:\+:F\+S\+Q\+P\+Constraint\+Manager Class Reference}
+\label{classocra_1_1FSQPConstraintManager}\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+
+
+F\+S\+Q\+P\+Constraint\+Manager class.  
+
+
+
+
+{\ttfamily \#include $<$F\+S\+Q\+P\+Constraint\+Manager.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structocra_1_1FSQPConstraintManager_1_1Mapping}{Mapping}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Cwise\+Unary\+Op$<$ internal\+::scalar\+\_\+multiple\+\_\+op$<$ double $>$, \hyperlink{namespaceocra_a608bf0522317ed1df3bbfc6a5753bc01}{Matrix\+Xd\+Row} $>$ \hyperlink{classocra_1_1FSQPConstraintManager_abe1cf7412d42b4a1b7158936a24ae6fb}{Scalar\+Mult\+Matrix\+Xd\+Row}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1FSQPConstraintManager_adce56c9faf54d60f6a2a01db9db36310}{F\+S\+Q\+P\+Constraint\+Manager} ()
+\item 
+void \hyperlink{classocra_1_1FSQPConstraintManager_a17e4f4d67bd1cda3e88003e3409ea747}{add\+Constraint} (\hyperlink{namespaceocra_ae8b87cf4099be3efc3b410019ad2046e}{Linear\+Constraint} \&constraint)
+\item 
+void \hyperlink{classocra_1_1FSQPConstraintManager_ad85f524f15572eb08e324024c293d46c}{add\+Constraint} (\hyperlink{namespaceocra_af10341108ce661566aad00908668e2b1}{Generic\+Constraint} \&constraint)
+\item 
+void \hyperlink{classocra_1_1FSQPConstraintManager_ad32235da282d8a388d350410534877e0}{remove\+Constraint} (\hyperlink{namespaceocra_ae8b87cf4099be3efc3b410019ad2046e}{Linear\+Constraint} \&constraint)
+\item 
+void \hyperlink{classocra_1_1FSQPConstraintManager_a5632e44ca4824c5d07d40a942623397b}{remove\+Constraint} (\hyperlink{namespaceocra_af10341108ce661566aad00908668e2b1}{Generic\+Constraint} \&constraint)
+\item 
+double \hyperlink{classocra_1_1FSQPConstraintManager_a59c617c1b20d1130b2505a52a8b5491d}{get\+Value} (int i) const 
+\item 
+const \hyperlink{classocra_1_1FSQPConstraintManager_abe1cf7412d42b4a1b7158936a24ae6fb}{Scalar\+Mult\+Matrix\+Xd\+Row} \hyperlink{classocra_1_1FSQPConstraintManager_a0d9ac797b02390fed4d55515a75fd33d}{get\+Gradient} (int i) const 
+\item 
+const \hyperlink{classocra_1_1FSQPConstraintManager_abe1cf7412d42b4a1b7158936a24ae6fb}{Scalar\+Mult\+Matrix\+Xd\+Row} \hyperlink{classocra_1_1FSQPConstraintManager_a609fe4a3f10b5d633697a8c794af086b}{get\+Gradient} (const std\+::pair$<$ \hyperlink{namespaceocra_af10341108ce661566aad00908668e2b1}{Generic\+Constraint} $\ast$, int $>$ \&p) const 
+\item 
+int \hyperlink{classocra_1_1FSQPConstraintManager_aad869b28ff01695346c7635485e5779c}{nineqn} () const 
+\item 
+int \hyperlink{classocra_1_1FSQPConstraintManager_ad681a2c09cc9bcb7614e0c459457b585}{nineq} () const 
+\item 
+int \hyperlink{classocra_1_1FSQPConstraintManager_aaed104b5de70fe9bb8a0821816d3cd94}{neqn} () const 
+\item 
+int \hyperlink{classocra_1_1FSQPConstraintManager_afa65a38beba8395f74c0f417f5b2ce18}{neq} () const 
+\item 
+void \hyperlink{classocra_1_1FSQPConstraintManager_a839a2083ccf3e425ec67ccaa7e24d076}{update\+Mapping} () const 
+\item 
+void \hyperlink{classocra_1_1FSQPConstraintManager_a54f055c7be78852480dbd3f5ba66656e}{invalidate\+Mapping} ()
+\item 
+std\+::pair$<$ \hyperlink{namespaceocra_af10341108ce661566aad00908668e2b1}{Generic\+Constraint} $\ast$, int $>$ \hyperlink{classocra_1_1FSQPConstraintManager_ab4289ebd76c686620d707b44ee2be0ff}{operator\mbox{[}$\,$\mbox{]}} (int i) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+F\+S\+Q\+P\+Constraint\+Manager class. 
+
+\begin{DoxyWarning}{Warning}
+None
+\end{DoxyWarning}
+The aim of this class is to maintain a mapping between indices and couple (constraint, line of this constraint) that is coherent with fsqp requirement\+: an ocra constraint is considered as a set of monodimensional constraints and all this \textquotesingle{}atomic\textquotesingle{} constraints are sorted according to their type. Non-\/linear inequalities come first, then linear inequalities, non-\/linear equalities, and finally linear equalities. This mapping is available with the \mbox{[}\mbox{]} operator. manager\mbox{[}i\mbox{]} returns a couple (c,j) such that the ith constraint for fsqp is the jth line of the constraint c. If the constraint is of the type C\+S\+T\+R\+\_\+\+L\+O\+W\+E\+R\+\_\+\+A\+N\+D\+\_\+\+G\+R\+E\+A\+T\+ER, the index j will range from 0 to 2d-\/1 included, where d is the dimension of the function the constraint is based upon. The indices from 0 to d-\/1 correspond to the \char`\"{}greater than\char`\"{} part of the constraint, those from d to 2d-\/1 correspond to to the lower part. 
+
+Definition at line 34 of file F\+S\+Q\+P\+Constraint\+Manager.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!Scalar\+Mult\+Matrix\+Xd\+Row@{Scalar\+Mult\+Matrix\+Xd\+Row}}
+\index{Scalar\+Mult\+Matrix\+Xd\+Row@{Scalar\+Mult\+Matrix\+Xd\+Row}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{Scalar\+Mult\+Matrix\+Xd\+Row}{ScalarMultMatrixXdRow}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Cwise\+Unary\+Op$<$internal\+::scalar\+\_\+multiple\+\_\+op$<$double$>$, {\bf Matrix\+Xd\+Row}$>$ {\bf ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::\+Scalar\+Mult\+Matrix\+Xd\+Row}}\hypertarget{classocra_1_1FSQPConstraintManager_abe1cf7412d42b4a1b7158936a24ae6fb}{}\label{classocra_1_1FSQPConstraintManager_abe1cf7412d42b4a1b7158936a24ae6fb}
+
+
+Definition at line 38 of file F\+S\+Q\+P\+Constraint\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!F\+S\+Q\+P\+Constraint\+Manager@{F\+S\+Q\+P\+Constraint\+Manager}}
+\index{F\+S\+Q\+P\+Constraint\+Manager@{F\+S\+Q\+P\+Constraint\+Manager}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{F\+S\+Q\+P\+Constraint\+Manager()}{FSQPConstraintManager()}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::\+F\+S\+Q\+P\+Constraint\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FSQPConstraintManager_adce56c9faf54d60f6a2a01db9db36310}{}\label{classocra_1_1FSQPConstraintManager_adce56c9faf54d60f6a2a01db9db36310}
+
+
+Definition at line 22 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!add\+Constraint@{add\+Constraint}}
+\index{add\+Constraint@{add\+Constraint}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{add\+Constraint(\+Linear\+Constraint \&constraint)}{addConstraint(LinearConstraint &constraint)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::add\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Constraint} \&}]{constraint}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FSQPConstraintManager_a17e4f4d67bd1cda3e88003e3409ea747}{}\label{classocra_1_1FSQPConstraintManager_a17e4f4d67bd1cda3e88003e3409ea747}
+
+
+Definition at line 32 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!add\+Constraint@{add\+Constraint}}
+\index{add\+Constraint@{add\+Constraint}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{add\+Constraint(\+Generic\+Constraint \&constraint)}{addConstraint(GenericConstraint &constraint)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::add\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf Generic\+Constraint} \&}]{constraint}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FSQPConstraintManager_ad85f524f15572eb08e324024c293d46c}{}\label{classocra_1_1FSQPConstraintManager_ad85f524f15572eb08e324024c293d46c}
+
+
+Definition at line 47 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!get\+Gradient@{get\+Gradient}}
+\index{get\+Gradient@{get\+Gradient}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Gradient(int i) const }{getGradient(int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf F\+S\+Q\+P\+Constraint\+Manager\+::\+Scalar\+Mult\+Matrix\+Xd\+Row} ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::get\+Gradient (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1FSQPConstraintManager_a0d9ac797b02390fed4d55515a75fd33d}{}\label{classocra_1_1FSQPConstraintManager_a0d9ac797b02390fed4d55515a75fd33d}
+
+
+Definition at line 199 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!get\+Gradient@{get\+Gradient}}
+\index{get\+Gradient@{get\+Gradient}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Gradient(const std\+::pair$<$ Generic\+Constraint $\ast$, int $>$ \&p) const }{getGradient(const std::pair< GenericConstraint *, int > &p) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf F\+S\+Q\+P\+Constraint\+Manager\+::\+Scalar\+Mult\+Matrix\+Xd\+Row} ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::get\+Gradient (
+\begin{DoxyParamCaption}
+\item[{const std\+::pair$<$ {\bf Generic\+Constraint} $\ast$, int $>$ \&}]{p}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1FSQPConstraintManager_a609fe4a3f10b5d633697a8c794af086b}{}\label{classocra_1_1FSQPConstraintManager_a609fe4a3f10b5d633697a8c794af086b}
+
+
+Definition at line 205 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Value(int i) const }{getValue(int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1FSQPConstraintManager_a59c617c1b20d1130b2505a52a8b5491d}{}\label{classocra_1_1FSQPConstraintManager_a59c617c1b20d1130b2505a52a8b5491d}
+
+
+Definition at line 172 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!invalidate\+Mapping@{invalidate\+Mapping}}
+\index{invalidate\+Mapping@{invalidate\+Mapping}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{invalidate\+Mapping()}{invalidateMapping()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::invalidate\+Mapping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FSQPConstraintManager_a54f055c7be78852480dbd3f5ba66656e}{}\label{classocra_1_1FSQPConstraintManager_a54f055c7be78852480dbd3f5ba66656e}
+
+
+Definition at line 143 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!neq@{neq}}
+\index{neq@{neq}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{neq() const }{neq() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::neq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1FSQPConstraintManager_afa65a38beba8395f74c0f417f5b2ce18}{}\label{classocra_1_1FSQPConstraintManager_afa65a38beba8395f74c0f417f5b2ce18}
+
+
+Definition at line 72 of file F\+S\+Q\+P\+Constraint\+Manager.\+h.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!neqn@{neqn}}
+\index{neqn@{neqn}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{neqn() const }{neqn() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::neqn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1FSQPConstraintManager_aaed104b5de70fe9bb8a0821816d3cd94}{}\label{classocra_1_1FSQPConstraintManager_aaed104b5de70fe9bb8a0821816d3cd94}
+
+
+Definition at line 71 of file F\+S\+Q\+P\+Constraint\+Manager.\+h.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!nineq@{nineq}}
+\index{nineq@{nineq}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{nineq() const }{nineq() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::nineq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1FSQPConstraintManager_ad681a2c09cc9bcb7614e0c459457b585}{}\label{classocra_1_1FSQPConstraintManager_ad681a2c09cc9bcb7614e0c459457b585}
+
+
+Definition at line 70 of file F\+S\+Q\+P\+Constraint\+Manager.\+h.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!nineqn@{nineqn}}
+\index{nineqn@{nineqn}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{nineqn() const }{nineqn() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::nineqn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1FSQPConstraintManager_aad869b28ff01695346c7635485e5779c}{}\label{classocra_1_1FSQPConstraintManager_aad869b28ff01695346c7635485e5779c}
+
+
+Definition at line 69 of file F\+S\+Q\+P\+Constraint\+Manager.\+h.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{operator[](int i) const }{operator[](int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ {\bf Generic\+Constraint} $\ast$, int $>$ ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1FSQPConstraintManager_ab4289ebd76c686620d707b44ee2be0ff}{}\label{classocra_1_1FSQPConstraintManager_ab4289ebd76c686620d707b44ee2be0ff}
+
+
+Definition at line 148 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!remove\+Constraint@{remove\+Constraint}}
+\index{remove\+Constraint@{remove\+Constraint}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{remove\+Constraint(\+Linear\+Constraint \&constraint)}{removeConstraint(LinearConstraint &constraint)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::remove\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Constraint} \&}]{constraint}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FSQPConstraintManager_ad32235da282d8a388d350410534877e0}{}\label{classocra_1_1FSQPConstraintManager_ad32235da282d8a388d350410534877e0}
+
+
+Definition at line 61 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!remove\+Constraint@{remove\+Constraint}}
+\index{remove\+Constraint@{remove\+Constraint}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{remove\+Constraint(\+Generic\+Constraint \&constraint)}{removeConstraint(GenericConstraint &constraint)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::remove\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf Generic\+Constraint} \&}]{constraint}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FSQPConstraintManager_a5632e44ca4824c5d07d40a942623397b}{}\label{classocra_1_1FSQPConstraintManager_a5632e44ca4824c5d07d40a942623397b}
+
+
+Definition at line 83 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+\index{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}!update\+Mapping@{update\+Mapping}}
+\index{update\+Mapping@{update\+Mapping}!ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager@{ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager}}
+\subsubsection[{\texorpdfstring{update\+Mapping() const }{updateMapping() const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+F\+S\+Q\+P\+Constraint\+Manager\+::update\+Mapping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1FSQPConstraintManager_a839a2083ccf3e425ec67ccaa7e24d076}{}\label{classocra_1_1FSQPConstraintManager_a839a2083ccf3e425ec67ccaa7e24d076}
+
+
+Definition at line 105 of file F\+S\+Q\+P\+Constraint\+Manager.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{FSQPConstraintManager_8h}{F\+S\+Q\+P\+Constraint\+Manager.\+h}\item 
+\hyperlink{FSQPConstraintManager_8cpp}{F\+S\+Q\+P\+Constraint\+Manager.\+cpp}\end{DoxyCompactItemize}

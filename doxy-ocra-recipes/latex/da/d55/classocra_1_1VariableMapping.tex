@@ -1,0 +1,101 @@
+\hypertarget{classocra_1_1VariableMapping}{}\section{ocra\+:\+:Variable\+Mapping Class Reference}
+\label{classocra_1_1VariableMapping}\index{ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}}
+
+
+A class to manage the relative mapping of a variable with respect to another one.  
+
+
+
+
+{\ttfamily \#include $<$Variable\+Mapping.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1VariableMapping_a05d5789ef9b868666a9e1eaf1294369c}{Variable\+Mapping} (const \hyperlink{classocra_1_1Variable}{Variable} \&relative, const \hyperlink{classocra_1_1Variable}{Variable} \&base)
+\item 
+\hyperlink{classocra_1_1VariableMapping_ad27dd236ac480197c10f8bb9ab15b6bd}{$\sim$\+Variable\+Mapping} ()
+\item 
+const std\+::vector$<$ int $>$ \& \hyperlink{classocra_1_1VariableMapping_a6fc956f91da5658c326371f79ea4f030}{get\+Mapping} () const 
+\item 
+const \hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1VariableMapping_acc1edcaf538173bfbdb4a2432e18e273}{get\+Base\+Variable} () const 
+\item 
+const \hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1VariableMapping_a4075fb83837b4c02b90f4ececeb3ee98}{get\+Relative\+Variable} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to manage the relative mapping of a variable with respect to another one. 
+
+The role of \hyperlink{classocra_1_1VariableMapping}{Variable\+Mapping} is to provide the relative mapping of one variable v1 wrt. another v2 as it could be directly obtained by invoking v2.\+get\+Relative\+Mapping\+Of(v1, return\+Vector). The mapping is updated whenever it is needed (i.\+e. after an event E\+V\+T\+\_\+\+R\+E\+S\+I\+ZE or E\+V\+T\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+C\+I\+ES was triggered by one of the two variable). 
+
+Definition at line 34 of file Variable\+Mapping.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}!Variable\+Mapping@{Variable\+Mapping}}
+\index{Variable\+Mapping@{Variable\+Mapping}!ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}}
+\subsubsection[{\texorpdfstring{Variable\+Mapping(const Variable \&relative, const Variable \&base)}{VariableMapping(const Variable &relative, const Variable &base)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Variable\+Mapping\+::\+Variable\+Mapping (
+\begin{DoxyParamCaption}
+\item[{const {\bf Variable} \&}]{relative, }
+\item[{const {\bf Variable} \&}]{base}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1VariableMapping_a05d5789ef9b868666a9e1eaf1294369c}{}\label{classocra_1_1VariableMapping_a05d5789ef9b868666a9e1eaf1294369c}
+
+
+Definition at line 10 of file Variable\+Mapping.\+cpp.
+
+\index{ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}!````~Variable\+Mapping@{$\sim$\+Variable\+Mapping}}
+\index{````~Variable\+Mapping@{$\sim$\+Variable\+Mapping}!ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}}
+\subsubsection[{\texorpdfstring{$\sim$\+Variable\+Mapping()}{~VariableMapping()}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Variable\+Mapping\+::$\sim$\+Variable\+Mapping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1VariableMapping_ad27dd236ac480197c10f8bb9ab15b6bd}{}\label{classocra_1_1VariableMapping_ad27dd236ac480197c10f8bb9ab15b6bd}
+
+
+Definition at line 19 of file Variable\+Mapping.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}!get\+Base\+Variable@{get\+Base\+Variable}}
+\index{get\+Base\+Variable@{get\+Base\+Variable}!ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}}
+\subsubsection[{\texorpdfstring{get\+Base\+Variable() const }{getBaseVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Variable} \& ocra\+::\+Variable\+Mapping\+::get\+Base\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1VariableMapping_acc1edcaf538173bfbdb4a2432e18e273}{}\label{classocra_1_1VariableMapping_acc1edcaf538173bfbdb4a2432e18e273}
+
+
+Definition at line 34 of file Variable\+Mapping.\+cpp.
+
+\index{ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}!get\+Mapping@{get\+Mapping}}
+\index{get\+Mapping@{get\+Mapping}!ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}}
+\subsubsection[{\texorpdfstring{get\+Mapping() const }{getMapping() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$ int $>$ \& ocra\+::\+Variable\+Mapping\+::get\+Mapping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1VariableMapping_a6fc956f91da5658c326371f79ea4f030}{}\label{classocra_1_1VariableMapping_a6fc956f91da5658c326371f79ea4f030}
+
+
+Definition at line 27 of file Variable\+Mapping.\+cpp.
+
+\index{ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}!get\+Relative\+Variable@{get\+Relative\+Variable}}
+\index{get\+Relative\+Variable@{get\+Relative\+Variable}!ocra\+::\+Variable\+Mapping@{ocra\+::\+Variable\+Mapping}}
+\subsubsection[{\texorpdfstring{get\+Relative\+Variable() const }{getRelativeVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Variable} \& ocra\+::\+Variable\+Mapping\+::get\+Relative\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1VariableMapping_a4075fb83837b4c02b90f4ececeb3ee98}{}\label{classocra_1_1VariableMapping_a4075fb83837b4c02b90f4ececeb3ee98}
+
+
+Definition at line 39 of file Variable\+Mapping.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{VariableMapping_8h}{Variable\+Mapping.\+h}\item 
+\hyperlink{VariableMapping_8cpp}{Variable\+Mapping.\+cpp}\end{DoxyCompactItemize}

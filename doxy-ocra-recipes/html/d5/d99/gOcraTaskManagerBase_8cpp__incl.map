@@ -1,0 +1,29 @@
+<map id="gOcraTaskManagerBase.cpp" name="gOcraTaskManagerBase.cpp">
+<area shape="rect" id="node2" href="$db/d31/gOcraTaskManagerBase_8h.html" title="gocra/Tasks/gOcraTaskManager\lBase.h" alt="" coords="1482,80,1694,121"/>
+<area shape="rect" id="node3" href="$d3/d5a/Model_8h.html" title="Declaration file of the Model class. " alt="" coords="1323,557,1463,584"/>
+<area shape="rect" id="node29" href="$d9/de9/GHCJTController_8h.html" title="Define the Generalized Hierarchical Controller based on Jacobian transpose (GHCJT) in quasi&#45;static ca..." alt="" coords="1503,169,1673,196"/>
+<area shape="rect" id="node4" href="$d5/d55/MathTypes_8h.html" title="Declaration file of the OptimizationVariable class. " alt="" coords="1590,632,1738,659"/>
+<area shape="rect" id="node7" href="$d8/ddc/ObserverSubject_8h.html" title="Declaration file of the Observer, Subject and ObserverSubject classes. " alt="" coords="1619,796,1813,823"/>
+<area shape="rect" id="node14" href="$d7/d90/Variable_8h.html" title="Declaration file of the Variable class. " alt="" coords="2665,714,2810,741"/>
+<area shape="rect" id="node20" href="$df/d97/NamedInstance_8h.html" title="ocra/optim/NamedInstance.h" alt="" coords="1966,632,2157,659"/>
+<area shape="rect" id="node21" href="$d9/d5d/ModelContacts_8h.html" title="Declaration file of the ModelContacts class. " alt="" coords="1270,632,1463,659"/>
+<area shape="rect" id="node24" href="$df/d0a/Macros_8h.html" title="ocra/util/Macros.h" alt="" coords="322,878,449,905"/>
+<area shape="rect" id="node8" href="$df/d67/ObserverSubjectBase_8h.html" title="Declaration file of the Observer and Subject base classes. " alt="" coords="1880,871,2064,912"/>
+<area shape="rect" id="node12" href="$db/ddf/ocra__events_8h.html" title="ocra/optim/ocra_events.h" alt="" coords="1686,878,1855,905"/>
+<area shape="rect" id="node15" href="$d1/de6/Composite_8h.html" title="Utility classes and functions to implement the Composite design pattern. " alt="" coords="2603,796,2765,823"/>
+<area shape="rect" id="node30" href="$de/d4a/Controller_8h.html" title="Controller interface. " alt="" coords="1507,244,1669,271"/>
+<area shape="rect" id="node39" href="$d0/d17/OneLevelSolver_8h.html" title="Define the internal solver class that can be used in the wOcra controller. " alt="" coords="1989,483,2179,509"/>
+<area shape="rect" id="node50" href="$d5/d9e/GHCJTTask_8h.html" title="Define task class for GHCJT controller. It inherits from the task class defined in the ocra framework..." alt="" coords="1106,326,1289,353"/>
+<area shape="rect" id="node33" href="$df/d4f/Task_8h.html" title="ocra/control/Task.h" alt="" coords="1167,408,1302,435"/>
+<area shape="rect" id="node35" href="$dc/d2f/Feature_8h.html" title="A class hierarchy to compute task errors based on control frames. " alt="" coords="987,483,1136,509"/>
+<area shape="rect" id="node48" href="$d9/d76/TaskYarpInterface_8h.html" title="ocra/control/TaskYarpInterface.h" alt="" coords="305,326,517,353"/>
+<area shape="rect" id="node34" href="$d8/d9f/ErrorsHelper_8h.html" title="ocra/util/ErrorsHelper.h" alt="" coords="715,632,871,659"/>
+<area shape="rect" id="node37" href="$d1/d0e/SquaredLinearFunction_8h.html" title="Declaration file of the SquaredLinearFunction class. " alt="" coords="1243,707,1413,748"/>
+<area shape="rect" id="node36" href="$df/d60/ControlEnum_8h.html" title="Some enumerations for the control. " alt="" coords="965,557,1147,584"/>
+<area shape="rect" id="node38" href="$d4/d83/QuadraticFunction_8h.html" title="Declaration file of the QuadraticFunction class. " alt="" coords="1335,796,1539,823"/>
+<area shape="rect" id="node40" href="$db/dc5/Solver_8h.html" title="Declaration file of the Solver class. " alt="" coords="2417,557,2551,584"/>
+<area shape="rect" id="node41" href="$d4/d54/MergedVariable_8h.html" title="ocra/optim/MergedVariable.h" alt="" coords="2665,632,2853,659"/>
+<area shape="rect" id="node42" href="$d1/d76/Objective_8h.html" title="Declaration file of the Objective class. " alt="" coords="2283,632,2437,659"/>
+<area shape="rect" id="node43" href="$db/d1f/ObjQLD_8h.html" title="Declaration file of the ObjQLD class. This class should be merged with ocra::ObjQLD. It has been created to have a cml&#45;free solver. " alt="" coords="2678,557,2823,584"/>
+<area shape="rect" id="node44" href="$d8/d25/QuadProg_09_09_8h.html" title="ocra/optim/QuadProg++.h" alt="" coords="1742,557,1914,584"/>
+</map>

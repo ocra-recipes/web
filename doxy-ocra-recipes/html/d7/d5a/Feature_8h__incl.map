@@ -1,0 +1,21 @@
+<map id="Feature.h" name="Feature.h">
+<area shape="rect" id="node2" href="$df/d60/ControlEnum_8h.html" title="Some enumerations for the control. " alt="" coords="1639,155,1820,181"/>
+<area shape="rect" id="node9" href="$df/d97/NamedInstance_8h.html" title="ocra/optim/NamedInstance.h" alt="" coords="1331,237,1522,263"/>
+<area shape="rect" id="node10" href="$db/d3d/ControlFrame_8h.html" title="Classes that represent frames. " alt="" coords="531,155,715,181"/>
+<area shape="rect" id="node13" href="$df/d0a/Macros_8h.html" title="ocra/util/Macros.h" alt="" coords="297,237,423,263"/>
+<area shape="rect" id="node19" href="$d3/d5a/Model_8h.html" title="Declaration file of the Model class. " alt="" coords="922,155,1062,181"/>
+<area shape="rect" id="node40" href="$da/dfc/FullState_8h.html" title="ocra/control/FullState.h" alt="" coords="216,155,373,181"/>
+<area shape="rect" id="node41" href="$d9/daf/PartialState_8h.html" title="Define partial state classes that can be used to control some joints of the robot. " alt="" coords="393,80,567,107"/>
+<area shape="rect" id="node42" href="$d0/d8a/TaskState_8h.html" title="ocra/control/TaskState.h" alt="" coords="1931,155,2096,181"/>
+<area shape="rect" id="node3" href="$da/dbb/StringUtilities_8h.html" title="ocra/util/StringUtilities.h" alt="" coords="1649,237,1810,263"/>
+<area shape="rect" id="node11" href="$d5/d55/MathTypes_8h.html" title="Declaration file of the OptimizationVariable class. " alt="" coords="1159,237,1307,263"/>
+<area shape="rect" id="node20" href="$d8/ddc/ObserverSubject_8h.html" title="Declaration file of the Observer, Subject and ObserverSubject classes. " alt="" coords="720,319,915,345"/>
+<area shape="rect" id="node30" href="$d7/d90/Variable_8h.html" title="Declaration file of the Variable class. " alt="" coords="990,237,1135,263"/>
+<area shape="rect" id="node38" href="$d9/d5d/ModelContacts_8h.html" title="Declaration file of the ModelContacts class. " alt="" coords="721,237,914,263"/>
+<area shape="rect" id="node21" href="$df/d67/ObserverSubjectBase_8h.html" title="Declaration file of the Observer and Subject base classes. " alt="" coords="624,393,808,435"/>
+<area shape="rect" id="node28" href="$db/ddf/ocra__events_8h.html" title="ocra/optim/ocra_events.h" alt="" coords="379,401,549,427"/>
+<area shape="rect" id="node31" href="$d1/de6/Composite_8h.html" title="Utility classes and functions to implement the Composite design pattern. " alt="" coords="982,319,1143,345"/>
+<area shape="rect" id="node32" href="$de/df3/ocra__assert_8h.html" title="ocra/optim/ocra_assert.h" alt="" coords="1525,401,1691,427"/>
+<area shape="rect" id="node43" href="$d5/ded/YarpUtilities_8h.html" title="ocra/util/YarpUtilities.h" alt="" coords="1936,237,2091,263"/>
+<area shape="rect" id="node45" href="$da/d33/TaskYarpInterfaceVocab_8h.html" title="ocra/control/TaskYarpInterface\lVocab.h" alt="" coords="2369,229,2570,271"/>
+</map>

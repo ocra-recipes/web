@@ -1,0 +1,9 @@
+<map id="TorqueLimitConstraint.h" name="TorqueLimitConstraint.h">
+<area shape="rect" id="node2" href="$d8/d52/TorqueLimitConstraint_8cpp.html" title="Implement torque limit constraint for wOcra controller. " alt="" coords="5,80,180,107"/>
+<area shape="rect" id="node3" href="$db/dc6/WocraController_8h.html" title="Define the LQP&#45;based controller developped during my PhD thesis with ocra framework. " alt="" coords="204,80,331,107"/>
+<area shape="rect" id="node4" href="$d2/def/WocraController_8cpp.html" title="Implement the LQP&#45;based controller developped during my PhD thesis with ocra framework. " alt="" coords="89,155,230,181"/>
+<area shape="rect" id="node5" href="$da/d7c/ControllerServer_8h.html" title="ControllerServer.h" alt="" coords="204,229,331,256"/>
+<area shape="rect" id="node7" href="$d2/d6c/ServerCommunications_8h.html" title="ServerCommunications.h" alt="" coords="305,155,475,181"/>
+<area shape="rect" id="node6" href="$d5/dd2/ControllerServer_8cpp.html" title="ControllerServer.cpp" alt="" coords="197,304,338,331"/>
+<area shape="rect" id="node8" href="$dc/dac/ServerCommunications_8cpp.html" title="ServerCommunications.cpp" alt="" coords="355,229,537,256"/>
+</map>

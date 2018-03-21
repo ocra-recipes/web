@@ -1,0 +1,1209 @@
+\hypertarget{classocra_1_1Task}{}\section{ocra\+:\+:Task Class Reference}
+\label{classocra_1_1Task}\index{ocra\+::\+Task@{ocra\+::\+Task}}
+
+
+{\ttfamily \#include $<$Task.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{dd/d2a/classocra_1_1Task__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{dd/d65/classocra_1_1Task__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structocra_1_1Task_1_1Pimpl}{Pimpl}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fe}{M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE} \{ \\*
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248feae417cbab1867ba03811f23c39d1f3ed9}{U\+N\+K\+N\+O\+WN}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea296133ad12580b5c5760f84b76edea0b}{P\+O\+S\+I\+T\+I\+ON}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248feaea268df4da3b710112ac713948b71eaa}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea79e2dbd27b357975059f5b13e0bef1f7}{P\+O\+SE}, 
+\\*
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea85dc4c536889b089c8813273f0392937}{F\+O\+R\+CE}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea6cbec0634512249e279d9aa37703b990}{C\+OM}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea2d02844846550cee16695b802071a5b7}{C\+O\+M\+\_\+\+M\+O\+M\+E\+N\+T\+UM}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea1640dc4e8c96057ece06d7ba59624788}{P\+A\+R\+T\+I\+A\+L\+\_\+\+P\+O\+S\+T\+U\+RE}, 
+\\*
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea3840a2572647e24397338e564b954ccf}{F\+U\+L\+L\+\_\+\+P\+O\+S\+T\+U\+RE}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea077c60bddd7a5b0e9427bb5b51773b85}{P\+A\+R\+T\+I\+A\+L\+\_\+\+T\+O\+R\+Q\+UE}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea27ec1f0c82f56e10d3a37d792bfc69ed}{F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE}, 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fead2052be01c1dc6e6eb1951fafdffb898}{P\+O\+I\+N\+T\+\_\+\+C\+O\+N\+T\+A\+CT}
+ \}
+\item 
+enum \hyperlink{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254a}{T\+Y\+P\+E\+T\+A\+SK} \{ \\*
+\hyperlink{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aaa1409d776d97139332dd4995bdbd4833}{U\+N\+K\+N\+O\+W\+N\+T\+A\+SK}, 
+\hyperlink{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aaca5b6a18029ba8aa0245ba7602d2a8e3}{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N\+T\+A\+SK}, 
+\hyperlink{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa72ea71e458f663be3a824880621aa5ae}{T\+O\+R\+Q\+U\+E\+T\+A\+SK}, 
+\hyperlink{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa92186ba939669e5d6b5572f92940ad53}{F\+O\+R\+C\+E\+T\+A\+SK}, 
+\\*
+\hyperlink{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa3498e0e180e9125f5e1bd17b442e4ec6}{C\+O\+M\+M\+O\+M\+E\+N\+T\+U\+M\+T\+A\+SK}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1Task_abf071538753cbbc6af21f98644d978cc}{Task} (const std\+::string \&name, std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Model}{Model} $>$ model, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des)
+\item 
+\hyperlink{classocra_1_1Task_ace0cba5936451a6423e8f341746adfd3}{Task} (const std\+::string \&name, std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Model}{Model} $>$ model, Feature\+::\+Ptr feature)
+\item 
+virtual \hyperlink{classocra_1_1Task_a3949d2c52bc43f373b8cc039da304b87}{$\sim$\+Task} ()
+\item 
+\hyperlink{classocra_1_1TaskState}{Task\+State} \hyperlink{classocra_1_1Task_a81def8087dc41ef0a02406f208be4833}{get\+Task\+State} ()
+\item 
+\hyperlink{classocra_1_1TaskState}{Task\+State} \hyperlink{classocra_1_1Task_a22cb1cd88dda7477d2594b9851f86301}{get\+Desired\+Task\+State} ()
+\item 
+void \hyperlink{classocra_1_1Task_ac14252b35faa2ed8eed4cc5db629ce94}{set\+Desired\+Task\+State} (const \hyperlink{classocra_1_1TaskState}{Task\+State} \&new\+Desired\+Task\+State)
+\item 
+void \hyperlink{classocra_1_1Task_a44ccc493a8a4931e11c3fcfcd30d991c}{set\+Desired\+Task\+State\+Direct} (const \hyperlink{classocra_1_1TaskState}{Task\+State} \&new\+Desired\+Task\+State)
+\item 
+int \hyperlink{classocra_1_1Task_a244bb1942ffb8788fd7b8dba560f5b09}{get\+Hierarchy\+Level} ()
+\item 
+void \hyperlink{classocra_1_1Task_a07617befcfa5bf8f0711d47965ed8337}{set\+Hierarchy\+Level} (int level)
+\item 
+void \hyperlink{classocra_1_1Task_ad15d68848234ddac27ea57af1915045f}{update} ()
+\item 
+void \hyperlink{classocra_1_1Task_a0e4fc6a68b13d3b70798db1ff7233faf}{set\+Meta\+Task\+Type} (\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fe}{Task\+::\+M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE} new\+Meta\+Task\+Type)
+\item 
+\hyperlink{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fe}{Task\+::\+M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE} \hyperlink{classocra_1_1Task_a89d970771d25b28149d51768f37118d5}{get\+Meta\+Task\+Type} ()
+\item 
+std\+::string \hyperlink{classocra_1_1Task_a957707b86aa3fdc088040485ab9269ed}{get\+Meta\+Task\+Type\+As\+String} ()
+\item 
+void \hyperlink{classocra_1_1Task_a8292d37db712589e90d628d9b1e3e1ea}{set\+Task\+Type} (\hyperlink{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254a}{Task\+::\+T\+Y\+P\+E\+T\+A\+SK} new\+Task\+Type)
+\item 
+\hyperlink{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254a}{Task\+::\+T\+Y\+P\+E\+T\+A\+SK} \hyperlink{classocra_1_1Task_a1fed0d65711edfdc4b9e83c292b147f8}{get\+Task\+Type} ()
+\item 
+void \hyperlink{classocra_1_1Task_a30cf51c067e6bac56a7b2184fa880bbe}{activate\+As\+Objective} ()
+\item 
+void \hyperlink{classocra_1_1Task_a4f7b62e14ba71899991eaf4522d31a90}{activate\+As\+Constraint} ()
+\item 
+void \hyperlink{classocra_1_1Task_abb7309429225e72998ede63fdb2cc713}{deactivate} ()
+\item 
+bool \hyperlink{classocra_1_1Task_a50741879ff503fd58488b3a6ab2851ae}{is\+Active\+As\+Objective} () const 
+\item 
+bool \hyperlink{classocra_1_1Task_ae03b55196583e1bce931e54f536c0063}{is\+Active\+As\+Constraint} () const 
+\item 
+void \hyperlink{classocra_1_1Task_aa1b8236efcfba897ca6a684226a338ae}{set\+Desired\+Mass\+To\+Actual\+One} ()
+\item 
+void \hyperlink{classocra_1_1Task_a31055e4bfc91407ef5ed6f0d200afe77}{set\+Desired\+Mass} (double Md)
+\item 
+void \hyperlink{classocra_1_1Task_ad6a82a5166195be0080f7d33b628d9df}{set\+Desired\+Mass} (const Eigen\+::\+Vector\+Xd \&Md)
+\item 
+void \hyperlink{classocra_1_1Task_aa7a0800fcb7c9b7ea9d72de05efa4db7}{set\+Desired\+Mass} (const Eigen\+::\+Matrix\+Xd \&Md)
+\item 
+void \hyperlink{classocra_1_1Task_a51509c15751c0fc8c40bf4b2328d7b21}{set\+Damping} (double B)
+\item 
+void \hyperlink{classocra_1_1Task_ab5fd8e11eea7dbccb7169282c9be4b0a}{set\+Damping} (const Eigen\+::\+Vector\+Xd \&B)
+\item 
+void \hyperlink{classocra_1_1Task_a5dd04fe71a38907391b1b4885df2c86a}{set\+Damping} (const Eigen\+::\+Matrix\+Xd \&B)
+\item 
+void \hyperlink{classocra_1_1Task_a9b132099233731049473a54fc53a29ac}{set\+Stiffness} (double K)
+\item 
+void \hyperlink{classocra_1_1Task_ad4718bcc82babf0a8213740f35fce89c}{set\+Stiffness} (const Eigen\+::\+Vector\+Xd \&K)
+\item 
+void \hyperlink{classocra_1_1Task_aaa28b24df746182c2288a94fde03c37e}{set\+Stiffness} (const Eigen\+::\+Matrix\+Xd \&K)
+\item 
+void \hyperlink{classocra_1_1Task_a6d2b2b67112b1368c8bfd7e0ee8e2a0b}{set\+Auto\+Gains} (double freq)
+\item 
+void \hyperlink{classocra_1_1Task_a310fb246ea58d09d51af965a96d6a628}{set\+Auto\+Gains} (double freq, double mass\+Saturation)
+\item 
+bool \hyperlink{classocra_1_1Task_affea055b13cfcb3adc0989900e12eb56}{is\+Desired\+Mass\+The\+Actual\+One} () const 
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1Task_ac07c7b6412393901777abf577bfc7e4e}{get\+Desired\+Mass} () const 
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1Task_a5c70e46b0de66b732f122899376839fc}{get\+Desired\+Mass\+Inverse} () const 
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1Task_a52275e8f88b85124cecb7f989697c311}{get\+Damping} () const 
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1Task_affc64c2638003b79ec691278b0aaa4ce}{get\+Stiffness} () const 
+\item 
+void \hyperlink{classocra_1_1Task_ab4ad2ba0aaf593bfdc8f78b30b730786}{activate\+Contact\+Mode} ()
+\item 
+void \hyperlink{classocra_1_1Task_a44fd1aaa1632247ea359af341958c956}{deactivate\+Contact\+Mode} ()
+\item 
+bool \hyperlink{classocra_1_1Task_a5fb22f623c8bf31a0bbbcb53dff6fba9}{is\+Contact\+Mode\+Active} () const 
+\item 
+bool \hyperlink{classocra_1_1Task_a0e03c9e39caee016642380f578d77160}{is\+Body\+Contact\+Constraint} () const 
+\item 
+bool \hyperlink{classocra_1_1Task_ad34b030cdeaf96b74c38a2c9318958fe}{is\+Point\+Contact\+Task} () const 
+\item 
+double \hyperlink{classocra_1_1Task_a2dcdd270e328aaa40df398ba48fba04a}{get\+Friction\+Coeff} () const 
+\item 
+double \hyperlink{classocra_1_1Task_ae91b7092529b1aecce3b684ba848db75}{get\+Margin} () const 
+\item 
+const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Task_aa4d74d8925a07411f469d06e231787d7}{get\+Friction\+Constraint\+Offset} () const 
+\item 
+void \hyperlink{classocra_1_1Task_ae37c47d2481ebfa034dc79cbf149776a}{set\+Friction\+Coeff} (double coeff)
+\item 
+void \hyperlink{classocra_1_1Task_a62b7814143aa571cc668fef9bdea6815}{set\+Margin} (double margin)
+\item 
+void \hyperlink{classocra_1_1Task_ac3738872a446ffc6361d096659ae2ba6}{set\+Friction\+Constraint\+Offset} (const Eigen\+::\+Vector3d \&offset)
+\item 
+void \hyperlink{classocra_1_1Task_a857ee8b756c78d5a90cdc78ae6eb855e}{set\+Weight} (double weight)
+\item 
+void \hyperlink{classocra_1_1Task_a81589c3855f9f39526d9d4ceda6fe95e}{set\+Weight} (const Eigen\+::\+Vector\+Xd \&weight)
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Task_a44b62b6cf152c446f26bd1826ce151a2}{get\+Weight} () const 
+\item 
+int \hyperlink{classocra_1_1Task_a649fe2637d75d546631763b08163955b}{get\+Dimension} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Task_a17561da8c2922ead7134a464cdbd66e2}{get\+Output} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Task_af94d7336d448b9be361aaa1749e79b8c}{get\+Error} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Task_a74999658f585f0ad6478324d0de3fc93}{get\+Error\+Dot} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Task_aef74c1793ab609475838b25b6c1412d3}{get\+Error\+Ddot} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Task_aded43a15c7994e90f4e7622c481bbc47}{get\+Effort} () const 
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1Task_a8dddfbfa9dee1e06d3ba612a2f0e9305}{get\+Jacobian} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Task_a070c3acb112a4d7fc38a77d6d53dd303}{get\+Computed\+Force} () const 
+\item 
+void \hyperlink{classocra_1_1Task_a3d780dc6817552070f3d5570a9052e3f}{disconnect\+From\+Controller} ()
+\item 
+void \hyperlink{classocra_1_1Task_a38f7a4e8bcf2bd502c606f2b536b6f52}{connect\+To\+Controller} (std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1OneLevelSolver}{One\+Level\+Solver} $>$ \+\_\+solver, const \hyperlink{classocra_1_1FullDynamicEquationFunction}{Full\+Dynamic\+Equation\+Function} \&dynamic\+Equation, bool use\+Reduced\+Problem)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Feature\+::\+Ptr \hyperlink{classocra_1_1Task_a3b37400c1d279be73c415c148265efad}{get\+Feature} () const 
+\item 
+Feature\+::\+Ptr \hyperlink{classocra_1_1Task_a2ed66e1d5ba638318792d024a63f3cc4}{get\+Feature\+Des} () const 
+\item 
+void \hyperlink{classocra_1_1Task_ac5b5ad719f9a34bdc0a275804b4c50f3}{do\+Activate\+As\+Objective} ()
+\item 
+void \hyperlink{classocra_1_1Task_ae1d786b51c24d56c4e2d800e422ebc75}{do\+Activate\+As\+Constraint} ()
+\item 
+void \hyperlink{classocra_1_1Task_acbee7ddb69459ff0d2e450dbe6195b49}{do\+Activate\+Contact\+Mode} ()
+\item 
+void \hyperlink{classocra_1_1Task_af2874b0d97d3fb735dc5a49c0f80a717}{do\+Deactivate\+As\+Objective} ()
+\item 
+void \hyperlink{classocra_1_1Task_a9f7261991e6aa056a02ec7f3dd4ea72a}{do\+Deactivate\+As\+Constraint} ()
+\item 
+void \hyperlink{classocra_1_1Task_a98cfb17f9df4e27b5c1d9cc2bf0faa9e}{do\+Deactivate\+Contact\+Mode} ()
+\item 
+void \hyperlink{classocra_1_1Task_a575fdd8324142d60096bcb4e41b70d6a}{do\+Set\+Friction\+Coeff} ()
+\item 
+void \hyperlink{classocra_1_1Task_a3c7c2460b3e60764349fe5ad331e41d6}{do\+Set\+Margin} ()
+\item 
+void \hyperlink{classocra_1_1Task_a9a2c1a965f429ec5a3a756e8a1aeff37}{do\+Set\+Weight} ()
+\item 
+void \hyperlink{classocra_1_1Task_ae64f52ad24db6f8b811b38302c51c373}{do\+Get\+Output} (Eigen\+::\+Vector\+Xd \&output) const 
+\item 
+void \hyperlink{classocra_1_1Task_ad09f069ad2649ebe9eb2d51f49b2c531}{add\+Contact\+Point\+In\+Model} ()
+\item 
+void \hyperlink{classocra_1_1Task_a5dc76ab144162dd2960999c19510033f}{remove\+Contact\+Point\+In\+Model} ()
+\item 
+void \hyperlink{classocra_1_1Task_a3660b0a6149ae5472d00dab4f2799dfc}{update\+Acceleration\+Task} ()
+\item 
+void \hyperlink{classocra_1_1Task_a484d8cb46cd388b065b5d9cd03fa4caa}{update\+Torque\+Task} ()
+\item 
+void \hyperlink{classocra_1_1Task_a49af52acac5f23a6fc51c071271ae6ea}{update\+Force\+Task} ()
+\item 
+void \hyperlink{classocra_1_1Task_a2cfddc40424cb0edd08defe5df48addf}{update\+Co\+M\+Momentum\+Task} ()
+\item 
+void \hyperlink{classocra_1_1Task_a9ebee5d2eb1b78850441c3d006751220}{check\+If\+Connected\+To\+Controller} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file Task.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE@{M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE}}
+\index{M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE@{M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE}{META_TASK_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ocra\+::\+Task\+::\+M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE}}\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fe}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fe}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}}\item[{\em 
+U\+N\+K\+N\+O\+WN\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248feae417cbab1867ba03811f23c39d1f3ed9}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248feae417cbab1867ba03811f23c39d1f3ed9}
+}]\index{P\+O\+S\+I\+T\+I\+ON@{P\+O\+S\+I\+T\+I\+ON}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!P\+O\+S\+I\+T\+I\+ON@{P\+O\+S\+I\+T\+I\+ON}}\item[{\em 
+P\+O\+S\+I\+T\+I\+ON\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea296133ad12580b5c5760f84b76edea0b}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea296133ad12580b5c5760f84b76edea0b}
+}]\index{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}\item[{\em 
+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248feaea268df4da3b710112ac713948b71eaa}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248feaea268df4da3b710112ac713948b71eaa}
+}]\index{P\+O\+SE@{P\+O\+SE}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!P\+O\+SE@{P\+O\+SE}}\item[{\em 
+P\+O\+SE\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea79e2dbd27b357975059f5b13e0bef1f7}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea79e2dbd27b357975059f5b13e0bef1f7}
+}]\index{F\+O\+R\+CE@{F\+O\+R\+CE}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!F\+O\+R\+CE@{F\+O\+R\+CE}}\item[{\em 
+F\+O\+R\+CE\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea85dc4c536889b089c8813273f0392937}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea85dc4c536889b089c8813273f0392937}
+}]\index{C\+OM@{C\+OM}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!C\+OM@{C\+OM}}\item[{\em 
+C\+OM\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea6cbec0634512249e279d9aa37703b990}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea6cbec0634512249e279d9aa37703b990}
+}]\index{C\+O\+M\+\_\+\+M\+O\+M\+E\+N\+T\+UM@{C\+O\+M\+\_\+\+M\+O\+M\+E\+N\+T\+UM}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!C\+O\+M\+\_\+\+M\+O\+M\+E\+N\+T\+UM@{C\+O\+M\+\_\+\+M\+O\+M\+E\+N\+T\+UM}}\item[{\em 
+C\+O\+M\+\_\+\+M\+O\+M\+E\+N\+T\+UM\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea2d02844846550cee16695b802071a5b7}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea2d02844846550cee16695b802071a5b7}
+}]\index{P\+A\+R\+T\+I\+A\+L\+\_\+\+P\+O\+S\+T\+U\+RE@{P\+A\+R\+T\+I\+A\+L\+\_\+\+P\+O\+S\+T\+U\+RE}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!P\+A\+R\+T\+I\+A\+L\+\_\+\+P\+O\+S\+T\+U\+RE@{P\+A\+R\+T\+I\+A\+L\+\_\+\+P\+O\+S\+T\+U\+RE}}\item[{\em 
+P\+A\+R\+T\+I\+A\+L\+\_\+\+P\+O\+S\+T\+U\+RE\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea1640dc4e8c96057ece06d7ba59624788}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea1640dc4e8c96057ece06d7ba59624788}
+}]\index{F\+U\+L\+L\+\_\+\+P\+O\+S\+T\+U\+RE@{F\+U\+L\+L\+\_\+\+P\+O\+S\+T\+U\+RE}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!F\+U\+L\+L\+\_\+\+P\+O\+S\+T\+U\+RE@{F\+U\+L\+L\+\_\+\+P\+O\+S\+T\+U\+RE}}\item[{\em 
+F\+U\+L\+L\+\_\+\+P\+O\+S\+T\+U\+RE\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea3840a2572647e24397338e564b954ccf}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea3840a2572647e24397338e564b954ccf}
+}]\index{P\+A\+R\+T\+I\+A\+L\+\_\+\+T\+O\+R\+Q\+UE@{P\+A\+R\+T\+I\+A\+L\+\_\+\+T\+O\+R\+Q\+UE}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!P\+A\+R\+T\+I\+A\+L\+\_\+\+T\+O\+R\+Q\+UE@{P\+A\+R\+T\+I\+A\+L\+\_\+\+T\+O\+R\+Q\+UE}}\item[{\em 
+P\+A\+R\+T\+I\+A\+L\+\_\+\+T\+O\+R\+Q\+UE\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea077c60bddd7a5b0e9427bb5b51773b85}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea077c60bddd7a5b0e9427bb5b51773b85}
+}]\index{F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE@{F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE@{F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE}}\item[{\em 
+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea27ec1f0c82f56e10d3a37d792bfc69ed}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fea27ec1f0c82f56e10d3a37d792bfc69ed}
+}]\index{P\+O\+I\+N\+T\+\_\+\+C\+O\+N\+T\+A\+CT@{P\+O\+I\+N\+T\+\_\+\+C\+O\+N\+T\+A\+CT}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!P\+O\+I\+N\+T\+\_\+\+C\+O\+N\+T\+A\+CT@{P\+O\+I\+N\+T\+\_\+\+C\+O\+N\+T\+A\+CT}}\item[{\em 
+P\+O\+I\+N\+T\+\_\+\+C\+O\+N\+T\+A\+CT\hypertarget{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fead2052be01c1dc6e6eb1951fafdffb898}{}\label{classocra_1_1Task_a8ddf2840d178ca273e886c9ca95248fead2052be01c1dc6e6eb1951fafdffb898}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 44 of file Task.\+h.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!T\+Y\+P\+E\+T\+A\+SK@{T\+Y\+P\+E\+T\+A\+SK}}
+\index{T\+Y\+P\+E\+T\+A\+SK@{T\+Y\+P\+E\+T\+A\+SK}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{T\+Y\+P\+E\+T\+A\+SK}{TYPETASK}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ocra\+::\+Task\+::\+T\+Y\+P\+E\+T\+A\+SK}}\hypertarget{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254a}{}\label{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254a}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+N\+K\+N\+O\+W\+N\+T\+A\+SK@{U\+N\+K\+N\+O\+W\+N\+T\+A\+SK}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!U\+N\+K\+N\+O\+W\+N\+T\+A\+SK@{U\+N\+K\+N\+O\+W\+N\+T\+A\+SK}}\item[{\em 
+U\+N\+K\+N\+O\+W\+N\+T\+A\+SK\hypertarget{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aaa1409d776d97139332dd4995bdbd4833}{}\label{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aaa1409d776d97139332dd4995bdbd4833}
+}]\index{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N\+T\+A\+SK@{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N\+T\+A\+SK}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N\+T\+A\+SK@{A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N\+T\+A\+SK}}\item[{\em 
+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N\+T\+A\+SK\hypertarget{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aaca5b6a18029ba8aa0245ba7602d2a8e3}{}\label{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aaca5b6a18029ba8aa0245ba7602d2a8e3}
+}]\index{T\+O\+R\+Q\+U\+E\+T\+A\+SK@{T\+O\+R\+Q\+U\+E\+T\+A\+SK}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!T\+O\+R\+Q\+U\+E\+T\+A\+SK@{T\+O\+R\+Q\+U\+E\+T\+A\+SK}}\item[{\em 
+T\+O\+R\+Q\+U\+E\+T\+A\+SK\hypertarget{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa72ea71e458f663be3a824880621aa5ae}{}\label{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa72ea71e458f663be3a824880621aa5ae}
+}]\index{F\+O\+R\+C\+E\+T\+A\+SK@{F\+O\+R\+C\+E\+T\+A\+SK}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!F\+O\+R\+C\+E\+T\+A\+SK@{F\+O\+R\+C\+E\+T\+A\+SK}}\item[{\em 
+F\+O\+R\+C\+E\+T\+A\+SK\hypertarget{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa92186ba939669e5d6b5572f92940ad53}{}\label{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa92186ba939669e5d6b5572f92940ad53}
+}]\index{C\+O\+M\+M\+O\+M\+E\+N\+T\+U\+M\+T\+A\+SK@{C\+O\+M\+M\+O\+M\+E\+N\+T\+U\+M\+T\+A\+SK}!ocra\+::\+Task@{ocra\+::\+Task}}\index{ocra\+::\+Task@{ocra\+::\+Task}!C\+O\+M\+M\+O\+M\+E\+N\+T\+U\+M\+T\+A\+SK@{C\+O\+M\+M\+O\+M\+E\+N\+T\+U\+M\+T\+A\+SK}}\item[{\em 
+C\+O\+M\+M\+O\+M\+E\+N\+T\+U\+M\+T\+A\+SK\hypertarget{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa3498e0e180e9125f5e1bd17b442e4ec6}{}\label{classocra_1_1Task_ad9d224cf787aa61c098f282efb78254aa3498e0e180e9125f5e1bd17b442e4ec6}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 59 of file Task.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!Task@{Task}}
+\index{Task@{Task}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{Task(const std\+::string \&name, std\+::shared\+\_\+ptr$<$ Model $>$ model, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des)}{Task(const std::string &name, std::shared_ptr< Model > model, Feature::Ptr feature, Feature::Ptr featureDes)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Task\+::\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Model} $>$}]{model, }
+\item[{Feature\+::\+Ptr}]{feature, }
+\item[{Feature\+::\+Ptr}]{feature\+Des}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_abf071538753cbbc6af21f98644d978cc}{}\label{classocra_1_1Task_abf071538753cbbc6af21f98644d978cc}
+
+
+Definition at line 171 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!Task@{Task}}
+\index{Task@{Task}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{Task(const std\+::string \&name, std\+::shared\+\_\+ptr$<$ Model $>$ model, Feature\+::\+Ptr feature)}{Task(const std::string &name, std::shared_ptr< Model > model, Feature::Ptr feature)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Task\+::\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Model} $>$}]{model, }
+\item[{Feature\+::\+Ptr}]{feature}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ace0cba5936451a6423e8f341746adfd3}{}\label{classocra_1_1Task_ace0cba5936451a6423e8f341746adfd3}
+
+
+Definition at line 177 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!````~Task@{$\sim$\+Task}}
+\index{````~Task@{$\sim$\+Task}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{$\sim$\+Task()}{~Task()}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Task\+::$\sim$\+Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1Task_a3949d2c52bc43f373b8cc039da304b87}{}\label{classocra_1_1Task_a3949d2c52bc43f373b8cc039da304b87}
+
+
+Definition at line 183 of file Task.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!activate\+As\+Constraint@{activate\+As\+Constraint}}
+\index{activate\+As\+Constraint@{activate\+As\+Constraint}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{activate\+As\+Constraint()}{activateAsConstraint()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::activate\+As\+Constraint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a4f7b62e14ba71899991eaf4522d31a90}{}\label{classocra_1_1Task_a4f7b62e14ba71899991eaf4522d31a90}
+
+
+Definition at line 312 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!activate\+As\+Objective@{activate\+As\+Objective}}
+\index{activate\+As\+Objective@{activate\+As\+Objective}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{activate\+As\+Objective()}{activateAsObjective()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::activate\+As\+Objective (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a30cf51c067e6bac56a7b2184fa880bbe}{}\label{classocra_1_1Task_a30cf51c067e6bac56a7b2184fa880bbe}
+
+
+Definition at line 298 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!activate\+Contact\+Mode@{activate\+Contact\+Mode}}
+\index{activate\+Contact\+Mode@{activate\+Contact\+Mode}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{activate\+Contact\+Mode()}{activateContactMode()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::activate\+Contact\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ab4ad2ba0aaf593bfdc8f78b30b730786}{}\label{classocra_1_1Task_ab4ad2ba0aaf593bfdc8f78b30b730786}
+
+
+Definition at line 476 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!add\+Contact\+Point\+In\+Model@{add\+Contact\+Point\+In\+Model}}
+\index{add\+Contact\+Point\+In\+Model@{add\+Contact\+Point\+In\+Model}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{add\+Contact\+Point\+In\+Model()}{addContactPointInModel()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::add\+Contact\+Point\+In\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_ad09f069ad2649ebe9eb2d51f49b2c531}{}\label{classocra_1_1Task_ad09f069ad2649ebe9eb2d51f49b2c531}
+
+
+Definition at line 713 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!check\+If\+Connected\+To\+Controller@{check\+If\+Connected\+To\+Controller}}
+\index{check\+If\+Connected\+To\+Controller@{check\+If\+Connected\+To\+Controller}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{check\+If\+Connected\+To\+Controller() const }{checkIfConnectedToController() const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::check\+If\+Connected\+To\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a9ebee5d2eb1b78850441c3d006751220}{}\label{classocra_1_1Task_a9ebee5d2eb1b78850441c3d006751220}
+
+
+Definition at line 841 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!connect\+To\+Controller@{connect\+To\+Controller}}
+\index{connect\+To\+Controller@{connect\+To\+Controller}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{connect\+To\+Controller(std\+::shared\+\_\+ptr$<$ One\+Level\+Solver $>$ \+\_\+solver, const Full\+Dynamic\+Equation\+Function \&dynamic\+Equation, bool use\+Reduced\+Problem)}{connectToController(std::shared_ptr< OneLevelSolver > _solver, const FullDynamicEquationFunction &dynamicEquation, bool useReducedProblem)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::connect\+To\+Controller (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf One\+Level\+Solver} $>$}]{\+\_\+solver, }
+\item[{const {\bf Full\+Dynamic\+Equation\+Function} \&}]{dynamic\+Equation, }
+\item[{bool}]{use\+Reduced\+Problem}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a38f7a4e8bcf2bd502c606f2b536b6f52}{}\label{classocra_1_1Task_a38f7a4e8bcf2bd502c606f2b536b6f52}
+
+
+Definition at line 668 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{deactivate()}{deactivate()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::deactivate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_abb7309429225e72998ede63fdb2cc713}{}\label{classocra_1_1Task_abb7309429225e72998ede63fdb2cc713}
+
+
+Definition at line 326 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!deactivate\+Contact\+Mode@{deactivate\+Contact\+Mode}}
+\index{deactivate\+Contact\+Mode@{deactivate\+Contact\+Mode}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{deactivate\+Contact\+Mode()}{deactivateContactMode()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::deactivate\+Contact\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a44fd1aaa1632247ea359af341958c956}{}\label{classocra_1_1Task_a44fd1aaa1632247ea359af341958c956}
+
+
+Definition at line 490 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!disconnect\+From\+Controller@{disconnect\+From\+Controller}}
+\index{disconnect\+From\+Controller@{disconnect\+From\+Controller}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{disconnect\+From\+Controller()}{disconnectFromController()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::disconnect\+From\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a3d780dc6817552070f3d5570a9052e3f}{}\label{classocra_1_1Task_a3d780dc6817552070f3d5570a9052e3f}
+
+
+Definition at line 644 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Activate\+As\+Constraint@{do\+Activate\+As\+Constraint}}
+\index{do\+Activate\+As\+Constraint@{do\+Activate\+As\+Constraint}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Activate\+As\+Constraint()}{doActivateAsConstraint()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Activate\+As\+Constraint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_ae1d786b51c24d56c4e2d800e422ebc75}{}\label{classocra_1_1Task_ae1d786b51c24d56c4e2d800e422ebc75}
+Do activation of task as a constraint.
+
+It means that the task should be full completed and no error may occur. Be aware that stong constraints may lead to system instability (very \char`\"{}sharp\char`\"{} solution that requires lot of energy). 
+
+Definition at line 954 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Activate\+As\+Objective@{do\+Activate\+As\+Objective}}
+\index{do\+Activate\+As\+Objective@{do\+Activate\+As\+Objective}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Activate\+As\+Objective()}{doActivateAsObjective()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Activate\+As\+Objective (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_ac5b5ad719f9a34bdc0a275804b4c50f3}{}\label{classocra_1_1Task_ac5b5ad719f9a34bdc0a275804b4c50f3}
+Do activation of task as an objective.
+
+It means that the task is not fully completed and a little error may occur. 
+
+Definition at line 916 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Activate\+Contact\+Mode@{do\+Activate\+Contact\+Mode}}
+\index{do\+Activate\+Contact\+Mode@{do\+Activate\+Contact\+Mode}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Activate\+Contact\+Mode()}{doActivateContactMode()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Activate\+Contact\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_acbee7ddb69459ff0d2e450dbe6195b49}{}\label{classocra_1_1Task_acbee7ddb69459ff0d2e450dbe6195b49}
+Do task activation when it is a contact task.
+
+When this function is called, it adds a contact point in the model of contact contained in the \hyperlink{classocra_1_1Model}{Model} instance, and it adds in the solver an inequality constraint that represents the limitation of the contact force that must remain inside the cone of friction. 
+
+Definition at line 857 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Deactivate\+As\+Constraint@{do\+Deactivate\+As\+Constraint}}
+\index{do\+Deactivate\+As\+Constraint@{do\+Deactivate\+As\+Constraint}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Deactivate\+As\+Constraint()}{doDeactivateAsConstraint()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Deactivate\+As\+Constraint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a9f7261991e6aa056a02ec7f3dd4ea72a}{}\label{classocra_1_1Task_a9f7261991e6aa056a02ec7f3dd4ea72a}
+Do deactivation of task as a constraint.
+
+objective is no more considered. 
+
+Definition at line 972 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Deactivate\+As\+Objective@{do\+Deactivate\+As\+Objective}}
+\index{do\+Deactivate\+As\+Objective@{do\+Deactivate\+As\+Objective}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Deactivate\+As\+Objective()}{doDeactivateAsObjective()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Deactivate\+As\+Objective (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_af2874b0d97d3fb735dc5a49c0f80a717}{}\label{classocra_1_1Task_af2874b0d97d3fb735dc5a49c0f80a717}
+Do deactivation of task as an objective.
+
+objective is no more considered. 
+
+Definition at line 935 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Deactivate\+Contact\+Mode@{do\+Deactivate\+Contact\+Mode}}
+\index{do\+Deactivate\+Contact\+Mode@{do\+Deactivate\+Contact\+Mode}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Deactivate\+Contact\+Mode()}{doDeactivateContactMode()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Deactivate\+Contact\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a98cfb17f9df4e27b5c1d9cc2bf0faa9e}{}\label{classocra_1_1Task_a98cfb17f9df4e27b5c1d9cc2bf0faa9e}
+Do task deactivation when it is a contact task.
+
+When this function is called, it removes the contact point in the model of contact, and it removes from the solver the friction cone inequality constraint. 
+
+Definition at line 874 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Get\+Output@{do\+Get\+Output}}
+\index{do\+Get\+Output@{do\+Get\+Output}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Get\+Output(\+Eigen\+::\+Vector\+Xd \&output) const }{doGetOutput(Eigen::VectorXd &output) const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Get\+Output (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{output}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_ae64f52ad24db6f8b811b38302c51c373}{}\label{classocra_1_1Task_ae64f52ad24db6f8b811b38302c51c373}
+I don\textquotesingle{}t really know, I suppose it is for a direct output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The vector instance where to write the output.\\
+\hline
+\end{DoxyParams}
+This output is set to zero. 
+
+Definition at line 633 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Set\+Friction\+Coeff@{do\+Set\+Friction\+Coeff}}
+\index{do\+Set\+Friction\+Coeff@{do\+Set\+Friction\+Coeff}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Set\+Friction\+Coeff()}{doSetFrictionCoeff()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Set\+Friction\+Coeff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a575fdd8324142d60096bcb4e41b70d6a}{}\label{classocra_1_1Task_a575fdd8324142d60096bcb4e41b70d6a}
+For contact task, do the setting of the coefficient of friction.
+
+The cone of friction constraint is modified to represent a cone with this new coefficient of friction. 
+
+Definition at line 890 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Set\+Margin@{do\+Set\+Margin}}
+\index{do\+Set\+Margin@{do\+Set\+Margin}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Set\+Margin()}{doSetMargin()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Set\+Margin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a3c7c2460b3e60764349fe5ad331e41d6}{}\label{classocra_1_1Task_a3c7c2460b3e60764349fe5ad331e41d6}
+For contact task, do the setting of the friction margin.
+
+The cone of friction constraint is modified to represent a friction cone with this new margin. 
+
+Definition at line 899 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!do\+Set\+Weight@{do\+Set\+Weight}}
+\index{do\+Set\+Weight@{do\+Set\+Weight}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{do\+Set\+Weight()}{doSetWeight()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::do\+Set\+Weight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a9a2c1a965f429ec5a3a756e8a1aeff37}{}\label{classocra_1_1Task_a9a2c1a965f429ec5a3a756e8a1aeff37}
+Do set the weight of the task.
+
+The weight in the objective function is modified. 
+
+Definition at line 993 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Computed\+Force@{get\+Computed\+Force}}
+\index{get\+Computed\+Force@{get\+Computed\+Force}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Computed\+Force() const }{getComputedForce() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd \& ocra\+::\+Task\+::get\+Computed\+Force (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a070c3acb112a4d7fc38a77d6d53dd303}{}\label{classocra_1_1Task_a070c3acb112a4d7fc38a77d6d53dd303}
+
+
+Definition at line 639 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Damping@{get\+Damping}}
+\index{get\+Damping@{get\+Damping}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Damping() const }{getDamping() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Matrix\+Xd \& ocra\+::\+Task\+::get\+Damping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a52275e8f88b85124cecb7f989697c311}{}\label{classocra_1_1Task_a52275e8f88b85124cecb7f989697c311}
+
+
+Definition at line 466 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Desired\+Mass@{get\+Desired\+Mass}}
+\index{get\+Desired\+Mass@{get\+Desired\+Mass}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Desired\+Mass() const }{getDesiredMass() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Matrix\+Xd \& ocra\+::\+Task\+::get\+Desired\+Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_ac07c7b6412393901777abf577bfc7e4e}{}\label{classocra_1_1Task_ac07c7b6412393901777abf577bfc7e4e}
+
+
+Definition at line 441 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Desired\+Mass\+Inverse@{get\+Desired\+Mass\+Inverse}}
+\index{get\+Desired\+Mass\+Inverse@{get\+Desired\+Mass\+Inverse}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Desired\+Mass\+Inverse() const }{getDesiredMassInverse() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Matrix\+Xd \& ocra\+::\+Task\+::get\+Desired\+Mass\+Inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a5c70e46b0de66b732f122899376839fc}{}\label{classocra_1_1Task_a5c70e46b0de66b732f122899376839fc}
+
+
+Definition at line 453 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Desired\+Task\+State@{get\+Desired\+Task\+State}}
+\index{get\+Desired\+Task\+State@{get\+Desired\+Task\+State}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Desired\+Task\+State()}{getDesiredTaskState()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\+State} ocra\+::\+Task\+::get\+Desired\+Task\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a22cb1cd88dda7477d2594b9851f86301}{}\label{classocra_1_1Task_a22cb1cd88dda7477d2594b9851f86301}
+
+
+Definition at line 1009 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Dimension@{get\+Dimension}}
+\index{get\+Dimension@{get\+Dimension}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Dimension() const }{getDimension() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Task\+::get\+Dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a649fe2637d75d546631763b08163955b}{}\label{classocra_1_1Task_a649fe2637d75d546631763b08163955b}
+
+
+Definition at line 565 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Effort@{get\+Effort}}
+\index{get\+Effort@{get\+Effort}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Effort() const }{getEffort() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Task\+::get\+Effort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_aded43a15c7994e90f4e7622c481bbc47}{}\label{classocra_1_1Task_aded43a15c7994e90f4e7622c481bbc47}
+
+
+Definition at line 594 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Error@{get\+Error}}
+\index{get\+Error@{get\+Error}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Error() const }{getError() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Task\+::get\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_af94d7336d448b9be361aaa1749e79b8c}{}\label{classocra_1_1Task_af94d7336d448b9be361aaa1749e79b8c}
+
+
+Definition at line 576 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Error\+Ddot@{get\+Error\+Ddot}}
+\index{get\+Error\+Ddot@{get\+Error\+Ddot}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Error\+Ddot() const }{getErrorDdot() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Task\+::get\+Error\+Ddot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_aef74c1793ab609475838b25b6c1412d3}{}\label{classocra_1_1Task_aef74c1793ab609475838b25b6c1412d3}
+
+
+Definition at line 588 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Error\+Dot@{get\+Error\+Dot}}
+\index{get\+Error\+Dot@{get\+Error\+Dot}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Error\+Dot() const }{getErrorDot() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Task\+::get\+Error\+Dot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a74999658f585f0ad6478324d0de3fc93}{}\label{classocra_1_1Task_a74999658f585f0ad6478324d0de3fc93}
+
+
+Definition at line 582 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Feature@{get\+Feature}}
+\index{get\+Feature@{get\+Feature}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Feature() const }{getFeature() const }}]{\setlength{\rightskip}{0pt plus 5cm}Feature\+::\+Ptr ocra\+::\+Task\+::get\+Feature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a3b37400c1d279be73c415c148265efad}{}\label{classocra_1_1Task_a3b37400c1d279be73c415c148265efad}
+
+
+Definition at line 606 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Feature\+Des@{get\+Feature\+Des}}
+\index{get\+Feature\+Des@{get\+Feature\+Des}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Feature\+Des() const }{getFeatureDes() const }}]{\setlength{\rightskip}{0pt plus 5cm}Feature\+::\+Ptr ocra\+::\+Task\+::get\+Feature\+Des (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a2ed66e1d5ba638318792d024a63f3cc4}{}\label{classocra_1_1Task_a2ed66e1d5ba638318792d024a63f3cc4}
+
+
+Definition at line 611 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Friction\+Coeff@{get\+Friction\+Coeff}}
+\index{get\+Friction\+Coeff@{get\+Friction\+Coeff}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Friction\+Coeff() const }{getFrictionCoeff() const }}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Task\+::get\+Friction\+Coeff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a2dcdd270e328aaa40df398ba48fba04a}{}\label{classocra_1_1Task_a2dcdd270e328aaa40df398ba48fba04a}
+
+
+Definition at line 522 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Friction\+Constraint\+Offset@{get\+Friction\+Constraint\+Offset}}
+\index{get\+Friction\+Constraint\+Offset@{get\+Friction\+Constraint\+Offset}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Friction\+Constraint\+Offset() const }{getFrictionConstraintOffset() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector3d \& ocra\+::\+Task\+::get\+Friction\+Constraint\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_aa4d74d8925a07411f469d06e231787d7}{}\label{classocra_1_1Task_aa4d74d8925a07411f469d06e231787d7}
+
+
+Definition at line 532 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Hierarchy\+Level@{get\+Hierarchy\+Level}}
+\index{get\+Hierarchy\+Level@{get\+Hierarchy\+Level}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Hierarchy\+Level()}{getHierarchyLevel()}}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Task\+::get\+Hierarchy\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a244bb1942ffb8788fd7b8dba560f5b09}{}\label{classocra_1_1Task_a244bb1942ffb8788fd7b8dba560f5b09}
+
+
+Definition at line 195 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Jacobian@{get\+Jacobian}}
+\index{get\+Jacobian@{get\+Jacobian}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Jacobian() const }{getJacobian() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Matrix\+Xd \& ocra\+::\+Task\+::get\+Jacobian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a8dddfbfa9dee1e06d3ba612a2f0e9305}{}\label{classocra_1_1Task_a8dddfbfa9dee1e06d3ba612a2f0e9305}
+
+
+Definition at line 600 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Margin@{get\+Margin}}
+\index{get\+Margin@{get\+Margin}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Margin() const }{getMargin() const }}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Task\+::get\+Margin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_ae91b7092529b1aecce3b684ba848db75}{}\label{classocra_1_1Task_ae91b7092529b1aecce3b684ba848db75}
+
+
+Definition at line 527 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Meta\+Task\+Type@{get\+Meta\+Task\+Type}}
+\index{get\+Meta\+Task\+Type@{get\+Meta\+Task\+Type}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Meta\+Task\+Type()}{getMetaTaskType()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\+::\+M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE} ocra\+::\+Task\+::get\+Meta\+Task\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a89d970771d25b28149d51768f37118d5}{}\label{classocra_1_1Task_a89d970771d25b28149d51768f37118d5}
+
+
+Definition at line 230 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Meta\+Task\+Type\+As\+String@{get\+Meta\+Task\+Type\+As\+String}}
+\index{get\+Meta\+Task\+Type\+As\+String@{get\+Meta\+Task\+Type\+As\+String}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Meta\+Task\+Type\+As\+String()}{getMetaTaskTypeAsString()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ocra\+::\+Task\+::get\+Meta\+Task\+Type\+As\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a957707b86aa3fdc088040485ab9269ed}{}\label{classocra_1_1Task_a957707b86aa3fdc088040485ab9269ed}
+
+
+Definition at line 235 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Output@{get\+Output}}
+\index{get\+Output@{get\+Output}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Output() const }{getOutput() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Task\+::get\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a17561da8c2922ead7134a464cdbd66e2}{}\label{classocra_1_1Task_a17561da8c2922ead7134a464cdbd66e2}
+
+
+Definition at line 570 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Stiffness@{get\+Stiffness}}
+\index{get\+Stiffness@{get\+Stiffness}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Stiffness() const }{getStiffness() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Matrix\+Xd \& ocra\+::\+Task\+::get\+Stiffness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_affc64c2638003b79ec691278b0aaa4ce}{}\label{classocra_1_1Task_affc64c2638003b79ec691278b0aaa4ce}
+
+
+Definition at line 471 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Task\+State@{get\+Task\+State}}
+\index{get\+Task\+State@{get\+Task\+State}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Task\+State()}{getTaskState()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\+State} ocra\+::\+Task\+::get\+Task\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a81def8087dc41ef0a02406f208be4833}{}\label{classocra_1_1Task_a81def8087dc41ef0a02406f208be4833}
+
+
+Definition at line 1004 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Task\+Type@{get\+Task\+Type}}
+\index{get\+Task\+Type@{get\+Task\+Type}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Task\+Type()}{getTaskType()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\+::\+T\+Y\+P\+E\+T\+A\+SK} ocra\+::\+Task\+::get\+Task\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a1fed0d65711edfdc4b9e83c292b147f8}{}\label{classocra_1_1Task_a1fed0d65711edfdc4b9e83c292b147f8}
+
+
+Definition at line 216 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!get\+Weight@{get\+Weight}}
+\index{get\+Weight@{get\+Weight}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{get\+Weight() const }{getWeight() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Task\+::get\+Weight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a44b62b6cf152c446f26bd1826ce151a2}{}\label{classocra_1_1Task_a44b62b6cf152c446f26bd1826ce151a2}
+
+
+Definition at line 560 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!is\+Active\+As\+Constraint@{is\+Active\+As\+Constraint}}
+\index{is\+Active\+As\+Constraint@{is\+Active\+As\+Constraint}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{is\+Active\+As\+Constraint() const }{isActiveAsConstraint() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Task\+::is\+Active\+As\+Constraint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_ae03b55196583e1bce931e54f536c0063}{}\label{classocra_1_1Task_ae03b55196583e1bce931e54f536c0063}
+
+
+Definition at line 348 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!is\+Active\+As\+Objective@{is\+Active\+As\+Objective}}
+\index{is\+Active\+As\+Objective@{is\+Active\+As\+Objective}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{is\+Active\+As\+Objective() const }{isActiveAsObjective() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Task\+::is\+Active\+As\+Objective (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a50741879ff503fd58488b3a6ab2851ae}{}\label{classocra_1_1Task_a50741879ff503fd58488b3a6ab2851ae}
+
+
+Definition at line 343 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!is\+Body\+Contact\+Constraint@{is\+Body\+Contact\+Constraint}}
+\index{is\+Body\+Contact\+Constraint@{is\+Body\+Contact\+Constraint}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{is\+Body\+Contact\+Constraint() const }{isBodyContactConstraint() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Task\+::is\+Body\+Contact\+Constraint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a0e03c9e39caee016642380f578d77160}{}\label{classocra_1_1Task_a0e03c9e39caee016642380f578d77160}
+
+
+Definition at line 512 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!is\+Contact\+Mode\+Active@{is\+Contact\+Mode\+Active}}
+\index{is\+Contact\+Mode\+Active@{is\+Contact\+Mode\+Active}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{is\+Contact\+Mode\+Active() const }{isContactModeActive() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Task\+::is\+Contact\+Mode\+Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_a5fb22f623c8bf31a0bbbcb53dff6fba9}{}\label{classocra_1_1Task_a5fb22f623c8bf31a0bbbcb53dff6fba9}
+
+
+Definition at line 507 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!is\+Desired\+Mass\+The\+Actual\+One@{is\+Desired\+Mass\+The\+Actual\+One}}
+\index{is\+Desired\+Mass\+The\+Actual\+One@{is\+Desired\+Mass\+The\+Actual\+One}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{is\+Desired\+Mass\+The\+Actual\+One() const }{isDesiredMassTheActualOne() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Task\+::is\+Desired\+Mass\+The\+Actual\+One (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_affea055b13cfcb3adc0989900e12eb56}{}\label{classocra_1_1Task_affea055b13cfcb3adc0989900e12eb56}
+
+
+Definition at line 436 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!is\+Point\+Contact\+Task@{is\+Point\+Contact\+Task}}
+\index{is\+Point\+Contact\+Task@{is\+Point\+Contact\+Task}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{is\+Point\+Contact\+Task() const }{isPointContactTask() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Task\+::is\+Point\+Contact\+Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Task_ad34b030cdeaf96b74c38a2c9318958fe}{}\label{classocra_1_1Task_ad34b030cdeaf96b74c38a2c9318958fe}
+
+
+Definition at line 517 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!remove\+Contact\+Point\+In\+Model@{remove\+Contact\+Point\+In\+Model}}
+\index{remove\+Contact\+Point\+In\+Model@{remove\+Contact\+Point\+In\+Model}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{remove\+Contact\+Point\+In\+Model()}{removeContactPointInModel()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::remove\+Contact\+Point\+In\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a5dc76ab144162dd2960999c19510033f}{}\label{classocra_1_1Task_a5dc76ab144162dd2960999c19510033f}
+
+
+Definition at line 729 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Auto\+Gains@{set\+Auto\+Gains}}
+\index{set\+Auto\+Gains@{set\+Auto\+Gains}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Auto\+Gains(double freq)}{setAutoGains(double freq)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Auto\+Gains (
+\begin{DoxyParamCaption}
+\item[{double}]{freq}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a6d2b2b67112b1368c8bfd7e0ee8e2a0b}{}\label{classocra_1_1Task_a6d2b2b67112b1368c8bfd7e0ee8e2a0b}
+
+
+Definition at line 412 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Auto\+Gains@{set\+Auto\+Gains}}
+\index{set\+Auto\+Gains@{set\+Auto\+Gains}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Auto\+Gains(double freq, double mass\+Saturation)}{setAutoGains(double freq, double massSaturation)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Auto\+Gains (
+\begin{DoxyParamCaption}
+\item[{double}]{freq, }
+\item[{double}]{mass\+Saturation}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a310fb246ea58d09d51af965a96d6a628}{}\label{classocra_1_1Task_a310fb246ea58d09d51af965a96d6a628}
+
+
+Definition at line 417 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Damping@{set\+Damping}}
+\index{set\+Damping@{set\+Damping}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Damping(double B)}{setDamping(double B)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Damping (
+\begin{DoxyParamCaption}
+\item[{double}]{B}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a51509c15751c0fc8c40bf4b2328d7b21}{}\label{classocra_1_1Task_a51509c15751c0fc8c40bf4b2328d7b21}
+
+
+Definition at line 378 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Damping@{set\+Damping}}
+\index{set\+Damping@{set\+Damping}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Damping(const Eigen\+::\+Vector\+Xd \&\+B)}{setDamping(const Eigen::VectorXd &B)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Damping (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{B}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ab5fd8e11eea7dbccb7169282c9be4b0a}{}\label{classocra_1_1Task_ab5fd8e11eea7dbccb7169282c9be4b0a}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Damping@{set\+Damping}}
+\index{set\+Damping@{set\+Damping}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Damping(const Eigen\+::\+Matrix\+Xd \&\+B)}{setDamping(const Eigen::MatrixXd &B)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Damping (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{B}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a5dd04fe71a38907391b1b4885df2c86a}{}\label{classocra_1_1Task_a5dd04fe71a38907391b1b4885df2c86a}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Desired\+Mass@{set\+Desired\+Mass}}
+\index{set\+Desired\+Mass@{set\+Desired\+Mass}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Desired\+Mass(double Md)}{setDesiredMass(double Md)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Desired\+Mass (
+\begin{DoxyParamCaption}
+\item[{double}]{Md}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a31055e4bfc91407ef5ed6f0d200afe77}{}\label{classocra_1_1Task_a31055e4bfc91407ef5ed6f0d200afe77}
+
+
+Definition at line 358 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Desired\+Mass@{set\+Desired\+Mass}}
+\index{set\+Desired\+Mass@{set\+Desired\+Mass}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Desired\+Mass(const Eigen\+::\+Vector\+Xd \&\+Md)}{setDesiredMass(const Eigen::VectorXd &Md)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Desired\+Mass (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{Md}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ad6a82a5166195be0080f7d33b628d9df}{}\label{classocra_1_1Task_ad6a82a5166195be0080f7d33b628d9df}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Desired\+Mass@{set\+Desired\+Mass}}
+\index{set\+Desired\+Mass@{set\+Desired\+Mass}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Desired\+Mass(const Eigen\+::\+Matrix\+Xd \&\+Md)}{setDesiredMass(const Eigen::MatrixXd &Md)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Desired\+Mass (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{Md}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_aa7a0800fcb7c9b7ea9d72de05efa4db7}{}\label{classocra_1_1Task_aa7a0800fcb7c9b7ea9d72de05efa4db7}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Desired\+Mass\+To\+Actual\+One@{set\+Desired\+Mass\+To\+Actual\+One}}
+\index{set\+Desired\+Mass\+To\+Actual\+One@{set\+Desired\+Mass\+To\+Actual\+One}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Desired\+Mass\+To\+Actual\+One()}{setDesiredMassToActualOne()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Desired\+Mass\+To\+Actual\+One (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_aa1b8236efcfba897ca6a684226a338ae}{}\label{classocra_1_1Task_aa1b8236efcfba897ca6a684226a338ae}
+
+
+Definition at line 353 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Desired\+Task\+State@{set\+Desired\+Task\+State}}
+\index{set\+Desired\+Task\+State@{set\+Desired\+Task\+State}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Desired\+Task\+State(const Task\+State \&new\+Desired\+Task\+State)}{setDesiredTaskState(const TaskState &newDesiredTaskState)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Desired\+Task\+State (
+\begin{DoxyParamCaption}
+\item[{const {\bf Task\+State} \&}]{new\+Desired\+Task\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ac14252b35faa2ed8eed4cc5db629ce94}{}\label{classocra_1_1Task_ac14252b35faa2ed8eed4cc5db629ce94}
+
+
+Definition at line 1014 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Desired\+Task\+State\+Direct@{set\+Desired\+Task\+State\+Direct}}
+\index{set\+Desired\+Task\+State\+Direct@{set\+Desired\+Task\+State\+Direct}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Desired\+Task\+State\+Direct(const Task\+State \&new\+Desired\+Task\+State)}{setDesiredTaskStateDirect(const TaskState &newDesiredTaskState)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Desired\+Task\+State\+Direct (
+\begin{DoxyParamCaption}
+\item[{const {\bf Task\+State} \&}]{new\+Desired\+Task\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a44ccc493a8a4931e11c3fcfcd30d991c}{}\label{classocra_1_1Task_a44ccc493a8a4931e11c3fcfcd30d991c}
+
+
+Definition at line 1019 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Friction\+Coeff@{set\+Friction\+Coeff}}
+\index{set\+Friction\+Coeff@{set\+Friction\+Coeff}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Friction\+Coeff(double coeff)}{setFrictionCoeff(double coeff)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Friction\+Coeff (
+\begin{DoxyParamCaption}
+\item[{double}]{coeff}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ae37c47d2481ebfa034dc79cbf149776a}{}\label{classocra_1_1Task_ae37c47d2481ebfa034dc79cbf149776a}
+
+
+Definition at line 537 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Friction\+Constraint\+Offset@{set\+Friction\+Constraint\+Offset}}
+\index{set\+Friction\+Constraint\+Offset@{set\+Friction\+Constraint\+Offset}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Friction\+Constraint\+Offset(const Eigen\+::\+Vector3d \&offset)}{setFrictionConstraintOffset(const Eigen::Vector3d &offset)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Friction\+Constraint\+Offset (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector3d \&}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ac3738872a446ffc6361d096659ae2ba6}{}\label{classocra_1_1Task_ac3738872a446ffc6361d096659ae2ba6}
+
+
+Definition at line 555 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Hierarchy\+Level@{set\+Hierarchy\+Level}}
+\index{set\+Hierarchy\+Level@{set\+Hierarchy\+Level}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Hierarchy\+Level(int level)}{setHierarchyLevel(int level)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Hierarchy\+Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a07617befcfa5bf8f0711d47965ed8337}{}\label{classocra_1_1Task_a07617befcfa5bf8f0711d47965ed8337}
+
+
+Definition at line 199 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Margin@{set\+Margin}}
+\index{set\+Margin@{set\+Margin}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Margin(double margin)}{setMargin(double margin)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Margin (
+\begin{DoxyParamCaption}
+\item[{double}]{margin}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a62b7814143aa571cc668fef9bdea6815}{}\label{classocra_1_1Task_a62b7814143aa571cc668fef9bdea6815}
+
+
+Definition at line 543 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Meta\+Task\+Type@{set\+Meta\+Task\+Type}}
+\index{set\+Meta\+Task\+Type@{set\+Meta\+Task\+Type}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Meta\+Task\+Type(\+Task\+::\+M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E new\+Meta\+Task\+Type)}{setMetaTaskType(Task::META_TASK_TYPE newMetaTaskType)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Meta\+Task\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Task\+::\+M\+E\+T\+A\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+PE}}]{new\+Meta\+Task\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a0e4fc6a68b13d3b70798db1ff7233faf}{}\label{classocra_1_1Task_a0e4fc6a68b13d3b70798db1ff7233faf}
+
+
+Definition at line 221 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Stiffness@{set\+Stiffness}}
+\index{set\+Stiffness@{set\+Stiffness}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Stiffness(double K)}{setStiffness(double K)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Stiffness (
+\begin{DoxyParamCaption}
+\item[{double}]{K}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a9b132099233731049473a54fc53a29ac}{}\label{classocra_1_1Task_a9b132099233731049473a54fc53a29ac}
+
+
+Definition at line 395 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Stiffness@{set\+Stiffness}}
+\index{set\+Stiffness@{set\+Stiffness}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Stiffness(const Eigen\+::\+Vector\+Xd \&\+K)}{setStiffness(const Eigen::VectorXd &K)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Stiffness (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{K}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ad4718bcc82babf0a8213740f35fce89c}{}\label{classocra_1_1Task_ad4718bcc82babf0a8213740f35fce89c}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Stiffness@{set\+Stiffness}}
+\index{set\+Stiffness@{set\+Stiffness}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Stiffness(const Eigen\+::\+Matrix\+Xd \&\+K)}{setStiffness(const Eigen::MatrixXd &K)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Stiffness (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{K}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_aaa28b24df746182c2288a94fde03c37e}{}\label{classocra_1_1Task_aaa28b24df746182c2288a94fde03c37e}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Task\+Type@{set\+Task\+Type}}
+\index{set\+Task\+Type@{set\+Task\+Type}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Task\+Type(\+Task\+::\+T\+Y\+P\+E\+T\+A\+S\+K new\+Task\+Type)}{setTaskType(Task::TYPETASK newTaskType)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Task\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Task\+::\+T\+Y\+P\+E\+T\+A\+SK}}]{new\+Task\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a8292d37db712589e90d628d9b1e3e1ea}{}\label{classocra_1_1Task_a8292d37db712589e90d628d9b1e3e1ea}
+
+
+Definition at line 187 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Weight@{set\+Weight}}
+\index{set\+Weight@{set\+Weight}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Weight(double weight)}{setWeight(double weight)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Weight (
+\begin{DoxyParamCaption}
+\item[{double}]{weight}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a857ee8b756c78d5a90cdc78ae6eb855e}{}\label{classocra_1_1Task_a857ee8b756c78d5a90cdc78ae6eb855e}
+
+
+Definition at line 501 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!set\+Weight@{set\+Weight}}
+\index{set\+Weight@{set\+Weight}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{set\+Weight(const Eigen\+::\+Vector\+Xd \&weight)}{setWeight(const Eigen::VectorXd &weight)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::set\+Weight (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{weight}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_a81589c3855f9f39526d9d4ceda6fe95e}{}\label{classocra_1_1Task_a81589c3855f9f39526d9d4ceda6fe95e}
+\index{ocra\+::\+Task@{ocra\+::\+Task}!update@{update}}
+\index{update@{update}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{update()}{update()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Task_ad15d68848234ddac27ea57af1915045f}{}\label{classocra_1_1Task_ad15d68848234ddac27ea57af1915045f}
+
+
+Definition at line 259 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!update\+Acceleration\+Task@{update\+Acceleration\+Task}}
+\index{update\+Acceleration\+Task@{update\+Acceleration\+Task}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{update\+Acceleration\+Task()}{updateAccelerationTask()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::update\+Acceleration\+Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a3660b0a6149ae5472d00dab4f2799dfc}{}\label{classocra_1_1Task_a3660b0a6149ae5472d00dab4f2799dfc}
+Update linear function of the task for the full formalism.
+
+It computes a desired acceleration $ \vec{a}^{des} = - \left( \vec{a}_{ref} + K_p (\vec{p}^{des} - \vec{p}) + K_d (\vec{v}^{des} - \vec{v}) \right) $ . Then The linear function is set as follows\+:
+
+
+\begin{DoxyItemize}
+\item if it use the reduced problem\+:
+
+\begin{align*} \A &= J_{task} . \left( \M^{-1} \J_{\tav}\tp \right) & \b &= \vec{a}^{des} - \left( J_{task} \M^{-1} ( \g - \n) \right) \end{align*}
+\end{DoxyItemize}
+
+see sec\+\_\+transform\+\_\+formalism for more information.
+
+
+\begin{DoxyItemize}
+\item else\+:
+
+\begin{align*} \A &= J_{task} & \b &= \vec{a}^{des} \end{align*} 
+\end{DoxyItemize}
+
+Definition at line 766 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!update\+Co\+M\+Momentum\+Task@{update\+Co\+M\+Momentum\+Task}}
+\index{update\+Co\+M\+Momentum\+Task@{update\+Co\+M\+Momentum\+Task}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{update\+Co\+M\+Momentum\+Task()}{updateCoMMomentumTask()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::update\+Co\+M\+Momentum\+Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a2cfddc40424cb0edd08defe5df48addf}{}\label{classocra_1_1Task_a2cfddc40424cb0edd08defe5df48addf}
+
+
+Definition at line 817 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!update\+Force\+Task@{update\+Force\+Task}}
+\index{update\+Force\+Task@{update\+Force\+Task}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{update\+Force\+Task()}{updateForceTask()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::update\+Force\+Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a49af52acac5f23a6fc51c071271ae6ea}{}\label{classocra_1_1Task_a49af52acac5f23a6fc51c071271ae6ea}
+
+
+Definition at line 807 of file Task.\+cpp.
+
+\index{ocra\+::\+Task@{ocra\+::\+Task}!update\+Torque\+Task@{update\+Torque\+Task}}
+\index{update\+Torque\+Task@{update\+Torque\+Task}!ocra\+::\+Task@{ocra\+::\+Task}}
+\subsubsection[{\texorpdfstring{update\+Torque\+Task()}{updateTorqueTask()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Task\+::update\+Torque\+Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Task_a484d8cb46cd388b065b5d9cd03fa4caa}{}\label{classocra_1_1Task_a484d8cb46cd388b065b5d9cd03fa4caa}
+
+
+Definition at line 797 of file Task.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Task_8h}{Task.\+h}\item 
+\hyperlink{Task_8cpp}{Task.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,219 @@
+\hypertarget{classocra_1_1SumOfLinearFunctions}{}\section{ocra\+:\+:Sum\+Of\+Linear\+Functions Class Reference}
+\label{classocra_1_1SumOfLinearFunctions}\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+
+
+{\ttfamily \#include $<$Sum\+Of\+Linear\+Functions.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Sum\+Of\+Linear\+Functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d7c/classocra_1_1SumOfLinearFunctions__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Sum\+Of\+Linear\+Functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d3f/classocra_1_1SumOfLinearFunctions__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classocra_1_1LinearFunction}{Linear\+Function} \hyperlink{classocra_1_1SumOfLinearFunctions_ae7f2c949cbda9d69d13e64e5bfeb5fa9}{function\+Type\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1SumOfLinearFunctions_a70b277cb77618691688b7b6151ec126d}{Sum\+Of\+Linear\+Functions} (int dimension)
+\item 
+\hyperlink{classocra_1_1SumOfLinearFunctions_a0ca0f87d5eee6117cd521130a831d90e}{$\sim$\+Sum\+Of\+Linear\+Functions} ()
+\item 
+\hyperlink{classocra_1_1SumOfLinearFunctions}{Sum\+Of\+Linear\+Functions} \& \hyperlink{classocra_1_1SumOfLinearFunctions_a9ab412e1232557d36a84145360d57da7}{add\+Function} (\hyperlink{classocra_1_1LinearFunction}{Linear\+Function} \&f, double scale=1.)
+\item 
+\hyperlink{classocra_1_1SumOfLinearFunctions}{Sum\+Of\+Linear\+Functions} \& \hyperlink{classocra_1_1SumOfLinearFunctions_a2d3525455d1f4d2c19c7a72a33d1d600}{remove\+Function} (\hyperlink{classocra_1_1LinearFunction}{Linear\+Function} \&f, double scale)
+\item 
+\hyperlink{classocra_1_1SumOfLinearFunctions}{Sum\+Of\+Linear\+Functions} \& \hyperlink{classocra_1_1SumOfLinearFunctions_af22a2dd5debe1c87a4e3e664727e8754}{remove\+Function} (\hyperlink{classocra_1_1LinearFunction}{Linear\+Function} \&f)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classocra_1_1SumOfLinearFunctions_a51487ee34ad8dd8b92e5207f567770bb}{update\+Jacobian} () const 
+\item 
+void \hyperlink{classocra_1_1SumOfLinearFunctions_a19125365dbadc7ba6eabb7c13b78ba20}{updateb} () const 
+\item 
+void \hyperlink{classocra_1_1SumOfLinearFunctions_a7cfc7b9339509922c2ea6173d4d4d141}{do\+Update\+Input\+Size\+Begin} ()
+\item 
+void \hyperlink{classocra_1_1SumOfLinearFunctions_a49346ac5b041b40540ce0c1ae5a6b0d2}{do\+ChangeA} (const Matrix\+Xd \&A)
+\item 
+void \hyperlink{classocra_1_1SumOfLinearFunctions_ab66be55a88e1c4e7d4e6f663f0a36683}{do\+Changeb} (const Vector\+Xd \&b)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Sum\+Of\+Linear\+Functions.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!function\+Type\+\_\+t@{function\+Type\+\_\+t}}
+\index{function\+Type\+\_\+t@{function\+Type\+\_\+t}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{function\+Type\+\_\+t}{functionType_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Linear\+Function} {\bf ocra\+::\+Sum\+Of\+Linear\+Functions\+::function\+Type\+\_\+t}}\hypertarget{classocra_1_1SumOfLinearFunctions_ae7f2c949cbda9d69d13e64e5bfeb5fa9}{}\label{classocra_1_1SumOfLinearFunctions_ae7f2c949cbda9d69d13e64e5bfeb5fa9}
+
+
+Definition at line 15 of file Sum\+Of\+Linear\+Functions.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!Sum\+Of\+Linear\+Functions@{Sum\+Of\+Linear\+Functions}}
+\index{Sum\+Of\+Linear\+Functions@{Sum\+Of\+Linear\+Functions}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{Sum\+Of\+Linear\+Functions(int dimension)}{SumOfLinearFunctions(int dimension)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Sum\+Of\+Linear\+Functions\+::\+Sum\+Of\+Linear\+Functions (
+\begin{DoxyParamCaption}
+\item[{int}]{dimension}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1SumOfLinearFunctions_a70b277cb77618691688b7b6151ec126d}{}\label{classocra_1_1SumOfLinearFunctions_a70b277cb77618691688b7b6151ec126d}
+
+
+Definition at line 7 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!````~Sum\+Of\+Linear\+Functions@{$\sim$\+Sum\+Of\+Linear\+Functions}}
+\index{````~Sum\+Of\+Linear\+Functions@{$\sim$\+Sum\+Of\+Linear\+Functions}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{$\sim$\+Sum\+Of\+Linear\+Functions()}{~SumOfLinearFunctions()}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Sum\+Of\+Linear\+Functions\+::$\sim$\+Sum\+Of\+Linear\+Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1SumOfLinearFunctions_a0ca0f87d5eee6117cd521130a831d90e}{}\label{classocra_1_1SumOfLinearFunctions_a0ca0f87d5eee6117cd521130a831d90e}
+
+
+Definition at line 19 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!add\+Function@{add\+Function}}
+\index{add\+Function@{add\+Function}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{add\+Function(\+Linear\+Function \&f, double scale=1.)}{addFunction(LinearFunction &f, double scale=1.)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sum\+Of\+Linear\+Functions} \& ocra\+::\+Sum\+Of\+Linear\+Functions\+::add\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Function} \&}]{f, }
+\item[{double}]{scale = {\ttfamily 1.}}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1SumOfLinearFunctions_a9ab412e1232557d36a84145360d57da7}{}\label{classocra_1_1SumOfLinearFunctions_a9ab412e1232557d36a84145360d57da7}
+
+
+Definition at line 29 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!do\+ChangeA@{do\+ChangeA}}
+\index{do\+ChangeA@{do\+ChangeA}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{do\+Change\+A(const Matrix\+Xd \&\+A)}{doChangeA(const MatrixXd &A)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Sum\+Of\+Linear\+Functions\+::do\+ChangeA (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Xd \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1SumOfLinearFunctions_a49346ac5b041b40540ce0c1ae5a6b0d2}{}\label{classocra_1_1SumOfLinearFunctions_a49346ac5b041b40540ce0c1ae5a6b0d2}
+Methods to be called in ChangeA and Change b 
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_ab573c2f615d2edefb647979d3cc3cf46}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 126 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!do\+Changeb@{do\+Changeb}}
+\index{do\+Changeb@{do\+Changeb}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{do\+Changeb(const Vector\+Xd \&b)}{doChangeb(const VectorXd &b)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Sum\+Of\+Linear\+Functions\+::do\+Changeb (
+\begin{DoxyParamCaption}
+\item[{const Vector\+Xd \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1SumOfLinearFunctions_ab66be55a88e1c4e7d4e6f663f0a36683}{}\label{classocra_1_1SumOfLinearFunctions_ab66be55a88e1c4e7d4e6f663f0a36683}
+
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_ad6003a64fd49102599620206ca161345}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 131 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!do\+Update\+Input\+Size\+Begin@{do\+Update\+Input\+Size\+Begin}}
+\index{do\+Update\+Input\+Size\+Begin@{do\+Update\+Input\+Size\+Begin}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{do\+Update\+Input\+Size\+Begin()}{doUpdateInputSizeBegin()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Sum\+Of\+Linear\+Functions\+::do\+Update\+Input\+Size\+Begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1SumOfLinearFunctions_a7cfc7b9339509922c2ea6173d4d4d141}{}\label{classocra_1_1SumOfLinearFunctions_a7cfc7b9339509922c2ea6173d4d4d141}
+Methods for pre and post update in case the variable size has changed. Default implementation of do\+Update\+Input\+Size\+End does nothing, do\+Update\+Input\+Size\+Begin throws an exception. These methods might throw exceptions when overloaded. Furthermore, {\ttfamily \hyperlink{classocra_1_1LinearFunction_ac6bdf62ad6634397778d5f4223ed6d82}{do\+Update\+Input\+Size\+End()}} must comply with the post condition of {\ttfamily \hyperlink{classocra_1_1Function_a3a5b9e6ae296339acc87ab2cbf97ef98}{update\+Input\+Size()}}, i.\+e. let the values of each ability invalidated. 
+
+Reimplemented from \hyperlink{classocra_1_1Function_a3f728f3758e6448aa59932853db5ddcc}{ocra\+::\+Function}.
+
+
+
+Definition at line 121 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!remove\+Function@{remove\+Function}}
+\index{remove\+Function@{remove\+Function}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{remove\+Function(\+Linear\+Function \&f, double scale)}{removeFunction(LinearFunction &f, double scale)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sum\+Of\+Linear\+Functions} \& ocra\+::\+Sum\+Of\+Linear\+Functions\+::remove\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Function} \&}]{f, }
+\item[{double}]{scale}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1SumOfLinearFunctions_a2d3525455d1f4d2c19c7a72a33d1d600}{}\label{classocra_1_1SumOfLinearFunctions_a2d3525455d1f4d2c19c7a72a33d1d600}
+
+
+Definition at line 56 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!remove\+Function@{remove\+Function}}
+\index{remove\+Function@{remove\+Function}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{remove\+Function(\+Linear\+Function \&f)}{removeFunction(LinearFunction &f)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sum\+Of\+Linear\+Functions} \& ocra\+::\+Sum\+Of\+Linear\+Functions\+::remove\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Function} \&}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1SumOfLinearFunctions_af22a2dd5debe1c87a4e3e664727e8754}{}\label{classocra_1_1SumOfLinearFunctions_af22a2dd5debe1c87a4e3e664727e8754}
+
+
+Definition at line 82 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!updateb@{updateb}}
+\index{updateb@{updateb}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{updateb() const }{updateb() const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Sum\+Of\+Linear\+Functions\+::updateb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1SumOfLinearFunctions_a19125365dbadc7ba6eabb7c13b78ba20}{}\label{classocra_1_1SumOfLinearFunctions_a19125365dbadc7ba6eabb7c13b78ba20}
+Update the value of b. Does nothing in \hyperlink{classocra_1_1LinearFunction}{Linear\+Function}. It is provided so that derived class may overload it. 
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_a9857f074ea269801ce6f595b69593b32}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 114 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+\index{ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}!update\+Jacobian@{update\+Jacobian}}
+\index{update\+Jacobian@{update\+Jacobian}!ocra\+::\+Sum\+Of\+Linear\+Functions@{ocra\+::\+Sum\+Of\+Linear\+Functions}}
+\subsubsection[{\texorpdfstring{update\+Jacobian() const }{updateJacobian() const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Sum\+Of\+Linear\+Functions\+::update\+Jacobian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1SumOfLinearFunctions_a51487ee34ad8dd8b92e5207f567770bb}{}\label{classocra_1_1SumOfLinearFunctions_a51487ee34ad8dd8b92e5207f567770bb}
+
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_a544c87a4f02b4d80ae70e53b80c74461}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 104 of file Sum\+Of\+Linear\+Functions.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SumOfLinearFunctions_8h}{Sum\+Of\+Linear\+Functions.\+h}\item 
+\hyperlink{SumOfLinearFunctions_8cpp}{Sum\+Of\+Linear\+Functions.\+cpp}\end{DoxyCompactItemize}

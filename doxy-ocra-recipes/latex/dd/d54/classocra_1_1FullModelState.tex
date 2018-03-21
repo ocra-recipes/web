@@ -1,0 +1,171 @@
+\hypertarget{classocra_1_1FullModelState}{}\section{ocra\+:\+:Full\+Model\+State Class Reference}
+\label{classocra_1_1FullModelState}\index{ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}}
+
+
+{\ttfamily \#include $<$Full\+State.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Full\+Model\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d1/dd5/classocra_1_1FullModelState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Full\+Model\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d6/d98/classocra_1_1FullModelState__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structocra_1_1FullModelState_1_1Pimpl}{Pimpl}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1FullModelState_a2fc326508bd940f338c614c18549a7ba}{Full\+Model\+State} (const std\+::string \&name, const \hyperlink{classocra_1_1Model}{Model} \&model, int \hyperlink{classocra_1_1FullState_a489d85a3e8d2a88f31f0cac4e5f445bf}{which\+Part})
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1FullModelState_a9bd24ba5f48bd47a055e42e0ca831b3e}{get\+Inertia\+Matrix} () const 
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1FullModelState_a0d55b7835581c40b6704f7835fabc1c8}{get\+Inertia\+Matrix\+Inverse} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1FullModelState_a78d009f0a8f4fc5261b01456233138a4}{q} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1FullModelState_ae48a726f1118d4783452261b92667fe2}{qdot} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1FullModelState_a162129de9bae7fec66e167c097b655c1}{qddot} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1FullModelState_a8694e03a8953f34e0b9f03f5a65d70e3}{tau} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 52 of file Full\+State.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}!Full\+Model\+State@{Full\+Model\+State}}
+\index{Full\+Model\+State@{Full\+Model\+State}!ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}}
+\subsubsection[{\texorpdfstring{Full\+Model\+State(const std\+::string \&name, const Model \&model, int which\+Part)}{FullModelState(const std::string &name, const Model &model, int whichPart)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Full\+Model\+State\+::\+Full\+Model\+State (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{const {\bf Model} \&}]{model, }
+\item[{int}]{which\+Part}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1FullModelState_a2fc326508bd940f338c614c18549a7ba}{}\label{classocra_1_1FullModelState_a2fc326508bd940f338c614c18549a7ba}
+
+
+Definition at line 81 of file Full\+State.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}!get\+Inertia\+Matrix@{get\+Inertia\+Matrix}}
+\index{get\+Inertia\+Matrix@{get\+Inertia\+Matrix}!ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}}
+\subsubsection[{\texorpdfstring{get\+Inertia\+Matrix() const }{getInertiaMatrix() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Matrix\+Xd \& ocra\+::\+Full\+Model\+State\+::get\+Inertia\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1FullModelState_a9bd24ba5f48bd47a055e42e0ca831b3e}{}\label{classocra_1_1FullModelState_a9bd24ba5f48bd47a055e42e0ca831b3e}
+
+
+Implements \hyperlink{classocra_1_1FullState_a5d5c2ddfaf4868f78b4621d27b500784}{ocra\+::\+Full\+State}.
+
+
+
+Definition at line 129 of file Full\+State.\+cpp.
+
+\index{ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}!get\+Inertia\+Matrix\+Inverse@{get\+Inertia\+Matrix\+Inverse}}
+\index{get\+Inertia\+Matrix\+Inverse@{get\+Inertia\+Matrix\+Inverse}!ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}}
+\subsubsection[{\texorpdfstring{get\+Inertia\+Matrix\+Inverse() const }{getInertiaMatrixInverse() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Matrix\+Xd \& ocra\+::\+Full\+Model\+State\+::get\+Inertia\+Matrix\+Inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1FullModelState_a0d55b7835581c40b6704f7835fabc1c8}{}\label{classocra_1_1FullModelState_a0d55b7835581c40b6704f7835fabc1c8}
+
+
+Implements \hyperlink{classocra_1_1FullState_a10f3a888554035bf13b3f636ce4b4edc}{ocra\+::\+Full\+State}.
+
+
+
+Definition at line 146 of file Full\+State.\+cpp.
+
+\index{ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}!q@{q}}
+\index{q@{q}!ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}}
+\subsubsection[{\texorpdfstring{q() const }{q() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd \& ocra\+::\+Full\+Model\+State\+::q (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1FullModelState_a78d009f0a8f4fc5261b01456233138a4}{}\label{classocra_1_1FullModelState_a78d009f0a8f4fc5261b01456233138a4}
+
+
+Implements \hyperlink{classocra_1_1FullState_a3bb03b513d7cb3a5447d1d4eb2d643b0}{ocra\+::\+Full\+State}.
+
+
+
+Definition at line 89 of file Full\+State.\+cpp.
+
+\index{ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}!qddot@{qddot}}
+\index{qddot@{qddot}!ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}}
+\subsubsection[{\texorpdfstring{qddot() const }{qddot() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd \& ocra\+::\+Full\+Model\+State\+::qddot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1FullModelState_a162129de9bae7fec66e167c097b655c1}{}\label{classocra_1_1FullModelState_a162129de9bae7fec66e167c097b655c1}
+
+
+Implements \hyperlink{classocra_1_1FullState_a5882a53273cd9d3baae36b5850deadae}{ocra\+::\+Full\+State}.
+
+
+
+Definition at line 119 of file Full\+State.\+cpp.
+
+\index{ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}!qdot@{qdot}}
+\index{qdot@{qdot}!ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}}
+\subsubsection[{\texorpdfstring{qdot() const }{qdot() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd \& ocra\+::\+Full\+Model\+State\+::qdot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1FullModelState_ae48a726f1118d4783452261b92667fe2}{}\label{classocra_1_1FullModelState_ae48a726f1118d4783452261b92667fe2}
+
+
+Implements \hyperlink{classocra_1_1FullState_a7018fe03dc3c8b3ec95d3c2015ae60e6}{ocra\+::\+Full\+State}.
+
+
+
+Definition at line 104 of file Full\+State.\+cpp.
+
+\index{ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}!tau@{tau}}
+\index{tau@{tau}!ocra\+::\+Full\+Model\+State@{ocra\+::\+Full\+Model\+State}}
+\subsubsection[{\texorpdfstring{tau() const }{tau() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd \& ocra\+::\+Full\+Model\+State\+::tau (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1FullModelState_a8694e03a8953f34e0b9f03f5a65d70e3}{}\label{classocra_1_1FullModelState_a8694e03a8953f34e0b9f03f5a65d70e3}
+
+
+Implements \hyperlink{classocra_1_1FullState_a24723b4a382c2bf51e6c32cbd1bd7b06}{ocra\+::\+Full\+State}.
+
+
+
+Definition at line 124 of file Full\+State.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{FullState_8h}{Full\+State.\+h}\item 
+\hyperlink{FullState_8cpp}{Full\+State.\+cpp}\end{DoxyCompactItemize}

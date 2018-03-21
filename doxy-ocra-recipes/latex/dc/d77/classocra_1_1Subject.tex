@@ -1,0 +1,163 @@
+\hypertarget{classocra_1_1Subject}{}\section{ocra\+:\+:Subject Class Reference}
+\label{classocra_1_1Subject}\index{ocra\+::\+Subject@{ocra\+::\+Subject}}
+
+
+{\ttfamily \#include $<$Observer\+Subject.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Subject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d61/classocra_1_1Subject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Subject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d12/classocra_1_1Subject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classocra_1_1Subject_a4189b52b5d0a5b53d43e7a0f97a02fd7}{$\sim$\+Subject} ()
+\item 
+{\footnotesize template$<$int E\+VT, class Derived , class Base $>$ }\\void \hyperlink{classocra_1_1Subject_acf73b4aa6f6040953e6705a6ab1c95bf}{connect} (Derived \&object, void(Base\+::$\ast$new\+Callback)(int)) const 
+\begin{DoxyCompactList}\small\item\em Call this method to register a non-\/static method as a callback. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int E\+VT$>$ }\\void \hyperlink{classocra_1_1Subject_a45ecfbe5bd7db03ed1d6a2267f913863}{connect} (void($\ast$new\+Callback)(int)) const 
+\begin{DoxyCompactList}\small\item\em Call this method to register a free function as a callback. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int E\+VT, class Derived , class Base $>$ }\\void \hyperlink{classocra_1_1Subject_a3127f3cf06b90277f16c71713a994f9e}{disconnect} (Derived \&object, void(Base\+::$\ast$callback\+To\+Erase)(int)) const 
+\begin{DoxyCompactList}\small\item\em Disconnect non-\/static method. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int E\+VT$>$ }\\void \hyperlink{classocra_1_1Subject_a42f2ef47680082c69d12272b23019023}{disconnect} (void($\ast$callback\+To\+Erase)(int)) const 
+\begin{DoxyCompactList}\small\item\em Disconnect free function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int E\+VT$>$ }\\void \hyperlink{classocra_1_1Subject_af2443af5183ce9bf5a7be9504f6401fe}{propagate} () const 
+\item 
+{\footnotesize template$<$int E\+VT$>$ }\\void \hyperlink{classocra_1_1Subject_aa566bb35774471c2d7a059dcbee19099}{propagate} (int timestamp) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file Observer\+Subject.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Subject@{ocra\+::\+Subject}!````~Subject@{$\sim$\+Subject}}
+\index{````~Subject@{$\sim$\+Subject}!ocra\+::\+Subject@{ocra\+::\+Subject}}
+\subsubsection[{\texorpdfstring{$\sim$\+Subject()}{~Subject()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual ocra\+::\+Subject\+::$\sim$\+Subject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Subject_a4189b52b5d0a5b53d43e7a0f97a02fd7}{}\label{classocra_1_1Subject_a4189b52b5d0a5b53d43e7a0f97a02fd7}
+
+
+Definition at line 33 of file Observer\+Subject.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Subject@{ocra\+::\+Subject}!connect@{connect}}
+\index{connect@{connect}!ocra\+::\+Subject@{ocra\+::\+Subject}}
+\subsubsection[{\texorpdfstring{connect(\+Derived \&object, void(\+Base\+::$\ast$new\+Callback)(int)) const }{connect(Derived &object, void(Base::*newCallback)(int)) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int E\+VT, class Derived , class Base $>$ void ocra\+::\+Subject\+::connect (
+\begin{DoxyParamCaption}
+\item[{Derived \&}]{object, }
+\item[{void(Base\+::$\ast$)(int)}]{new\+Callback}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Subject_acf73b4aa6f6040953e6705a6ab1c95bf}{}\label{classocra_1_1Subject_acf73b4aa6f6040953e6705a6ab1c95bf}
+
+
+Call this method to register a non-\/static method as a callback. 
+
+
+
+Definition at line 37 of file Observer\+Subject.\+h.
+
+\index{ocra\+::\+Subject@{ocra\+::\+Subject}!connect@{connect}}
+\index{connect@{connect}!ocra\+::\+Subject@{ocra\+::\+Subject}}
+\subsubsection[{\texorpdfstring{connect(void($\ast$new\+Callback)(int)) const }{connect(void(*newCallback)(int)) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int E\+VT$>$ void ocra\+::\+Subject\+::connect (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(int)}]{new\+Callback}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Subject_a45ecfbe5bd7db03ed1d6a2267f913863}{}\label{classocra_1_1Subject_a45ecfbe5bd7db03ed1d6a2267f913863}
+
+
+Call this method to register a free function as a callback. 
+
+
+
+Definition at line 53 of file Observer\+Subject.\+h.
+
+\index{ocra\+::\+Subject@{ocra\+::\+Subject}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!ocra\+::\+Subject@{ocra\+::\+Subject}}
+\subsubsection[{\texorpdfstring{disconnect(\+Derived \&object, void(\+Base\+::$\ast$callback\+To\+Erase)(int)) const }{disconnect(Derived &object, void(Base::*callbackToErase)(int)) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int E\+VT, class Derived , class Base $>$ void ocra\+::\+Subject\+::disconnect (
+\begin{DoxyParamCaption}
+\item[{Derived \&}]{object, }
+\item[{void(Base\+::$\ast$)(int)}]{callback\+To\+Erase}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Subject_a3127f3cf06b90277f16c71713a994f9e}{}\label{classocra_1_1Subject_a3127f3cf06b90277f16c71713a994f9e}
+
+
+Disconnect non-\/static method. 
+
+
+
+Definition at line 60 of file Observer\+Subject.\+h.
+
+\index{ocra\+::\+Subject@{ocra\+::\+Subject}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!ocra\+::\+Subject@{ocra\+::\+Subject}}
+\subsubsection[{\texorpdfstring{disconnect(void($\ast$callback\+To\+Erase)(int)) const }{disconnect(void(*callbackToErase)(int)) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int E\+VT$>$ void ocra\+::\+Subject\+::disconnect (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(int)}]{callback\+To\+Erase}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Subject_a42f2ef47680082c69d12272b23019023}{}\label{classocra_1_1Subject_a42f2ef47680082c69d12272b23019023}
+
+
+Disconnect free function. 
+
+
+
+Definition at line 76 of file Observer\+Subject.\+h.
+
+\index{ocra\+::\+Subject@{ocra\+::\+Subject}!propagate@{propagate}}
+\index{propagate@{propagate}!ocra\+::\+Subject@{ocra\+::\+Subject}}
+\subsubsection[{\texorpdfstring{propagate() const }{propagate() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int E\+VT$>$ void ocra\+::\+Subject\+::propagate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Subject_af2443af5183ce9bf5a7be9504f6401fe}{}\label{classocra_1_1Subject_af2443af5183ce9bf5a7be9504f6401fe}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classocra_1_1ObserverBase}{ocra\+::\+Observer\+Base}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 83 of file Observer\+Subject.\+h.
+
+\index{ocra\+::\+Subject@{ocra\+::\+Subject}!propagate@{propagate}}
+\index{propagate@{propagate}!ocra\+::\+Subject@{ocra\+::\+Subject}}
+\subsubsection[{\texorpdfstring{propagate(int timestamp) const }{propagate(int timestamp) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int E\+VT$>$ void ocra\+::\+Subject\+::propagate (
+\begin{DoxyParamCaption}
+\item[{int}]{timestamp}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Subject_aa566bb35774471c2d7a059dcbee19099}{}\label{classocra_1_1Subject_aa566bb35774471c2d7a059dcbee19099}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classocra_1_1ObserverBase}{ocra\+::\+Observer\+Base}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 90 of file Observer\+Subject.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ObserverSubject_8h}{Observer\+Subject.\+h}\end{DoxyCompactItemize}

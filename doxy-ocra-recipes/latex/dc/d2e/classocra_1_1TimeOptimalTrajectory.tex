@@ -1,0 +1,183 @@
+\hypertarget{classocra_1_1TimeOptimalTrajectory}{}\section{ocra\+:\+:Time\+Optimal\+Trajectory Class Reference}
+\label{classocra_1_1TimeOptimalTrajectory}\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+
+
+{\ttfamily \#include $<$Time\+Optimal\+Trajectory.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Time\+Optimal\+Trajectory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{d8/d53/classocra_1_1TimeOptimalTrajectory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Time\+Optimal\+Trajectory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{d5/d36/classocra_1_1TimeOptimalTrajectory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classocra_1_1TimeOptimalTrajectory_a4f4e9ce2cd5b313d8418893d89b5cc8f}{$\sim$\+Time\+Optimal\+Trajectory} ()
+\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classocra_1_1TimeOptimalTrajectory_a42ca0b579494ac0c3c4c842896e592f9}{get\+Desired\+Values} (double time)
+\item 
+virtual double \hyperlink{classocra_1_1TimeOptimalTrajectory_a561d2d6ad9c40c88783265a91193a0ab}{get\+Duration} ()
+\item 
+virtual void \hyperlink{classocra_1_1TimeOptimalTrajectory_ad70bc612f62abacf2fb457aa5c6d635a}{recalculate\+Trajectory} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classocra_1_1TimeOptimalTrajectory_a1ddd759810abea6db2462dca3aae585c}{initialize\+Trajectory} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classocra_1_1TimeOptimalTrajectory_a7c58d1493c4227bb5d209de36ade154e}{t0}
+\item 
+double \hyperlink{classocra_1_1TimeOptimalTrajectory_a7709c9a5e8ab5e48657cc965f59d0f57}{max\+Deviation}
+\item 
+double \hyperlink{classocra_1_1TimeOptimalTrajectory_a6c6b5ffec595af24fd0061d47f85ebdf}{duration}
+\item 
+double \hyperlink{classocra_1_1TimeOptimalTrajectory_aacee4e110122959c3f47c07a9b7796bf}{time\+Step}
+\item 
+gttraj\+::\+Trajectory $\ast$ \hyperlink{classocra_1_1TimeOptimalTrajectory_a350a0c047e3f65fc7dd55d6b5dfa5796}{gt\+\_\+trajectory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Time\+Optimal\+Trajectory.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!````~Time\+Optimal\+Trajectory@{$\sim$\+Time\+Optimal\+Trajectory}}
+\index{````~Time\+Optimal\+Trajectory@{$\sim$\+Time\+Optimal\+Trajectory}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{$\sim$\+Time\+Optimal\+Trajectory()}{~TimeOptimalTrajectory()}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Time\+Optimal\+Trajectory\+::$\sim$\+Time\+Optimal\+Trajectory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_a4f4e9ce2cd5b313d8418893d89b5cc8f}{}\label{classocra_1_1TimeOptimalTrajectory_a4f4e9ce2cd5b313d8418893d89b5cc8f}
+
+
+Definition at line 7 of file Time\+Optimal\+Trajectory.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!get\+Desired\+Values@{get\+Desired\+Values}}
+\index{get\+Desired\+Values@{get\+Desired\+Values}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{get\+Desired\+Values(double time)}{getDesiredValues(double time)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd ocra\+::\+Time\+Optimal\+Trajectory\+::get\+Desired\+Values (
+\begin{DoxyParamCaption}
+\item[{double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_a42ca0b579494ac0c3c4c842896e592f9}{}\label{classocra_1_1TimeOptimalTrajectory_a42ca0b579494ac0c3c4c842896e592f9}
+
+
+Reimplemented from \hyperlink{classocra_1_1Trajectory_a2102a829e6dad497f7c773c346d499b7}{ocra\+::\+Trajectory}.
+
+
+
+Definition at line 13 of file Time\+Optimal\+Trajectory.\+cpp.
+
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!get\+Duration@{get\+Duration}}
+\index{get\+Duration@{get\+Duration}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{get\+Duration()}{getDuration()}}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Time\+Optimal\+Trajectory\+::get\+Duration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_a561d2d6ad9c40c88783265a91193a0ab}{}\label{classocra_1_1TimeOptimalTrajectory_a561d2d6ad9c40c88783265a91193a0ab}
+
+
+Reimplemented from \hyperlink{classocra_1_1Trajectory_ad65e4ce63f33d79d7880742035a64d6c}{ocra\+::\+Trajectory}.
+
+
+
+Definition at line 58 of file Time\+Optimal\+Trajectory.\+cpp.
+
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!initialize\+Trajectory@{initialize\+Trajectory}}
+\index{initialize\+Trajectory@{initialize\+Trajectory}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{initialize\+Trajectory()}{initializeTrajectory()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Time\+Optimal\+Trajectory\+::initialize\+Trajectory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_a1ddd759810abea6db2462dca3aae585c}{}\label{classocra_1_1TimeOptimalTrajectory_a1ddd759810abea6db2462dca3aae585c}
+
+
+Reimplemented from \hyperlink{classocra_1_1Trajectory_aa49b123abf79be71f131c138ff2a88b2}{ocra\+::\+Trajectory}.
+
+
+
+Definition at line 35 of file Time\+Optimal\+Trajectory.\+cpp.
+
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!recalculate\+Trajectory@{recalculate\+Trajectory}}
+\index{recalculate\+Trajectory@{recalculate\+Trajectory}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{recalculate\+Trajectory()}{recalculateTrajectory()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Time\+Optimal\+Trajectory\+::recalculate\+Trajectory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_ad70bc612f62abacf2fb457aa5c6d635a}{}\label{classocra_1_1TimeOptimalTrajectory_ad70bc612f62abacf2fb457aa5c6d635a}
+
+
+Reimplemented from \hyperlink{classocra_1_1Trajectory_a9553f05fc24c76582e3d8d9db55df08b}{ocra\+::\+Trajectory}.
+
+
+
+Definition at line 63 of file Time\+Optimal\+Trajectory.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!duration@{duration}}
+\index{duration@{duration}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{duration}{duration}}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Time\+Optimal\+Trajectory\+::duration\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_a6c6b5ffec595af24fd0061d47f85ebdf}{}\label{classocra_1_1TimeOptimalTrajectory_a6c6b5ffec595af24fd0061d47f85ebdf}
+
+
+Definition at line 28 of file Time\+Optimal\+Trajectory.\+h.
+
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!gt\+\_\+trajectory@{gt\+\_\+trajectory}}
+\index{gt\+\_\+trajectory@{gt\+\_\+trajectory}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{gt\+\_\+trajectory}{gt_trajectory}}]{\setlength{\rightskip}{0pt plus 5cm}gttraj\+::\+Trajectory$\ast$ ocra\+::\+Time\+Optimal\+Trajectory\+::gt\+\_\+trajectory\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_a350a0c047e3f65fc7dd55d6b5dfa5796}{}\label{classocra_1_1TimeOptimalTrajectory_a350a0c047e3f65fc7dd55d6b5dfa5796}
+
+
+Definition at line 30 of file Time\+Optimal\+Trajectory.\+h.
+
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!max\+Deviation@{max\+Deviation}}
+\index{max\+Deviation@{max\+Deviation}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{max\+Deviation}{maxDeviation}}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Time\+Optimal\+Trajectory\+::max\+Deviation\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_a7709c9a5e8ab5e48657cc965f59d0f57}{}\label{classocra_1_1TimeOptimalTrajectory_a7709c9a5e8ab5e48657cc965f59d0f57}
+
+
+Definition at line 27 of file Time\+Optimal\+Trajectory.\+h.
+
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!t0@{t0}}
+\index{t0@{t0}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{t0}{t0}}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Time\+Optimal\+Trajectory\+::t0\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_a7c58d1493c4227bb5d209de36ade154e}{}\label{classocra_1_1TimeOptimalTrajectory_a7c58d1493c4227bb5d209de36ade154e}
+
+
+Definition at line 26 of file Time\+Optimal\+Trajectory.\+h.
+
+\index{ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}!time\+Step@{time\+Step}}
+\index{time\+Step@{time\+Step}!ocra\+::\+Time\+Optimal\+Trajectory@{ocra\+::\+Time\+Optimal\+Trajectory}}
+\subsubsection[{\texorpdfstring{time\+Step}{timeStep}}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Time\+Optimal\+Trajectory\+::time\+Step\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1TimeOptimalTrajectory_aacee4e110122959c3f47c07a9b7796bf}{}\label{classocra_1_1TimeOptimalTrajectory_aacee4e110122959c3f47c07a9b7796bf}
+
+
+Definition at line 29 of file Time\+Optimal\+Trajectory.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TimeOptimalTrajectory_8h}{Time\+Optimal\+Trajectory.\+h}\item 
+\hyperlink{TimeOptimalTrajectory_8cpp}{Time\+Optimal\+Trajectory.\+cpp}\end{DoxyCompactItemize}

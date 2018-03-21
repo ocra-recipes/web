@@ -1,0 +1,229 @@
+\hypertarget{group__constraint}{}\section{Constraint}
+\label{group__constraint}\index{Constraint@{Constraint}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classocra_1_1ContactAvoidanceFunction}{ocra\+::\+Contact\+Avoidance\+Function}
+\begin{DoxyCompactList}\small\item\em Create a linear function that represents the joint limit function. \end{DoxyCompactList}\item 
+class \hyperlink{classocra_1_1FullContactAvoidanceFunction}{ocra\+::\+Full\+Contact\+Avoidance\+Function}
+\begin{DoxyCompactList}\small\item\em Create a linear function that represents the contact avoidance function for the full formalism. \end{DoxyCompactList}\item 
+class \hyperlink{classocra_1_1ReducedContactAvoidanceFunction}{ocra\+::\+Reduced\+Contact\+Avoidance\+Function}
+\begin{DoxyCompactList}\small\item\em Create a linear function that represents the contact avoidance function for the reduced formalism. \end{DoxyCompactList}\item 
+class \hyperlink{classocra_1_1ContactAvoidanceConstraint}{ocra\+::\+Contact\+Avoidance\+Constraint}
+\item 
+class \hyperlink{classocra_1_1ControlConstraint}{ocra\+::\+Control\+Constraint}
+\item 
+class \hyperlink{classocra_1_1FullDynamicEquationFunction}{ocra\+::\+Full\+Dynamic\+Equation\+Function}
+\begin{DoxyCompactList}\small\item\em Create a linear function that represents the dynamic equation of motion. \end{DoxyCompactList}\item 
+class \hyperlink{classocra_1_1JointLimitFunction}{ocra\+::\+Joint\+Limit\+Function}
+\begin{DoxyCompactList}\small\item\em Create a linear function that represents the joint limit function. \end{DoxyCompactList}\item 
+class \hyperlink{classocra_1_1FullJointLimitFunction}{ocra\+::\+Full\+Joint\+Limit\+Function}
+\begin{DoxyCompactList}\small\item\em Create a linear function that represents the joint limit function for the full formalism. \end{DoxyCompactList}\item 
+class \hyperlink{classocra_1_1ReducedJointLimitFunction}{ocra\+::\+Reduced\+Joint\+Limit\+Function}
+\begin{DoxyCompactList}\small\item\em Create a linear function that represents the joint limit function for the reduced formalism. \end{DoxyCompactList}\item 
+class \hyperlink{classocra_1_1JointLimitConstraint}{ocra\+::\+Joint\+Limit\+Constraint}
+\item 
+class \hyperlink{classocra_1_1TorqueLimitFunction}{ocra\+::\+Torque\+Limit\+Function}
+\begin{DoxyCompactList}\small\item\em Create a linear function that represents the torque limit function. \end{DoxyCompactList}\item 
+class \hyperlink{classocra_1_1TorqueLimitConstraint}{ocra\+::\+Torque\+Limit\+Constraint}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Linear\+Function \hyperlink{group__constraint_ga3f72eb3c4529d2c19ef39928f5e57262}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::function\+Type\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__constraint_ga778bffa6d85a494b3ee0c499400573a6}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::\+Full\+Dynamic\+Equation\+Function} (const \hyperlink{classocra_1_1Model}{Model} \&model)
+\item 
+\hyperlink{group__constraint_gab3c2d35bef3c4d8733b7ab0e9ff48bfc}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::$\sim$\+Full\+Dynamic\+Equation\+Function} ()
+\item 
+void \hyperlink{group__constraint_ga673fd9a47a249d84ce527011a06417aa}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::take\+Into\+Account\+Gravity} (bool use\+Grav)
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{group__constraint_gaf5eec6352d53ef9682fa281f2692add2}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::get\+Inertia\+Matrix\+Inverse\+JchiT} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{group__constraint_ga3ac88fe8128c6ceb390057abb933e602}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::get\+Inertia\+Matrix\+Inverse\+Lin\+Non\+Lin\+Grav} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{group__constraint_gaab7728b0f686c4ae63784c4a72871f13}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::get\+Action\+Variable} () const 
+\item 
+void \hyperlink{group__constraint_gab601abcc9508d55da24d1a1fa7332281}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::update\+Jacobian} () const 
+\item 
+void \hyperlink{group__constraint_gae2cb2e75b8cdb7bdb71e37bdbcabb156}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::updateb} () const 
+\item 
+void \hyperlink{group__constraint_ga19d9bbe4f78b4c396930388a70b8cd4b}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::buildA} ()
+\item 
+virtual void \hyperlink{group__constraint_gadbdce52af8ba057e93ea923db5a3ce04}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::do\+Update\+Input\+Size\+Begin} ()
+\item 
+virtual void \hyperlink{group__constraint_ga8c14a0ff3f87c32d030a3a1753b7a77e}{ocra\+::\+Full\+Dynamic\+Equation\+Function\+::do\+Update\+Input\+Size\+End} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{Constraint@{Constraint}!function\+Type\+\_\+t@{function\+Type\+\_\+t}}
+\index{function\+Type\+\_\+t@{function\+Type\+\_\+t}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{function\+Type\+\_\+t}{functionType_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Linear\+Function {\bf ocra\+::\+Full\+Dynamic\+Equation\+Function\+::function\+Type\+\_\+t}}\hypertarget{group__constraint_ga3f72eb3c4529d2c19ef39928f5e57262}{}\label{group__constraint_ga3f72eb3c4529d2c19ef39928f5e57262}
+
+
+Definition at line 43 of file Full\+Dynamic\+Equation\+Function.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Constraint@{Constraint}!buildA@{buildA}}
+\index{buildA@{buildA}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{build\+A()}{buildA()}}]{\setlength{\rightskip}{0pt plus 5cm}void Full\+Dynamic\+Equation\+Function\+::buildA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{group__constraint_ga19d9bbe4f78b4c396930388a70b8cd4b}{}\label{group__constraint_ga19d9bbe4f78b4c396930388a70b8cd4b}
+Initialize the Jacobian matrix ( $ \A $) in the function.
+
+It sets $ \A $ to 0 and computes $ S $ that is a constant matrix, So we obtain $ \A = \begin{bmatrix} 0 & -S & 0 \end{bmatrix} $. $ \M $ and $ \J_c $ are updated in \hyperlink{group__constraint_gab601abcc9508d55da24d1a1fa7332281}{update\+Jacobian() const }. 
+
+Definition at line 123 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!do\+Update\+Input\+Size\+Begin@{do\+Update\+Input\+Size\+Begin}}
+\index{do\+Update\+Input\+Size\+Begin@{do\+Update\+Input\+Size\+Begin}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{do\+Update\+Input\+Size\+Begin()}{doUpdateInputSizeBegin()}}]{\setlength{\rightskip}{0pt plus 5cm}void Full\+Dynamic\+Equation\+Function\+::do\+Update\+Input\+Size\+Begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{group__constraint_gadbdce52af8ba057e93ea923db5a3ce04}{}\label{group__constraint_gadbdce52af8ba057e93ea923db5a3ce04}
+Do when input size changes, before.
+
+By overloading this function, it allows linear function modification when input size changes. It does nothing actually. 
+
+Reimplemented from \hyperlink{classocra_1_1Function_a3f728f3758e6448aa59932853db5ddcc}{ocra\+::\+Function}.
+
+
+
+Definition at line 173 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!do\+Update\+Input\+Size\+End@{do\+Update\+Input\+Size\+End}}
+\index{do\+Update\+Input\+Size\+End@{do\+Update\+Input\+Size\+End}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{do\+Update\+Input\+Size\+End()}{doUpdateInputSizeEnd()}}]{\setlength{\rightskip}{0pt plus 5cm}void Full\+Dynamic\+Equation\+Function\+::do\+Update\+Input\+Size\+End (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{group__constraint_ga8c14a0ff3f87c32d030a3a1753b7a77e}{}\label{group__constraint_ga8c14a0ff3f87c32d030a3a1753b7a77e}
+Do when input size changes, after.
+
+By overloading this function, it allows linear function modification when input size changes. It does nothing actually. 
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_ac6bdf62ad6634397778d5f4223ed6d82}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 183 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!Full\+Dynamic\+Equation\+Function@{Full\+Dynamic\+Equation\+Function}}
+\index{Full\+Dynamic\+Equation\+Function@{Full\+Dynamic\+Equation\+Function}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{Full\+Dynamic\+Equation\+Function(const Model \&model)}{FullDynamicEquationFunction(const Model &model)}}]{\setlength{\rightskip}{0pt plus 5cm}Full\+Dynamic\+Equation\+Function\+::\+Full\+Dynamic\+Equation\+Function (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model} \&}]{model}
+\end{DoxyParamCaption}
+)}\hypertarget{group__constraint_ga778bffa6d85a494b3ee0c499400573a6}{}\label{group__constraint_ga778bffa6d85a494b3ee0c499400573a6}
+Initialize a dynamic equation of motion function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The \hyperlink{classocra_1_1Model}{Model} on which we will update the dynamic parameters\\
+\hline
+\end{DoxyParams}
+It is connected with the model on \char`\"{}\+E\+V\+T\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+V\+A\+L\+U\+E\char`\"{}, meaning that a,y modification in the model will invalidate this linear function. 
+
+Definition at line 62 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!get\+Action\+Variable@{get\+Action\+Variable}}
+\index{get\+Action\+Variable@{get\+Action\+Variable}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{get\+Action\+Variable() const }{getActionVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& Full\+Dynamic\+Equation\+Function\+::get\+Action\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{group__constraint_gaab7728b0f686c4ae63784c4a72871f13}{}\label{group__constraint_gaab7728b0f686c4ae63784c4a72871f13}
+
+
+Definition at line 208 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!get\+Inertia\+Matrix\+Inverse\+JchiT@{get\+Inertia\+Matrix\+Inverse\+JchiT}}
+\index{get\+Inertia\+Matrix\+Inverse\+JchiT@{get\+Inertia\+Matrix\+Inverse\+JchiT}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{get\+Inertia\+Matrix\+Inverse\+Jchi\+T() const }{getInertiaMatrixInverseJchiT() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix\+Xd \& Full\+Dynamic\+Equation\+Function\+::get\+Inertia\+Matrix\+Inverse\+JchiT (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{group__constraint_gaf5eec6352d53ef9682fa281f2692add2}{}\label{group__constraint_gaf5eec6352d53ef9682fa281f2692add2}
+
+
+Definition at line 194 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!get\+Inertia\+Matrix\+Inverse\+Lin\+Non\+Lin\+Grav@{get\+Inertia\+Matrix\+Inverse\+Lin\+Non\+Lin\+Grav}}
+\index{get\+Inertia\+Matrix\+Inverse\+Lin\+Non\+Lin\+Grav@{get\+Inertia\+Matrix\+Inverse\+Lin\+Non\+Lin\+Grav}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{get\+Inertia\+Matrix\+Inverse\+Lin\+Non\+Lin\+Grav() const }{getInertiaMatrixInverseLinNonLinGrav() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd \& Full\+Dynamic\+Equation\+Function\+::get\+Inertia\+Matrix\+Inverse\+Lin\+Non\+Lin\+Grav (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{group__constraint_ga3ac88fe8128c6ceb390057abb933e602}{}\label{group__constraint_ga3ac88fe8128c6ceb390057abb933e602}
+
+
+Definition at line 201 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!take\+Into\+Account\+Gravity@{take\+Into\+Account\+Gravity}}
+\index{take\+Into\+Account\+Gravity@{take\+Into\+Account\+Gravity}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{take\+Into\+Account\+Gravity(bool use\+Grav)}{takeIntoAccountGravity(bool useGrav)}}]{\setlength{\rightskip}{0pt plus 5cm}void Full\+Dynamic\+Equation\+Function\+::take\+Into\+Account\+Gravity (
+\begin{DoxyParamCaption}
+\item[{bool}]{use\+Grav}
+\end{DoxyParamCaption}
+)}\hypertarget{group__constraint_ga673fd9a47a249d84ce527011a06417aa}{}\label{group__constraint_ga673fd9a47a249d84ce527011a06417aa}
+
+
+Definition at line 88 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!updateb@{updateb}}
+\index{updateb@{updateb}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{updateb() const }{updateb() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Full\+Dynamic\+Equation\+Function\+::updateb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{group__constraint_gae2cb2e75b8cdb7bdb71e37bdbcabb156}{}\label{group__constraint_gae2cb2e75b8cdb7bdb71e37bdbcabb156}
+Update the vector ( $ \b $) in the function.
+
+It computes $ \b = \n + \g $ . 
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_a9857f074ea269801ce6f595b69593b32}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 110 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!update\+Jacobian@{update\+Jacobian}}
+\index{update\+Jacobian@{update\+Jacobian}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{update\+Jacobian() const }{updateJacobian() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Full\+Dynamic\+Equation\+Function\+::update\+Jacobian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{group__constraint_gab601abcc9508d55da24d1a1fa7332281}{}\label{group__constraint_gab601abcc9508d55da24d1a1fa7332281}
+Update the Jacobian matrix ( $ \A $) in the function.
+
+Actually, it computes $ \A = \begin{bmatrix} \M & -S & \J_c\tp \end{bmatrix} $ by updating $ \M $ and $ \J_c $. $ S $ is constant and has been initialized in the constructor which calls \hyperlink{group__constraint_ga19d9bbe4f78b4c396930388a70b8cd4b}{build\+A()} 
+
+Reimplemented from \hyperlink{classocra_1_1LinearFunction_a544c87a4f02b4d80ae70e53b80c74461}{ocra\+::\+Linear\+Function}.
+
+
+
+Definition at line 100 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+
+\index{Constraint@{Constraint}!````~Full\+Dynamic\+Equation\+Function@{$\sim$\+Full\+Dynamic\+Equation\+Function}}
+\index{````~Full\+Dynamic\+Equation\+Function@{$\sim$\+Full\+Dynamic\+Equation\+Function}!Constraint@{Constraint}}
+\subsubsection[{\texorpdfstring{$\sim$\+Full\+Dynamic\+Equation\+Function()}{~FullDynamicEquationFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}Full\+Dynamic\+Equation\+Function\+::$\sim$\+Full\+Dynamic\+Equation\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__constraint_gab3c2d35bef3c4d8733b7ab0e9ff48bfc}{}\label{group__constraint_gab3c2d35bef3c4d8733b7ab0e9ff48bfc}
+Destructor 
+
+Definition at line 79 of file Full\+Dynamic\+Equation\+Function.\+cpp.
+

@@ -1,0 +1,710 @@
+\hypertarget{classocra_1_1Controller}{}\section{ocra\+:\+:Controller Class Reference}
+\label{classocra_1_1Controller}\index{ocra\+::\+Controller@{ocra\+::\+Controller}}
+
+
+Interface for controllers.  
+
+
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d26/classocra_1_1Controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{dc/dfe/classocra_1_1Controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structocra_1_1Controller_1_1Pimpl}{Pimpl}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classocra_1_1Controller_a42bee636760563a73321de01ba972b6b}{$\sim$\+Controller} ()=0
+\item 
+void \hyperlink{classocra_1_1Controller_ad05741095a1e8f741cd3d4d67b40e239}{print\+Info} (int level, const std\+::string \&filename)
+\item 
+void \hyperlink{classocra_1_1Controller_a646510edd30c0fb5bc29e49917c32356}{set\+Max\+Joint\+Torques} (const Eigen\+::\+Vector\+Xd \&tau\+\_\+max)
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Controller_a0a8d3dd851fa903ec902cde75cb36719}{get\+Max\+Joint\+Torques} () const 
+\item 
+void \hyperlink{classocra_1_1Controller_a2135ac360027e8fcca02182055a7f714}{add\+Task} (std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ task)
+\item 
+void \hyperlink{classocra_1_1Controller_a75755b3a9b346283e4343e15e6f83ddb}{add\+Tasks} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$$>$ \&tasks)
+\item 
+void \hyperlink{classocra_1_1Controller_a0794b232fe416785b6bfb9e5e380424f}{remove\+Task} (const std\+::string \&task\+Name)
+\item 
+void \hyperlink{classocra_1_1Controller_ad0e1a54d26697be34348d8fb85b368d4}{remove\+Tasks} (const std\+::vector$<$ std\+::string $>$ tasks)
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classocra_1_1Controller_abecbaf3846371383eb3c6e8b2fef031b}{get\+Task\+Names} ()
+\item 
+std\+::string \hyperlink{classocra_1_1Controller_ae037e3554152ec025fbb7df09fba3deb}{get\+Task\+Port\+Name} (const std\+::string \&task\+Name)
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classocra_1_1Controller_aa18b2870c3099225050b4e95121cdd3f}{get\+Task\+Port\+Names} ()
+\item 
+void \hyperlink{classocra_1_1Controller_a51496c52fab832f53fe080a013f13a0e}{add\+Contact\+Set} (const \hyperlink{classocra_1_1ContactSet}{Contact\+Set} \&contacts)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classocra_1_1Controller_ab5ffcbcc07bf4191d38b75ef10214acb}{get\+Task} (const std\+::string \&name)
+\item 
+const std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classocra_1_1Controller_a17f6808078dd4fe57907f0215735dc0a}{get\+Task} (const std\+::string \&name) const 
+\item 
+const std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ $>$ \& \hyperlink{classocra_1_1Controller_ad3eade0e113e559a5ffc180a5a62e1d6}{get\+Tasks} () const 
+\item 
+void \hyperlink{classocra_1_1Controller_ada65e72ccb81a7020422268f36d944fe}{compute\+Output} (Eigen\+::\+Vector\+Xd \&tau)
+\begin{DoxyCompactList}\small\item\em Computation of output torques based on the tasks added to the controller. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Controller_a5d8c4178b4e9536187e355dc25f3739f}{compute\+Output} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classocra_1_1Controller_ae5a9612e98aae8beb306f2608171766a}{create\+Contact\+Task} (const std\+::string \&name, Point\+Contact\+Feature\+::\+Ptr feature, double mu, double margin) const 
+\begin{DoxyCompactList}\small\item\em Creates a contact task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classocra_1_1Controller_aa9e9469230abe83098eb2405c4ab5ade}{create\+Task} (const std\+::string \&name, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des) const 
+\begin{DoxyCompactList}\small\item\em Generic task creation. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classocra_1_1Controller_a7ed8dc51b54c8d3bbd73bc6be0a28cb7}{create\+Task} (const std\+::string \&name, Feature\+::\+Ptr feature) const 
+\end{DoxyCompactItemize}
+
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1Controller_a9f72394baa089119cf0b60e3c7160283}{Controller} (const std\+::string \&name, \hyperlink{classocra_1_1Model}{Model} \&model)
+\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ $>$ \& \hyperlink{classocra_1_1Controller_ae6bd140019ee47ec247f49efff7a8a32}{get\+Active\+Tasks} () const 
+\item 
+void \hyperlink{classocra_1_1Controller_a36df4135749c17f6d4425fabed37d022}{set\+Error\+Flag} (int eflag)
+\item 
+void \hyperlink{classocra_1_1Controller_a3e8c327d25152d457172a65d826c84b4}{set\+Error\+Message} (const std\+::string \&msg)
+\item 
+virtual void \hyperlink{classocra_1_1Controller_a8ca85413067d948459afa5981b3dda32}{do\+Compute\+Output} (Eigen\+::\+Vector\+Xd \&tau)=0
+\item 
+virtual void \hyperlink{classocra_1_1Controller_ab3477822a9363553c99eefa58ff803eb}{do\+Add\+Task} (std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ task)=0
+\item 
+virtual void \hyperlink{classocra_1_1Controller_acb11edc1ceaa89423c1e58f9cb38a9f7}{do\+Add\+Contact\+Set} (const \hyperlink{classocra_1_1ContactSet}{Contact\+Set} \&contacts)=0
+\item 
+virtual void \hyperlink{classocra_1_1Controller_a75d6419229980f6088a689fcafc1d224}{do\+Set\+Max\+Joint\+Torques} (const Eigen\+::\+Vector\+Xd \&tau\+Max)
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classocra_1_1Controller_a05f6d757e4125a71bf766df7f069ac43}{do\+Create\+Task} (const std\+::string \&name, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des) const =0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classocra_1_1Controller_a358a31c0b6b6bdcc0e6da5c49eb9fde5}{do\+Create\+Task} (const std\+::string \&name, Feature\+::\+Ptr feature) const =0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classocra_1_1Controller_a823933d261a12aac49f8a0ef56823ea4}{do\+Create\+Contact\+Task} (const std\+::string \&name, Point\+Contact\+Feature\+::\+Ptr feature, double mu, double margin) const =0
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6e}{Error\+Flag} \{ \\*
+\hyperlink{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eaf0c456fccd7111235e41d752e78d4e3d}{S\+U\+C\+C\+E\+SS} = 0, 
+\hyperlink{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eaa6ea1ed92f7f3f1278fb8bbf11a13d77}{C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+E\+R\+R\+OR} = 1, 
+\hyperlink{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea2c4995e7abb68ab3a51e2052609d0f46}{S\+T\+A\+T\+I\+C\+\_\+\+E\+Q\+\_\+\+L\+O\+SS} = 2, 
+\hyperlink{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eadb8ddca8cd6373851537d1c719f04c97}{D\+Y\+N\+\_\+\+E\+Q\+\_\+\+L\+O\+SS} = 4, 
+\\*
+\hyperlink{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea7dc3bcb2de72c9d94bdee2a99f5957d4}{I\+N\+S\+T\+A\+B\+I\+L\+I\+TY} = 8 + 1, 
+\hyperlink{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea2a5f1f9e553eccf1b3f1a26c5979c0ef}{O\+T\+H\+ER} = 16
+ \}\begin{DoxyCompactList}\small\item\em Error handling. \end{DoxyCompactList}
+\item 
+void \hyperlink{classocra_1_1Controller_a9f9773f34022d6f7b0abf95255088f70}{enable\+Error\+Handling} ()
+\item 
+void \hyperlink{classocra_1_1Controller_aad44e0db3e0039bf3d6eeb3a89a99752}{disable\+Error\+Handling} ()
+\item 
+bool \hyperlink{classocra_1_1Controller_af8fbf668cbe9944cd947e617ce992ea9}{is\+Error\+Handling\+Enabled} () const 
+\item 
+const std\+::string \& \hyperlink{classocra_1_1Controller_abcc464803f11d3f69c128e8e36aa0d1d}{get\+Error\+Message} () const 
+\item 
+void \hyperlink{classocra_1_1Controller_a18fe6c4ad06aa7b2254ab6e4e740d101}{clear\+Error\+Flag} ()
+\item 
+int \hyperlink{classocra_1_1Controller_a99f9c290350b5457f77611ec4fe83cef}{get\+Error\+Flag} () const 
+\item 
+void \hyperlink{classocra_1_1Controller_a80f0b90e59759bf79fc4ff8c85ca8d85}{set\+Max\+Joint\+Torque\+Norm} (double max\+Tau)
+\item 
+double \hyperlink{classocra_1_1Controller_a4c374a5467f865843a3d43cb1bd4b219}{get\+Max\+Joint\+Torque\+Norm} () const 
+\item 
+void \hyperlink{classocra_1_1Controller_aac8c56f6b63bb3ae57ac7bf9c23018e8}{set\+Fixed\+Link\+For\+Odometry} (std\+::string new\+Fixed\+Link)
+\item 
+void \hyperlink{classocra_1_1Controller_a3f6a080793612b0b66e1ce7a26897646}{set\+Use\+Odometry} (bool use\+Odometry)
+\item 
+void \hyperlink{classocra_1_1Controller_ad134da18dc753e50e6f615373fbf9adf}{get\+Fixed\+Link\+For\+Odometry} (std\+::string \&current\+Fixed\+Link)
+\item 
+void \hyperlink{classocra_1_1Controller_aa0b365af3cab4a8dc1a3ba3af6a073f0}{set\+Contact\+State} (int is\+In\+Left\+Support, int is\+In\+Right\+Support)
+\item 
+void \hyperlink{classocra_1_1Controller_a41e0a7fb9fd30c5b58640dd49be10d44}{get\+Contact\+State} (int \&left\+Support, int \&right\+Support)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for controllers. 
+
+This class can be derived to implement control laws for a manikin. 
+
+Definition at line 53 of file Controller.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!Error\+Flag@{Error\+Flag}}
+\index{Error\+Flag@{Error\+Flag}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{Error\+Flag}{ErrorFlag}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ocra\+::\+Controller\+::\+Error\+Flag}}\hypertarget{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6e}{}\label{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6e}
+
+
+Error handling. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+U\+C\+C\+E\+SS@{S\+U\+C\+C\+E\+SS}!ocra\+::\+Controller@{ocra\+::\+Controller}}\index{ocra\+::\+Controller@{ocra\+::\+Controller}!S\+U\+C\+C\+E\+SS@{S\+U\+C\+C\+E\+SS}}\item[{\em 
+S\+U\+C\+C\+E\+SS\hypertarget{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eaf0c456fccd7111235e41d752e78d4e3d}{}\label{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eaf0c456fccd7111235e41d752e78d4e3d}
+}]\index{C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+E\+R\+R\+OR@{C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+E\+R\+R\+OR}!ocra\+::\+Controller@{ocra\+::\+Controller}}\index{ocra\+::\+Controller@{ocra\+::\+Controller}!C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+E\+R\+R\+OR@{C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+E\+R\+R\+OR\hypertarget{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eaa6ea1ed92f7f3f1278fb8bbf11a13d77}{}\label{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eaa6ea1ed92f7f3f1278fb8bbf11a13d77}
+}]\index{S\+T\+A\+T\+I\+C\+\_\+\+E\+Q\+\_\+\+L\+O\+SS@{S\+T\+A\+T\+I\+C\+\_\+\+E\+Q\+\_\+\+L\+O\+SS}!ocra\+::\+Controller@{ocra\+::\+Controller}}\index{ocra\+::\+Controller@{ocra\+::\+Controller}!S\+T\+A\+T\+I\+C\+\_\+\+E\+Q\+\_\+\+L\+O\+SS@{S\+T\+A\+T\+I\+C\+\_\+\+E\+Q\+\_\+\+L\+O\+SS}}\item[{\em 
+S\+T\+A\+T\+I\+C\+\_\+\+E\+Q\+\_\+\+L\+O\+SS\hypertarget{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea2c4995e7abb68ab3a51e2052609d0f46}{}\label{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea2c4995e7abb68ab3a51e2052609d0f46}
+}]\index{D\+Y\+N\+\_\+\+E\+Q\+\_\+\+L\+O\+SS@{D\+Y\+N\+\_\+\+E\+Q\+\_\+\+L\+O\+SS}!ocra\+::\+Controller@{ocra\+::\+Controller}}\index{ocra\+::\+Controller@{ocra\+::\+Controller}!D\+Y\+N\+\_\+\+E\+Q\+\_\+\+L\+O\+SS@{D\+Y\+N\+\_\+\+E\+Q\+\_\+\+L\+O\+SS}}\item[{\em 
+D\+Y\+N\+\_\+\+E\+Q\+\_\+\+L\+O\+SS\hypertarget{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eadb8ddca8cd6373851537d1c719f04c97}{}\label{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6eadb8ddca8cd6373851537d1c719f04c97}
+}]\index{I\+N\+S\+T\+A\+B\+I\+L\+I\+TY@{I\+N\+S\+T\+A\+B\+I\+L\+I\+TY}!ocra\+::\+Controller@{ocra\+::\+Controller}}\index{ocra\+::\+Controller@{ocra\+::\+Controller}!I\+N\+S\+T\+A\+B\+I\+L\+I\+TY@{I\+N\+S\+T\+A\+B\+I\+L\+I\+TY}}\item[{\em 
+I\+N\+S\+T\+A\+B\+I\+L\+I\+TY\hypertarget{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea7dc3bcb2de72c9d94bdee2a99f5957d4}{}\label{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea7dc3bcb2de72c9d94bdee2a99f5957d4}
+}]\index{O\+T\+H\+ER@{O\+T\+H\+ER}!ocra\+::\+Controller@{ocra\+::\+Controller}}\index{ocra\+::\+Controller@{ocra\+::\+Controller}!O\+T\+H\+ER@{O\+T\+H\+ER}}\item[{\em 
+O\+T\+H\+ER\hypertarget{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea2a5f1f9e553eccf1b3f1a26c5979c0ef}{}\label{classocra_1_1Controller_abeaf3673abe2da79493638dcc49fcf6ea2a5f1f9e553eccf1b3f1a26c5979c0ef}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 95 of file Controller.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{Controller(const std\+::string \&name, Model \&model)}{Controller(const std::string &name, Model &model)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Controller\+::\+Controller (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Model} \&}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Controller_a9f72394baa089119cf0b60e3c7160283}{}\label{classocra_1_1Controller_a9f72394baa089119cf0b60e3c7160283}
+
+
+Definition at line 106 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!````~Controller@{$\sim$\+Controller}}
+\index{````~Controller@{$\sim$\+Controller}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{$\sim$\+Controller()=0}{~Controller()=0}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Controller\+::$\sim$\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Controller_a42bee636760563a73321de01ba972b6b}{}\label{classocra_1_1Controller_a42bee636760563a73321de01ba972b6b}
+
+
+Definition at line 115 of file Controller.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!add\+Contact\+Set@{add\+Contact\+Set}}
+\index{add\+Contact\+Set@{add\+Contact\+Set}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{add\+Contact\+Set(const Contact\+Set \&contacts)}{addContactSet(const ContactSet &contacts)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::add\+Contact\+Set (
+\begin{DoxyParamCaption}
+\item[{const {\bf Contact\+Set} \&}]{contacts}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a51496c52fab832f53fe080a013f13a0e}{}\label{classocra_1_1Controller_a51496c52fab832f53fe080a013f13a0e}
+
+
+Definition at line 209 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!add\+Task@{add\+Task}}
+\index{add\+Task@{add\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{add\+Task(std\+::shared\+\_\+ptr$<$ Task $>$ task)}{addTask(std::shared_ptr< Task > task)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::add\+Task (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Task} $>$}]{task}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a2135ac360027e8fcca02182055a7f714}{}\label{classocra_1_1Controller_a2135ac360027e8fcca02182055a7f714}
+
+
+Definition at line 184 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!add\+Tasks@{add\+Tasks}}
+\index{add\+Tasks@{add\+Tasks}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{add\+Tasks(const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Task $>$$>$ \&tasks)}{addTasks(const std::vector< std::shared_ptr< Task >> &tasks)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::add\+Tasks (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ {\bf Task} $>$$>$ \&}]{tasks}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a75755b3a9b346283e4343e15e6f83ddb}{}\label{classocra_1_1Controller_a75755b3a9b346283e4343e15e6f83ddb}
+
+
+Definition at line 191 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!clear\+Error\+Flag@{clear\+Error\+Flag}}
+\index{clear\+Error\+Flag@{clear\+Error\+Flag}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{clear\+Error\+Flag()}{clearErrorFlag()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::clear\+Error\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a18fe6c4ad06aa7b2254ab6e4e740d101}{}\label{classocra_1_1Controller_a18fe6c4ad06aa7b2254ab6e4e740d101}
+
+
+Definition at line 333 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!compute\+Output@{compute\+Output}}
+\index{compute\+Output@{compute\+Output}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{compute\+Output(\+Eigen\+::\+Vector\+Xd \&tau)}{computeOutput(Eigen::VectorXd &tau)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::compute\+Output (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{tau}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_ada65e72ccb81a7020422268f36d944fe}{}\label{classocra_1_1Controller_ada65e72ccb81a7020422268f36d944fe}
+
+
+Computation of output torques based on the tasks added to the controller. 
+
+Calls the method do\+Compute\+Output, which can be overloaded to implement specific control laws to realize the added tasks. 
+
+Definition at line 258 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!compute\+Output@{compute\+Output}}
+\index{compute\+Output@{compute\+Output}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{compute\+Output()}{computeOutput()}}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd \& ocra\+::\+Controller\+::compute\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a5d8c4178b4e9536187e355dc25f3739f}{}\label{classocra_1_1Controller_a5d8c4178b4e9536187e355dc25f3739f}
+
+
+Definition at line 252 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!create\+Contact\+Task@{create\+Contact\+Task}}
+\index{create\+Contact\+Task@{create\+Contact\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{create\+Contact\+Task(const std\+::string \&name, Point\+Contact\+Feature\+::\+Ptr feature, double mu, double margin) const }{createContactTask(const std::string &name, PointContactFeature::Ptr feature, double mu, double margin) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ ocra\+::\+Controller\+::create\+Contact\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Point\+Contact\+Feature\+::\+Ptr}]{feature, }
+\item[{double}]{mu, }
+\item[{double}]{margin}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_ae5a9612e98aae8beb306f2608171766a}{}\label{classocra_1_1Controller_ae5a9612e98aae8beb306f2608171766a}
+
+
+Creates a contact task. 
+
+The parameters describe the friction cone parameters for the force applied by the manikin on the environment. 
+
+Definition at line 378 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!create\+Task@{create\+Task}}
+\index{create\+Task@{create\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{create\+Task(const std\+::string \&name, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des) const }{createTask(const std::string &name, Feature::Ptr feature, Feature::Ptr featureDes) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ ocra\+::\+Controller\+::create\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Feature\+::\+Ptr}]{feature, }
+\item[{Feature\+::\+Ptr}]{feature\+Des}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_aa9e9469230abe83098eb2405c4ab5ade}{}\label{classocra_1_1Controller_aa9e9469230abe83098eb2405c4ab5ade}
+
+
+Generic task creation. 
+
+
+
+Definition at line 354 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!create\+Task@{create\+Task}}
+\index{create\+Task@{create\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{create\+Task(const std\+::string \&name, Feature\+::\+Ptr feature) const }{createTask(const std::string &name, Feature::Ptr feature) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ ocra\+::\+Controller\+::create\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Feature\+::\+Ptr}]{feature}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_a7ed8dc51b54c8d3bbd73bc6be0a28cb7}{}\label{classocra_1_1Controller_a7ed8dc51b54c8d3bbd73bc6be0a28cb7}
+
+
+Definition at line 365 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!disable\+Error\+Handling@{disable\+Error\+Handling}}
+\index{disable\+Error\+Handling@{disable\+Error\+Handling}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{disable\+Error\+Handling()}{disableErrorHandling()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::disable\+Error\+Handling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_aad44e0db3e0039bf3d6eeb3a89a99752}{}\label{classocra_1_1Controller_aad44e0db3e0039bf3d6eeb3a89a99752}
+
+
+Definition at line 318 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!do\+Add\+Contact\+Set@{do\+Add\+Contact\+Set}}
+\index{do\+Add\+Contact\+Set@{do\+Add\+Contact\+Set}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Add\+Contact\+Set(const Contact\+Set \&contacts)=0}{doAddContactSet(const ContactSet &contacts)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Controller\+::do\+Add\+Contact\+Set (
+\begin{DoxyParamCaption}
+\item[{const {\bf Contact\+Set} \&}]{contacts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Controller_acb11edc1ceaa89423c1e58f9cb38a9f7}{}\label{classocra_1_1Controller_acb11edc1ceaa89423c1e58f9cb38a9f7}
+
+
+Implemented in \hyperlink{classwocra_1_1WocraController_a74d8fa3103ca3787add351620c5bcf73}{wocra\+::\+Wocra\+Controller}, \hyperlink{classgocra_1_1GHCJTController_a28367b3b895eaa223581131258ef5d2d}{gocra\+::\+G\+H\+C\+J\+T\+Controller}, and \hyperlink{classhocra_1_1HocraController_a6292f35dbfe7f2292f018c51d492ace2}{hocra\+::\+Hocra\+Controller}.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!do\+Add\+Task@{do\+Add\+Task}}
+\index{do\+Add\+Task@{do\+Add\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Add\+Task(std\+::shared\+\_\+ptr$<$ Task $>$ task)=0}{doAddTask(std::shared_ptr< Task > task)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Controller\+::do\+Add\+Task (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Task} $>$}]{task}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Controller_ab3477822a9363553c99eefa58ff803eb}{}\label{classocra_1_1Controller_ab3477822a9363553c99eefa58ff803eb}
+
+
+Implemented in \hyperlink{classwocra_1_1WocraController_aa9a681aa5c0f043638d4d2956c2913c1}{wocra\+::\+Wocra\+Controller}.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!do\+Compute\+Output@{do\+Compute\+Output}}
+\index{do\+Compute\+Output@{do\+Compute\+Output}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Compute\+Output(\+Eigen\+::\+Vector\+Xd \&tau)=0}{doComputeOutput(Eigen::VectorXd &tau)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Controller\+::do\+Compute\+Output (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Controller_a8ca85413067d948459afa5981b3dda32}{}\label{classocra_1_1Controller_a8ca85413067d948459afa5981b3dda32}
+
+
+Implemented in \hyperlink{classwocra_1_1WocraController_aaf750c45d062220e3f78ccb1c8a41d07}{wocra\+::\+Wocra\+Controller}, and \hyperlink{classgocra_1_1GHCJTController_a0f2412763e005e9e18b9129e460411bd}{gocra\+::\+G\+H\+C\+J\+T\+Controller}.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!do\+Create\+Contact\+Task@{do\+Create\+Contact\+Task}}
+\index{do\+Create\+Contact\+Task@{do\+Create\+Contact\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Create\+Contact\+Task(const std\+::string \&name, Point\+Contact\+Feature\+::\+Ptr feature, double mu, double margin) const =0}{doCreateContactTask(const std::string &name, PointContactFeature::Ptr feature, double mu, double margin) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::shared\+\_\+ptr$<${\bf Task}$>$ ocra\+::\+Controller\+::do\+Create\+Contact\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Point\+Contact\+Feature\+::\+Ptr}]{feature, }
+\item[{double}]{mu, }
+\item[{double}]{margin}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Controller_a823933d261a12aac49f8a0ef56823ea4}{}\label{classocra_1_1Controller_a823933d261a12aac49f8a0ef56823ea4}
+
+
+Implemented in \hyperlink{classwocra_1_1WocraController_a3d64cc975fa9b62e5d9919f34ea7d847}{wocra\+::\+Wocra\+Controller}, and \hyperlink{classgocra_1_1GHCJTController_a4d15ad1da5f9a896710cd6c0b8f7bf48}{gocra\+::\+G\+H\+C\+J\+T\+Controller}.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!do\+Create\+Task@{do\+Create\+Task}}
+\index{do\+Create\+Task@{do\+Create\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Create\+Task(const std\+::string \&name, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des) const =0}{doCreateTask(const std::string &name, Feature::Ptr feature, Feature::Ptr featureDes) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::shared\+\_\+ptr$<${\bf Task}$>$ ocra\+::\+Controller\+::do\+Create\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Feature\+::\+Ptr}]{feature, }
+\item[{Feature\+::\+Ptr}]{feature\+Des}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Controller_a05f6d757e4125a71bf766df7f069ac43}{}\label{classocra_1_1Controller_a05f6d757e4125a71bf766df7f069ac43}
+
+
+Implemented in \hyperlink{classwocra_1_1WocraController_a5c262993b8c418aa61ccfac921891416}{wocra\+::\+Wocra\+Controller}, and \hyperlink{classgocra_1_1GHCJTController_a629d7ecb9716561a1a342e472d551424}{gocra\+::\+G\+H\+C\+J\+T\+Controller}.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!do\+Create\+Task@{do\+Create\+Task}}
+\index{do\+Create\+Task@{do\+Create\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Create\+Task(const std\+::string \&name, Feature\+::\+Ptr feature) const =0}{doCreateTask(const std::string &name, Feature::Ptr feature) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::shared\+\_\+ptr$<${\bf Task}$>$ ocra\+::\+Controller\+::do\+Create\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Feature\+::\+Ptr}]{feature}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Controller_a358a31c0b6b6bdcc0e6da5c49eb9fde5}{}\label{classocra_1_1Controller_a358a31c0b6b6bdcc0e6da5c49eb9fde5}
+
+
+Implemented in \hyperlink{classwocra_1_1WocraController_aa04446cc76a0868e875597720bbc6449}{wocra\+::\+Wocra\+Controller}, and \hyperlink{classgocra_1_1GHCJTController_a5da4f9e70a55761065ce606ba468e760}{gocra\+::\+G\+H\+C\+J\+T\+Controller}.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!do\+Set\+Max\+Joint\+Torques@{do\+Set\+Max\+Joint\+Torques}}
+\index{do\+Set\+Max\+Joint\+Torques@{do\+Set\+Max\+Joint\+Torques}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Set\+Max\+Joint\+Torques(const Eigen\+::\+Vector\+Xd \&tau\+Max)}{doSetMaxJointTorques(const Eigen::VectorXd &tauMax)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::do\+Set\+Max\+Joint\+Torques (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{tau\+Max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Controller_a75d6419229980f6088a689fcafc1d224}{}\label{classocra_1_1Controller_a75d6419229980f6088a689fcafc1d224}
+
+
+Definition at line 177 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!enable\+Error\+Handling@{enable\+Error\+Handling}}
+\index{enable\+Error\+Handling@{enable\+Error\+Handling}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{enable\+Error\+Handling()}{enableErrorHandling()}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::enable\+Error\+Handling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a9f9773f34022d6f7b0abf95255088f70}{}\label{classocra_1_1Controller_a9f9773f34022d6f7b0abf95255088f70}
+
+
+Definition at line 313 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Active\+Tasks@{get\+Active\+Tasks}}
+\index{get\+Active\+Tasks@{get\+Active\+Tasks}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Active\+Tasks() const }{getActiveTasks() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ $>$ \& ocra\+::\+Controller\+::get\+Active\+Tasks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Controller_ae6bd140019ee47ec247f49efff7a8a32}{}\label{classocra_1_1Controller_ae6bd140019ee47ec247f49efff7a8a32}
+
+
+Definition at line 394 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Contact\+State@{get\+Contact\+State}}
+\index{get\+Contact\+State@{get\+Contact\+State}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Contact\+State(int \&left\+Support, int \&right\+Support)}{getContactState(int &leftSupport, int &rightSupport)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::get\+Contact\+State (
+\begin{DoxyParamCaption}
+\item[{int \&}]{left\+Support, }
+\item[{int \&}]{right\+Support}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a41e0a7fb9fd30c5b58640dd49be10d44}{}\label{classocra_1_1Controller_a41e0a7fb9fd30c5b58640dd49be10d44}
+
+
+Definition at line 306 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Error\+Flag@{get\+Error\+Flag}}
+\index{get\+Error\+Flag@{get\+Error\+Flag}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Error\+Flag() const }{getErrorFlag() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Controller\+::get\+Error\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_a99f9c290350b5457f77611ec4fe83cef}{}\label{classocra_1_1Controller_a99f9c290350b5457f77611ec4fe83cef}
+
+
+Definition at line 339 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Error\+Message@{get\+Error\+Message}}
+\index{get\+Error\+Message@{get\+Error\+Message}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Error\+Message() const }{getErrorMessage() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& ocra\+::\+Controller\+::get\+Error\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_abcc464803f11d3f69c128e8e36aa0d1d}{}\label{classocra_1_1Controller_abcc464803f11d3f69c128e8e36aa0d1d}
+
+
+Definition at line 328 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Fixed\+Link\+For\+Odometry@{get\+Fixed\+Link\+For\+Odometry}}
+\index{get\+Fixed\+Link\+For\+Odometry@{get\+Fixed\+Link\+For\+Odometry}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Fixed\+Link\+For\+Odometry(std\+::string \&current\+Fixed\+Link)}{getFixedLinkForOdometry(std::string &currentFixedLink)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::get\+Fixed\+Link\+For\+Odometry (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{current\+Fixed\+Link}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Controller_ad134da18dc753e50e6f615373fbf9adf}{}\label{classocra_1_1Controller_ad134da18dc753e50e6f615373fbf9adf}
+
+
+Definition at line 115 of file Controller.\+h.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Max\+Joint\+Torque\+Norm@{get\+Max\+Joint\+Torque\+Norm}}
+\index{get\+Max\+Joint\+Torque\+Norm@{get\+Max\+Joint\+Torque\+Norm}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Max\+Joint\+Torque\+Norm() const }{getMaxJointTorqueNorm() const }}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Controller\+::get\+Max\+Joint\+Torque\+Norm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_a4c374a5467f865843a3d43cb1bd4b219}{}\label{classocra_1_1Controller_a4c374a5467f865843a3d43cb1bd4b219}
+
+
+Definition at line 349 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Max\+Joint\+Torques@{get\+Max\+Joint\+Torques}}
+\index{get\+Max\+Joint\+Torques@{get\+Max\+Joint\+Torques}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Max\+Joint\+Torques() const }{getMaxJointTorques() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Controller\+::get\+Max\+Joint\+Torques (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_a0a8d3dd851fa903ec902cde75cb36719}{}\label{classocra_1_1Controller_a0a8d3dd851fa903ec902cde75cb36719}
+
+
+Definition at line 179 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Task@{get\+Task}}
+\index{get\+Task@{get\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Task(const std\+::string \&name)}{getTask(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ ocra\+::\+Controller\+::get\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_ab5ffcbcc07bf4191d38b75ef10214acb}{}\label{classocra_1_1Controller_ab5ffcbcc07bf4191d38b75ef10214acb}
+
+
+Definition at line 214 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Task@{get\+Task}}
+\index{get\+Task@{get\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Task(const std\+::string \&name) const }{getTask(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ ocra\+::\+Controller\+::get\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_a17f6808078dd4fe57907f0215735dc0a}{}\label{classocra_1_1Controller_a17f6808078dd4fe57907f0215735dc0a}
+
+
+Definition at line 247 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Task\+Names@{get\+Task\+Names}}
+\index{get\+Task\+Names@{get\+Task\+Names}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Task\+Names()}{getTaskNames()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ ocra\+::\+Controller\+::get\+Task\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_abecbaf3846371383eb3c6e8b2fef031b}{}\label{classocra_1_1Controller_abecbaf3846371383eb3c6e8b2fef031b}
+
+
+Definition at line 219 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Task\+Port\+Name@{get\+Task\+Port\+Name}}
+\index{get\+Task\+Port\+Name@{get\+Task\+Port\+Name}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Task\+Port\+Name(const std\+::string \&task\+Name)}{getTaskPortName(const std::string &taskName)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ocra\+::\+Controller\+::get\+Task\+Port\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{task\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_ae037e3554152ec025fbb7df09fba3deb}{}\label{classocra_1_1Controller_ae037e3554152ec025fbb7df09fba3deb}
+
+
+Definition at line 228 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Task\+Port\+Names@{get\+Task\+Port\+Names}}
+\index{get\+Task\+Port\+Names@{get\+Task\+Port\+Names}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Task\+Port\+Names()}{getTaskPortNames()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ ocra\+::\+Controller\+::get\+Task\+Port\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_aa18b2870c3099225050b4e95121cdd3f}{}\label{classocra_1_1Controller_aa18b2870c3099225050b4e95121cdd3f}
+
+
+Definition at line 238 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!get\+Tasks@{get\+Tasks}}
+\index{get\+Tasks@{get\+Tasks}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Tasks() const }{getTasks() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ $>$ \& ocra\+::\+Controller\+::get\+Tasks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_ad3eade0e113e559a5ffc180a5a62e1d6}{}\label{classocra_1_1Controller_ad3eade0e113e559a5ffc180a5a62e1d6}
+
+
+Definition at line 411 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!is\+Error\+Handling\+Enabled@{is\+Error\+Handling\+Enabled}}
+\index{is\+Error\+Handling\+Enabled@{is\+Error\+Handling\+Enabled}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{is\+Error\+Handling\+Enabled() const }{isErrorHandlingEnabled() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Controller\+::is\+Error\+Handling\+Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Controller_af8fbf668cbe9944cd947e617ce992ea9}{}\label{classocra_1_1Controller_af8fbf668cbe9944cd947e617ce992ea9}
+
+
+Definition at line 323 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!print\+Info@{print\+Info}}
+\index{print\+Info@{print\+Info}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{print\+Info(int level, const std\+::string \&filename)}{printInfo(int level, const std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::print\+Info (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_ad05741095a1e8f741cd3d4d67b40e239}{}\label{classocra_1_1Controller_ad05741095a1e8f741cd3d4d67b40e239}
+
+
+Definition at line 119 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!remove\+Task@{remove\+Task}}
+\index{remove\+Task@{remove\+Task}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{remove\+Task(const std\+::string \&task\+Name)}{removeTask(const std::string &taskName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::remove\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{task\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a0794b232fe416785b6bfb9e5e380424f}{}\label{classocra_1_1Controller_a0794b232fe416785b6bfb9e5e380424f}
+
+
+Definition at line 197 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!remove\+Tasks@{remove\+Tasks}}
+\index{remove\+Tasks@{remove\+Tasks}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{remove\+Tasks(const std\+::vector$<$ std\+::string $>$ tasks)}{removeTasks(const std::vector< std::string > tasks)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::remove\+Tasks (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$}]{tasks}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_ad0e1a54d26697be34348d8fb85b368d4}{}\label{classocra_1_1Controller_ad0e1a54d26697be34348d8fb85b368d4}
+
+
+Definition at line 203 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!set\+Contact\+State@{set\+Contact\+State}}
+\index{set\+Contact\+State@{set\+Contact\+State}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Contact\+State(int is\+In\+Left\+Support, int is\+In\+Right\+Support)}{setContactState(int isInLeftSupport, int isInRightSupport)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::set\+Contact\+State (
+\begin{DoxyParamCaption}
+\item[{int}]{is\+In\+Left\+Support, }
+\item[{int}]{is\+In\+Right\+Support}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Controller_aa0b365af3cab4a8dc1a3ba3af6a073f0}{}\label{classocra_1_1Controller_aa0b365af3cab4a8dc1a3ba3af6a073f0}
+
+
+Definition at line 116 of file Controller.\+h.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!set\+Error\+Flag@{set\+Error\+Flag}}
+\index{set\+Error\+Flag@{set\+Error\+Flag}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Error\+Flag(int eflag)}{setErrorFlag(int eflag)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::set\+Error\+Flag (
+\begin{DoxyParamCaption}
+\item[{int}]{eflag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Controller_a36df4135749c17f6d4425fabed37d022}{}\label{classocra_1_1Controller_a36df4135749c17f6d4425fabed37d022}
+
+
+Definition at line 401 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!set\+Error\+Message@{set\+Error\+Message}}
+\index{set\+Error\+Message@{set\+Error\+Message}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Error\+Message(const std\+::string \&msg)}{setErrorMessage(const std::string &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::set\+Error\+Message (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classocra_1_1Controller_a3e8c327d25152d457172a65d826c84b4}{}\label{classocra_1_1Controller_a3e8c327d25152d457172a65d826c84b4}
+
+
+Definition at line 406 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!set\+Fixed\+Link\+For\+Odometry@{set\+Fixed\+Link\+For\+Odometry}}
+\index{set\+Fixed\+Link\+For\+Odometry@{set\+Fixed\+Link\+For\+Odometry}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Fixed\+Link\+For\+Odometry(std\+::string new\+Fixed\+Link)}{setFixedLinkForOdometry(std::string newFixedLink)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::set\+Fixed\+Link\+For\+Odometry (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{new\+Fixed\+Link}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_aac8c56f6b63bb3ae57ac7bf9c23018e8}{}\label{classocra_1_1Controller_aac8c56f6b63bb3ae57ac7bf9c23018e8}
+
+
+Definition at line 300 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!set\+Max\+Joint\+Torque\+Norm@{set\+Max\+Joint\+Torque\+Norm}}
+\index{set\+Max\+Joint\+Torque\+Norm@{set\+Max\+Joint\+Torque\+Norm}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Max\+Joint\+Torque\+Norm(double max\+Tau)}{setMaxJointTorqueNorm(double maxTau)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::set\+Max\+Joint\+Torque\+Norm (
+\begin{DoxyParamCaption}
+\item[{double}]{max\+Tau}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a80f0b90e59759bf79fc4ff8c85ca8d85}{}\label{classocra_1_1Controller_a80f0b90e59759bf79fc4ff8c85ca8d85}
+
+
+Definition at line 344 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!set\+Max\+Joint\+Torques@{set\+Max\+Joint\+Torques}}
+\index{set\+Max\+Joint\+Torques@{set\+Max\+Joint\+Torques}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Max\+Joint\+Torques(const Eigen\+::\+Vector\+Xd \&tau\+\_\+max)}{setMaxJointTorques(const Eigen::VectorXd &tau_max)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::set\+Max\+Joint\+Torques (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{tau\+\_\+max}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Controller_a646510edd30c0fb5bc29e49917c32356}{}\label{classocra_1_1Controller_a646510edd30c0fb5bc29e49917c32356}
+
+
+Definition at line 172 of file Controller.\+cpp.
+
+\index{ocra\+::\+Controller@{ocra\+::\+Controller}!set\+Use\+Odometry@{set\+Use\+Odometry}}
+\index{set\+Use\+Odometry@{set\+Use\+Odometry}!ocra\+::\+Controller@{ocra\+::\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Use\+Odometry(bool use\+Odometry)}{setUseOdometry(bool useOdometry)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Controller\+::set\+Use\+Odometry (
+\begin{DoxyParamCaption}
+\item[{bool}]{use\+Odometry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Controller_a3f6a080793612b0b66e1ce7a26897646}{}\label{classocra_1_1Controller_a3f6a080793612b0b66e1ce7a26897646}
+
+
+Definition at line 114 of file Controller.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Controller_8h}{Controller.\+h}\item 
+\hyperlink{Controller_8cpp}{Controller.\+cpp}\end{DoxyCompactItemize}

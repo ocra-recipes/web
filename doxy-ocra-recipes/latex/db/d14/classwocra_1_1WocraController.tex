@@ -1,0 +1,587 @@
+\hypertarget{classwocra_1_1WocraController}{}\section{wocra\+:\+:Wocra\+Controller Class Reference}
+\label{classwocra_1_1WocraController}\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+
+
+Wocra Controller based on L\+QP solver for the ocra framework.  
+
+
+
+
+{\ttfamily \#include $<$Wocra\+Controller.\+h$>$}
+
+
+
+Inheritance diagram for wocra\+:\+:Wocra\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d9/d5a/classwocra_1_1WocraController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wocra\+:\+:Wocra\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{df/db8/classwocra_1_1WocraController__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structwocra_1_1WocraController_1_1Pimpl}{Pimpl}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwocra_1_1WocraController_ae14fda387f6d308aead6ab7a59e82e74}{Wocra\+Controller} (const std\+::string \&ctrl\+Name, std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Model}{Model} $>$ inner\+Model, std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1OneLevelSolver}{One\+Level\+Solver} $>$ inner\+Solver, bool use\+Reduced\+Problem)
+\item 
+virtual \hyperlink{classwocra_1_1WocraController_a4051d9aab485cfa444ed90da795f2bb2}{$\sim$\+Wocra\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Destructor of Wocra controller. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Model}{Model} $>$ \hyperlink{classwocra_1_1WocraController_adc7f78b5f888c76a3296cfd5882caad1}{get\+Model} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1OneLevelSolver}{One\+Level\+Solver} $>$ \hyperlink{classwocra_1_1WocraController_a94f67ee0ae6985969f4f1798bde0a9db}{get\+Solver} ()
+\item 
+bool \hyperlink{classwocra_1_1WocraController_a89eab1194e0598d8b30730429f286450}{is\+Using\+Reduced\+Problem} ()
+\item 
+void \hyperlink{classwocra_1_1WocraController_a23b01d7dad39803132d69ae335212615}{set\+Variable\+Minimization\+Weights} (double w\+\_\+ddq, double w\+\_\+tau, double w\+\_\+fc)
+\item 
+void \hyperlink{classwocra_1_1WocraController_a339cb7de07b9766aba4b3d1cfd6a78d4}{take\+Into\+Account\+Gravity} (bool use\+Grav)
+\item 
+void \hyperlink{classwocra_1_1WocraController_ac7afeae13732d4c92cd7d891c0dd0cfb}{write\+Performance\+In\+Stream} (std\+::ostream \&my\+Ostream, bool add\+Comma\+At\+End) const 
+\item 
+std\+::string \hyperlink{classwocra_1_1WocraController_a44695f9e97a941d0c33da1872030566a}{get\+Performances} () const 
+\item 
+void \hyperlink{classwocra_1_1WocraController_ad52998ef1b3eb30e62697027e3b98945}{add\+Constraint} (\hyperlink{namespaceocra_ae8b87cf4099be3efc3b410019ad2046e}{ocra\+::\+Linear\+Constraint} \&constraint) const 
+\item 
+void \hyperlink{classwocra_1_1WocraController_ac2cfe82f7fa0a8438160376094f583da}{remove\+Constraint} (\hyperlink{namespaceocra_ae8b87cf4099be3efc3b410019ad2046e}{ocra\+::\+Linear\+Constraint} \&constraint) const 
+\item 
+void \hyperlink{classwocra_1_1WocraController_a792ca8a7b81817ebefd5c6fcab6e5eee}{add\+Constraint} (\hyperlink{classocra_1_1ControlConstraint}{ocra\+::\+Control\+Constraint} \&constraint) const 
+\item 
+void \hyperlink{classwocra_1_1WocraController_a4690b2bb73e8c7868d1b8a02378316e8}{remove\+Constraint} (\hyperlink{classocra_1_1ControlConstraint}{ocra\+::\+Control\+Constraint} \&constraint) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classwocra_1_1WocraController_aaf750c45d062220e3f78ccb1c8a41d07}{do\+Compute\+Output} (Eigen\+::\+Vector\+Xd \&tau)
+\item 
+virtual void \hyperlink{classwocra_1_1WocraController_aa9a681aa5c0f043638d4d2956c2913c1}{do\+Add\+Task} (std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ task)
+\item 
+virtual void \hyperlink{classwocra_1_1WocraController_a74d8fa3103ca3787add351620c5bcf73}{do\+Add\+Contact\+Set} (const \hyperlink{classocra_1_1ContactSet}{Contact\+Set} \&contacts)
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classwocra_1_1WocraController_a5c262993b8c418aa61ccfac921891416}{do\+Create\+Task} (const std\+::string \&name, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des) const 
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classwocra_1_1WocraController_aa04446cc76a0868e875597720bbc6449}{do\+Create\+Task} (const std\+::string \&name, Feature\+::\+Ptr feature) const 
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classocra_1_1Task}{Task} $>$ \hyperlink{classwocra_1_1WocraController_a3d64cc975fa9b62e5d9919f34ea7d847}{do\+Create\+Contact\+Task} (const std\+::string \&name, Point\+Contact\+Feature\+::\+Ptr feature, double mu, double margin) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Wocra Controller based on L\+QP solver for the ocra framework. 
+
+This controller is a generic optimization-\/based whole-\/body dynamic one, which can deal with tasks transitions. The multi-\/task management and their sequencing is done with a weighting strategy. A mechanical system presents different control issues regarding its limitations and physical constraints which are passed to the optimization problem as equality and inequality constraints. The controller will correct the error between actual and desired states by, for example, minimizing an error resulting from the quadratic norm of their difference. This error will be minimized through a Linear Quadratic Program (L\+QP), which is composed by a quadratic cost function with linear constraints.
+
+The following are types of internal and external physical constraints of the system, describing a robot and its interaction with the environment\+:
+
+
+\begin{DoxyItemize}
+\item Equations of motion (with interactions) (See \hyperlink{classocra_1_1FullDynamicEquationFunction}{ocra\+::\+Full\+Dynamic\+Equation\+Function}).
+\item Actuation limits.
+\begin{DoxyItemize}
+\item Torque limits.
+\item Acceleration limits.
+\item Velocity limits.
+\item Joint limits.
+\end{DoxyItemize}
+\item Obstacle avoidance.
+\item Interaction with the environment\+:
+\begin{DoxyItemize}
+\item Bilateral closure.
+\item Unilateral frictional contact.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+All the previous constraints are linear except for the unilateral frictional contacts, which represent the constraint of the contact forces lying in the Coulomb friction cone and is nonlinear, but at least quadratic. To deal with these kinds of constraints the W\+O\+C\+RA controller will rely on the L\+QP formulation, since it is simpler and more suitable for the real-\/time dynamic control of humanoid robots.
+
+Wocra will address the low-\/level control of the robot through the concept of tasks, i.\+e. the control of one or more DoF of the system towards objectives which are generally the minimization of tracking errors. Tasks are composed of two main elements, the subset of the controlled DoF and their desired goals (For more details on tasks, see ()). An example of a task function is the norm of an error.
+
+Different tasks can be mixed in wocra to achieve a desired high-\/level motion. These tasks will be subject to the aforementioned equality and inequality constraints, which motivate the use of an L\+QP, which solves the following problem\+:
+
+\begin{align*} \underset{\x}{\text{min}} &\; \frac{1}{2} \left( \x\tp P \x + \q\tp\x + r \right) \\ s.t. &:\; \G\x \leq h \\ &\; A\x = \b \end{align*}
+
+Where $ x $ is the vector to optimize, $ P $, $ q $ and $ r $ represent the quadratic cost function, $ G $, $ h $ define the inequality constraints and $ A $, $ b $ define the equality constraints, which are the concatenation of the different constraints previously mentioned. The controller thus builds these matrices according to the tasks and the constraints acting on the robot and, when the solution is found, extracts the input torque vector $ \tau $ to actuate the system. $ x $ can be replaced by $ \left[ \ddq \tp \; f_c \tp \; \tau \tp \right] \tp $ which we also denote by the {\bfseries dynamic variable} $ \X = [\ddq\tp \av] $, where $ \av $ is further referred to as the {\bfseries action variable}.
+
+But the story does not end here. In particular, Wocra will use a weighting strategy which associates each task with a coefficient that sets its importance with respect to the others (a task with a higher weights gets a higher priority). The first point is to set these coefficients as real values. As a consequence, priorities are not strict and all tasks are achieved according to the trade-\/off defined by the weights. Given a set of $ n $ tasks and their related weights $ (T_i(\q, \dq, \X), \omega_i) \; i \in [1...n] $ one solves their weighted sum subject to the concatenation of the constraints. The task $ T_0 $ is dedicated to the minimization of the whole optimization variable. This is required when the control problem has many solutions, in order to ensure the uniqueness and more specifically to provide a solution that minimizes the input torque vector $ \tau $. $ T_0 $ has a very small weight with respect to the others $ 0 < \omega_0 << 1 $ to limit the induced error. This program is solved only one time per call.
+
+The algorithm consists then in finding $\X_i^*$, the solution of the problem\+:
+
+\begin{align*} \underset{\X}{\text{min}} &\; \frac{1}{2} \left( \sum_{i=1}^{n} (\omega_i^2 T_i (\q, \dq, \X)) + \omega_0^2 T_0(\q, \dq, \X) \right) \\ s.t.: &\; G \X \leq \h \\ &\; \A \X = \b \end{align*}
+
+{\bfseries [salini2012\+Thesis]}.
+
+\begin{DoxyNote}{Note}
+Put proper link to the Tasks class and document it well based on Salini\textquotesingle{}s thesis. 
+\end{DoxyNote}
+
+
+Definition at line 101 of file Wocra\+Controller.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!Wocra\+Controller@{Wocra\+Controller}}
+\index{Wocra\+Controller@{Wocra\+Controller}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{Wocra\+Controller(const std\+::string \&ctrl\+Name, std\+::shared\+\_\+ptr$<$ Model $>$ inner\+Model, std\+::shared\+\_\+ptr$<$ One\+Level\+Solver $>$ inner\+Solver, bool use\+Reduced\+Problem)}{WocraController(const std::string &ctrlName, std::shared_ptr< Model > innerModel, std::shared_ptr< OneLevelSolver > innerSolver, bool useReducedProblem)}}]{\setlength{\rightskip}{0pt plus 5cm}wocra\+::\+Wocra\+Controller\+::\+Wocra\+Controller (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{ctrl\+Name, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Model} $>$}]{inner\+Model, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf One\+Level\+Solver} $>$}]{inner\+Solver, }
+\item[{bool}]{use\+Reduced\+Problem}
+\end{DoxyParamCaption}
+)}\hypertarget{classwocra_1_1WocraController_ae14fda387f6d308aead6ab7a59e82e74}{}\label{classwocra_1_1WocraController_ae14fda387f6d308aead6ab7a59e82e74}
+Initializes Wocra controller.
+
+During the instantiation of this class a \hyperlink{structwocra_1_1WocraController_1_1Pimpl}{Wocra\+Controller\+::\+Pimpl} object is created. This object, in turn, will specify the constraints (robot dynamics) and objectives ( $ \ddq, \torque, \force_c $) for the solver, as well as its relative minimization weights and will take into account gravity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctrl\+Name} & The name of the controller \\
+\hline
+{\em inner\+Model} & The internal model of the robot one wants to control \\
+\hline
+{\em inner\+Solver} & The internal solver one wants to use to make the quadratic optimization \\
+\hline
+{\em use\+Reduced\+Problem} & Tell if the redundant problem is considered (unknown variable is $ [ \ddq, \torque, \force_c ] $), or is the reduced problem (non-\/redundant) is considred (unknown variable is $ [ \torque, \force_c ] $) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!````~Wocra\+Controller@{$\sim$\+Wocra\+Controller}}
+\index{````~Wocra\+Controller@{$\sim$\+Wocra\+Controller}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{$\sim$\+Wocra\+Controller()}{~WocraController()}}]{\setlength{\rightskip}{0pt plus 5cm}wocra\+::\+Wocra\+Controller\+::$\sim$\+Wocra\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classwocra_1_1WocraController_a4051d9aab485cfa444ed90da795f2bb2}{}\label{classwocra_1_1WocraController_a4051d9aab485cfa444ed90da795f2bb2}
+
+
+Destructor of Wocra controller. 
+
+It disconnects all the tasks connected to the controller, then it disconnects the inner objectives that minimize the problem variables, and finally it disconnects the dynamic equation constraint (if needed). 
+
+Definition at line 116 of file Wocra\+Controller.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!add\+Constraint@{add\+Constraint}}
+\index{add\+Constraint@{add\+Constraint}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{add\+Constraint(ocra\+::\+Linear\+Constraint \&constraint) const }{addConstraint(ocra::LinearConstraint &constraint) const }}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::add\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf ocra\+::\+Linear\+Constraint} \&}]{constraint}
+\end{DoxyParamCaption}
+) const}\hypertarget{classwocra_1_1WocraController_ad52998ef1b3eb30e62697027e3b98945}{}\label{classwocra_1_1WocraController_ad52998ef1b3eb30e62697027e3b98945}
+Adds a Linear constraint that is equivalent for the full \& reduced problems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Linear} & constraint. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 181 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!add\+Constraint@{add\+Constraint}}
+\index{add\+Constraint@{add\+Constraint}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{add\+Constraint(ocra\+::\+Control\+Constraint \&constraint) const }{addConstraint(ocra::ControlConstraint &constraint) const }}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::add\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf ocra\+::\+Control\+Constraint} \&}]{constraint}
+\end{DoxyParamCaption}
+) const}\hypertarget{classwocra_1_1WocraController_a792ca8a7b81817ebefd5c6fcab6e5eee}{}\label{classwocra_1_1WocraController_a792ca8a7b81817ebefd5c6fcab6e5eee}
+Adds a Linear constraint that has different expressions, depending on the problem type. In this case, the constraint needs to be connected to the controller to get the matrices for the problem reduction. See wocra\+::\+Control\+Constraint for more info.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & Constraint. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 191 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!do\+Add\+Contact\+Set@{do\+Add\+Contact\+Set}}
+\index{do\+Add\+Contact\+Set@{do\+Add\+Contact\+Set}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Add\+Contact\+Set(const Contact\+Set \&contacts)}{doAddContactSet(const ContactSet &contacts)}}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::do\+Add\+Contact\+Set (
+\begin{DoxyParamCaption}
+\item[{const {\bf Contact\+Set} \&}]{contacts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classwocra_1_1WocraController_a74d8fa3103ca3787add351620c5bcf73}{}\label{classwocra_1_1WocraController_a74d8fa3103ca3787add351620c5bcf73}
+Internal implementation inside the add\+Contact\+Set method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em contacts} & The contact set to add in the controller. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]this method has not been implemented!!! \end{DoxyRefDesc}
+
+
+Implements \hyperlink{classocra_1_1Controller_acb11edc1ceaa89423c1e58f9cb38a9f7}{ocra\+::\+Controller}.
+
+
+
+Definition at line 214 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!do\+Add\+Task@{do\+Add\+Task}}
+\index{do\+Add\+Task@{do\+Add\+Task}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Add\+Task(std\+::shared\+\_\+ptr$<$ Task $>$ task)}{doAddTask(std::shared_ptr< Task > task)}}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::do\+Add\+Task (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Task} $>$}]{task}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classwocra_1_1WocraController_aa9a681aa5c0f043638d4d2956c2913c1}{}\label{classwocra_1_1WocraController_aa9a681aa5c0f043638d4d2956c2913c1}
+Internal implementation inside the add\+Task method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & The task to add in the controller. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classocra_1_1Controller_ab3477822a9363553c99eefa58ff803eb}{ocra\+::\+Controller}.
+
+
+
+Definition at line 203 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!do\+Compute\+Output@{do\+Compute\+Output}}
+\index{do\+Compute\+Output@{do\+Compute\+Output}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Compute\+Output(\+Eigen\+::\+Vector\+Xd \&tau)}{doComputeOutput(Eigen::VectorXd &tau)}}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::do\+Compute\+Output (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classwocra_1_1WocraController_aaf750c45d062220e3f78ccb1c8a41d07}{}\label{classwocra_1_1WocraController_aaf750c45d062220e3f78ccb1c8a41d07}
+Computes the output of the controller.
+
+Here, the controller solves the optimization problem depending on the tasks and constraints, and the result is set in the variable of the problem, either $ x = [ \ddq \; \tau \; \force_c ] $ or $ x = [ \tau \; \force_c ] $. The torque variable $ \tau $ is finally applied to the robot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & The torque variable, which is the output of our problem. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classocra_1_1Controller_a8ca85413067d948459afa5981b3dda32}{ocra\+::\+Controller}.
+
+
+
+Definition at line 278 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!do\+Create\+Contact\+Task@{do\+Create\+Contact\+Task}}
+\index{do\+Create\+Contact\+Task@{do\+Create\+Contact\+Task}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Create\+Contact\+Task(const std\+::string \&name, Point\+Contact\+Feature\+::\+Ptr feature, double mu, double margin) const }{doCreateContactTask(const std::string &name, PointContactFeature::Ptr feature, double mu, double margin) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ wocra\+::\+Wocra\+Controller\+::do\+Create\+Contact\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Point\+Contact\+Feature\+::\+Ptr}]{feature, }
+\item[{double}]{mu, }
+\item[{double}]{margin}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classwocra_1_1WocraController_a3d64cc975fa9b62e5d9919f34ea7d847}{}\label{classwocra_1_1WocraController_a3d64cc975fa9b62e5d9919f34ea7d847}
+Internal implementation inside the create\+Contact\+Task method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The task name, a unique identifier \\
+\hline
+{\em feature} & The contact point feature of the robot one wants to control \\
+\hline
+{\em mu} & The friction cone coefficient $ \mu $ such as $ \Vert \force_t \Vert < \mu \force_n $ \\
+\hline
+{\em margin} & The margin inside the friction cone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the new created contact task
+\end{DoxyReturn}
+This method is called by the higher level methods create\+Wocra\+Contact\+Task(const std\+::string\&, Point\+Contact\+Feature\+::\+Ptr, , double, double) const and is the concrete implementation required by the \hyperlink{classocra_1_1Controller}{ocra\+::\+Controller} class. 
+
+Implements \hyperlink{classocra_1_1Controller_a823933d261a12aac49f8a0ef56823ea4}{ocra\+::\+Controller}.
+
+
+
+Definition at line 266 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!do\+Create\+Task@{do\+Create\+Task}}
+\index{do\+Create\+Task@{do\+Create\+Task}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Create\+Task(const std\+::string \&name, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des) const }{doCreateTask(const std::string &name, Feature::Ptr feature, Feature::Ptr featureDes) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ wocra\+::\+Wocra\+Controller\+::do\+Create\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Feature\+::\+Ptr}]{feature, }
+\item[{Feature\+::\+Ptr}]{feature\+Des}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classwocra_1_1WocraController_a5c262993b8c418aa61ccfac921891416}{}\label{classwocra_1_1WocraController_a5c262993b8c418aa61ccfac921891416}
+Internal implementation inside the create\+Task method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The task name, a unique identifier \\
+\hline
+{\em feature} & The part of the robot one wants to control (full state, frame, CoM,...) \\
+\hline
+{\em feature\+Des} & The desired state one wants to reach, depends on the {\itshape feature} argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the new created task
+\end{DoxyReturn}
+This method is called by the higher level methods create\+Wocra\+Task(const std\+::string\&, const Feature\&, const Feature\&) const and is the concrete implementation required by the ocra Controller class.
+
+Create an Wocra\+Task.
+
+\begin{DoxyReturn}{Returns}
+an Wocra\+Task instance that is a dynamic\+\_\+cast of the task returned by \hyperlink{classocra_1_1Controller_aa9e9469230abe83098eb2405c4ab5ade}{ocra\+::\+Controller\+::create\+Task(const std\+::string\& name, Feature\+::\+Ptr feature, Feature\+::\+Ptr feature\+Des) const }Create an Wocra\+Task.
+
+an Wocra\+Task instance that is a dynamic\+\_\+cast of the task returned by \hyperlink{classocra_1_1Controller_a7ed8dc51b54c8d3bbd73bc6be0a28cb7}{ocra\+::\+Controller\+::create\+Task(const std\+::string\& name, Feature\+::\+Ptr feature) const }Create an Wocra\+Contact\+Task.
+
+an Wocra\+Task instance that is a dynamic\+\_\+cast of the task returned by \hyperlink{classocra_1_1Controller_ae5a9612e98aae8beb306f2608171766a}{ocra\+::\+Controller\+::create\+Contact\+Task(const std\+::string\& name, Point\+Contact\+Feature\+::\+Ptr feature, double mu, double margin) const} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classocra_1_1Controller_a05f6d757e4125a71bf766df7f069ac43}{ocra\+::\+Controller}.
+
+
+
+Definition at line 256 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!do\+Create\+Task@{do\+Create\+Task}}
+\index{do\+Create\+Task@{do\+Create\+Task}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{do\+Create\+Task(const std\+::string \&name, Feature\+::\+Ptr feature) const }{doCreateTask(const std::string &name, Feature::Ptr feature) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Task} $>$ wocra\+::\+Wocra\+Controller\+::do\+Create\+Task (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{Feature\+::\+Ptr}]{feature}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classwocra_1_1WocraController_aa04446cc76a0868e875597720bbc6449}{}\label{classwocra_1_1WocraController_aa04446cc76a0868e875597720bbc6449}
+Internal implementation inside the create\+Task method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The task name, a unique identifier \\
+\hline
+{\em feature} & The part of the robot one wants to control (full state, frame, CoM,...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the new created task
+\end{DoxyReturn}
+This method is called by the higher level methods \#create\+Wocra\+Task(const std\+::string\&, const Feature\&) const and is the concrete implementation required by the ocra Controller class. 
+
+Implements \hyperlink{classocra_1_1Controller_a358a31c0b6b6bdcc0e6da5c49eb9fde5}{ocra\+::\+Controller}.
+
+
+
+Definition at line 261 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Model()}{getModel()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Model} $>$ wocra\+::\+Wocra\+Controller\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classwocra_1_1WocraController_adc7f78b5f888c76a3296cfd5882caad1}{}\label{classwocra_1_1WocraController_adc7f78b5f888c76a3296cfd5882caad1}
+Returns the inner model.
+
+\begin{DoxyReturn}{Returns}
+inner model used to construct this controller instance 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!get\+Performances@{get\+Performances}}
+\index{get\+Performances@{get\+Performances}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Performances() const }{getPerformances() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string wocra\+::\+Wocra\+Controller\+::get\+Performances (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classwocra_1_1WocraController_a44695f9e97a941d0c33da1872030566a}{}\label{classwocra_1_1WocraController_a44695f9e97a941d0c33da1872030566a}
+Get information about performances through a string.
+
+Information are saved in a J\+S\+ON way (\href{http://www.json.org/}{\tt http\+://www.\+json.\+org/}). It returns a dictionnary of the form\+:
+
+
+\begin{DoxyCode}
+\{
+   \textcolor{stringliteral}{"performance\_info\_1"}: [0.01, 0.02, 0.01, ... , 0.03, 0.01],
+   ...
+   \textcolor{stringliteral}{"performance\_info\_n"}: [0.01, 0.02, 0.01, ... , 0.03, 0.01]
+\}
+\end{DoxyCode}
+
+
+where performance\+\_\+info are\+:
+
+
+\begin{DoxyItemize}
+\item controller\+\_\+update\+\_\+tasks
+\item controller\+\_\+solve\+\_\+problem
+\item solver\+\_\+prepare
+\item solver\+\_\+solve
+\end{DoxyItemize}
+
+See \hyperlink{classwocra_1_1WocraController_ac7afeae13732d4c92cd7d891c0dd0cfb}{wocra\+::\+Wocra\+Controller\+::write\+Performance\+In\+Stream(std\+::ostream\&, bool) const }and wocra\+::\+One\+Level\+Solver\+::write\+Performance\+In\+Stream(std\+::ostream\&, bool). 
+
+Definition at line 321 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!get\+Solver@{get\+Solver}}
+\index{get\+Solver@{get\+Solver}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{get\+Solver()}{getSolver()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf One\+Level\+Solver} $>$ wocra\+::\+Wocra\+Controller\+::get\+Solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classwocra_1_1WocraController_a94f67ee0ae6985969f4f1798bde0a9db}{}\label{classwocra_1_1WocraController_a94f67ee0ae6985969f4f1798bde0a9db}
+Returns the inner solver.
+
+\begin{DoxyReturn}{Returns}
+Inner solver used to construct this controller instance. 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!is\+Using\+Reduced\+Problem@{is\+Using\+Reduced\+Problem}}
+\index{is\+Using\+Reduced\+Problem@{is\+Using\+Reduced\+Problem}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{is\+Using\+Reduced\+Problem()}{isUsingReducedProblem()}}]{\setlength{\rightskip}{0pt plus 5cm}bool wocra\+::\+Wocra\+Controller\+::is\+Using\+Reduced\+Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classwocra_1_1WocraController_a89eab1194e0598d8b30730429f286450}{}\label{classwocra_1_1WocraController_a89eab1194e0598d8b30730429f286450}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if variable of reduced problem ( $ [ \torque \; \force_c ] $) is considered, or {\ttfamily false} if it uses the variable of the full one ( $ [ \ddq \; \torque \; \force_c ] $). 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!remove\+Constraint@{remove\+Constraint}}
+\index{remove\+Constraint@{remove\+Constraint}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{remove\+Constraint(ocra\+::\+Linear\+Constraint \&constraint) const }{removeConstraint(ocra::LinearConstraint &constraint) const }}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::remove\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf ocra\+::\+Linear\+Constraint} \&}]{constraint}
+\end{DoxyParamCaption}
+) const}\hypertarget{classwocra_1_1WocraController_ac2cfe82f7fa0a8438160376094f583da}{}\label{classwocra_1_1WocraController_ac2cfe82f7fa0a8438160376094f583da}
+Removes a Linear constraint that is equivalent for the full \& reduced problems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Linear} & Constraint to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 186 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!remove\+Constraint@{remove\+Constraint}}
+\index{remove\+Constraint@{remove\+Constraint}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{remove\+Constraint(ocra\+::\+Control\+Constraint \&constraint) const }{removeConstraint(ocra::ControlConstraint &constraint) const }}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::remove\+Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf ocra\+::\+Control\+Constraint} \&}]{constraint}
+\end{DoxyParamCaption}
+) const}\hypertarget{classwocra_1_1WocraController_a4690b2bb73e8c7868d1b8a02378316e8}{}\label{classwocra_1_1WocraController_a4690b2bb73e8c7868d1b8a02378316e8}
+Removes a Linear constraint that has different expressions, depending on the problem type. In this case, the constraint needs to be disconnected from the controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & Constraint. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 197 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!set\+Variable\+Minimization\+Weights@{set\+Variable\+Minimization\+Weights}}
+\index{set\+Variable\+Minimization\+Weights@{set\+Variable\+Minimization\+Weights}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Variable\+Minimization\+Weights(double w\+\_\+ddq, double w\+\_\+tau, double w\+\_\+fc)}{setVariableMinimizationWeights(double w_ddq, double w_tau, double w_fc)}}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::set\+Variable\+Minimization\+Weights (
+\begin{DoxyParamCaption}
+\item[{double}]{w\+\_\+ddq, }
+\item[{double}]{w\+\_\+tau, }
+\item[{double}]{w\+\_\+fc}
+\end{DoxyParamCaption}
+)}\hypertarget{classwocra_1_1WocraController_a23b01d7dad39803132d69ae335212615}{}\label{classwocra_1_1WocraController_a23b01d7dad39803132d69ae335212615}
+Sets weights for the objectives that minimize the norm of the problem variables\+: $ [ \ddq \; \torque \; \force_c ] $.
+
+
+\begin{DoxyParams}{Parameters}
+{\em w\+\_\+ddq} & weight for the minimization of $ \ddq $. \\
+\hline
+{\em w\+\_\+tau} & weight for the minimization of $ \torque $. \\
+\hline
+{\em w\+\_\+fc} & weight for the minimization of $ \force_c $. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!take\+Into\+Account\+Gravity@{take\+Into\+Account\+Gravity}}
+\index{take\+Into\+Account\+Gravity@{take\+Into\+Account\+Gravity}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{take\+Into\+Account\+Gravity(bool use\+Grav)}{takeIntoAccountGravity(bool useGrav)}}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::take\+Into\+Account\+Gravity (
+\begin{DoxyParamCaption}
+\item[{bool}]{use\+Grav}
+\end{DoxyParamCaption}
+)}\hypertarget{classwocra_1_1WocraController_a339cb7de07b9766aba4b3d1cfd6a78d4}{}\label{classwocra_1_1WocraController_a339cb7de07b9766aba4b3d1cfd6a78d4}
+Whether to take into account gavity in the dynamic equation of motion.
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+Grav} & {\ttfamily true} if gravity is enable, {\ttfamily false} otherwise. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 176 of file Wocra\+Controller.\+cpp.
+
+\index{wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}!write\+Performance\+In\+Stream@{write\+Performance\+In\+Stream}}
+\index{write\+Performance\+In\+Stream@{write\+Performance\+In\+Stream}!wocra\+::\+Wocra\+Controller@{wocra\+::\+Wocra\+Controller}}
+\subsubsection[{\texorpdfstring{write\+Performance\+In\+Stream(std\+::ostream \&my\+Ostream, bool add\+Comma\+At\+End) const }{writePerformanceInStream(std::ostream &myOstream, bool addCommaAtEnd) const }}]{\setlength{\rightskip}{0pt plus 5cm}void wocra\+::\+Wocra\+Controller\+::write\+Performance\+In\+Stream (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{my\+Ostream, }
+\item[{bool}]{add\+Comma\+At\+End}
+\end{DoxyParamCaption}
+) const}\hypertarget{classwocra_1_1WocraController_ac7afeae13732d4c92cd7d891c0dd0cfb}{}\label{classwocra_1_1WocraController_ac7afeae13732d4c92cd7d891c0dd0cfb}
+Writes information about controller performances in a string stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em outstream} & the output stream where to write the performances information \\
+\hline
+{\em add\+Comma\+At\+End} & If true, add a comma at the end of the stream. If false, it means that this is the end of the json file, nothing will be added after that.\\
+\hline
+\end{DoxyParams}
+See \hyperlink{classwocra_1_1WocraController_a44695f9e97a941d0c33da1872030566a}{wocra\+::\+Wocra\+Controller\+::get\+Performances()} to know more. Here it saves\+:
+
+
+\begin{DoxyItemize}
+\item controller\+\_\+update\+\_\+tasks
+\item controller\+\_\+solve\+\_\+problem
+\item solver\+\_\+prepare
+\item solver\+\_\+solve 
+\end{DoxyItemize}
+
+Definition at line 309 of file Wocra\+Controller.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{WocraController_8h}{Wocra\+Controller.\+h}\item 
+\hyperlink{WocraController_8cpp}{Wocra\+Controller.\+cpp}\end{DoxyCompactItemize}

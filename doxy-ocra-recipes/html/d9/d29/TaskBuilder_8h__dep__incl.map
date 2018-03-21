@@ -1,0 +1,27 @@
+<map id="TaskBuilder.h" name="TaskBuilder.h">
+<area shape="rect" id="node2" href="$da/db2/CartesianTaskBuilder_8h.html" title="CartesianTaskBuilder.h" alt="" coords="1282,80,1441,107"/>
+<area shape="rect" id="node3" href="$d1/d7b/TaskConstructionManager_8h.html" title="TaskConstructionManager.h" alt="" coords="584,155,771,181"/>
+<area shape="rect" id="node14" href="$de/d08/ComTaskBuilder_8h.html" title="ComTaskBuilder.h" alt="" coords="128,80,259,107"/>
+<area shape="rect" id="node16" href="$dc/d87/FullPostureTaskBuilder_8h.html" title="FullPostureTaskBuilder.h" alt="" coords="283,80,451,107"/>
+<area shape="rect" id="node18" href="$d1/df8/OrientationTaskBuilder_8h.html" title="OrientationTaskBuilder.h" alt="" coords="475,80,640,107"/>
+<area shape="rect" id="node20" href="$d5/d81/PartialPostureTaskBuilder_8h.html" title="PartialPostureTaskBuilder.h" alt="" coords="715,80,899,107"/>
+<area shape="rect" id="node22" href="$d2/d1a/PointContactTaskBuilder_8h.html" title="PointContactTaskBuilder.h" alt="" coords="923,80,1101,107"/>
+<area shape="rect" id="node24" href="$d4/d7b/PoseTaskBuilder_8h.html" title="PoseTaskBuilder.h" alt="" coords="1126,80,1258,107"/>
+<area shape="rect" id="node26" href="$da/d3a/TaskBuilder_8cpp.html" title="TaskBuilder.cpp" alt="" coords="1465,80,1581,107"/>
+<area shape="rect" id="node13" href="$d5/d46/CartesianTaskBuilder_8cpp.html" title="CartesianTaskBuilder.cpp" alt="" coords="1406,155,1578,181"/>
+<area shape="rect" id="node4" href="$dd/d25/TaskConstructionManager_8cpp.html" title="TaskConstructionManager.cpp" alt="" coords="343,229,543,256"/>
+<area shape="rect" id="node5" href="$db/d9a/ControllerClient_8h.html" title="ControllerClient.h" alt="" coords="567,229,689,256"/>
+<area shape="rect" id="node9" href="$da/d7c/ControllerServer_8h.html" title="ControllerServer.h" alt="" coords="721,304,847,331"/>
+<area shape="rect" id="node11" href="$d2/d6c/ServerCommunications_8h.html" title="ServerCommunications.h" alt="" coords="765,229,934,256"/>
+<area shape="rect" id="node6" href="$d8/d80/ClientManager_8h.html" title="Module class for the controller Client. " alt="" coords="417,304,535,331"/>
+<area shape="rect" id="node8" href="$d2/d77/ControllerClient_8cpp.html" title="ControllerClient.cpp" alt="" coords="559,304,697,331"/>
+<area shape="rect" id="node7" href="$d9/d36/ClientManager_8cpp.html" title="ClientManager.cpp" alt="" coords="411,379,541,405"/>
+<area shape="rect" id="node10" href="$d5/dd2/ControllerServer_8cpp.html" title="ControllerServer.cpp" alt="" coords="713,379,855,405"/>
+<area shape="rect" id="node12" href="$dc/dac/ServerCommunications_8cpp.html" title="ServerCommunications.cpp" alt="" coords="871,304,1054,331"/>
+<area shape="rect" id="node15" href="$d4/d18/ComTaskBuilder_8cpp.html" title="ComTaskBuilder.cpp" alt="" coords="5,155,149,181"/>
+<area shape="rect" id="node17" href="$d7/de9/FullPostureTaskBuilder_8cpp.html" title="FullPostureTaskBuilder.cpp" alt="" coords="174,155,357,181"/>
+<area shape="rect" id="node19" href="$d8/da4/OrientationTaskBuilder_8cpp.html" title="OrientationTaskBuilder.cpp" alt="" coords="381,155,560,181"/>
+<area shape="rect" id="node21" href="$d5/df0/PartialPostureTaskBuilder_8cpp.html" title="PartialPostureTaskBuilder.cpp" alt="" coords="795,155,994,181"/>
+<area shape="rect" id="node23" href="$da/d78/PointContactTaskBuilder_8cpp.html" title="PointContactTaskBuilder.cpp" alt="" coords="1019,155,1211,181"/>
+<area shape="rect" id="node25" href="$d2/def/PoseTaskBuilder_8cpp.html" title="PoseTaskBuilder.cpp" alt="" coords="1235,155,1381,181"/>
+</map>

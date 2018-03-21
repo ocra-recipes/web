@@ -1,0 +1,89 @@
+\hypertarget{classocra_1_1FullDynamicEquationFunction}{}\section{ocra\+:\+:Full\+Dynamic\+Equation\+Function Class Reference}
+\label{classocra_1_1FullDynamicEquationFunction}\index{ocra\+::\+Full\+Dynamic\+Equation\+Function@{ocra\+::\+Full\+Dynamic\+Equation\+Function}}
+
+
+Create a linear function that represents the dynamic equation of motion.  
+
+
+
+
+{\ttfamily \#include $<$Full\+Dynamic\+Equation\+Function.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Full\+Dynamic\+Equation\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d36/classocra_1_1FullDynamicEquationFunction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Full\+Dynamic\+Equation\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d0e/classocra_1_1FullDynamicEquationFunction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structFullDynamicEquationFunction_1_1Pimpl}{Pimpl}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classocra_1_1LinearFunction}{Linear\+Function} \hyperlink{group__constraint_ga3f72eb3c4529d2c19ef39928f5e57262}{function\+Type\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__constraint_ga778bffa6d85a494b3ee0c499400573a6}{Full\+Dynamic\+Equation\+Function} (const \hyperlink{classocra_1_1Model}{Model} \&model)
+\item 
+\hyperlink{group__constraint_gab3c2d35bef3c4d8733b7ab0e9ff48bfc}{$\sim$\+Full\+Dynamic\+Equation\+Function} ()
+\item 
+void \hyperlink{group__constraint_ga673fd9a47a249d84ce527011a06417aa}{take\+Into\+Account\+Gravity} (bool use\+Grav)
+\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{group__constraint_gaf5eec6352d53ef9682fa281f2692add2}{get\+Inertia\+Matrix\+Inverse\+JchiT} () const 
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{group__constraint_ga3ac88fe8128c6ceb390057abb933e602}{get\+Inertia\+Matrix\+Inverse\+Lin\+Non\+Lin\+Grav} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{group__constraint_gaab7728b0f686c4ae63784c4a72871f13}{get\+Action\+Variable} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__constraint_gab601abcc9508d55da24d1a1fa7332281}{update\+Jacobian} () const 
+\item 
+void \hyperlink{group__constraint_gae2cb2e75b8cdb7bdb71e37bdbcabb156}{updateb} () const 
+\item 
+void \hyperlink{group__constraint_ga19d9bbe4f78b4c396930388a70b8cd4b}{buildA} ()
+\item 
+virtual void \hyperlink{group__constraint_gadbdce52af8ba057e93ea923db5a3ce04}{do\+Update\+Input\+Size\+Begin} ()
+\item 
+virtual void \hyperlink{group__constraint_ga8c14a0ff3f87c32d030a3a1753b7a77e}{do\+Update\+Input\+Size\+End} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Create a linear function that represents the dynamic equation of motion. 
+
+The equation of motion is\+: \[ \M \ddq + \n + \g = S \torque - \J_c\tp \force_c \]
+
+So given the variable of our problem $ \x = \begin{bmatrix} \ddq\tp & \torque\tp & \force_c\tp\end{bmatrix}\tp $ It returns an equation of the form\+:
+
+\begin{align*} \A \x + \b &= \vec{0} & &\Leftrightarrow & \begin{bmatrix} \M & -S & \J_c\tp \end{bmatrix} . \begin{bmatrix} \ddq \\ \torque \\ \force_c\end{bmatrix} + [ \n + \g ] = \vec{0} \end{align*} 
+
+Definition at line 40 of file Full\+Dynamic\+Equation\+Function.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{FullDynamicEquationFunction_8h}{Full\+Dynamic\+Equation\+Function.\+h}\item 
+\hyperlink{FullDynamicEquationFunction_8cpp}{Full\+Dynamic\+Equation\+Function.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,1269 @@
+\hypertarget{classocra_1_1Model}{}\section{ocra\+:\+:Model Class Reference}
+\label{classocra_1_1Model}\index{ocra\+::\+Model@{ocra\+::\+Model}}
+
+
+Model class.  
+
+
+
+
+{\ttfamily \#include $<$Model.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d5d/classocra_1_1Model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d18/classocra_1_1Model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1Model_a409a72ebb3fb454dc12e6e91d8495715}{Model} (const std\+::string \&name, int ndofs, bool free\+Root, const std\+::string \&joint\+Torque\+Variable\+Name=\char`\"{}tau\char`\"{}, const std\+::string \&force\+Variable\+Name=\char`\"{}f\char`\"{}, const std\+::string \&configuration\+Variable\+Name=\char`\"{}q\char`\"{}, const std\+::string \&internal\+Dofs\+Suffix=\char`\"{}\+\_\+int\char`\"{}, const std\+::string \&external\+Dofs\+Suffix=\char`\"{}\+\_\+root\char`\"{})
+\item 
+virtual \hyperlink{classocra_1_1Model_acd9ac3268fc9f79738067bc12292521f}{$\sim$\+Model} ()
+\item 
+void \hyperlink{classocra_1_1Model_a3737cd201f3e70558c7c2ff74da47818}{set\+Joint\+Positions} (const Eigen\+::\+Vector\+Xd \&q)
+\item 
+void \hyperlink{classocra_1_1Model_ad6b27a212756e49441f7301e748a8dad}{set\+Joint\+Velocities} (const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)
+\item 
+void \hyperlink{classocra_1_1Model_aaebe8934b2c8f0620e4208f696ea11cf}{set\+Free\+Flyer\+Position} (const Eigen\+::\+Displacementd \&H\+\_\+root)
+\item 
+void \hyperlink{classocra_1_1Model_a26ce45e1b06e3f1074b4066dbb420865}{set\+Free\+Flyer\+Velocity} (const Eigen\+::\+Twistd \&T\+\_\+root)
+\item 
+void \hyperlink{classocra_1_1Model_a5ce77dc35046594111df0a3e33ff2aa6}{set\+State} (const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)
+\item 
+void \hyperlink{classocra_1_1Model_a6c4feba35aac697c1f18537c8c7c9ce4}{set\+State} (const Eigen\+::\+Displacementd \&H\+\_\+root, const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Twistd \&T\+\_\+root, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_a9af46a69337d88d28232554175723018}{get\+Joint\+Positions} () const =0
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_a73b9bd94e98138145217526dbe23841a}{get\+Joint\+Velocities} () const =0
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_acb5d3e56d76876bcf3377f53d67faef8}{get\+Joint\+Accelerations} () const 
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_a062fc08c456adf091e38ed1cfa5f0524}{get\+Joint\+Torques} () const =0
+\item 
+virtual const Eigen\+::\+Displacementd \& \hyperlink{classocra_1_1Model_a7549d8ca32c46a84ea4799730a81dae2}{get\+Free\+Flyer\+Position} () const =0
+\item 
+virtual const Eigen\+::\+Twistd \& \hyperlink{classocra_1_1Model_a0a11fff87a21ab37535420f7a7544c96}{get\+Free\+Flyer\+Velocity} () const =0
+\item 
+int \hyperlink{classocra_1_1Model_a250711de36aea05a24faed1ab288c5bc}{nb\+Dofs} () const 
+\item 
+int \hyperlink{classocra_1_1Model_a5a37483f12025315f7555efa8e70ca78}{nb\+Internal\+Dofs} () const 
+\item 
+bool \hyperlink{classocra_1_1Model_ad267c40d5046be08e3104f7ae685794c}{has\+Fixed\+Root} () const 
+\item 
+virtual int \hyperlink{classocra_1_1Model_acd57284b64bb5c05f4c2dac643476751}{nb\+Segments} () const =0
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_ad1a78d57aca4a4128c54d479f30afd82}{get\+Actuated\+Dofs} () const =0
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_ade47bb5ea3029b3d5652109d1ec6df7f}{get\+Joint\+Lower\+Limits} () const =0
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_a75caa887c8f27d8be8dc5a60ed1e1c41}{get\+Joint\+Upper\+Limits} () const =0
+\item 
+virtual double \hyperlink{classocra_1_1Model_a6237f96c89946f6c09be38761f128f28}{get\+Mass} () const =0
+\item 
+virtual const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_a9c3b077772e4886299f613a71f8981e2}{get\+Co\+M\+Position} () const =0
+\item 
+virtual const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_a567e950be5868080c250c40d8fc0c0ce}{get\+Co\+M\+Velocity} () const =0
+\item 
+virtual const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_a6b65cba34b6d770d9818cf155716af4b}{get\+Co\+M\+Acceleration} () const 
+\item 
+virtual const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_a60ca48c725e2d3dfe2ad0ca26ef3f94c}{get\+Co\+M\+Angular\+Velocity} () const 
+\item 
+virtual const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_a2be9c0fdd8dbe4ecbb99eef5f4ea45d1}{get\+Co\+M\+Jdot\+Qdot} () const =0
+\item 
+virtual const Eigen\+::\+Matrix$<$ double, 3, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_a4b148504194036b0faafe619e5b98f59}{get\+Co\+M\+Jacobian} () const =0
+\item 
+virtual const Eigen\+::\+Matrix$<$ double, 3, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_ae3733acc7baa0d5ab3d3d5da88b0dd04}{get\+Co\+M\+Angular\+Jacobian} () const 
+\item 
+virtual const Eigen\+::\+Matrix$<$ double, 3, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_abfc71fa0f52145b1df92bdbd0963c926}{get\+Co\+M\+Jacobian\+Dot} () const =0
+\item 
+virtual const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1Model_adf59aeee10c9d3babb05d7249bf71106}{get\+Inertia\+Matrix} () const =0
+\item 
+virtual const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1Model_ac1b1137365a6f6765d41d68bc02f3e62}{get\+Inertia\+Matrix\+Inverse} () const =0
+\item 
+virtual const Eigen\+::\+Matrix\+Xd \& \hyperlink{classocra_1_1Model_adfbe3160558dd221e7e91e2aad4d5089}{get\+Damping\+Matrix} () const =0
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_ac494939416d3ddcb6e5cf0ece43f3098}{get\+Non\+Linear\+Terms} () const =0
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_a0f9c628cb9e77d63744ccfd164e9beed}{get\+Linear\+Terms} () const =0
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_aef569d0c71ab76665e4a24d178e8243d}{get\+Gravity\+Terms} () const =0
+\item 
+virtual const Eigen\+::\+Displacementd \& \hyperlink{classocra_1_1Model_ae7afe827a1c09b99d80134a447bd9ccc}{get\+Segment\+Position} (int index) const =0
+\item 
+virtual const Eigen\+::\+Twistd \& \hyperlink{classocra_1_1Model_a1ee3b57487621c5194b7d6b014308e40}{get\+Segment\+Velocity} (int index) const =0
+\item 
+virtual const Eigen\+::\+Matrix$<$ double, 6, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_a626aed0875f6336c2ecc0147bc8c7d4e}{get\+Segment\+Jacobian} (int index) const =0
+\item 
+virtual const Eigen\+::\+Matrix$<$ double, 6, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_a00cceda96b47bee05cb6366d070d7961}{get\+Segment\+Jdot} (int index) const =0
+\item 
+virtual const Eigen\+::\+Twistd \& \hyperlink{classocra_1_1Model_a6fe0178b1e8213e39366b2355d0d4de3}{get\+Segment\+Jdot\+Qdot} (int index) const =0
+\item 
+virtual const Eigen\+::\+Matrix$<$ double, 6, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_ad0001f469b4aa484403e781f6bd933aa}{get\+Joint\+Jacobian} (int index) const =0
+\item 
+virtual double \hyperlink{classocra_1_1Model_a9840649a6137c8ec964914f91c83a1b9}{get\+Segment\+Mass} (int index) const =0
+\item 
+virtual const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_a577292e1e1441afbecb3912124b7eb04}{get\+Segment\+CoM} (int index) const =0
+\item 
+virtual const Eigen\+::\+Matrix$<$ double, 6, 6 $>$ \& \hyperlink{classocra_1_1Model_ae795ffdaa76419eb74acba87555b83bb}{get\+Segment\+Mass\+Matrix} (int index) const =0
+\item 
+virtual const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_ae296f35e785641df23e6cf4fdbb24f8a}{get\+Segment\+Moments\+Of\+Inertia} (int index) const =0
+\item 
+virtual const Eigen\+::\+Rotation3d \& \hyperlink{classocra_1_1Model_a09d58bf429940098baf9727140e37441}{get\+Segment\+Inertia\+Axes} (int index) const =0
+\item 
+const Eigen\+::\+Displacementd \& \hyperlink{classocra_1_1Model_a1ca7aa03dd8a2dcea7f9ff2feff54e94}{get\+Segment\+Position} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Twistd \& \hyperlink{classocra_1_1Model_aea663abc07b3b5bb8a695ffdc28167f9}{get\+Segment\+Velocity} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Matrix$<$ double, 6, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_a9110ef2443aea27cf854679a31104dd8}{get\+Segment\+Jacobian} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Matrix$<$ double, 6, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_a9d684947a13bdafd5e79389f7aa2288b}{get\+Segment\+Jdot} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Twistd \& \hyperlink{classocra_1_1Model_ae075a3fd0a1ea61df20291484366ef64}{get\+Segment\+Jdot\+Qdot} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Matrix$<$ double, 6, Eigen\+::\+Dynamic $>$ \& \hyperlink{classocra_1_1Model_ab90a0e86e7655d0b37ea61d89137b7f3}{get\+Joint\+Jacobian} (const std\+::string \&seg\+Name) const 
+\item 
+double \hyperlink{classocra_1_1Model_a99e56c7411002d9f82e79acb4be14ef1}{get\+Segment\+Mass} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_a3f06fc0450236c0e15b41cba48af1038}{get\+Segment\+CoM} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Matrix$<$ double, 6, 6 $>$ \& \hyperlink{classocra_1_1Model_a03078f274f7e7be0694de69ab726ab2d}{get\+Segment\+Mass\+Matrix} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Vector3d \& \hyperlink{classocra_1_1Model_af83c4b16778ee019b3700627871ed140}{get\+Segment\+Moments\+Of\+Inertia} (const std\+::string \&seg\+Name) const 
+\item 
+const Eigen\+::\+Rotation3d \& \hyperlink{classocra_1_1Model_a49fe440f17e3264a586184ef55637afe}{get\+Segment\+Inertia\+Axes} (const std\+::string \&seg\+Name) const 
+\item 
+void \hyperlink{classocra_1_1Model_a14b26b592ba1fe5d01c2f10120e59bcc}{set\+Joint\+Damping} (const Eigen\+::\+Vector\+Xd \&damping)
+\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classocra_1_1Model_a5e692a1b25090f56312c458b55d7f60a}{get\+Joint\+Damping} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a4bdf24ff6d1579f052ea0425ba956ff0}{get\+Configuration\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a0e41bf6c5af3be6d34b704d17ded8df2}{get\+Velocity\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a698c9b6f18db52039ef744bbf92ab4dd}{get\+Acceleration\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a0fc78bb5fc0dbafafb19fb6632cfb645}{get\+Joint\+Torque\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a8cea6d3df5911ba61c4553b91491487a}{get\+Root\+Configuration\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a3f3c805565fb7ad4fa7289965ffa4b38}{get\+Internal\+Configuration\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a0f17230549e8e157002c37efe67bee2c}{get\+Root\+Velocity\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a92e1a9c91b43cee9b97b4fac928a1536}{get\+Internal\+Velocity\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_a3c8143432903f04f898644147acb7702}{get\+Root\+Acceleration\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1Variable}{Variable} \& \hyperlink{classocra_1_1Model_ab7568bcbff9e35473fd9e92a2f028789}{get\+Internal\+Acceleration\+Variable} () const 
+\item 
+\hyperlink{classocra_1_1ModelContacts}{Model\+Contacts} \& \hyperlink{classocra_1_1Model_a29d516e311f7fdd8217185f86260c044}{get\+Model\+Contacts} () const 
+\item 
+int \hyperlink{classocra_1_1Model_ad70550ba8cb5a50efac20f5c845cbf98}{get\+Segment\+Index} (const std\+::string \&name) const 
+\item 
+const std\+::string \& \hyperlink{classocra_1_1Model_a4d187f3375fe0f00397f551dd5ecf45a}{get\+Segment\+Name} (int index) const 
+\item 
+int \hyperlink{classocra_1_1Model_a197c69f42d1722a2e804e58a36457dfb}{get\+Dof\+Index} (const std\+::string \&name) const 
+\item 
+const std\+::string \& \hyperlink{classocra_1_1Model_ac7e343b2ee6debd1985a5c2028c2cb7e}{get\+Dof\+Name} (int index) const 
+\item 
+const std\+::string \hyperlink{classocra_1_1Model_a3e42a1d8e7bc2601f77786662d0540e6}{Dof\+Name} (const std\+::string \&name) const 
+\item 
+const std\+::string \hyperlink{classocra_1_1Model_a9adc98011d96ae1db9de7a478dcc7892}{Segment\+Name} (const std\+::string \&name) const 
+\item 
+virtual const std\+::string \& \hyperlink{classocra_1_1Model_ac88c445f37e5bf7302aa19b8e986013b}{get\+Joint\+Name} (int index) const =0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+yarp\+::os\+::\+Semaphore \hyperlink{classocra_1_1Model_a45b4c8b4b6480355f2abb06bb55f7146}{model\+Mutex}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classocra_1_1Model_a3281cf832fe0e60fc087acda97064bb2}{do\+Set\+State} (const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)
+\item 
+virtual void \hyperlink{classocra_1_1Model_adab6b86806c9298ecba14da065badacf}{do\+Set\+State} (const Eigen\+::\+Displacementd \&H\+\_\+root, const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Twistd \&T\+\_\+root, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)
+\item 
+virtual void \hyperlink{classocra_1_1Model_a1353dd716f80843ea11ff6193c512b13}{do\+Set\+Joint\+Positions} (const Eigen\+::\+Vector\+Xd \&q)=0
+\item 
+virtual void \hyperlink{classocra_1_1Model_a770a539312a2e805fcca2af3529ecff9}{do\+Set\+Joint\+Velocities} (const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)=0
+\item 
+virtual void \hyperlink{classocra_1_1Model_a4174e9fd30f913f43e516bbef9583ca2}{do\+Set\+Free\+Flyer\+Position} (const Eigen\+::\+Displacementd \&H\+\_\+root)=0
+\item 
+virtual void \hyperlink{classocra_1_1Model_aad824e82f724f24e3769c74355162bda}{do\+Set\+Free\+Flyer\+Velocity} (const Eigen\+::\+Twistd \&T\+\_\+root)=0
+\item 
+virtual int \hyperlink{classocra_1_1Model_aede6166f1991c23db634aa5ff16b6584}{do\+Get\+Segment\+Index} (const std\+::string \&name) const =0
+\item 
+virtual const std\+::string \& \hyperlink{classocra_1_1Model_a0f339ce01a0871a19b0f952bdda82822}{do\+Get\+Segment\+Name} (int index) const =0
+\item 
+virtual void \hyperlink{classocra_1_1Model_a902663196e1c7535c27b755cf4436693}{do\+Invalidate} ()
+\item 
+virtual int \hyperlink{classocra_1_1Model_a4d8c2a94b1f4c2ea936abd4000dc5863}{do\+Get\+Dof\+Index} (const std\+::string \&name) const 
+\item 
+virtual const std\+::string \& \hyperlink{classocra_1_1Model_a5b875580a6c72a69d1f7a365a8e82ec2}{do\+Get\+Dof\+Name} (int index) const 
+\item 
+virtual const std\+::string \hyperlink{classocra_1_1Model_a1f2662950827213b983c6104b9e4ec52}{do\+Segment\+Name} (const std\+::string \&name) const 
+\item 
+virtual const std\+::string \hyperlink{classocra_1_1Model_a80f680536f13c8d0db0279109741c6cb}{do\+Dof\+Name} (const std\+::string \&name) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Model class. 
+
+\begin{DoxyWarning}{Warning}
+None
+\end{DoxyWarning}
+T\+O\+DO\+: complete description
+
+terms of the dynamic equation are given so that the equation writes this way \+: $ M\dot{T} + N + G = L tau - J_c^T f $ 
+
+Definition at line 38 of file Model.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Model@{ocra\+::\+Model}!Model@{Model}}
+\index{Model@{Model}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{Model(const std\+::string \&name, int ndofs, bool free\+Root, const std\+::string \&joint\+Torque\+Variable\+Name=""tau"", const std\+::string \&force\+Variable\+Name=""f"", const std\+::string \&configuration\+Variable\+Name=""q"", const std\+::string \&internal\+Dofs\+Suffix=""\+\_\+int"", const std\+::string \&external\+Dofs\+Suffix=""\+\_\+root"")}{Model(const std::string &name, int ndofs, bool freeRoot, const std::string &jointTorqueVariableName="tau", const std::string &forceVariableName="f", const std::string &configurationVariableName="q", const std::string &internalDofsSuffix="_int", const std::string &externalDofsSuffix="_root")}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Model\+::\+Model (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{int}]{ndofs, }
+\item[{bool}]{free\+Root, }
+\item[{const std\+::string \&}]{joint\+Torque\+Variable\+Name = {\ttfamily \char`\"{}tau\char`\"{}}, }
+\item[{const std\+::string \&}]{force\+Variable\+Name = {\ttfamily \char`\"{}f\char`\"{}}, }
+\item[{const std\+::string \&}]{configuration\+Variable\+Name = {\ttfamily \char`\"{}q\char`\"{}}, }
+\item[{const std\+::string \&}]{internal\+Dofs\+Suffix = {\ttfamily \char`\"{}\+\_\+int\char`\"{}}, }
+\item[{const std\+::string \&}]{external\+Dofs\+Suffix = {\ttfamily \char`\"{}\+\_\+root\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Model_a409a72ebb3fb454dc12e6e91d8495715}{}\label{classocra_1_1Model_a409a72ebb3fb454dc12e6e91d8495715}
+
+
+Definition at line 6 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!````~Model@{$\sim$\+Model}}
+\index{````~Model@{$\sim$\+Model}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{$\sim$\+Model()}{~Model()}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Model\+::$\sim$\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_acd9ac3268fc9f79738067bc12292521f}{}\label{classocra_1_1Model_acd9ac3268fc9f79738067bc12292521f}
+
+
+Definition at line 37 of file Model.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Dof\+Name@{do\+Dof\+Name}}
+\index{do\+Dof\+Name@{do\+Dof\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Dof\+Name(const std\+::string \&name) const }{doDofName(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string ocra\+::\+Model\+::do\+Dof\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_a80f680536f13c8d0db0279109741c6cb}{}\label{classocra_1_1Model_a80f680536f13c8d0db0279109741c6cb}
+
+
+Definition at line 272 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!Dof\+Name@{Dof\+Name}}
+\index{Dof\+Name@{Dof\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{Dof\+Name(const std\+::string \&name) const }{DofName(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string ocra\+::\+Model\+::\+Dof\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a3e42a1d8e7bc2601f77786662d0540e6}{}\label{classocra_1_1Model_a3e42a1d8e7bc2601f77786662d0540e6}
+
+
+Definition at line 250 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Get\+Dof\+Index@{do\+Get\+Dof\+Index}}
+\index{do\+Get\+Dof\+Index@{do\+Get\+Dof\+Index}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Get\+Dof\+Index(const std\+::string \&name) const }{doGetDofIndex(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Model\+::do\+Get\+Dof\+Index (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_a4d8c2a94b1f4c2ea936abd4000dc5863}{}\label{classocra_1_1Model_a4d8c2a94b1f4c2ea936abd4000dc5863}
+
+
+Definition at line 255 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Get\+Dof\+Name@{do\+Get\+Dof\+Name}}
+\index{do\+Get\+Dof\+Name@{do\+Get\+Dof\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Get\+Dof\+Name(int index) const }{doGetDofName(int index) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& ocra\+::\+Model\+::do\+Get\+Dof\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_a5b875580a6c72a69d1f7a365a8e82ec2}{}\label{classocra_1_1Model_a5b875580a6c72a69d1f7a365a8e82ec2}
+
+
+Definition at line 260 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Get\+Segment\+Index@{do\+Get\+Segment\+Index}}
+\index{do\+Get\+Segment\+Index@{do\+Get\+Segment\+Index}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Get\+Segment\+Index(const std\+::string \&name) const =0}{doGetSegmentIndex(const std::string &name) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Model\+::do\+Get\+Segment\+Index (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_aede6166f1991c23db634aa5ff16b6584}{}\label{classocra_1_1Model_aede6166f1991c23db634aa5ff16b6584}
+
+
+Implemented in \hyperlink{classModel3T_a8f8967057a2322068beefd29c625dfb0}{Model3T}.
+
+
+
+Definition at line 213 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Get\+Segment\+Name@{do\+Get\+Segment\+Name}}
+\index{do\+Get\+Segment\+Name@{do\+Get\+Segment\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Get\+Segment\+Name(int index) const =0}{doGetSegmentName(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& ocra\+::\+Model\+::do\+Get\+Segment\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a0f339ce01a0871a19b0f952bdda82822}{}\label{classocra_1_1Model_a0f339ce01a0871a19b0f952bdda82822}
+
+
+Implemented in \hyperlink{classModel3T_a57797ab176ff020576ec24b944d4052f}{Model3T}.
+
+
+
+Definition at line 218 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Invalidate@{do\+Invalidate}}
+\index{do\+Invalidate@{do\+Invalidate}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Invalidate()}{doInvalidate()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Model\+::do\+Invalidate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_a902663196e1c7535c27b755cf4436693}{}\label{classocra_1_1Model_a902663196e1c7535c27b755cf4436693}
+
+
+Definition at line 195 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Segment\+Name@{do\+Segment\+Name}}
+\index{do\+Segment\+Name@{do\+Segment\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Segment\+Name(const std\+::string \&name) const }{doSegmentName(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string ocra\+::\+Model\+::do\+Segment\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_a1f2662950827213b983c6104b9e4ec52}{}\label{classocra_1_1Model_a1f2662950827213b983c6104b9e4ec52}
+
+
+Definition at line 266 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Set\+Free\+Flyer\+Position@{do\+Set\+Free\+Flyer\+Position}}
+\index{do\+Set\+Free\+Flyer\+Position@{do\+Set\+Free\+Flyer\+Position}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Set\+Free\+Flyer\+Position(const Eigen\+::\+Displacementd \&\+H\+\_\+root)=0}{doSetFreeFlyerPosition(const Eigen::Displacementd &H_root)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Model\+::do\+Set\+Free\+Flyer\+Position (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Displacementd \&}]{H\+\_\+root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a4174e9fd30f913f43e516bbef9583ca2}{}\label{classocra_1_1Model_a4174e9fd30f913f43e516bbef9583ca2}
+
+
+Implemented in \hyperlink{classModel3T_ab239abd9e83130d463503eb5915e2ed1}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Set\+Free\+Flyer\+Velocity@{do\+Set\+Free\+Flyer\+Velocity}}
+\index{do\+Set\+Free\+Flyer\+Velocity@{do\+Set\+Free\+Flyer\+Velocity}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Set\+Free\+Flyer\+Velocity(const Eigen\+::\+Twistd \&\+T\+\_\+root)=0}{doSetFreeFlyerVelocity(const Eigen::Twistd &T_root)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Model\+::do\+Set\+Free\+Flyer\+Velocity (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Twistd \&}]{T\+\_\+root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_aad824e82f724f24e3769c74355162bda}{}\label{classocra_1_1Model_aad824e82f724f24e3769c74355162bda}
+
+
+Implemented in \hyperlink{classModel3T_a21b50cac2862f3721db524437282a7b3}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Set\+Joint\+Positions@{do\+Set\+Joint\+Positions}}
+\index{do\+Set\+Joint\+Positions@{do\+Set\+Joint\+Positions}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Set\+Joint\+Positions(const Eigen\+::\+Vector\+Xd \&q)=0}{doSetJointPositions(const Eigen::VectorXd &q)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Model\+::do\+Set\+Joint\+Positions (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a1353dd716f80843ea11ff6193c512b13}{}\label{classocra_1_1Model_a1353dd716f80843ea11ff6193c512b13}
+
+
+Implemented in \hyperlink{classModel3T_a603f405545e77d1e16449581876b005d}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Set\+Joint\+Velocities@{do\+Set\+Joint\+Velocities}}
+\index{do\+Set\+Joint\+Velocities@{do\+Set\+Joint\+Velocities}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Set\+Joint\+Velocities(const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)=0}{doSetJointVelocities(const Eigen::VectorXd &q_dot)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Model\+::do\+Set\+Joint\+Velocities (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q\+\_\+dot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a770a539312a2e805fcca2af3529ecff9}{}\label{classocra_1_1Model_a770a539312a2e805fcca2af3529ecff9}
+
+
+Implemented in \hyperlink{classModel3T_a215cf3c1fdfc7a229a9ae65b815d6060}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Set\+State@{do\+Set\+State}}
+\index{do\+Set\+State@{do\+Set\+State}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Set\+State(const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)}{doSetState(const Eigen::VectorXd &q, const Eigen::VectorXd &q_dot)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Model\+::do\+Set\+State (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q\+\_\+dot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_a3281cf832fe0e60fc087acda97064bb2}{}\label{classocra_1_1Model_a3281cf832fe0e60fc087acda97064bb2}
+
+
+Definition at line 184 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!do\+Set\+State@{do\+Set\+State}}
+\index{do\+Set\+State@{do\+Set\+State}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{do\+Set\+State(const Eigen\+::\+Displacementd \&\+H\+\_\+root, const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Twistd \&\+T\+\_\+root, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)}{doSetState(const Eigen::Displacementd &H_root, const Eigen::VectorXd &q, const Eigen::Twistd &T_root, const Eigen::VectorXd &q_dot)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ocra\+::\+Model\+::do\+Set\+State (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Displacementd \&}]{H\+\_\+root, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q, }
+\item[{const Eigen\+::\+Twistd \&}]{T\+\_\+root, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q\+\_\+dot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_adab6b86806c9298ecba14da065badacf}{}\label{classocra_1_1Model_adab6b86806c9298ecba14da065badacf}
+
+
+Definition at line 185 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Acceleration\+Variable@{get\+Acceleration\+Variable}}
+\index{get\+Acceleration\+Variable@{get\+Acceleration\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Acceleration\+Variable() const }{getAccelerationVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Acceleration\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a698c9b6f18db52039ef744bbf92ab4dd}{}\label{classocra_1_1Model_a698c9b6f18db52039ef744bbf92ab4dd}
+
+
+Definition at line 133 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Actuated\+Dofs@{get\+Actuated\+Dofs}}
+\index{get\+Actuated\+Dofs@{get\+Actuated\+Dofs}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Actuated\+Dofs() const =0}{getActuatedDofs() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Actuated\+Dofs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ad1a78d57aca4a4128c54d479f30afd82}{}\label{classocra_1_1Model_ad1a78d57aca4a4128c54d479f30afd82}
+
+
+Implemented in \hyperlink{classModel3T_ab2c745227612ca342f19265dbbada1c6}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Co\+M\+Acceleration@{get\+Co\+M\+Acceleration}}
+\index{get\+Co\+M\+Acceleration@{get\+Co\+M\+Acceleration}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Co\+M\+Acceleration() const }{getCoMAcceleration() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Co\+M\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_a6b65cba34b6d770d9818cf155716af4b}{}\label{classocra_1_1Model_a6b65cba34b6d770d9818cf155716af4b}
+
+
+Definition at line 80 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Co\+M\+Angular\+Jacobian@{get\+Co\+M\+Angular\+Jacobian}}
+\index{get\+Co\+M\+Angular\+Jacobian@{get\+Co\+M\+Angular\+Jacobian}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Co\+M\+Angular\+Jacobian() const }{getCoMAngularJacobian() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix$<$double,3,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Co\+M\+Angular\+Jacobian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_ae3733acc7baa0d5ab3d3d5da88b0dd04}{}\label{classocra_1_1Model_ae3733acc7baa0d5ab3d3d5da88b0dd04}
+
+
+Definition at line 84 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Co\+M\+Angular\+Velocity@{get\+Co\+M\+Angular\+Velocity}}
+\index{get\+Co\+M\+Angular\+Velocity@{get\+Co\+M\+Angular\+Velocity}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Co\+M\+Angular\+Velocity() const }{getCoMAngularVelocity() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Co\+M\+Angular\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_a60ca48c725e2d3dfe2ad0ca26ef3f94c}{}\label{classocra_1_1Model_a60ca48c725e2d3dfe2ad0ca26ef3f94c}
+
+
+Definition at line 81 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Co\+M\+Jacobian@{get\+Co\+M\+Jacobian}}
+\index{get\+Co\+M\+Jacobian@{get\+Co\+M\+Jacobian}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Co\+M\+Jacobian() const =0}{getCoMJacobian() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix$<$double,3,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Co\+M\+Jacobian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a4b148504194036b0faafe619e5b98f59}{}\label{classocra_1_1Model_a4b148504194036b0faafe619e5b98f59}
+
+
+Implemented in \hyperlink{classModel3T_ab5d4d81b1f3f01f1b625d8f1ffe0f36e}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Co\+M\+Jacobian\+Dot@{get\+Co\+M\+Jacobian\+Dot}}
+\index{get\+Co\+M\+Jacobian\+Dot@{get\+Co\+M\+Jacobian\+Dot}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Co\+M\+Jacobian\+Dot() const =0}{getCoMJacobianDot() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix$<$double,3,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Co\+M\+Jacobian\+Dot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_abfc71fa0f52145b1df92bdbd0963c926}{}\label{classocra_1_1Model_abfc71fa0f52145b1df92bdbd0963c926}
+
+
+Implemented in \hyperlink{classModel3T_a6e8c1d7b567d2b3fc20573bdc851bd0f}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Co\+M\+Jdot\+Qdot@{get\+Co\+M\+Jdot\+Qdot}}
+\index{get\+Co\+M\+Jdot\+Qdot@{get\+Co\+M\+Jdot\+Qdot}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Co\+M\+Jdot\+Qdot() const =0}{getCoMJdotQdot() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Co\+M\+Jdot\+Qdot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a2be9c0fdd8dbe4ecbb99eef5f4ea45d1}{}\label{classocra_1_1Model_a2be9c0fdd8dbe4ecbb99eef5f4ea45d1}
+
+
+Implemented in \hyperlink{classModel3T_a9f1a3fe179738ee0b7bdb9b6f51693a3}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Co\+M\+Position@{get\+Co\+M\+Position}}
+\index{get\+Co\+M\+Position@{get\+Co\+M\+Position}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Co\+M\+Position() const =0}{getCoMPosition() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Co\+M\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a9c3b077772e4886299f613a71f8981e2}{}\label{classocra_1_1Model_a9c3b077772e4886299f613a71f8981e2}
+
+
+Implemented in \hyperlink{classModel3T_aff2537074c1d3ab5cf94489f456e0e64}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Co\+M\+Velocity@{get\+Co\+M\+Velocity}}
+\index{get\+Co\+M\+Velocity@{get\+Co\+M\+Velocity}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Co\+M\+Velocity() const =0}{getCoMVelocity() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Co\+M\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a567e950be5868080c250c40d8fc0c0ce}{}\label{classocra_1_1Model_a567e950be5868080c250c40d8fc0c0ce}
+
+
+Implemented in \hyperlink{classModel3T_a9a7732427c5e86bf9b9d7c3b8d5cf9b6}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Configuration\+Variable@{get\+Configuration\+Variable}}
+\index{get\+Configuration\+Variable@{get\+Configuration\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Configuration\+Variable() const }{getConfigurationVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Configuration\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a4bdf24ff6d1579f052ea0425ba956ff0}{}\label{classocra_1_1Model_a4bdf24ff6d1579f052ea0425ba956ff0}
+
+
+Definition at line 123 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Damping\+Matrix@{get\+Damping\+Matrix}}
+\index{get\+Damping\+Matrix@{get\+Damping\+Matrix}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Damping\+Matrix() const =0}{getDampingMatrix() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix\+Xd\& ocra\+::\+Model\+::get\+Damping\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_adfbe3160558dd221e7e91e2aad4d5089}{}\label{classocra_1_1Model_adfbe3160558dd221e7e91e2aad4d5089}
+
+
+Implemented in \hyperlink{classModel3T_a4c0695302b47418fbec903ffe8183066}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Dof\+Index@{get\+Dof\+Index}}
+\index{get\+Dof\+Index@{get\+Dof\+Index}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Dof\+Index(const std\+::string \&name) const }{getDofIndex(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Model\+::get\+Dof\+Index (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a197c69f42d1722a2e804e58a36457dfb}{}\label{classocra_1_1Model_a197c69f42d1722a2e804e58a36457dfb}
+
+
+Definition at line 234 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Dof\+Name@{get\+Dof\+Name}}
+\index{get\+Dof\+Name@{get\+Dof\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Dof\+Name(int index) const }{getDofName(int index) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& ocra\+::\+Model\+::get\+Dof\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_ac7e343b2ee6debd1985a5c2028c2cb7e}{}\label{classocra_1_1Model_ac7e343b2ee6debd1985a5c2028c2cb7e}
+
+
+Definition at line 239 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Free\+Flyer\+Position@{get\+Free\+Flyer\+Position}}
+\index{get\+Free\+Flyer\+Position@{get\+Free\+Flyer\+Position}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Free\+Flyer\+Position() const =0}{getFreeFlyerPosition() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Displacementd\& ocra\+::\+Model\+::get\+Free\+Flyer\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a7549d8ca32c46a84ea4799730a81dae2}{}\label{classocra_1_1Model_a7549d8ca32c46a84ea4799730a81dae2}
+
+
+Implemented in \hyperlink{classModel3T_abef48875b8264e5d105bba79d7f6dd56}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Free\+Flyer\+Velocity@{get\+Free\+Flyer\+Velocity}}
+\index{get\+Free\+Flyer\+Velocity@{get\+Free\+Flyer\+Velocity}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Free\+Flyer\+Velocity() const =0}{getFreeFlyerVelocity() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Twistd\& ocra\+::\+Model\+::get\+Free\+Flyer\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a0a11fff87a21ab37535420f7a7544c96}{}\label{classocra_1_1Model_a0a11fff87a21ab37535420f7a7544c96}
+
+
+Implemented in \hyperlink{classModel3T_a7bf24432701211addb8d4c714333c216}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Gravity\+Terms@{get\+Gravity\+Terms}}
+\index{get\+Gravity\+Terms@{get\+Gravity\+Terms}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Gravity\+Terms() const =0}{getGravityTerms() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Gravity\+Terms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_aef569d0c71ab76665e4a24d178e8243d}{}\label{classocra_1_1Model_aef569d0c71ab76665e4a24d178e8243d}
+
+
+Implemented in \hyperlink{classModel3T_ad9735ee4733dbe8b2d5a205f41af6645}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Inertia\+Matrix@{get\+Inertia\+Matrix}}
+\index{get\+Inertia\+Matrix@{get\+Inertia\+Matrix}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Inertia\+Matrix() const =0}{getInertiaMatrix() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix\+Xd\& ocra\+::\+Model\+::get\+Inertia\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_adf59aeee10c9d3babb05d7249bf71106}{}\label{classocra_1_1Model_adf59aeee10c9d3babb05d7249bf71106}
+
+
+Implemented in \hyperlink{classModel3T_ad13cad5adbca9a8a522218872280833b}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Inertia\+Matrix\+Inverse@{get\+Inertia\+Matrix\+Inverse}}
+\index{get\+Inertia\+Matrix\+Inverse@{get\+Inertia\+Matrix\+Inverse}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Inertia\+Matrix\+Inverse() const =0}{getInertiaMatrixInverse() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix\+Xd\& ocra\+::\+Model\+::get\+Inertia\+Matrix\+Inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ac1b1137365a6f6765d41d68bc02f3e62}{}\label{classocra_1_1Model_ac1b1137365a6f6765d41d68bc02f3e62}
+
+
+Implemented in \hyperlink{classModel3T_ab1eb4309cebbf90fd46dc7eba7456615}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Internal\+Acceleration\+Variable@{get\+Internal\+Acceleration\+Variable}}
+\index{get\+Internal\+Acceleration\+Variable@{get\+Internal\+Acceleration\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Acceleration\+Variable() const }{getInternalAccelerationVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Internal\+Acceleration\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_ab7568bcbff9e35473fd9e92a2f028789}{}\label{classocra_1_1Model_ab7568bcbff9e35473fd9e92a2f028789}
+
+
+Definition at line 177 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Internal\+Configuration\+Variable@{get\+Internal\+Configuration\+Variable}}
+\index{get\+Internal\+Configuration\+Variable@{get\+Internal\+Configuration\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Configuration\+Variable() const }{getInternalConfigurationVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Internal\+Configuration\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a3f3c805565fb7ad4fa7289965ffa4b38}{}\label{classocra_1_1Model_a3f3c805565fb7ad4fa7289965ffa4b38}
+
+
+Definition at line 149 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Internal\+Velocity\+Variable@{get\+Internal\+Velocity\+Variable}}
+\index{get\+Internal\+Velocity\+Variable@{get\+Internal\+Velocity\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Velocity\+Variable() const }{getInternalVelocityVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Internal\+Velocity\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a92e1a9c91b43cee9b97b4fac928a1536}{}\label{classocra_1_1Model_a92e1a9c91b43cee9b97b4fac928a1536}
+
+
+Definition at line 163 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Accelerations@{get\+Joint\+Accelerations}}
+\index{get\+Joint\+Accelerations@{get\+Joint\+Accelerations}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Accelerations() const }{getJointAccelerations() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Joint\+Accelerations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classocra_1_1Model_acb5d3e56d76876bcf3377f53d67faef8}{}\label{classocra_1_1Model_acb5d3e56d76876bcf3377f53d67faef8}
+
+
+Definition at line 62 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Damping@{get\+Joint\+Damping}}
+\index{get\+Joint\+Damping@{get\+Joint\+Damping}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Damping() const }{getJointDamping() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector\+Xd \& ocra\+::\+Model\+::get\+Joint\+Damping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a5e692a1b25090f56312c458b55d7f60a}{}\label{classocra_1_1Model_a5e692a1b25090f56312c458b55d7f60a}
+
+
+Definition at line 208 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Jacobian@{get\+Joint\+Jacobian}}
+\index{get\+Joint\+Jacobian@{get\+Joint\+Jacobian}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Jacobian(int index) const =0}{getJointJacobian(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix$<$double,6,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Joint\+Jacobian (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ad0001f469b4aa484403e781f6bd933aa}{}\label{classocra_1_1Model_ad0001f469b4aa484403e781f6bd933aa}
+
+
+Implemented in \hyperlink{classModel3T_a501f41be46abca9605e17c3cfa66eb45}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Jacobian@{get\+Joint\+Jacobian}}
+\index{get\+Joint\+Jacobian@{get\+Joint\+Jacobian}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Jacobian(const std\+::string \&seg\+Name) const }{getJointJacobian(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix$<$double,6,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Joint\+Jacobian (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_ab90a0e86e7655d0b37ea61d89137b7f3}{}\label{classocra_1_1Model_ab90a0e86e7655d0b37ea61d89137b7f3}
+
+
+Definition at line 123 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Lower\+Limits@{get\+Joint\+Lower\+Limits}}
+\index{get\+Joint\+Lower\+Limits@{get\+Joint\+Lower\+Limits}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Lower\+Limits() const =0}{getJointLowerLimits() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Joint\+Lower\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ade47bb5ea3029b3d5652109d1ec6df7f}{}\label{classocra_1_1Model_ade47bb5ea3029b3d5652109d1ec6df7f}
+
+
+Implemented in \hyperlink{classModel3T_a43a3f25d947bdebe4deebb8c8b1a2095}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Name@{get\+Joint\+Name}}
+\index{get\+Joint\+Name@{get\+Joint\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Name(int index) const =0}{getJointName(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const std\+::string\& ocra\+::\+Model\+::get\+Joint\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ac88c445f37e5bf7302aa19b8e986013b}{}\label{classocra_1_1Model_ac88c445f37e5bf7302aa19b8e986013b}
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Positions@{get\+Joint\+Positions}}
+\index{get\+Joint\+Positions@{get\+Joint\+Positions}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Positions() const =0}{getJointPositions() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Joint\+Positions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a9af46a69337d88d28232554175723018}{}\label{classocra_1_1Model_a9af46a69337d88d28232554175723018}
+
+
+Implemented in \hyperlink{classModel3T_a3a04fdc99c98e8d560863b7b7be3493d}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Torques@{get\+Joint\+Torques}}
+\index{get\+Joint\+Torques@{get\+Joint\+Torques}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Torques() const =0}{getJointTorques() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Joint\+Torques (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a062fc08c456adf091e38ed1cfa5f0524}{}\label{classocra_1_1Model_a062fc08c456adf091e38ed1cfa5f0524}
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Torque\+Variable@{get\+Joint\+Torque\+Variable}}
+\index{get\+Joint\+Torque\+Variable@{get\+Joint\+Torque\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Torque\+Variable() const }{getJointTorqueVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Joint\+Torque\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a0fc78bb5fc0dbafafb19fb6632cfb645}{}\label{classocra_1_1Model_a0fc78bb5fc0dbafafb19fb6632cfb645}
+
+
+Definition at line 138 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Upper\+Limits@{get\+Joint\+Upper\+Limits}}
+\index{get\+Joint\+Upper\+Limits@{get\+Joint\+Upper\+Limits}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Upper\+Limits() const =0}{getJointUpperLimits() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Joint\+Upper\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a75caa887c8f27d8be8dc5a60ed1e1c41}{}\label{classocra_1_1Model_a75caa887c8f27d8be8dc5a60ed1e1c41}
+
+
+Implemented in \hyperlink{classModel3T_ae1787425348ef4f4390f3bd7bbb4101d}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Joint\+Velocities@{get\+Joint\+Velocities}}
+\index{get\+Joint\+Velocities@{get\+Joint\+Velocities}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Velocities() const =0}{getJointVelocities() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Joint\+Velocities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a73b9bd94e98138145217526dbe23841a}{}\label{classocra_1_1Model_a73b9bd94e98138145217526dbe23841a}
+
+
+Implemented in \hyperlink{classModel3T_a126ac9ea68d130de311ccfc97df5dea5}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Linear\+Terms@{get\+Linear\+Terms}}
+\index{get\+Linear\+Terms@{get\+Linear\+Terms}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Linear\+Terms() const =0}{getLinearTerms() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Linear\+Terms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a0f9c628cb9e77d63744ccfd164e9beed}{}\label{classocra_1_1Model_a0f9c628cb9e77d63744ccfd164e9beed}
+
+
+Implemented in \hyperlink{classModel3T_a711f44991a1db73a9c443237c462fdfa}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Mass@{get\+Mass}}
+\index{get\+Mass@{get\+Mass}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Mass() const =0}{getMass() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double ocra\+::\+Model\+::get\+Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a6237f96c89946f6c09be38761f128f28}{}\label{classocra_1_1Model_a6237f96c89946f6c09be38761f128f28}
+
+
+Implemented in \hyperlink{classModel3T_a84e2555236e00630e182f06b5ea2fed7}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Model\+Contacts@{get\+Model\+Contacts}}
+\index{get\+Model\+Contacts@{get\+Model\+Contacts}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Model\+Contacts() const }{getModelContacts() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\+Contacts} \& ocra\+::\+Model\+::get\+Model\+Contacts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a29d516e311f7fdd8217185f86260c044}{}\label{classocra_1_1Model_a29d516e311f7fdd8217185f86260c044}
+
+
+Definition at line 186 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Non\+Linear\+Terms@{get\+Non\+Linear\+Terms}}
+\index{get\+Non\+Linear\+Terms@{get\+Non\+Linear\+Terms}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Non\+Linear\+Terms() const =0}{getNonLinearTerms() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector\+Xd\& ocra\+::\+Model\+::get\+Non\+Linear\+Terms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ac494939416d3ddcb6e5cf0ece43f3098}{}\label{classocra_1_1Model_ac494939416d3ddcb6e5cf0ece43f3098}
+
+
+Implemented in \hyperlink{classModel3T_afbf8e7c59b02e0c192195940b26859d1}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Root\+Acceleration\+Variable@{get\+Root\+Acceleration\+Variable}}
+\index{get\+Root\+Acceleration\+Variable@{get\+Root\+Acceleration\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Root\+Acceleration\+Variable() const }{getRootAccelerationVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Root\+Acceleration\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a3c8143432903f04f898644147acb7702}{}\label{classocra_1_1Model_a3c8143432903f04f898644147acb7702}
+
+
+Definition at line 171 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Root\+Configuration\+Variable@{get\+Root\+Configuration\+Variable}}
+\index{get\+Root\+Configuration\+Variable@{get\+Root\+Configuration\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Root\+Configuration\+Variable() const }{getRootConfigurationVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Root\+Configuration\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a8cea6d3df5911ba61c4553b91491487a}{}\label{classocra_1_1Model_a8cea6d3df5911ba61c4553b91491487a}
+
+
+Definition at line 143 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Root\+Velocity\+Variable@{get\+Root\+Velocity\+Variable}}
+\index{get\+Root\+Velocity\+Variable@{get\+Root\+Velocity\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Root\+Velocity\+Variable() const }{getRootVelocityVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Root\+Velocity\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a0f17230549e8e157002c37efe67bee2c}{}\label{classocra_1_1Model_a0f17230549e8e157002c37efe67bee2c}
+
+
+Definition at line 157 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+CoM@{get\+Segment\+CoM}}
+\index{get\+Segment\+CoM@{get\+Segment\+CoM}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Co\+M(int index) const =0}{getSegmentCoM(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Segment\+CoM (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a577292e1e1441afbecb3912124b7eb04}{}\label{classocra_1_1Model_a577292e1e1441afbecb3912124b7eb04}
+
+
+Implemented in \hyperlink{classModel3T_a8c993275a14a7f75c1ddd8a9e284b339}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+CoM@{get\+Segment\+CoM}}
+\index{get\+Segment\+CoM@{get\+Segment\+CoM}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Co\+M(const std\+::string \&seg\+Name) const }{getSegmentCoM(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Segment\+CoM (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_a3f06fc0450236c0e15b41cba48af1038}{}\label{classocra_1_1Model_a3f06fc0450236c0e15b41cba48af1038}
+
+
+Definition at line 129 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Index@{get\+Segment\+Index}}
+\index{get\+Segment\+Index@{get\+Segment\+Index}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Index(const std\+::string \&name) const }{getSegmentIndex(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Model\+::get\+Segment\+Index (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_ad70550ba8cb5a50efac20f5c845cbf98}{}\label{classocra_1_1Model_ad70550ba8cb5a50efac20f5c845cbf98}
+
+
+Definition at line 192 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Inertia\+Axes@{get\+Segment\+Inertia\+Axes}}
+\index{get\+Segment\+Inertia\+Axes@{get\+Segment\+Inertia\+Axes}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Inertia\+Axes(int index) const =0}{getSegmentInertiaAxes(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Rotation3d\& ocra\+::\+Model\+::get\+Segment\+Inertia\+Axes (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a09d58bf429940098baf9727140e37441}{}\label{classocra_1_1Model_a09d58bf429940098baf9727140e37441}
+
+
+Implemented in \hyperlink{classModel3T_ac0826caa4a17601fb2589d448489759a}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Inertia\+Axes@{get\+Segment\+Inertia\+Axes}}
+\index{get\+Segment\+Inertia\+Axes@{get\+Segment\+Inertia\+Axes}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Inertia\+Axes(const std\+::string \&seg\+Name) const }{getSegmentInertiaAxes(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Rotation3d\& ocra\+::\+Model\+::get\+Segment\+Inertia\+Axes (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_a49fe440f17e3264a586184ef55637afe}{}\label{classocra_1_1Model_a49fe440f17e3264a586184ef55637afe}
+
+
+Definition at line 138 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Jacobian@{get\+Segment\+Jacobian}}
+\index{get\+Segment\+Jacobian@{get\+Segment\+Jacobian}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Jacobian(int index) const =0}{getSegmentJacobian(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix$<$double,6,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Segment\+Jacobian (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a626aed0875f6336c2ecc0147bc8c7d4e}{}\label{classocra_1_1Model_a626aed0875f6336c2ecc0147bc8c7d4e}
+
+
+Implemented in \hyperlink{classModel3T_a0cc8687f388b78b0c9f86c189d5dcded}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Jacobian@{get\+Segment\+Jacobian}}
+\index{get\+Segment\+Jacobian@{get\+Segment\+Jacobian}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Jacobian(const std\+::string \&seg\+Name) const }{getSegmentJacobian(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix$<$double,6,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Segment\+Jacobian (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_a9110ef2443aea27cf854679a31104dd8}{}\label{classocra_1_1Model_a9110ef2443aea27cf854679a31104dd8}
+
+
+Definition at line 114 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Jdot@{get\+Segment\+Jdot}}
+\index{get\+Segment\+Jdot@{get\+Segment\+Jdot}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Jdot(int index) const =0}{getSegmentJdot(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix$<$double,6,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Segment\+Jdot (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a00cceda96b47bee05cb6366d070d7961}{}\label{classocra_1_1Model_a00cceda96b47bee05cb6366d070d7961}
+
+
+Implemented in \hyperlink{classModel3T_a2ae3614161d7493f9084b033a8f74a94}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Jdot@{get\+Segment\+Jdot}}
+\index{get\+Segment\+Jdot@{get\+Segment\+Jdot}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Jdot(const std\+::string \&seg\+Name) const }{getSegmentJdot(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix$<$double,6,Eigen\+::\+Dynamic$>$\& ocra\+::\+Model\+::get\+Segment\+Jdot (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_a9d684947a13bdafd5e79389f7aa2288b}{}\label{classocra_1_1Model_a9d684947a13bdafd5e79389f7aa2288b}
+
+
+Definition at line 117 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Jdot\+Qdot@{get\+Segment\+Jdot\+Qdot}}
+\index{get\+Segment\+Jdot\+Qdot@{get\+Segment\+Jdot\+Qdot}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Jdot\+Qdot(int index) const =0}{getSegmentJdotQdot(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Twistd\& ocra\+::\+Model\+::get\+Segment\+Jdot\+Qdot (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a6fe0178b1e8213e39366b2355d0d4de3}{}\label{classocra_1_1Model_a6fe0178b1e8213e39366b2355d0d4de3}
+
+
+Implemented in \hyperlink{classModel3T_a0c0b4cd0387556bae0b752fc9f79ea92}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Jdot\+Qdot@{get\+Segment\+Jdot\+Qdot}}
+\index{get\+Segment\+Jdot\+Qdot@{get\+Segment\+Jdot\+Qdot}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Jdot\+Qdot(const std\+::string \&seg\+Name) const }{getSegmentJdotQdot(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Twistd\& ocra\+::\+Model\+::get\+Segment\+Jdot\+Qdot (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_ae075a3fd0a1ea61df20291484366ef64}{}\label{classocra_1_1Model_ae075a3fd0a1ea61df20291484366ef64}
+
+
+Definition at line 120 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Mass@{get\+Segment\+Mass}}
+\index{get\+Segment\+Mass@{get\+Segment\+Mass}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Mass(int index) const =0}{getSegmentMass(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double ocra\+::\+Model\+::get\+Segment\+Mass (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a9840649a6137c8ec964914f91c83a1b9}{}\label{classocra_1_1Model_a9840649a6137c8ec964914f91c83a1b9}
+
+
+Implemented in \hyperlink{classModel3T_ac3aad41113753cb5f63e7facebab886c}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Mass@{get\+Segment\+Mass}}
+\index{get\+Segment\+Mass@{get\+Segment\+Mass}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Mass(const std\+::string \&seg\+Name) const }{getSegmentMass(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}double ocra\+::\+Model\+::get\+Segment\+Mass (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_a99e56c7411002d9f82e79acb4be14ef1}{}\label{classocra_1_1Model_a99e56c7411002d9f82e79acb4be14ef1}
+
+
+Definition at line 126 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Mass\+Matrix@{get\+Segment\+Mass\+Matrix}}
+\index{get\+Segment\+Mass\+Matrix@{get\+Segment\+Mass\+Matrix}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Mass\+Matrix(int index) const =0}{getSegmentMassMatrix(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Matrix$<$double, 6, 6$>$\& ocra\+::\+Model\+::get\+Segment\+Mass\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ae795ffdaa76419eb74acba87555b83bb}{}\label{classocra_1_1Model_ae795ffdaa76419eb74acba87555b83bb}
+
+
+Implemented in \hyperlink{classModel3T_a7507d17448b61542ab0b83a0f3c9b0ac}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Mass\+Matrix@{get\+Segment\+Mass\+Matrix}}
+\index{get\+Segment\+Mass\+Matrix@{get\+Segment\+Mass\+Matrix}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Mass\+Matrix(const std\+::string \&seg\+Name) const }{getSegmentMassMatrix(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix$<$double, 6, 6$>$\& ocra\+::\+Model\+::get\+Segment\+Mass\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_a03078f274f7e7be0694de69ab726ab2d}{}\label{classocra_1_1Model_a03078f274f7e7be0694de69ab726ab2d}
+
+
+Definition at line 132 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Moments\+Of\+Inertia@{get\+Segment\+Moments\+Of\+Inertia}}
+\index{get\+Segment\+Moments\+Of\+Inertia@{get\+Segment\+Moments\+Of\+Inertia}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Moments\+Of\+Inertia(int index) const =0}{getSegmentMomentsOfInertia(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Segment\+Moments\+Of\+Inertia (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ae296f35e785641df23e6cf4fdbb24f8a}{}\label{classocra_1_1Model_ae296f35e785641df23e6cf4fdbb24f8a}
+
+
+Implemented in \hyperlink{classModel3T_a72fdf55729d192544f8cc1b7be748416}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Moments\+Of\+Inertia@{get\+Segment\+Moments\+Of\+Inertia}}
+\index{get\+Segment\+Moments\+Of\+Inertia@{get\+Segment\+Moments\+Of\+Inertia}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Moments\+Of\+Inertia(const std\+::string \&seg\+Name) const }{getSegmentMomentsOfInertia(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector3d\& ocra\+::\+Model\+::get\+Segment\+Moments\+Of\+Inertia (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_af83c4b16778ee019b3700627871ed140}{}\label{classocra_1_1Model_af83c4b16778ee019b3700627871ed140}
+
+
+Definition at line 135 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Name@{get\+Segment\+Name}}
+\index{get\+Segment\+Name@{get\+Segment\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Name(int index) const }{getSegmentName(int index) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& ocra\+::\+Model\+::get\+Segment\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a4d187f3375fe0f00397f551dd5ecf45a}{}\label{classocra_1_1Model_a4d187f3375fe0f00397f551dd5ecf45a}
+
+
+Definition at line 197 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Position@{get\+Segment\+Position}}
+\index{get\+Segment\+Position@{get\+Segment\+Position}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Position(int index) const =0}{getSegmentPosition(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Displacementd\& ocra\+::\+Model\+::get\+Segment\+Position (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_ae7afe827a1c09b99d80134a447bd9ccc}{}\label{classocra_1_1Model_ae7afe827a1c09b99d80134a447bd9ccc}
+
+
+Implemented in \hyperlink{classModel3T_a8762db7f9dd5df93fd8bcd3e240043f6}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Position@{get\+Segment\+Position}}
+\index{get\+Segment\+Position@{get\+Segment\+Position}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Position(const std\+::string \&seg\+Name) const }{getSegmentPosition(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Displacementd\& ocra\+::\+Model\+::get\+Segment\+Position (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_a1ca7aa03dd8a2dcea7f9ff2feff54e94}{}\label{classocra_1_1Model_a1ca7aa03dd8a2dcea7f9ff2feff54e94}
+
+
+Definition at line 108 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Velocity@{get\+Segment\+Velocity}}
+\index{get\+Segment\+Velocity@{get\+Segment\+Velocity}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Velocity(int index) const =0}{getSegmentVelocity(int index) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Eigen\+::\+Twistd\& ocra\+::\+Model\+::get\+Segment\+Velocity (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_a1ee3b57487621c5194b7d6b014308e40}{}\label{classocra_1_1Model_a1ee3b57487621c5194b7d6b014308e40}
+
+
+Implemented in \hyperlink{classModel3T_a9ca640b4d9a5ff18fcb091b14980001b}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Segment\+Velocity@{get\+Segment\+Velocity}}
+\index{get\+Segment\+Velocity@{get\+Segment\+Velocity}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Segment\+Velocity(const std\+::string \&seg\+Name) const }{getSegmentVelocity(const std::string &segName) const }}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Twistd\& ocra\+::\+Model\+::get\+Segment\+Velocity (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{seg\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classocra_1_1Model_aea663abc07b3b5bb8a695ffdc28167f9}{}\label{classocra_1_1Model_aea663abc07b3b5bb8a695ffdc28167f9}
+
+
+Definition at line 111 of file Model.\+h.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!get\+Velocity\+Variable@{get\+Velocity\+Variable}}
+\index{get\+Velocity\+Variable@{get\+Velocity\+Variable}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{get\+Velocity\+Variable() const }{getVelocityVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} \& ocra\+::\+Model\+::get\+Velocity\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a0e41bf6c5af3be6d34b704d17ded8df2}{}\label{classocra_1_1Model_a0e41bf6c5af3be6d34b704d17ded8df2}
+
+
+Definition at line 128 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!has\+Fixed\+Root@{has\+Fixed\+Root}}
+\index{has\+Fixed\+Root@{has\+Fixed\+Root}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{has\+Fixed\+Root() const }{hasFixedRoot() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Model\+::has\+Fixed\+Root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_ad267c40d5046be08e3104f7ae685794c}{}\label{classocra_1_1Model_ad267c40d5046be08e3104f7ae685794c}
+
+
+Definition at line 67 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!nb\+Dofs@{nb\+Dofs}}
+\index{nb\+Dofs@{nb\+Dofs}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{nb\+Dofs() const }{nbDofs() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Model\+::nb\+Dofs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a250711de36aea05a24faed1ab288c5bc}{}\label{classocra_1_1Model_a250711de36aea05a24faed1ab288c5bc}
+
+
+Definition at line 54 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!nb\+Internal\+Dofs@{nb\+Internal\+Dofs}}
+\index{nb\+Internal\+Dofs@{nb\+Internal\+Dofs}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{nb\+Internal\+Dofs() const }{nbInternalDofs() const }}]{\setlength{\rightskip}{0pt plus 5cm}int ocra\+::\+Model\+::nb\+Internal\+Dofs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a5a37483f12025315f7555efa8e70ca78}{}\label{classocra_1_1Model_a5a37483f12025315f7555efa8e70ca78}
+
+
+Definition at line 59 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!nb\+Segments@{nb\+Segments}}
+\index{nb\+Segments@{nb\+Segments}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{nb\+Segments() const =0}{nbSegments() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int ocra\+::\+Model\+::nb\+Segments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classocra_1_1Model_acd57284b64bb5c05f4c2dac643476751}{}\label{classocra_1_1Model_acd57284b64bb5c05f4c2dac643476751}
+
+
+Implemented in \hyperlink{classModel3T_a9d586930c49e69baf571ed7ec9eef1f3}{Model3T}.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!Segment\+Name@{Segment\+Name}}
+\index{Segment\+Name@{Segment\+Name}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{Segment\+Name(const std\+::string \&name) const }{SegmentName(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string ocra\+::\+Model\+::\+Segment\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1Model_a9adc98011d96ae1db9de7a478dcc7892}{}\label{classocra_1_1Model_a9adc98011d96ae1db9de7a478dcc7892}
+
+
+Definition at line 245 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!set\+Free\+Flyer\+Position@{set\+Free\+Flyer\+Position}}
+\index{set\+Free\+Flyer\+Position@{set\+Free\+Flyer\+Position}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{set\+Free\+Flyer\+Position(const Eigen\+::\+Displacementd \&\+H\+\_\+root)}{setFreeFlyerPosition(const Eigen::Displacementd &H_root)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Model\+::set\+Free\+Flyer\+Position (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Displacementd \&}]{H\+\_\+root}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Model_aaebe8934b2c8f0620e4208f696ea11cf}{}\label{classocra_1_1Model_aaebe8934b2c8f0620e4208f696ea11cf}
+
+
+Definition at line 88 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!set\+Free\+Flyer\+Velocity@{set\+Free\+Flyer\+Velocity}}
+\index{set\+Free\+Flyer\+Velocity@{set\+Free\+Flyer\+Velocity}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{set\+Free\+Flyer\+Velocity(const Eigen\+::\+Twistd \&\+T\+\_\+root)}{setFreeFlyerVelocity(const Eigen::Twistd &T_root)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Model\+::set\+Free\+Flyer\+Velocity (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Twistd \&}]{T\+\_\+root}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Model_a26ce45e1b06e3f1074b4066dbb420865}{}\label{classocra_1_1Model_a26ce45e1b06e3f1074b4066dbb420865}
+
+
+Definition at line 96 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!set\+Joint\+Damping@{set\+Joint\+Damping}}
+\index{set\+Joint\+Damping@{set\+Joint\+Damping}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{set\+Joint\+Damping(const Eigen\+::\+Vector\+Xd \&damping)}{setJointDamping(const Eigen::VectorXd &damping)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Model\+::set\+Joint\+Damping (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{damping}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Model_a14b26b592ba1fe5d01c2f10120e59bcc}{}\label{classocra_1_1Model_a14b26b592ba1fe5d01c2f10120e59bcc}
+
+
+Definition at line 203 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!set\+Joint\+Positions@{set\+Joint\+Positions}}
+\index{set\+Joint\+Positions@{set\+Joint\+Positions}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{set\+Joint\+Positions(const Eigen\+::\+Vector\+Xd \&q)}{setJointPositions(const Eigen::VectorXd &q)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Model\+::set\+Joint\+Positions (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Model_a3737cd201f3e70558c7c2ff74da47818}{}\label{classocra_1_1Model_a3737cd201f3e70558c7c2ff74da47818}
+
+
+Definition at line 72 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!set\+Joint\+Velocities@{set\+Joint\+Velocities}}
+\index{set\+Joint\+Velocities@{set\+Joint\+Velocities}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{set\+Joint\+Velocities(const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)}{setJointVelocities(const Eigen::VectorXd &q_dot)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Model\+::set\+Joint\+Velocities (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q\+\_\+dot}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Model_ad6b27a212756e49441f7301e748a8dad}{}\label{classocra_1_1Model_ad6b27a212756e49441f7301e748a8dad}
+
+
+Definition at line 80 of file Model.\+cpp.
+
+\index{ocra\+::\+Model@{ocra\+::\+Model}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{set\+State(const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)}{setState(const Eigen::VectorXd &q, const Eigen::VectorXd &q_dot)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Model\+::set\+State (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q\+\_\+dot}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Model_a5ce77dc35046594111df0a3e33ff2aa6}{}\label{classocra_1_1Model_a5ce77dc35046594111df0a3e33ff2aa6}
+\index{ocra\+::\+Model@{ocra\+::\+Model}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{set\+State(const Eigen\+::\+Displacementd \&\+H\+\_\+root, const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Twistd \&\+T\+\_\+root, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot)}{setState(const Eigen::Displacementd &H_root, const Eigen::VectorXd &q, const Eigen::Twistd &T_root, const Eigen::VectorXd &q_dot)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Model\+::set\+State (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Displacementd \&}]{H\+\_\+root, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q, }
+\item[{const Eigen\+::\+Twistd \&}]{T\+\_\+root, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{q\+\_\+dot}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1Model_a6c4feba35aac697c1f18537c8c7c9ce4}{}\label{classocra_1_1Model_a6c4feba35aac697c1f18537c8c7c9ce4}
+
+
+\subsection{Member Data Documentation}
+\index{ocra\+::\+Model@{ocra\+::\+Model}!model\+Mutex@{model\+Mutex}}
+\index{model\+Mutex@{model\+Mutex}!ocra\+::\+Model@{ocra\+::\+Model}}
+\subsubsection[{\texorpdfstring{model\+Mutex}{modelMutex}}]{\setlength{\rightskip}{0pt plus 5cm}yarp\+::os\+::\+Semaphore ocra\+::\+Model\+::model\+Mutex}\hypertarget{classocra_1_1Model_a45b4c8b4b6480355f2abb06bb55f7146}{}\label{classocra_1_1Model_a45b4c8b4b6480355f2abb06bb55f7146}
+
+
+Definition at line 157 of file Model.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Model_8h}{Model.\+h}\item 
+\hyperlink{Model_8cpp}{Model.\+cpp}\end{DoxyCompactItemize}

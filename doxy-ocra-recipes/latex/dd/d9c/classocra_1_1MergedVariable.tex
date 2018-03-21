@@ -1,0 +1,190 @@
+\hypertarget{classocra_1_1MergedVariable}{}\section{ocra\+:\+:Merged\+Variable Class Reference}
+\label{classocra_1_1MergedVariable}\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+
+
+{\ttfamily \#include $<$Merged\+Variable.\+h$>$}
+
+
+
+Inheritance diagram for ocra\+:\+:Merged\+Variable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/da6/classocra_1_1MergedVariable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ocra\+:\+:Merged\+Variable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d8b/classocra_1_1MergedVariable__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classocra_1_1MergedVariable_ac6dcd7217ac6a6097ae95f5fe2afc513}{Merged\+Variable} (const std\+::string \&name)
+\item 
+\hyperlink{classocra_1_1MergedVariable_aa126050631c068dba3e1d12f31dea9ec}{$\sim$\+Merged\+Variable} ()
+\item 
+void \hyperlink{classocra_1_1MergedVariable_aa91f4ed9514c3dd4bf1ae4e25cf1e118}{insert} (\hyperlink{classocra_1_1Variable}{Variable} $\ast$var)
+\item 
+void \hyperlink{classocra_1_1MergedVariable_ae0a14af6f9fb0b0dc72d6023e7e40069}{remove} (\hyperlink{classocra_1_1Variable}{Variable} $\ast$var)
+\item 
+\hyperlink{classocra_1_1VariableMapping}{Variable\+Mapping} $\ast$ \hyperlink{classocra_1_1MergedVariable_a632fc3715c9def6d3dafac17be4c962d}{find} (\hyperlink{classocra_1_1Variable}{Variable} $\ast$var) const 
+\item 
+\hyperlink{classocra_1_1CompositeVariable}{Composite\+Variable} \& \hyperlink{classocra_1_1MergedVariable_afa4986407c3fbaebe268fd248b2c4bcf}{get\+Variable} ()
+\item 
+void \hyperlink{classocra_1_1MergedVariable_af144217ae6b5299a8b390b7a9d3e1f6f}{set\+Value} (const Vector\+Xd \&val) const 
+\item 
+void \hyperlink{classocra_1_1MergedVariable_a426f8f855177b127c03e589105ec984e}{recompute\+Variable} () const 
+\item 
+bool \hyperlink{classocra_1_1MergedVariable_aacd4a3af9836eca6de26ab61eb8c3255}{is\+Variable\+Up\+To\+Date} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file Merged\+Variable.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!Merged\+Variable@{Merged\+Variable}}
+\index{Merged\+Variable@{Merged\+Variable}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{Merged\+Variable(const std\+::string \&name)}{MergedVariable(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Merged\+Variable\+::\+Merged\+Variable (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1MergedVariable_ac6dcd7217ac6a6097ae95f5fe2afc513}{}\label{classocra_1_1MergedVariable_ac6dcd7217ac6a6097ae95f5fe2afc513}
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_2home_2ryan_2code_2ocra-recipes_2ocra_2include_2ocra_2optim_2MergedVariable_8h-example}{/home/ryan/code/ocra-\/recipes/ocra/include/ocra/optim/\+Merged\+Variable.\+h}.\end{Desc}
+
+
+Definition at line 7 of file Merged\+Variable.\+cpp.
+
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!````~Merged\+Variable@{$\sim$\+Merged\+Variable}}
+\index{````~Merged\+Variable@{$\sim$\+Merged\+Variable}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{$\sim$\+Merged\+Variable()}{~MergedVariable()}}]{\setlength{\rightskip}{0pt plus 5cm}ocra\+::\+Merged\+Variable\+::$\sim$\+Merged\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1MergedVariable_aa126050631c068dba3e1d12f31dea9ec}{}\label{classocra_1_1MergedVariable_aa126050631c068dba3e1d12f31dea9ec}
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_2home_2ryan_2code_2ocra-recipes_2ocra_2include_2ocra_2optim_2MergedVariable_8h-example}{/home/ryan/code/ocra-\/recipes/ocra/include/ocra/optim/\+Merged\+Variable.\+h}.\end{Desc}
+
+
+Definition at line 13 of file Merged\+Variable.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!find@{find}}
+\index{find@{find}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{find(\+Variable $\ast$var) const }{find(Variable *var) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable\+Mapping} $\ast$ ocra\+::\+Merged\+Variable\+::find (
+\begin{DoxyParamCaption}
+\item[{{\bf Variable} $\ast$}]{var}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1MergedVariable_a632fc3715c9def6d3dafac17be4c962d}{}\label{classocra_1_1MergedVariable_a632fc3715c9def6d3dafac17be4c962d}
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_2home_2ryan_2code_2ocra-recipes_2ocra_2include_2ocra_2optim_2MergedVariable_8h-example}{/home/ryan/code/ocra-\/recipes/ocra/include/ocra/optim/\+Merged\+Variable.\+h}.\end{Desc}
+
+
+Definition at line 48 of file Merged\+Variable.\+cpp.
+
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!get\+Variable@{get\+Variable}}
+\index{get\+Variable@{get\+Variable}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{get\+Variable()}{getVariable()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Composite\+Variable} \& ocra\+::\+Merged\+Variable\+::get\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1MergedVariable_afa4986407c3fbaebe268fd248b2c4bcf}{}\label{classocra_1_1MergedVariable_afa4986407c3fbaebe268fd248b2c4bcf}
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_2home_2ryan_2code_2ocra-recipes_2ocra_2include_2ocra_2optim_2MergedVariable_8h-example}{/home/ryan/code/ocra-\/recipes/ocra/include/ocra/optim/\+Merged\+Variable.\+h}.\end{Desc}
+
+
+Definition at line 57 of file Merged\+Variable.\+cpp.
+
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!insert@{insert}}
+\index{insert@{insert}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{insert(\+Variable $\ast$var)}{insert(Variable *var)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Merged\+Variable\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Variable} $\ast$}]{var}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1MergedVariable_aa91f4ed9514c3dd4bf1ae4e25cf1e118}{}\label{classocra_1_1MergedVariable_aa91f4ed9514c3dd4bf1ae4e25cf1e118}
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_2home_2ryan_2code_2ocra-recipes_2ocra_2include_2ocra_2optim_2MergedVariable_8h-example}{/home/ryan/code/ocra-\/recipes/ocra/include/ocra/optim/\+Merged\+Variable.\+h}.\end{Desc}
+
+
+Definition at line 19 of file Merged\+Variable.\+cpp.
+
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!is\+Variable\+Up\+To\+Date@{is\+Variable\+Up\+To\+Date}}
+\index{is\+Variable\+Up\+To\+Date@{is\+Variable\+Up\+To\+Date}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{is\+Variable\+Up\+To\+Date() const }{isVariableUpToDate() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool ocra\+::\+Merged\+Variable\+::is\+Variable\+Up\+To\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1MergedVariable_aacd4a3af9836eca6de26ab61eb8c3255}{}\label{classocra_1_1MergedVariable_aacd4a3af9836eca6de26ab61eb8c3255}
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_2home_2ryan_2code_2ocra-recipes_2ocra_2include_2ocra_2optim_2MergedVariable_8h-example}{/home/ryan/code/ocra-\/recipes/ocra/include/ocra/optim/\+Merged\+Variable.\+h}.\end{Desc}
+
+
+Definition at line 95 of file Merged\+Variable.\+cpp.
+
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!recompute\+Variable@{recompute\+Variable}}
+\index{recompute\+Variable@{recompute\+Variable}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{recompute\+Variable() const }{recomputeVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Merged\+Variable\+::recompute\+Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1MergedVariable_a426f8f855177b127c03e589105ec984e}{}\label{classocra_1_1MergedVariable_a426f8f855177b127c03e589105ec984e}
+\+\_\+base.\+clear(); \begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_2home_2ryan_2code_2ocra-recipes_2ocra_2include_2ocra_2optim_2MergedVariable_8h-example}{/home/ryan/code/ocra-\/recipes/ocra/include/ocra/optim/\+Merged\+Variable.\+h}.\end{Desc}
+
+
+Definition at line 75 of file Merged\+Variable.\+cpp.
+
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!remove@{remove}}
+\index{remove@{remove}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{remove(\+Variable $\ast$var)}{remove(Variable *var)}}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Merged\+Variable\+::remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Variable} $\ast$}]{var}
+\end{DoxyParamCaption}
+)}\hypertarget{classocra_1_1MergedVariable_ae0a14af6f9fb0b0dc72d6023e7e40069}{}\label{classocra_1_1MergedVariable_ae0a14af6f9fb0b0dc72d6023e7e40069}
+
+
+Definition at line 31 of file Merged\+Variable.\+cpp.
+
+\index{ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!ocra\+::\+Merged\+Variable@{ocra\+::\+Merged\+Variable}}
+\subsubsection[{\texorpdfstring{set\+Value(const Vector\+Xd \&val) const }{setValue(const VectorXd &val) const }}]{\setlength{\rightskip}{0pt plus 5cm}void ocra\+::\+Merged\+Variable\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{const Vector\+Xd \&}]{val}
+\end{DoxyParamCaption}
+) const}\hypertarget{classocra_1_1MergedVariable_af144217ae6b5299a8b390b7a9d3e1f6f}{}\label{classocra_1_1MergedVariable_af144217ae6b5299a8b390b7a9d3e1f6f}
+\begin{Desc}
+\item[Examples\+: ]\par
+\hyperlink{_2home_2ryan_2code_2ocra-recipes_2ocra_2include_2ocra_2optim_2MergedVariable_8h-example}{/home/ryan/code/ocra-\/recipes/ocra/include/ocra/optim/\+Merged\+Variable.\+h}.\end{Desc}
+
+
+Definition at line 65 of file Merged\+Variable.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MergedVariable_8h}{Merged\+Variable.\+h}\item 
+\hyperlink{MergedVariable_8cpp}{Merged\+Variable.\+cpp}\end{DoxyCompactItemize}
